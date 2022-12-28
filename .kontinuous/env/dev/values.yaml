@@ -1,0 +1,9 @@
+app:
+  vars:
+    MDA_ENV: dev
+
+jobs:
+  runs:
+    build-app:
+      with:
+        buildArgs:

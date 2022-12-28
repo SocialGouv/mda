@@ -1,0 +1,5 @@
+# Protect workflow files
+.github/* @lsagetlethias
+.github/workflows/*.yml @socialgouv/sre @lsagetlethias
+.github/CODEOWNERS @socialgouv/sre @lsagetlethias
+.kontinuous/ @socialgouv/sre

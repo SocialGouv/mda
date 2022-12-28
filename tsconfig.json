@@ -1,0 +1,45 @@
+{
+  "extends": "@tsconfig/next/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    // to trick auto imports
+    "baseUrl": "./src",
+    "paths": {
+      "@common/*": [
+        "common/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@api/*": [
+        "api/*"
+      ],
+      "@services/*": [
+        "services/*"
+      ],
+      "@design-system": [
+        "design-system/index"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "types/**/*.d.ts",
+    "next-env.d.ts",
+    "env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "__tests__",
+    "__stories__"
+  ]
+}
