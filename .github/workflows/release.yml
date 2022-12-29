@@ -47,7 +47,7 @@ jobs:
           git_commit_gpgsign: true
           git_push_gpgsign: false
           git_tag_gpgsign: true
-        - name: Semantic Release
-          run: |
-            export PATH="$(pwd)/.github/bin/:$PATH"
-            yarn semantic-release
+      - name: Semantic Release
+        run: |
+          export PATH="$(pwd)/.github/bin/:$PATH"
+          yarn semantic-release
