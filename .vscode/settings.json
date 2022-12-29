@@ -1,5 +1,6 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
+  "cssModules.camelCase": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },

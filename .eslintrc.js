@@ -66,6 +66,7 @@ const config = {
         arrowParens: "avoid",
       },
     ],
+    "import/no-named-as-default": "off",
   },
   overrides: [
     {

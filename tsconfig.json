@@ -5,22 +5,16 @@
     "downlevelIteration": true,
     "experimentalDecorators": true,
     // to trick auto imports
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
       "@common/*": [
-        "common/*"
+        "src/common/*"
       ],
       "@components/*": [
-        "components/*"
-      ],
-      "@api/*": [
-        "api/*"
-      ],
-      "@services/*": [
-        "services/*"
+        "src/components/*"
       ],
       "@design-system": [
-        "design-system/index"
+        "src/design-system/index"
       ]
     },
     "plugins": [
@@ -35,7 +29,8 @@
     "env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "next-sitemap.ts"
   ],
   "exclude": [
     "node_modules",

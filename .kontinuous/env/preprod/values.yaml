@@ -7,3 +7,4 @@ jobs:
     build-app:
       with:
         buildArgs:
+          PRODUCTION: "true"

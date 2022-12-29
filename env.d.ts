@@ -8,7 +8,7 @@ declare namespace NodeJS {
          */
         NEXT_TELEMETRY_DISABLED?: string;
         /**
-         * Dist: `https://67a92c8c0f70486d9f36f2352eff1d19@sentry.fabrique.social.gouv.fr/xx`  
+         * No dist value.  
          * {@link [Local Env Dist](.env.development)}
          */
         NEXT_PUBLIC_SENTRY_DSN?: string;
@@ -32,6 +32,16 @@ declare namespace NodeJS {
          * {@link [Local Env Dist](.env.development)}
          */
         MDA_ENV?: string;
+        /**
+         * Dist: `false`  
+         * {@link [Local Env Dist](.env.development)}
+         */
+        PRODUCTION?: string;
+        /**
+         * No dist value.  
+         * {@link [Local Env Dist](.env.development)}
+         */
+        NEXT_PUBLIC_SITE_URL?: string;
     }
 }
 declare type ProcessEnvCustomKeys = 
@@ -40,4 +50,6 @@ declare type ProcessEnvCustomKeys =
     | 'NEXT_PUBLIC_SENTRY_ENV'
     | 'NEXT_PUBLIC_MATOMO_URL'
     | 'NEXT_PUBLIC_MATOMO_SITE_ID'
-    | 'MDA_ENV';
+    | 'MDA_ENV'
+    | 'PRODUCTION'
+    | 'NEXT_PUBLIC_SITE_URL';

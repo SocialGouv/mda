@@ -8,4 +8,7 @@ dependencies:
 environmentPatterns:
   prod: false
   preprod: dev
-  dev: "!v*"
+  dev:
+    - "!v*"
+    - "!main"
+    - "!dev"

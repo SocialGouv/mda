@@ -1,12 +1,13 @@
 global:
   registry: harbor.fabrique.social.gouv.fr
-  imageProject: fabrique
-  imageRepository: template
+  imageProject: mda
+  imageRepository: mda
 
 app:
   ~needs: [build-app]
   imagePackage: app
-  containerPort: 8080
+  probesPath: /healthz
+  host: "{{ .Values.global.host }}"
 
 jobs:
   runs:
