@@ -1,4 +1,4 @@
-name: Deactivate
+name: Kontinuous Delete
 on:
   delete:
 
