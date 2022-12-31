@@ -1,0 +1,27 @@
+/** @type {import("eslint").Linter.Config} */
+const config = {
+  root: true,
+  extends: ["@mda/eslint-config"],
+  rules: {
+    "import/no-default-export": "off",
+  },
+  overrides: [
+    {
+      files: ["src/admin/**/*.ts*"],
+      parserOptions: {
+        project: ["src/admin/tsconfig.json"],
+        sourceType: "module",
+      },
+      settings: {
+        "import/resolver": {
+          typescript: {
+            alwaysTryTypes: true,
+            project: ["src/admin/tsconfig.json"],
+          },
+        },
+      },
+    },
+  ],
+};
+
+module.exports = config;

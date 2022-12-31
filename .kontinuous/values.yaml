@@ -8,6 +8,8 @@ app:
   imagePackage: app
   probesPath: /healthz
   host: "{{ .Values.global.host }}"
+  env:
+    NEXT_PUBLIC_SITE_URL: "{{ .Values.global.host }}"
 
 jobs:
   runs:
@@ -20,3 +22,4 @@ jobs:
         buildOptions: --single-snapshot --ignore-path=/product_uuid --compressed-caching=false # optim for local builds
         buildArgs:
           GITHUB_SHA: "{{ $.Values.global.sha }}"
+          NEXT_PUBLIC_SITE_URL: "{{ .Values.global.host }}"

@@ -11,3 +11,4 @@ jobs:
       with:
         buildArgs:
           PRODUCTION: "true"
+          ROBOT: "true"

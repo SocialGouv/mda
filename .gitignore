@@ -40,5 +40,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
-public/robots.txt
-public/sitemap*
+.turbo
+
+apps/web/public/robots.txt
+apps/web/public/sitemap*
+apps/web/.vscode
+
+############################
+# Strapi
+############################
+
+.env
+license.txt
+exports
+*.cache
+dist
+build
+.strapi-updater.json
