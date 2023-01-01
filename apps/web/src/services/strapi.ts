@@ -71,7 +71,7 @@ interface PaginationByOffset {
   withCount?: boolean;
 }
 
-interface MetaPagination {
+interface _MetaPagination {
   page: number;
   pageCount: number;
   pageSize: number;
@@ -102,6 +102,10 @@ export const fetchStrapi = async <T extends Model, TParams extends FetchParam<T>
   const response = await fetch(url, {
     headers: {
       "Content-Type": "application/json",
+    },
+    next: {
+      // TODO: better building with ISR
+      revalidate: 0,
     },
   });
 

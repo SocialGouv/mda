@@ -3,23 +3,56 @@ global:
   imageProject: mda
   imageRepository: mda
 
-app:
-  ~needs: [build-app]
-  imagePackage: app
+web:
+  ~chart: app
+  ~needs: [build-web]
+  imagePackage: web
   probesPath: /healthz
   host: "{{ .Values.global.host }}"
-  env:
+  # certSecretName: mda-crt
+  vars:
     NEXT_PUBLIC_SITE_URL: "{{ .Values.global.host }}"
+
+strapi:
+  ~chart: app
+  ~needs: [build-strapi]
+  imagePackage: strapi
+  probesPath: /_health
+  host: "strapi.{{ .Values.global.host }}"
+  # certSecretName: mda-crt
+  envFrom:
+    - secretRef:
+        name: "{{ .Values.global.pgSecretName }}"
+    - secretRef:
+        name: "mda-strapi"
+  vars:
+    DATABASE_HOST: "$(PGHOST)"
+    DATABASE_PORT: "$(PGPORT)"
+    DATABASE_NAME: "$(PGDATABASE)"
+    DATABASE_USERNAME: "$(PGUSER)"
+    DATABASE_PASSWORD: "$(PGPASSWORD)"
+    DATABASE_SSL: "$(PGSSLMODE)"
+    HOST: "strapi.{{ .Values.global.host }}"
 
 jobs:
   runs:
-    build-app:
+    build-web:
       use: build
       with:
-        imagePackage: app
+        imagePackage: web
+        dockerfile: apps/web/Dockerfile
         registrySecretRefName: harbor
         skipExisting: true
         buildOptions: --single-snapshot --ignore-path=/product_uuid --compressed-caching=false # optim for local builds
         buildArgs:
           GITHUB_SHA: "{{ $.Values.global.sha }}"
           NEXT_PUBLIC_SITE_URL: "{{ .Values.global.host }}"
+          NEXT_PUBLIC_STRAPI_API_URL: "https://strapi.{{ .Values.global.host }}/api"
+
+    build-strapi:
+      use: SocialGouv/kontinuous/plugins/contrib/jobs/build
+      with:
+        imagePackage: strapi
+        dockerfile: apps/web/Dockerfile
+        buildArgs:
+          GITHUB_SHA: "{{ $.Values.global.sha }}"

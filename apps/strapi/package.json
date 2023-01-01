@@ -7,10 +7,9 @@
   "types": "index.d.ts",
   "main": "index.d.ts",
   "scripts": {
-    "dev": "strapi develop",
+    "dev": "strapi dev",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi",
     "lint": "eslint",
     "config:dump": "strapi config:dump -f dump.json",
     "generate-types": "rm -rf index.d.ts && strapi ts:generate-types -f index.d.ts && echo \"/* eslint-disable */\n$(cat index.d.ts)\" > index.d.ts"

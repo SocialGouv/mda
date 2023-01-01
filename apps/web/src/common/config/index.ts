@@ -15,7 +15,7 @@ export const config = {
     siteId: process.env.NEXT_PUBLIC_MATOMO_SITE_ID ?? "",
   },
   strapi: {
-    apiUrl: process.env.NEXT_PUBLIC_STRAPI_API_URL ?? "http://127.0.0.1:1337",
+    apiUrl: process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://127.0.0.1:1337",
     token: ensureOsEnvVar("STRAPI_TOKEN"),
   },
 } as const;

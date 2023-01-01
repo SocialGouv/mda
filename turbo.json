@@ -15,6 +15,13 @@
         ".eslintrc.js",
         "../../packages/eslint-config/index.js"
       ]
+    },
+    "build": {
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        "public/**"
+      ]
     }
   }
 }

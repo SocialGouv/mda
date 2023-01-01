@@ -1,13 +1,13 @@
 # global:
 #   host: maisonautisme.gouv.fr #TODO enable when domain is ok
 
-app:
+web:
   vars:
     MDA_ENV: prod
 
 jobs:
   runs:
-    build-app:
+    build-web:
       with:
         buildArgs:
           PRODUCTION: "true"
