@@ -244,5 +244,36 @@ type MandatoryMiddlewares = [
 
 export type MiddlewaresConfig = Array<MiddlewareName | MiddlewareOptions> & MandatoryMiddlewares;
 
-const noConf = {};
-export default noConf;
+export interface ApiConfig {
+  /**
+   * Global API response configuration
+   */
+  responses?: {
+    /**
+     * Set of globally defined attributes to be treated as private.
+     * @default []
+     */
+    privateAttributes?: string[];
+  };
+  /**
+   * REST API configuration
+   */
+  rest: {
+    /**
+     * Default `limit` parameter used in API calls
+     * @default 25
+     */
+    defaultLimit?: number;
+    /**
+     * Maximum allowed number that can be requested as `limit`
+     * @default 100
+     */
+    maxLimit?: number;
+    /**
+     * The API prefix
+     * @default "/api"
+     */
+    prefix?: string;
+    withCount?: boolean;
+  };
+}

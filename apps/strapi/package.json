@@ -13,7 +13,7 @@
     "strapi": "strapi",
     "lint": "eslint",
     "config:dump": "strapi config:dump -f dump.json",
-    "generate-types": "rm -rf index.d.ts && strapi ts:generate-types && echo \"/* eslint-disable */\n$(cat schemas.d.ts)\" > schemas.d.ts && mv schemas.d.ts index.d.ts"
+    "generate-types": "rm -rf index.d.ts && strapi ts:generate-types -f index.d.ts && echo \"/* eslint-disable */\n$(cat index.d.ts)\" > index.d.ts"
   },
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.0",
@@ -23,12 +23,12 @@
   },
   "dependencies": {
     "@mda/config": "*",
-    "@strapi/plugin-i18n": "4.5.5",
     "@strapi/plugin-users-permissions": "4.5.5",
     "@strapi/strapi": "4.5.5",
     "pg": "8.6.0"
   },
   "strapi": {
-    "uuid": "477f148b-f7a6-4bc4-bf3e-c413f95df885"
+    "uuid": "477f148b-f7a6-4bc4-bf3e-c413f95df885",
+    "telemetryDisabled": true
   }
 }
