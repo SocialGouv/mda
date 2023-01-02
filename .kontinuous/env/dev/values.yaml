@@ -3,7 +3,7 @@ web:
     MDA_ENV: dev
 
 strapi:
-  ~needs: [create-db,build-strapi]
+  ~needs: [build-strapi]
 
 jobs:
   runs:
@@ -11,3 +11,9 @@ jobs:
       with:
         buildArgs:
           PRODUCTION: "true"
+    create-db:
+      use: SocialGouv/kontinuous/plugins/contrib/jobs/create-db
+      with:
+        pgAdminSecretRefName: azure-pg-admin-user
+    build-strapi:
+      ~needs: [create-db]

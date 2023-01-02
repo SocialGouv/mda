@@ -34,7 +34,7 @@ strapi:
 jobs:
   runs:
     build-web:
-      # ~needs: [strapi]
+      ~needs: [strapi]
       use: build
       with:
         imagePackage: web
