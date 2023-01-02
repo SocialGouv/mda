@@ -1,6 +1,6 @@
 global:
   registry: harbor.fabrique.social.gouv.fr
-  imageProject: mda
+  imageProject: maison-de-l-autisme
   imageRepository: mda
 
 web:
