@@ -1,5 +1,6 @@
 const ContentSecurityPolicy = require("./src/common/config/csp.config");
 const { version } = require("./package.json");
+const path = require("path");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -8,6 +9,7 @@ const nextConfig = {
   output: "standalone",
   experimental: {
     appDir: true,
+    outputFileTracingRoot: path.join(__dirname, "../../"),
   },
   env: {
     NEXT_PUBLIC_APP_VERSION: version,

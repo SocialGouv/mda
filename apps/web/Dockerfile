@@ -1,56 +1,76 @@
 ARG NODE_VERSION=18-alpine
 
-########
-# Pre install
-FROM node:$NODE_VERSION AS builder
-RUN apk add --no-cache libc6-compat
+FROM node:$NODE_VERSION AS base
+RUN apk add --no-cache libc6-compat && \
+    rm -rf /var/cache/apk/* > /dev/null 2>&1
 WORKDIR /app
 
+########
+# Pre install
+FROM base AS builder
+
+RUN yarn global add turbo
 COPY . .
-RUN yarn turbo prune --scope=web --docker
+# COPY apps/web/package.json apps/web/
+# COPY apps/strapi/package.json apps/strapi/
+# COPY packages/config/package.json packages/config/
+# COPY packages/eslint-config/package.json packages/eslint-config/
+# COPY package.json yarn.lock turbo.json ./
+# COPY .monorepo-build/json yarn.lock turbo.json ./ => DREAM (TODO BEFORE yarn turbo prune --scope=@mda/web --docker --out-dir .monorepo-build)
+RUN turbo prune --scope=@mda/web --docker
+
+FROM node:$NODE_VERSION AS tmp-json
+COPY --from=builder /app/out/yarn.lock /app/out/json /tmp-json/
+
+FROM node:$NODE_VERSION AS tmp-full
+COPY --from=builder /app/out/full/ /tmp-full/
 
 ########
 # Installer from pruned monorepo
-FROM node:$NODE_VERSION AS installer
-ENV NODE_ENV production
+FROM base AS installer
 ENV NEXT_TELEMETRY_DISABLED 1
-ENV NEXTJS_IGNORE_ESLINT=1
 
-RUN apk add --no-cache libc6-compat
-WORKDIR /app
+ARG NEXT_PUBLIC_APP_VERSION_COMMIT
+ENV NEXT_PUBLIC_APP_VERSION_COMMIT $NEXT_PUBLIC_APP_VERSION_COMMIT
+ARG NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
+ENV NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT $NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
+ARG NEXT_PUBLIC_SITE_URL
+ENV NEXT_PUBLIC_SITE_URL $NEXT_PUBLIC_SITE_URL
+ARG NEXT_PUBLIC_STRAPI_API_URL
+ENV NEXT_PUBLIC_STRAPI_API_URL $NEXT_PUBLIC_STRAPI_API_URL
 
 COPY .gitignore .gitignore
-COPY --from=builder /app/out/json/ .
-COPY --from=builder /app/out/yarn.lock ./yarn.lock
+COPY --from=tmp-json /tmp-json/ .
 RUN yarn install --frozen-lockfile
 
-COPY --from=builder /app/out/full/ .
+ARG PRODUCTION
+ENV PRODUCTION $PRODUCTION
+
+COPY --from=tmp-full /tmp-full/ .
 COPY turbo.json turbo.json
 RUN yarn turbo run build --filter=web
 
 ########
 # Runner
-FROM node:$NODE_VERSION AS runner
-
-ENV NODE_OPTIONS="--max-old-space-size=8192"
+FROM base AS runner
 ENV NODE_ENV production
+ENV NODE_OPTIONS="--max-old-space-size=8192"
 ENV NEXT_TELEMETRY_DISABLED 1
 ARG GITHUB_SHA
 ENV GITHUB_SHA $GITHUB_SHA
 
-WORKDIR /app
-
 RUN addgroup --system --gid 1001 nodejs && \
     adduser --system --uid 1001 nextjs
-USER nextjs
 
-COPY --from=installer /app/apps/web/public ./apps/web/public
-COPY --from=installer --chown=nextjs:nodejs /app/apps/web/.next/standalone ./
+COPY --from=installer /app/apps/web/next.config.js .
+COPY --from=installer /app/apps/web/package.json .
+
+COPY --from=installer --chown=nextjs:nodejs /app/apps/web/.next/standalone/ ./
 COPY --from=installer --chown=nextjs:nodejs /app/apps/web/.next/static ./apps/web/.next/static
+COPY --from=installer --chown=nextjs:nodejs /app/apps/web/public ./apps/web/public
 
+USER 1001
 
 EXPOSE 3000
 
-ENV PORT 3000
-
-CMD node apps/web/server.js
+CMD ["node", "apps/web/server.js"]

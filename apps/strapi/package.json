@@ -13,7 +13,7 @@
     "lint": "eslint",
     "config:dump": "strapi config:dump -f dump.json",
     "generate-types": "rm -rf index.d.ts && strapi ts:generate-types -f index.d.ts && echo \"/* eslint-disable */\n$(cat index.d.ts)\" > index.d.ts",
-    "generate-env": "echo \" > .envAPP_KEYS=$(openssl rand -base64 32),$(openssl rand -base64 32)\nAPI_TOKEN_SALT=$(openssl rand -base64 32)\nADMIN_JWT_SECRET=$(openssl rand -base64 32)\nJWT_SECRET=$(openssl rand -base64 32)\" > .env"
+    "generate-env": "echo \"APP_KEYS=$(openssl rand -base64 32),$(openssl rand -base64 32)\nAPI_TOKEN_SALT=$(openssl rand -base64 32)\nADMIN_JWT_SECRET=$(openssl rand -base64 32)\nJWT_SECRET=$(openssl rand -base64 32)\" > .env"
   },
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.0",

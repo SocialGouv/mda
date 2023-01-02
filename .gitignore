@@ -57,3 +57,5 @@ exports
 dist
 build
 .strapi-updater.json
+
+/.monorepo-build/full

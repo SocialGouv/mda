@@ -6,7 +6,7 @@
   "license": "SEE LICENSE IN ../../LICENSE",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --no-lint",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",

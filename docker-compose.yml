@@ -13,5 +13,33 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
+  strapi:
+    image: mda-strapi
+    build:
+      context: .
+      dockerfile: apps/strapi/Dockerfile
+    environment:
+      DATABASE_HOST: db
+      HOST: 0.0.0.0
+    env_file:
+      - apps/strapi/.env
+    ports:
+      - 1337:1337
+
+  web:
+    image: mda-web
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        NEXT_PUBLIC_STRAPI_API_URL: http://strapi:1337
+        PRODUCTION: "false"
+    environment:
+      PRODUCTION: "false"
+    env_file:
+      - apps/web/.env.development.local
+    ports:
+      - 3000:3000
+
 volumes:
   pgdata:
