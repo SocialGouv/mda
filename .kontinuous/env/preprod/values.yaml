@@ -1,10 +1,15 @@
-app:
+web:
+  vars:
+    MDA_ENV: preprod
+
+strapi:
   vars:
     MDA_ENV: preprod
 
 jobs:
   runs:
-    build-app:
+    build-web:
       with:
         buildArgs:
           PRODUCTION: "true"
+          NEXT_PUBLIC_STRAPI_API_URL: "https://strapi-{{ .Values.global.host }}"
