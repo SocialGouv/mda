@@ -4,7 +4,6 @@ import { Children, cloneElement, forwardRef } from "react";
 
 import { ConditionalWrapper } from "../utils/ConditionalWrapper";
 import type { MarginProps } from "../utils/spacing";
-import { Box } from "./Box";
 import styles from "./FormCheckbox.module.css";
 
 export interface FormCheckboxGroupProps extends Omit<MarginProps, "ml" | "mr" | "mx"> {
@@ -30,12 +29,12 @@ export const FormCheckboxGroup = ({
   <ConditionalWrapper
     condition={!!singleCheckbox}
     wrapper={checkbox => (
-      <Box className={clsx(inline && "fr-fieldset--inline", size === "sm" && "fr-checkbox-group--sm")}>
+      <div className={clsx(inline && "fr-fieldset--inline", size === "sm" && "fr-checkbox-group--sm")}>
         {cloneElement(Children.only(checkbox) as ReactElement<FormCheckboxProps>, { isDisabled })}
-      </Box>
+      </div>
     )}
     elseWrapper={checkboxes => (
-      <Box className="fr-form-group" {...rest}>
+      <div className="fr-form-group" {...rest}>
         <fieldset
           className={clsx(
             "fr-fieldset",
@@ -50,7 +49,7 @@ export const FormCheckboxGroup = ({
         >
           {checkboxes}
         </fieldset>
-      </Box>
+      </div>
     )}
   >
     {children}
@@ -66,7 +65,7 @@ export const FormCheckboxGroupLegend = ({ children, id, className }: FormCheckbo
 );
 
 export const FormCheckboxGroupContent = ({ children }: PropsWithChildren) => (
-  <Box className="fr-fieldset__content">{children}</Box>
+  <div className="fr-fieldset__content">{children}</div>
 );
 
 export type FormCheckboxProps = React.InputHTMLAttributes<HTMLInputElement> & {
@@ -78,12 +77,12 @@ export type FormCheckboxProps = React.InputHTMLAttributes<HTMLInputElement> & {
 export const FormCheckbox = forwardRef<HTMLInputElement, FormCheckboxProps>(
   ({ id, children, isError, isDisabled, ...inputProps }, ref) => {
     return (
-      <Box className={clsx("fr-checkbox-group", isError && styles.error)}>
+      <div className={clsx("fr-checkbox-group", isError && styles.error)}>
         <input type="checkbox" id={id} name={id} ref={ref} {...inputProps} disabled={isDisabled} />
         <label className="fr-label" htmlFor={id}>
           {children ?? <>&nbsp;</>}
         </label>
-      </Box>
+      </div>
     );
   },
 );

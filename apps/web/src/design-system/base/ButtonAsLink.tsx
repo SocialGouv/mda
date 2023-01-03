@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 
-import type { ButtonStylesProps } from "../utils/button-styles";
-import { buttonStyles } from "../utils/button-styles";
+import type { ButtonStylesProps } from "../utils/ButtonStyles";
+import { buttonStyles } from "../utils/ButtonStyles";
 import { NextLinkOrA } from "../utils/NextLinkOrA";
 
 export type ButtonAsLinkProps = ButtonStylesProps &

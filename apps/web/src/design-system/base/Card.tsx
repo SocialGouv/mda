@@ -1,22 +1,19 @@
 import clsx from "clsx";
 import type { PropsWithChildren } from "react";
 
-import type { IconStyles } from "../utils/icon-styles";
-import type { MarginProps } from "../utils/spacing";
-import { Box } from "./Box";
+import type { IconStyles } from "../utils/IconStyles";
 
-export type CardProps = PropsWithChildren<
-  Omit<MarginProps, "ml" | "mr" | "mx"> & {
-    isEnlargeLink?: boolean;
-    isHorizontal?: boolean;
-    noBorder?: boolean;
-    size?: "lg" | "sm";
-  }
->;
+export type CardProps = PropsWithChildren<{
+  className?: string;
+  isEnlargeLink?: boolean;
+  isHorizontal?: boolean;
+  noBorder?: boolean;
+  size?: "lg" | "sm";
+}>;
 
-export const Card = ({ children, size, isEnlargeLink, noBorder, isHorizontal, ...rest }: CardProps) => {
+export const Card = ({ children, size, isEnlargeLink, noBorder, isHorizontal, className, ...rest }: CardProps) => {
   return (
-    <Box
+    <div
       className={clsx(
         "fr-card",
         size === "sm" && "fr-card--sm",
@@ -24,11 +21,12 @@ export const Card = ({ children, size, isEnlargeLink, noBorder, isHorizontal, ..
         isEnlargeLink && "fr-enlarge-link",
         noBorder && "fr-card--no-border",
         isHorizontal && "fr-card--horizontal",
+        className,
       )}
       {...rest}
     >
       {children}
-    </Box>
+    </div>
   );
 };
 

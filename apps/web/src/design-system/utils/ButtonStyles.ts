@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import type { IconStyles } from "./icon-styles";
+import type { IconStyles } from "./IconStyles";
 
 export type ButtonStylesProps = {
   iconLeft?: IconStyles;
