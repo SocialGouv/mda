@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_fiche_pratique_content_encarts",
+  "info": {
+    "displayName": "encart",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

@@ -20,7 +20,7 @@
     "db": "docker-compose up -d --remove-orphans db",
     "db:stop": "docker-compose stop db",
     "db:down": "docker-compose down db",
-    "dev": "turbo dev --continue",
+    "dev": "turbo dev --parallel --continue",
     "lint": "turbo lint --continue"
   },
   "devDependencies": {

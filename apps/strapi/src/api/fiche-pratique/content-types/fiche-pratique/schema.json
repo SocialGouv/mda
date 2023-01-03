@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fiche_pratiques",
+  "info": {
+    "singularName": "fiche-pratique",
+    "pluralName": "fiche-pratiques",
+    "displayName": "fiche-pratique"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "recap": {
+      "type": "component",
+      "repeatable": false,
+      "component": "fiche-pratique-content.encart"
+    },
+    "section": {
+      "type": "component",
+      "repeatable": true,
+      "component": "fiche-pratique-content.encart"
+    }
+  }
+}
