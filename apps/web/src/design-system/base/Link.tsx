@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { forwardRef } from "react";
 
-import type { IconStyles } from "../utils/icon-styles";
+import type { IconStyles } from "../utils/IconStyles";
 import { NextLinkOrA } from "../utils/NextLinkOrA";
 
 export type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {

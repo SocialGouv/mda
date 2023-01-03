@@ -1,17 +1,17 @@
 import clsx from "clsx";
 import type { PropsWithChildren } from "react";
 
-import type { MarginProps } from "../utils/spacing";
-import { Box } from "./Box";
 import styles from "./Stepper.module.css";
 
-export type StepperProps = PropsWithChildren<Omit<MarginProps, "ml" | "mr" | "mx">>;
+export type StepperProps = PropsWithChildren<{
+  className?: string;
+}>;
 
-export const Stepper = ({ children, ...rest }: StepperProps) => {
+export const Stepper = ({ children, className, ...rest }: StepperProps) => {
   return (
-    <Box className="fr-stepper" {...rest}>
+    <div className={clsx("fr-stepper", className)} {...rest}>
       {children}
-    </Box>
+    </div>
   );
 };
 

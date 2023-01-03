@@ -1,22 +1,18 @@
 import clsx from "clsx";
 import type { PropsWithChildren } from "react";
 
-import { Box } from "../base/Box";
 import { ButtonGroup } from "../base/ButtonGroup";
-import type { MarginProps } from "../utils/spacing";
 import styles from "./FormLayout.module.css";
 
-export type FormLayoutProps = PropsWithChildren<
-  Omit<MarginProps, "mb" | "mt" | "mx"> & {
-    className?: string;
-  }
->;
+export type FormLayoutProps = PropsWithChildren<{
+  className?: string;
+}>;
 
 export const FormLayout = ({ className, children, ...rest }: FormLayoutProps) => {
   return (
-    <Box className={clsx(styles.form, className)} {...rest}>
+    <div className={clsx(styles.form, className)} {...rest}>
       {children}
-    </Box>
+    </div>
   );
 };
 

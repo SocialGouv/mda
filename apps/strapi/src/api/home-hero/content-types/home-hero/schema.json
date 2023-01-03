@@ -4,10 +4,11 @@
   "info": {
     "singularName": "home-hero",
     "pluralName": "home-heroes",
-    "displayName": "home-hero"
+    "displayName": "home-hero",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
