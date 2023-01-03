@@ -1,19 +1,15 @@
 import clsx from "clsx";
 import type { PropsWithChildren } from "react";
 
-import type { MarginProps } from "../utils/spacing";
-import { Box } from "./Box";
+export type AlertProps = PropsWithChildren<{
+  className?: string;
+  size?: "md" | "sm";
+  type?: "error" | "info" | "success" | "warning";
+}>;
 
-export type AlertProps = PropsWithChildren<
-  Omit<MarginProps, "ml" | "mr" | "mx"> & {
-    size?: "md" | "sm";
-    type?: "error" | "info" | "success" | "warning";
-  }
->;
-
-export const Alert = ({ type = "info", size = "md", children, ...rest }: AlertProps) => {
+export const Alert = ({ type = "info", size = "md", children, className, ...rest }: AlertProps) => {
   return (
-    <Box
+    <div
       role="alert"
       className={clsx(
         "fr-alert",
@@ -22,11 +18,12 @@ export const Alert = ({ type = "info", size = "md", children, ...rest }: AlertPr
         type === "info" && "fr-alert--info",
         type === "warning" && "fr-alert--warning",
         size === "sm" && "fr-alert--sm",
+        className,
       )}
       {...rest}
     >
       {children}
-    </Box>
+    </div>
   );
 };
 

@@ -1,19 +1,14 @@
 import clsx from "clsx";
 import type { PropsWithChildren } from "react";
 
-import type { MarginProps } from "../utils/spacing";
-import { Box } from "./Box";
-
-export type ButtonGroupProps = PropsWithChildren<
-  Omit<MarginProps, "ml" | "mr" | "mx"> & {
-    className?: string;
-    inline?: "desktop-up" | "mobile-up" | "tablet-up";
-  }
->;
+export type ButtonGroupProps = PropsWithChildren<{
+  className?: string;
+  inline?: "desktop-up" | "mobile-up" | "tablet-up";
+}>;
 
 export const ButtonGroup = ({ inline, className, children, ...rest }: ButtonGroupProps) => {
   return (
-    <Box
+    <div
       className={clsx(
         "fr-btns-group",
         inline === "mobile-up" && "fr-btns-group--inline-sm",
@@ -24,6 +19,6 @@ export const ButtonGroup = ({ inline, className, children, ...rest }: ButtonGrou
       {...rest}
     >
       {children}
-    </Box>
+    </div>
   );
 };

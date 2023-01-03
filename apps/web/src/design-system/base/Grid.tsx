@@ -1,21 +1,26 @@
 import clsx from "clsx";
 import type { PropsWithChildren } from "react";
 
-import type { MarginProps } from "../utils/spacing";
-import { Box } from "./Box";
 import styles from "./Grid.module.css";
 
-export type GridProps = PropsWithChildren<
-  Omit<MarginProps, "ml" | "mr" | "mx"> & { haveGutters?: boolean; justifyCenter?: boolean }
->;
+export type GridProps = PropsWithChildren<{
+  className?: string;
+  haveGutters?: boolean;
+  justifyCenter?: boolean;
+}>;
 
-export const Grid = ({ children, haveGutters, justifyCenter, ...rest }: GridProps) => (
-  <Box
-    className={clsx("fr-grid-row", haveGutters && "fr-grid-row--gutters", justifyCenter && styles.justifyCenter)}
+export const Grid = ({ children, haveGutters, justifyCenter, className, ...rest }: GridProps) => (
+  <div
+    className={clsx(
+      "fr-grid-row",
+      haveGutters && "fr-grid-row--gutters",
+      justifyCenter && styles.justifyCenter,
+      className,
+    )}
     {...rest}
   >
     {children}
-  </Box>
+  </div>
 );
 
 type ColsNumberType = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;

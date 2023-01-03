@@ -1,4 +1,4 @@
-import { Box, ButtonAsLink, Container, Grid, GridCol, ImgHome } from "@design-system";
+import { ButtonAsLink, ButtonGroup, Container, Grid, GridCol, ImgHome } from "@design-system";
 import { fetchStrapi } from "@services/strapi";
 import { Suspense } from "react";
 import ReactMarkdown from "react-markdown";
@@ -10,7 +10,7 @@ const HeroMain = async () => <ReactMarkdown>{(await fetchStrapi("home-hero")).co
 const HomePage = () => {
   return (
     <section>
-      <Box pt="9w" pb="4w" className={styles.hero}>
+      <div className={`${styles.hero} fr-py-6w fr-py-md-12w`}>
         <Container>
           <Grid haveGutters>
             <GridCol lg={7}>
@@ -19,17 +19,19 @@ const HomePage = () => {
                 {/* @ts-expect-error Server Component */}
                 <HeroMain />
               </Suspense>
-              <ButtonAsLink href="#">Comprendre l'austisme</ButtonAsLink>&nbsp;
-              <ButtonAsLink variant="secondary" target="_blank" href="https://handicap.gouv.fr/la-maison-de-lautisme">
-                J'ai un doute
-              </ButtonAsLink>
+              <ButtonGroup inline="mobile-up">
+                <ButtonAsLink href="#">Comprendre l'austisme</ButtonAsLink>&nbsp;
+                <ButtonAsLink variant="secondary" target="_blank" href="https://handicap.gouv.fr/la-maison-de-lautisme">
+                  J'ai un doute
+                </ButtonAsLink>
+              </ButtonGroup>
             </GridCol>
             <GridCol md={6} lg={5} className="fr-mx-auto">
               <ImgHome />
             </GridCol>
           </Grid>
         </Container>
-      </Box>
+      </div>
     </section>
   );
 };
