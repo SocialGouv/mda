@@ -1,22 +1,56 @@
 global:
   registry: harbor.fabrique.social.gouv.fr
-  imageProject: mda
+  imageProject: maison-de-l-autisme
   imageRepository: mda
 
-app:
-  ~needs: [build-app]
-  imagePackage: app
+web:
+  ~chart: app
+  containerPort: 3000
+  ~needs: [build-web]
+  imagePackage: web
   probesPath: /healthz
   host: "{{ .Values.global.host }}"
+  vars:
+    NEXT_PUBLIC_SITE_URL: "{{ .Values.global.host }}"
+
+strapi:
+  ~chart: app
+  containerPort: 1337
+  ~needs: [build-strapi]
+  imagePackage: strapi
+  probesPath: /_health
+  host: "strapi-{{ .Values.global.host }}"
+  envFrom:
+    - secretRef:
+        name: "{{ .Values.global.pgSecretName }}"
+    - secretRef:
+        name: "mda-strapi"
+  vars:
+    DATABASE_HOST: "$(PGHOST)"
+    DATABASE_PORT: "$(PGPORT)"
+    DATABASE_NAME: "$(PGDATABASE)"
+    DATABASE_USERNAME: "$(PGUSER)"
+    DATABASE_PASSWORD: "$(PGPASSWORD)"
+    DATABASE_SSL: "$(PGSSLMODE)" # invetigate why knex doesn't work with "ssl: require"
+    HOST: "0.0.0.0"
 
 jobs:
   runs:
-    build-app:
+    build-web:
+      ~needs: [strapi]
       use: build
       with:
-        imagePackage: app
-        registrySecretRefName: harbor
-        skipExisting: true
-        buildOptions: --single-snapshot --ignore-path=/product_uuid --compressed-caching=false # optim for local builds
+        imagePackage: web
+        dockerfile: apps/web/Dockerfile
+        buildArgs:
+          GITHUB_SHA: "{{ $.Values.global.sha }}"
+          NEXT_PUBLIC_SITE_URL: "{{ .Values.global.host }}"
+          NEXT_PUBLIC_STRAPI_API_URL: "https://strapi-{{ .Values.global.host }}"
+
+    build-strapi:
+      use: build
+      with:
+        imagePackage: strapi
+        dockerfile: apps/strapi/Dockerfile
         buildArgs:
           GITHUB_SHA: "{{ $.Values.global.sha }}"

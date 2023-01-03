@@ -13,6 +13,20 @@
   "files.associations": {
     ".env*": "dotenv"
   },
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "turbo.json"
+      ],
+      "url": "https://turbo.build/schema.json"
+    }
+  ],
+  "eslint.workingDirectories": [
+    {
+      "pattern": "{packages,apps}/*",
+      "changeProcessCWD": true
+    }
+  ],
   "vsicons.associations.files": [
     {
       "icon": "tsconfig",

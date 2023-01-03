@@ -1,0 +1,27 @@
+{
+  "pipeline": {
+    "dev": {
+      "cache": false,
+      "dependsOn": [
+        "^dev"
+      ]
+    },
+    "lint": {
+      "outputs": [],
+      "inputs": [
+        "src/**/*.js",
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        ".eslintrc.js",
+        "../../packages/eslint-config/index.js"
+      ]
+    },
+    "build": {
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        "public/**"
+      ]
+    }
+  }
+}

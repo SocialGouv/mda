@@ -1,10 +1,22 @@
-app:
+web:
+  vars:
+    MDA_ENV: dev
+
+strapi:
+  ~needs: [build-strapi]
   vars:
     MDA_ENV: dev
 
 jobs:
   runs:
-    build-app:
+    build-web:
       with:
         buildArgs:
           PRODUCTION: "true"
+          NEXT_PUBLIC_STRAPI_API_URL: "https://strapi-{{ .Values.global.host }}"
+    create-db:
+      use: create-db
+      with:
+        pgAdminSecretRefName: azure-pg-admin-user
+    build-strapi:
+      ~needs: [create-db]

@@ -1,13 +1,19 @@
-# global:
-#   host: maisonautisme.gouv.fr #TODO enable when domain is ok
+global:
+  # host: maisonautisme.gouv.fr #TODO enable when domain is ok
 
-app:
+web:
+  vars:
+    MDA_ENV: prod
+
+strapi:
   vars:
     MDA_ENV: prod
 
 jobs:
   runs:
-    build-app:
+    build-web:
       with:
         buildArgs:
+          # NEXT_PUBLIC_STRAPI_API_URL: "https://strapi.{{ .Values.global.host }}"
           PRODUCTION: "true"
+          ROBOT: "true"

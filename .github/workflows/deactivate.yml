@@ -1,0 +1,19 @@
+name: ♻️ Deactivate
+on:
+  pull_request:
+    types: [closed]
+  delete:
+    branches:
+      - "**"
+      - "!v*"
+      - "!main"
+      - "!dev"
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.ref }}
+
+jobs:
+  kontinuous:
+    uses: socialgouv/workflows/.github/workflows/use-ks-wh-deactivate.yaml@v1
+    secrets: inherit
