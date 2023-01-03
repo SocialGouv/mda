@@ -38,6 +38,7 @@ const devCreateAdmin: StrapiLifecycle = async ({ strapi }) => {
     password: "admin",
     email: "admin@strapi.dev",
     blocked: false,
+    isActive: true,
   };
 
   const superAdminRole = await getSuperAdminRole(strapi);
