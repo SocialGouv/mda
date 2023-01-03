@@ -31,8 +31,7 @@ strapi:
     DATABASE_NAME: "$(PGDATABASE)"
     DATABASE_USERNAME: "$(PGUSER)"
     DATABASE_PASSWORD: "$(PGPASSWORD)"
-    # DATABASE_SSL: "$(PGSSLMODE)" # invetigate why knex doesn't work with "ssl: require"
-    DATABASE_SSL: "true"
+    DATABASE_SSL: "$(PGSSLMODE)" # invetigate why knex doesn't work with "ssl: require"
     HOST: "0.0.0.0"
 
 jobs:

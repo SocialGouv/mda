@@ -2,6 +2,10 @@ web:
   vars:
     MDA_ENV: preprod
 
+strapi:
+  vars:
+    MDA_ENV: preprod
+
 jobs:
   runs:
     build-web:

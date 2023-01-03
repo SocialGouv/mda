@@ -4,6 +4,8 @@ web:
 
 strapi:
   ~needs: [build-strapi]
+  vars:
+    MDA_ENV: dev
 
 jobs:
   runs:

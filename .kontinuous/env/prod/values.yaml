@@ -5,6 +5,10 @@ web:
   vars:
     MDA_ENV: prod
 
+strapi:
+  vars:
+    MDA_ENV: prod
+
 jobs:
   runs:
     build-web:
