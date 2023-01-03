@@ -2,13 +2,9 @@ name: Lint
 
 on:
   push:
-    branches:
-      - main
-      - dev
+    branches: [main, dev]
   pull_request:
-    branches-ignore:
-      - main
-      - dev
+    branches: [main, dev]
 
 concurrency:
   cancel-in-progress: true
