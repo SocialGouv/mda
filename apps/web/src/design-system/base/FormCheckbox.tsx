@@ -3,10 +3,9 @@ import type { PropsWithChildren, ReactElement } from "react";
 import { Children, cloneElement, forwardRef } from "react";
 
 import { ConditionalWrapper } from "../utils/ConditionalWrapper";
-import type { MarginProps } from "../utils/spacing";
 import styles from "./FormCheckbox.module.css";
 
-export interface FormCheckboxGroupProps extends Omit<MarginProps, "ml" | "mr" | "mx"> {
+export type FormCheckboxGroupProps = PropsWithChildren<{
   ariaLabelledby?: string;
   inline?: boolean;
   isDisabled?: boolean;
@@ -14,7 +13,8 @@ export interface FormCheckboxGroupProps extends Omit<MarginProps, "ml" | "mr" | 
   isValid?: boolean;
   singleCheckbox?: boolean;
   size?: "md" | "sm";
-}
+}>;
+
 export const FormCheckboxGroup = ({
   inline,
   children,
@@ -25,7 +25,7 @@ export const FormCheckboxGroup = ({
   ariaLabelledby,
   isDisabled,
   ...rest
-}: PropsWithChildren<FormCheckboxGroupProps>) => (
+}: FormCheckboxGroupProps) => (
   <ConditionalWrapper
     condition={!!singleCheckbox}
     wrapper={checkbox => (

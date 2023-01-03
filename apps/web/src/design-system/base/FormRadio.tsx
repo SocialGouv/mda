@@ -2,18 +2,14 @@ import clsx from "clsx";
 import type { PropsWithChildren } from "react";
 import { forwardRef } from "react";
 
-import type { MarginProps } from "../utils/spacing";
-
-export type FormRadioGroupProps = PropsWithChildren<
-  Omit<MarginProps, "ml" | "mr" | "mx"> & {
-    ariaLabelledby?: string;
-    inline?: boolean;
-    isDisabled?: boolean;
-    isError?: boolean;
-    isValid?: boolean;
-    size?: "md" | "sm";
-  }
->;
+export type FormRadioGroupProps = PropsWithChildren<{
+  ariaLabelledby?: string;
+  inline?: boolean;
+  isDisabled?: boolean;
+  isError?: boolean;
+  isValid?: boolean;
+  size?: "md" | "sm";
+}>;
 
 export const FormRadioGroup = ({
   children,
