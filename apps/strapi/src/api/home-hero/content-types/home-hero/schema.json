@@ -12,7 +12,8 @@
   "pluginOptions": {},
   "attributes": {
     "content": {
-      "type": "richtext"
+      "type": "richtext",
+      "default": "L’autisme est un **trouble** du neuro-développement précoce, qui impacte les capacités de **communication**, les interactions sociales et les comportements des personnes. Ce trouble va souvent de pair avec d’autres manifestations : hyper ou hypo sensibilité aux sons, lumières, odeur... , trouble du déficit de l’attention avec ou sans hyperactivité (TDAH), troubles “dys” (_dyslexie_, _dyspraxie_, _dysphasie_,...)."
     }
   }
 }

@@ -1,12 +1,10 @@
-import { type Strapi as BaseStrapi } from "@strapi/strapi";
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference
+/// <reference path="../index.d.ts" />
 
-type LifecycleProps = { strapi: BaseStrapi };
-interface PreInit {
-  bootstrap(props: LifecycleProps): Promise<void> | void;
-  register(props: LifecycleProps): Promise<void> | void;
-}
+import { bootstraps } from "./bootstrap";
+import { type StrapiApp } from "./utils/types";
 
-const StrapiInit: PreInit = {
+const StrapiInit: StrapiApp = {
   /**
    * An asynchronous register function that runs before
    * your application is initialized.
@@ -14,7 +12,7 @@ const StrapiInit: PreInit = {
    * This gives you an opportunity to extend code.
    */
   register({ strapi: _ }) {
-    console.log("================= Pre init register");
+    return;
   },
 
   /**
@@ -24,8 +22,11 @@ const StrapiInit: PreInit = {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap({ strapi: _ }) {
-    console.log("================= Pre init bootstrap");
+  async bootstrap({ strapi }) {
+    for await (const { default: boostrapFunction } of bootstraps) {
+      strapi.log.info(`[MDA] Bootstrap executing [${boostrapFunction.name}]`);
+      await boostrapFunction({ strapi });
+    }
   },
 };
 
