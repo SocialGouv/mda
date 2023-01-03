@@ -3,7 +3,7 @@ import { Container, Grid, GridCol } from "@design-system";
 const LegalNotice = () => {
   return (
     <section>
-      <Container py="8w">
+      <Container className="fr-my-6w">
         <Grid justifyCenter>
           <GridCol md={10} lg={8}>
             <h1>Mentions légales</h1>
