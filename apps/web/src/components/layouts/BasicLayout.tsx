@@ -21,6 +21,7 @@ import {
   FooterBottomLink,
   FooterContentLink,
   Logo,
+  Notice,
   SkipLinks,
   SkipLinksItem,
 } from "@design-system";
@@ -36,6 +37,7 @@ export const BasicLayout = ({ children }: PropsWithChildren) => (
       <SkipLinksItem href="#header">Menu</SkipLinksItem>
       <SkipLinksItem href="#footer">Pied de page</SkipLinksItem>
     </SkipLinks>
+    <Notice>Service en version beta</Notice>
     <header role="banner" className="fr-header" id="header">
       <div className="fr-header__body">
         <div className="fr-container">

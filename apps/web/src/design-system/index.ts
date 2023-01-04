@@ -17,6 +17,7 @@ export * from "./base/Link";
 export * from "./base/LinkGroup";
 export * from "./base/Logo";
 export * from "./base/MainNav";
+export * from "./base/Notice";
 export * from "./base/SideMenu";
 export * from "./base/SkipLinks";
 export * from "./base/SkipLinks";
