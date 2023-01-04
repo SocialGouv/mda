@@ -21,6 +21,7 @@ import {
   FooterBottomLink,
   FooterContentLink,
   Logo,
+  LogoMda,
   Notice,
   SkipLinks,
   SkipLinksItem,
@@ -46,6 +47,9 @@ export const BasicLayout = ({ children }: PropsWithChildren) => (
               <div className="fr-header__brand-top">
                 <div className="fr-header__logo">
                   <Logo />
+                </div>
+                <div className="fr-header__operator">
+                  <LogoMda />
                 </div>
               </div>
               <div className="fr-header__service">

@@ -16,6 +16,7 @@ export * from "./base/Grid";
 export * from "./base/Link";
 export * from "./base/LinkGroup";
 export * from "./base/Logo";
+export * from "./base/LogoMda";
 export * from "./base/MainNav";
 export * from "./base/Notice";
 export * from "./base/SideMenu";
