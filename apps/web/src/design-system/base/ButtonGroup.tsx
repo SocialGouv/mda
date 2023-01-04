@@ -6,19 +6,19 @@ export type ButtonGroupProps = PropsWithChildren<{
   inline?: "desktop-up" | "mobile-up" | "tablet-up";
 }>;
 
-export const ButtonGroup = ({ inline, className, children, ...rest }: ButtonGroupProps) => {
-  return (
-    <div
-      className={clsx(
-        "fr-btns-group",
-        inline === "mobile-up" && "fr-btns-group--inline-sm",
-        inline === "tablet-up" && "fr-btns-group--inline-md",
-        inline === "desktop-up" && "fr-btns-group--inline-lg",
-        className,
-      )}
-      {...rest}
-    >
-      {children}
-    </div>
-  );
-};
+export const ButtonGroup = ({ inline, className, children, ...rest }: ButtonGroupProps) => (
+  <ul
+    className={clsx(
+      "fr-btns-group",
+      inline === "mobile-up" && "fr-btns-group--inline-sm",
+      inline === "tablet-up" && "fr-btns-group--inline-md",
+      inline === "desktop-up" && "fr-btns-group--inline-lg",
+      className,
+    )}
+    {...rest}
+  >
+    {children}
+  </ul>
+);
+
+export const ButtonGroupItem = ({ children }: PropsWithChildren) => <li>{children}</li>;

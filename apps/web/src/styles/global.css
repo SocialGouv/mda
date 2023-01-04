@@ -1,0 +1,12 @@
+.fr-text-center {
+    text-align: center;
+}
+
+@media (min-width: 62em) {
+    .fr-pl-lg-4w {
+        padding-left: 2rem !important;
+    }
+    .fr-pt-lg-6w {
+        padding-top: 3rem !important;
+    }
+}
