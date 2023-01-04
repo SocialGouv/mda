@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { PropsWithChildren } from "react";
 
 export const SkipLinks = ({ children }: PropsWithChildren) => (
@@ -13,8 +12,8 @@ export type SkipLinksItemProps = PropsWithChildren<{ href: string }>;
 
 export const SkipLinksItem = ({ children, href }: SkipLinksItemProps) => (
   <li>
-    <Link className="fr-link" href={href}>
+    <a className="fr-link" href={href}>
       {children}
-    </Link>
+    </a>
   </li>
 );
