@@ -1,3 +1,5 @@
+import "../styles/global.css";
+
 import { DEFAULT_SEO_CONFIG } from "@common/config/next-seo";
 import { BasicLayout } from "@components/layouts/BasicLayout";
 import { DarkTheme } from "@components/utils/client/DarkTheme";
