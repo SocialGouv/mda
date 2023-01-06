@@ -18,8 +18,8 @@ export const SideMenu = ({ buttonLabel, children }: SideMenuProps) => {
   const wrapperId = "fr-sidemenu-wrapper";
   const { item, collapse } = useCollapse(wrapperId, isExpanded);
   return (
-    <nav className="fr-sidemenu fr-sidemenu--sticky-full-height" aria-label="Menu latéral" role="navigation">
-      <div className="fr-sidemenu__inner fr-py-12v">
+    <nav className="fr-sidemenu" aria-label="Menu latéral" role="navigation">
+      <div className="fr-sidemenu__inner">
         <button
           className="fr-sidemenu__btn"
           hidden

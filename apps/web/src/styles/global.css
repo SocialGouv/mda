@@ -2,6 +2,22 @@
     text-align: center;
 }
 
+.fr-text-right {
+    text-align: right;
+}
+
+.fr-text-left{
+    text-align: left;
+}
+
+.fr-text--sm *,
+.fr-text--md *,
+.fr-text--xl *,
+.fr-text--lead * {
+    font-size: inherit;
+    line-height: inherit;
+}
+
 @media (min-width: 62em) {
     .fr-pl-lg-4w {
         padding-left: 2rem !important;

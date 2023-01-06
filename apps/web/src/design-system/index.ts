@@ -4,6 +4,8 @@ export * from "./base/ButtonAsLink";
 export * from "./base/ButtonGroup";
 export * from "./base/Callout";
 export * from "./base/Card";
+export * from "./base/CollapsedSection";
+export * from "./base/CollapsedSectionGroup";
 export * from "./base/Footer";
 export * from "./base/FormButton";
 export * from "./base/FormCheckbox";
