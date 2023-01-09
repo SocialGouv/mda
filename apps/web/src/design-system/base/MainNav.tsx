@@ -1,8 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import type { PropsWithChildren } from "react";
+
+import { NextLinkOrA } from "../utils/NextLinkOrA";
 
 export const MainNav = ({ children }: PropsWithChildren) => {
   return (
@@ -15,17 +16,17 @@ export const MainNav = ({ children }: PropsWithChildren) => {
 export type MainNavItemProps = PropsWithChildren<{ href: string }>;
 
 export const MainNavItem = ({ children, href }: MainNavItemProps) => {
-  const router = useRouter();
-  const currentRoute = router.pathname;
+  const currentPathName = usePathname();
+  const parentPath = currentPathName ? `/${currentPathName.split("/")[1]}` : undefined;
+  const isCurrent = href === parentPath ? "page" : undefined;
+
+  console.log({ currentPathName, parentPath, isCurrent });
+
   return (
     <li className="fr-nav__item">
-      <Link
-        href={href}
-        className="fr-nav__link"
-        aria-current={href === `/${currentRoute.split("/")[1]}` ? "page" : undefined}
-      >
+      <NextLinkOrA href={href} className="fr-nav__link" aria-current={isCurrent}>
         {children}
-      </Link>
+      </NextLinkOrA>
     </li>
   );
 };
