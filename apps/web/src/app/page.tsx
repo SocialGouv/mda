@@ -41,7 +41,7 @@ const HomePage = () => {
                 </Suspense>
                 <ButtonGroup inline="mobile-up">
                   <ButtonGroupItem>
-                    <ButtonAsLink href="#">Comprendre l'austisme</ButtonAsLink>
+                    <ButtonAsLink href="/fiches-pratiques/qu-est-ce-que-l-autisme">Comprendre l'austisme</ButtonAsLink>
                   </ButtonGroupItem>
                   <ButtonGroupItem>
                     <ButtonAsLink variant="secondary" href="#">
@@ -221,7 +221,7 @@ const HomePage = () => {
               </GridCol>
             </Grid>
             <div className="fr-mt-4w fr-mt-md-6w fr-text-center">
-              <ButtonAsLink href="#" variant="secondary">
+              <ButtonAsLink href="/fiches-pratiques" variant="secondary">
                 Voir toutes les fiches pratiques
               </ButtonAsLink>
             </div>
