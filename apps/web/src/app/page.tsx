@@ -63,7 +63,7 @@ const HomePage = () => {
               <GridCol lg={6}>
                 <Tile>
                   <TileBody>
-                    <TileBodyTitle href="#" titleAs="h3">
+                    <TileBodyTitle href="/mon-parcours" titleAs="h3">
                       Mon parcours
                     </TileBodyTitle>
                     <TileBodyDescription>

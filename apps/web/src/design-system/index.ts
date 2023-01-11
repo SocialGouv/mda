@@ -26,6 +26,7 @@ export * from "./base/SkipLinks";
 export * from "./base/SkipLinks";
 export * from "./base/Stepper";
 export * from "./base/Tile";
+export * from "./base/Timeline";
 export * from "./img/ImgHome";
 export * from "./img/ImgJDMA";
 export * from "./img/ImgSuccess";

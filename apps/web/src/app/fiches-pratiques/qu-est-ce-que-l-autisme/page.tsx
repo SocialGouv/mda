@@ -6,6 +6,8 @@ import {
   CollapsedSectionGroupHead,
   Container,
   FormButton,
+  Grid,
+  GridCol,
   SideMenu,
   SideMenuLink,
   SideMenuList,
@@ -17,8 +19,8 @@ const FichePratique = () => {
   return (
     <section className="fr-py-md-12w">
       <Container>
-        <div className="fr-grid-row">
-          <div className="fr-col-12 fr-col-md-4 fr-col-lg-3">
+        <Grid haveGutters>
+          <GridCol md={4} lg={3}>
             <SideMenu buttonLabel="Sommaire des fiches pratiques">
               <SideMenuList>
                 <SideMenuLink href="#" isCurrent>
@@ -28,8 +30,8 @@ const FichePratique = () => {
                 <SideMenuLink href="#">Dossier MDPH</SideMenuLink>
               </SideMenuList>
             </SideMenu>
-          </div>
-          <div className="fr-py-6w fr-pt-md-0 fr-col-12 fr-col-md-8 fr-col-lg-9">
+          </GridCol>
+          <GridCol className="fr-py-6w fr-pt-md-0" md={8} lg={9}>
             <h1>Qu’est ce que l’autisme&nbsp;?</h1>
             <p className="fr-text--xs">
               Vérifié le 8 novembre 2022 - Direction de l'information légale et administrative (Premier ministre)
@@ -152,8 +154,8 @@ const FichePratique = () => {
                 </CollapsedSectionGroupBody>
               </CollapsedSectionGroup>
             </div>
-          </div>
-        </div>
+          </GridCol>
+        </Grid>
       </Container>
     </section>
   );

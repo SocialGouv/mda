@@ -1,0 +1,100 @@
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    counter-reset: section;
+}
+
+
+.item {
+    position: relative;
+    padding-left: 3rem;
+    padding-bottom: 1rem;
+}
+
+@media (min-width: 36em) {
+    .item {
+        padding-left: 4rem;
+        padding-bottom: 2rem;
+    }
+}
+
+.number {
+    position: relative;
+}
+
+.itemCard {
+    padding-top: 1rem !important;
+}
+
+.numberWithLink:hover::after {
+    color: var(--border-default-grey);
+}
+
+.number::after {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    z-index: 1;
+    font-family: Spectral;
+    pointer-events: none;
+    counter-increment: section;
+    content: "0" counter(section);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--background-action-low-blue-france);
+}
+
+.item::before {
+    z-index: 1;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--background-default-grey);
+    box-shadow:  0 0 0 0.333rem var(--background-action-high-blue-france) inset;
+    border: 0.333rem solid var(--background-action-low-blue-france);
+}
+
+.item::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0.75rem;
+    width: 0.5rem;
+    background: var(--background-action-low-blue-france);
+}
+
+.item:first-child::after {
+    top: 3.5rem;
+    bottom: 0;
+}
+
+.item:last-child::after {
+    top: 0;
+    bottom: 0;
+    height: 3.5rem;
+}
+
+.footer {
+    order: 2;
+    margin-top: -1rem;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footerLink {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+}
