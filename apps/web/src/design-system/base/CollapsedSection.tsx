@@ -1,18 +1,18 @@
-"use client";
-
 import clsx from "clsx";
-import { type PropsWithChildren, useState } from "react";
+import { type PropsWithChildren } from "react";
 
 import styles from "./CollapsedSection.module.css";
 
 export type CollapsedSectionProps = PropsWithChildren<{
+  id: string;
+  isOpen?: boolean;
+  openSection: (id: string, isOpen: boolean) => void;
   title: string;
 }>;
 
-export const CollapsedSection = ({ children, title }: CollapsedSectionProps) => {
-  const [open, setOpen] = useState(false);
+export const CollapsedSection = ({ children, title, id, isOpen, openSection }: CollapsedSectionProps) => {
   return (
-    <div className={styles.section}>
+    <div className={styles.section} id={id}>
       <div className={styles.head}>
         <div className={styles.bullet}>
           <svg
@@ -33,13 +33,13 @@ export const CollapsedSection = ({ children, title }: CollapsedSectionProps) => 
           </svg>
         </div>
         <h2 className={styles.title}>{title}</h2>
-        <button onClick={() => setOpen(!open)} className={styles.button}>
-          <span className={clsx(styles.icon, open ? "fr-icon-arrow-up-s-line" : "fr-icon-arrow-down-s-line")} />
+        <button onClick={_ => openSection(id, !!isOpen)} className={styles.button}>
+          <span className={clsx(styles.icon, isOpen ? "fr-icon-arrow-up-s-line" : "fr-icon-arrow-down-s-line")} />
           <span className="fr-sr-only">Ouvrir la section</span>
         </button>
       </div>
 
-      {open && <div className={clsx(!open ? styles.hide : styles.content)}>{children}</div>}
+      <div className={clsx(!isOpen ? "fr-sr-only" : styles.content)}>{children}</div>
     </div>
   );
 };

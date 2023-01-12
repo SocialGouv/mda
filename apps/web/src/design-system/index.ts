@@ -5,6 +5,7 @@ export * from "./base/ButtonGroup";
 export * from "./base/Callout";
 export * from "./base/Card";
 export * from "./base/CollapsedSection";
+export * from "./base/CollapsedSectionDynamicGroup";
 export * from "./base/CollapsedSectionGroup";
 export * from "./base/Footer";
 export * from "./base/FormButton";
