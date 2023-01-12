@@ -96,6 +96,7 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
             <MainNav>
               <MainNavItem href="/fiches-pratiques">Fiches pratiques</MainNavItem>
               <MainNavItem href="/mon-parcours">Mon parcours</MainNavItem>
+              <MainNavItem href="/mon-diagnostique">Mon diagnostique</MainNavItem>
             </MainNav>
           </div>
         </div>

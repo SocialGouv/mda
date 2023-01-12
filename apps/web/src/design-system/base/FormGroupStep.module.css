@@ -1,0 +1,51 @@
+.steps {
+     counter-reset: steps;
+     display: flex;
+     flex-direction: column;
+}
+
+.step {
+    position: relative;
+    padding-left: 3.25rem;
+    padding-top: .25rem;
+    min-height: 2.25rem;
+}
+
+.step:not(:last-child) {
+    padding-bottom: 2rem;
+}
+
+.step::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    counter-increment: steps;
+    content: counter(steps);
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    background-color: var(--background-action-high-blue-france);
+    color: var(--text-inverted-blue-france);
+    border-radius: 50%;
+}
+
+.step::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 2.5rem;
+    bottom: .25rem;
+    left: 1rem;
+    width: 0.25rem;
+    background: var(--background-action-low-blue-france);
+    border-radius: .5rem;
+}
+
+
+.step:last-child::after {
+    display: none;
+}

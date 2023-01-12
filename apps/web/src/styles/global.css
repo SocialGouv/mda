@@ -26,3 +26,16 @@
         padding-top: 3rem !important;
     }
 }
+
+
+.fr-bg-grey-lightest {
+    background: var(--grey-1000-50-hover);
+}
+
+.fr-bg-white {
+    background: var(--grey-1000-50);
+}
+
+.fr-content ul {
+    margin: var(--text-spacing);
+}
