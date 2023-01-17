@@ -10,7 +10,7 @@ export const useCollapse = (id: string, isExpanded: boolean) => {
     } else {
       return {
         class: "fr-collapse",
-        stateHeight: undefined,
+        stateHeight: null,
       };
     }
   };
