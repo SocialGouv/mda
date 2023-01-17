@@ -18,6 +18,7 @@ export const config = {
     apiUrl: process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://127.0.0.1:1337",
     token: ensureOsEnvVar("STRAPI_TOKEN"),
   },
+  githubSha: process.env.NEXT_PUBLIC_GITHUB_SHA ?? "<dev>",
 } as const;
 
 interface ServicesConfig {

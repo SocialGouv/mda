@@ -1,14 +1,6 @@
 global:
   # host: maisonautisme.gouv.fr #TODO enable when domain is ok
 
-web:
-  vars:
-    MDA_ENV: prod
-
-strapi:
-  vars:
-    MDA_ENV: prod
-
 jobs:
   runs:
     build-web:
