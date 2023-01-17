@@ -20,8 +20,6 @@ export const MainNavItem = ({ children, href }: MainNavItemProps) => {
   const parentPath = currentPathName ? `/${currentPathName.split("/")[1]}` : undefined;
   const isCurrent = href === parentPath ? "page" : undefined;
 
-  console.log({ currentPathName, parentPath, isCurrent });
-
   return (
     <li className="fr-nav__item">
       <NextLinkOrA href={href} className="fr-nav__link" aria-current={isCurrent}>

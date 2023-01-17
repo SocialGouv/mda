@@ -1,4 +1,3 @@
-"use client";
 import {
   Card,
   CardBody,
@@ -50,7 +49,7 @@ const FichesPratiques = () => {
                 </CardBodyContent>
               </CardBody>
             </Card>
-          </GridCol>{" "}
+          </GridCol>
           <GridCol md={6} lg={4}>
             <Card isEnlargeLink>
               <CardBody>

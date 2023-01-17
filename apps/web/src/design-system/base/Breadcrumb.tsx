@@ -9,7 +9,7 @@ import { type NextLinkOrAProps, NextLinkOrA } from "../utils/NextLinkOrA";
 export const Breadcrumb = ({ children }: PropsWithChildren) => {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <nav role="navigation" className="fr-breadcrumb" aria-label="vous êtes ici :">
+    <nav role="navigation" className="fr-breadcrumb fr-mb-0" aria-label="vous êtes ici :">
       <button
         className="fr-breadcrumb__button"
         aria-expanded={isExpanded}
@@ -28,7 +28,7 @@ export const Breadcrumb = ({ children }: PropsWithChildren) => {
 export type BreadcrumbItemProps = PropsWithChildren<{ href?: string; isCurrent?: boolean }>;
 
 export const BreadcrumbItem = ({ href, isCurrent, children }: BreadcrumbItemProps) => {
-  const props: NextLinkOrAProps = href ? { href, passHref: true } : { "aria-current": isCurrent && "page" };
+  const props: NextLinkOrAProps = isCurrent ? { "aria-current": isCurrent && "page" } : { href, passHref: true };
   return (
     <li>
       <NextLinkOrA {...props} className="fr-breadcrumb__link">
