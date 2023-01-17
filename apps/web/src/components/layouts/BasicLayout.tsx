@@ -30,10 +30,19 @@ import {
 } from "@design-system";
 import clsx from "clsx";
 import Link from "next/link";
-import { type PropsWithChildren, useState } from "react";
+import { type PropsWithChildren, useEffect, useState } from "react";
 
 export const BasicLayout = ({ children }: PropsWithChildren) => {
   const [navOpen, setNavOpen] = useState(false);
+
+  useEffect(() => {
+    if (navOpen) {
+      document.body.style.setProperty("--scroll-top", "0px");
+    } else {
+      document.body.style.removeProperty("--scroll-top");
+    }
+  }, [navOpen]);
+
   return (
     <>
       <SkipLinks>
