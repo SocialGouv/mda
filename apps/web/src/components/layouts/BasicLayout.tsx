@@ -132,22 +132,22 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
             </FooterBodyContentDescription>
             <FooterBodyContentItems>
               <FooterBodyItem>
-                <FooterContentLink href="https://www.legifrance.gouv.fr/" target="_blank" rel="noreferrer">
+                <FooterContentLink href="https://www.legifrance.gouv.fr/" target="_blank" rel="noreferrer" isExternal>
                   legifrance.gouv.fr
                 </FooterContentLink>
               </FooterBodyItem>
               <FooterBodyItem>
-                <FooterContentLink href="https://www.gouvernement.fr/" target="_blank" rel="noreferrer">
+                <FooterContentLink href="https://www.gouvernement.fr/" target="_blank" rel="noreferrer" isExternal>
                   gouvernement.fr
                 </FooterContentLink>
               </FooterBodyItem>
               <FooterBodyItem>
-                <FooterContentLink href="https://www.service-public.fr/" target="_blank" rel="noreferrer">
+                <FooterContentLink href="https://www.service-public.fr/" target="_blank" rel="noreferrer" isExternal>
                   service-public.fr
                 </FooterContentLink>
               </FooterBodyItem>
               <FooterBodyItem>
-                <FooterContentLink href="https://www.data.gouv.fr/" target="_blank" rel="noreferrer">
+                <FooterContentLink href="https://www.data.gouv.fr/" target="_blank" rel="noreferrer" isExternal>
                   data.gouv.fr
                 </FooterContentLink>
               </FooterBodyItem>
@@ -163,6 +163,11 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
           </FooterBottomItem>
           <FooterBottomItem>
             <FooterBottomLink href="/politique-de-confidentialite">Politique de confidentialité</FooterBottomLink>
+          </FooterBottomItem>
+          <FooterBottomItem>
+            <FooterBottomLink href={`https://github.com/SocialGouv/mda/commits/${config.githubSha}`} isExternal>
+              Version {config.githubSha}
+            </FooterBottomLink>
           </FooterBottomItem>
         </FooterBottom>
       </Footer>
