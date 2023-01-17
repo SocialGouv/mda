@@ -30,14 +30,25 @@ import {
 } from "@design-system";
 import clsx from "clsx";
 import Link from "next/link";
-import { type PropsWithChildren, useState } from "react";
+import { usePathname } from "next/navigation";
+import { type PropsWithChildren, useEffect, useState } from "react";
 
-import styles from "./BasicLayout.module.css";
+import { BreadcrumbDynamic } from "../base/BreadcrumbDynamic";
 
 export const BasicLayout = ({ children }: PropsWithChildren) => {
   const [navOpen, setNavOpen] = useState(false);
+  const currentPathName = usePathname();
+
+  useEffect(() => {
+    if (navOpen) {
+      document.body.style.setProperty("--scroll-top", "0px");
+    } else {
+      document.body.style.removeProperty("--scroll-top");
+    }
+  }, [navOpen]);
+
   return (
-    <div className={styles.basicLayout}>
+    <>
       <SkipLinks>
         <SkipLinksItem href="#content">Contenu</SkipLinksItem>
         <SkipLinksItem href="#header">Menu</SkipLinksItem>
@@ -95,11 +106,14 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
             </button>
             <MainNav>
               <MainNavItem href="/fiches-pratiques">Fiches pratiques</MainNavItem>
+              <MainNavItem href="/mon-parcours">Mon parcours</MainNavItem>
+              <MainNavItem href="/mon-diagnostique">Mon diagnostique</MainNavItem>
             </MainNav>
           </div>
         </div>
       </header>
-      <main role="main" id="content" className={styles.content}>
+      {currentPathName !== "/" && <BreadcrumbDynamic />}
+      <main role="main" id="content">
         {children}
       </main>
       <Footer>
@@ -152,6 +166,6 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
           </FooterBottomItem>
         </FooterBottom>
       </Footer>
-    </div>
+    </>
   );
 };
