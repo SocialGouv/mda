@@ -30,10 +30,14 @@ import {
 } from "@design-system";
 import clsx from "clsx";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { type PropsWithChildren, useEffect, useState } from "react";
+
+import { BreadcrumbDynamic } from "../base/BreadcrumbDynamic";
 
 export const BasicLayout = ({ children }: PropsWithChildren) => {
   const [navOpen, setNavOpen] = useState(false);
+  const currentPathName = usePathname();
 
   useEffect(() => {
     if (navOpen) {
@@ -108,6 +112,7 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
           </div>
         </div>
       </header>
+      {currentPathName !== "/" && <BreadcrumbDynamic />}
       <main role="main" id="content">
         {children}
       </main>
