@@ -32,12 +32,10 @@ import clsx from "clsx";
 import Link from "next/link";
 import { type PropsWithChildren, useState } from "react";
 
-import styles from "./BasicLayout.module.css";
-
 export const BasicLayout = ({ children }: PropsWithChildren) => {
   const [navOpen, setNavOpen] = useState(false);
   return (
-    <div className={styles.basicLayout}>
+    <>
       <SkipLinks>
         <SkipLinksItem href="#content">Contenu</SkipLinksItem>
         <SkipLinksItem href="#header">Menu</SkipLinksItem>
@@ -101,7 +99,7 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
           </div>
         </div>
       </header>
-      <main role="main" id="content" className={styles.content}>
+      <main role="main" id="content">
         {children}
       </main>
       <Footer>
@@ -154,6 +152,6 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
           </FooterBottomItem>
         </FooterBottom>
       </Footer>
-    </div>
+    </>
   );
 };

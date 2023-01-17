@@ -1,14 +1,6 @@
 "use client";
 
-import {
-  CollapsedSectionDynamicGroup,
-  Container,
-  Grid,
-  GridCol,
-  SideMenu,
-  SideMenuLink,
-  SideMenuList,
-} from "@design-system";
+import { CollapsedSectionDynamicGroup, Container, Grid, GridCol, SideMenu } from "@design-system";
 
 const FichePratique = () => {
   return (
@@ -16,15 +8,30 @@ const FichePratique = () => {
       <Container>
         <Grid haveGutters>
           <GridCol md={4} lg={3}>
-            <SideMenu buttonLabel="Sommaire des fiches pratiques">
-              <SideMenuList>
-                <SideMenuLink href="#" isCurrent>
-                  Qu'est ce que l'autisme
-                </SideMenuLink>
-                <SideMenuLink href="#">Parcours de diagnostic</SideMenuLink>
-                <SideMenuLink href="#">Dossier MDPH</SideMenuLink>
-              </SideMenuList>
-            </SideMenu>
+            <SideMenu
+              buttonLabel="Sommaire des fiches pratiques"
+              data={[
+                { href: "/fiches-pratiques/qu-est-ce-que-l-autisme", text: "Qu'est ce que l'autisme" },
+                { href: "#", text: "Parcours de diagnostic" },
+                { href: "#", text: "Dossier MDPH" },
+                { href: "#", text: "Dossier MDPH" },
+                { href: "#", text: "Dossier MDPH" },
+                { href: "#", text: "Dossier MDPH" },
+                { href: "#", text: "Dossier MDPH" },
+                { href: "#", text: "Dossier MDPH" },
+                { href: "#", text: "Dossier MDPH" },
+                { href: "#", text: "Dossier MDPH" },
+                { href: "#", text: "Dossier MDPH" },
+                { href: "#", text: "Dossier MDPH" },
+                { href: "#", text: "Dossier MDPH" },
+                { href: "#", text: "Dossier MDPH" },
+                { href: "#", text: "Dossier MDPH" },
+                { href: "#", text: "Dossier MDPH" },
+                { href: "#", text: "Dossier MDPH" },
+                { href: "#", text: "Dossier MDPH" },
+                { href: "#", text: "Dossier MDPH" },
+              ]}
+            />
           </GridCol>
           <GridCol className="fr-py-6w fr-pt-md-0" md={8} lg={9}>
             <h1>Qu’est ce que l’autisme&nbsp;?</h1>

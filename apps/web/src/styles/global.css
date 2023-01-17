@@ -39,3 +39,9 @@
 .fr-content ul {
     margin: var(--text-spacing);
 }
+
+
+.fr-sidemenu__inner > .fr-collapse {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}

@@ -24,6 +24,7 @@ export * from "./base/LogoMda";
 export * from "./base/MainNav";
 export * from "./base/Notice";
 export * from "./base/SideMenu";
+export * from "./base/SideMenuDynamic";
 export * from "./base/SkipLinks";
 export * from "./base/SkipLinks";
 export * from "./base/Stepper";
