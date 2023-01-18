@@ -60,8 +60,6 @@ FROM base AS runner
 ENV NODE_ENV production
 ENV NODE_OPTIONS="--max-old-space-size=8192"
 ENV NEXT_TELEMETRY_DISABLED 1
-ARG NEXT_PUBLIC_GITHUB_SHA
-ENV GITHUB_SHA $NEXT_PUBLIC_GITHUB_SHA
 
 RUN addgroup --system --gid 1001 nodejs && \
     adduser --system --uid 1001 nextjs

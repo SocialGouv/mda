@@ -53,6 +53,8 @@ FROM node:$NODE_VERSION AS runner
 ENV NODE_ENV production
 ARG GITHUB_SHA
 ENV GITHUB_SHA $GITHUB_SHA
+ARG MDA_ENV
+ENV MDA_ENV $MDA_ENV
 
 RUN apk add vips-dev
 RUN rm -rf /var/cache/apk/*
