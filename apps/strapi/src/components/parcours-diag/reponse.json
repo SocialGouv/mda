@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_parcours_diag_reponses",
+  "info": {
+    "displayName": "answer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "destination": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::question.question"
+    },
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "info": {
+      "type": "text"
+    },
+    "substeps": {
+      "type": "component",
+      "repeatable": true,
+      "component": "parcours-diag.sub-answer"
+    }
+  }
+}

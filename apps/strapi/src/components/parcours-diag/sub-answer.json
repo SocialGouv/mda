@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_parcours_diag_sub_answers",
+  "info": {
+    "displayName": "SubAnswer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "destination": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::question.question"
+    },
+    "info": {
+      "type": "text"
+    }
+  }
+}

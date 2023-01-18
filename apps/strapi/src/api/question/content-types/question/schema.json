@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "singularName": "question",
+    "pluralName": "questions",
+    "displayName": "Question",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "answers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "parcours-diag.reponse"
+    },
+    "info": {
+      "type": "text"
+    }
+  }
+}

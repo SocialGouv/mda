@@ -25,7 +25,8 @@
     "@mda/config": "*",
     "@strapi/plugin-users-permissions": "4.5.5",
     "@strapi/strapi": "4.5.5",
-    "pg": "8.6.0"
+    "pg": "8.6.0",
+    "strapi-plugin-populate-deep": "^2.0.0"
   },
   "strapi": {
     "uuid": "477f148b-f7a6-4bc4-bf3e-c413f95df885",
