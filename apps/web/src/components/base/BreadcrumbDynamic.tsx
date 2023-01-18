@@ -1,6 +1,8 @@
 import { Breadcrumb, BreadcrumbItem, Container } from "@design-system";
 import { usePathname } from "next/navigation";
 
+import styles from "./BreadcrumbDynamic.module.css";
+
 export const BreadcrumbDynamic = () => {
   const currentPathName = usePathname();
   const filteredPath = currentPathName?.split("/").filter(el => el !== "");
@@ -15,8 +17,8 @@ export const BreadcrumbDynamic = () => {
   });
 
   return (
-    <Container>
-      <Breadcrumb>
+    <Container className={styles.section}>
+      <Breadcrumb className={styles.sectionItem}>
         <BreadcrumbItem href="/" isCurrent={currentPathName === "/"}>
           Accueil
         </BreadcrumbItem>

@@ -1,0 +1,9 @@
+.section {
+    position: relative;
+}
+
+.sectionItem {
+    position: absolute;
+    padding-top: 1rem;
+    margin: 0;
+}
