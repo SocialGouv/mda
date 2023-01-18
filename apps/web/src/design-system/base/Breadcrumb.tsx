@@ -6,10 +6,10 @@ import { useState } from "react";
 
 import { type NextLinkOrAProps, NextLinkOrA } from "../utils/NextLinkOrA";
 
-export const Breadcrumb = ({ children }: PropsWithChildren) => {
+export const Breadcrumb = ({ children, className }: PropsWithChildren<{ className?: string }>) => {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <nav role="navigation" className="fr-breadcrumb fr-mb-0" aria-label="vous êtes ici :">
+    <nav role="navigation" className={clsx("fr-breadcrumb", className)} aria-label="vous êtes ici :">
       <button
         className="fr-breadcrumb__button"
         aria-expanded={isExpanded}
