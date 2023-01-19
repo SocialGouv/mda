@@ -2,12 +2,30 @@ import "@mda/strapi";
 
 import { config } from "@common/config";
 import { type UnknownMapping } from "@common/utils/types";
-import { type GetAttributesKey, type GetAttributesValues, type SingleTypeSchema, type utils } from "@strapi/strapi";
+import {
+  type CollectionTypeSchema,
+  type GetAttributesKey,
+  type GetAttributesValues,
+  type SingleTypeSchema,
+  type utils,
+} from "@strapi/strapi";
 import { stringify as qsStringify } from "qs";
 
-type Model = {
-  [Id in utils.SchemaUID]: Id extends `api::${string}` ? Id : never;
-}[utils.SchemaUID];
+type NeverKey<T> = { [P in keyof T]: T[P] extends never ? P : never }[keyof T];
+type OmitNever<T> = Pick<T, Exclude<keyof T, NeverKey<T>>>;
+type Model = OmitNever<{
+  [Id in utils.SchemaUID]: Id extends `api::${string}`
+    ? Strapi.Schemas[Id] extends SingleTypeSchema
+      ? Strapi.Schemas[Id]["info"]["singularName"]
+      : Strapi.Schemas[Id] extends CollectionTypeSchema
+      ? Strapi.Schemas[Id]["info"]["pluralName"]
+      : Strapi.Schemas[Id]["info"]["displayName"]
+    : never;
+}>;
+
+type ReverseModel = {
+  [Id in keyof Model as Model[Id]]: Id;
+};
 
 type LogicalOperators<T> = {
   /** Joins the filters in an "and" expression */
@@ -78,11 +96,7 @@ interface _MetaPagination {
   total: number;
 }
 
-type ModelPath<Id extends utils.SchemaUID = Model> = Strapi.Schemas[Id] extends SingleTypeSchema
-  ? Strapi.Schemas[Id]["info"]["singularName"]
-  : Strapi.Schemas[Id]["info"]["singularName"];
-
-interface FetchParam<T extends Model, Dto extends GetAttributesValues<T> = GetAttributesValues<T>> {
+interface FetchParam<T extends keyof Model, Dto extends GetAttributesValues<T> = GetAttributesValues<T>> {
   fields?: Array<GetAttributesKey<T>>;
   filters?: WhereParams<Dto>;
   pagination?: PaginationByOffset | PaginationByPage;
@@ -92,10 +106,10 @@ interface FetchParam<T extends Model, Dto extends GetAttributesValues<T> = GetAt
   sort?: Array<GetAttributesKey<T>> | GetAttributesKey<T>;
 }
 
-export const fetchStrapi = async <T extends Model, TParams extends FetchParam<T>>(
-  modelPath: ModelPath<T>,
+export const fetchStrapi = async <T extends keyof ReverseModel, TParams extends FetchParam<ReverseModel[T]>>(
+  modelPath: T,
   params?: TParams,
-): Promise<GetAttributesValues<T>> => {
+): Promise<GetAttributesValues<ReverseModel[T]>> => {
   const query = params ? qsStringify(params) : null;
 
   const url = new URL(`/api/${modelPath}${query ? `?${query}` : ""}`, config.strapi.apiUrl);
@@ -109,7 +123,10 @@ export const fetchStrapi = async <T extends Model, TParams extends FetchParam<T>
     },
   });
 
-  const payload = (await response.json()) as { data: { attributes: GetAttributesValues<T> }; meta: unknown };
+  const payload = (await response.json()) as {
+    data: { attributes: GetAttributesValues<ReverseModel[T]> };
+    meta: unknown;
+  };
 
   if (response.ok) {
     return payload.data.attributes;

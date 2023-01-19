@@ -544,7 +544,7 @@ export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
   info: {
     singularName: 'fiche-pratique';
     pluralName: 'fiche-pratiques';
-    displayName: 'fiche-pratique';
+    displayName: 'Fiche Pratique';
   };
   options: {
     draftAndPublish: false;
@@ -573,7 +573,7 @@ export interface ApiHomeHeroHomeHero extends SingleTypeSchema {
   info: {
     singularName: 'home-hero';
     pluralName: 'home-heroes';
-    displayName: 'home-hero';
+    displayName: 'Home Hero';
     description: '';
   };
   options: {
