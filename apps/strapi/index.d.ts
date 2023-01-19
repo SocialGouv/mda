@@ -15,11 +15,14 @@ import {
   BooleanAttribute,
   EnumerationAttribute,
   BigIntegerAttribute,
-  SingleTypeSchema,
-  RichTextAttribute,
   IntegerAttribute,
   DecimalAttribute,
   SetMinMax,
+  ComponentAttribute,
+  SingleTypeSchema,
+  RichTextAttribute,
+  TextAttribute,
+  ComponentSchema,
 } from '@strapi/strapi';
 
 export interface AdminPermission extends CollectionTypeSchema {
@@ -272,35 +275,6 @@ export interface AdminApiTokenPermission extends CollectionTypeSchema {
   };
 }
 
-export interface ApiHomeHeroHomeHero extends SingleTypeSchema {
-  info: {
-    singularName: 'home-hero';
-    pluralName: 'home-heroes';
-    displayName: 'home-hero';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    content: RichTextAttribute;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    publishedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::home-hero.home-hero',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::home-hero.home-hero',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
 export interface PluginUploadFile extends CollectionTypeSchema {
   info: {
     singularName: 'file';
@@ -412,49 +386,6 @@ export interface PluginUploadFolder extends CollectionTypeSchema {
       PrivateAttribute;
     updatedBy: RelationAttribute<
       'plugin::upload.folder',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface PluginI18NLocale extends CollectionTypeSchema {
-  info: {
-    singularName: 'locale';
-    pluralName: 'locales';
-    collectionName: 'locales';
-    displayName: 'Locale';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    name: StringAttribute &
-      SetMinMax<{
-        min: 1;
-        max: 50;
-      }>;
-    code: StringAttribute & UniqueAttribute;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'plugin::i18n.locale',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'plugin::i18n.locale',
       'oneToOne',
       'admin::user'
     > &
@@ -609,6 +540,141 @@ export interface PluginUsersPermissionsUser extends CollectionTypeSchema {
   };
 }
 
+export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
+  info: {
+    singularName: 'fiche-pratique';
+    pluralName: 'fiche-pratiques';
+    displayName: 'fiche-pratique';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    recap: ComponentAttribute<'fiche-pratique-content.encart'>;
+    section: ComponentAttribute<'fiche-pratique-content.encart', true>;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::fiche-pratique.fiche-pratique',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::fiche-pratique.fiche-pratique',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
+export interface ApiHomeHeroHomeHero extends SingleTypeSchema {
+  info: {
+    singularName: 'home-hero';
+    pluralName: 'home-heroes';
+    displayName: 'home-hero';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    content: RichTextAttribute &
+      DefaultTo<'L\u2019autisme est un **trouble** du neuro-d\u00E9veloppement pr\u00E9coce, qui impacte les capacit\u00E9s de **communication**, les interactions sociales et les comportements des personnes. Ce trouble va souvent de pair avec d\u2019autres manifestations : hyper ou hypo sensibilit\u00E9 aux sons, lumi\u00E8res, odeur... , trouble du d\u00E9ficit de l\u2019attention avec ou sans hyperactivit\u00E9 (TDAH), troubles \u201Cdys\u201D (_dyslexie_, _dyspraxie_, _dysphasie_,...).'>;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::home-hero.home-hero',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::home-hero.home-hero',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
+export interface ApiQuestionQuestion extends CollectionTypeSchema {
+  info: {
+    singularName: 'question';
+    pluralName: 'questions';
+    displayName: 'Question';
+    description: 'Une question est une \u00E9tape du parcours de diagnostic.';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    content: StringAttribute & RequiredAttribute;
+    answers: ComponentAttribute<'parcours-diag.answer', true>;
+    info: TextAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::question.question',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::question.question',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
+export interface FichePratiqueContentEncart extends ComponentSchema {
+  info: {
+    displayName: 'encart';
+    description: '';
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+  };
+}
+
+export interface ParcoursDiagAnswer extends ComponentSchema {
+  info: {
+    displayName: 'answer';
+    description: 'Une r\u00E9ponse potentielle \u00E0 une question menant soit \u00E0 une sous r\u00E9ponse, soit a une nouvelle question.';
+  };
+  attributes: {
+    content: StringAttribute & RequiredAttribute;
+    destination: RelationAttribute<
+      'parcours-diag.answer',
+      'oneToOne',
+      'api::question.question'
+    >;
+    info: TextAttribute;
+    subanswers: ComponentAttribute<'parcours-diag.sub-answer', true>;
+  };
+}
+
+export interface ParcoursDiagSubAnswer extends ComponentSchema {
+  info: {
+    displayName: 'SubAnswer';
+    description: 'Une sous r\u00E9ponse suit une r\u00E9ponse et m\u00E8ne obligatoirement vers une nouvelle question.';
+  };
+  attributes: {
+    content: StringAttribute & RequiredAttribute;
+    destination: RelationAttribute<
+      'parcours-diag.sub-answer',
+      'oneToOne',
+      'api::question.question'
+    > &
+      RequiredAttribute;
+    info: TextAttribute;
+  };
+}
+
 declare global {
   namespace Strapi {
     interface Schemas {
@@ -617,13 +683,17 @@ declare global {
       'admin::role': AdminRole;
       'admin::api-token': AdminApiToken;
       'admin::api-token-permission': AdminApiTokenPermission;
-      'api::home-hero.home-hero': ApiHomeHeroHomeHero;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
-      'plugin::i18n.locale': PluginI18NLocale;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;
+      'api::home-hero.home-hero': ApiHomeHeroHomeHero;
+      'api::question.question': ApiQuestionQuestion;
+      'fiche-pratique-content.encart': FichePratiqueContentEncart;
+      'parcours-diag.answer': ParcoursDiagAnswer;
+      'parcours-diag.sub-answer': ParcoursDiagSubAnswer;
     }
   }
 }

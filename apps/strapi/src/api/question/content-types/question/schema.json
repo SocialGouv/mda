@@ -5,7 +5,7 @@
     "singularName": "question",
     "pluralName": "questions",
     "displayName": "Question",
-    "description": ""
+    "description": "Une question est une étape du parcours de diagnostic."
   },
   "options": {
     "draftAndPublish": false
@@ -18,7 +18,7 @@
     "answers": {
       "type": "component",
       "repeatable": true,
-      "component": "parcours-diag.reponse"
+      "component": "parcours-diag.answer"
     },
     "info": {
       "type": "text"

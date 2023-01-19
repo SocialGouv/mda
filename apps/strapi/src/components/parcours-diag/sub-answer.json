@@ -2,7 +2,7 @@
   "collectionName": "components_parcours_diag_sub_answers",
   "info": {
     "displayName": "SubAnswer",
-    "description": ""
+    "description": "Une sous réponse suit une réponse et mène obligatoirement vers une nouvelle question."
   },
   "options": {},
   "attributes": {
@@ -13,7 +13,8 @@
     "destination": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::question.question"
+      "target": "api::question.question",
+      "required": true
     },
     "info": {
       "type": "text"
