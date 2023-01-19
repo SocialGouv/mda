@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "singularName": "question",
+    "pluralName": "questions",
+    "displayName": "Question",
+    "description": "Une question est une étape du parcours de diagnostic."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "answers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "parcours-diag.answer"
+    },
+    "info": {
+      "type": "text"
+    }
+  }
+}
