@@ -1,4 +1,4 @@
-import { type Strapi } from "@strapi/strapi";
+import { type ComponentSchema, type Strapi } from "@strapi/strapi";
 import { type SignOptions } from "jsonwebtoken";
 import { type Knex } from "knex";
 import type Koa from "koa";
@@ -277,3 +277,42 @@ export interface ApiConfig {
     withCount?: boolean;
   };
 }
+
+interface StrapiConfigSyncSettings {
+  customTypes?: string[];
+  excludedConfig?: SchemaNames[];
+  excludedTypes?: string[];
+  importOnBootstrap?: boolean;
+  minify?: boolean;
+  soft?: boolean;
+  syncDir: string;
+}
+
+interface PluginEntry<T = any> {
+  config: T;
+  enabled?: boolean;
+}
+
+export type PluginsConfig = {
+  [P: string]: PluginEntry;
+  "config-sync": PluginEntry<StrapiConfigSyncSettings>;
+};
+
+// --- strapi-config-sync-plugin
+type SchemaNames =
+  | "admin-role.strapi-super-admin"
+  | "core-store.core_admin_auth"
+  | "core-store.plugin_upload_metrics"
+  | "core-store.plugin_upload_settings"
+  | "core-store.plugin_upload_view_configuration"
+  | "core-store.plugin_users-permissions_advanced"
+  | "core-store.plugin_users-permissions_email"
+  | "core-store.plugin_users-permissions_grant"
+  | "core-store.strapi_content_types_schema"
+  | "user-role.authenticated"
+  | "user-role.public"
+  | `core-store.plugin_content_manager_configuration_${{
+      [Id in keyof Strapi.Schemas]: Strapi.Schemas[Id] extends ComponentSchema
+        ? `components::${Id}`
+        : `content_types::${Id}`;
+    }[keyof Strapi.Schemas]}`;

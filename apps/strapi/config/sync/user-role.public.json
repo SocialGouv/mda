@@ -1,0 +1,22 @@
+{
+  "name": "Public",
+  "description": "Default role given to unauthenticated user.",
+  "type": "public",
+  "permissions": [
+    {
+      "action": "api::fiche-pratique.fiche-pratique.find"
+    },
+    {
+      "action": "api::fiche-pratique.fiche-pratique.findOne"
+    },
+    {
+      "action": "api::home-hero.home-hero.find"
+    },
+    {
+      "action": "api::question.question.find"
+    },
+    {
+      "action": "api::question.question.findOne"
+    }
+  ]
+}
