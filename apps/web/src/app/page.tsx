@@ -17,7 +17,6 @@ import {
   TileImg,
 } from "@design-system";
 import { fetchStrapi } from "@services/strapi";
-import { Suspense } from "react";
 import ReactMarkdown from "react-markdown";
 import { PlaceholderImg } from "src/design-system/base/ImgPlaceholder";
 import { NextLinkOrA } from "src/design-system/utils/NextLinkOrA";
@@ -35,10 +34,8 @@ const HomePage = () => {
             <Grid haveGutters>
               <GridCol lg={7}>
                 <h1>Qu'est-ce que l'autisme&nbsp;?</h1>
-                <Suspense>
-                  {/* @ts-expect-error Server Component */}
-                  <HeroMain />
-                </Suspense>
+                {/* @ts-expect-error Server Component */}
+                <HeroMain />
                 <ButtonGroup inline="mobile-up">
                   <ButtonGroupItem>
                     <ButtonAsLink href="/fiches-pratiques/qu-est-ce-que-l-autisme">Comprendre l'austisme</ButtonAsLink>

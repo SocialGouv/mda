@@ -9,7 +9,7 @@
     "build": "next build --no-lint",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "tsc --pretty --noEmit && next lint",
     "generateEnvDeclaration": "ts-node --project scripts/tsconfig.json scripts/generateEnvDeclaration.ts"
   },
   "dependencies": {
