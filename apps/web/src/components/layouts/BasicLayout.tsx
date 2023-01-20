@@ -32,6 +32,7 @@ import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { type PropsWithChildren, useEffect, useState } from "react";
+import { NextLinkOrA } from "src/design-system/utils/NextLinkOrA";
 
 import { BreadcrumbDynamic } from "../base/BreadcrumbDynamic";
 
@@ -126,9 +127,9 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
           <FooterBodyContent>
             <FooterBodyContentDescription>
               Ce site est une version beta en cours de déploiement progressif. Il sera enrichi au fur et à mesure des
-              retours des personnes concernées.Un oubli ? Une suggestion ? Utilisez le module "JeDonneMonAvis" pour
-              soumettre vos idées afin de contribuer à enrichir ce service public construit par et pour les personnes
-              autistes et leurs proches.
+              retours des personnes concernées.Un oubli ? Une suggestion ? Utilisez le module{" "}
+              <NextLinkOrA href="/je-donne-mon-avis">JeDonneMonAvis</NextLinkOrA> pour soumettre vos idées afin de
+              contribuer à enrichir ce service public construit par et pour les personnes autistes et leurs proches.
             </FooterBodyContentDescription>
             <FooterBodyContentItems>
               <FooterBodyItem>
@@ -163,6 +164,9 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
           </FooterBottomItem>
           <FooterBottomItem>
             <FooterBottomLink href="/politique-de-confidentialite">Politique de confidentialité</FooterBottomLink>
+          </FooterBottomItem>
+          <FooterBottomItem>
+            <FooterBottomLink href="/je-donne-mon-avis">Je donne mon avis</FooterBottomLink>
           </FooterBottomItem>
         </FooterBottom>
       </Footer>
