@@ -27,7 +27,19 @@ const plugins: PluginsConfig = {
         "core-store.plugin_users-permissions_email",
         "core-store.strapi_content_types_schema",
         "core-store.plugin_upload_metrics",
+        "core-store.plugin_content_manager_configuration_content_types::plugin::slugify.slug",
       ],
+    },
+  },
+  slugify: {
+    enabled: true,
+    config: {
+      contentTypes: {
+        "fiche-pratique": {
+          field: "slug",
+          references: "title",
+        },
+      },
     },
   },
 };

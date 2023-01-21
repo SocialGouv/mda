@@ -1,3 +1,6 @@
+import { fetchStrapi } from "@services/strapi";
+import ReactMarkdown from "react-markdown";
+import { PlaceholderImg } from "src/design-system/base/ImgPlaceholder";
 import {
   ButtonAsLink,
   ButtonGroup,
@@ -15,10 +18,7 @@ import {
   TileBodyDescription,
   TileBodyTitle,
   TileImg,
-} from "@design-system";
-import { fetchStrapi } from "@services/strapi";
-import ReactMarkdown from "react-markdown";
-import { PlaceholderImg } from "src/design-system/base/ImgPlaceholder";
+} from "src/design-system/server";
 import { NextLinkOrA } from "src/design-system/utils/NextLinkOrA";
 
 import styles from "./index.module.css";

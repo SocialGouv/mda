@@ -16,16 +16,19 @@
         "src/services/*"
       ],
       "@design-system": [
-        "src/design-system/index"
+        "src/design-system/server"
       ],
-      "@mda/strapi": [
-        "../strapi/index"
-      ]
+      "@design-system/client": [
+        "src/design-system/client"
+      ],
     },
     "plugins": [
       {
         "name": "next"
       }
+    ],
+    "types": [
+      "@mda/strapi"
     ]
   },
   "include": [

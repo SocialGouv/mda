@@ -8,7 +8,7 @@ import {
   Grid,
   GridCol,
   Notice,
-} from "@design-system";
+} from "src/design-system/server";
 
 const Diagnostique = () => {
   return (

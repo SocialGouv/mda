@@ -4,12 +4,18 @@
   "info": {
     "singularName": "fiche-pratique",
     "pluralName": "fiche-pratiques",
-    "displayName": "fiche-pratique"
+    "displayName": "fiche-pratique",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
     "recap": {
       "type": "component",
       "repeatable": false,
@@ -19,6 +25,9 @@
       "type": "component",
       "repeatable": true,
       "component": "fiche-pratique-content.encart"
+    },
+    "slug": {
+      "type": "string"
     }
   }
 }

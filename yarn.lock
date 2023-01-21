@@ -15195,6 +15195,13 @@ strapi-plugin-populate-deep@^2.0.0:
   resolved "https://registry.yarnpkg.com/strapi-plugin-populate-deep/-/strapi-plugin-populate-deep-2.0.0.tgz#dd558eaef2fe47583a63536964b46a945e93f555"
   integrity sha512-IsdXZPjRiOnaczoQaXI6xfxnFqUhR70uW1VCRbY4a3hEmmocpCpIUGx7TiHdNPJOZuDiueTgEIQ4V5XEru9Lvw==
 
+strapi-plugin-slugify@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/strapi-plugin-slugify/-/strapi-plugin-slugify-2.3.2.tgz#5f87886e253ca34d738e9b84e96d1db724a3af53"
+  integrity sha512-gZbZ+jdZYmSjjCdNR5WEhAcF7cokAX3wGlz7+vVgGpsp/ayvZACyWQzyqgfHbbqzjVtPFOi40Clp0OeRtfCHGg==
+  dependencies:
+    "@sindresorhus/slugify" "1.1.0"
+
 stream-browserify@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-3.0.0.tgz#22b0a2850cdf6503e73085da1fc7b7d0c2122f2f"

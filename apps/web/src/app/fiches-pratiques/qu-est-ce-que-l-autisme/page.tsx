@@ -1,6 +1,5 @@
-"use client";
-
-import { CollapsedSectionDynamicGroup, Container, Grid, GridCol, SideMenu } from "@design-system";
+import { Container, Grid, GridCol } from "@design-system";
+import { CollapsedSectionDynamicGroup, SideMenuDynamic } from "@design-system/client";
 
 const FichePratique = () => {
   return (
@@ -8,29 +7,29 @@ const FichePratique = () => {
       <Container>
         <Grid haveGutters>
           <GridCol md={4} lg={3}>
-            <SideMenu
+            <SideMenuDynamic
               buttonLabel="Sommaire des fiches pratiques"
-              data={[
-                { href: "/fiches-pratiques/qu-est-ce-que-l-autisme", text: "Qu'est ce que l'autisme" },
-                { href: "#", text: "Parcours de diagnostic" },
-                { href: "#", text: "Dossier MDPH" },
-                { href: "#", text: "Dossier MDPH" },
-                { href: "#", text: "Dossier MDPH" },
-                { href: "#", text: "Dossier MDPH" },
-                { href: "#", text: "Dossier MDPH" },
-                { href: "#", text: "Dossier MDPH" },
-                { href: "#", text: "Dossier MDPH" },
-                { href: "#", text: "Dossier MDPH" },
-                { href: "#", text: "Dossier MDPH" },
-                { href: "#", text: "Dossier MDPH" },
-                { href: "#", text: "Dossier MDPH" },
-                { href: "#", text: "Dossier MDPH" },
-                { href: "#", text: "Dossier MDPH" },
-                { href: "#", text: "Dossier MDPH" },
-                { href: "#", text: "Dossier MDPH" },
-                { href: "#", text: "Dossier MDPH" },
-                { href: "#", text: "Dossier MDPH" },
-              ]}
+              // data={[
+              //   { href: "/fiches-pratiques/qu-est-ce-que-l-autisme", text: "Qu'est ce que l'autisme" },
+              //   { href: "#", text: "Parcours de diagnostic" },
+              //   { href: "#", text: "Dossier MDPH" },
+              //   { href: "#", text: "Dossier MDPH" },
+              //   { href: "#", text: "Dossier MDPH" },
+              //   { href: "#", text: "Dossier MDPH" },
+              //   { href: "#", text: "Dossier MDPH" },
+              //   { href: "#", text: "Dossier MDPH" },
+              //   { href: "#", text: "Dossier MDPH" },
+              //   { href: "#", text: "Dossier MDPH" },
+              //   { href: "#", text: "Dossier MDPH" },
+              //   { href: "#", text: "Dossier MDPH" },
+              //   { href: "#", text: "Dossier MDPH" },
+              //   { href: "#", text: "Dossier MDPH" },
+              //   { href: "#", text: "Dossier MDPH" },
+              //   { href: "#", text: "Dossier MDPH" },
+              //   { href: "#", text: "Dossier MDPH" },
+              //   { href: "#", text: "Dossier MDPH" },
+              //   { href: "#", text: "Dossier MDPH" },
+              // ]}
             />
           </GridCol>
           <GridCol className="fr-py-6w fr-pt-md-0" md={8} lg={9}>

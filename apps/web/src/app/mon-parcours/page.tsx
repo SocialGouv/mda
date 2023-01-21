@@ -7,7 +7,7 @@ import {
   Container,
   Grid,
   GridCol,
-} from "@design-system";
+} from "src/design-system/server";
 import { NextLinkOrA } from "src/design-system/utils/NextLinkOrA";
 
 const MonParcours = () => {

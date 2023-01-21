@@ -1,4 +1,10 @@
-import { type ComponentSchema, type Strapi } from "@strapi/strapi";
+import {
+  type CollectionTypeSchema,
+  type ComponentSchema,
+  type GetAttributesKey,
+  type SingleTypeSchema,
+  type Strapi,
+} from "@strapi/strapi";
 import { type SignOptions } from "jsonwebtoken";
 import { type Knex } from "knex";
 import type Koa from "koa";
@@ -288,7 +294,20 @@ interface StrapiConfigSyncSettings {
   syncDir: string;
 }
 
-interface PluginEntry<T = any> {
+interface SlugifySettings {
+  contentTypes: {
+    [P in keyof ReverseModelSingularName]?: {
+      field: string;
+      references: Array<GetAttributesKey<ReverseModelSingularName[P]>> | GetAttributesKey<ReverseModelSingularName[P]>;
+    };
+  };
+  shouldUpdateSlug?: boolean;
+  skipUndefinedReferences?: boolean;
+  slugifyOptions?: unknown;
+  slugifyWithCount?: boolean;
+}
+
+interface PluginEntry<T = unknown> {
   config: T;
   enabled?: boolean;
 }
@@ -296,12 +315,14 @@ interface PluginEntry<T = any> {
 export type PluginsConfig = {
   [P: string]: PluginEntry;
   "config-sync": PluginEntry<StrapiConfigSyncSettings>;
+  slugify: PluginEntry<SlugifySettings>;
 };
 
 // --- strapi-config-sync-plugin
 type SchemaNames =
   | "admin-role.strapi-super-admin"
   | "core-store.core_admin_auth"
+  | "core-store.plugin_content_manager_configuration_content_types::plugin::slugify.slug"
   | "core-store.plugin_upload_metrics"
   | "core-store.plugin_upload_settings"
   | "core-store.plugin_upload_view_configuration"
@@ -316,3 +337,17 @@ type SchemaNames =
         ? `components::${Id}`
         : `content_types::${Id}`;
     }[keyof Strapi.Schemas]}`;
+// ---
+
+// --- slugify
+type NeverKey<T> = { [P in keyof T]: T[P] extends never ? P : never }[keyof T];
+type OmitNever<T> = Pick<T, Exclude<keyof T, NeverKey<T>>>;
+type ModelSingularName = OmitNever<{
+  [Id in keyof Strapi.Schemas]: Strapi.Schemas[Id] extends CollectionTypeSchema | SingleTypeSchema
+    ? Strapi.Schemas[Id]["info"]["singularName"]
+    : never;
+}>;
+type ReverseModelSingularName = {
+  [Id in keyof ModelSingularName as ModelSingularName[Id]]: Id;
+};
+// ---

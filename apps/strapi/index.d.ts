@@ -18,10 +18,10 @@ import {
   IntegerAttribute,
   DecimalAttribute,
   SetMinMax,
+  TextAttribute,
   ComponentAttribute,
   SingleTypeSchema,
   RichTextAttribute,
-  TextAttribute,
   ComponentSchema,
 } from '@strapi/strapi';
 
@@ -393,6 +393,44 @@ export interface PluginUploadFolder extends CollectionTypeSchema {
   };
 }
 
+export interface PluginSlugifySlug extends CollectionTypeSchema {
+  info: {
+    singularName: 'slug';
+    pluralName: 'slugs';
+    displayName: 'slug';
+  };
+  options: {
+    draftAndPublish: false;
+    comment: '';
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    slug: TextAttribute;
+    count: IntegerAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'plugin::slugify.slug',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'plugin::slugify.slug',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface PluginUsersPermissionsPermission extends CollectionTypeSchema {
   info: {
     name: 'permission';
@@ -544,16 +582,20 @@ export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
   info: {
     singularName: 'fiche-pratique';
     pluralName: 'fiche-pratiques';
-    displayName: 'Fiche Pratique';
+    displayName: 'fiche-pratique';
+    description: '';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
+    title: StringAttribute & RequiredAttribute & UniqueAttribute;
     recap: ComponentAttribute<'fiche-pratique-content.encart'>;
     section: ComponentAttribute<'fiche-pratique-content.encart', true>;
+    slug: StringAttribute;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
+    publishedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
       'api::fiche-pratique.fiche-pratique',
       'oneToOne',
@@ -573,7 +615,7 @@ export interface ApiHomeHeroHomeHero extends SingleTypeSchema {
   info: {
     singularName: 'home-hero';
     pluralName: 'home-heroes';
-    displayName: 'Home Hero';
+    displayName: 'home-hero';
     description: '';
   };
   options: {
@@ -685,6 +727,7 @@ declare global {
       'admin::api-token-permission': AdminApiTokenPermission;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
+      'plugin::slugify.slug': PluginSlugifySlug;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;

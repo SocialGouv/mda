@@ -1,26 +1,17 @@
 "use client";
 
 import clsx from "clsx";
-import { usePathname } from "next/navigation";
-import type { CSSProperties } from "react";
-import { useState } from "react";
-
-import { useCollapse } from "../hooks/useCollapse";
-import { SideMenuLink } from "./SideMenu";
+import { type CSSProperties, type PropsWithChildren, useState } from "react";
+import { useCollapse } from "src/design-system/hooks/useCollapse";
 
 export type SideMenuProps = {
   buttonLabel: string;
-  data: Array<{
-    href: string;
-    text: string;
-  }>;
 };
 
-export const SideMenu = ({ buttonLabel, data }: SideMenuProps) => {
+export const SideMenuDynamic = ({ buttonLabel, children }: PropsWithChildren<SideMenuProps>) => {
   const [isExpanded, setExpanded] = useState(false);
   const wrapperId = "fr-sidemenu-wrapper";
   const { item, collapse } = useCollapse(wrapperId, isExpanded);
-  const currentPathName = usePathname();
 
   return (
     <nav className="fr-sidemenu fr-sidemenu--sticky" aria-label="Menu latéral" role="navigation">
@@ -44,13 +35,7 @@ export const SideMenu = ({ buttonLabel, data }: SideMenuProps) => {
             } as CSSProperties
           }
         >
-          <ul className="fr-sidemenu__list">
-            {data.map(({ href, text }, index) => (
-              <SideMenuLink key={index} href={href} isCurrent={href === currentPathName}>
-                {text}
-              </SideMenuLink>
-            ))}
-          </ul>
+          <ul className="fr-sidemenu__list">{children}</ul>
         </div>
       </div>
     </nav>

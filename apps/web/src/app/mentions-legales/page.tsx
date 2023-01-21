@@ -1,4 +1,4 @@
-import { Container, Grid, GridCol } from "@design-system";
+import { Container, Grid, GridCol } from "src/design-system/server";
 
 const LegalNotice = () => {
   return (

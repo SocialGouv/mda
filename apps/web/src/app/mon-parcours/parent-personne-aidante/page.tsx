@@ -12,7 +12,7 @@ import {
   TimelineItem,
   TimelineItemFooterLink,
   TimelineItemTitle,
-} from "@design-system";
+} from "src/design-system/server";
 import { NextLinkOrA } from "src/design-system/utils/NextLinkOrA";
 
 const MonParcoursAidant = () => {

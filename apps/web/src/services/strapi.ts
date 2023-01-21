@@ -1,5 +1,3 @@
-import "@mda/strapi";
-
 import { config } from "@common/config";
 import { type UnknownMapping } from "@common/utils/types";
 import {
@@ -16,15 +14,18 @@ type OmitNever<T> = Pick<T, Exclude<keyof T, NeverKey<T>>>;
 type Model = OmitNever<{
   [Id in utils.SchemaUID]: Id extends `api::${string}`
     ? Strapi.Schemas[Id] extends SingleTypeSchema
-      ? Strapi.Schemas[Id]["info"]["singularName"]
+      ? {
+          plural: never;
+          singular: Strapi.Schemas[Id]["info"]["singularName"];
+        }
       : Strapi.Schemas[Id] extends CollectionTypeSchema
-      ? Strapi.Schemas[Id]["info"]["pluralName"]
-      : Strapi.Schemas[Id]["info"]["displayName"]
+      ? { plural: Strapi.Schemas[Id]["info"]["pluralName"]; singular: Strapi.Schemas[Id]["info"]["singularName"] }
+      : never
     : never;
 }>;
 
 type ReverseModel = {
-  [Id in keyof Model as Model[Id]]: Id;
+  [Id in keyof Model as Model[Id]["plural"] | Model[Id]["singular"]]: Id;
 };
 
 type LogicalOperators<T> = {
@@ -89,13 +90,6 @@ interface PaginationByOffset {
   withCount?: boolean;
 }
 
-interface _MetaPagination {
-  page: number;
-  pageCount: number;
-  pageSize: number;
-  total: number;
-}
-
 interface FetchParam<T extends keyof Model, Dto extends GetAttributesValues<T> = GetAttributesValues<T>> {
   fields?: Array<GetAttributesKey<T>>;
   filters?: WhereParams<Dto>;
@@ -106,10 +100,15 @@ interface FetchParam<T extends keyof Model, Dto extends GetAttributesValues<T> =
   sort?: Array<GetAttributesKey<T>> | GetAttributesKey<T>;
 }
 
-export const fetchStrapi = async <T extends keyof ReverseModel, TParams extends FetchParam<ReverseModel[T]>>(
+export const fetchStrapi = async <
+  T extends keyof ReverseModel,
+  TParams extends FetchParam<ReverseModel[T]>,
+  Elt extends GetAttributesValues<ReverseModel[T]>,
+  Ret extends T extends Model[ReverseModel[T]]["singular"] ? Elt : Elt[],
+>(
   modelPath: T,
   params?: TParams,
-): Promise<GetAttributesValues<ReverseModel[T]>> => {
+): Promise<Ret> => {
   const query = params ? qsStringify(params) : null;
 
   const url = new URL(`/api/${modelPath}${query ? `?${query}` : ""}`, config.strapi.apiUrl);
@@ -118,18 +117,17 @@ export const fetchStrapi = async <T extends keyof ReverseModel, TParams extends 
       "Content-Type": "application/json",
     },
     next: {
-      // TODO: better building with ISR
-      revalidate: 0,
+      revalidate: 3600, // seconds
     },
   });
 
   const payload = (await response.json()) as {
-    data: { attributes: GetAttributesValues<ReverseModel[T]> };
+    data: T extends Model[ReverseModel[T]]["singular"] ? { attributes: Elt } : Array<{ attributes: Elt }>;
     meta: unknown;
   };
 
   if (response.ok) {
-    return payload.data.attributes;
+    return (Array.isArray(payload.data) ? payload.data.map(elt => elt.attributes) : payload.data.attributes) as Ret;
   }
 
   console.error(response.statusText);
