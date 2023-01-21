@@ -6,8 +6,6 @@ import "@gouvfr/dsfr/dist/utility/icons/icons-map/icons-map.min.css";
 import "@gouvfr/dsfr/dist/utility/icons/icons-design/icons-design.min.css";
 
 import { config } from "@common/config";
-import Link from "next/link";
-import { type PropsWithChildren } from "react";
 import {
   Footer,
   FooterBody,
@@ -24,7 +22,9 @@ import {
   Notice,
   SkipLinks,
   SkipLinksItem,
-} from "src/design-system/server";
+} from "@design-system";
+import Link from "next/link";
+import { type PropsWithChildren } from "react";
 
 import { BreadcrumbDynamic } from "../base/BreadcrumbDynamic";
 import { Header } from "./Header";

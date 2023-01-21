@@ -21,6 +21,12 @@
       "@design-system/client": [
         "src/design-system/client"
       ],
+      "@design-system/utils/*": [
+        "src/design-system/utils/*"
+      ],
+      "@design-system/hooks/*": [
+        "src/design-system/hooks/*"
+      ],
     },
     "plugins": [
       {

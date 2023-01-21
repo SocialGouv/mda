@@ -17,7 +17,6 @@ const plugins: PluginsConfig = {
         "core-store.plugin_content_manager_configuration_content_types::admin::role",
         "core-store.plugin_content_manager_configuration_content_types::admin::user",
         "core-store.plugin_content_manager_configuration_content_types::api::fiche-pratique.fiche-pratique",
-        "core-store.plugin_content_manager_configuration_content_types::api::home-hero.home-hero",
         "core-store.plugin_content_manager_configuration_content_types::api::question.question",
         "core-store.plugin_content_manager_configuration_content_types::plugin::upload.file",
         "core-store.plugin_content_manager_configuration_content_types::plugin::upload.folder",

@@ -1,8 +1,8 @@
 "use client";
 
+import { useCollapse } from "@design-system/hooks/useCollapse";
 import clsx from "clsx";
 import { type CSSProperties, type PropsWithChildren, useState } from "react";
-import { useCollapse } from "src/design-system/hooks/useCollapse";
 
 export type SideMenuProps = {
   buttonLabel: string;

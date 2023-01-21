@@ -10,9 +10,6 @@
       "action": "api::fiche-pratique.fiche-pratique.findOne"
     },
     {
-      "action": "api::home-hero.home-hero.find"
-    },
-    {
       "action": "api::question.question.find"
     },
     {

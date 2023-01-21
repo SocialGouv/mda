@@ -8,10 +8,12 @@
       "subject": "api::fiche-pratique.fiche-pratique",
       "properties": {
         "fields": [
+          "title",
           "recap.title",
           "recap.content",
           "section.title",
-          "section.content"
+          "section.content",
+          "slug"
         ]
       },
       "conditions": []
@@ -27,10 +29,12 @@
       "subject": "api::fiche-pratique.fiche-pratique",
       "properties": {
         "fields": [
+          "title",
           "recap.title",
           "recap.content",
           "section.title",
-          "section.content"
+          "section.content",
+          "slug"
         ]
       },
       "conditions": []
@@ -40,46 +44,12 @@
       "subject": "api::fiche-pratique.fiche-pratique",
       "properties": {
         "fields": [
+          "title",
           "recap.title",
           "recap.content",
           "section.title",
-          "section.content"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.create",
-      "subject": "api::home-hero.home-hero",
-      "properties": {
-        "fields": [
-          "content"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.delete",
-      "subject": "api::home-hero.home-hero",
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.read",
-      "subject": "api::home-hero.home-hero",
-      "properties": {
-        "fields": [
-          "content"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.update",
-      "subject": "api::home-hero.home-hero",
-      "properties": {
-        "fields": [
-          "content"
+          "section.content",
+          "slug"
         ]
       },
       "conditions": []

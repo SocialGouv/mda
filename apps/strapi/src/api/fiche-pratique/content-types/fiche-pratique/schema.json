@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "title": {
@@ -19,6 +19,7 @@
     "recap": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "component": "fiche-pratique-content.encart"
     },
     "section": {
@@ -27,7 +28,8 @@
       "component": "fiche-pratique-content.encart"
     },
     "slug": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

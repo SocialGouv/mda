@@ -10,4 +10,4 @@ if (MDA_ENV === "dev") {
 }
 
 strapi.log.info(`[MDA] Load common bootstraps`);
-bootstraps.push(import("./public-read-all"));
+// bootstraps.push(import("./*")); // replace "*" by common bootstrap file

@@ -1,3 +1,5 @@
-export interface Next13Page {
-  test: string;
+export interface Next13ServerPageProps<Param extends string> {
+  params: {
+    [T in Param]: string;
+  };
 }

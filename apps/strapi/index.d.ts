@@ -20,9 +20,8 @@ import {
   SetMinMax,
   TextAttribute,
   ComponentAttribute,
-  SingleTypeSchema,
-  RichTextAttribute,
   ComponentSchema,
+  RichTextAttribute,
 } from '@strapi/strapi';
 
 export interface AdminPermission extends CollectionTypeSchema {
@@ -586,54 +585,24 @@ export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
     description: '';
   };
   options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: StringAttribute & RequiredAttribute & UniqueAttribute;
-    recap: ComponentAttribute<'fiche-pratique-content.encart'>;
-    section: ComponentAttribute<'fiche-pratique-content.encart', true>;
-    slug: StringAttribute;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    publishedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::fiche-pratique.fiche-pratique',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::fiche-pratique.fiche-pratique',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface ApiHomeHeroHomeHero extends SingleTypeSchema {
-  info: {
-    singularName: 'home-hero';
-    pluralName: 'home-heroes';
-    displayName: 'home-hero';
-    description: '';
-  };
-  options: {
     draftAndPublish: false;
   };
   attributes: {
-    content: RichTextAttribute &
-      DefaultTo<'L\u2019autisme est un **trouble** du neuro-d\u00E9veloppement pr\u00E9coce, qui impacte les capacit\u00E9s de **communication**, les interactions sociales et les comportements des personnes. Ce trouble va souvent de pair avec d\u2019autres manifestations : hyper ou hypo sensibilit\u00E9 aux sons, lumi\u00E8res, odeur... , trouble du d\u00E9ficit de l\u2019attention avec ou sans hyperactivit\u00E9 (TDAH), troubles \u201Cdys\u201D (_dyslexie_, _dyspraxie_, _dysphasie_,...).'>;
+    title: StringAttribute & RequiredAttribute & UniqueAttribute;
+    recap: ComponentAttribute<'fiche-pratique-content.encart'> &
+      RequiredAttribute;
+    section: ComponentAttribute<'fiche-pratique-content.encart', true>;
+    slug: StringAttribute & RequiredAttribute;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
-      'api::home-hero.home-hero',
+      'api::fiche-pratique.fiche-pratique',
       'oneToOne',
       'admin::user'
     > &
       PrivateAttribute;
     updatedBy: RelationAttribute<
-      'api::home-hero.home-hero',
+      'api::fiche-pratique.fiche-pratique',
       'oneToOne',
       'admin::user'
     > &
@@ -732,7 +701,6 @@ declare global {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;
-      'api::home-hero.home-hero': ApiHomeHeroHomeHero;
       'api::question.question': ApiQuestionQuestion;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
       'parcours-diag.answer': ParcoursDiagAnswer;

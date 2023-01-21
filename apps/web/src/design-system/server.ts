@@ -28,6 +28,7 @@ export * from "./base/Tile";
 export * from "./base/Timeline";
 export * from "./img/ImgHome";
 export * from "./img/ImgJDMA";
+export * from "./img/ImgPlaceholder";
 export * from "./img/ImgSuccess";
 export * from "./layout/Container";
 export * from "./layout/ContentWithAside";

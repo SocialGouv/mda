@@ -1,4 +1,4 @@
-import { Container } from "src/design-system/server";
+import { Container } from "@design-system";
 
 const HealthZPage = () => {
   return (
