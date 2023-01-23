@@ -35,5 +35,6 @@ jobs:
         HOST: "0.0.0.0"
         MDA_ENV: "{{ .Values.global.env }}"
       shell: sh
+      user: 1001
       run: |
         strapi import --only content --force --file content-dump.tar.gz
