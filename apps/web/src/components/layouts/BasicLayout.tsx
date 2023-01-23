@@ -23,6 +23,7 @@ import {
   SkipLinks,
   SkipLinksItem,
 } from "@design-system";
+import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 import Link from "next/link";
 import { type PropsWithChildren } from "react";
 
@@ -53,9 +54,9 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
           <FooterBodyContent>
             <FooterBodyContentDescription>
               Ce site est une version beta en cours de déploiement progressif. Il sera enrichi au fur et à mesure des
-              retours des personnes concernées.Un oubli ? Une suggestion ? Utilisez le module "JeDonneMonAvis" pour
-              soumettre vos idées afin de contribuer à enrichir ce service public construit par et pour les personnes
-              autistes et leurs proches.
+              retours des personnes concernées.Un oubli ? Une suggestion ? Utilisez le module{" "}
+              <NextLinkOrA href="/je-donne-mon-avis">JeDonneMonAvis</NextLinkOrA> pour soumettre vos idées afin de
+              contribuer à enrichir ce service public construit par et pour les personnes autistes et leurs proches.
             </FooterBodyContentDescription>
             <FooterBodyContentItems>
               <FooterBodyItem>
@@ -95,6 +96,7 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
             <FooterBottomLink href={`https://github.com/SocialGouv/mda/commits/${config.githubSha}`} isExternal>
               Version {config.githubSha}
             </FooterBottomLink>
+            <FooterBottomLink href="/je-donne-mon-avis">Je donne mon avis</FooterBottomLink>
           </FooterBottomItem>
         </FooterBottom>
       </Footer>

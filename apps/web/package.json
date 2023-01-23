@@ -15,6 +15,7 @@
   "dependencies": {
     "@gouvfr/dsfr": "^1.8.5",
     "@headlessui/react": "^1.7.7",
+    "@hookform/resolvers": "^2.9.10",
     "@mda/config": "*",
     "@mda/strapi": "*",
     "@socialgouv/matomo-next": "^1.4.0",
@@ -25,7 +26,9 @@
     "qs": "^6.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-markdown": "^8.0.4"
+    "react-hook-form": "^7.42.1",
+    "react-markdown": "^8.0.4",
+    "zod": "^3.20.2"
   },
   "devDependencies": {
     "@next/env": "^13.1.1",

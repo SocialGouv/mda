@@ -135,12 +135,12 @@ const MonParcoursAidant = () => {
                   <CardBody>
                     <CardBodyContent>
                       <CardBodyContentTitle titleAs="h2">
-                        <NextLinkOrA href="#">Je donne mon avis</NextLinkOrA>
+                        <NextLinkOrA href="/je-donne-mon-avis">Je donne mon avis</NextLinkOrA>
                       </CardBodyContentTitle>
                       <CardBodyContentDescription>
-                        Un oubli ? Une suggestion ? Utilisez le module "JeDonneMonAvis" pour soumettre vos idées afin de
-                        contribuer à enrichir ce service public construit par et pour les personnes autistes et leurs
-                        proches.
+                        Un oubli&nbsp;? Une suggestion&nbsp;? Utilisez le module "JeDonneMonAvis" pour soumettre vos
+                        idées afin de contribuer à enrichir ce service public construit par et pour les personnes
+                        autistes et leurs proches.
                       </CardBodyContentDescription>
                     </CardBodyContent>
                   </CardBody>
