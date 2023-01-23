@@ -8,12 +8,11 @@ import styles from "./FormInput.module.css";
 type FormInputCustomTypes = HTMLInputTypeAttribute | "percentage";
 
 export type FormInputProps = React.InputHTMLAttributes<HTMLInputElement> & {
+  autocomplete?: string;
   icon?: IconStyles;
-  id: string;
   isDisabled?: boolean;
   isError?: boolean;
   isValid?: boolean;
-  type?: FormInputCustomTypes;
 };
 
 export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
@@ -22,7 +21,6 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
       return (
         <div className="fr-input-wrap">
           <input
-            id={id}
             className={clsx("fr-input", isError && "fr-input--error", isValid && "fr-input--valid", styles.input)}
             type="number"
             min="0"

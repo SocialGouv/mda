@@ -16,15 +16,12 @@ import {
   TileBodyTitle,
   TileImg,
 } from "@design-system";
-import { fetchStrapi } from "@services/strapi";
-import { Suspense } from "react";
-import ReactMarkdown from "react-markdown";
 import { PlaceholderImg } from "src/design-system/base/ImgPlaceholder";
 import { NextLinkOrA } from "src/design-system/utils/NextLinkOrA";
 
 import styles from "./index.module.css";
 
-const HeroMain = async () => <ReactMarkdown>{(await fetchStrapi("home-hero")).content ?? ""}</ReactMarkdown>;
+//const HeroMain = async () => <ReactMarkdown>{(await fetchStrapi("home-hero")).content ?? ""}</ReactMarkdown>;
 
 const HomePage = () => {
   return (
@@ -35,10 +32,10 @@ const HomePage = () => {
             <Grid haveGutters>
               <GridCol lg={7}>
                 <h1>Qu'est-ce que l'autisme&nbsp;?</h1>
-                <Suspense>
-                  {/* @ts-expect-error Server Component */}
+                {/*<Suspense>
+                   @ts-expect-error Server Component 
                   <HeroMain />
-                </Suspense>
+                </Suspense>*/}
                 <ButtonGroup inline="mobile-up">
                   <ButtonGroupItem>
                     <ButtonAsLink href="/fiches-pratiques/qu-est-ce-que-l-autisme">Comprendre l'austisme</ButtonAsLink>
