@@ -34,6 +34,7 @@ strapi:
     DATABASE_PASSWORD: "$(PGPASSWORD)"
     DATABASE_SSL: "$(PGSSLMODE)" # invetigate why knex doesn't work with "ssl: require"
     HOST: "0.0.0.0"
+    GITHUB_SHA: "{{ $.Values.global.sha }}"
     MDA_ENV: "{{ .Values.global.env }}"
 
 jobs:
@@ -55,13 +56,3 @@ jobs:
       with:
         imagePackage: strapi
         dockerfile: apps/strapi/Dockerfile
-        buildArgs:
-          DATABASE_HOST: "$(PGHOST)"
-          DATABASE_PORT: "$(PGPORT)"
-          DATABASE_NAME: "$(PGDATABASE)"
-          DATABASE_USERNAME: "$(PGUSER)"
-          DATABASE_PASSWORD: "$(PGPASSWORD)"
-          DATABASE_SSL: "$(PGSSLMODE)" # invetigate why knex doesn't work with "ssl: require"
-          HOST: "0.0.0.0"
-          GITHUB_SHA: "{{ $.Values.global.sha }}"
-          MDA_ENV: "{{ .Values.global.env }}"

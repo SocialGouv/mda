@@ -25,23 +25,6 @@ COPY --from=builder /app/out/full/ /tmp-full/
 ########
 # Installer from pruned monorepo
 FROM node:$NODE_VERSION AS installer
-ARG MDA_ENV
-ENV MDA_ENV $MDA_ENV
-
-ARG DATABASE_HOST
-ENV DATABASE_HOST $DATABASE_HOST
-ARG DATABASE_PORT
-ENV DATABASE_PORT $DATABASE_PORT
-ARG DATABASE_NAME
-ENV DATABASE_NAME $DATABASE_NAME
-ARG DATABASE_USERNAME
-ENV DATABASE_USERNAME $DATABASE_USERNAME
-ARG DATABASE_PASSWORD
-ENV DATABASE_PASSWORD $DATABASE_PASSWORD
-ARG DATABASE_SSL
-ENV DATABASE_SSL $DATABASE_SSL
-ARG HOST
-ENV HOST $HOST
 
 # Installing libvips-dev for sharp Compatibility
 RUN apk add --no-cache --update \
@@ -64,12 +47,6 @@ RUN yarn install --frozen-lockfile
 COPY --from=tmp-full /tmp-full/ .
 COPY turbo.json turbo.json
 RUN yarn turbo run build --filter=strapi
-
-RUN if [ "$MDA_ENV" == "dev" ]; then \
-  echo "Seeding dev db"; \
-  cd apps/strapi; \
-  yarn content:import; \
-  fi
 
 ########
 # Runner
