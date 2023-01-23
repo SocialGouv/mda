@@ -51,6 +51,7 @@ RUN yarn turbo run build --filter=strapi
 
 RUN if [ "$MDA_ENV" == "dev" ]; then \
   echo "Seeding dev db"; \
+  cd apps/strapi; \
   yarn content:import; \
   fi
 
