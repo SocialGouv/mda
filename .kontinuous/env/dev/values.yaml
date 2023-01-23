@@ -34,5 +34,6 @@ jobs:
         DATABASE_SSL: "$(PGSSLMODE)" # invetigate why knex doesn't work with "ssl: require"
         HOST: "0.0.0.0"
         MDA_ENV: "{{ .Values.global.env }}"
+      shell: sh
       run: |
         strapi import --only content --force --file content-dump.tar.gz
