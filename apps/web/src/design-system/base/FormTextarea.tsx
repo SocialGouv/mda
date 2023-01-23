@@ -2,7 +2,6 @@ import clsx from "clsx";
 import { forwardRef } from "react";
 
 export type FormTextareaProps = React.InputHTMLAttributes<HTMLTextAreaElement> & {
-  id: string;
   isDisabled?: boolean;
   isError?: boolean;
   isValid?: boolean;
