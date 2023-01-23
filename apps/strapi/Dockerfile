@@ -25,6 +25,8 @@ COPY --from=builder /app/out/full/ /tmp-full/
 ########
 # Installer from pruned monorepo
 FROM node:$NODE_VERSION AS installer
+ARG MDA_ENV
+ENV MDA_ENV $MDA_ENV
 # Installing libvips-dev for sharp Compatibility
 RUN apk add --no-cache --update \
       libc6-compat \
@@ -46,6 +48,11 @@ RUN yarn install --frozen-lockfile
 COPY --from=tmp-full /tmp-full/ .
 COPY turbo.json turbo.json
 RUN yarn turbo run build --filter=strapi
+
+RUN if [ "$MDA_ENV" == "dev" ]; then \
+  echo "Seeding dev db"; \
+  yarn content:import; \
+  fi
 
 ########
 # Runner

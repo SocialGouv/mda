@@ -235,18 +235,41 @@ interface MiddlewareOptions {
   resolve?: string;
 }
 
-type MandatoryMiddlewares = [
-  "strapi::errors",
-  "strapi::security",
-  "strapi::cors",
-  "strapi::poweredBy",
-  "strapi::logger",
-  "strapi::query",
-  "strapi::body",
-  "strapi::session",
-  "strapi::favicon",
-  "strapi::public",
+type MandatoryMiddlewaresConfig = [
+  ["strapi::errors", never],
+  ["strapi::security", never],
+  ["strapi::cors", never],
+  ["strapi::poweredBy", never],
+  ["strapi::logger", never],
+  ["strapi::query", never],
+  [
+    "strapi::body",
+    {
+      encoding?: string;
+      formLimit?: number | string;
+      formidable?: unknown;
+      jsonLimit?: number | string;
+      multipart?: boolean;
+      patchKoa?: boolean;
+      textLimit?: number | string;
+    },
+  ],
+  ["strapi::session", never],
+  ["strapi::favicon", never],
+  ["strapi::public", never],
 ];
+
+type MapConfig<T extends MandatoryMiddlewaresConfig> = {
+  [P in keyof T]: T[P][1] extends never
+    ? T[P][0]
+    :
+        | T[P][0]
+        | {
+            config: T[P][1];
+            name: T[P][0];
+          };
+};
+type MandatoryMiddlewares = MapConfig<MandatoryMiddlewaresConfig>;
 
 export type MiddlewaresConfig = Array<MiddlewareName | MiddlewareOptions> & MandatoryMiddlewares;
 
@@ -307,10 +330,13 @@ interface SlugifySettings {
   slugifyWithCount?: boolean;
 }
 
-interface PluginEntry<T = unknown> {
-  config: T;
-  enabled?: boolean;
-}
+type PluginEntry<T = unknown> =
+  | boolean
+  | {
+      config: T;
+      enabled?: boolean;
+      resolve?: string;
+    };
 
 export type PluginsConfig = {
   [P: string]: PluginEntry;
