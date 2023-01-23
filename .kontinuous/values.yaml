@@ -57,3 +57,4 @@ jobs:
         dockerfile: apps/strapi/Dockerfile
         buildArgs:
           GITHUB_SHA: "{{ $.Values.global.sha }}"
+          MDA_ENV: "{{ .Values.global.env }}"
