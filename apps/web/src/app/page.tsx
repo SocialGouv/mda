@@ -76,7 +76,7 @@ const HomePage = () => {
               <GridCol lg={6}>
                 <Tile>
                   <TileBody>
-                    <TileBodyTitle href="#" titleAs="h3">
+                    <TileBodyTitle href="/modeles-de-courrier" titleAs="h3">
                       Modèles de courrier
                     </TileBodyTitle>
                     <TileBodyDescription>

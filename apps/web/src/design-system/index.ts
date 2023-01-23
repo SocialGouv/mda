@@ -7,6 +7,7 @@ export * from "./base/Card";
 export * from "./base/CollapsedSection";
 export * from "./base/CollapsedSectionDynamicGroup";
 export * from "./base/CollapsedSectionGroup";
+export * from "./base/DownloadLink";
 export * from "./base/Fieldset";
 export * from "./base/Footer";
 export * from "./base/FormButton";
