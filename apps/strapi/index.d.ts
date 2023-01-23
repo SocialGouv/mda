@@ -592,7 +592,7 @@ export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
     recap: ComponentAttribute<'fiche-pratique-content.encart'> &
       RequiredAttribute;
     section: ComponentAttribute<'fiche-pratique-content.encart', true>;
-    slug: StringAttribute & RequiredAttribute;
+    slug: StringAttribute & RequiredAttribute & UniqueAttribute;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     createdBy: RelationAttribute<

@@ -26,8 +26,8 @@ import {
 import Link from "next/link";
 import { type PropsWithChildren } from "react";
 
-import { BreadcrumbDynamic } from "../base/BreadcrumbDynamic";
-import { Header } from "./Header";
+import { BreadcrumbDynamic } from "../base/client/BreadcrumbDynamic";
+import { Header } from "../base/client/Header";
 
 export const BasicLayout = ({ children }: PropsWithChildren) => {
   return (

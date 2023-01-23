@@ -66,7 +66,6 @@ export async function generateStaticParams() {
 
   return fiches.map(fiche => ({
     slug: fiche.attributes.slug,
-    id: fiche.id,
   }));
 }
 
