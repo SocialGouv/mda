@@ -15,6 +15,7 @@ jobs:
     build-strapi:
       ~needs: [create-db]
     strapi-import-content:
+      namespace: "{{ .Values.global.namespace }}"
       ~needs: [build-strapi]
       retry: 0
       checkout: false
