@@ -317,6 +317,10 @@ interface StrapiConfigSyncSettings {
   syncDir: string;
 }
 
+interface PopulateDeepSettings {
+  defaultDepth?: number;
+}
+
 interface SlugifySettings {
   contentTypes: {
     [P in keyof ReverseModelSingularName]?: {
@@ -342,6 +346,7 @@ export type PluginsConfig = {
   [P: string]: PluginEntry;
   "config-sync": PluginEntry<StrapiConfigSyncSettings>;
   slugify: PluginEntry<SlugifySettings>;
+  "strapi-plugin-populate-deep": PluginEntry<PopulateDeepSettings>;
 };
 
 // --- strapi-config-sync-plugin

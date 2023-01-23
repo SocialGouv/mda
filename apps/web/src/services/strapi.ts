@@ -105,7 +105,7 @@ interface FetchParam<T extends keyof Model, Dto extends GetAttributesValues<T> =
   sort?: Array<GetAttributesKey<T>> | GetAttributesKey<T>;
 }
 
-interface StrapiData<T extends keyof Model> {
+export interface StrapiData<T extends keyof Model> {
   attributes: GetAttributesValues<T>;
   id: number;
 }

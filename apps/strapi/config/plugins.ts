@@ -30,6 +30,12 @@ const plugins: PluginsConfig = {
       ],
     },
   },
+  "strapi-plugin-populate-deep": {
+    enabled: true,
+    config: {
+      defaultDepth: 10,
+    },
+  },
   slugify: {
     enabled: true,
     config: {

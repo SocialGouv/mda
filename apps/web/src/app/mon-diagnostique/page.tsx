@@ -1,16 +1,10 @@
-import {
-  Container,
-  FormGroup,
-  FormGroupLabel,
-  FormGroupStep,
-  FormGroupSteps,
-  FormSelect,
-  Grid,
-  GridCol,
-  Notice,
-} from "@design-system";
+import { Container, Grid, GridCol } from "@design-system";
+import { fetchStrapi } from "@services/strapi";
 
-const Diagnostique = () => {
+import { DiagSteps } from "./DiagSteps";
+
+const Diagnostique = async () => {
+  const firstQuestion = await fetchStrapi("questions/1", { populate: "deep" });
   return (
     <section className="fr-py-6w fr-py-md-12w fr-bg-grey-lightest">
       <Container>
@@ -21,40 +15,7 @@ const Diagnostique = () => {
               Je démarre un diagnostic auprès de mon médecin traitant puis je réalise un bilan fonctionnel détaillé
               auprès d'un ensemble de professionnels de santé.
             </p>
-            <FormGroupSteps>
-              <FormGroupStep>
-                <FormGroup>
-                  <FormGroupLabel htmlFor="xxx">Je suis</FormGroupLabel>
-                  <FormSelect id="xxx">
-                    <option value="1">Un parent ou un proche d’un enfant, d’un adulte</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                    <option value="4">Option 4</option>
-                  </FormSelect>
-                </FormGroup>
-              </FormGroupStep>
-              <FormGroupStep>
-                <FormGroup>
-                  <FormGroupLabel htmlFor="yyy">
-                    Le rendez-vous avec un médecin traitant / pédiatre / médecin de la crèche ou le médecin de la
-                    protection maternelle a-t’il été réalisé ?
-                  </FormGroupLabel>
-                  <FormSelect id="yyy">
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                    <option value="4">Option 4</option>
-                  </FormSelect>
-                </FormGroup>
-                <Notice isInsideContent>
-                  <p>
-                    La première étape pour initier un diagnostic est de prendre rendez-vous avec votre médecin traitant,
-                    le pédiatre de votre enfant, ou bien le médecin de la crèche ou de la protection maternelle
-                    infantile (PMI).
-                  </p>
-                </Notice>
-              </FormGroupStep>
-            </FormGroupSteps>
+            <DiagSteps firstQuestion={firstQuestion} />
             <hr className="fr-mt-4w fr-mb-2w " />
             <div className="fr-content">
               <h2 className="fr-text--xl">
