@@ -47,6 +47,11 @@ declare namespace NodeJS {
          * {@link [Local Env Dist](.env.development)}
          */
         PRODUCTION?: string;
+        /**
+         * Dist: `sekret`
+         * {@link [Local Env Dist](.env.development)}
+         */
+        WEBHOOK_REVALIDATE_TOKEN?: string;
     }
 }
 declare type ProcessEnvCustomKeys =
@@ -58,4 +63,5 @@ declare type ProcessEnvCustomKeys =
     | 'NEXT_PUBLIC_GITHUB_SHA'
     | 'STRAPI_TOKEN'
     | 'MDA_ENV'
-    | 'PRODUCTION';
+    | 'PRODUCTION'
+    | 'WEBHOOK_REVALIDATE_TOKEN';

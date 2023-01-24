@@ -10,6 +10,9 @@ web:
   imagePackage: web
   probesPath: /healthz
   host: "{{ .Values.global.host }}"
+  envFrom:
+    - secretRef:
+        name: "mda-revalidate-webhook"
   vars:
     NEXT_PUBLIC_SITE_URL: "{{ .Values.global.host }}"
     MDA_ENV: "{{ .Values.global.env }}"
@@ -26,6 +29,8 @@ strapi:
         name: "{{ .Values.global.pgSecretName }}"
     - secretRef:
         name: "mda-strapi"
+    - secretRef:
+        name: "mda-revalidate-webhook"
   vars:
     DATABASE_HOST: "$(PGHOST)"
     DATABASE_PORT: "$(PGPORT)"
@@ -36,6 +41,7 @@ strapi:
     HOST: "0.0.0.0"
     GITHUB_SHA: "{{ $.Values.global.sha }}"
     MDA_ENV: "{{ .Values.global.env }}"
+    WEB_URL: "{{ .Values.global.host }}"
 
 jobs:
   runs:

@@ -134,7 +134,7 @@ export async function fetchStrapi<
       "Content-Type": "application/json",
     },
     next: {
-      revalidate: 3600, // seconds
+      revalidate: 60 * 5, // 5 minutes
     },
   });
 

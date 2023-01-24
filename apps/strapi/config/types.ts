@@ -220,6 +220,9 @@ export interface ServerConfig {
    * @default ""
    */
   url?: string;
+  webhooks?: {
+    defaultHeaders?: Record<string, string>;
+  };
 }
 
 type MiddlewareName =
@@ -308,7 +311,7 @@ export interface ApiConfig {
 }
 
 interface StrapiConfigSyncSettings {
-  customTypes?: string[];
+  customTypes?: Array<{ configName: string; jsonFields?: string[]; queryString: string; uid: string[] | string }>;
   excludedConfig?: SchemaNames[];
   excludedTypes?: string[];
   importOnBootstrap?: boolean;
