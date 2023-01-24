@@ -10,12 +10,14 @@ export const DEFAULT_SEO_CONFIG: NextSeoProps = {
       href: "/favicon.ico",
     },
   ],
-  additionalMetaTags: [
-    {
-      httpEquiv: "content-security-policy",
-      content: ContentSecurityPolicy,
-    },
-  ],
+  additionalMetaTags: process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
+    ? [
+        {
+          httpEquiv: "content-security-policy",
+          content: ContentSecurityPolicy,
+        },
+      ]
+    : [],
   titleTemplate: `%s | ${config.siteTitle}`,
   defaultTitle: config.siteTitle,
   useAppDir: true,

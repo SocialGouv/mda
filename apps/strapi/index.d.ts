@@ -18,11 +18,10 @@ import {
   IntegerAttribute,
   DecimalAttribute,
   SetMinMax,
-  ComponentAttribute,
-  SingleTypeSchema,
-  RichTextAttribute,
   TextAttribute,
+  ComponentAttribute,
   ComponentSchema,
+  RichTextAttribute,
 } from '@strapi/strapi';
 
 export interface AdminPermission extends CollectionTypeSchema {
@@ -393,6 +392,44 @@ export interface PluginUploadFolder extends CollectionTypeSchema {
   };
 }
 
+export interface PluginSlugifySlug extends CollectionTypeSchema {
+  info: {
+    singularName: 'slug';
+    pluralName: 'slugs';
+    displayName: 'slug';
+  };
+  options: {
+    draftAndPublish: false;
+    comment: '';
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    slug: TextAttribute;
+    count: IntegerAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'plugin::slugify.slug',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'plugin::slugify.slug',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface PluginUsersPermissionsPermission extends CollectionTypeSchema {
   info: {
     name: 'permission';
@@ -544,54 +581,28 @@ export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
   info: {
     singularName: 'fiche-pratique';
     pluralName: 'fiche-pratiques';
-    displayName: 'Fiche Pratique';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    recap: ComponentAttribute<'fiche-pratique-content.encart'>;
-    section: ComponentAttribute<'fiche-pratique-content.encart', true>;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::fiche-pratique.fiche-pratique',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::fiche-pratique.fiche-pratique',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface ApiHomeHeroHomeHero extends SingleTypeSchema {
-  info: {
-    singularName: 'home-hero';
-    pluralName: 'home-heroes';
-    displayName: 'Home Hero';
+    displayName: 'fiche-pratique';
     description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
-    content: RichTextAttribute &
-      DefaultTo<'L\u2019autisme est un **trouble** du neuro-d\u00E9veloppement pr\u00E9coce, qui impacte les capacit\u00E9s de **communication**, les interactions sociales et les comportements des personnes. Ce trouble va souvent de pair avec d\u2019autres manifestations : hyper ou hypo sensibilit\u00E9 aux sons, lumi\u00E8res, odeur... , trouble du d\u00E9ficit de l\u2019attention avec ou sans hyperactivit\u00E9 (TDAH), troubles \u201Cdys\u201D (_dyslexie_, _dyspraxie_, _dysphasie_,...).'>;
+    title: StringAttribute & RequiredAttribute & UniqueAttribute;
+    recap: ComponentAttribute<'fiche-pratique-content.encart'> &
+      RequiredAttribute;
+    section: ComponentAttribute<'fiche-pratique-content.encart', true>;
+    slug: StringAttribute & RequiredAttribute & UniqueAttribute;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
-      'api::home-hero.home-hero',
+      'api::fiche-pratique.fiche-pratique',
       'oneToOne',
       'admin::user'
     > &
       PrivateAttribute;
     updatedBy: RelationAttribute<
-      'api::home-hero.home-hero',
+      'api::fiche-pratique.fiche-pratique',
       'oneToOne',
       'admin::user'
     > &
@@ -613,6 +624,7 @@ export interface ApiQuestionQuestion extends CollectionTypeSchema {
     content: StringAttribute & RequiredAttribute;
     answers: ComponentAttribute<'parcours-diag.answer', true>;
     info: TextAttribute;
+    first: BooleanAttribute & RequiredAttribute;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
@@ -685,11 +697,11 @@ declare global {
       'admin::api-token-permission': AdminApiTokenPermission;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
+      'plugin::slugify.slug': PluginSlugifySlug;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;
-      'api::home-hero.home-hero': ApiHomeHeroHomeHero;
       'api::question.question': ApiQuestionQuestion;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
       'parcours-diag.answer': ParcoursDiagAnswer;

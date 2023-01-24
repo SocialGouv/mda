@@ -3,7 +3,7 @@ import type { PropsWithChildren } from "react";
 import { forwardRef } from "react";
 
 import { Container } from "../layout/Container";
-import { NextLinkOrA } from "../utils/NextLinkOrA";
+import { type NextLinkOrAProps, NextLinkOrA } from "../utils/NextLinkOrA";
 
 export const Footer = ({ children }: PropsWithChildren) => (
   <footer className="fr-footer" role="contentinfo" id="footer">
@@ -59,21 +59,17 @@ export const FooterBottomItem = ({ children }: PropsWithChildren) => {
   return <li className="fr-footer__bottom-item">{children}</li>;
 };
 
-export const FooterBottomLink = forwardRef<HTMLAnchorElement, React.AnchorHTMLAttributes<HTMLAnchorElement>>(
-  ({ children, ...rest }, ref) => {
-    return (
-      <NextLinkOrA className="fr-footer__bottom-link" ref={ref} {...rest}>
-        {children}
-      </NextLinkOrA>
-    );
-  },
-);
+export const FooterBottomLink = forwardRef<HTMLAnchorElement, NextLinkOrAProps>(({ children, ...rest }, ref) => {
+  return (
+    <NextLinkOrA className="fr-footer__bottom-link" ref={ref} {...rest}>
+      {children}
+    </NextLinkOrA>
+  );
+});
 
 FooterBottomLink.displayName = "FooterBottomLink";
 
-export type FooterContentLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
-
-export const FooterContentLink = ({ children, ...rest }: FooterContentLinkProps) => {
+export const FooterContentLink = ({ children, ...rest }: NextLinkOrAProps) => {
   return (
     <NextLinkOrA className="fr-footer__content-link" {...rest}>
       {children}

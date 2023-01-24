@@ -45,6 +45,10 @@ RUN yarn install --frozen-lockfile
 
 ARG PRODUCTION
 ENV PRODUCTION $PRODUCTION
+ARG NEXT_PUBLIC_GITHUB_SHA
+ENV NEXT_PUBLIC_GITHUB_SHA $NEXT_PUBLIC_GITHUB_SHA
+ARG MDA_ENV
+ENV MDA_ENV $MDA_ENV
 
 COPY --from=tmp-full /tmp-full/ .
 COPY turbo.json turbo.json
@@ -56,8 +60,6 @@ FROM base AS runner
 ENV NODE_ENV production
 ENV NODE_OPTIONS="--max-old-space-size=8192"
 ENV NEXT_TELEMETRY_DISABLED 1
-ARG GITHUB_SHA
-ENV GITHUB_SHA $GITHUB_SHA
 
 RUN addgroup --system --gid 1001 nodejs && \
     adduser --system --uid 1001 nextjs

@@ -1,10 +1,14 @@
-import { Breadcrumb, BreadcrumbItem, Container } from "@design-system";
+"use client";
+
+import { Breadcrumb, BreadcrumbItem, ClientContainer } from "@design-system/client";
 import { usePathname } from "next/navigation";
 
 import styles from "./BreadcrumbDynamic.module.css";
 
 export const BreadcrumbDynamic = () => {
   const currentPathName = usePathname();
+  if (currentPathName !== "/") return null;
+
   const filteredPath = currentPathName?.split("/").filter(el => el !== "");
 
   const breadcrumbs = filteredPath?.map((path, index) => {
@@ -17,7 +21,7 @@ export const BreadcrumbDynamic = () => {
   });
 
   return (
-    <Container className={styles.section}>
+    <ClientContainer className={styles.section}>
       <Breadcrumb className={styles.sectionItem}>
         <BreadcrumbItem href="/" isCurrent={currentPathName === "/"}>
           Accueil
@@ -28,6 +32,6 @@ export const BreadcrumbDynamic = () => {
           </BreadcrumbItem>
         ))}
       </Breadcrumb>
-    </Container>
+    </ClientContainer>
   );
 };

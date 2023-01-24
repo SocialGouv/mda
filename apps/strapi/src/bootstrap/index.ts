@@ -8,3 +8,6 @@ if (MDA_ENV === "dev") {
   strapi.log.info(`[MDA] Load dev bootstraps`);
   bootstraps.push(import("./dev/create-admin"));
 }
+
+strapi.log.info(`[MDA] Load common bootstraps`);
+// bootstraps.push(import("./*")); // replace "*" by common bootstrap file

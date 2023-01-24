@@ -9,7 +9,7 @@
     "build": "next build --no-lint",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "tsc --pretty --noEmit && echo '👌 tsc OK' && next lint",
     "generateEnvDeclaration": "ts-node --project scripts/tsconfig.json scripts/generateEnvDeclaration.ts"
   },
   "dependencies": {
@@ -28,7 +28,9 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.42.1",
     "react-markdown": "^8.0.4",
-    "zod": "^3.20.2"
+    "simple-zustand-devtools": "^1.1.0",
+    "zod": "^3.20.2",
+    "zustand": "^4.3.2"
   },
   "devDependencies": {
     "@next/env": "^13.1.1",

@@ -11,7 +11,8 @@
     "start": "strapi start",
     "build": "strapi build",
     "lint": "eslint",
-    "config:dump": "strapi config:dump -f dump.json",
+    "content:dump": "strapi export --no-encrypt --only content --file content-dump",
+    "content:import": "strapi import --only content --force --file content-dump.tar.gz",
     "generate-types": "strapi ts:generate-types -f index.d.ts && echo \"/* eslint-disable */\n$(cat index.d.ts)\" > index.d.ts",
     "generate-env": "echo \"MDA_ENV=dev\nAPP_KEYS=$(openssl rand -base64 32),$(openssl rand -base64 32)\nAPI_TOKEN_SALT=$(openssl rand -base64 32)\nADMIN_JWT_SECRET=$(openssl rand -base64 32)\nJWT_SECRET=$(openssl rand -base64 32)\" > .env"
   },
@@ -23,10 +24,12 @@
   },
   "dependencies": {
     "@mda/config": "*",
-    "@strapi/plugin-users-permissions": "4.5.5",
-    "@strapi/strapi": "4.5.5",
-    "pg": "8.6.0",
-    "strapi-plugin-populate-deep": "^2.0.0"
+    "@strapi/plugin-users-permissions": "4.6.0-beta.2",
+    "@strapi/strapi": "4.6.0-beta.2",
+    "pg": "8.8.0",
+    "strapi-plugin-config-sync": "^1.1.0",
+    "strapi-plugin-populate-deep": "^2.0.0",
+    "strapi-plugin-slugify": "^2.3.2"
   },
   "strapi": {
     "uuid": "477f148b-f7a6-4bc4-bf3e-c413f95df885",

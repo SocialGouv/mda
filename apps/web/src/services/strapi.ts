@@ -1,5 +1,3 @@
-import "@mda/strapi";
-
 import { config } from "@common/config";
 import { type UnknownMapping } from "@common/utils/types";
 import {
@@ -11,21 +9,31 @@ import {
 } from "@strapi/strapi";
 import { stringify as qsStringify } from "qs";
 
+import { type Response, type ResponseCollection } from "./strapiApiTypes";
+
 type NeverKey<T> = { [P in keyof T]: T[P] extends never ? P : never }[keyof T];
 type OmitNever<T> = Pick<T, Exclude<keyof T, NeverKey<T>>>;
-type Model = OmitNever<{
+type SingularModel = OmitNever<{
   [Id in utils.SchemaUID]: Id extends `api::${string}`
     ? Strapi.Schemas[Id] extends SingleTypeSchema
       ? Strapi.Schemas[Id]["info"]["singularName"]
-      : Strapi.Schemas[Id] extends CollectionTypeSchema
-      ? Strapi.Schemas[Id]["info"]["pluralName"]
-      : Strapi.Schemas[Id]["info"]["displayName"]
+      : never
     : never;
 }>;
-
-type ReverseModel = {
-  [Id in keyof Model as Model[Id]]: Id;
+type PluralModel = OmitNever<{
+  [Id in utils.SchemaUID]: Id extends `api::${string}`
+    ? Strapi.Schemas[Id] extends CollectionTypeSchema
+      ? Strapi.Schemas[Id]["info"]["pluralName"]
+      : never
+    : never;
+}>;
+type Model = PluralModel & SingularModel;
+type Reverse<T extends Record<string, string>> = {
+  [Id in keyof T as T[Id]]: Id;
 };
+type ReverseSingularModel = Reverse<SingularModel>;
+type ReversePluralModel = Reverse<PluralModel>;
+type ReverseModel = Reverse<Model>;
 
 type LogicalOperators<T> = {
   /** Joins the filters in an "and" expression */
@@ -89,49 +97,53 @@ interface PaginationByOffset {
   withCount?: boolean;
 }
 
-interface _MetaPagination {
-  page: number;
-  pageCount: number;
-  pageSize: number;
-  total: number;
-}
-
 interface FetchParam<T extends keyof Model, Dto extends GetAttributesValues<T> = GetAttributesValues<T>> {
   fields?: Array<GetAttributesKey<T>>;
   filters?: WhereParams<Dto>;
   pagination?: PaginationByOffset | PaginationByPage;
-  populate?: UnknownMapping | "*";
+  populate?: UnknownMapping | "*" | "deep";
   /** @default "live" */
   publicationState?: "live" | "preview";
   sort?: Array<GetAttributesKey<T>> | GetAttributesKey<T>;
 }
 
-export const fetchStrapi = async <T extends keyof ReverseModel, TParams extends FetchParam<ReverseModel[T]>>(
-  modelPath: T,
-  params?: TParams,
-): Promise<GetAttributesValues<ReverseModel[T]>> => {
+export async function fetchStrapi<
+  T extends `${keyof ReversePluralModel}/${number}`,
+  TModel extends T extends `${infer InferT extends keyof ReversePluralModel}/${number}` ? InferT : never,
+  TParams extends FetchParam<ReverseModel[TModel]>,
+>(ressource: T, params?: TParams): Promise<Response<ReverseModel[TModel]>>;
+export async function fetchStrapi<
+  T extends keyof ReversePluralModel,
+  TParams extends FetchParam<ReversePluralModel[T]>,
+>(ressource: T, params?: TParams): Promise<ResponseCollection<ReverseModel[T]>>;
+export async function fetchStrapi<
+  T extends keyof ReverseSingularModel,
+  TParams extends FetchParam<ReverseSingularModel[T]>,
+>(ressource: T, params?: TParams): Promise<Response<ReverseModel[T]>>;
+export async function fetchStrapi<
+  T extends keyof ReverseModel,
+  TResPath extends T | `${T}/${number}`,
+  TParams extends FetchParam<ReverseModel[T]>,
+  Ret extends Response<ReverseModel[T]> | ResponseCollection<ReverseModel[T]>,
+>(ressource: TResPath, params?: TParams): Promise<Ret> {
   const query = params ? qsStringify(params) : null;
 
-  const url = new URL(`/api/${modelPath}${query ? `?${query}` : ""}`, config.strapi.apiUrl);
+  const url = new URL(`/api/${ressource}${query ? `?${query}` : ""}`, config.strapi.apiUrl);
   const response = await fetch(url, {
     headers: {
       "Content-Type": "application/json",
     },
     next: {
-      // TODO: better building with ISR
-      revalidate: 0,
+      revalidate: 3600, // seconds
     },
   });
 
-  const payload = (await response.json()) as {
-    data: { attributes: GetAttributesValues<ReverseModel[T]> };
-    meta: unknown;
-  };
+  const payload = (await response.json()) as Ret;
 
   if (response.ok) {
-    return payload.data.attributes;
+    return payload;
   }
 
   console.error(response.statusText);
   throw new Error("Fetch Strapi error", { cause: response });
-};
+}
