@@ -19,12 +19,5 @@ export const config = {
     token: ensureOsEnvVar("STRAPI_TOKEN"),
   },
   githubSha: process.env.NEXT_PUBLIC_GITHUB_SHA?.substring(0, 7) ?? "<dev>",
+  webhookRevalidateToken: ensureOsEnvVar("WEBHOOK_REVALIDATE_TOKEN"),
 } as const;
-
-interface ServicesConfig {
-  db: "mock" | "postgres" | "prisma";
-}
-
-export const services: ServicesConfig = {
-  db: "postgres",
-};
