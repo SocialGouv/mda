@@ -2,6 +2,7 @@ import { type Next13ServerPageProps } from "@common/utils/next13";
 import { Container, Grid, GridCol, SideMenuLink } from "@design-system";
 import { CollapsedSectionDynamicGroup, SideMenuDynamic } from "@design-system/client";
 import { fetchStrapi } from "@services/strapi";
+import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import ReactMarkdown from "react-markdown";
 
@@ -20,7 +21,7 @@ const FichePratique = async ({ params }: FichePratiqueProps) => {
       if (response.data?.[0]) {
         return response.data?.[0];
       }
-      throw new Error(`Fiche pratique not found with given slug ${params.slug}.`);
+      notFound();
     }),
   ]);
 
@@ -72,8 +73,6 @@ const FichePratique = async ({ params }: FichePratiqueProps) => {
     </section>
   );
 };
-
-export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const fiches = (await fetchStrapi("fiche-pratiques")).data ?? [];
