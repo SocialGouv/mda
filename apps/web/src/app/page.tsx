@@ -1,3 +1,7 @@
+import { PictoDocumentDownload } from "@components/pictos/PictoDocumentDownload";
+import { PictoHealth } from "@components/pictos/PictoHealth";
+import { PictoHumanCooperation } from "@components/pictos/PictoHumanCooperation";
+import { PictoMap } from "@components/pictos/PictoMap";
 import {
   ButtonAsLink,
   ButtonGroup,
@@ -69,7 +73,7 @@ const HomePage = () => {
                     </TileBodyDescription>
                   </TileBody>
                   <TileImg>
-                    <PlaceholderImg />
+                    <PictoMap />
                   </TileImg>
                 </Tile>
               </GridCol>
@@ -85,7 +89,7 @@ const HomePage = () => {
                     </TileBodyDescription>
                   </TileBody>
                   <TileImg>
-                    <PlaceholderImg />
+                    <PictoDocumentDownload />
                   </TileImg>
                 </Tile>
               </GridCol>
@@ -101,7 +105,7 @@ const HomePage = () => {
                     </TileBodyDescription>
                   </TileBody>
                   <TileImg>
-                    <PlaceholderImg />
+                    <PictoHumanCooperation />
                   </TileImg>
                 </Tile>
               </GridCol>
@@ -118,7 +122,7 @@ const HomePage = () => {
                     </TileBodyDescription>
                   </TileBody>
                   <TileImg>
-                    <PlaceholderImg />
+                    <PictoHealth />
                   </TileImg>
                 </Tile>
               </GridCol>
