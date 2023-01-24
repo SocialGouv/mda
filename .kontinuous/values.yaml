@@ -12,6 +12,7 @@ web:
   host: "{{ .Values.global.host }}"
   vars:
     NEXT_PUBLIC_SITE_URL: "{{ .Values.global.host }}"
+    MDA_ENV: "{{ .Values.global.env }}"
 
 strapi:
   ~chart: app
@@ -33,6 +34,8 @@ strapi:
     DATABASE_PASSWORD: "$(PGPASSWORD)"
     DATABASE_SSL: "$(PGSSLMODE)" # invetigate why knex doesn't work with "ssl: require"
     HOST: "0.0.0.0"
+    GITHUB_SHA: "{{ $.Values.global.sha }}"
+    MDA_ENV: "{{ .Values.global.env }}"
 
 jobs:
   runs:
@@ -43,14 +46,13 @@ jobs:
         imagePackage: web
         dockerfile: apps/web/Dockerfile
         buildArgs:
-          GITHUB_SHA: "{{ $.Values.global.sha }}"
+          NEXT_PUBLIC_GITHUB_SHA: "{{ $.Values.global.sha }}"
           NEXT_PUBLIC_SITE_URL: "{{ .Values.global.host }}"
           NEXT_PUBLIC_STRAPI_API_URL: "https://strapi-{{ .Values.global.host }}"
+          MDA_ENV: "{{ .Values.global.env }}"
 
     build-strapi:
       use: build
       with:
         imagePackage: strapi
         dockerfile: apps/strapi/Dockerfile
-        buildArgs:
-          GITHUB_SHA: "{{ $.Values.global.sha }}"

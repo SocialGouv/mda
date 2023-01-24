@@ -5,7 +5,7 @@ import { forwardRef } from "react";
 import type { IconStyles } from "../utils/IconStyles";
 import styles from "./FormInput.module.css";
 
-type FormInputCustomTypes = HTMLInputTypeAttribute | "percentage";
+type _FormInputCustomTypes = HTMLInputTypeAttribute | "percentage";
 
 export type FormInputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   autocomplete?: string;

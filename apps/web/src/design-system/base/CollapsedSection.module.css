@@ -68,7 +68,7 @@
 .button {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     position: absolute;
     top: 0;
     left: 0;

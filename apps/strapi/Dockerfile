@@ -25,6 +25,7 @@ COPY --from=builder /app/out/full/ /tmp-full/
 ########
 # Installer from pruned monorepo
 FROM node:$NODE_VERSION AS installer
+
 # Installing libvips-dev for sharp Compatibility
 RUN apk add --no-cache --update \
       libc6-compat \
@@ -51,8 +52,6 @@ RUN yarn turbo run build --filter=strapi
 # Runner
 FROM node:$NODE_VERSION AS runner
 ENV NODE_ENV production
-ARG GITHUB_SHA
-ENV GITHUB_SHA $GITHUB_SHA
 
 RUN apk add vips-dev
 RUN rm -rf /var/cache/apk/*

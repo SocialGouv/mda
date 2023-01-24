@@ -1,4 +1,10 @@
-import { type Strapi } from "@strapi/strapi";
+import {
+  type CollectionTypeSchema,
+  type ComponentSchema,
+  type GetAttributesKey,
+  type SingleTypeSchema,
+  type Strapi,
+} from "@strapi/strapi";
 import { type SignOptions } from "jsonwebtoken";
 import { type Knex } from "knex";
 import type Koa from "koa";
@@ -229,18 +235,41 @@ interface MiddlewareOptions {
   resolve?: string;
 }
 
-type MandatoryMiddlewares = [
-  "strapi::errors",
-  "strapi::security",
-  "strapi::cors",
-  "strapi::poweredBy",
-  "strapi::logger",
-  "strapi::query",
-  "strapi::body",
-  "strapi::session",
-  "strapi::favicon",
-  "strapi::public",
+type MandatoryMiddlewaresConfig = [
+  ["strapi::errors", never],
+  ["strapi::security", never],
+  ["strapi::cors", never],
+  ["strapi::poweredBy", never],
+  ["strapi::logger", never],
+  ["strapi::query", never],
+  [
+    "strapi::body",
+    {
+      encoding?: string;
+      formLimit?: number | string;
+      formidable?: unknown;
+      jsonLimit?: number | string;
+      multipart?: boolean;
+      patchKoa?: boolean;
+      textLimit?: number | string;
+    },
+  ],
+  ["strapi::session", never],
+  ["strapi::favicon", never],
+  ["strapi::public", never],
 ];
+
+type MapConfig<T extends MandatoryMiddlewaresConfig> = {
+  [P in keyof T]: T[P][1] extends never
+    ? T[P][0]
+    :
+        | T[P][0]
+        | {
+            config: T[P][1];
+            name: T[P][0];
+          };
+};
+type MandatoryMiddlewares = MapConfig<MandatoryMiddlewaresConfig>;
 
 export type MiddlewaresConfig = Array<MiddlewareName | MiddlewareOptions> & MandatoryMiddlewares;
 
@@ -277,3 +306,79 @@ export interface ApiConfig {
     withCount?: boolean;
   };
 }
+
+interface StrapiConfigSyncSettings {
+  customTypes?: string[];
+  excludedConfig?: SchemaNames[];
+  excludedTypes?: string[];
+  importOnBootstrap?: boolean;
+  minify?: boolean;
+  soft?: boolean;
+  syncDir: string;
+}
+
+interface PopulateDeepSettings {
+  defaultDepth?: number;
+}
+
+interface SlugifySettings {
+  contentTypes: {
+    [P in keyof ReverseModelSingularName]?: {
+      field: string;
+      references: Array<GetAttributesKey<ReverseModelSingularName[P]>> | GetAttributesKey<ReverseModelSingularName[P]>;
+    };
+  };
+  shouldUpdateSlug?: boolean;
+  skipUndefinedReferences?: boolean;
+  slugifyOptions?: unknown;
+  slugifyWithCount?: boolean;
+}
+
+type PluginEntry<T = unknown> =
+  | boolean
+  | {
+      config: T;
+      enabled?: boolean;
+      resolve?: string;
+    };
+
+export type PluginsConfig = {
+  [P: string]: PluginEntry;
+  "config-sync": PluginEntry<StrapiConfigSyncSettings>;
+  slugify: PluginEntry<SlugifySettings>;
+  "strapi-plugin-populate-deep": PluginEntry<PopulateDeepSettings>;
+};
+
+// --- strapi-config-sync-plugin
+type SchemaNames =
+  | "admin-role.strapi-super-admin"
+  | "core-store.core_admin_auth"
+  | "core-store.plugin_content_manager_configuration_content_types::plugin::slugify.slug"
+  | "core-store.plugin_upload_metrics"
+  | "core-store.plugin_upload_settings"
+  | "core-store.plugin_upload_view_configuration"
+  | "core-store.plugin_users-permissions_advanced"
+  | "core-store.plugin_users-permissions_email"
+  | "core-store.plugin_users-permissions_grant"
+  | "core-store.strapi_content_types_schema"
+  | "user-role.authenticated"
+  | "user-role.public"
+  | `core-store.plugin_content_manager_configuration_${{
+      [Id in keyof Strapi.Schemas]: Strapi.Schemas[Id] extends ComponentSchema
+        ? `components::${Id}`
+        : `content_types::${Id}`;
+    }[keyof Strapi.Schemas]}`;
+// ---
+
+// --- slugify
+type NeverKey<T> = { [P in keyof T]: T[P] extends never ? P : never }[keyof T];
+type OmitNever<T> = Pick<T, Exclude<keyof T, NeverKey<T>>>;
+type ModelSingularName = OmitNever<{
+  [Id in keyof Strapi.Schemas]: Strapi.Schemas[Id] extends CollectionTypeSchema | SingleTypeSchema
+    ? Strapi.Schemas[Id]["info"]["singularName"]
+    : never;
+}>;
+type ReverseModelSingularName = {
+  [Id in keyof ModelSingularName as ModelSingularName[Id]]: Id;
+};
+// ---

@@ -22,10 +22,6 @@ const nextConfig = {
         source: "/:path*",
         headers: [
           {
-            key: "Content-Security-Policy",
-            value: ContentSecurityPolicy,
-          },
-          {
             key: "X-Robots-Tag",
             value: process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT ? "all" : "noindex, nofollow, nosnippet",
           },
@@ -42,6 +38,10 @@ const nextConfig = {
                 {
                   key: "X-Content-Type-Options",
                   value: "nosniff",
+                },
+                {
+                  key: "Content-Security-Policy",
+                  value: ContentSecurityPolicy,
                 },
               ]
             : []),

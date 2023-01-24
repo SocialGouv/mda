@@ -1,11 +1,5 @@
-web:
-  vars:
-    MDA_ENV: dev
-
 strapi:
-  ~needs: [build-strapi]
-  vars:
-    MDA_ENV: dev
+  ~needs: [build-strapi, strapi-import-content]
 
 jobs:
   runs:
@@ -20,3 +14,27 @@ jobs:
         pgAdminSecretRefName: azure-pg-admin-user
     build-strapi:
       ~needs: [create-db]
+    strapi-import-content:
+      namespace: "{{ .Values.global.namespace }}"
+      ~needs: [build-strapi]
+      retry: 0
+      checkout: false
+      image: "{{ .Values.global.registry }}/{{ .Values.global.imageProject }}/{{ .Values.global.imageRepository }}/strapi:{{ .Values.global.imageTag }}"
+      envFrom:
+        - secretRef:
+            name: "{{ .Values.global.pgSecretName }}"
+        - secretRef:
+            name: "mda-strapi"
+      vars:
+        DATABASE_HOST: "$(PGHOST)"
+        DATABASE_PORT: "$(PGPORT)"
+        DATABASE_NAME: "$(PGDATABASE)"
+        DATABASE_USERNAME: "$(PGUSER)"
+        DATABASE_PASSWORD: "$(PGPASSWORD)"
+        DATABASE_SSL: "$(PGSSLMODE)" # invetigate why knex doesn't work with "ssl: require"
+        HOST: "0.0.0.0"
+        MDA_ENV: "{{ .Values.global.env }}"
+      shell: sh
+      user: 1001
+      run: |
+        strapi import --only content --force --file content-dump.tar.gz

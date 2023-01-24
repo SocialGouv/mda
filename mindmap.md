@@ -11,7 +11,7 @@ interface Question {
 interface Answer {
     content: string;
     destination?: QuestionID;
-    substeps?: SubAnswer[];
+    subanswers?: SubAnswer[];
     info?: string;
 }
 
@@ -29,7 +29,7 @@ interface SubAnswer {
         "answers": [
             {
                 "content": "Un parent",
-                "substeps": [
+                "subanswers": [
                     {
                         "content": "Mon enfant a moins de 6 ans",
                         "destination": "rdv-creche-med-pmi"

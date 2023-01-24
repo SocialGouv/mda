@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import type { PropsWithChildren } from "react";
 
-import { NextLinkOrA } from "../utils/NextLinkOrA";
+import { NextLinkOrA } from "../../utils/NextLinkOrA";
 
 export const MainNav = ({ children }: PropsWithChildren) => {
   return (

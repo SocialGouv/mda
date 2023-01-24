@@ -14,18 +14,16 @@ import {
   Container,
   Grid,
   GridCol,
+  PlaceholderImg,
   Tile,
   TileBody,
   TileBodyDescription,
   TileBodyTitle,
   TileImg,
 } from "@design-system";
-import { PlaceholderImg } from "src/design-system/base/ImgPlaceholder";
-import { NextLinkOrA } from "src/design-system/utils/NextLinkOrA";
+import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 
 import styles from "./index.module.css";
-
-//const HeroMain = async () => <ReactMarkdown>{(await fetchStrapi("home-hero")).content ?? ""}</ReactMarkdown>;
 
 const HomePage = () => {
   return (
@@ -36,10 +34,12 @@ const HomePage = () => {
             <Grid haveGutters>
               <GridCol lg={7}>
                 <h1>Qu'est-ce que l'autisme&nbsp;?</h1>
-                {/*<Suspense>
-                   @ts-expect-error Server Component 
-                  <HeroMain />
-                </Suspense>*/}
+                <p>
+                  L’autisme est un trouble du neuro-développement précoce, qui impacte les capacités de communication,
+                  les interactions sociales et les comportements des personnes. Ce trouble va souvent de pair avec
+                  d’autres manifestations : hyper ou hypo sensibilité aux sons, lumières, odeur... , trouble du déficit
+                  de l’attention avec ou sans hyperactivité (TDAH), troubles “dys” (dyslexie, dyspraxie, dysphasie,...).
+                </p>
                 <ButtonGroup inline="mobile-up">
                   <ButtonGroupItem>
                     <ButtonAsLink href="/fiches-pratiques/qu-est-ce-que-l-autisme">Comprendre l'austisme</ButtonAsLink>
