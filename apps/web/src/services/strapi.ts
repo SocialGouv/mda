@@ -9,6 +9,8 @@ import {
 } from "@strapi/strapi";
 import { stringify as qsStringify } from "qs";
 
+import { type Response, type ResponseCollection } from "./strapiApiTypes";
+
 type NeverKey<T> = { [P in keyof T]: T[P] extends never ? P : never }[keyof T];
 type OmitNever<T> = Pick<T, Exclude<keyof T, NeverKey<T>>>;
 type SingularModel = OmitNever<{
@@ -105,30 +107,24 @@ interface FetchParam<T extends keyof Model, Dto extends GetAttributesValues<T> =
   sort?: Array<GetAttributesKey<T>> | GetAttributesKey<T>;
 }
 
-export interface StrapiData<T extends keyof Model> {
-  attributes: GetAttributesValues<T>;
-  id: number;
-}
-
 export async function fetchStrapi<
   T extends `${keyof ReversePluralModel}/${number}`,
   TModel extends T extends `${infer InferT extends keyof ReversePluralModel}/${number}` ? InferT : never,
   TParams extends FetchParam<ReverseModel[TModel]>,
->(ressource: T, params?: TParams): Promise<StrapiData<ReverseModel[TModel]>>;
+>(ressource: T, params?: TParams): Promise<Response<ReverseModel[TModel]>>;
 export async function fetchStrapi<
   T extends keyof ReversePluralModel,
   TParams extends FetchParam<ReversePluralModel[T]>,
->(ressource: T, params?: TParams): Promise<Array<StrapiData<ReverseModel[T]>>>;
+>(ressource: T, params?: TParams): Promise<ResponseCollection<ReverseModel[T]>>;
 export async function fetchStrapi<
   T extends keyof ReverseSingularModel,
   TParams extends FetchParam<ReverseSingularModel[T]>,
->(ressource: T, params?: TParams): Promise<StrapiData<ReverseModel[T]>>;
+>(ressource: T, params?: TParams): Promise<Response<ReverseModel[T]>>;
 export async function fetchStrapi<
   T extends keyof ReverseModel,
   TResPath extends T | `${T}/${number}`,
   TParams extends FetchParam<ReverseModel[T]>,
-  Elt extends StrapiData<ReverseModel[T]>,
-  Ret extends Elt | Elt[],
+  Ret extends Response<ReverseModel[T]> | ResponseCollection<ReverseModel[T]>,
 >(ressource: TResPath, params?: TParams): Promise<Ret> {
   const query = params ? qsStringify(params) : null;
 
@@ -142,13 +138,10 @@ export async function fetchStrapi<
     },
   });
 
-  const payload = (await response.json()) as {
-    data: Ret;
-    meta: unknown;
-  };
+  const payload = (await response.json()) as Ret;
 
   if (response.ok) {
-    return payload.data;
+    return payload;
   }
 
   console.error(response.statusText);

@@ -96,6 +96,8 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
             <FooterBottomLink href={`https://github.com/SocialGouv/mda/commits/${config.githubSha}`} isExternal>
               Version {config.githubSha}
             </FooterBottomLink>
+          </FooterBottomItem>
+          <FooterBottomItem>
             <FooterBottomLink href="/je-donne-mon-avis">Je donne mon avis</FooterBottomLink>
           </FooterBottomItem>
         </FooterBottom>
