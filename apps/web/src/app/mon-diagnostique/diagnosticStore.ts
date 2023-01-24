@@ -6,22 +6,19 @@ import { devtools } from "zustand/middleware";
 type Question = NonNullable<Response<"api::question.question">["data"]>;
 
 interface DiagnosticStore {
-  addQuestion: (question: Question) => void;
-  currentIndex: number;
+  addQuestion: (question: Question, index?: number) => void;
   questionList: Question[];
 }
 
 export const useDiagnosticStore = create<DiagnosticStore>()(
   //   persist(
   devtools((set, get) => ({
-    addQuestion(question) {
-      const questionList = [...get().questionList, question];
+    addQuestion(question, idx = get().questionList.length) {
+      const questionList = [...get().questionList.slice(0, idx), question];
       set({
         questionList,
-        currentIndex: questionList.length - 1,
       });
     },
-    currentIndex: -1,
     questionList: [],
   })),
   //     {

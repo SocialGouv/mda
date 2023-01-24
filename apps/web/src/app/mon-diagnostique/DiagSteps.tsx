@@ -26,25 +26,24 @@ export const DiagSteps = ({ firstQuestion }: DiagStepsProps) => {
   const { questionList, addQuestion } = useDiagnosticStore(useCallback(state => state, []));
 
   useEffectOnce(() => {
-    console.log("HA !", firstQuestion);
     addQuestion(firstQuestion);
   });
   return (
     <FormGroupSteps>
       {questionList.map((question, idx) => (
-        <QuestionBox key={`question-${idx}`} id={`question-${idx}`} question={question} />
+        <QuestionBox key={`question-${idx}`} index={idx} question={question} />
       ))}
     </FormGroupSteps>
   );
 };
 
 export interface QuestionBoxProps {
-  id: string;
+  index: number;
   question: Question;
 }
 
-const QuestionBox = ({ question, id }: QuestionBoxProps) => {
-  const { addQuestion } = useDiagnosticStore();
+const QuestionBox = ({ question, index }: QuestionBoxProps) => {
+  const { addQuestion } = useDiagnosticStore(useCallback(state => state, []));
   const [currentAnswerIndex, setCurrentAnswerIndex] = useState(-1);
 
   const handleAnswerChange: FormSelectProps["onChange"] = event => {
@@ -58,8 +57,10 @@ const QuestionBox = ({ question, id }: QuestionBoxProps) => {
     if (answer.destination?.data) {
       void fetchStrapi(`questions/${answer.destination.data.id}`, { populate: "deep,4" }).then(destination => {
         console.log("Go to destination", destination);
-        if (destination.data) addQuestion(destination.data);
+        if (destination.data) addQuestion(destination.data, index + 1);
       });
+    } else {
+      addQuestion(question, index);
     }
   };
 
@@ -71,7 +72,7 @@ const QuestionBox = ({ question, id }: QuestionBoxProps) => {
     if (subAnswer.destination?.data) {
       void fetchStrapi(`questions/${subAnswer.destination.data.id}`).then(destination => {
         console.log("Go to destination from subanswer", destination);
-        if (destination.data) addQuestion(destination.data);
+        if (destination.data) addQuestion(destination.data, index + 1);
       });
     }
   };
@@ -79,13 +80,14 @@ const QuestionBox = ({ question, id }: QuestionBoxProps) => {
   return (
     <FormGroupStep>
       <FormGroup>
-        <FormGroupLabel htmlFor={`select-question-${id}`}>{question.attributes.content}</FormGroupLabel>
-        {question.attributes.answers?.length && (
+        <FormGroupLabel htmlFor={`select-question-${index}`}>{question.attributes.content}</FormGroupLabel>
+        {question.attributes.answers?.length ? (
           <FormSelect
-            id={`select-question-${id}`}
+            id={`select-question-${index}`}
             onChange={handleAnswerChange}
             placeholder="Veuillez sélectionner une réponse"
             placeholderSelected={true}
+            placeholderHidden={false}
           >
             {question.attributes.answers.map((answer, answerIdx) => (
               <option key={`${question.id}-answer-${answerIdx}`} value={answerIdx}>
@@ -93,15 +95,16 @@ const QuestionBox = ({ question, id }: QuestionBoxProps) => {
               </option>
             ))}
           </FormSelect>
-        )}
+        ) : null}
       </FormGroup>
       {question.attributes.answers?.[currentAnswerIndex]?.subanswers?.length ? (
         <FormGroup>
           <FormSelect
-            id={`select-question-subanswer-${id}`}
+            id={`select-question-subanswer-${index}`}
             onChange={handleSubAnswerChange}
             placeholder="Veuillez sélectionner une réponse"
             placeholderSelected={true}
+            placeholderHidden={false}
           >
             {question.attributes.answers[currentAnswerIndex].subanswers?.map((subAnswer, subAnswerIdx) => (
               <option key={`${question.id}-subanswer-${subAnswerIdx}`} value={subAnswerIdx}>
