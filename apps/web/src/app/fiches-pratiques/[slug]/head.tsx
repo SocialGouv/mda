@@ -4,10 +4,18 @@ import { fetchStrapi } from "@services/strapi";
 import { type FichePratiqueProps } from "./page";
 
 const Head = async ({ params }: FichePratiqueProps) => {
-  const currentFiche = (await fetchStrapi("fiche-pratiques", { populate: "deep", slug: params.slug }))[0];
+  const currentFiche = (
+    await fetchStrapi("fiche-pratiques", {
+      filters: {
+        slug: {
+          $eq: params.slug,
+        },
+      },
+    })
+  ).data?.[0];
   return (
     <head>
-      <Next13Seo title={`Fiche Pratique - ${currentFiche.attributes.title}`} />
+      <Next13Seo title={`Fiche Pratique${currentFiche ? ` - ${currentFiche.attributes.title}` : ""}`} />
     </head>
   );
 };

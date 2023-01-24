@@ -624,6 +624,7 @@ export interface ApiQuestionQuestion extends CollectionTypeSchema {
     content: StringAttribute & RequiredAttribute;
     answers: ComponentAttribute<'parcours-diag.answer', true>;
     info: TextAttribute;
+    first: BooleanAttribute & RequiredAttribute;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     createdBy: RelationAttribute<

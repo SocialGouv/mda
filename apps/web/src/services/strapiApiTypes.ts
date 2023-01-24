@@ -5,6 +5,8 @@ import {
   type GetAttribute,
   type GetAttributes,
   type GetAttributesKey,
+  type GetAttributesOptionalKeys,
+  type GetAttributesRequiredKeys,
   type GetAttributeValue,
   type GetComponentAttributeValue,
   type GetDynamicZoneAttributeValue,
@@ -76,17 +78,29 @@ type GetValue<T extends utils.SchemaUID, U extends GetAttributesKey<T>> = GetAtt
 // Get the list of allowed attributes' names for the content api
 // Removes privates and password fields for now
 // note: creatorsFields are already handled since their private value is dynamic (set at content-type loading & dumped into the schemas typings)
-type GetAllowedAttributesKey<T extends utils.SchemaUID> = GetAttributes<T> extends infer A
+type _GetAllowedAttributesKey<T extends utils.SchemaUID> = GetAttributes<T> extends infer A
   ? keyof Omit<A, utils.KeysBy<A, PasswordAttribute | PrivateAttribute>>
   : never;
 
 // Custom GetAttributesValues implementation which includes specific
 // content API logic (sanitation, custom value resolvers, etc...)
+// type GetAttributesValues<T extends utils.SchemaUID> = {
+//   [key in GetAllowedAttributesKey<T>]?: GetValue<T, key>;
+// };
+
 type GetAttributesValues<T extends utils.SchemaUID> = {
-  [key in GetAllowedAttributesKey<T>]?: GetValue<T, key>;
+  // Handle optional attributes
+  [key in GetAttributesOptionalKeys<T>]?: GetValue<T, key>;
+} & {
+  // Handle required attributes
+  [key in GetAttributesRequiredKeys<T>]-?: GetValue<T, key>;
 };
 
 // Wrapper which contains the id/attributes couple, used to type the responses' data property
+// interface DataWrapper<T extends utils.SchemaUID | null = null> extends WithID {
+//   attributes: T extends utils.SchemaUID ? GetAttributesValues<T> : unknown;
+// }
+
 interface DataWrapper<T extends utils.SchemaUID | null = null> extends WithID {
   attributes: T extends utils.SchemaUID ? GetAttributesValues<T> : unknown;
 }

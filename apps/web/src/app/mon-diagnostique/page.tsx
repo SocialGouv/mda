@@ -4,7 +4,8 @@ import { fetchStrapi } from "@services/strapi";
 import { DiagSteps } from "./DiagSteps";
 
 const Diagnostique = async () => {
-  const firstQuestion = (await fetchStrapi("questions", { first: { $eq: true }, populate: "deep,4" })).data?.[0];
+  const firstQuestion = (await fetchStrapi("questions", { filters: { first: { $eq: true } }, populate: "deep,4" }))
+    .data?.[0];
   if (!firstQuestion) {
     return null;
   }
