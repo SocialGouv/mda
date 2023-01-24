@@ -1,10 +1,10 @@
-import { Container } from "@design-system";
+import { SimpleContentPage } from "@components/base/SimpleContentPage";
 
 const HealthZPage = () => {
   return (
-    <Container className="fr-py-6w fr-py-md-12w">
+    <SimpleContentPage>
       <h1>App is up and running</h1>
-    </Container>
+    </SimpleContentPage>
   );
 };
 
