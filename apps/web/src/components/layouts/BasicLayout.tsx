@@ -129,9 +129,18 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
           <FooterBodyContent>
             <FooterBodyContentDescription>
               Ce site est une version beta en cours de déploiement progressif. Il sera enrichi au fur et à mesure des
-              retours des personnes concernées.Un oubli ? Une suggestion ? Utilisez le module{" "}
-              <NextLinkOrA href="/je-donne-mon-avis">JeDonneMonAvis</NextLinkOrA> pour soumettre vos idées afin de
+              retours des personnes concernées. Un oubli&nbsp;? Une suggestion&nbsp;? Utilisez le module{" "}
+              <NextLinkOrA href="/je-donne-mon-avis">Je donne mon avis</NextLinkOrA> pour soumettre vos idées afin de
               contribuer à enrichir ce service public construit par et pour les personnes autistes et leurs proches.
+            </FooterBodyContentDescription>
+            <FooterBodyContentDescription>
+              Attention, les demandes personnelles transmises via ce formulaire ne pourront être traités sur ce site,
+              veuillez vous rapprocher de l'organisme en charge de votre dossier. Pour toute question, vous pouvez
+              contacter{" "}
+              <a href="https://www.autismeinfoservice.fr/" target="_blank" rel="noreferrer">
+                Autisme Info Services
+              </a>
+              .
             </FooterBodyContentDescription>
             <FooterBodyContentItems>
               <FooterBodyItem>
@@ -158,6 +167,9 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
           </FooterBodyContent>
         </FooterBody>
         <FooterBottom>
+          <FooterBottomItem>
+            <FooterBottomLink href="/accessibilite">Accessibilité&nbsp;: non conforme</FooterBottomLink>
+          </FooterBottomItem>
           <FooterBottomItem>
             <FooterBottomLink href="/cgu">CGU</FooterBottomLink>
           </FooterBottomItem>
