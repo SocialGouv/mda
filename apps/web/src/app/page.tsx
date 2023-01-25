@@ -22,7 +22,9 @@ import {
   TileImg,
 } from "@design-system";
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
+import Image from "next/image";
 
+import heroPic from "../../public/home-hero.jpeg";
 import styles from "./index.module.css";
 
 const HomePage = () => {
@@ -35,14 +37,15 @@ const HomePage = () => {
               <GridCol lg={7}>
                 <h1>Qu'est-ce que l'autisme&nbsp;?</h1>
                 <p>
-                  L’autisme est un trouble du neuro-développement précoce, qui impacte les capacités de communication,
-                  les interactions sociales et les comportements des personnes. Ce trouble va souvent de pair avec
-                  d’autres manifestations : hyper ou hypo sensibilité aux sons, lumières, odeur... , trouble du déficit
-                  de l’attention avec ou sans hyperactivité (TDAH), troubles “dys” (dyslexie, dyspraxie, dysphasie,...).
+                  L’autisme est un trouble du neurodéveloppement (TND) précoce qui impacte les capacités de
+                  communication, les interactions sociales et les comportements des personnes. Ce trouble va souvent de
+                  pair avec d’autres manifestations&nbsp;: hyper ou hypo sensibilité aux sons, lumières, odeurs… ,
+                  trouble du déficit de l’attention avec ou sans hyperactivité (TDA/H), troubles “dys” (dyslexie,
+                  dyspraxie, dysphasie,…)
                 </p>
                 <ButtonGroup inline="mobile-up">
                   <ButtonGroupItem>
-                    <ButtonAsLink href="/fiches-pratiques/qu-est-ce-que-l-autisme">Comprendre l'austisme</ButtonAsLink>
+                    <ButtonAsLink href="/fiches-pratiques/qu-est-ce-que-l-autisme">Comprendre l'autisme</ButtonAsLink>
                   </ButtonGroupItem>
                   <ButtonGroupItem>
                     <ButtonAsLink variant="secondary" href="#">
@@ -52,7 +55,14 @@ const HomePage = () => {
                 </ButtonGroup>
               </GridCol>
               <GridCol md={6} lg={5} className="fr-mx-auto">
-                <PlaceholderImg />
+                <Image
+                  className="fr-fluid-img"
+                  src={heroPic}
+                  alt="Maman et enfant autiste"
+                  width={486}
+                  height={324}
+                  placeholder="blur"
+                />
               </GridCol>
             </Grid>
           </Container>
@@ -68,8 +78,8 @@ const HomePage = () => {
                       Mon parcours
                     </TileBodyTitle>
                     <TileBodyDescription>
-                      En tant que personne autiste ou parent d'enfant autiste, une série de démarches est à réaliser pas
-                      à pas pour pouvoir être pris en charge et mener sa vie de la manière la plus autonome possible.
+                      En tant que personne autiste, parent ou aidant, plusieurs étapes clés sont à réaliser pour mener
+                      sa vie de la manière la plus autonome possible.
                     </TileBodyDescription>
                   </TileBody>
                   <TileImg>
@@ -100,8 +110,8 @@ const HomePage = () => {
                       Mes aides
                     </TileBodyTitle>
                     <TileBodyDescription>
-                      Selon votre situation, plusieurs aides sont disponibles afin d'aider votre enfant et votre famille
-                      au quotidien.
+                      Selon votre situation, celle de enfant ou de votre proche, des ressources sont disponibles pour
+                      vous aider au quotidien.
                     </TileBodyDescription>
                   </TileBody>
                   <TileImg>
