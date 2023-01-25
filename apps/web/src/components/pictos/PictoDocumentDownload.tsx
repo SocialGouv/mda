@@ -10,8 +10,8 @@ export const PictoDocumentDownload = () => (
     aria-hidden="true"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M3 36a.6.6 0 1 1 .002-1.201A.6.6 0 0 1 3 36ZM9.6 3.6a.6.6 0 1 1 .001-1.201A.6.6 0 0 1 9.6 3.6ZM1.8 15.6a.6.6 0 1 1 .002-1.201A.6.6 0 0 1 1.8 15.6ZM46.2 33.6a.6.6 0 1 1 .002-1.201.6.6 0 0 1-.002 1.201ZM45 13.2a.6.6 0 1 1 .002-1.201A.6.6 0 0 1 45 13.2Z"
       fill="#CACAFB"
     />
@@ -20,8 +20,8 @@ export const PictoDocumentDownload = () => (
       fill="#E1000F"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M32.4 27.6a7.8 7.8 0 1 0 0 15.6 7.8 7.8 0 0 0 0-15.6Zm0 1.2a6.6 6.6 0 1 1 0 13.2 6.6 6.6 0 0 1 0-13.2Z"
       fill="#E1000F"
     />
