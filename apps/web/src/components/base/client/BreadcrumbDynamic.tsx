@@ -7,7 +7,7 @@ import styles from "./BreadcrumbDynamic.module.css";
 
 export const BreadcrumbDynamic = () => {
   const currentPathName = usePathname();
-  if (currentPathName !== "/") return null;
+  if (currentPathName === "/") return null;
 
   const filteredPath = currentPathName?.split("/").filter(el => el !== "");
 
