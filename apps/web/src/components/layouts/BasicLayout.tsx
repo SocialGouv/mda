@@ -53,15 +53,17 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
           </FooterBodyBrand>
           <FooterBodyContent>
             <FooterBodyContentDescription>
-              Ce site est une version beta en cours de déploiement progressif. Il sera enrichi au fur et à mesure des
-              retours des personnes concernées. Un oubli&nbsp;? Une suggestion&nbsp;? Utilisez le module{" "}
+              Ce site est fait pour les personnes autistes, par des personnes autistes, et avec des personnes
+              concernées. C'est une version beta en cours de déploiement progressif. Vos commentaires, réactions et
+              propositions sont précieux pour nous aider à améliorer ce service au fur et à mesure. Un oubli&nbsp;? Une
+              suggestion&nbsp;? Utilisez le module{" "}
               <NextLinkOrA href="/je-donne-mon-avis">Je donne mon avis</NextLinkOrA> pour soumettre vos idées afin de
-              contribuer à enrichir ce service public construit par et pour les personnes autistes et leurs proches.
+              contribuer à enrichir ce service public.
             </FooterBodyContentDescription>
             <FooterBodyContentDescription>
-              Attention, les demandes personnelles transmises via ce formulaire ne pourront être traités sur ce site,
-              veuillez vous rapprocher de l'organisme en charge de votre dossier. Pour toute question, vous pouvez
-              contacter{" "}
+              Attention, les demandes personnelles transmises via ce formulaire ne pourront être traitées sur ce site.
+              Pour les demandes personnelles, veuillez vous rapprocher de l'organisme en charge de votre dossier. Pour
+              toute question, vous pouvez contacter{" "}
               <a href="https://www.autismeinfoservice.fr/" target="_blank" rel="noreferrer">
                 Autisme Info Services
               </a>
