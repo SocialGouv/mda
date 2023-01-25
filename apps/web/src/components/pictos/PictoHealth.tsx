@@ -10,8 +10,8 @@ export const PictoHealth = () => (
     aria-hidden="true"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M40.2 6.601A.6.6 0 1 1 40.2 5.4.6.6 0 0 1 40.2 6.6ZM24 44.401A.6.6 0 1 1 24 43.2.6.6 0 0 1 24 44.4ZM8.4 4.801A.6.6 0 1 1 8.4 3.6.6.6 0 0 1 8.4 4.8Z"
       fill="#CACAFB"
     />

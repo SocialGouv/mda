@@ -40,8 +40,16 @@ export const TimelineDescription = ({ children }: PropsWithChildren) => {
   return <p className="fr-card__desc">{children}</p>;
 };
 
-export const TimelineItemFooterLink = ({ children, href }: PropsWithChildren<{ href: string }>) => (
-  <NextLinkOrA href={href} className={clsx(styles.footerLink, "fr-link fr-link--icon-right fr-icon-arrow-right-line")}>
+export const TimelineItemFooterLink = ({
+  children,
+  href,
+  title,
+}: PropsWithChildren<{ href?: string; title?: string }>) => (
+  <NextLinkOrA
+    href={href}
+    className={clsx(styles.footerLink, "fr-link fr-link--icon-right fr-icon-arrow-right-line")}
+    title={title}
+  >
     {children}
   </NextLinkOrA>
 );

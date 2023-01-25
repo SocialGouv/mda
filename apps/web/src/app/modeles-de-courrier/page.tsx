@@ -5,42 +5,40 @@ const Documents = () => {
   return (
     <SimpleContentPage>
       <h1>Modèles de courrier</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore odit ipsam doloribus beatae, alias excepturi
-        incidunt ullam, tempora voluptates voluptatibus sit dicta dignissimos, cum expedita aut molestias a perferendis
-        distinctio!
-      </p>
       <ul>
         <li>
           <DownloadLink
-            href="#"
-            title="Télécharger le document lorem ipsum sit dolores amet"
-            type="JPG"
-            size="61,88 ko"
+            href="/documents/recours-administratif-prealableobligatoire.docx"
+            title="Recours administratif préalable obligatoire (RAPO)"
+            type="DOCX"
+            size="16ko"
+          />
+        </li>
+        <li>
+          <DownloadLink href="documents/projet-de-vie.docx" title="Projet de vie" type="DOCX" size="19ko" />
+        </li>
+        <li>
+          <DownloadLink
+            href="documents/mise-en-demeure-absence-partielle-AESH-individuel.doc"
+            title="Mise en demeure de la DSDEN, absence partielle AESH individuel"
+            type="DOC"
+            size="35ko"
           />
         </li>
         <li>
           <DownloadLink
-            href="#"
-            title="Télécharger le document lorem ipsum sit dolores amet"
-            type="JPG"
-            size="61,88 ko"
+            href="documents/mise-en-demeure-absence-totale-AESH-individuel.doc"
+            title="Mise en demeure de la DSDEN, absence totale AESH individuel"
+            type="DOC"
+            size="35ko"
           />
         </li>
         <li>
           <DownloadLink
-            href="#"
-            title="Télécharger le document lorem ipsum sit dolores amet"
-            type="JPG"
-            size="61,88 ko"
-          />
-        </li>
-        <li>
-          <DownloadLink
-            href="#"
-            title="Télécharger le document lorem ipsum sit dolores amet"
-            type="JPG"
-            size="61,88 ko"
+            href="documents/mise-en-demeure-absence-totale-AESH-mutualise.doc"
+            title="Mise en demeure de la DSDEN, absence totale AESH mutualisée"
+            type="DOC"
+            size="35ko"
           />
         </li>
       </ul>
