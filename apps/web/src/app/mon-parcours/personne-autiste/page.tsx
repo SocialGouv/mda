@@ -18,16 +18,15 @@ const MonParcoursAidant = () => {
       <Container>
         <Grid haveGutters justifyCenter>
           <GridCol md={10} lg={8}>
-            <h1>Mon parcours de parent ou d'aidant</h1>
+            <h1>Mon parcours de personne autiste</h1>
             <p className="fr-text--xs">
               Vérifié le 8 novembre 2022 - Direction de l'information légale et administrative (Premier ministre)
             </p>
             <div className="fr-text--xl">
               <p>
-                En tant que parent ou proche aidant, plusieurs étapes clés sont à réaliser pour accompagner votre proche
-                à mener sa vie de la manière la plus autonome possible. Quelque soit votre situation, retrouvez
-                ci-dessous des contenus et outils de guidance pour vous aider à y voir plus clair sur le déroulé de ces
-                grandes étapes.
+                En tant que personne autiste, plusieurs étapes clés sont à réaliser pour mener votre vie de la manière
+                la plus autonome possible. Quelque soit votre situation, retrouvez ci-dessous des contenus et outils de
+                guidance pour vous aider à y voir plus clair sur le déroulé de ces grandes étapes.
               </p>
             </div>
           </GridCol>
@@ -38,7 +37,8 @@ const MonParcoursAidant = () => {
                   <NextLinkOrA href="#">Je me pose des questions</NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
-                  Je m'interroge sur les comportements de mon enfant ou de mon proche.
+                  Je m'interroge sur mes comportements ou mes ressentis. Je souhaite repérer des signes qui pourraient
+                  relever d'un trouble du neurodéveloppement comme l'autisme.
                 </TimelineDescription>
               </TimelineItem>
               <TimelineItem isEnlargeLink>
@@ -46,8 +46,8 @@ const MonParcoursAidant = () => {
                   <NextLinkOrA href="/mon-diagnostique">Je démarre un diagnostic</NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
-                  J'accompagne mon enfant ou mon proche auprès d'un professionnel de santé et selon son avis médical le
-                  parcours de diagnostic peut démarrer.
+                  Je consulte un professionnel de santé et selon son avis médical le parcours de diagnostic peut
+                  démarrer.
                 </TimelineDescription>
               </TimelineItem>
               <TimelineItem isEnlargeLink>
@@ -85,31 +85,21 @@ const MonParcoursAidant = () => {
                 footer={
                   <ul>
                     <li>
-                      <TimelineItemFooterLink href="#">Être scolarisé</TimelineItemFooterLink>
-                    </li>
-                    <li>
                       <TimelineItemFooterLink href="#">Étudier</TimelineItemFooterLink>
                     </li>
                     <li>
                       <TimelineItemFooterLink href="#">Travailler</TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">Logement</TimelineItemFooterLink>
-                    </li>
-                    <li>
-                      <TimelineItemFooterLink title="Cette page est en cours de rédaction et sera prochainement disponible.">
-                        Travailler quand on est parent ou aidant
-                      </TimelineItemFooterLink>
-                    </li>
-                    <li>
                       <TimelineItemFooterLink href="#">Se soigner</TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">Se déplacer</TimelineItemFooterLink>
+                      <TimelineItemFooterLink href="#"> Se déplacer</TimelineItemFooterLink>
                     </li>
                     <li>
                       <TimelineItemFooterLink href="#">Se loger</TimelineItemFooterLink>
                     </li>
+
                     <li>
                       <TimelineItemFooterLink href="#">Partir en vacances, avoir des loisir</TimelineItemFooterLink>
                     </li>
@@ -119,14 +109,12 @@ const MonParcoursAidant = () => {
                       </TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">
-                        Mettre en place des mesures de protection
-                      </TimelineItemFooterLink>
+                      <TimelineItemFooterLink href="#">Être protégé</TimelineItemFooterLink>
                     </li>
                   </ul>
                 }
               >
-                <TimelineItemTitle>J'accompagne mon enfant ou mon proche tout au long de sa vie</TimelineItemTitle>
+                <TimelineItemTitle>Je mène à bien les différentes étapes de ma vie</TimelineItemTitle>
                 <TimelineDescription>
                   Plusieurs étapes clés sont à réaliser pour mener sa vie de la manière la plus autonome possible.
                 </TimelineDescription>

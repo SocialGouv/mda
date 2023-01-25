@@ -14,23 +14,56 @@ const MonParcours = () => {
   return (
     <section className="fr-py-6w fr-py-md-12w">
       <Container>
-        <h1>Mon Parcours</h1>
+        <h1>Mon parcours</h1>
         <Grid haveGutters>
           <GridCol lg={6}>
             <Card isEnlargeLink>
               <CardBody>
                 <CardBodyContent>
                   <CardBodyContentTitle titleAs="h3">
+                    <NextLinkOrA href="/mon-parcours/personne-autiste">Je suis une personne autiste</NextLinkOrA>
+                  </CardBodyContentTitle>
+                  <CardBodyContentDescription>
+                    En tant que personne autiste, plusieurs étapes clés sont à réaliser pour mener votre vie de la
+                    manière la plus autonome possible. Quelque soit votre situation, retrouvez ci-dessous des contenus
+                    et outils de guidance pour vous aider à y voir plus clair sur le déroulé de ces grandes étapes
+                  </CardBodyContentDescription>
+                </CardBodyContent>
+              </CardBody>
+            </Card>
+          </GridCol>{" "}
+          <GridCol lg={6}>
+            <Card isEnlargeLink>
+              <CardBody>
+                <CardBodyContent>
+                  <CardBodyContentTitle titleAs="h3">
                     <NextLinkOrA href="/mon-parcours/parent-personne-aidante">
-                      Parcours parent, personne aidante
+                      Je suis un parent ou un aidant
                     </NextLinkOrA>
                   </CardBodyContentTitle>
                   <CardBodyContentDescription>
-                    L’autisme est un trouble du neuro-développement précoce, qui impacte les capacités de communication,
-                    les interactions sociales et les comportements des personnes. Ce trouble va souvent de pair avec
-                    d’autres manifestations : hyper ou hypo sensibilité aux sons, lumières, odeur... , trouble du
-                    déficit de l’attention avec ou sans hyperactivité (TDAH), troubles “dys” (dyslexie, dyspraxie,
-                    dysphasie,...).
+                    En tant que parent ou proche aidant, plusieurs étapes clés sont à réaliser pour accompagner votre
+                    proche à mener sa vie de la manière la plus autonome possible. Quelque soit votre situation,
+                    retrouvez ci-dessous des contenus et outils de guidance pour vous aider à y voir plus clair sur le
+                    déroulé de ces grandes étapes.
+                  </CardBodyContentDescription>
+                </CardBodyContent>
+              </CardBody>
+            </Card>
+          </GridCol>{" "}
+          <GridCol lg={6}>
+            <Card isEnlargeLink>
+              <CardBody>
+                <CardBodyContent>
+                  <CardBodyContentTitle titleAs="h3">
+                    <NextLinkOrA href="/mon-parcours/professionnel-de-sante">
+                      Je suis un professionnel de santé ou du médico-social
+                    </NextLinkOrA>
+                  </CardBodyContentTitle>
+                  <CardBodyContentDescription>
+                    Cette rubrique du site internet est en cours de construction pour le moment. Si vous êtes un
+                    professionnel de santé ou du médico-social, partagez-nous vos attentes en donnant votre avis via le
+                    formulaire "Je donne mon avis".
                   </CardBodyContentDescription>
                 </CardBodyContent>
               </CardBody>
