@@ -96,9 +96,6 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
             <FooterBottomLink href="/accessibilite">Accessibilité&nbsp;: non conforme</FooterBottomLink>
           </FooterBottomItem>
           <FooterBottomItem>
-            <FooterBottomLink href="/cgu">CGU</FooterBottomLink>
-          </FooterBottomItem>
-          <FooterBottomItem>
             <FooterBottomLink href="/mentions-legales">Mentions légales</FooterBottomLink>
           </FooterBottomItem>
           <FooterBottomItem>
