@@ -1,9 +1,4 @@
 import {
-  Card,
-  CardBody,
-  CardBodyContent,
-  CardBodyContentDescription,
-  CardBodyContentTitle,
   Container,
   Grid,
   GridCol,
@@ -15,22 +10,24 @@ import {
 } from "@design-system";
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 
+import { Tiles } from "../Tiles";
+
 const MonParcoursAidant = () => {
   return (
     <section className="fr-py-6w fr-py-md-12w">
       <Container>
         <Grid haveGutters justifyCenter>
           <GridCol md={10} lg={8}>
-            <h1>Parcours parent, personne aidante</h1>
+            <h1>Mon parcours de parent ou d'aidant</h1>
             <p className="fr-text--xs">
               Vérifié le 8 novembre 2022 - Direction de l'information légale et administrative (Premier ministre)
             </p>
             <div className="fr-text--xl">
               <p>
-                L’autisme est un trouble du neuro-développement précoce, qui impacte les capacités de communication, les
-                interactions sociales et les comportements des personnes. Ce trouble va souvent de pair avec d’autres
-                manifestations : hyper ou hypo sensibilité aux sons, lumières, odeur... , trouble du déficit de
-                l’attention avec ou sans hyperactivité (TDAH), troubles “dys” (dyslexie, dyspraxie, dysphasie,...).
+                En tant que parent ou proche aidant, plusieurs étapes clés sont à réaliser pour accompagner votre proche
+                à mener sa vie de la manière la plus autonome possible. Quelque soit votre situation, retrouvez
+                ci-dessous des contenus et outils de guidance pour vous aider à y voir plus clair sur le déroulé de ces
+                grandes étapes.
               </p>
             </div>
           </GridCol>
@@ -38,131 +35,105 @@ const MonParcoursAidant = () => {
             <Timeline>
               <TimelineItem isEnlargeLink>
                 <TimelineItemTitle>
-                  <NextLinkOrA href="/mon-parcours/parent-personne-aidante">Je me pose des questions</NextLinkOrA>
+                  <NextLinkOrA href="#">Je me pose des questions</NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
-                  Je m'interroge sur mes comportements ou ceux de mon enfant. Je souhaite repérer des différences de
-                  comportements et de ressentis qui pourraient relever d'un trouble du neuro-développement.
+                  Je m'interroge sur les comportements de mon enfant ou de mon proche.
                 </TimelineDescription>
               </TimelineItem>
+              <TimelineItem isEnlargeLink>
+                <TimelineItemTitle>
+                  <NextLinkOrA href="/mon-diagnostique">Je démarre un diagnostic</NextLinkOrA>
+                </TimelineItemTitle>
+                <TimelineDescription>
+                  J'accompagne mon enfant ou mon proche auprès d'un professionnel de santé et selon son avis médical le
+                  parcours de diagnostic peut démarrer.
+                </TimelineDescription>
+              </TimelineItem>
+              <TimelineItem isEnlargeLink>
+                <TimelineItemTitle>
+                  <NextLinkOrA href="#">Je prends connaissance de mes aides</NextLinkOrA>
+                </TimelineItemTitle>
+                <TimelineDescription>
+                  Le site de service public Mes Droits Sociaux vous permet d'accéder à un formulaire de simulation des
+                  aides auxquelles vous pouvez prétendre, selon votre situation personnelle et familiale.
+                </TimelineDescription>
+              </TimelineItem>
+              <TimelineItem isEnlargeLink>
+                <TimelineItemTitle>
+                  <NextLinkOrA href="#">Je sollicite la MDPH et je dépose un dossier</NextLinkOrA>
+                </TimelineItemTitle>
+                <TimelineDescription>
+                  Lorsque mon enfant ou mon proche a finalisé son parcours de diagnostic et qu'il conclut à un TSA, je
+                  m'adresse à la Maison Départementale des Personnes Handicapées et je dépose un dossier.
+                </TimelineDescription>
+              </TimelineItem>
+
+              <TimelineItem isEnlargeLink>
+                <TimelineItemTitle>
+                  <NextLinkOrA href="#">
+                    Je prends connaissances des nouvelles aides disponible suite à la réponse de la MDPH
+                  </NextLinkOrA>
+                </TimelineItemTitle>
+                <TimelineDescription>
+                  Suite au retour de la MDPH, selon ma situation familiale de nouvelles aides sont maintenant
+                  disponibles pour moi et mon enfant.
+                </TimelineDescription>
+              </TimelineItem>
+
               <TimelineItem
                 footer={
                   <ul>
                     <li>
-                      <TimelineItemFooterLink href="#">Scolarisation</TimelineItemFooterLink>
+                      <TimelineItemFooterLink href="#">Être scolarisé</TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">Etudes supérieures</TimelineItemFooterLink>
+                      <TimelineItemFooterLink href="#">Étudier</TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">Transport</TimelineItemFooterLink>
+                      <TimelineItemFooterLink href="#">Travailler</TimelineItemFooterLink>
                     </li>
                     <li>
                       <TimelineItemFooterLink href="#">Logement</TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">Mon Emploi</TimelineItemFooterLink>
+                      <TimelineItemFooterLink title="Cette page est en cours de rédaction et sera prochainement disponible.">
+                        Travailler quand on est parent ou aidant
+                      </TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">L'emploi de mon enfant</TimelineItemFooterLink>
+                      <TimelineItemFooterLink href="#">Se soigner</TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">Tutelle & curatelle</TimelineItemFooterLink>
+                      <TimelineItemFooterLink href="#">Se déplacer</TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">Protection des biens</TimelineItemFooterLink>
+                      <TimelineItemFooterLink href="#">Se loger</TimelineItemFooterLink>
+                    </li>
+                    <li>
+                      <TimelineItemFooterLink href="#">Partir en vacances, avoir des loisir</TimelineItemFooterLink>
                     </li>
                     <li>
                       <TimelineItemFooterLink href="#">
-                        Relations sociales, amoureuses & familiales
+                        Tisser du lien amical, amoureux et familial
+                      </TimelineItemFooterLink>
+                    </li>
+                    <li>
+                      <TimelineItemFooterLink href="#">
+                        Mettre en place des mesures de protection
                       </TimelineItemFooterLink>
                     </li>
                   </ul>
                 }
               >
-                <TimelineItemTitle>Je me pose des questions</TimelineItemTitle>
+                <TimelineItemTitle>J'accompagne mon enfant ou mon proche tout au long de sa vie</TimelineItemTitle>
                 <TimelineDescription>
-                  Je m'interroge sur mes comportements ou ceux de mon enfant. Je souhaite repérer des différences de
-                  comportements et de ressentis qui pourraient relever d'un trouble du neuro-développement.
-                </TimelineDescription>
-              </TimelineItem>
-              <TimelineItem isEnlargeLink>
-                <TimelineItemTitle>
-                  <NextLinkOrA href="/mon-parcours/parent-personne-aidante">Je me pose des questions</NextLinkOrA>
-                </TimelineItemTitle>
-                <TimelineDescription>
-                  Je m'interroge sur mes comportements ou ceux de mon enfant. Je souhaite repérer des différences de
-                  comportements et de ressentis qui pourraient relever d'un trouble du neuro-développement.
+                  Plusieurs étapes clés sont à réaliser pour mener sa vie de la manière la plus autonome possible.
                 </TimelineDescription>
               </TimelineItem>
             </Timeline>
           </GridCol>
-          <GridCol md={10} lg={8}>
-            <Grid haveGutters>
-              <GridCol md={6}>
-                <Card isEnlargeLink>
-                  <CardBody>
-                    <CardBodyContent>
-                      <CardBodyContentTitle titleAs="h2">
-                        <NextLinkOrA href="#">J’en parle autour de moi</NextLinkOrA>
-                      </CardBodyContentTitle>
-                      <CardBodyContentDescription>
-                        L’autisme est un trouble du neuro-développement précoce, qui impacte les capacités de
-                        communication, les interactions sociales et les comportements des personnes.
-                      </CardBodyContentDescription>
-                    </CardBodyContent>
-                  </CardBody>
-                </Card>
-              </GridCol>
-
-              <GridCol md={6}>
-                <Card isEnlargeLink>
-                  <CardBody>
-                    <CardBodyContent>
-                      <CardBodyContentTitle titleAs="h2">
-                        <NextLinkOrA href="#">Je cherche des groupes avec qui échanger</NextLinkOrA>
-                      </CardBodyContentTitle>
-                      <CardBodyContentDescription>
-                        En ligne ou en physique près de chez moi, des communautés de partage et d'entraide liés au TSA
-                        existent.
-                      </CardBodyContentDescription>
-                    </CardBodyContent>
-                  </CardBody>
-                </Card>
-              </GridCol>
-              <GridCol md={6}>
-                <Card isEnlargeLink>
-                  <CardBody>
-                    <CardBodyContent>
-                      <CardBodyContentTitle titleAs="h2">
-                        <NextLinkOrA href="/je-donne-mon-avis">Je donne mon avis</NextLinkOrA>
-                      </CardBodyContentTitle>
-                      <CardBodyContentDescription>
-                        Un oubli&nbsp;? Une suggestion&nbsp;? Utilisez le module "JeDonneMonAvis" pour soumettre vos
-                        idées afin de contribuer à enrichir ce service public construit par et pour les personnes
-                        autistes et leurs proches.
-                      </CardBodyContentDescription>
-                    </CardBodyContent>
-                  </CardBody>
-                </Card>
-              </GridCol>
-              <GridCol md={6}>
-                <Card isEnlargeLink>
-                  <CardBody>
-                    <CardBodyContent>
-                      <CardBodyContentTitle titleAs="h2">
-                        <NextLinkOrA href="#">Annuaire</NextLinkOrA>
-                      </CardBodyContentTitle>
-                      <CardBodyContentDescription>
-                        Vous cherchez une organisation agissant dans le domaine de l’autisme ? Trouvez ses coordonnées
-                        dans notre annuaire.
-                      </CardBodyContentDescription>
-                    </CardBodyContent>
-                  </CardBody>
-                </Card>
-              </GridCol>
-            </Grid>
-          </GridCol>
+          <Tiles />
         </Grid>
       </Container>
     </section>

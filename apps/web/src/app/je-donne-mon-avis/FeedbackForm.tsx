@@ -5,6 +5,7 @@ import { FormGroupSelect } from "@components/base/FormGroupSelect";
 import { FormGroupTextarea } from "@components/base/FormGroupTextarea";
 import { Fieldset, FieldsetElement, FormButton } from "@design-system";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -22,7 +23,8 @@ const schema = z
         required_error: "Le champs de message est obligatoire.",
         invalid_type_error: "Le champs de message doit être une chaîne de caractères.",
       })
-      .min(10, { message: "Le champs de message doit contenir 10 caractères ou plus" }),
+      .min(10, { message: "Le champs de message doit contenir 10 caractères ou plus" })
+      .max(10000, { message: "Le champs de message doit contenir au maximum 10000 caractères." }),
     email: z.string().email({ message: "L'adresse email est invalide." }).optional().or(z.literal("")),
     phoneNumber: z
       .string()
@@ -43,10 +45,22 @@ export const FeedbackForm = () => {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (data: FormData) => alert(JSON.stringify(data));
+  const onSubmit = (data: FormData) => {
+    console.log(data);
+    setFormState("submitted");
+  };
+
+  const [formState, setFormState] = useState<"initial" | "submitted" | "submitting">("initial");
 
   return (
-    <form onSubmit={void handleSubmit(onSubmit)} className="fr-mt-6w">
+    <form
+      onSubmit={e => {
+        handleSubmit(onSubmit)(e).catch(() => {
+          throw new Error("Something is wrong");
+        });
+      }}
+      className="fr-mt-6w"
+    >
       <Fieldset label="Votre profil et vos retours">
         <FieldsetElement>
           <FormGroupSelect
@@ -55,6 +69,7 @@ export const FeedbackForm = () => {
               { label: "Une personne autiste", value: "personne-autiste" },
               { label: "Un parent / aidant", value: "parent-aidant" },
               { label: "Un professionnel (de santé, médico-social, éducation...)", value: "professionnel" },
+              { label: "Autre", value: "autre" },
             ]}
             {...register("profil")}
           />
@@ -88,9 +103,12 @@ export const FeedbackForm = () => {
         </FieldsetElement>
       </Fieldset>
       <div className="fr-mt-4w fr-text-right">
-        <FormButton type="submit" disabled={!isValid}>
-          Envoyer mon avis
-        </FormButton>
+        {formState === "initial" && (
+          <FormButton type="submit" disabled={!isValid}>
+            Envoyer mon avis
+          </FormButton>
+        )}
+        {formState === "submitted" && <FormButton disabled={true}>Envoyé !</FormButton>}
       </div>
     </form>
   );

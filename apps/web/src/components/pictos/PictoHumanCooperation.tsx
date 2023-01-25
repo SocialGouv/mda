@@ -10,8 +10,8 @@ export const PictoHumanCooperation = () => (
     aria-hidden="true"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M33.6 46.2a.6.6 0 1 1 .001-1.201.6.6 0 0 1-.001 1.201ZM4.8 39a.6.6 0 1 1 .002-1.201A.6.6 0 0 1 4.8 39ZM45.6 34.8a.6.6 0 1 1 .001-1.201.6.6 0 0 1-.001 1.201ZM39 6a.6.6 0 1 1 .002-1.201A.6.6 0 0 1 39 6ZM14.4 2.4a.6.6 0 1 1 .002-1.201A.6.6 0 0 1 14.4 2.4Z"
       fill="#CACAFB"
     />
