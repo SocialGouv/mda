@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/SocialGouv/mda/compare/v1.0.0...v1.0.1) (2023-01-26)
+
+
+### Bug Fixes
+
+* dummy oeajjzaoejaz ([91af91d](https://github.com/SocialGouv/mda/commit/91af91d16f8461dc258b533d8bc416bd1cc1f7c9))
+
 # 1.0.0 (2023-01-26)
 
 
