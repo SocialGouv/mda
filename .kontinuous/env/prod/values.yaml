@@ -1,11 +1,12 @@
 global:
-  # host: maisonautisme.gouv.fr #TODO enable when domain is ok
+  host: maisondelautisme.fabrique.social.gouv.fr
+  # host: maisondelautisme.gouv.fr #TODO enable when domain is ok
 
 jobs:
   runs:
     build-web:
       with:
         buildArgs:
-          # NEXT_PUBLIC_STRAPI_API_URL: "https://strapi.{{ .Values.global.host }}"
+          NEXT_PUBLIC_STRAPI_API_URL: "https://strapi.{{ .Values.global.host }}"
           PRODUCTION: "true"
           ROBOT: "true"
