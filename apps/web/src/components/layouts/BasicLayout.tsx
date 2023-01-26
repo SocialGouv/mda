@@ -73,6 +73,33 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
             </FooterBodyContentDescription>
             <FooterBodyContentItems>
               <FooterBodyItem>
+                <FooterContentLink href="https://handicap.gouv.fr/accueil" target="_blank" rel="noreferrer" isExternal>
+                  Handicap.gouv.fr
+                </FooterContentLink>
+              </FooterBodyItem>
+              <FooterBodyItem>
+                <FooterContentLink
+                  href="https://www.monparcourshandicap.gouv.fr/"
+                  target="_blank"
+                  rel="noreferrer"
+                  isExternal
+                >
+                  Mon Parcours Handicap
+                </FooterContentLink>
+              </FooterBodyItem>
+              <FooterBodyItem>
+                <FooterContentLink
+                  href="https://www.mesdroitssociaux.gouv.fr/accueil/"
+                  target="_blank"
+                  rel="noreferrer"
+                  isExternal
+                >
+                  Mes Droits Sociaux
+                </FooterContentLink>
+              </FooterBodyItem>
+            </FooterBodyContentItems>
+            <FooterBodyContentItems>
+              <FooterBodyItem>
                 <FooterContentLink href="https://www.legifrance.gouv.fr/" target="_blank" rel="noreferrer" isExternal>
                   legifrance.gouv.fr
                 </FooterContentLink>
