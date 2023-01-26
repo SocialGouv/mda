@@ -43,7 +43,7 @@ const MonParcoursAidant = () => {
               </TimelineItem>
               <TimelineItem isEnlargeLink>
                 <TimelineItemTitle>
-                  <NextLinkOrA href="/mon-diagnostique">Je démarre un diagnostic</NextLinkOrA>
+                  <NextLinkOrA href="/mon-diagnostic">Je démarre un diagnostic</NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
                   Je consulte un professionnel de santé et selon son avis médical le parcours de diagnostic peut
