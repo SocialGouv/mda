@@ -1,0 +1,18 @@
+name: 🤯 Testify
+on:
+  push:
+    tags:
+      - v*
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.ref }}
+
+jobs:
+  testify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        shell: bash
+        run: |
+          echo Hello !
