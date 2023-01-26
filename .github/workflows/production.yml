@@ -1,5 +1,6 @@
 name: 🚀 Production
 on:
+  workflow_dispatch:
   push:
     tags:
       - v*

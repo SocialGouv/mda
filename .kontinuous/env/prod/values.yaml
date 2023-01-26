@@ -1,5 +1,6 @@
 global:
-  # host: maisonautisme.gouv.fr #TODO enable when domain is ok
+  host: maisondelautisme.fabrique.social.gouv.fr
+  # host: maisondelautisme.gouv.fr #TODO enable when domain is ok
 
 jobs:
   runs:

@@ -62,3 +62,10 @@ jobs:
       with:
         imagePackage: strapi
         dockerfile: apps/strapi/Dockerfile
+
+deactivate:
+  jobs-deactivate:
+    runs:
+      deactivate:
+        with:
+          db: true
