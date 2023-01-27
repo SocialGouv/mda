@@ -26,7 +26,7 @@ const AutismHouse = () => {
                 <p>
                   Elle formera les professionnels au contact des personnes autistes. Elle mettra à la disposition des
                   usagers des solutions innovantes, intelligentes et accessibles à tous pour améliorer concrètement le
-                  quotidien des personnes autistes et de leurs parents.{" "}
+                  quotidien des personnes autistes et de leurs parents.
                 </p>
                 <p>
                   Elle sera la référence de l’autisme en France, pour que les Français connaissent mieux l’autisme, la
@@ -72,13 +72,13 @@ const AutismHouse = () => {
                   La Maison de l’autisme sera également un laboratoire où les associations et entreprises porteuses de
                   projets innovants pourront se faire conseiller (études de faisabilité du projet et conseils à sa
                   réalisation : état des lieux, méthodologie du projet et mise en lien avec des acteurs associatifs,
-                  institutionnels et politiques).{" "}
+                  institutionnels et politiques).
                 </p>
                 <p>
                   Se rendre à la Maison de l’autisme aura également un intérêt pour le grand public et toute personne
                   pas directement concernée par l’autisme ou les troubles du neurodéveloppement : elle accueillera des
                   expositions, donnera de la visibilité à des artistes autistes, organisera des conférences, diffusera
-                  des films et des documentaires, organisera des signatures d’ouvrages…{" "}
+                  des films et des documentaires, organisera des signatures d’ouvrages…
                 </p>
               </>
             ),
@@ -136,7 +136,7 @@ const AutismHouse = () => {
                 <p>Il pourra grimper en escalade en sécurité sur un mur dédié. </p>
                 <p>
                   Il pourra jouer d’instruments de musique sans importuner les autres usagers, en sécurité pour lui et
-                  pour les autres et sans risque d’endommager le matériel.{" "}
+                  pour les autres et sans risque d’endommager le matériel.
                 </p>
               </>
             ),
