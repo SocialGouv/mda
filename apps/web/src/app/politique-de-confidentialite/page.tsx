@@ -47,7 +47,7 @@ const PrivacyPolicy = () => {
         </li>
       </ul>
       <p>
-        Cette mission d’intérêt public est précisée par l’article 2 du décret n°2018-296 du 25 avril 2018 instituant un
+        Cette mission d’intérêt public est précisée par l’article 2 du décret n°2018-296 du 25 avril 2018 instituant un
         délégué interministériel à la stratégie nationale pour l’autisme au sein des troubles du neuro-développement.
       </p>
       <h2>Pendant combien de temps conservons-nous ces données&nbsp;</h2>
@@ -104,7 +104,7 @@ const PrivacyPolicy = () => {
       <ul>
         <li>
           Les membres de la maison numérique de l’autisme qui ont besoin des données dans leurs missions ou qui y ont
-          accès de fait (développeur, etc.) &nbsp;;
+          accès de fait (développeur, etc.)&nbsp;;
         </li>
       </ul>
       <h2>Quelles mesures de sécurité mettons-nous en place&nbsp;?</h2>
