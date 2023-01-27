@@ -20,12 +20,12 @@ const strapiWebhookHandler: NextApiHandler = async (req, res) => {
   }
 
   const event = req.body as StrapiEvent;
-  console.log(`Revalidation asked`, { event });
   if (process.env.NODE_ENV === "development") {
-    console.log("...but aborted because development.");
+    console.log(`Revalidation asked (aborted => dev local)`, { event });
     return res.status(409).send({ message: "No revalidate webhook on development" });
   }
 
+  console.log(`Revalidation asked`, { event });
   await res.revalidate(`${pageModelMapping[event.type]}/${event.segment}`);
 
   res.status(200).send(null);

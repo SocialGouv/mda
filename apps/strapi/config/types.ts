@@ -348,6 +348,7 @@ type PluginEntry<T = unknown> =
 export type PluginsConfig = {
   [P: string]: PluginEntry;
   "config-sync": PluginEntry<StrapiConfigSyncSettings>;
+  "import-export-entries": PluginEntry;
   slugify: PluginEntry<SlugifySettings>;
   "strapi-plugin-populate-deep": PluginEntry<PopulateDeepSettings>;
 };
