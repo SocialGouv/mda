@@ -5,9 +5,14 @@ const Directory = () => {
     <SimpleContentPage>
       <h1>Annuaire</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore odit ipsam doloribus beatae, alias excepturi
-        incidunt ullam, tempora voluptates voluptatibus sit dicta dignissimos, cum expedita aut molestias a perferendis
-        distinctio!
+        Vous cherchez des contacts de confiance&nbsp;? Un établissement ou un organisme&nbsp;? Des professionnels de
+        santé&nbsp;? Une association&nbsp;?
+      </p>
+      <p>
+        Rendez-vous sur l'annuaire d'
+        <a href="https://annuaire.autismeinfoservice.fr/" target="_blank" rel="noreferrer">
+          Autisme Info Service
+        </a>
       </p>
     </SimpleContentPage>
   );
