@@ -1,10 +1,20 @@
-import { type GetAttributesValues, type Strapi } from "@strapi/strapi";
+import { type Strapi } from "@strapi/strapi";
 
 import { type StrapiLifecycle } from "../../utils/types";
 
+const seeds = {
+  "api::fiche-pratique.fiche-pratique": import("../../utils/seed/fiche-pratique.json"),
+  "api::question.question": import("../../utils/seed/question.json"),
+};
+
 const hasData = async (strapi: Strapi) => {
-  const fiches = await strapi.db.query("api::fiche-pratique.fiche-pratique").findMany({});
-  return fiches.length > 0;
+  for (const uid of Object.keys(seeds)) {
+    const entries = await strapi.db.query(uid).findMany({});
+    if (entries.length > 0) {
+      return true;
+    }
+  }
+  return false;
 };
 
 const devSeedDb: StrapiLifecycle = async ({ strapi }) => {
@@ -13,28 +23,21 @@ const devSeedDb: StrapiLifecycle = async ({ strapi }) => {
   }
 
   if (await hasData(strapi)) {
-    strapi.log.info(`[MDA devSeedDb] At least one "fiche pratique" is already existing.`);
+    strapi.log.warn(`[MDA devSeedDb] Entries found. No seeding.`);
     return;
   }
 
-  const defaultAdmin: GetAttributesValues<"admin::user"> = {
-    username: "admin",
-    password: "admin",
-    email: "admin@strapi.dev",
-    blocked: false,
-    isActive: true,
-  };
+  const importService = strapi.plugin("import-export-entries").service("import");
 
-  //   const superAdminRole = await getSuperAdminRole(strapi);
-  //   defaultAdmin.roles = [superAdminRole.id];
-  //   defaultAdmin.password = await strapi.service("admin::auth")?.hashPassword(defaultAdmin.password);
-
-  //   try {
-  //     await strapi.db.query("admin::user").create({ data: { ...defaultAdmin } });
-  //     strapi.log.info(`[MDA devCreateAdmin] Created admin (E-Mail: ${defaultAdmin.email}, Password: "admin").`);
-  //   } catch (e) {
-  //     strapi.log.error(`[MDA devCreateAdmin] Couldn't create admin (${defaultAdmin.email}):`, e);
-  //   }
+  for (const [slug, json] of Object.entries(seeds)) {
+    try {
+      await importService.importData((await json).default, { format: "jso", slug });
+      strapi.log.info(`[MDA devSeedDb] 🌱 => ${slug}`);
+    } catch (error) {
+      strapi.log.error(`[MDA devSeedDb] FAILED ${slug}`);
+      console.log(error);
+    }
+  }
 };
 
 export default devSeedDb;

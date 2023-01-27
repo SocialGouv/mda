@@ -42,6 +42,7 @@ const plugins: PluginsConfig = {
       },
     },
   },
+  "import-export-entries": true,
 };
 
 export default plugins;

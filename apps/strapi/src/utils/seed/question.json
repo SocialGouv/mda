@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "content": "Je suis",
+    "info": null,
+    "createdAt": "2023-01-23T14:52:05.702Z",
+    "updatedAt": "2023-01-26T23:20:25.170Z",
+    "first": true,
+    "answers": [
+      {
+        "id": 1,
+        "content": "Un parent",
+        "info": null,
+        "destination": null,
+        "subanswers": []
+      },
+      {
+        "id": 2,
+        "content": "Un proche ou un aidant",
+        "info": null,
+        "destination": {
+          "id": 6,
+          "content": "Vous réalisez ce questionnaire pour le compte de",
+          "info": null,
+          "createdAt": "2023-01-23T15:02:28.707Z",
+          "updatedAt": "2023-01-26T23:20:25.223Z",
+          "first": false,
+          "answers": [
+            {
+              "id": 3,
+              "content": "Une personne mineure",
+              "info": null,
+              "destination": null,
+              "subanswers": []
+            },
+            {
+              "id": 4,
+              "content": "Une personne majeure",
+              "info": null,
+              "destination": {
+                "id": 5,
+                "content": "Prenez rendez-vous avec le médecin traitant, le médecin universitaire, ou le médecin du travail.",
+                "info": null,
+                "createdAt": "2023-01-23T14:54:15.390Z",
+                "updatedAt": "2023-01-26T23:20:25.214Z",
+                "first": false,
+                "answers": []
+              },
+              "subanswers": []
+            },
+            {
+              "id": 5,
+              "content": "Une personne majeure sous tutelle",
+              "info": null,
+              "destination": {
+                "id": 5,
+                "content": "Prenez rendez-vous avec le médecin traitant, le médecin universitaire, ou le médecin du travail.",
+                "info": null,
+                "createdAt": "2023-01-23T14:54:15.390Z",
+                "updatedAt": "2023-01-26T23:20:25.214Z",
+                "first": false,
+                "answers": []
+              },
+              "subanswers": []
+            }
+          ]
+        },
+        "subanswers": []
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "content": "Prenez rendez-vous avec le pédiatre, le médecin de la crèche ou de la Protection maternelle et infantile (PMI).",
+    "info": null,
+    "createdAt": "2023-01-23T14:53:42.029Z",
+    "updatedAt": "2023-01-26T23:20:25.185Z",
+    "first": false,
+    "answers": []
+  },
+  {
+    "id": 3,
+    "content": "Prenez rendez-vous avec le médecin traitant ou le médecin scolaire. (ref 7/12)",
+    "info": null,
+    "createdAt": "2023-01-23T14:53:48.339Z",
+    "updatedAt": "2023-01-26T23:20:25.194Z",
+    "first": false,
+    "answers": []
+  },
+  {
+    "id": 4,
+    "content": "Prenez rendez-vous avec le médecin traitant ou le médecin scolaire. (ref. 13/18)",
+    "info": null,
+    "createdAt": "2023-01-23T14:53:59.540Z",
+    "updatedAt": "2023-01-26T23:20:25.205Z",
+    "first": false,
+    "answers": []
+  },
+  {
+    "id": 5,
+    "content": "Prenez rendez-vous avec le médecin traitant, le médecin universitaire, ou le médecin du travail.",
+    "info": null,
+    "createdAt": "2023-01-23T14:54:15.390Z",
+    "updatedAt": "2023-01-26T23:20:25.214Z",
+    "first": false,
+    "answers": []
+  },
+  {
+    "id": 6,
+    "content": "Vous réalisez ce questionnaire pour le compte de",
+    "info": null,
+    "createdAt": "2023-01-23T15:02:28.707Z",
+    "updatedAt": "2023-01-26T23:20:25.223Z",
+    "first": false,
+    "answers": [
+      {
+        "id": 3,
+        "content": "Une personne mineure",
+        "info": null,
+        "destination": null,
+        "subanswers": []
+      },
+      {
+        "id": 4,
+        "content": "Une personne majeure",
+        "info": null,
+        "destination": {
+          "id": 5,
+          "content": "Prenez rendez-vous avec le médecin traitant, le médecin universitaire, ou le médecin du travail.",
+          "info": null,
+          "createdAt": "2023-01-23T14:54:15.390Z",
+          "updatedAt": "2023-01-26T23:20:25.214Z",
+          "first": false,
+          "answers": []
+        },
+        "subanswers": []
+      },
+      {
+        "id": 5,
+        "content": "Une personne majeure sous tutelle",
+        "info": null,
+        "destination": {
+          "id": 5,
+          "content": "Prenez rendez-vous avec le médecin traitant, le médecin universitaire, ou le médecin du travail.",
+          "info": null,
+          "createdAt": "2023-01-23T14:54:15.390Z",
+          "updatedAt": "2023-01-26T23:20:25.214Z",
+          "first": false,
+          "answers": []
+        },
+        "subanswers": []
+      }
+    ]
+  }
+]
