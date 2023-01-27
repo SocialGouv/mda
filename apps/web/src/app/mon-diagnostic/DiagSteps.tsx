@@ -70,7 +70,7 @@ const QuestionBox = ({ question, index }: QuestionBoxProps) => {
 
     console.log("Selected subanwser", subAnswer);
     if (subAnswer.destination?.data) {
-      void fetchStrapi(`questions/${subAnswer.destination.data.id}`).then(destination => {
+      void fetchStrapi(`questions/${subAnswer.destination.data.id}`, { populate: "deep,3" }).then(destination => {
         console.log("Go to destination from subanswer", destination);
         if (destination.data) addQuestion(destination.data, index + 1);
       });
