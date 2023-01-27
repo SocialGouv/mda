@@ -4,8 +4,8 @@
   "info": {
     "singularName": "fiche-pratique",
     "pluralName": "fiche-pratiques",
-    "displayName": "fiche-pratique",
-    "description": ""
+    "displayName": "Fiches Pratiques",
+    "description": "Une fiche pratique est un ensemble d'informations regroupé par catégorie."
   },
   "options": {
     "draftAndPublish": false

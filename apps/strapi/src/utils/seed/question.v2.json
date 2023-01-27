@@ -1,0 +1,170 @@
+{
+  "version": 2,
+  "data": {
+    "api::question.question": {
+      "1": {
+        "id": 1,
+        "content": "Je suis",
+        "info": null,
+        "createdAt": "2023-01-23T14:52:05.702Z",
+        "updatedAt": "2023-01-24T20:52:17.730Z",
+        "first": true,
+        "answers": [
+          1,
+          2
+        ],
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "2": {
+        "id": 2,
+        "content": "Prenez rendez-vous avec le pédiatre, le médecin de la crèche ou de la Protection maternelle et infantile (PMI).",
+        "info": null,
+        "createdAt": "2023-01-23T14:53:42.029Z",
+        "updatedAt": "2023-01-23T23:06:56.590Z",
+        "first": false,
+        "answers": [],
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "3": {
+        "id": 3,
+        "content": "Prenez rendez-vous avec le médecin traitant ou le médecin scolaire. (ref 7/12)",
+        "info": null,
+        "createdAt": "2023-01-23T14:53:48.339Z",
+        "updatedAt": "2023-01-23T23:07:08.232Z",
+        "first": false,
+        "answers": [],
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "4": {
+        "id": 4,
+        "content": "Prenez rendez-vous avec le médecin traitant ou le médecin scolaire. (ref. 13/18)",
+        "info": null,
+        "createdAt": "2023-01-23T14:53:59.540Z",
+        "updatedAt": "2023-01-23T23:07:13.196Z",
+        "first": false,
+        "answers": [],
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "5": {
+        "id": 5,
+        "content": "Prenez rendez-vous avec le médecin traitant, le médecin universitaire, ou le médecin du travail.",
+        "info": null,
+        "createdAt": "2023-01-23T14:54:15.390Z",
+        "updatedAt": "2023-01-23T23:05:47.056Z",
+        "first": false,
+        "answers": [],
+        "createdBy": null,
+        "updatedBy": null
+      },
+      "6": {
+        "id": 6,
+        "content": "Vous réalisez ce questionnaire pour le compte de",
+        "info": null,
+        "createdAt": "2023-01-23T15:02:28.707Z",
+        "updatedAt": "2023-01-23T23:07:02.805Z",
+        "first": false,
+        "answers": [
+          3,
+          4,
+          5
+        ],
+        "createdBy": null,
+        "updatedBy": null
+      }
+    },
+    "parcours-diag.sub-answer": {
+      "1": {
+        "id": 1,
+        "content": "Mon enfant a moins de 6 ans",
+        "info": null,
+        "destination": 2
+      },
+      "2": {
+        "id": 2,
+        "content": "Mon enfant a entre 7 et 12 ans",
+        "info": null,
+        "destination": 3
+      },
+      "3": {
+        "id": 3,
+        "content": "Mon enfant a entre 13 et 18 ans",
+        "info": null,
+        "destination": 4
+      },
+      "4": {
+        "id": 4,
+        "content": "Mon enfant a plus de 18 ans",
+        "info": null,
+        "destination": 5
+      },
+      "5": {
+        "id": 5,
+        "content": "Une personne mineure de moins de 6 ans",
+        "info": null,
+        "destination": 2
+      },
+      "6": {
+        "id": 6,
+        "content": "Une personne mineure entre 7 et 12 ans",
+        "info": null,
+        "destination": 3
+      },
+      "7": {
+        "id": 7,
+        "content": "Une personne mineure entre 13 et 18 ans",
+        "info": null,
+        "destination": 4
+      }
+    },
+    "parcours-diag.answer": {
+      "1": {
+        "id": 1,
+        "content": "Un parent",
+        "info": null,
+        "destination": null,
+        "subanswers": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "2": {
+        "id": 2,
+        "content": "Un proche ou un aidant",
+        "info": null,
+        "destination": 6,
+        "subanswers": []
+      },
+      "3": {
+        "id": 3,
+        "content": "Une personne mineure",
+        "info": null,
+        "destination": null,
+        "subanswers": [
+          5,
+          6,
+          7
+        ]
+      },
+      "4": {
+        "id": 4,
+        "content": "Une personne majeure",
+        "info": null,
+        "destination": 5,
+        "subanswers": []
+      },
+      "5": {
+        "id": 5,
+        "content": "Une personne majeure sous tutelle",
+        "info": null,
+        "destination": 5,
+        "subanswers": []
+      }
+    }
+  }
+}

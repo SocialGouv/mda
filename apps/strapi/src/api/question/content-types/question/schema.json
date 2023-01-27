@@ -4,7 +4,7 @@
   "info": {
     "singularName": "question",
     "pluralName": "questions",
-    "displayName": "Question",
+    "displayName": "Parcours Diag",
     "description": "Une question est une étape du parcours de diagnostic."
   },
   "options": {

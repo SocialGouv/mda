@@ -7,6 +7,7 @@ export const bootstraps: Array<Promise<{ default: StrapiLifecycle }>> = [];
 if (MDA_ENV === "dev") {
   strapi.log.info(`[MDA] Load dev bootstraps`);
   bootstraps.push(import("./dev/create-admin"));
+  bootstraps.push(import("./dev/seed-db"));
 }
 
 strapi.log.info(`[MDA] Load common bootstraps`);
