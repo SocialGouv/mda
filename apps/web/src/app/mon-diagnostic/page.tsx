@@ -1,9 +1,10 @@
+import { ActionsButtons } from "@components/base/client/ActionsButtons";
 import { Container, Grid, GridCol } from "@design-system";
 import { fetchStrapi } from "@services/strapi";
 
 import { DiagSteps } from "./DiagSteps";
 
-const Diagnostique = async () => {
+const DiagnosticPage = async () => {
   const firstQuestion = (await fetchStrapi("questions", { filters: { first: { $eq: true } }, populate: "deep,4" }))
     .data?.[0];
   if (!firstQuestion) {
@@ -15,12 +16,15 @@ const Diagnostique = async () => {
       <Container>
         <Grid haveGutters justifyCenter>
           <GridCol md={10} lg={8} className="fr-bg-white fr-px-2w fr-py-4w fr-py-md-8w fr-px-md-12w">
-            <h1 className="fr-h2 fr-text-center">Mon diagnostique</h1>
+            <h1 className="fr-h2 fr-text-center">Mon diagnostic</h1>
             <p>
               Je démarre un diagnostic auprès de mon médecin traitant puis je réalise un bilan fonctionnel détaillé
               auprès d'un ensemble de professionnels de santé.
             </p>
             <DiagSteps firstQuestion={firstQuestion} />
+            <div className="fr-mt-4w fr-text-center">
+              <ActionsButtons />
+            </div>
             <hr className="fr-mt-4w fr-mb-2w " />
             <div className="fr-content">
               <h2 className="fr-text--xl">
@@ -64,4 +68,4 @@ const Diagnostique = async () => {
   );
 };
 
-export default Diagnostique;
+export default DiagnosticPage;

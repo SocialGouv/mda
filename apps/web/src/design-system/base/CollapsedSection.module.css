@@ -1,10 +1,37 @@
-.head {
-    padding: .5rem;
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    cursor: pointer;
+@media print {
+    .title {
+        color: var(--text-title-grey) !important;
+        margin-bottom: 2rem !important;
+    }
+    .button,
+    .bullet {
+        display: none !important;
+    }
+    .fr-sr-only {
+        display: block !important;
+    }
+}
+
+@media screen {
+    .head {
+        padding: .5rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        cursor: pointer;
+}
+    .hiddenContent {
+        clip: rect(0,0,0,0);
+        border: 0;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
 }
 
 .title,
@@ -14,6 +41,7 @@
     pointer-events: none;
 }
 .title {
+    flex-grow: 1;
     color: var(--text-action-high-blue-france);
     font-weight: 500;
     font-size: 1.5rem;
@@ -21,6 +49,7 @@
 }
 
 .bullet {
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,6 +95,7 @@
 }
 
 .button {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;

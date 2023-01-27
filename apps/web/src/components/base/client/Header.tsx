@@ -2,7 +2,7 @@
 
 import { config } from "@common/config";
 import { Logo, LogoMda } from "@design-system";
-import { MainNav, MainNavItem } from "@design-system/client";
+import { MainNav, MainNavItem, MainNavItemWithDropdown } from "@design-system/client";
 import clsx from "clsx";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -23,7 +23,7 @@ export const Header = () => {
         <div className="fr-container">
           <div className="fr-header__body-row">
             <div className="fr-header__brand fr-enlarge-link">
-              <div className="fr-header__brand-top">
+              <div className="fr-header__brand-top fr-no-print">
                 <div className="fr-header__logo">
                   <Logo />
                 </div>
@@ -54,7 +54,7 @@ export const Header = () => {
         </div>
       </div>
       <div
-        className={clsx("fr-header__menu fr-modal", navOpen && "fr-modal--opened")}
+        className={clsx("fr-no-print fr-header__menu fr-modal", navOpen && "fr-modal--opened")}
         id="modal-main-nav"
         aria-labelledby="button-main-nav"
       >
@@ -68,11 +68,21 @@ export const Header = () => {
             Fermer
           </button>
           <MainNav>
+            <MainNavItemWithDropdown
+              title="Mon parcours"
+              links={[
+                { href: "/mon-parcours/personne-autiste", label: "Personne Autiste" },
+                { href: "/mon-parcours/parent-personne-aidante", label: "Parent ou aidant" },
+                { href: "/mon-parcours/professionnel-de-sante", label: "Professionnel de santé ou du médico-social" },
+              ]}
+            />
+            <MainNavItem href="/mon-diagnostic">Mon diagnostic</MainNavItem>
+            <MainNavItem href="/mes-aides">Mes aides</MainNavItem>
+
             <MainNavItem href="/fiches-pratiques">Fiches pratiques</MainNavItem>
-            <MainNavItem href="/mon-parcours">Mon parcours</MainNavItem>
-            <MainNavItem href="/mon-diagnostique">Mon diagnostique</MainNavItem>
             <MainNavItem href="/annuaire">Annuaire</MainNavItem>
             <MainNavItem href="/glossaire">Glossaire</MainNavItem>
+            <MainNavItem href="/la-maison-de-l-autisme">La Maison de l'autisme</MainNavItem>
           </MainNav>
         </div>
       </div>

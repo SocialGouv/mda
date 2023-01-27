@@ -1,6 +1,7 @@
 "use client";
 
 import { Breadcrumb, BreadcrumbItem, ClientContainer } from "@design-system/client";
+import clsx from "clsx";
 import { usePathname } from "next/navigation";
 
 import styles from "./BreadcrumbDynamic.module.css";
@@ -21,7 +22,7 @@ export const BreadcrumbDynamic = () => {
   });
 
   return (
-    <ClientContainer className={styles.section}>
+    <ClientContainer className={clsx(styles.section, "fr-no-print")}>
       <Breadcrumb className={styles.sectionItem}>
         <BreadcrumbItem href="/" isCurrent={currentPathName === "/"}>
           Accueil

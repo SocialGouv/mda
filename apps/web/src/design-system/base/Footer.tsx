@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Link from "next/link";
 import type { PropsWithChildren } from "react";
 import { forwardRef } from "react";
@@ -5,8 +6,8 @@ import { forwardRef } from "react";
 import { Container } from "../layout/Container";
 import { type NextLinkOrAProps, NextLinkOrA } from "../utils/NextLinkOrA";
 
-export const Footer = ({ children }: PropsWithChildren) => (
-  <footer className="fr-footer" role="contentinfo" id="footer">
+export const Footer = ({ children, className }: PropsWithChildren<{ className?: string }>) => (
+  <footer className={clsx("fr-footer", className)} role="contentinfo" id="footer">
     <Container>{children}</Container>
   </footer>
 );

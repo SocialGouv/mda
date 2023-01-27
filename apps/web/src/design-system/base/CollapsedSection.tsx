@@ -39,7 +39,7 @@ export const CollapsedSection = ({ children, title, id, isOpen, openSection }: C
         </button>
       </div>
 
-      <div className={clsx(!isOpen ? "fr-sr-only" : styles.content)}>{children}</div>
+      <div className={clsx(!isOpen ? styles.hiddenContent : styles.content)}>{children}</div>
     </div>
   );
 };

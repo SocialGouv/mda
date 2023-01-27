@@ -1,3 +1,4 @@
+import { ActionsButtons } from "@components/base/client/ActionsButtons";
 import {
   Container,
   Grid,
@@ -18,6 +19,7 @@ const MonParcoursAidant = () => {
       <Container>
         <Grid haveGutters justifyCenter>
           <GridCol md={10} lg={8}>
+            <ActionsButtons />
             <h1>Mon parcours de parent ou d'aidant</h1>
             <p className="fr-text--xs">
               Vérifié le 8 novembre 2022 - Direction de l'information légale et administrative (Premier ministre)
@@ -43,7 +45,7 @@ const MonParcoursAidant = () => {
               </TimelineItem>
               <TimelineItem isEnlargeLink>
                 <TimelineItemTitle>
-                  <NextLinkOrA href="/mon-diagnostique">Je démarre un diagnostic</NextLinkOrA>
+                  <NextLinkOrA href="/mon-diagnostic">Je démarre un diagnostic</NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
                   J'accompagne mon enfant ou mon proche auprès d'un professionnel de santé et selon son avis médical le

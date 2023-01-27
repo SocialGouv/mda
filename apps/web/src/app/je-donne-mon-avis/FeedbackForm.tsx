@@ -75,7 +75,12 @@ export const FeedbackForm = () => {
           />
         </FieldsetElement>
         <FieldsetElement className="fr-mt-2w">
-          <FormGroupTextarea error={errors.message} label="Votre message" {...register("message")} />
+          <FormGroupTextarea
+            error={errors.message}
+            label="Votre message"
+            hint="Attention à vos données ! Si nous vous encourageons à nous donner votre avis, nous ne vous demandons de ne pas nous transmettre d’informations sensibles. Notamment ne communiquez pas vos opinions philosophiques, syndicales, politiques ou sur votre vie sexuelle. Ces données sont trop personnelles !"
+            {...register("message")}
+          />
         </FieldsetElement>
       </Fieldset>
       <p className="fr-mt-4w fr-text--bold">
