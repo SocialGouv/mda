@@ -41,6 +41,7 @@
     pointer-events: none;
 }
 .title {
+    flex-grow: 1;
     color: var(--text-action-high-blue-france);
     font-weight: 500;
     font-size: 1.5rem;
@@ -48,6 +49,7 @@
 }
 
 .bullet {
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,6 +95,7 @@
 }
 
 .button {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
