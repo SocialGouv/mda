@@ -581,8 +581,8 @@ export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
   info: {
     singularName: 'fiche-pratique';
     pluralName: 'fiche-pratiques';
-    displayName: 'fiche-pratique';
-    description: '';
+    displayName: 'Fiches Pratiques';
+    description: 'Une fiche pratique est un ensemble d\'informations regroupé par catégorie.';
   };
   options: {
     draftAndPublish: false;
@@ -592,6 +592,9 @@ export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
     recap: ComponentAttribute<'fiche-pratique-content.encart'> &
       RequiredAttribute;
     section: ComponentAttribute<'fiche-pratique-content.encart', true>;
+    /**
+     * Fake required because auto filled
+     */
     slug: StringAttribute & RequiredAttribute & UniqueAttribute;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
@@ -614,8 +617,8 @@ export interface ApiQuestionQuestion extends CollectionTypeSchema {
   info: {
     singularName: 'question';
     pluralName: 'questions';
-    displayName: 'Question';
-    description: 'Une question est une \u00E9tape du parcours de diagnostic.';
+    displayName: 'Parcours Diag';
+    description: 'Une question est une étape du parcours de diagnostic.';
   };
   options: {
     draftAndPublish: false;
@@ -656,7 +659,7 @@ export interface FichePratiqueContentEncart extends ComponentSchema {
 export interface ParcoursDiagAnswer extends ComponentSchema {
   info: {
     displayName: 'answer';
-    description: 'Une r\u00E9ponse potentielle \u00E0 une question menant soit \u00E0 une sous r\u00E9ponse, soit a une nouvelle question.';
+    description: 'Une réponse potentielle à une question menant soit à une sous réponse, soit a une nouvelle question.';
   };
   attributes: {
     content: StringAttribute & RequiredAttribute;
@@ -673,7 +676,7 @@ export interface ParcoursDiagAnswer extends ComponentSchema {
 export interface ParcoursDiagSubAnswer extends ComponentSchema {
   info: {
     displayName: 'SubAnswer';
-    description: 'Une sous r\u00E9ponse suit une r\u00E9ponse et m\u00E8ne obligatoirement vers une nouvelle question.';
+    description: 'Une sous réponse suit une réponse et mène obligatoirement vers une nouvelle question.';
   };
   attributes: {
     content: StringAttribute & RequiredAttribute;
