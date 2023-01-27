@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/SocialGouv/mda/compare/v1.0.0...v1.1.0) (2023-01-27)
+
+
+### Bug Fixes
+
+* deep 3 on next questions ([8c72b88](https://github.com/SocialGouv/mda/commit/8c72b8842e9bfc40ad935092616b8c5231a87ef6))
+
+
+### Features
+
+* dev strapi seeding ([#62](https://github.com/SocialGouv/mda/issues/62)) & add more content and main nav ([#63](https://github.com/SocialGouv/mda/issues/63)) ([3e6ba2f](https://github.com/SocialGouv/mda/commit/3e6ba2f4b1246387991d0008215318d199c92501))
+
 # 1.0.0 (2023-01-27)
 
 
