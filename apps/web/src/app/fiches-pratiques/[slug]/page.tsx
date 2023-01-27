@@ -1,4 +1,5 @@
 import { type Next13ServerPageProps } from "@common/utils/next13";
+import { ActionsButtons } from "@components/base/client/ActionsButtons";
 import { Container, Grid, GridCol, SideMenuLink } from "@design-system";
 import { CollapsedSectionDynamicGroup, SideMenuDynamic } from "@design-system/client";
 import { fetchStrapi } from "@services/strapi";
@@ -29,7 +30,7 @@ const FichePratique = async ({ params }: FichePratiqueProps) => {
     <section className="fr-py-md-12w">
       <Container>
         <Grid haveGutters>
-          <GridCol md={4} lg={3}>
+          <GridCol md={4} lg={3} className="fr-no-print">
             <SideMenuDynamic buttonLabel="Sommaire des fiches pratiques">
               {fiches?.map((f, index) => {
                 const href = `/fiches-pratiques/${f.attributes.slug}`;
@@ -42,6 +43,7 @@ const FichePratique = async ({ params }: FichePratiqueProps) => {
             </SideMenuDynamic>
           </GridCol>
           <GridCol className="fr-py-6w fr-pt-md-0" md={8} lg={9}>
+            <ActionsButtons />
             <h1>{currentFiche.attributes.recap?.title}</h1>
             <p className="fr-text--xs">
               <>

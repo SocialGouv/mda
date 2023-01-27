@@ -1,3 +1,4 @@
+import { ActionsButtons } from "@components/base/client/ActionsButtons";
 import {
   Card,
   CardBody,
@@ -16,6 +17,7 @@ const MonParcoursAidant = () => {
       <Container>
         <Grid haveGutters justifyCenter>
           <GridCol md={10} lg={8}>
+            <ActionsButtons />
             <h1>Mon parcours de professionnel de santé ou du médico-sociale</h1>
             <p className="fr-text--xs">
               Vérifié le 8 novembre 2022 - Direction de l'information légale et administrative (Premier ministre)

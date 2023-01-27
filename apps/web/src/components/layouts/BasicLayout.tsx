@@ -38,13 +38,13 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
         <SkipLinksItem href="#header">Menu</SkipLinksItem>
         <SkipLinksItem href="#footer">Pied de page</SkipLinksItem>
       </SkipLinks>
-      <Notice>Service en version beta</Notice>
+      <Notice className="fr-no-print">Service en version beta</Notice>
       <Header />
       <BreadcrumbDynamic />
       <main role="main" id="content">
         {children}
       </main>
-      <Footer>
+      <Footer className="fr-no-print">
         <FooterBody>
           <FooterBodyBrand>
             <Link href="/">

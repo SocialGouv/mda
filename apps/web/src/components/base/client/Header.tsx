@@ -23,7 +23,7 @@ export const Header = () => {
         <div className="fr-container">
           <div className="fr-header__body-row">
             <div className="fr-header__brand fr-enlarge-link">
-              <div className="fr-header__brand-top">
+              <div className="fr-header__brand-top fr-no-print">
                 <div className="fr-header__logo">
                   <Logo />
                 </div>
@@ -54,7 +54,7 @@ export const Header = () => {
         </div>
       </div>
       <div
-        className={clsx("fr-header__menu fr-modal", navOpen && "fr-modal--opened")}
+        className={clsx("fr-no-print fr-header__menu fr-modal", navOpen && "fr-modal--opened")}
         id="modal-main-nav"
         aria-labelledby="button-main-nav"
       >

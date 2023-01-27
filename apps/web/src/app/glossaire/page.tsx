@@ -1,3 +1,4 @@
+import { ActionsButtons } from "@components/base/client/ActionsButtons";
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
 import clsx from "clsx";
 
@@ -505,6 +506,7 @@ const tempData = [
 const Glossary = () => {
   return (
     <SimpleContentPage>
+      <ActionsButtons />
       <h1>Glossaire</h1>
       <p>Glossaire fourni par la DIA.</p>
       <dl>

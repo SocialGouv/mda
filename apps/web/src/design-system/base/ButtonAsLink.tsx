@@ -13,14 +13,17 @@ export type ButtonAsLinkProps = ButtonStylesProps &
 export type ButtonAsLinkRef = HTMLAnchorElement;
 
 export const ButtonAsLink = forwardRef<ButtonAsLinkRef, ButtonAsLinkProps>(
-  ({ href, isCurrent, isDisabled, variant, size, iconLeft, iconRight, iconOnly, target, children, ...rest }, ref) => {
+  (
+    { href, isCurrent, isDisabled, variant, size, iconLeft, iconRight, iconOnly, isRounded, target, children, ...rest },
+    ref,
+  ) => {
     return (
       <NextLinkOrA
         ref={ref}
         href={href || undefined}
         aria-current={isCurrent ? "page" : undefined}
         aria-disabled={isDisabled || !href ? true : undefined}
-        className={buttonStyles({ variant, size, iconLeft, iconRight, iconOnly })}
+        className={buttonStyles({ variant, size, iconLeft, iconRight, iconOnly, isRounded })}
         target={target}
         rel={target === "_blank" ? "noopener noreferrer" : undefined}
         {...rest}

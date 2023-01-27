@@ -16,11 +16,12 @@ export const FormButton = ({
   iconRight,
   iconOnly,
   isDisabled,
+  isRounded,
   ...rest
 }: FormButtonProps) => {
   return (
     <button
-      className={buttonStyles({ variant, size, iconLeft, iconRight, iconOnly })}
+      className={buttonStyles({ variant, size, iconLeft, iconRight, iconOnly, isRounded })}
       disabled={isDisabled}
       title={title}
       {...rest}

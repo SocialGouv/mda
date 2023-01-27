@@ -1,3 +1,4 @@
+import { ActionsButtons } from "@components/base/client/ActionsButtons";
 import { Container, Grid, GridCol } from "@design-system";
 import { fetchStrapi } from "@services/strapi";
 
@@ -21,6 +22,9 @@ const DiagnosticPage = async () => {
               auprès d'un ensemble de professionnels de santé.
             </p>
             <DiagSteps firstQuestion={firstQuestion} />
+            <div className="fr-mt-4w fr-text-center">
+              <ActionsButtons />
+            </div>
             <hr className="fr-mt-4w fr-mb-2w " />
             <div className="fr-content">
               <h2 className="fr-text--xl">
