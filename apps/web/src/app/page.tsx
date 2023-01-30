@@ -14,7 +14,6 @@ import {
   Container,
   Grid,
   GridCol,
-  PlaceholderImg,
   Tile,
   TileBody,
   TileBodyDescription,
@@ -25,6 +24,7 @@ import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 import Image from "next/image";
 
 import heroPic from "../../public/home-hero.jpeg";
+import mdaPic from "../../public/mda.jpg";
 import styles from "./index.module.css";
 
 const HomePage = () => {
@@ -252,10 +252,17 @@ const HomePage = () => {
         <Container>
           <Grid haveGutters>
             <GridCol lg={5}>
-              <PlaceholderImg />
+              <Image
+                className="fr-fluid-img"
+                src={mdaPic}
+                alt="La Maison de l'autisme"
+                width={441}
+                height={291}
+                placeholder="blur"
+              />
             </GridCol>
             <GridCol lg={7} className="fr-pt-2w fr-pt-lg-6w fr-pl-lg-4w">
-              <h2 className="fr-h1">La maison de l’autisme</h2>
+              <h2 className="fr-h1">La Maison de l’autisme</h2>
               <p className="fr-text--lg fr-text--bold">
                 La Maison de l'autisme sera située 10 rue Waldeck Rochet à Aubervilliers, en Seine-Saint-Denis. Les
                 services du département de la Seine-Saint-Denis et la RATP faciliteront l'accès à la Maison de
