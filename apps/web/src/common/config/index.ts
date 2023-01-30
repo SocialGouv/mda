@@ -9,7 +9,7 @@ const ensureOsEnvVar: typeof ensureEnvVar<ProcessEnvCustomKeys> = (key, defaultV
 
 export const config = {
   siteTitle: "Maison de l'autisme",
-  env: (process.env.MDA_ENV ?? "dev") as "dev" | "preprod" | "prod",
+  env: ensureOsEnvVar("MDA_ENV") as "dev" | "preprod" | "prod",
   matomo: {
     url: process.env.NEXT_PUBLIC_MATOMO_URL ?? "",
     siteId: process.env.NEXT_PUBLIC_MATOMO_SITE_ID ?? "",
