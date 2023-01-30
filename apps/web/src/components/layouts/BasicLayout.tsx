@@ -67,10 +67,37 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
               Pour les demandes personnelles, veuillez vous rapprocher de l'organisme en charge de votre dossier. Pour
               toute question, vous pouvez contacter{" "}
               <a href="https://www.autismeinfoservice.fr/" target="_blank" rel="noreferrer">
-                Autisme Info Services
+                Autisme Info Service
               </a>
               .
             </FooterBodyContentDescription>
+            <FooterBodyContentItems>
+              <FooterBodyItem>
+                <FooterContentLink href="https://handicap.gouv.fr/accueil" target="_blank" rel="noreferrer" isExternal>
+                  Handicap.gouv.fr
+                </FooterContentLink>
+              </FooterBodyItem>
+              <FooterBodyItem>
+                <FooterContentLink
+                  href="https://www.monparcourshandicap.gouv.fr/"
+                  target="_blank"
+                  rel="noreferrer"
+                  isExternal
+                >
+                  Mon Parcours Handicap
+                </FooterContentLink>
+              </FooterBodyItem>
+              <FooterBodyItem>
+                <FooterContentLink
+                  href="https://www.mesdroitssociaux.gouv.fr/accueil/"
+                  target="_blank"
+                  rel="noreferrer"
+                  isExternal
+                >
+                  Mes Droits Sociaux
+                </FooterContentLink>
+              </FooterBodyItem>
+            </FooterBodyContentItems>
             <FooterBodyContentItems>
               <FooterBodyItem>
                 <FooterContentLink href="https://www.legifrance.gouv.fr/" target="_blank" rel="noreferrer" isExternal>

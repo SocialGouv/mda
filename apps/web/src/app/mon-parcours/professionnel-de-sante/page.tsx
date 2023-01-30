@@ -18,10 +18,7 @@ const MonParcoursAidant = () => {
         <Grid haveGutters justifyCenter>
           <GridCol md={10} lg={8}>
             <ActionsButtons />
-            <h1>Mon parcours de professionnel de santé ou du médico-sociale</h1>
-            <p className="fr-text--xs">
-              Vérifié le 8 novembre 2022 - Direction de l'information légale et administrative (Premier ministre)
-            </p>
+            <h1>Mon parcours de professionnel de santé ou du médico-social</h1>
             <div className="fr-text--xl">
               <p>
                 Cette rubrique du site internet est en cours de construction pour le moment. Si vous êtes un

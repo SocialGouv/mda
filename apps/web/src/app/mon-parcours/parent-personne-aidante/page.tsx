@@ -21,9 +21,6 @@ const MonParcoursAidant = () => {
           <GridCol md={10} lg={8}>
             <ActionsButtons />
             <h1>Mon parcours de parent ou d'aidant</h1>
-            <p className="fr-text--xs">
-              Vérifié le 8 novembre 2022 - Direction de l'information légale et administrative (Premier ministre)
-            </p>
             <div className="fr-text--xl">
               <p>
                 En tant que parent ou proche aidant, plusieurs étapes clés sont à réaliser pour accompagner votre proche
@@ -58,7 +55,7 @@ const MonParcoursAidant = () => {
               </TimelineItem>
               <TimelineItem isEnlargeLink>
                 <TimelineItemTitle>
-                  <NextLinkOrA href="/mes-aides">Je prends connaissance de mes aides</NextLinkOrA>
+                  <NextLinkOrA href="/fiches-pratiques/mes-aides">Je prends connaissance de mes aides</NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
                   Mon enfant ou mon proche peut bénéficier d’aides financières, matérielles et humaines, même s'ils
@@ -79,7 +76,9 @@ const MonParcoursAidant = () => {
 
               <TimelineItem isEnlargeLink>
                 <TimelineItemTitle>
-                  <NextLinkOrA href="/mes-aides">Je prends connaissance des nouvelles aides</NextLinkOrA>
+                  <NextLinkOrA href="/fiches-pratiques/mes-aides">
+                    Je prends connaissance des nouvelles aides
+                  </NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
                   Lorsque mon enfant ou mon proche ont reçu une réponse de la Maison Départementale des Personnes
@@ -91,7 +90,9 @@ const MonParcoursAidant = () => {
                 footer={
                   <ul>
                     <li>
-                      <TimelineItemFooterLink href="#">Être scolarisé</TimelineItemFooterLink>
+                      <TimelineItemFooterLink title="Cette page est en cours de rédaction et sera prochainement disponible.">
+                        Être scolarisé
+                      </TimelineItemFooterLink>
                     </li>
                     <li>
                       <TimelineItemFooterLink href="/fiches-pratiques/etudier-du-college-aux-etudes-superieures">

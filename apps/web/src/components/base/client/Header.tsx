@@ -77,12 +77,13 @@ export const Header = () => {
               ]}
             />
             <MainNavItem href="/mon-diagnostic">Mon diagnostic</MainNavItem>
-            <MainNavItem href="/mes-aides">Mes aides</MainNavItem>
+            <MainNavItem href="/fiches-pratiques/mes-aides">Mes aides</MainNavItem>
 
             <MainNavItem href="/fiches-pratiques">Fiches pratiques</MainNavItem>
             <MainNavItem href="/annuaire">Annuaire</MainNavItem>
             <MainNavItem href="/glossaire">Glossaire</MainNavItem>
             <MainNavItem href="/la-maison-de-l-autisme">La Maison de l'autisme</MainNavItem>
+            <MainNavItem href="/je-donne-mon-avis">Je donne mon avis</MainNavItem>
           </MainNav>
         </div>
       </div>
