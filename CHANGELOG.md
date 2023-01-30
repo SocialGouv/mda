@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/SocialGouv/mda/compare/v1.1.0...v1.2.0) (2023-01-30)
+
+
+### Features
+
+* better info bloc in diag ([1565d15](https://github.com/SocialGouv/mda/commit/1565d156d1e2d48e7a79d912a2ca84bdbf52da48))
+* **cd:** enable matomo prod ([5079743](https://github.com/SocialGouv/mda/commit/5079743abdb80419d2de9fe39d27ebded4651f77))
+
 # [1.1.0](https://github.com/SocialGouv/mda/compare/v1.0.0...v1.1.0) (2023-01-27)
 
 
