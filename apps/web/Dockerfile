@@ -66,6 +66,7 @@ RUN addgroup --system --gid 1001 nodejs && \
 
 COPY --from=installer /app/apps/web/next.config.js .
 COPY --from=installer /app/apps/web/package.json .
+COPY --from=installer /app/apps/web/.env.production .
 
 COPY --from=installer --chown=nextjs:nodejs /app/apps/web/.next/standalone/ ./
 COPY --from=installer --chown=nextjs:nodejs /app/apps/web/.next/static ./apps/web/.next/static
