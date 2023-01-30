@@ -83,6 +83,7 @@ export const Header = () => {
             <MainNavItem href="/annuaire">Annuaire</MainNavItem>
             <MainNavItem href="/glossaire">Glossaire</MainNavItem>
             <MainNavItem href="/la-maison-de-l-autisme">La Maison de l'autisme</MainNavItem>
+            <MainNavItem href="/je-donne-mon-avis">Je donne mon avis</MainNavItem>
           </MainNav>
         </div>
       </div>
