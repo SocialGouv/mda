@@ -56,8 +56,8 @@ const MonParcoursAidant = () => {
                   <NextLinkOrA href="/mes-aides">Je prends connaissance de mes aides</NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
-                  Le site de service public Mes Droits Sociaux vous permet d'accéder à un formulaire de simulation des
-                  aides auxquelles vous pouvez prétendre, selon votre situation personnelle et familiale.
+                  Je peux bénéficier d’aides financières, matérielles et humaines, même si je n'ai pas encore de
+                  diagnostic.
                 </TimelineDescription>
               </TimelineItem>
               <TimelineItem isEnlargeLink>
@@ -71,10 +71,9 @@ const MonParcoursAidant = () => {
                   Départementale des Personnes Handicapées et je dépose un dossier.
                 </TimelineDescription>
               </TimelineItem>
-
               <TimelineItem isEnlargeLink>
                 <TimelineItemTitle>
-                  <NextLinkOrA href="/mes-aides">JJe prends connaissance des nouvelles aides</NextLinkOrA>
+                  <NextLinkOrA href="/mes-aides">Je prends connaissance des nouvelles aides</NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
                   Lorsque j'ai reçu une réponse de la Maison Départementale des Personnes Handicapées suite au dépôt de

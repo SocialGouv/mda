@@ -17,11 +17,11 @@ export const Tiles = () => (
           <CardBody>
             <CardBodyContent>
               <CardBodyContentTitle titleAs="h2">
-                <NextLinkOrA href="/fiches-pratiques/qu-est-ce-que-l-autisme">J’en parle autour de moi</NextLinkOrA>
+                <NextLinkOrA href="/la-maison-de-l-autisme"> La Maison de l'autisme physique</NextLinkOrA>
               </CardBodyContentTitle>
               <CardBodyContentDescription>
-                L’autisme est un trouble du neuro-développement précoce, qui impacte les capacités de communication, les
-                interactions sociales et les comportements des personnes.
+                La Maison de l’autisme n’est plus un projet, c’est une réalité. Elle se poursuit avec vous. Elle a hâte
+                de vous accueillir à Aubervilliers et en ligne dès avril prochain.
               </CardBodyContentDescription>
             </CardBodyContent>
           </CardBody>
@@ -38,7 +38,8 @@ export const Tiles = () => (
                 </NextLinkOrA>
               </CardBodyContentTitle>
               <CardBodyContentDescription>
-                En ligne ou en physique près de chez moi, des communautés de partage et d'entraide liés au TSA existent.
+                Échanger avec des personnes permet de trouver du soutien, de rompre avec l’isolement, de mieux
+                comprendre la situation et de rechercher des solutions, mais également de valoriser votre expérience.
               </CardBodyContentDescription>
             </CardBodyContent>
           </CardBody>
@@ -52,9 +53,8 @@ export const Tiles = () => (
                 <NextLinkOrA href="/je-donne-mon-avis">Je donne mon avis</NextLinkOrA>
               </CardBodyContentTitle>
               <CardBodyContentDescription>
-                Un oubli&nbsp;? Une suggestion&nbsp;? Utilisez le module "JeDonneMonAvis" pour soumettre vos idées afin
-                de contribuer à enrichir ce service public construit par et pour les personnes autistes et leurs
-                proches.
+                Un oubli&nbsp;? Une suggestion&nbsp;? Utilisez le module Je donne mon avis pour soumettre vos idées afin
+                de contribuer à enrichir ce service public.
               </CardBodyContentDescription>
             </CardBodyContent>
           </CardBody>
@@ -68,8 +68,8 @@ export const Tiles = () => (
                 <NextLinkOrA href="/annuaire">Annuaire</NextLinkOrA>
               </CardBodyContentTitle>
               <CardBodyContentDescription>
-                Vous cherchez une organisation agissant dans le domaine de l’autisme ? Trouvez ses coordonnées dans
-                notre annuaire.
+                Vous cherchez des contacts de confiance&nbsp;? Un établissement ou un organisme&nbsp;? Des
+                professionnels de santé&nbsp;? Une association&nbsp;?
               </CardBodyContentDescription>
             </CardBodyContent>
           </CardBody>
