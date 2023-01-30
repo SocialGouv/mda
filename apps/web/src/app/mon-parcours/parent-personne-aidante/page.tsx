@@ -72,7 +72,7 @@ const MonParcoursAidant = () => {
                   </NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
-                  orsque mon enfant ou mon proche a finalisé son parcours de diagnostic et qu'il conclut à un TSA, je
+                  Lorsque mon enfant ou mon proche a finalisé son parcours de diagnostic et qu'il conclut à un TSA, je
                   m'adresse à la Maison Départementale des Personnes Handicapées et je dépose un dossier.
                 </TimelineDescription>
               </TimelineItem>
