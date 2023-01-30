@@ -25,8 +25,9 @@ const MonParcours = () => {
                   </CardBodyContentTitle>
                   <CardBodyContentDescription>
                     En tant que personne autiste, plusieurs étapes clés sont à réaliser pour mener votre vie de la
-                    manière la plus autonome possible. Quelque soit votre situation, retrouvez ci-dessous des contenus
-                    et outils de guidance pour vous aider à y voir plus clair sur le déroulé de ces grandes étapes
+                    manière la plus autonome possible. Quelque soit votre situation, retrouvez dans cette rubrique des
+                    contenus et outils de guidance pour vous aider à y voir plus clair sur le déroulé de ces grandes
+                    étapes.
                   </CardBodyContentDescription>
                 </CardBodyContent>
               </CardBody>
@@ -44,8 +45,8 @@ const MonParcours = () => {
                   <CardBodyContentDescription>
                     En tant que parent ou proche aidant, plusieurs étapes clés sont à réaliser pour accompagner votre
                     proche à mener sa vie de la manière la plus autonome possible. Quelque soit votre situation,
-                    retrouvez ci-dessous des contenus et outils de guidance pour vous aider à y voir plus clair sur le
-                    déroulé de ces grandes étapes.
+                    retrouvez dans cette rubrique des contenus et outils de guidance pour vous aider à y voir plus clair
+                    sur le déroulé de ces grandes étapes.
                   </CardBodyContentDescription>
                 </CardBodyContent>
               </CardBody>
