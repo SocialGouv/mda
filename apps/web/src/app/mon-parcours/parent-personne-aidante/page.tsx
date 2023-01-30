@@ -76,7 +76,9 @@ const MonParcoursAidant = () => {
 
               <TimelineItem isEnlargeLink>
                 <TimelineItemTitle>
-                  <NextLinkOrA href="/fiches-pratiques/mes-aides">Je prends connaissance des nouvelles aides</NextLinkOrA>
+                  <NextLinkOrA href="/fiches-pratiques/mes-aides">
+                    Je prends connaissance des nouvelles aides
+                  </NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
                   Lorsque mon enfant ou mon proche ont reçu une réponse de la Maison Départementale des Personnes
