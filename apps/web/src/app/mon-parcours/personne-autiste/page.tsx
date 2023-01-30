@@ -67,8 +67,8 @@ const MonParcoursAidant = () => {
                   </NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
-                  Lorsque j'ai finalisé mon parcours de diagnostic et qu'il conclut à un TSA, je m'adresse à la Maison
-                  Départementale des Personnes Handicapées et je dépose un dossier.
+                  Lorsque j'ai finalisé mon parcours de diagnostic et qu'il conclut à des Troubles du Spectre de
+                  l'Autisme, je m'adresse à la Maison Départementale des Personnes Handicapées et je dépose un dossier.
                 </TimelineDescription>
               </TimelineItem>
               <TimelineItem isEnlargeLink>

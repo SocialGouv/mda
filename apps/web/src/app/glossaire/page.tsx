@@ -11,7 +11,7 @@ const tempData = [
   {
     title: "AEEH",
     id: "aesh",
-    description: "Allocation d'éducation de l’enfant handicapé..",
+    description: "Allocation d'éducation de l’enfant handicapé.",
   },
   {
     title: "AESH",
