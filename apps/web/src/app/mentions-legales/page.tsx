@@ -37,8 +37,9 @@ const LegalNotice = () => {
       </p>
       <h2>Accessibilité</h2>
       <p>
-        La conformité aux normes d’accessibilité numérique est un objectif ultérieur mais nous tâchons de rendre ce site
-        accessible à toutes et à tous.
+        La conformité aux normes d’accessibilité numérique est un objectif prioritaire, nous tâchons de rendre ce site
+        accessible à toutes et à tous. Un audit est en cours de planification afin de pouvoir mettre à jour le statut
+        d'accessibilité en bas de page.
       </p>
       <h2>En savoir plus</h2>
       <p>
