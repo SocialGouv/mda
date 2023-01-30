@@ -91,7 +91,9 @@ const MonParcoursAidant = () => {
                 footer={
                   <ul>
                     <li>
-                      <TimelineItemFooterLink href="#">Être scolarisé</TimelineItemFooterLink>
+                      <TimelineItemFooterLink title="Cette page est en cours de rédaction et sera prochainement disponible.">
+                        Être scolarisé
+                      </TimelineItemFooterLink>
                     </li>
                     <li>
                       <TimelineItemFooterLink href="/fiches-pratiques/etudier-du-college-aux-etudes-superieures">

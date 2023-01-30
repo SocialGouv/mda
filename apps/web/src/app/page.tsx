@@ -106,7 +106,7 @@ const HomePage = () => {
               <GridCol lg={6}>
                 <Tile>
                   <TileBody>
-                    <TileBodyTitle href="#" titleAs="h3">
+                    <TileBodyTitle href="/mes-aides" titleAs="h3">
                       Mes aides
                     </TileBodyTitle>
                     <TileBodyDescription>
@@ -122,7 +122,7 @@ const HomePage = () => {
               <GridCol lg={6}>
                 <Tile>
                   <TileBody>
-                    <TileBodyTitle href="#" titleAs="h3">
+                    <TileBodyTitle href="/mon-diagnostic" titleAs="h3">
                       Mon diagnostic
                     </TileBodyTitle>
                     <TileBodyDescription>
