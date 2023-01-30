@@ -38,10 +38,13 @@ const MonParcoursAidant = () => {
                   <CardBody>
                     <CardBodyContent>
                       <CardBodyContentTitle titleAs="h2">
-                        <NextLinkOrA href="#">Comment diagnostiquer un patient potentiellement autiste</NextLinkOrA>
+                        <NextLinkOrA href="/fiches-pratiques/comment-puis-je-diagnostiquer-un-patient-potentiellement-autiste">
+                          Comment diagnostiquer un patient potentiellement autiste
+                        </NextLinkOrA>
                       </CardBodyContentTitle>
                       <CardBodyContentDescription>
-                        xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx
+                        Le diagnostic de troubles du spectre de l’autisme relève d’un médecin, qui s’appuie autant que
+                        nécessaire sur une démarche pluridisciplinaire.
                       </CardBodyContentDescription>
                     </CardBodyContent>
                   </CardBody>
@@ -53,10 +56,13 @@ const MonParcoursAidant = () => {
                   <CardBody>
                     <CardBodyContent>
                       <CardBodyContentTitle titleAs="h2">
-                        <NextLinkOrA href="#">Parcours de diagnostic</NextLinkOrA>
+                        <NextLinkOrA href="/fiches-pratiques/parcours-de-diagnostic">
+                          Parcours de diagnostic
+                        </NextLinkOrA>
                       </CardBodyContentTitle>
                       <CardBodyContentDescription>
-                        xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx
+                        Le diagnostic est un parcours qui se réalise auprès de plusieurs professionnels de santé.
+                        Plusieurs types de parcours existent selon l'âge de la personne.
                       </CardBodyContentDescription>
                     </CardBodyContent>
                   </CardBody>
@@ -83,10 +89,14 @@ const MonParcoursAidant = () => {
                   <CardBody>
                     <CardBodyContent>
                       <CardBodyContentTitle titleAs="h2">
-                        <NextLinkOrA href="#">Recommandations de Bonnes Pratiques Professionnelles</NextLinkOrA>
+                        <NextLinkOrA href="/fiches-pratiques/recommandations-de-bonnes-pratiques-professionnelles">
+                          Recommandations de Bonnes Pratiques Professionnelles
+                        </NextLinkOrA>
                       </CardBodyContentTitle>
                       <CardBodyContentDescription>
-                        xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx
+                        Les recommandations de bonnes pratiques professionnelles (aussi appelées les RBPP) sont des
+                        synthèses rigoureuses de l’état de l’art, des connaissances et des pratiques sur l’autisme, à un
+                        temps donné.
                       </CardBodyContentDescription>
                     </CardBodyContent>
                   </CardBody>
