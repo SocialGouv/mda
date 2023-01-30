@@ -1,0 +1,722 @@
+{
+  "version": 2,
+  "data": {
+    "api::question.question": {
+      "1": {
+        "id": 1,
+        "content": "Je suis",
+        "info": null,
+        "first": true,
+        "answers": [
+          2,
+          1,
+          3
+        ]
+      },
+      "2": {
+        "id": 2,
+        "content": "Prenez rendez-vous avec le médecin traitant, le médecin universitaire, ou le médecin du travail. (ref. adulte)",
+        "info": null,
+        "first": false,
+        "answers": [
+          8
+        ]
+      },
+      "3": {
+        "id": 3,
+        "content": "Prenez rendez-vous avec un professionnel de santé (psychiatre, psychologue, orthophoniste...) ayant reçu une formation sur l'autisme.",
+        "info": null,
+        "first": false,
+        "answers": [
+          5
+        ]
+      },
+      "4": {
+        "id": 4,
+        "content": "Démarrons le parcours de diagnostic",
+        "info": "Le parcours de diagnostic adulte est différent de celui d'un enfant. ",
+        "first": false,
+        "answers": [
+          6,
+          7
+        ]
+      },
+      "5": {
+        "id": 5,
+        "content": "Un avis a-t-il été donné par le médecin traitant ou le médecin du travail ?",
+        "info": null,
+        "first": false,
+        "answers": [
+          9,
+          10
+        ]
+      },
+      "6": {
+        "id": 6,
+        "content": "Un avis a-t-il été donné par un professionnel de santé (psychiatre, psychologue, orthophoniste...) ?",
+        "info": null,
+        "first": false,
+        "answers": [
+          11,
+          12
+        ]
+      },
+      "7": {
+        "id": 7,
+        "content": "Un parcours de diagnostic vous a-t-il été proposé ?",
+        "info": null,
+        "first": false,
+        "answers": [
+          13,
+          14
+        ]
+      },
+      "8": {
+        "id": 8,
+        "content": "Démarrage du bilan fonctionnel et détaillé",
+        "info": "Vous allez pouvoir démarrer un bilan diagnostic et fonctionnel auprès de professionnels de santé pluridisciplinaires en vue d'un diagnostic qui déterminera si oui ou non il s'agit de Troubles du Spectre de l'Autisme.",
+        "first": false,
+        "answers": [
+          15
+        ]
+      },
+      "9": {
+        "id": 9,
+        "content": "Le bilan diagnostic et fonctionnel détaillé a-t-il démarré ?",
+        "info": null,
+        "first": false,
+        "answers": [
+          16,
+          17
+        ]
+      },
+      "10": {
+        "id": 10,
+        "content": "Vous n'êtes pas satisfait ?",
+        "info": "Si vous n'êtes pas satisfait de l'avis obtenu, vous pouvez prendre rendez-vous avec un autre médecin pour obtenir un deuxième avis.\n\n\nVous pouvez également vous renseigner auprès de votre Centre de Ressource Autisme (CRA).\n\nSi vous ne souhaitez pas poursuivre votre parcours de diagnostic suite à la réponse obtenue, vous pouvez en rester là.",
+        "first": false,
+        "answers": [
+          18
+        ]
+      },
+      "11": {
+        "id": 11,
+        "content": "Avez-vous réalisé les entretiens et tests du bilan diagnostic et fonctionnel ?",
+        "info": null,
+        "first": false,
+        "answers": [
+          19,
+          20
+        ]
+      },
+      "12": {
+        "id": 12,
+        "content": "Avez-vous reçu votre restitution de bilan diagnostic et fonctionnel ?",
+        "info": null,
+        "first": false,
+        "answers": [
+          21,
+          22
+        ]
+      },
+      "13": {
+        "id": 13,
+        "content": "Est-ce que le bilan diagnostic et fonctionnel détaillé conclut à des Troubles du Spectre de l'Autisme ?",
+        "info": null,
+        "first": false,
+        "answers": [
+          23,
+          24,
+          25
+        ]
+      },
+      "14": {
+        "id": 14,
+        "content": "Le médecin coordinateur de la PCO vous a-t-il contacté ?",
+        "info": "Le médecin coordinateur est le professionnel de santé en charge du suivi de votre demande au sein de la PCO, il propose un parcours adapté aux besoins de votre enfant et aux constatations cliniques de votre médecin.",
+        "first": false,
+        "answers": [
+          26,
+          27
+        ]
+      },
+      "15": {
+        "id": 15,
+        "content": "Êtes-vous redirigé vers un diagnostic à réaliser dans le cadre d'une plateforme de coordination et d’orientation (PCO) ?",
+        "info": "Les plateformes de coordination et d’orientation (PCO) pour suspicion de troubles du neurodéveloppement (TND) s’adressent aux enfants de 0 à 12 ans pour qu’ils bénéficient, gratuitement et sans tarder, d’un parcours de soins comprenant :  \n- des bilans spécialisés permettant d’établir un diagnostic fonctionnel précisant le ou les troubles repérés ;  \n- le démarrage des interventions rééducatives nécessaires.",
+        "first": false,
+        "answers": [
+          28,
+          29
+        ]
+      },
+      "16": {
+        "id": 16,
+        "content": "Un avis a-t-il été donné par le pédiatre, le médecin de la crèche ou de la Protection maternelle et infantile (PMI) ?",
+        "info": null,
+        "first": false,
+        "answers": [
+          31,
+          30
+        ]
+      },
+      "17": {
+        "id": 17,
+        "content": "Un avis a-t-il été donné par le médecin traitant ou le médecin scolaire ? (ref. 7-12)",
+        "info": null,
+        "first": false,
+        "answers": [
+          33,
+          32
+        ]
+      },
+      "18": {
+        "id": 18,
+        "content": "Un avis a-t-il été donné par le médecin traitant ou le médecin scolaire ? (ref. 13-18)",
+        "info": null,
+        "first": false,
+        "answers": [
+          34,
+          35
+        ]
+      },
+      "19": {
+        "id": 19,
+        "content": "Un avis a-t-il été donné par le médecin traitant, le médecin universitaire ou le médecin du travail ?",
+        "info": null,
+        "first": false,
+        "answers": [
+          36,
+          37
+        ]
+      },
+      "20": {
+        "id": 20,
+        "content": "Prenez rendez-vous avec le pédiatre, le médecin de la crèche ou de la Protection maternelle et infantile (PMI). ",
+        "info": null,
+        "first": false,
+        "answers": [
+          38
+        ]
+      },
+      "21": {
+        "id": 21,
+        "content": "Prenez rendez-vous avec le médecin traitant ou le médecin scolaire. (ref 7-12)",
+        "info": null,
+        "first": false,
+        "answers": [
+          39
+        ]
+      },
+      "22": {
+        "id": 22,
+        "content": "Prenez rendez-vous avec le médecin traitant ou le médecin scolaire. (ref 13-18)",
+        "info": null,
+        "first": false,
+        "answers": [
+          40
+        ]
+      },
+      "23": {
+        "id": 23,
+        "content": "Prenez rendez-vous avec le médecin traitant, le médecin universitaire, ou le médecin du travail. (ref. proche)",
+        "info": null,
+        "first": false,
+        "answers": [
+          41
+        ]
+      },
+      "24": {
+        "id": 24,
+        "content": "Vous réalisez ce questionnaire pour le compte de",
+        "info": null,
+        "first": false,
+        "answers": [
+          42,
+          43,
+          44
+        ]
+      }
+    },
+    "parcours-diag.sub-answer": {
+      "4": {
+        "id": 4,
+        "content": "Je suis un adulte autonome",
+        "info": null,
+        "destination": 4
+      },
+      "5": {
+        "id": 5,
+        "content": "Je suis un adulte sous tutelle",
+        "info": null,
+        "destination": 4
+      },
+      "6": {
+        "id": 6,
+        "content": "Mon enfant a moins de 6 ans",
+        "info": null,
+        "destination": 20
+      },
+      "7": {
+        "id": 7,
+        "content": "Mon enfant a entre 7 et 12 ans",
+        "info": null,
+        "destination": 21
+      },
+      "8": {
+        "id": 8,
+        "content": "Mon enfant a entre 13 et 18 ans",
+        "info": null,
+        "destination": 22
+      },
+      "9": {
+        "id": 9,
+        "content": "Mon enfant a plus de 18 ans",
+        "info": null,
+        "destination": 23
+      },
+      "14": {
+        "id": 14,
+        "content": "En Centre Médico-Psychologique (CMP)",
+        "info": null,
+        "destination": 8
+      },
+      "15": {
+        "id": 15,
+        "content": "En Centre de Ressource Autisme (CRA)",
+        "info": null,
+        "destination": 8
+      },
+      "16": {
+        "id": 16,
+        "content": "Auprès de professionnels en libéral (à votre charge) ",
+        "info": null,
+        "destination": 8
+      },
+      "17": {
+        "id": 17,
+        "content": "Le Centre d'Action Médico Sociale Précoce (CAMSP)",
+        "info": null,
+        "destination": 8
+      },
+      "18": {
+        "id": 18,
+        "content": "Le Centre Medico Psycho Pédagogique (CMPP)  (en fonction de votre région)",
+        "info": null,
+        "destination": 8
+      },
+      "19": {
+        "id": 19,
+        "content": "Le Centre Médico-Psychologique (CMP)",
+        "info": null,
+        "destination": 8
+      },
+      "20": {
+        "id": 20,
+        "content": "Le Centre de Ressource Autisme (CRA)",
+        "info": null,
+        "destination": 8
+      },
+      "21": {
+        "id": 21,
+        "content": "Auprès de professionnels en libéral (à votre charge)",
+        "info": null,
+        "destination": null
+      },
+      "22": {
+        "id": 22,
+        "content": "En Centre Medico Psycho Pédagogique (CMPP)  (en fonction de votre région)",
+        "info": null,
+        "destination": 8
+      },
+      "23": {
+        "id": 23,
+        "content": "En Centre Médico-Psychologique (CMP)",
+        "info": null,
+        "destination": 8
+      },
+      "24": {
+        "id": 24,
+        "content": "En Centre de Ressource Autisme (CRA)",
+        "info": null,
+        "destination": 8
+      },
+      "25": {
+        "id": 25,
+        "content": "Auprès de professionnels en libéral (à votre charge) ",
+        "info": null,
+        "destination": 8
+      },
+      "26": {
+        "id": 26,
+        "content": "En Centre Médico-Psychologique (CMP)",
+        "info": null,
+        "destination": 8
+      },
+      "27": {
+        "id": 27,
+        "content": "En Centre de Ressource Autisme (CRA)",
+        "info": null,
+        "destination": 8
+      },
+      "28": {
+        "id": 28,
+        "content": "Auprès de professionnels en libéral (à votre charge) ",
+        "info": null,
+        "destination": 8
+      },
+      "29": {
+        "id": 29,
+        "content": "Une personne mineure de moins de 6 ans",
+        "info": null,
+        "destination": 20
+      },
+      "30": {
+        "id": 30,
+        "content": "Une personne mineure entre 7 et 12 ans",
+        "info": null,
+        "destination": 21
+      },
+      "31": {
+        "id": 31,
+        "content": "Une personne mineure entre 13 et 18 ans",
+        "info": null,
+        "destination": 22
+      }
+    },
+    "parcours-diag.answer": {
+      "1": {
+        "id": 1,
+        "content": "Un parent",
+        "info": null,
+        "destination": null,
+        "subanswers": [
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "2": {
+        "id": 2,
+        "content": "Une personne adulte",
+        "info": null,
+        "destination": null,
+        "subanswers": [
+          4,
+          5
+        ]
+      },
+      "3": {
+        "id": 3,
+        "content": "Un proche ou un aidant",
+        "info": null,
+        "destination": null,
+        "subanswers": []
+      },
+      "5": {
+        "id": 5,
+        "content": "Continuer",
+        "info": null,
+        "destination": 6,
+        "subanswers": []
+      },
+      "6": {
+        "id": 6,
+        "content": "Préférez-vous prendre rendez-vous chez un médecin ?",
+        "info": null,
+        "destination": 2,
+        "subanswers": []
+      },
+      "7": {
+        "id": 7,
+        "content": "Préférez-vous prendre rendez-vous chez un professionnel de santé ?",
+        "info": null,
+        "destination": 3,
+        "subanswers": []
+      },
+      "8": {
+        "id": 8,
+        "content": "Continuer",
+        "info": null,
+        "destination": 5,
+        "subanswers": []
+      },
+      "9": {
+        "id": 9,
+        "content": "oui",
+        "info": "Si vous n'êtes pas satisfait de l'avis obtenu, vous pouvez prendre rendez-vous avec un autre médecin pour obtenir un deuxième avis.",
+        "destination": null,
+        "subanswers": []
+      },
+      "10": {
+        "id": 10,
+        "content": "non",
+        "info": null,
+        "destination": 2,
+        "subanswers": []
+      },
+      "11": {
+        "id": 11,
+        "content": "Oui",
+        "info": "Si vous n'êtes pas satisfait de l'avis obtenu, vous pouvez prendre rendez-vous avec un autre médecin pour obtenir un deuxième avis.",
+        "destination": 7,
+        "subanswers": []
+      },
+      "12": {
+        "id": 12,
+        "content": "Non",
+        "info": null,
+        "destination": 3,
+        "subanswers": []
+      },
+      "13": {
+        "id": 13,
+        "content": "Oui",
+        "info": null,
+        "destination": null,
+        "subanswers": [
+          14,
+          15,
+          16
+        ]
+      },
+      "14": {
+        "id": 14,
+        "content": "Non",
+        "info": "Si vous n'êtes pas satisfait de l'avis obtenu, vous pouvez prendre rendez-vous avec un autre médecin pour obtenir un deuxième avis.",
+        "destination": null,
+        "subanswers": []
+      },
+      "15": {
+        "id": 15,
+        "content": "Continuer",
+        "info": null,
+        "destination": 9,
+        "subanswers": []
+      },
+      "16": {
+        "id": 16,
+        "content": "Oui",
+        "info": null,
+        "destination": 11,
+        "subanswers": []
+      },
+      "17": {
+        "id": 17,
+        "content": "Non",
+        "info": "Réalisez le premier rendez-vous ou prenez rendez-vous pour un bilan diagnostic et fonctionnel auprès de l'organisme qui vous a préconisé de démarrer un bilan diagnostic et fonctionnel.\n\nSi le délai d'attente n'est pas adapté à votre situation, vous pouvez prendre rendez-vous pour réaliser ce bilan auprès d'un autre organisme. Les organismes libéraux proposent par exemple des temps d'attente bien moindre, mais cela implique un coût financier à votre charge.",
+        "destination": 9,
+        "subanswers": []
+      },
+      "18": {
+        "id": 18,
+        "content": "Continuer",
+        "info": null,
+        "destination": 7,
+        "subanswers": []
+      },
+      "19": {
+        "id": 19,
+        "content": "Oui",
+        "info": null,
+        "destination": 12,
+        "subanswers": []
+      },
+      "20": {
+        "id": 20,
+        "content": "Non",
+        "info": "Réalisez vos rendez-vous ou prenez rendez-vous pour réaliser vos entretiens et tests de bilan diagnostic et fonctionnel auprès de l'organisme qui vous a préconisé de démarrer un bilan diagnostic et fonctionnel.",
+        "destination": 11,
+        "subanswers": []
+      },
+      "21": {
+        "id": 21,
+        "content": "Oui",
+        "info": null,
+        "destination": 13,
+        "subanswers": []
+      },
+      "22": {
+        "id": 22,
+        "content": "Non",
+        "info": "Prenez rendez-vous auprès de votre organisme pour obtenir la restitution du bilan diagnostic et fonctionnel.",
+        "destination": 12,
+        "subanswers": []
+      },
+      "23": {
+        "id": 23,
+        "content": "Oui",
+        "info": "Votre parcours de diagnostic est terminé. Vous pouvez démarrer les démarches administratives auprès de la Maison Départementale des Personnes Handicapées (MDPH).",
+        "destination": null,
+        "subanswers": []
+      },
+      "24": {
+        "id": 24,
+        "content": "Non",
+        "info": "Votre parcours de diagnostic est terminé. Vous pouvez prendre rendez-vous avec votre médecin traitant afin qu'il vous propose une prise en charge adaptée à votre diagnostic.",
+        "destination": null,
+        "subanswers": []
+      },
+      "25": {
+        "id": 25,
+        "content": "Le bilan conclue à une situation complexe, nécessitant un parcours approfondi.",
+        "info": "Prenez rendez-vous auprès de votre Centre de Ressource Autisme (CRA) pour réaliser une consultation de 3ème ligne.\n\nCette consultation de 3ème ligne vise à recommencer le bilan diagnostic et fonctionnel, de manière plus approfondie.\n\nSi cela vous a été indiqué dans votre bilan, prenez rendez-vous auprès de votre Centre de Référence des Troubles du Langage et des Apprentissages (CRTLA).",
+        "destination": 8,
+        "subanswers": []
+      },
+      "26": {
+        "id": 26,
+        "content": "Oui",
+        "info": "La Plateforme de Coordination et d'Orientation (PCO) se charge de prendre les rendez-vous, soit auprès de structures sanitaires ou médico-sociales compétentes, soit auprès de professionnels libéraux conventionnés et non conventionnés ayant contractualisé avec la plateforme, afin que les bilans et interventions se fassent le plus rapidement possible et au plus près du domicile de votre enfant.\n\nL'étape du bilan diagnostic et fonctionnel peut alors démarrer.",
+        "destination": 9,
+        "subanswers": []
+      },
+      "27": {
+        "id": 27,
+        "content": "Non",
+        "info": "Attendez d'être contacté par le médecin coordinateur de la Plateforme de Coordination et d'Orientation (PCO). Un délai de 15 jours est à prévoir.",
+        "destination": 14,
+        "subanswers": []
+      },
+      "28": {
+        "id": 28,
+        "content": "Oui",
+        "info": null,
+        "destination": 14,
+        "subanswers": []
+      },
+      "29": {
+        "id": 29,
+        "content": "Non",
+        "info": "Sélectionnez le type d'organisme qui vous a été recommandé pour réaliser votre bilan diagnostic et fonctionnel :",
+        "destination": null,
+        "subanswers": [
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      },
+      "30": {
+        "id": 30,
+        "content": "Non",
+        "info": null,
+        "destination": 16,
+        "subanswers": []
+      },
+      "31": {
+        "id": 31,
+        "content": "Oui",
+        "info": "Si vous n'êtes pas satisfait de l'avis obtenu, vous pouvez prendre rendez-vous avec un autre médecin pour obtenir un deuxième avis.",
+        "destination": 15,
+        "subanswers": []
+      },
+      "32": {
+        "id": 32,
+        "content": "Non",
+        "info": null,
+        "destination": 21,
+        "subanswers": []
+      },
+      "33": {
+        "id": 33,
+        "content": "Oui",
+        "info": null,
+        "destination": 15,
+        "subanswers": []
+      },
+      "34": {
+        "id": 34,
+        "content": "Oui",
+        "info": "Si vous n'êtes pas satisfait de l'avis obtenu, vous pouvez prendre rendez-vous avec un autre médecin pour obtenir un deuxième avis.",
+        "destination": null,
+        "subanswers": [
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      "35": {
+        "id": 35,
+        "content": "Non",
+        "info": null,
+        "destination": 22,
+        "subanswers": []
+      },
+      "36": {
+        "id": 36,
+        "content": "Oui",
+        "info": "Si vous n'êtes pas satisfait de l'avis obtenu, vous pouvez prendre rendez-vous avec un autre médecin pour obtenir un deuxième avis.",
+        "destination": null,
+        "subanswers": [
+          26,
+          27,
+          28
+        ]
+      },
+      "37": {
+        "id": 37,
+        "content": "Non",
+        "info": null,
+        "destination": 23,
+        "subanswers": []
+      },
+      "38": {
+        "id": 38,
+        "content": "Continuer",
+        "info": null,
+        "destination": 16,
+        "subanswers": []
+      },
+      "39": {
+        "id": 39,
+        "content": "Continuer",
+        "info": null,
+        "destination": 17,
+        "subanswers": []
+      },
+      "40": {
+        "id": 40,
+        "content": "Continuer",
+        "info": null,
+        "destination": 18,
+        "subanswers": []
+      },
+      "41": {
+        "id": 41,
+        "content": "Continuer",
+        "info": null,
+        "destination": 19,
+        "subanswers": []
+      },
+      "42": {
+        "id": 42,
+        "content": "Une personne mineure",
+        "info": null,
+        "destination": null,
+        "subanswers": [
+          29,
+          30,
+          31
+        ]
+      },
+      "43": {
+        "id": 43,
+        "content": "Une personne majeure",
+        "info": null,
+        "destination": 23,
+        "subanswers": []
+      },
+      "44": {
+        "id": 44,
+        "content": "Une personne majeure sous tutelle",
+        "info": null,
+        "destination": 23,
+        "subanswers": []
+      }
+    }
+  }
+}

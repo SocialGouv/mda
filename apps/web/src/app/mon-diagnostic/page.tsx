@@ -27,38 +27,15 @@ const DiagnosticPage = async () => {
             </div>
             <hr className="fr-mt-4w fr-mb-2w " />
             <div className="fr-content">
-              <h2 className="fr-text--xl">
-                Démarrez un bilan fonctionnel détaillé auprès de plusieurs professionnels de santé.
-              </h2>
-              <p>Ce sont ceux qu’on appelle les professionnels de 2e ligne&nbsp;:</p>
-              <ul>
-                <li>Psychologue</li>
-                <li>Orthophoniste</li>
-                <li>Psychomotricien</li>
-              </ul>
               <p>
-                <strong>Finalisez le parcours de diagnostic en prenant RDV auprès de votre médecin référent.</strong>
-              </p>
-              <ol>
-                <li>Vous restitue les conclusions de ce parcours de diagnostic</li>
-                <li>
-                  Rédige un bilan final et un certificat médical vous permettant, le cas échéant, de mener une demande
-                  d’ouverture de droits auprès de la Maison Départementale des Personnes Handicapées (MDPH).
-                </li>
-              </ol>
-              <p>
-                Pour les personnes dont le diagnostic s’avère complexe, un approfondissement du diagnostic est
-                nécessaire en centre de diagnostic. C’est ce qu’on appelle les professionnels de 3e ligne.
+                Si le professionnel indiqué n'est pas disponible dans votre région, prenez rendez-vous avec un médecin
+                généraliste.
               </p>
               <p>
-                Tous ces examens visent à décrire le trouble de l’autisme de manière fine. Les professionnels doivent
-                échanger les informations et les conclusions de leur propre observation pour mieux comprendre la
-                personne autiste et ses troubles, et mettre en évidence ses capacités.
-              </p>
-              <p>
-                Le bilan fonctionnel est un indicateur de la situation de handicap de la personne à un moment T. Il est
-                nécessaire de réactualiser ce bilan fonctionnel régulièrement, pour tenir compte de l’évolution des
-                capacités et des difficultés de la personne.
+                Pour les adultes, le Centre de Ressource Autisme peut vous aider à trouver des professionnels de santé.
+                Vous pouvez également demander une consultation en Centre médico-psychologique, quelque soit votre
+                trouble. Quelle que soit votre situation, une consultation chez un médecin généraliste reste une étape
+                incontournable.
               </p>
             </div>
           </GridCol>

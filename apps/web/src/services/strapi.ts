@@ -104,7 +104,7 @@ interface FetchParam<T extends keyof Model, Dto extends GetAttributesValues<T> =
   populate?: UnknownMapping | "*" | "deep";
   /** @default "live" */
   publicationState?: "live" | "preview";
-  sort?: Array<GetAttributesKey<T>> | GetAttributesKey<T>;
+  sort?: Array<GetAttributesKey<T> | "id"> | GetAttributesKey<T> | "id";
 }
 
 export async function fetchStrapi<
@@ -134,7 +134,7 @@ export async function fetchStrapi<
       "Content-Type": "application/json",
     },
     next: {
-      revalidate: 60 * 5, // 5 minutes
+      revalidate: config.fetchRevalidate,
     },
   });
 

@@ -20,4 +20,6 @@ export const config = {
   },
   githubSha: process.env.NEXT_PUBLIC_GITHUB_SHA?.substring(0, 7) ?? "<dev>",
   webhookRevalidateToken: ensureOsEnvVar("WEBHOOK_REVALIDATE_TOKEN"),
+  /** In seconds */
+  fetchRevalidate: 60 * 3,
 } as const;

@@ -10,9 +10,12 @@ import {
 } from "@design-system";
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 import { fetchStrapi } from "@services/strapi";
+import ReactMarkdown from "react-markdown";
 
 const FichesPratiques = async () => {
-  const fiches = await fetchStrapi("fiche-pratiques", { populate: "recap" }).then(responses => responses.data ?? []);
+  const fiches = await fetchStrapi("fiche-pratiques", { populate: "recap", sort: "id" }).then(
+    responses => responses.data ?? [],
+  );
   return (
     <section className="fr-py-6w fr-py-md-12w">
       <Container>
@@ -29,9 +32,11 @@ const FichesPratiques = async () => {
                       </NextLinkOrA>
                     </CardBodyContentTitle>
                     <CardBodyContentDescription>
-                      {fiche.attributes.recap.content.length < 160
-                        ? fiche.attributes.recap.content
-                        : `${fiche.attributes.recap.content.substring(0, 157)}...`}
+                      <ReactMarkdown>
+                        {fiche.attributes.recap.content.length < 160
+                          ? fiche.attributes.recap.content
+                          : `${fiche.attributes.recap.content.substring(0, 157)}...`}
+                      </ReactMarkdown>
                     </CardBodyContentDescription>
                   </CardBodyContent>
                 </CardBody>

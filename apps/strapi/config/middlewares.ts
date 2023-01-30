@@ -10,7 +10,7 @@ const middlewares: MiddlewaresConfig = [
   {
     name: "strapi::body",
     config: {
-      jsonLimit: "10mb",
+      jsonLimit: "50mb",
     },
   },
   "strapi::session",
