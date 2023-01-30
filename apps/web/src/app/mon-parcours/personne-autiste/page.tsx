@@ -53,7 +53,7 @@ const MonParcoursAidant = () => {
               </TimelineItem>
               <TimelineItem isEnlargeLink>
                 <TimelineItemTitle>
-                  <NextLinkOrA href="/mes-aides">Je prends connaissance de mes aides</NextLinkOrA>
+                  <NextLinkOrA href="/fiches-pratiques/mes-aides">Je prends connaissance de mes aides</NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
                   Je peux bénéficier d’aides financières, matérielles et humaines, même si je n'ai pas encore de
@@ -73,7 +73,7 @@ const MonParcoursAidant = () => {
               </TimelineItem>
               <TimelineItem isEnlargeLink>
                 <TimelineItemTitle>
-                  <NextLinkOrA href="/mes-aides">Je prends connaissance des nouvelles aides</NextLinkOrA>
+                  <NextLinkOrA href="/fiches-pratiques/mes-aides">Je prends connaissance des nouvelles aides</NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
                   Lorsque j'ai reçu une réponse de la Maison Départementale des Personnes Handicapées suite au dépôt de
