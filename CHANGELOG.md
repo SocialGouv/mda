@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/SocialGouv/mda/compare/v1.2.0...v1.3.0) (2023-01-30)
+
+
+### Features
+
+* **cd:** enable matomo prod with env config ([b99a0d1](https://github.com/SocialGouv/mda/commit/b99a0d140a1870f57140a3f6a5e43b09b35b1f6a))
+* update wording ([#74](https://github.com/SocialGouv/mda/issues/74)) ([5e8d5fc](https://github.com/SocialGouv/mda/commit/5e8d5fc3cad2c46569d4841ff51e2727906fe6c2))
+
 # [1.2.0](https://github.com/SocialGouv/mda/compare/v1.1.0...v1.2.0) (2023-01-30)
 
 
