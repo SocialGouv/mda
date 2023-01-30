@@ -1,11 +1,18 @@
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
 import { DownloadLink } from "@design-system";
+import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 
 const Documents = () => {
   return (
     <SimpleContentPage>
       <h1>Modèles de courrier</h1>
-      <ul>
+      <p className="fr-text--lg">
+        Plusieurs personnes concernées nous ont partagé le besoin d'accéder rapidement et facilement à des modèles de
+        courrier. Vous trouverez ci-dessous ces modèles à télécharger et personnaliser. Si vous avez des suggestions de
+        modèles à ajouter, dites-le nous grâce au formulaire{" "}
+        <NextLinkOrA href="je-donne-mon-avis">Je donne mon avis</NextLinkOrA>.
+      </p>
+      <ul className="fr-mt-6w">
         <li>
           <DownloadLink
             href="/documents/recours-administratif-prealableobligatoire.docx"
