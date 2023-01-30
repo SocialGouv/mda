@@ -37,10 +37,14 @@ const MonParcoursAidant = () => {
             <Timeline>
               <TimelineItem isEnlargeLink>
                 <TimelineItemTitle>
-                  <NextLinkOrA href="#">Je me pose des questions</NextLinkOrA>
+                  <NextLinkOrA href="/fiches-pratiques/je-m-interroge-sur-mon-enfant">
+                    Je me pose des questions
+                  </NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
-                  Je m'interroge sur les comportements de mon enfant ou de mon proche.
+                  Je m'interroge sur les comportements de mon enfant ou de mon proche. Je souhaite repérer des signes de
+                  comportements ou de ressentis qui pourraient relever d'un trouble du neurodéveloppement comme
+                  l'autisme.
                 </TimelineDescription>
               </TimelineItem>
               <TimelineItem isEnlargeLink>
@@ -54,32 +58,32 @@ const MonParcoursAidant = () => {
               </TimelineItem>
               <TimelineItem isEnlargeLink>
                 <TimelineItemTitle>
-                  <NextLinkOrA href="#">Je prends connaissance de mes aides</NextLinkOrA>
+                  <NextLinkOrA href="/mes-aides">Je prends connaissance de mes aides</NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
-                  Le site de service public Mes Droits Sociaux vous permet d'accéder à un formulaire de simulation des
-                  aides auxquelles vous pouvez prétendre, selon votre situation personnelle et familiale.
+                  Mon enfant ou mon proche peut bénéficier d’aides financières, matérielles et humaines, même s'ils
+                  n'ont pas encore de diagnostic.
                 </TimelineDescription>
               </TimelineItem>
               <TimelineItem isEnlargeLink>
                 <TimelineItemTitle>
-                  <NextLinkOrA href="#">Je sollicite la MDPH et je dépose un dossier</NextLinkOrA>
+                  <NextLinkOrA href="/fiches-pratiques/je-sollicite-la-mdph-et-je-monte-un-dossier">
+                    Je sollicite la MDPH et je dépose un dossier
+                  </NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
-                  Lorsque mon enfant ou mon proche a finalisé son parcours de diagnostic et qu'il conclut à un TSA, je
+                  orsque mon enfant ou mon proche a finalisé son parcours de diagnostic et qu'il conclut à un TSA, je
                   m'adresse à la Maison Départementale des Personnes Handicapées et je dépose un dossier.
                 </TimelineDescription>
               </TimelineItem>
 
               <TimelineItem isEnlargeLink>
                 <TimelineItemTitle>
-                  <NextLinkOrA href="#">
-                    Je prends connaissances des nouvelles aides disponible suite à la réponse de la MDPH
-                  </NextLinkOrA>
+                  <NextLinkOrA href="/mes-aides">Je prends connaissance des nouvelles aides</NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
-                  Suite au retour de la MDPH, selon ma situation familiale de nouvelles aides sont maintenant
-                  disponibles pour moi et mon enfant.
+                  Lorsque mon enfant ou mon proche ont reçu une réponse de la Maison Départementale des Personnes
+                  Handicapées suite au dépôt de leur dossier, ils peuvent bénéficier de nouvelles aides.
                 </TimelineDescription>
               </TimelineItem>
 
@@ -90,13 +94,17 @@ const MonParcoursAidant = () => {
                       <TimelineItemFooterLink href="#">Être scolarisé</TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">Étudier</TimelineItemFooterLink>
+                      <TimelineItemFooterLink href="/fiches-pratiques/etudier-du-college-aux-etudes-superieures">
+                        Étudier
+                      </TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">Travailler</TimelineItemFooterLink>
+                      <TimelineItemFooterLink href="/fiches-pratiques/personne-tsa-travailler">
+                        Travailler
+                      </TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">Logement</TimelineItemFooterLink>
+                      <TimelineItemFooterLink href="/fiches-pratiques/se-loger">Logement</TimelineItemFooterLink>
                     </li>
                     <li>
                       <TimelineItemFooterLink title="Cette page est en cours de rédaction et sera prochainement disponible.">
@@ -104,24 +112,31 @@ const MonParcoursAidant = () => {
                       </TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">Se soigner</TimelineItemFooterLink>
+                      <TimelineItemFooterLink href="/fiches-pratiques/se-soigner">Se soigner</TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">Se déplacer</TimelineItemFooterLink>
+                      <TimelineItemFooterLink href="/fiches-pratiques/se-deplacer">Se déplacer</TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">Se loger</TimelineItemFooterLink>
+                      <TimelineItemFooterLink href="/fiches-pratiques/se-loger">Se loger</TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">Partir en vacances, avoir des loisir</TimelineItemFooterLink>
+                      <TimelineItemFooterLink href="/fiches-pratiques/partir-en-vacances">
+                        Partir en vacances
+                      </TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">
+                      <TimelineItemFooterLink href="/fiches-pratiques/avoir-des-loisirs">
+                        Avoir des loisirs
+                      </TimelineItemFooterLink>
+                    </li>
+                    <li>
+                      <TimelineItemFooterLink href="/fiches-pratiques/tisser-du-lien-amical-amoureux-et-familial">
                         Tisser du lien amical, amoureux et familial
                       </TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="#">
+                      <TimelineItemFooterLink href="/fiches-pratiques/etre-protege">
                         Mettre en place des mesures de protection
                       </TimelineItemFooterLink>
                     </li>

@@ -17,7 +17,7 @@ export const Tiles = () => (
           <CardBody>
             <CardBodyContent>
               <CardBodyContentTitle titleAs="h2">
-                <NextLinkOrA href="#">J’en parle autour de moi</NextLinkOrA>
+                <NextLinkOrA href="/fiches-pratiques/qu-est-ce-que-l-autisme">J’en parle autour de moi</NextLinkOrA>
               </CardBodyContentTitle>
               <CardBodyContentDescription>
                 L’autisme est un trouble du neuro-développement précoce, qui impacte les capacités de communication, les
@@ -33,7 +33,9 @@ export const Tiles = () => (
           <CardBody>
             <CardBodyContent>
               <CardBodyContentTitle titleAs="h2">
-                <NextLinkOrA href="#">Je cherche des groupes avec qui échanger</NextLinkOrA>
+                <NextLinkOrA href="/fiches-pratiques/je-cherche-des-groupes-d-entraide">
+                  Je cherche des groupes avec qui échanger
+                </NextLinkOrA>
               </CardBodyContentTitle>
               <CardBodyContentDescription>
                 En ligne ou en physique près de chez moi, des communautés de partage et d'entraide liés au TSA existent.
@@ -63,7 +65,7 @@ export const Tiles = () => (
           <CardBody>
             <CardBodyContent>
               <CardBodyContentTitle titleAs="h2">
-                <NextLinkOrA href="#">Annuaire</NextLinkOrA>
+                <NextLinkOrA href="/annuaire">Annuaire</NextLinkOrA>
               </CardBodyContentTitle>
               <CardBodyContentDescription>
                 Vous cherchez une organisation agissant dans le domaine de l’autisme ? Trouvez ses coordonnées dans
