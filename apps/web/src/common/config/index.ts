@@ -9,17 +9,18 @@ const ensureOsEnvVar: typeof ensureEnvVar<ProcessEnvCustomKeys> = (key, defaultV
 
 export const config = {
   siteTitle: "Maison de l'autisme",
-  env: ensureOsEnvVar("MDA_ENV") as "dev" | "preprod" | "prod",
   matomo: {
     url: process.env.NEXT_PUBLIC_MATOMO_URL ?? "",
     siteId: process.env.NEXT_PUBLIC_MATOMO_SITE_ID ?? "",
   },
   strapi: {
     apiUrl: process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://127.0.0.1:1337",
-    token: ensureOsEnvVar("STRAPI_TOKEN"),
   },
   githubSha: process.env.NEXT_PUBLIC_GITHUB_SHA?.substring(0, 7) ?? "<dev>",
-  webhookRevalidateToken: ensureOsEnvVar("WEBHOOK_REVALIDATE_TOKEN"),
   /** In seconds */
   fetchRevalidate: 60 * 3,
+  server: {
+    env: ensureOsEnvVar("MDA_ENV") as "dev" | "preprod" | "prod",
+    webhookRevalidateToken: ensureOsEnvVar("WEBHOOK_REVALIDATE_TOKEN"),
+  },
 } as const;

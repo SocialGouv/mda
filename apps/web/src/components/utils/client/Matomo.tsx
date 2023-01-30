@@ -1,15 +1,15 @@
 "use client";
 
-import { type config } from "@common/config";
+import { config } from "@common/config";
 import { init } from "@socialgouv/matomo-next";
 import { useEffect } from "react";
 
-export type MatomoProps = Pick<typeof config, "env" | "matomo">;
+export type MatomoProps = Pick<(typeof config)["server"], "env">;
 
-export const Matomo = ({ env, matomo }: MatomoProps) => {
+export const Matomo = ({ env }: MatomoProps) => {
   useEffect(() => {
-    env === "prod" && init(matomo);
-  }, [env, matomo]);
+    env === "prod" && init(config.matomo);
+  }, [env]);
 
   return <></>;
 };

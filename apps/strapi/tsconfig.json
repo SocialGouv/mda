@@ -3,6 +3,9 @@
   "compilerOptions": {
     "strict": true,
     "outDir": "dist",
+    "types": [
+      "@mda/strapi-types"
+    ]
   },
   "include": [
     "./",

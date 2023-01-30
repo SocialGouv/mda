@@ -34,7 +34,7 @@
       }
     ],
     "types": [
-      "@mda/strapi"
+      "@mda/strapi-types"
     ]
   },
   "include": [
@@ -44,7 +44,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    // "../strapi/schemas.d.ts"
   ],
   "exclude": [
     "node_modules",

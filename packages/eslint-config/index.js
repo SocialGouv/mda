@@ -150,7 +150,7 @@ const config = {
       },
     },
     {
-      files: ["src/app/**/*.ts?(x)"],
+      files: ["src/app/**/*.ts?(x)", "src/pages/**/*.ts?(x)"],
       rules: {
         "import/no-default-export": "off",
       },
