@@ -7,6 +7,7 @@ import { Fieldset, FieldsetElement, FormButton } from "@design-system";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { mailer } from "src/pages/api/mailer";
 import { z } from "zod";
 
 interface FormData {
@@ -48,6 +49,7 @@ export const FeedbackForm = () => {
   const onSubmit = (data: FormData) => {
     console.log(data);
     setFormState("submitted");
+    void mailer();
   };
 
   const [formState, setFormState] = useState<"initial" | "submitted" | "submitting">("initial");

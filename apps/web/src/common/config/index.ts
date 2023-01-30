@@ -18,6 +18,18 @@ export const config = {
     apiUrl: process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://127.0.0.1:1337",
     token: ensureOsEnvVar("STRAPI_TOKEN"),
   },
+  mailer: {
+    enable: process.env.MAILER_ENABLE,
+    host: process.env.MAILER_SMTP_HOST,
+    smtp: {
+      port: process.env.MAILER_SMTP_PORT || 1025,
+      password: process.env.MAILER_SMTP_PASSWORD,
+      login: process.env.MAILER_SMTP_LOGIN,
+      ssl: process.env.MAILER_SMTP_SSL || false,
+    },
+    from: process.env.MAILER_FROM_EMAIL,
+    signature: process.env.MAILER_EMAIL_SIGNATURE,
+  },
   githubSha: process.env.NEXT_PUBLIC_GITHUB_SHA?.substring(0, 7) ?? "<dev>",
   webhookRevalidateToken: ensureOsEnvVar("WEBHOOK_REVALIDATE_TOKEN"),
   /** In seconds */

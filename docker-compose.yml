@@ -50,5 +50,16 @@ services:
     ports:
       - 3000:3000
 
+  maildev:
+    image: djfarrelly/maildev
+    command: bin/maildev --hide-extensions STARTTLS
+    ports:
+      - "${MAILDEV_SMTP_PORT}:${MAILDEV_SMTP_PORT}"
+      - "${MAILDEV_WEB_PORT}:${MAILDEV_WEB_PORT}"
+    environment:
+      MAILDEV_WEB_PORT: ${MAILDEV_WEB_PORT}
+      MAILDEV_SMTP_PORT: ${MAILDEV_SMTP_PORT}
+    restart: always
+
 volumes:
   pgdata:
