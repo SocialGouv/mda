@@ -21,9 +21,6 @@ const MonParcoursAidant = () => {
           <GridCol md={10} lg={8}>
             <ActionsButtons />
             <h1>Mon parcours de personne autiste</h1>
-            <p className="fr-text--xs">
-              Vérifié le 8 novembre 2022 - Direction de l'information légale et administrative (Premier ministre)
-            </p>
             <div className="fr-text--xl">
               <p>
                 En tant que personne autiste, plusieurs étapes clés sont à réaliser pour mener votre vie de la manière

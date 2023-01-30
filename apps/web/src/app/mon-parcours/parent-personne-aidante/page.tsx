@@ -21,9 +21,6 @@ const MonParcoursAidant = () => {
           <GridCol md={10} lg={8}>
             <ActionsButtons />
             <h1>Mon parcours de parent ou d'aidant</h1>
-            <p className="fr-text--xs">
-              Vérifié le 8 novembre 2022 - Direction de l'information légale et administrative (Premier ministre)
-            </p>
             <div className="fr-text--xl">
               <p>
                 En tant que parent ou proche aidant, plusieurs étapes clés sont à réaliser pour accompagner votre proche
