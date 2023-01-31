@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/SocialGouv/mda/compare/v1.4.1...v1.4.2) (2023-01-31)
+
+
+### Bug Fixes
+
+* csp default src ([c56d29e](https://github.com/SocialGouv/mda/commit/c56d29ec8d4454130cabd946e7b33e615792f88c))
+
 ## [1.4.1](https://github.com/SocialGouv/mda/compare/v1.4.0...v1.4.1) (2023-01-31)
 
 
