@@ -38,7 +38,7 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
         <SkipLinksItem href="#header">Menu</SkipLinksItem>
         <SkipLinksItem href="#footer">Pied de page</SkipLinksItem>
       </SkipLinks>
-      <Notice className="fr-no-print">
+      <Notice className="fr-no-print fr-beta-banner">
         <NextLinkOrA href="je-donne-mon-avis">Service en version beta</NextLinkOrA>
       </Notice>
       <Header />
