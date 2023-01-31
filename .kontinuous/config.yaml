@@ -4,4 +4,3 @@ repositoryName: mda
 dependencies:
   fabrique:
     import: SocialGouv/kontinuous/plugins/fabrique
-
