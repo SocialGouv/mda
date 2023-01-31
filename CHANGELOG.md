@@ -1,3 +1,11 @@
+## [1.4.1](https://github.com/SocialGouv/mda/compare/v1.4.0...v1.4.1) (2023-01-31)
+
+
+### Bug Fixes
+
+* **cd:** prefix for strapi web url env with https ([23a9b52](https://github.com/SocialGouv/mda/commit/23a9b5262d30d78854e6350a57a350ae4f41d13a))
+* fix stuff ([5d6e271](https://github.com/SocialGouv/mda/commit/5d6e271e1ae8c47de13c49acb3773c13593c4d16))
+
 # [1.4.0](https://github.com/SocialGouv/mda/compare/v1.3.0...v1.4.0) (2023-01-31)
 
 
