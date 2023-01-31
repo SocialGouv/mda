@@ -1,5 +1,10 @@
 import { ActionsButtons } from "@components/base/client/ActionsButtons";
 import {
+  Card,
+  CardBody,
+  CardBodyContent,
+  CardBodyContentDescription,
+  CardBodyContentTitle,
   Container,
   Grid,
   GridCol,
@@ -11,8 +16,6 @@ import {
 } from "@design-system";
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 
-import { Tiles } from "../Tiles";
-
 const MonParcoursAidant = () => {
   return (
     <section className="fr-py-6w fr-py-md-12w">
@@ -23,10 +26,10 @@ const MonParcoursAidant = () => {
             <h1>Mon parcours de parent ou d'aidant</h1>
             <div className="fr-text--xl">
               <p>
-                En tant que parent ou proche aidant, plusieurs étapes clés sont à réaliser pour accompagner votre proche
-                à mener sa vie de la manière la plus autonome possible. Quelque soit votre situation, retrouvez
-                ci-dessous des contenus et outils de guidance pour vous aider à y voir plus clair sur le déroulé de ces
-                grandes étapes.
+                En tant que parent ou proche aidant, plusieurs étapes clés sont à réaliser pour accompagner votre enfant
+                ou votre proche à mener sa vie de la manière la plus autonome possible. Quelque soit votre situation,
+                retrouvez ci-dessous des contenus et outils de guidance pour vous aider à y voir plus clair sur le
+                déroulé de ces grandes étapes.
               </p>
             </div>
           </GridCol>
@@ -69,8 +72,9 @@ const MonParcoursAidant = () => {
                   </NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
-                  Lorsque mon enfant ou mon proche a finalisé son parcours de diagnostic et qu'il conclut à un TSA, je
-                  m'adresse à la Maison Départementale des Personnes Handicapées et je dépose un dossier.
+                  Lorsque mon enfant ou mon proche a finalisé son parcours de diagnostic et qu'il conclut à des Troubles
+                  du Spectre de l'Autisme, je m'adresse à la Maison Départementale des Personnes Handicapées et je
+                  dépose un dossier.
                 </TimelineDescription>
               </TimelineItem>
 
@@ -151,7 +155,77 @@ const MonParcoursAidant = () => {
               </TimelineItem>
             </Timeline>
           </GridCol>
-          <Tiles />
+          <GridCol md={10} lg={8} className="fr-mt-4w">
+            <Grid haveGutters>
+              <GridCol md={6}>
+                <Card isEnlargeLink>
+                  <CardBody>
+                    <CardBodyContent>
+                      <CardBodyContentTitle titleAs="h2">
+                        <NextLinkOrA href="/fiches-pratiques/je-demande-de-l-aide-a-mon-entourage">
+                          Je demande de l'aide à mon entourage
+                        </NextLinkOrA>
+                      </CardBodyContentTitle>
+                      <CardBodyContentDescription>
+                        Demander de l'aide à son entourage est un réflexe important pour améliorer sa qualité de vie en
+                        tant que parent, et faire face aux nombreux défis auxquels on se trouve confronté après le
+                        diagnostic de son enfant.
+                      </CardBodyContentDescription>
+                    </CardBodyContent>
+                  </CardBody>
+                </Card>
+              </GridCol>
+
+              <GridCol md={6}>
+                <Card isEnlargeLink>
+                  <CardBody>
+                    <CardBodyContent>
+                      <CardBodyContentTitle titleAs="h2">
+                        <NextLinkOrA href="/fiches-pratiques/je-cherche-des-groupes-d-entraide">
+                          Je cherche des groupes avec qui échanger
+                        </NextLinkOrA>
+                      </CardBodyContentTitle>
+                      <CardBodyContentDescription>
+                        Échanger avec des personnes permet de trouver du soutien, de rompre avec l’isolement, de mieux
+                        comprendre la situation et de rechercher des solutions, mais également de valoriser votre
+                        expérience.
+                      </CardBodyContentDescription>
+                    </CardBodyContent>
+                  </CardBody>
+                </Card>
+              </GridCol>
+              <GridCol md={6}>
+                <Card isEnlargeLink>
+                  <CardBody>
+                    <CardBodyContent>
+                      <CardBodyContentTitle titleAs="h2">
+                        <NextLinkOrA href="/je-donne-mon-avis">Je donne mon avis</NextLinkOrA>
+                      </CardBodyContentTitle>
+                      <CardBodyContentDescription>
+                        Un oubli&nbsp;? Une suggestion&nbsp;? Utilisez le module Je donne mon avis pour soumettre vos
+                        idées afin de contribuer à enrichir ce service public.
+                      </CardBodyContentDescription>
+                    </CardBodyContent>
+                  </CardBody>
+                </Card>
+              </GridCol>
+              <GridCol md={6}>
+                <Card isEnlargeLink>
+                  <CardBody>
+                    <CardBodyContent>
+                      <CardBodyContentTitle titleAs="h2">
+                        <NextLinkOrA href="/annuaire">Annuaire</NextLinkOrA>
+                      </CardBodyContentTitle>
+                      <CardBodyContentDescription>
+                        Vous cherchez des contacts de confiance&nbsp;? Un établissement ou un organisme&nbsp;? Des
+                        professionnels de santé&nbsp;? Une association&nbsp;?
+                      </CardBodyContentDescription>
+                    </CardBodyContent>
+                  </CardBody>
+                </Card>
+              </GridCol>
+            </Grid>
+          </GridCol>
         </Grid>
       </Container>
     </section>
