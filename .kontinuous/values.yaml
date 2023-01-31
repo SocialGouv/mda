@@ -41,7 +41,7 @@ strapi:
     HOST: "0.0.0.0"
     GITHUB_SHA: "{{ $.Values.global.sha }}"
     MDA_ENV: "{{ .Values.global.env }}"
-    WEB_URL: "{{ .Values.global.host }}"
+    WEB_URL: "https://{{ .Values.global.host }}"
 
 jobs:
   runs:
