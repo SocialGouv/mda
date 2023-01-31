@@ -73,11 +73,6 @@ declare namespace NodeJS {
          */
         NEXT_PUBLIC_GITHUB_SHA?: string;
         /**
-         * No dist value.
-         * {@link [Local Env Dist](.env.development)}
-         */
-        STRAPI_TOKEN?: string;
-        /**
          * Dist: `dev`
          * {@link [Local Env Dist](.env.development)}
          */
@@ -109,7 +104,6 @@ declare type ProcessEnvCustomKeys =
     | 'NEXT_PUBLIC_SITE_URL'
     | 'NEXT_PUBLIC_STRAPI_API_URL'
     | 'NEXT_PUBLIC_GITHUB_SHA'
-    | 'STRAPI_TOKEN'
     | 'MDA_ENV'
     | 'PRODUCTION'
     | 'WEBHOOK_REVALIDATE_TOKEN';

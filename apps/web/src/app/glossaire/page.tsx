@@ -6,12 +6,12 @@ const tempData = [
   {
     title: "AAH",
     id: "aaH",
-    description: "UAllocation aux adultes handicapés.",
+    description: "Allocation aux adultes handicapés.",
   },
   {
     title: "AEEH",
     id: "aesh",
-    description: "Allocation d'éducation enfants handicapés.",
+    description: "Allocation d'éducation de l’enfant handicapé.",
   },
   {
     title: "AESH",
@@ -391,6 +391,11 @@ const tempData = [
     description: "Recommandation des bonnes pratiques professionnelles.",
   },
   {
+    title: "RQTH",
+    id: "rqth",
+    description: "Reconnaissance de la qualité de travailleur handicapé.",
+  },
+  {
     title: "SAAD",
     id: "saad",
     description: "Service d'aide et d'accompagnement à domicile.",
@@ -508,8 +513,7 @@ const Glossary = () => {
     <SimpleContentPage>
       <ActionsButtons />
       <h1>Glossaire</h1>
-      <p>Glossaire fourni par la DIA.</p>
-      <dl>
+      <dl className="fr-mt-6w">
         {tempData.map((item, index) => (
           <div key={index} className={clsx(index > 0 && "fr-mt-2w")}>
             {item.url ? (

@@ -1,0 +1,14 @@
+{
+  "name": "@mda/strapi-types",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Fabrique des ministères sociaux",
+  "license": "SEE LICENSE IN ../../LICENSE",
+  "types": "index.d.ts",
+  "main": "index.d.ts",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "@strapi/strapi": "4.6.0"
+  }
+}

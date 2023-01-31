@@ -15,7 +15,7 @@ const strapiWebhookHandler: NextApiHandler = async (req, res) => {
     res.status(405).send({ message: "Method not allowed" });
   }
 
-  if (req.headers.authorization !== `Bearer ${config.webhookRevalidateToken}`) {
+  if (req.headers.authorization !== `Bearer ${config.server.webhookRevalidateToken}`) {
     return res.status(401).json({ message: "Invalid token" });
   }
 
@@ -31,5 +31,4 @@ const strapiWebhookHandler: NextApiHandler = async (req, res) => {
   res.status(200).send(null);
 };
 
-// eslint-disable-next-line import/no-default-export
 export default strapiWebhookHandler;

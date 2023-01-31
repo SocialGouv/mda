@@ -1,5 +1,6 @@
 import "../styles/global.css";
 
+import { config } from "@common/config";
 import { DEFAULT_SEO_CONFIG } from "@common/config/next-seo";
 import { BasicLayout } from "@components/layouts/BasicLayout";
 import { DarkTheme } from "@components/utils/client/DarkTheme";
@@ -12,7 +13,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
     <html lang="fr">
       <head>
         <NextSeo {...DEFAULT_SEO_CONFIG} />
-        <Matomo />
+        <Matomo env={config.server.env} />
         <DarkTheme />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

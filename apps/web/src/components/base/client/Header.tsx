@@ -71,18 +71,19 @@ export const Header = () => {
             <MainNavItemWithDropdown
               title="Mon parcours"
               links={[
-                { href: "/mon-parcours/personne-autiste", label: "Personne Autiste" },
+                { href: "/mon-parcours/personne-autiste", label: "Personne autiste" },
                 { href: "/mon-parcours/parent-personne-aidante", label: "Parent ou aidant" },
                 { href: "/mon-parcours/professionnel-de-sante", label: "Professionnel de santé ou du médico-social" },
               ]}
             />
             <MainNavItem href="/mon-diagnostic">Mon diagnostic</MainNavItem>
-            <MainNavItem href="/mes-aides">Mes aides</MainNavItem>
+            <MainNavItem href="/fiches-pratiques/mes-aides">Mes aides</MainNavItem>
 
             <MainNavItem href="/fiches-pratiques">Fiches pratiques</MainNavItem>
             <MainNavItem href="/annuaire">Annuaire</MainNavItem>
             <MainNavItem href="/glossaire">Glossaire</MainNavItem>
             <MainNavItem href="/la-maison-de-l-autisme">La Maison de l'autisme</MainNavItem>
+            <MainNavItem href="/je-donne-mon-avis">Je donne mon avis</MainNavItem>
           </MainNav>
         </div>
       </div>

@@ -4,10 +4,12 @@ import { config } from "@common/config";
 import { init } from "@socialgouv/matomo-next";
 import { useEffect } from "react";
 
-export const Matomo = () => {
+export type MatomoProps = Pick<(typeof config)["server"], "env">;
+
+export const Matomo = ({ env }: MatomoProps) => {
   useEffect(() => {
-    config.env === "prod" && init(config.matomo);
-  }, []);
+    env === "prod" && init(config.matomo);
+  }, [env]);
 
   return <></>;
 };

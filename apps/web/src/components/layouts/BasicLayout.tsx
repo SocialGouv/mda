@@ -38,7 +38,9 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
         <SkipLinksItem href="#header">Menu</SkipLinksItem>
         <SkipLinksItem href="#footer">Pied de page</SkipLinksItem>
       </SkipLinks>
-      <Notice className="fr-no-print">Service en version beta</Notice>
+      <Notice className="fr-no-print">
+        <NextLinkOrA href="je-donne-mon-avis">Service en version beta</NextLinkOrA>
+      </Notice>
       <Header />
       <BreadcrumbDynamic />
       <main role="main" id="content">
@@ -65,10 +67,47 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
               Pour les demandes personnelles, veuillez vous rapprocher de l'organisme en charge de votre dossier. Pour
               toute question, vous pouvez contacter{" "}
               <a href="https://www.autismeinfoservice.fr/" target="_blank" rel="noreferrer">
-                Autisme Info Services
+                Autisme Info Service
               </a>
               .
             </FooterBodyContentDescription>
+            <FooterBodyContentItems>
+              <FooterBodyItem>
+                <FooterContentLink href="https://handicap.gouv.fr/accueil" target="_blank" rel="noreferrer" isExternal>
+                  Handicap.gouv.fr
+                </FooterContentLink>
+              </FooterBodyItem>
+              <FooterBodyItem>
+                <FooterContentLink
+                  href="https://www.monparcourshandicap.gouv.fr/"
+                  target="_blank"
+                  rel="noreferrer"
+                  isExternal
+                >
+                  Mon Parcours Handicap
+                </FooterContentLink>
+              </FooterBodyItem>
+              <FooterBodyItem>
+                <FooterContentLink
+                  href="https://www.mesdroitssociaux.gouv.fr/accueil/"
+                  target="_blank"
+                  rel="noreferrer"
+                  isExternal
+                >
+                  Mes Droits Sociaux
+                </FooterContentLink>
+              </FooterBodyItem>
+              <FooterBodyItem>
+                <FooterContentLink
+                  href="https://solidarites.gouv.fr/accueil"
+                  target="_blank"
+                  rel="noreferrer"
+                  isExternal
+                >
+                  Ministère des Solidarités, de l'Autonomie et des Personnes Handicapées
+                </FooterContentLink>
+              </FooterBodyItem>
+            </FooterBodyContentItems>
             <FooterBodyContentItems>
               <FooterBodyItem>
                 <FooterContentLink href="https://www.legifrance.gouv.fr/" target="_blank" rel="noreferrer" isExternal>

@@ -50,7 +50,7 @@ const FichePratique = async ({ params }: FichePratiqueProps) => {
                 Mise à jour
                 {currentFiche.attributes.updatedAt &&
                   ` le ${new Date(currentFiche.attributes.updatedAt).toLocaleString("fr-FR")} -`}{" "}
-                par la Maison de l'Austisme
+                par la Maison de l'autisme
               </>
             </p>
             <div className="fr-text--xl">

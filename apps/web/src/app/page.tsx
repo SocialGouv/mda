@@ -14,7 +14,6 @@ import {
   Container,
   Grid,
   GridCol,
-  PlaceholderImg,
   Tile,
   TileBody,
   TileBodyDescription,
@@ -25,6 +24,7 @@ import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 import Image from "next/image";
 
 import heroPic from "../../public/home-hero.jpeg";
+import mdaPic from "../../public/mda.jpg";
 import styles from "./index.module.css";
 
 const HomePage = () => {
@@ -48,7 +48,7 @@ const HomePage = () => {
                     <ButtonAsLink href="/fiches-pratiques/qu-est-ce-que-l-autisme">Comprendre l'autisme</ButtonAsLink>
                   </ButtonGroupItem>
                   <ButtonGroupItem>
-                    <ButtonAsLink variant="secondary" href="#">
+                    <ButtonAsLink variant="secondary" href="/mon-diagnostic">
                       J'ai un doute
                     </ButtonAsLink>
                   </ButtonGroupItem>
@@ -106,7 +106,7 @@ const HomePage = () => {
               <GridCol lg={6}>
                 <Tile>
                   <TileBody>
-                    <TileBodyTitle href="#" titleAs="h3">
+                    <TileBodyTitle href="/fiches-pratiques/mes-aides" titleAs="h3">
                       Mes aides
                     </TileBodyTitle>
                     <TileBodyDescription>
@@ -122,7 +122,7 @@ const HomePage = () => {
               <GridCol lg={6}>
                 <Tile>
                   <TileBody>
-                    <TileBodyTitle href="#" titleAs="h3">
+                    <TileBodyTitle href="/mon-diagnostic" titleAs="h3">
                       Mon diagnostic
                     </TileBodyTitle>
                     <TileBodyDescription>
@@ -144,11 +144,13 @@ const HomePage = () => {
                   <CardBody>
                     <CardBodyContent>
                       <CardBodyContentTitle titleAs="h3">
-                        <NextLinkOrA href="#">Dossier MDPH</NextLinkOrA>
+                        <NextLinkOrA href="/fiches-pratiques/qu-est-ce-que-l-autisme">
+                          Qu'est ce que l'autisme&nbsp;?
+                        </NextLinkOrA>
                       </CardBodyContentTitle>
                       <CardBodyContentDescription>
-                        Le dossier MDPH est une étape incontournable du parcours d'une personne autiste. Retrouvez ici
-                        toutes les informations pratiques pour compléter ce dossier.
+                        L’autisme est un trouble du neurodéveloppement (TND) précoce qui impacte les capacités de
+                        communication, les interactions sociales et les comportements des personnes.
                       </CardBodyContentDescription>
                     </CardBodyContent>
                   </CardBody>
@@ -159,11 +161,14 @@ const HomePage = () => {
                   <CardBody>
                     <CardBodyContent>
                       <CardBodyContentTitle titleAs="h3">
-                        <NextLinkOrA href="#">Démarches de la vie quotidienne</NextLinkOrA>
+                        <NextLinkOrA href="/fiches-pratiques/plateforme-coordination-et-d-orientation">
+                          Plateforme Coordination et d’Orientation (PCO)
+                        </NextLinkOrA>
                       </CardBodyContentTitle>
                       <CardBodyContentDescription>
-                        Scolarisation, études supérieures, transport, logement, emploi ... cette rubrique partage les
-                        grandes étapes de la vie d'une personne autiste et les démarches associées.
+                        Les plateformes de coordination et d’orientation (PCO) pour suspicion de troubles du
+                        neurodéveloppement (TND) s’adressent aux enfants de 0 à 12 ans pour qu’ils bénéficient,
+                        gratuitement et sans tarder, d’un parcours de soins.
                       </CardBodyContentDescription>
                     </CardBodyContent>
                   </CardBody>
@@ -174,11 +179,13 @@ const HomePage = () => {
                   <CardBody>
                     <CardBodyContent>
                       <CardBodyContentTitle titleAs="h3">
-                        <NextLinkOrA href="#">Méthodes pédagogiques et communicationnelles</NextLinkOrA>
+                        <NextLinkOrA href="/fiches-pratiques/parcours-de-diagnostic">
+                          Parcours de diagnostic
+                        </NextLinkOrA>
                       </CardBodyContentTitle>
                       <CardBodyContentDescription>
-                        Vous trouverez dans cette rubrique des fiches pratiques sur les méthodes pédagogiques et
-                        communicationnelles pour vous aider au quotidien avec votre enfant.
+                        Le diagnostic est un parcours qui se réalise auprès de plusieurs professionnels de santé.
+                        Plusieurs types de parcours existent selon l'âge de la personne.
                       </CardBodyContentDescription>
                     </CardBodyContent>
                   </CardBody>
@@ -189,12 +196,12 @@ const HomePage = () => {
                   <CardBody>
                     <CardBodyContent>
                       <CardBodyContentTitle titleAs="h3">
-                        <NextLinkOrA href="#">Groupes d'entraides</NextLinkOrA>
+                        <NextLinkOrA href="/fiches-pratiques/dossier-mdph">Dossier MDPH</NextLinkOrA>
                       </CardBodyContentTitle>
                       <CardBodyContentDescription>
-                        Souvent implantés au cœur de la ville, ils permettent de se retrouver, de s’entraider,
-                        d’organiser des activités visant au développement personnel, de passer des moments conviviaux et
-                        de créer des liens.
+                        Pour obtenir la reconnaissance de votre handicap et le soutien nécessaire à la gestion de votre
+                        quotidien, il est nécessaire de connaître les aides et les orientations auxquelles vous pouvez
+                        prétendre.
                       </CardBodyContentDescription>
                     </CardBodyContent>
                   </CardBody>
@@ -205,11 +212,11 @@ const HomePage = () => {
                   <CardBody>
                     <CardBodyContent>
                       <CardBodyContentTitle titleAs="h3">
-                        <NextLinkOrA href="#">Formations certifiantes</NextLinkOrA>
+                        <NextLinkOrA href="/fiches-pratiques/acteurs-et-organismes">Acteurs et organismes</NextLinkOrA>
                       </CardBodyContentTitle>
                       <CardBodyContentDescription>
-                        En ligne ou en présentiel, cette rubrique référence une large variété de formations spécialisées
-                        sur les Troubles du Neuro-Développement et le Trouble du Spectre Autistique.
+                        Il existe plusieurs acteurs et organismes qui interviennent dans le secteur de l’autisme.
+                        Aujourd’hui, en France, ils accompagnent les personnes autistes dans leur quotidien.
                       </CardBodyContentDescription>
                     </CardBodyContent>
                   </CardBody>
@@ -220,11 +227,13 @@ const HomePage = () => {
                   <CardBody>
                     <CardBodyContent>
                       <CardBodyContentTitle titleAs="h3">
-                        <NextLinkOrA href="#">Solutions de répit</NextLinkOrA>
+                        <NextLinkOrA href="/fiches-pratiques/je-cherche-des-groupes-d-entraide">
+                          Je cherche des groupes d'entraide
+                        </NextLinkOrA>
                       </CardBodyContentTitle>
                       <CardBodyContentDescription>
-                        En ligne ou en présentiel, cette rubrique référence une large variété de formations spécialisées
-                        sur les Troubles du Neuro-Développement et le Trouble du Spectre Autistique.
+                        Le partage d’expériences similaires peut constituer une véritable aide pour les personnes
+                        concernées ou pour leurs proches.
                       </CardBodyContentDescription>
                     </CardBodyContent>
                   </CardBody>
@@ -243,10 +252,17 @@ const HomePage = () => {
         <Container>
           <Grid haveGutters>
             <GridCol lg={5}>
-              <PlaceholderImg />
+              <Image
+                className="fr-fluid-img"
+                src={mdaPic}
+                alt="La Maison de l'autisme"
+                width={441}
+                height={291}
+                placeholder="blur"
+              />
             </GridCol>
             <GridCol lg={7} className="fr-pt-2w fr-pt-lg-6w fr-pl-lg-4w">
-              <h2 className="fr-h1">La maison de l’autisme</h2>
+              <h2 className="fr-h1">La Maison de l’autisme</h2>
               <p className="fr-text--lg fr-text--bold">
                 La Maison de l'autisme sera située 10 rue Waldeck Rochet à Aubervilliers, en Seine-Saint-Denis. Les
                 services du département de la Seine-Saint-Denis et la RATP faciliteront l'accès à la Maison de
@@ -260,7 +276,7 @@ const HomePage = () => {
                 initiative
               </p>
               <div className="fr-mt-4w">
-                <ButtonAsLink href="#">En savoir plus</ButtonAsLink>
+                <ButtonAsLink href="/la-maison-de-l-autisme">En savoir plus</ButtonAsLink>
               </div>
             </GridCol>
           </Grid>

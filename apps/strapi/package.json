@@ -13,7 +13,7 @@
     "lint": "eslint",
     "content:dump": "strapi export --no-encrypt --only content --file content-dump",
     "content:import": "strapi import --only content --force --file content-dump.tar.gz",
-    "generate-types": "strapi ts:generate-types -f index.d.ts && echo \"/* eslint-disable */\n$(cat index.d.ts)\" > index.d.ts",
+    "generate-types": "strapi ts:generate-types -f ../../packages/strapi-types/index.d.ts && echo \"/* eslint-disable */\n$(cat ../../packages/strapi-types/index.d.ts)\" > ../../packages/strapi-types/index.d.ts",
     "generate-env": "echo \"MDA_ENV=dev\nAPP_KEYS=$(openssl rand -base64 32),$(openssl rand -base64 32)\nAPI_TOKEN_SALT=$(openssl rand -base64 32)\nADMIN_JWT_SECRET=$(openssl rand -base64 32)\nJWT_SECRET=$(openssl rand -base64 32)\" > .env"
   },
   "devDependencies": {
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@mda/config": "*",
+    "@mda/strapi-types": "*",
     "@strapi/plugin-users-permissions": "4.6.0",
     "@strapi/strapi": "4.6.0",
     "pg": "8.8.0",

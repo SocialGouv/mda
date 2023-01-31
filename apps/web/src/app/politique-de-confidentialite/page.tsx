@@ -77,9 +77,7 @@ const PrivacyPolicy = () => {
       </ul>
       <p>
         Pour les exercer, contactez-nous à&nbsp;:{" "}
-        <a href="https://www.autismeinfoservice.fr/" target="_blank" rel="noreferrer">
-          https://www.autismeinfoservice.fr/
-        </a>
+        <a href="mailto:maisondelautisme@fabrique.social.gouv.fr">maisondelautisme@fabrique.social.gouv.fr</a>
       </p>
       <p>
         Puisque ce sont des droits personnels, nous ne traiterons votre demande que si nous sommes en mesure de vous

@@ -18,10 +18,7 @@ const MonParcoursAidant = () => {
         <Grid haveGutters justifyCenter>
           <GridCol md={10} lg={8}>
             <ActionsButtons />
-            <h1>Mon parcours de professionnel de santé ou du médico-sociale</h1>
-            <p className="fr-text--xs">
-              Vérifié le 8 novembre 2022 - Direction de l'information légale et administrative (Premier ministre)
-            </p>
+            <h1>Mon parcours de professionnel de santé ou du médico-social</h1>
             <div className="fr-text--xl">
               <p>
                 Cette rubrique du site internet est en cours de construction pour le moment. Si vous êtes un
@@ -38,10 +35,13 @@ const MonParcoursAidant = () => {
                   <CardBody>
                     <CardBodyContent>
                       <CardBodyContentTitle titleAs="h2">
-                        <NextLinkOrA href="#">Comment diagnostiquer un patient potentiellement autiste</NextLinkOrA>
+                        <NextLinkOrA href="/fiches-pratiques/comment-puis-je-diagnostiquer-un-patient-potentiellement-autiste">
+                          Comment diagnostiquer un patient potentiellement autiste
+                        </NextLinkOrA>
                       </CardBodyContentTitle>
                       <CardBodyContentDescription>
-                        xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx
+                        Le diagnostic de troubles du spectre de l’autisme relève d’un médecin, qui s’appuie autant que
+                        nécessaire sur une démarche pluridisciplinaire.
                       </CardBodyContentDescription>
                     </CardBodyContent>
                   </CardBody>
@@ -53,10 +53,13 @@ const MonParcoursAidant = () => {
                   <CardBody>
                     <CardBodyContent>
                       <CardBodyContentTitle titleAs="h2">
-                        <NextLinkOrA href="#">Parcours de diagnostic</NextLinkOrA>
+                        <NextLinkOrA href="/fiches-pratiques/parcours-de-diagnostic">
+                          Parcours de diagnostic
+                        </NextLinkOrA>
                       </CardBodyContentTitle>
                       <CardBodyContentDescription>
-                        xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx
+                        Le diagnostic est un parcours qui se réalise auprès de plusieurs professionnels de santé.
+                        Plusieurs types de parcours existent selon l'âge de la personne.
                       </CardBodyContentDescription>
                     </CardBodyContent>
                   </CardBody>
@@ -70,9 +73,8 @@ const MonParcoursAidant = () => {
                         <NextLinkOrA href="/je-donne-mon-avis">Je donne mon avis</NextLinkOrA>
                       </CardBodyContentTitle>
                       <CardBodyContentDescription>
-                        Un oubli&nbsp;? Une suggestion&nbsp;? Utilisez le module "JeDonneMonAvis" pour soumettre vos
-                        idées afin de contribuer à enrichir ce service public construit par et pour les personnes
-                        autistes et leurs proches.
+                        Un oubli&nbsp;? Une suggestion&nbsp;? Utilisez le module Je donne mon avis pour soumettre vos
+                        idées afin de contribuer à enrichir ce service public.
                       </CardBodyContentDescription>
                     </CardBodyContent>
                   </CardBody>
@@ -83,10 +85,14 @@ const MonParcoursAidant = () => {
                   <CardBody>
                     <CardBodyContent>
                       <CardBodyContentTitle titleAs="h2">
-                        <NextLinkOrA href="#">Recommandations de Bonnes Pratiques Professionnelles</NextLinkOrA>
+                        <NextLinkOrA href="/fiches-pratiques/recommandations-de-bonnes-pratiques-professionnelles">
+                          Recommandations de Bonnes Pratiques Professionnelles
+                        </NextLinkOrA>
                       </CardBodyContentTitle>
                       <CardBodyContentDescription>
-                        xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx
+                        Les recommandations de bonnes pratiques professionnelles (aussi appelées les RBPP) sont des
+                        synthèses rigoureuses de l’état de l’art, des connaissances et des pratiques sur l’autisme, à un
+                        temps donné.
                       </CardBodyContentDescription>
                     </CardBodyContent>
                   </CardBody>
