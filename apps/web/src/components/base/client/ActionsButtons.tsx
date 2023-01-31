@@ -1,5 +1,6 @@
 "use client";
 
+import { config } from "@common/config";
 import { ButtonAsLink, FormButton } from "@design-system";
 import { push } from "@socialgouv/matomo-next";
 import clsx from "clsx";
@@ -9,15 +10,14 @@ import styles from "./ActionsButtons.module.css";
 
 export const ActionsButtons = ({ className }: { className?: string }) => {
   const currentPathName = usePathname() ?? "";
-  const pageUrl = `${process.env.NEXT_PUBLIC_SITE_URL ?? ""}${currentPathName}`;
-  console.log(pageUrl);
+  const pageUrl = new URL(currentPathName, config.siteUrl).toString();
   return (
     <ul className={clsx("fr-no-print", styles.list, className)}>
       <li>
         <FormButton
           onClick={() => {
             window.print();
-            push(["trackEvent", "Print page", "Click on print button"]);
+            push(["trackEvent", "Page Action", "Page Printed", pageUrl]);
           }}
           iconOnly="fr-icon-printer-line"
           title="Imprimer la page"
@@ -35,7 +35,7 @@ export const ActionsButtons = ({ className }: { className?: string }) => {
           variant="tertiary-no-border"
           isRounded
           onClick={() => {
-            push(["trackEvent", "Share page", "Click on share button"]);
+            push(["trackEvent", "Page Action", "Page Shared", pageUrl]);
           }}
         >
           Partager cette url

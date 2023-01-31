@@ -6,6 +6,7 @@ import { FormGroupSelect } from "@components/base/FormGroupSelect";
 import { FormGroupTextarea } from "@components/base/FormGroupTextarea";
 import { Fieldset, FieldsetElement, FormButton } from "@design-system";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { push } from "@socialgouv/matomo-next";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -33,6 +34,7 @@ export const FeedbackForm = () => {
     if (response.ok) {
       // green toast
       console.log("envoyé");
+      push(["trackEvent", "Feedback", "Feedback Sent"]);
     } else {
       // red toast
       console.log("fucké", response);

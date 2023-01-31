@@ -31,12 +31,9 @@ export const DiagSteps = ({ firstQuestion }: DiagStepsProps) => {
   });
   return (
     <FormGroupSteps>
-      <>
-        {questionList.map((question, idx) => (
-          <QuestionBox key={`question-${question.id}`} index={idx} question={question} />
-        ))}
-        {questionList.length === 2 && push(["trackEvent", "Diagnostic", "3 steps"])}
-      </>
+      {questionList.map((question, idx) => (
+        <QuestionBox key={`question-${question.id}`} index={idx} question={question} />
+      ))}
     </FormGroupSteps>
   );
 };
@@ -66,6 +63,10 @@ const QuestionBox = ({ question, index }: QuestionBoxProps) => {
         console.log("Go to destination", destination);
         if (destination.data) addQuestion(destination.data, index + 1);
       });
+
+      if (index === 2) {
+        push(["trackEvent", "Diagnostic", "Three steps passed"]);
+      }
     } else {
       // else reset the question at the same index in the list
       addQuestion(question, index);
