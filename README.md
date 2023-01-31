@@ -1,4 +1,4 @@
-# Maison Numérique de l'Autisme
+# Maison Numérique de l'autisme
 
 ## Init
 ### Node
