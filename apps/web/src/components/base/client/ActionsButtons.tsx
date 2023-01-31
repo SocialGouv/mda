@@ -1,6 +1,7 @@
 "use client";
 
 import { ButtonAsLink, FormButton } from "@design-system";
+import { push } from "@socialgouv/matomo-next";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 
@@ -14,7 +15,10 @@ export const ActionsButtons = ({ className }: { className?: string }) => {
     <ul className={clsx("fr-no-print", styles.list, className)}>
       <li>
         <FormButton
-          onClick={() => window.print()}
+          onClick={() => {
+            window.print();
+            push(["trackEvent", "Print page", "Click on print button"]);
+          }}
           iconOnly="fr-icon-printer-line"
           title="Imprimer la page"
           variant="tertiary-no-border"
@@ -30,6 +34,9 @@ export const ActionsButtons = ({ className }: { className?: string }) => {
           title="Partager cette url"
           variant="tertiary-no-border"
           isRounded
+          onClick={() => {
+            push(["trackEvent", "Share page", "Click on share button"]);
+          }}
         >
           Partager cette url
         </ButtonAsLink>

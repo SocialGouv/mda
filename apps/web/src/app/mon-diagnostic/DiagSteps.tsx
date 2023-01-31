@@ -12,6 +12,7 @@ import {
 } from "@design-system";
 import { fetchStrapi } from "@services/strapi";
 import { type Response } from "@services/strapiApiTypes";
+import { push } from "@socialgouv/matomo-next";
 import { useCallback, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
@@ -30,9 +31,12 @@ export const DiagSteps = ({ firstQuestion }: DiagStepsProps) => {
   });
   return (
     <FormGroupSteps>
-      {questionList.map((question, idx) => (
-        <QuestionBox key={`question-${question.id}`} index={idx} question={question} />
-      ))}
+      <>
+        {questionList.map((question, idx) => (
+          <QuestionBox key={`question-${question.id}`} index={idx} question={question} />
+        ))}
+        {questionList.length === 2 && push(["trackEvent", "Diagnostic", "3 steps"])}
+      </>
     </FormGroupSteps>
   );
 };
