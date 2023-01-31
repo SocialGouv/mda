@@ -12,6 +12,7 @@ import {
 } from "@design-system";
 import { fetchStrapi } from "@services/strapi";
 import { type Response } from "@services/strapiApiTypes";
+import { push } from "@socialgouv/matomo-next";
 import { useCallback, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
@@ -62,6 +63,10 @@ const QuestionBox = ({ question, index }: QuestionBoxProps) => {
         console.log("Go to destination", destination);
         if (destination.data) addQuestion(destination.data, index + 1);
       });
+
+      if (index === 2) {
+        push(["trackEvent", "Diagnostic", "Three Steps Passed"]);
+      }
     } else {
       // else reset the question at the same index in the list
       addQuestion(question, index);

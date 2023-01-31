@@ -6,8 +6,8 @@ web:
   envFrom:
     - secretRef:
         name: "mda-revalidate-webhook"
-    # - secretRef:
-    #     name: "mda-web-smtp"
+    - secretRef:
+        name: "mda-web-smtp"
 
 jobs:
   runs:

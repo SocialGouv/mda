@@ -10,6 +10,7 @@ const ensureOsEnvVar: typeof ensureEnvVar<ProcessEnvCustomKeys> = (key, defaultV
 
 export const config = {
   siteTitle: "Maison de l'autisme",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "",
   matomo: {
     url: process.env.NEXT_PUBLIC_MATOMO_URL ?? "",
     siteId: process.env.NEXT_PUBLIC_MATOMO_SITE_ID ?? "",
