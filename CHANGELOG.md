@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/SocialGouv/mda/compare/v1.4.2...v1.4.3) (2023-01-31)
+
+
+### Bug Fixes
+
+* widen csp ([75acaa5](https://github.com/SocialGouv/mda/commit/75acaa5ab1f8aabd975d6f66b9df2ed535464064))
+
 ## [1.4.2](https://github.com/SocialGouv/mda/compare/v1.4.1...v1.4.2) (2023-01-31)
 
 
