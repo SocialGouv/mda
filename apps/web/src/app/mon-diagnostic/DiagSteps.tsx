@@ -65,7 +65,7 @@ const QuestionBox = ({ question, index }: QuestionBoxProps) => {
       });
 
       if (index === 2) {
-        push(["trackEvent", "Diagnostic", "Three steps passed"]);
+        push(["trackEvent", "Diagnostic", "Three Steps Passed"]);
       }
     } else {
       // else reset the question at the same index in the list
