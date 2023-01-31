@@ -1,3 +1,24 @@
+# [1.4.0](https://github.com/SocialGouv/mda/compare/v1.3.0...v1.4.0) (2023-01-31)
+
+
+### Bug Fixes
+
+* beta banner sticky important ([545919e](https://github.com/SocialGouv/mda/commit/545919e327a6cc4c8d3feea249ad6228ecb803d4))
+* **cd:** prefix site url env with https ([f8e6ea3](https://github.com/SocialGouv/mda/commit/f8e6ea3d5664dd19de3d73b7f7d139372262b984))
+* typo ([#83](https://github.com/SocialGouv/mda/issues/83)) ([eb661d7](https://github.com/SocialGouv/mda/commit/eb661d72da8a80859478466c3f55823c48783196))
+
+
+### Features
+
+* add feedback form + gdpr ([#79](https://github.com/SocialGouv/mda/issues/79)) ([b20ccdb](https://github.com/SocialGouv/mda/commit/b20ccdbe3c207bb0c62d0df6597989e1c8834415))
+* add partner link in footer ([#86](https://github.com/SocialGouv/mda/issues/86)) ([b49c2e2](https://github.com/SocialGouv/mda/commit/b49c2e2178ac912dcbbb32b13fbd0bd6e5706167))
+* add wording and links ([#75](https://github.com/SocialGouv/mda/issues/75)) ([1134e64](https://github.com/SocialGouv/mda/commit/1134e643188a5fd6d2609f7d4bbcaf10c5c266ac))
+* add wording and links ([#75](https://github.com/SocialGouv/mda/issues/75)) ([#77](https://github.com/SocialGouv/mda/issues/77)) ([6e0af8d](https://github.com/SocialGouv/mda/commit/6e0af8d9ca1b373515ca6433741546ef065272d4))
+* dock beta banner on top ([#90](https://github.com/SocialGouv/mda/issues/90)) ([f655d94](https://github.com/SocialGouv/mda/commit/f655d946fc9f71a775822a3d4913e248a667d36d))
+* matomo custom events ([#91](https://github.com/SocialGouv/mda/issues/91)) ([e636312](https://github.com/SocialGouv/mda/commit/e636312a3065d9ee605a3a26c93893bb977fad34))
+* update content ([#85](https://github.com/SocialGouv/mda/issues/85)) ([3681929](https://github.com/SocialGouv/mda/commit/36819299e4cc7f8b4ed13f55374f72742c71d7ac))
+* update home picture ([#78](https://github.com/SocialGouv/mda/issues/78)) ([8d733e3](https://github.com/SocialGouv/mda/commit/8d733e318368212fdaa9715b0598f4243ab50dfa))
+
 # [1.3.0](https://github.com/SocialGouv/mda/compare/v1.2.0...v1.3.0) (2023-01-30)
 
 
