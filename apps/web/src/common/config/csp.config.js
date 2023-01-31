@@ -3,7 +3,7 @@
 const ContentSecurityPolicy = `
   default-src 'self' https://*.gouv.fr;
   img-src 'self' data: https://*.gouv.fr https://www.googletagmanager.com;
-  script-src 'self' https://*.gouv.fr https://www.googletagmanager.com 'unsafe-inline' 'unsafe-eval';
+  script-src 'self' https://*.gouv.fr https://www.googletagmanager.com https://unpkg.com 'unsafe-inline' 'unsafe-eval';
   frame-src 'self' https://*.gouv.fr;
   style-src 'self' 'unsafe-inline';
   font-src 'self' data: blob:;

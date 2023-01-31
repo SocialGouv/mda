@@ -14,7 +14,10 @@
   - [ ] parcours diag builder (mind map / flow chart builder, save in db and as json)
   - [ ] button for manual nextjs revalidate
   - [ ] button in dev or preprod for "sync data from prod"
+- [ ] ajouter `strapi-sentry-plugin`
 
 # Web
 - [ ] finish SEO (display and title)
 - [ ] define and add plublic stat page (evaluate if this https://github.com/SocialGouv/matomoboard is revelant)
+- [ ] ajouter Sentry
+- [ ] better logging

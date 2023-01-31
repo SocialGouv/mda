@@ -14,7 +14,6 @@ interface FeedbackData {
 const mailerConfig: SMTPConnection.Options = {
   host: config.server.mailer.host,
   port: config.server.mailer.smtp.port,
-  secure: config.server.mailer.smtp.ssl,
   auth: {
     user: config.server.mailer.smtp.login,
     pass: config.server.mailer.smtp.password,
