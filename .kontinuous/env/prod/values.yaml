@@ -2,6 +2,13 @@ global:
   host: maisondelautisme.fabrique.social.gouv.fr
   # host: maisondelautisme.gouv.fr #TODO enable when domain is ok
 
+web:
+  envFrom:
+    - secretRef:
+        name: "mda-revalidate-webhook"
+    # - secretRef:
+    #     name: "mda-web-smtp"
+
 jobs:
   runs:
     build-web:

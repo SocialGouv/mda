@@ -38,7 +38,7 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
         <SkipLinksItem href="#header">Menu</SkipLinksItem>
         <SkipLinksItem href="#footer">Pied de page</SkipLinksItem>
       </SkipLinks>
-      <Notice className="fr-no-print">
+      <Notice className="fr-no-print fr-beta-banner">
         <NextLinkOrA href="je-donne-mon-avis">Service en version beta</NextLinkOrA>
       </Notice>
       <Header />
@@ -95,6 +95,16 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
                   isExternal
                 >
                   Mes Droits Sociaux
+                </FooterContentLink>
+              </FooterBodyItem>
+              <FooterBodyItem>
+                <FooterContentLink
+                  href="https://solidarites.gouv.fr/accueil"
+                  target="_blank"
+                  rel="noreferrer"
+                  isExternal
+                >
+                  Ministère des Solidarités, de l'Autonomie et des Personnes Handicapées
                 </FooterContentLink>
               </FooterBodyItem>
             </FooterBodyContentItems>

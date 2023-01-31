@@ -9,8 +9,9 @@ const AutismHouse = () => {
       <ActionsButtons />
       <h1>La Maison de l'autisme</h1>
       <p className="fr-text--xl">
-        La Maison de l’autisme n’est plus un projet, c’est une réalité. Elle se poursuit avec vous. Elle a hâte de vous
-        accueillir à Aubervilliers et en ligne dès avril prochain.
+        La Maison de l’autisme n’est plus un projet, c’est une réalité. Elle se poursuit avec vous. Ses portes ouvriront
+        à Aubervilliers dès avril prochain&nbsp;; en attendant nous avons hâte de recevoir votre avis sur ce site en
+        version bêta.
       </p>
       <CollapsedSectionDynamicGroup
         data={[

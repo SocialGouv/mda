@@ -1,5 +1,6 @@
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
-import { FormButton } from "@design-system";
+
+import { GDPRButton } from "./GDPRButton";
 
 const PrivacyPolicy = () => {
   return (
@@ -144,7 +145,7 @@ const PrivacyPolicy = () => {
           </tbody>
         </table>
       </div>
-      <h2>Cookies</h2>
+      <h2 id="cookies">Cookies</h2>
       <p>
         Un cookie est un fichier déposé sur votre terminal lors de la visite d’une application. Il a pour but de
         collecter des informations relatives à votre navigation et de vous adresser des services adaptés à votre
@@ -183,7 +184,7 @@ const PrivacyPolicy = () => {
       </p>
       <p>Vous pouvez néanmoins le désactivez via ce bouton&nbsp;:</p>
       <div className="fr-my-2w">
-        <FormButton>Modifier les réglages</FormButton>
+        <GDPRButton>Modifier les réglages</GDPRButton>
       </div>
       <p>
         À tout moment, vous pouvez refuser l’utilisation des cookies et désactiver le dépôt sur votre ordinateur en
