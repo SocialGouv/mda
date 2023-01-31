@@ -6,7 +6,7 @@ import { useCallback } from "react";
 
 export type TOCGDPRProps = Pick<(typeof config)["server"], "env">;
 
-export const TarteAuCitronGDPR = ({ env }: TOCGDPRProps) => {
+export const TarteAuCitronGDPR = ({ env: _env }: TOCGDPRProps) => {
   const handleLoad: ScriptProps["onLoad"] = useCallback(() => {
     tarteaucitron.init({
       privacyUrl: "/politique-de-confidentialite#cookies" /* Privacy policy url */,
