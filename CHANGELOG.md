@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/SocialGouv/mda/compare/v1.4.3...v1.4.4) (2023-02-01)
+
+
+### Bug Fixes
+
+* dummy url ([#93](https://github.com/SocialGouv/mda/issues/93)) ([2988a5c](https://github.com/SocialGouv/mda/commit/2988a5c8139394c16309fe521befead5d9b0618d))
+
 ## [1.4.3](https://github.com/SocialGouv/mda/compare/v1.4.2...v1.4.3) (2023-01-31)
 
 
