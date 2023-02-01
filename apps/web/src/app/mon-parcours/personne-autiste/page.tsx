@@ -65,7 +65,7 @@ const MonParcoursAidant = () => {
               </TimelineItem>
               <TimelineItem isEnlargeLink>
                 <TimelineItemTitle>
-                  <NextLinkOrA href="fiches-pratiques/je-sollicite-la-mdph-et-je-monte-un-dossier">
+                  <NextLinkOrA href="/fiches-pratiques/je-sollicite-la-mdph-et-je-monte-un-dossier">
                     Je sollicite la MDPH et je dépose un dossier
                   </NextLinkOrA>
                 </TimelineItemTitle>
@@ -114,7 +114,7 @@ const MonParcoursAidant = () => {
                       </TimelineItemFooterLink>
                     </li>
                     <li>
-                      <TimelineItemFooterLink href="fiches-pratiques/avoir-des-loisirs">
+                      <TimelineItemFooterLink href="/fiches-pratiques/avoir-des-loisirs">
                         Avoir des loisirs
                       </TimelineItemFooterLink>
                     </li>
