@@ -6,6 +6,7 @@ import "@gouvfr/dsfr/dist/utility/icons/icons-map/icons-map.min.css";
 import "@gouvfr/dsfr/dist/utility/icons/icons-design/icons-design.min.css";
 
 import { config } from "@common/config";
+import { ScrollUp } from "@components/base/client/ScrollUp";
 import {
   ButtonAsLink,
   Container,
@@ -37,6 +38,7 @@ import { Header } from "../base/client/Header";
 export const BasicLayout = ({ children }: PropsWithChildren) => {
   return (
     <>
+      <ScrollUp />
       <SkipLinks>
         <SkipLinksItem href="#content">Contenu</SkipLinksItem>
         <SkipLinksItem href="#header">Menu</SkipLinksItem>
