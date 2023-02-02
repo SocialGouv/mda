@@ -49,7 +49,7 @@ export const CardBodyContentTitle = ({ children, titleAs: HtmlTag = "p" }: CardB
 };
 
 export const CardBodyContentDescription = ({ children }: PropsWithChildren) => (
-  <p className="fr-card__desc">{children}</p>
+  <div className="fr-card__desc">{children}</div>
 );
 
 export type CardBodyContentLegendProps = PropsWithChildren<{ icon?: IconStyles }>;
