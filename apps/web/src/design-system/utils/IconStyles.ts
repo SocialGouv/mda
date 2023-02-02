@@ -1,4 +1,7 @@
 export type IconStyles =
+  | "fr-btn--facebook"
+  | "fr-btn--instagram"
+  | "fr-btn--linkedin"
   | "fr-fi-information-line"
   | "fr-icon-add-line"
   | "fr-icon-arrow-down-s-line"
