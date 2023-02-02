@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/SocialGouv/mda/compare/v1.4.4...v1.4.5) (2023-02-02)
+
+
+### Bug Fixes
+
+* dom node error ([#99](https://github.com/SocialGouv/mda/issues/99)) ([7574d04](https://github.com/SocialGouv/mda/commit/7574d0443c27640a3398134fb01e0b61ff9c30b0))
+
 ## [1.4.4](https://github.com/SocialGouv/mda/compare/v1.4.3...v1.4.4) (2023-02-01)
 
 
