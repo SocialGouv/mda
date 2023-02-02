@@ -5,7 +5,7 @@ import { Logo, LogoMda } from "@design-system";
 import { MainNav, MainNavItem, MainNavItemWithDropdown } from "@design-system/client";
 import clsx from "clsx";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { type PropsWithChildren, useEffect, useState } from "react";
 
 export const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -16,6 +16,12 @@ export const Header = () => {
       document.body.style.removeProperty("--scroll-top");
     }
   }, [navOpen]);
+
+  const MainNavLink = ({ href, children }: PropsWithChildren<{ href: string }>) => (
+    <MainNavItem onClick={() => setNavOpen(false)} href={href}>
+      {children}
+    </MainNavItem>
+  );
 
   return (
     <header role="banner" className="fr-header" id="header">
@@ -76,14 +82,14 @@ export const Header = () => {
                 { href: "/mon-parcours/professionnel-de-sante", label: "Professionnel de santé ou du médico-social" },
               ]}
             />
-            <MainNavItem href="/mon-diagnostic">Mon diagnostic</MainNavItem>
-            <MainNavItem href="/fiches-pratiques/mes-aides">Mes aides</MainNavItem>
+            <MainNavLink href="/mon-diagnostic">Mon diagnostic</MainNavLink>
+            <MainNavLink href="/fiches-pratiques/mes-aides">Mes aides</MainNavLink>
 
-            <MainNavItem href="/fiches-pratiques">Fiches pratiques</MainNavItem>
-            <MainNavItem href="/annuaire">Annuaire</MainNavItem>
-            <MainNavItem href="/glossaire">Glossaire</MainNavItem>
-            <MainNavItem href="/la-maison-de-l-autisme">La Maison de l'autisme</MainNavItem>
-            <MainNavItem href="/je-donne-mon-avis">Je donne mon avis</MainNavItem>
+            <MainNavLink href="/fiches-pratiques">Fiches pratiques</MainNavLink>
+            <MainNavLink href="/annuaire">Annuaire</MainNavLink>
+            <MainNavLink href="/glossaire">Glossaire</MainNavLink>
+            <MainNavLink href="/la-maison-de-l-autisme">La Maison de l'autisme</MainNavLink>
+            <MainNavLink href="/je-donne-mon-avis">Je donne mon avis</MainNavLink>
           </MainNav>
         </div>
       </div>

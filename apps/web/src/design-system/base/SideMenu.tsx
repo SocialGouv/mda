@@ -1,21 +1,19 @@
 import clsx from "clsx";
+import Link from "next/link";
 import type { PropsWithChildren } from "react";
 import { forwardRef } from "react";
 
-import { NextLinkOrA } from "../utils/NextLinkOrA";
-
 export const SideMenuTitle = ({ children }: PropsWithChildren) => <div className="fr-sidemenu__title">{children}</div>;
 
-export type SideMenuLinkProps = PropsWithChildren<
-  React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-    isCurrent?: boolean;
-  }
->;
+export type SideMenuLinkProps = PropsWithChildren<{
+  href: string;
+  isCurrent?: boolean;
+}>;
 
 export const SideMenuLink = forwardRef<HTMLAnchorElement, SideMenuLinkProps>(
   ({ isCurrent, children, href, ...rest }, ref) => (
     <li className={clsx("fr-sidemenu__item", isCurrent && "fr-sidemenu__item--active")}>
-      <NextLinkOrA
+      <Link
         className="fr-sidemenu__link"
         aria-current={isCurrent ? "page" : undefined}
         target="_self"
@@ -24,7 +22,7 @@ export const SideMenuLink = forwardRef<HTMLAnchorElement, SideMenuLinkProps>(
         href={href}
       >
         {children}
-      </NextLinkOrA>
+      </Link>
     </li>
   ),
 );

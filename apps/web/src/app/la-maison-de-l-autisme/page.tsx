@@ -39,6 +39,11 @@ const AutismHouse = () => {
                   l’Est, Montparnasse, de Lyon, d’Austerlitz).
                 </p>
                 <p>
+                  Nous avons prévu 10 places de parking dédiées. Elles seront reconnaissables grâce au logo de la Maison
+                  de l’autisme. Par ailleurs, le parking de la Maison de l’autisme est accessible à tous les types de
+                  véhicule.
+                </p>
+                <p>
                   Pour vous faciliter l’accès à la Maison de l'autisme, les équipes de la Maison de l’autisme et les
                   services locaux (Aubervilliers, Plaine Commune…) travaillent actuellement ensemble sur la signalétique
                   et l’aménagement urbain. L'objectif est que vous repériez la Maison de l’autisme dès la sortie du

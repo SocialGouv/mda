@@ -4,7 +4,7 @@ import { type FeedbackData, feedbackSchema } from "@common/feedback/validation";
 import { FormGroupInput } from "@components/base/FormGroupInput";
 import { FormGroupSelect } from "@components/base/FormGroupSelect";
 import { FormGroupTextarea } from "@components/base/FormGroupTextarea";
-import { Fieldset, FieldsetElement, FormButton } from "@design-system";
+import { Alert, AlertTitle, Fieldset, FieldsetElement, FormButton } from "@design-system";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { push } from "@socialgouv/matomo-next";
 import { useState } from "react";
@@ -21,8 +21,6 @@ export const FeedbackForm = () => {
   });
 
   const onSubmit = async (data: FeedbackData) => {
-    console.log(data);
-    setFormState("submitted");
     const response = await fetch("/api/mail", {
       method: "POST",
       body: JSON.stringify(data),
@@ -30,18 +28,37 @@ export const FeedbackForm = () => {
         "Content-Type": "application/json",
       },
     });
+    setFormState("submitting");
 
     if (response.ok) {
-      // green toast
-      console.log("envoyé");
+      setFormState("submitted");
       push(["trackEvent", "Feedback", "Feedback Sent"]);
     } else {
-      // red toast
-      console.log("fucké", response);
+      setFormState("error");
     }
   };
 
-  const [formState, setFormState] = useState<"initial" | "submitted" | "submitting">("initial");
+  const [formState, setFormState] = useState<"error" | "initial" | "submitted" | "submitting">("initial");
+
+  if (formState === "submitted") {
+    return (
+      <Alert type="success" className="fr-mt-6w">
+        <AlertTitle>Merci pour votre participation&nbsp;!</AlertTitle>
+        <p>
+          Nous avons bien reçu votre message. Nous allons en prendre connaissance pour voir comment améliorer le site.
+        </p>
+      </Alert>
+    );
+  }
+
+  if (formState === "error") {
+    return (
+      <Alert type="error" className="fr-mt-6w">
+        <AlertTitle>Erreur lors de la tentative d'envoie de votre avis.</AlertTitle>
+        <p>Nous faisons tout notre possible pour que cela ne se reproduise pas.</p>
+      </Alert>
+    );
+  }
 
   return (
     <form
@@ -99,12 +116,10 @@ export const FeedbackForm = () => {
         </FieldsetElement>
       </Fieldset>
       <div className="fr-mt-4w fr-text-right">
-        {formState === "initial" && (
-          <FormButton type="submit" disabled={!isValid}>
-            Envoyer mon avis
-          </FormButton>
-        )}
-        {formState === "submitted" && <FormButton disabled={true}>Envoyé !</FormButton>}
+        <FormButton type="submit" disabled={!isValid || formState === "submitting"}>
+          Envoyer mon avis
+        </FormButton>
+        {formState === "submitting" && <div className="fr-mt-1w fr-text--xs">Envoi en cours...</div>}
       </div>
     </form>
   );

@@ -6,7 +6,10 @@ import "@gouvfr/dsfr/dist/utility/icons/icons-map/icons-map.min.css";
 import "@gouvfr/dsfr/dist/utility/icons/icons-design/icons-design.min.css";
 
 import { config } from "@common/config";
+import { ScrollUp } from "@components/base/client/ScrollUp";
 import {
+  ButtonAsLink,
+  Container,
   Footer,
   FooterBody,
   FooterBodyBrand,
@@ -18,6 +21,8 @@ import {
   FooterBottomItem,
   FooterBottomLink,
   FooterContentLink,
+  Grid,
+  GridCol,
   Logo,
   Notice,
   SkipLinks,
@@ -33,6 +38,7 @@ import { Header } from "../base/client/Header";
 export const BasicLayout = ({ children }: PropsWithChildren) => {
   return (
     <>
+      <ScrollUp />
       <SkipLinks>
         <SkipLinksItem href="#content">Contenu</SkipLinksItem>
         <SkipLinksItem href="#header">Menu</SkipLinksItem>
@@ -46,6 +52,55 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
       <main role="main" id="content">
         {children}
       </main>
+      <div className="fr-follow">
+        <Container>
+          <Grid>
+            <GridCol>
+              <div className="fr-follow__social">
+                <h2 className="fr-h5">
+                  Suivez-nous
+                  <br /> sur les réseaux sociaux
+                </h2>
+                <ul className="fr-btns-group">
+                  <li>
+                    <ButtonAsLink
+                      iconOnly="fr-btn--instagram"
+                      href="https://www.instagram.com/lamaisondelautisme/"
+                      title="Page Instagram - nouvelle fenêtre"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      instagram
+                    </ButtonAsLink>
+                  </li>
+                  <li>
+                    <ButtonAsLink
+                      iconOnly="fr-btn--facebook"
+                      href="https://www.facebook.com/maisondelautisme"
+                      title="Page facebook - nouvelle fenêtre"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      facebook
+                    </ButtonAsLink>
+                  </li>
+                  <li>
+                    <ButtonAsLink
+                      iconOnly="fr-btn--linkedin"
+                      href=" https://www.linkedin.com/company/maisondelautisme"
+                      target="_blank"
+                      title="Page LinkedIn - nouvelle fenêtre"
+                      rel="noreferrer"
+                    >
+                      linkedin
+                    </ButtonAsLink>
+                  </li>
+                </ul>
+              </div>
+            </GridCol>
+          </Grid>
+        </Container>
+      </div>
       <Footer className="fr-no-print">
         <FooterBody>
           <FooterBodyBrand>
