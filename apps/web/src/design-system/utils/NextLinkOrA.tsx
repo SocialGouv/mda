@@ -5,6 +5,7 @@ export type NextLinkOrAProps = PropsWithChildren<
   {
     /** Is the link outside of the router? */
     isExternal?: boolean;
+    onClick?: () => void;
   } & (LinkProps | React.AnchorHTMLAttributes<HTMLAnchorElement>)
 >;
 

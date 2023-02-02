@@ -15,16 +15,16 @@ export const MainNav = ({ children }: PropsWithChildren) => {
   );
 };
 
-export type MainNavItemProps = PropsWithChildren<{ href: string }>;
+export type MainNavItemProps = PropsWithChildren<{ href: string; onClick?: () => void }>;
 
-export const MainNavItem = ({ children, href }: MainNavItemProps) => {
+export const MainNavItem = ({ children, href, onClick }: MainNavItemProps) => {
   const currentPathName = usePathname();
   const parentPath = currentPathName ? `/${currentPathName.split("/")[1]}` : undefined;
   const isCurrent = href === parentPath ? "page" : undefined;
 
   return (
     <li className="fr-nav__item">
-      <NextLinkOrA href={href} className="fr-nav__link" aria-current={isCurrent}>
+      <NextLinkOrA href={href} className="fr-nav__link" aria-current={isCurrent} onClick={onClick}>
         {children}
       </NextLinkOrA>
     </li>
