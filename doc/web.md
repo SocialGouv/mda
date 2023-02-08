@@ -34,6 +34,8 @@ Sauf si les ports de l'application sont changés en local par exemple, les varia
 Ces variables sont chargées via le fichier [`@common/config`](../apps/web/src/common/config/index.ts).  
 Elles sont séparées en deux catégories, les variables utilisables uniquement côté serveur, qui sont sous l'objet `config.server`, et celles utilisables partout, accessibles via `config` directement.
 
+Pour faciliter l'autocomplete dans le fichier de config, il fortement conseillé d'utiliser la commande `yarn generateEnvDeclaration` directement dans le dossier `web` pour regénérer le fichier `.end.d.ts` après chaque modification du `.env.development`.
+
 Une variable serveur ne doit pas être préfixée par `NEXT_PUBLIC_`. Quand aux variables serveur, elle ne sont utilisables que sur les composants serveur. Côté client, ils n'auront qu'une valeur vide (`""`).  
 En revanche il est possible de passer des variables serveur vers des composants client en les passant comme des props depuis un composant serveur.  
 Example avec la variable `env` :
