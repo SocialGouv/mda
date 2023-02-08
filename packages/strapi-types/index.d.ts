@@ -610,6 +610,36 @@ export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
   };
 }
 
+export interface ApiGlossaireItemGlossaireItem extends CollectionTypeSchema {
+  info: {
+    singularName: 'glossaire-item';
+    pluralName: 'glossaire-items';
+    displayName: 'glossaire-item';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    description: StringAttribute & RequiredAttribute;
+    url: StringAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::glossaire-item.glossaire-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::glossaire-item.glossaire-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiQuestionQuestion extends CollectionTypeSchema {
   info: {
     singularName: 'question';
@@ -702,6 +732,7 @@ declare global {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;
+      'api::glossaire-item.glossaire-item': ApiGlossaireItemGlossaireItem;
       'api::question.question': ApiQuestionQuestion;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
       'parcours-diag.answer': ParcoursDiagAnswer;
