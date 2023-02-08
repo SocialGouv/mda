@@ -33,6 +33,7 @@ const FichePratique = async ({ params }: FichePratiqueProps) => {
           <GridCol md={4} lg={3} className="fr-no-print">
             <SideMenuDynamic buttonLabel="Sommaire des fiches pratiques">
               {fiches?.map((f, index) => {
+                if (!f.attributes.slug) return;
                 const href = `/fiches-pratiques/${f.attributes.slug}`;
                 return (
                   <SideMenuLink key={index} href={href} isCurrent={f.attributes.slug === params?.slug}>
