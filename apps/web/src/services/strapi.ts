@@ -86,14 +86,14 @@ type WhereParams<T> = LogicalOperators<T> & {
 };
 
 interface PaginationByPage {
-  page: number;
-  pageSize: number;
+  page?: number;
+  pageSize?: number;
   withCount?: boolean;
 }
 
 interface PaginationByOffset {
-  limit: number;
-  start: number;
+  limit?: number;
+  start?: number;
   withCount?: boolean;
 }
 

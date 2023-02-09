@@ -3,8 +3,9 @@ import { SimpleContentPage } from "@components/base/SimpleContentPage";
 import { fetchStrapi } from "@services/strapi";
 import clsx from "clsx";
 
+// TODO: handle iterate over pagination in fetch
 const Glossary = async () => {
-  const items = await fetchStrapi("glossaire-items", { sort: "title" });
+  const items = await fetchStrapi("glossaire-items", { sort: "title", pagination: { limit: 100 } });
 
   return (
     <SimpleContentPage>
