@@ -189,6 +189,9 @@ export const BasicLayout = ({ children }: PropsWithChildren) => {
         </FooterBody>
         <FooterBottom>
           <FooterBottomItem>
+            <FooterBottomLink href="/plan-du-site">Plan du site</FooterBottomLink>
+          </FooterBottomItem>
+          <FooterBottomItem>
             <FooterBottomLink href="/accessibilite">Accessibilité&nbsp;: non conforme</FooterBottomLink>
           </FooterBottomItem>
           <FooterBottomItem>
