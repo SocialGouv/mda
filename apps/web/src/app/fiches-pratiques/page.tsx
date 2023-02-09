@@ -21,28 +21,31 @@ const FichesPratiques = async () => {
       <Container>
         <h1>Fiches pratiques</h1>
         <Grid haveGutters>
-          {fiches.map(fiche => (
-            <GridCol md={6} lg={4} key={fiche.id}>
-              <Card isEnlargeLink>
-                <CardBody>
-                  <CardBodyContent>
-                    <CardBodyContentTitle titleAs="h3">
-                      <NextLinkOrA href={`/fiches-pratiques/${fiche.attributes.slug}`}>
-                        {fiche.attributes.title}
-                      </NextLinkOrA>
-                    </CardBodyContentTitle>
-                    <CardBodyContentDescription>
-                      <ReactMarkdown>
-                        {fiche.attributes.recap.content.length < 160
-                          ? fiche.attributes.recap.content
-                          : `${fiche.attributes.recap.content.substring(0, 157)}...`}
-                      </ReactMarkdown>
-                    </CardBodyContentDescription>
-                  </CardBodyContent>
-                </CardBody>
-              </Card>
-            </GridCol>
-          ))}
+          {fiches.map(fiche => {
+            if (!fiche.attributes.slug) return;
+            return (
+              <GridCol md={6} lg={4} key={fiche.id}>
+                <Card isEnlargeLink>
+                  <CardBody>
+                    <CardBodyContent>
+                      <CardBodyContentTitle titleAs="h3">
+                        <NextLinkOrA href={`/fiches-pratiques/${fiche.attributes.slug}`}>
+                          {fiche.attributes.title}
+                        </NextLinkOrA>
+                      </CardBodyContentTitle>
+                      <CardBodyContentDescription>
+                        <ReactMarkdown>
+                          {fiche.attributes.recap.content.length < 160
+                            ? fiche.attributes.recap.content
+                            : `${fiche.attributes.recap.content.substring(0, 157)}...`}
+                        </ReactMarkdown>
+                      </CardBodyContentDescription>
+                    </CardBodyContent>
+                  </CardBody>
+                </Card>
+              </GridCol>
+            );
+          })}
         </Grid>
       </Container>
     </section>
