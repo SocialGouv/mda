@@ -1,0 +1,411 @@
+[
+  {
+    "title": "AAH",
+    "description": "Allocation aux adultes handicapés."
+  },
+  {
+    "title": "AEEH",
+    "description": "Allocation d'éducation de l’enfant handicapé."
+  },
+  {
+    "title": "AESH",
+    "description": "Accompagnants des élèves en situation de Handicap (autrefois appelé AVS, auxiliaire de vie scolaire)."
+  },
+  {
+    "title": "AGED",
+    "description": "Allocation de garde d'enfant à domicile."
+  },
+  {
+    "title": "AGEFIPH",
+    "description": "Association de Gestion du Fonds pour l’Insertion Professionnelle des Personnes Handicapées.",
+    "url": "https://www.agefiph.fr/ "
+  },
+  {
+    "title": "ANECAMSP",
+    "description": "Association Nationale des Équipes Contribuant A l’Action Médico Sociale Précoce.",
+    "url": "https://anecamsp.org/"
+  },
+  {
+    "title": "ANDPC",
+    "description": "Agence Nationale pour le Développement Professionnel Continu",
+    "url": "https://www.agencedpc.fr/"
+  },
+  {
+    "title": "ANFH",
+    "description": "Association Nationale pour la Formation permanente du personnel Hospitalier.",
+    "url": "https://www.anfh.fr/"
+  },
+  {
+    "title": "APE",
+    "description": "Allocation parentale d'éducation."
+  },
+  {
+    "title": "APJE",
+    "description": "Allocation pour jeune enfant."
+  },
+  {
+    "title": "AP-HP",
+    "description": "Assistance publique des hôpitaux de Paris."
+  },
+  {
+    "title": "ARS",
+    "description": "Agence régionale de santé."
+  },
+  {
+    "title": "BSM",
+    "description": "Bilan Sensori-Moteur."
+  },
+  {
+    "title": "BST",
+    "description": "Behavior skill training."
+  },
+  {
+    "title": "CAJ",
+    "description": "Centre d'accueil de jour."
+  },
+  {
+    "title": "CCAS",
+    "description": "Centre communal d'action sociale."
+  },
+  {
+    "title": "CAMSP",
+    "description": "Centre d’action médico-sociale précoce."
+  },
+  {
+    "title": "CAPPEI",
+    "description": "Certificat d’aptitude professionnelle aux pratiques de l’éducation inclusive."
+  },
+  {
+    "title": "CASF",
+    "description": "Code de l’action sociale et des familles."
+  },
+  {
+    "title": "CDAPH",
+    "description": "Commissions des droits et de l’autonomie des personnes handicapées."
+  },
+  {
+    "title": "CHU",
+    "description": "Centre hospitalier universitaire."
+  },
+  {
+    "title": "CHRU",
+    "description": "Centre hospitalier régional universitaire."
+  },
+  {
+    "title": "CMP",
+    "description": "Centre médico-psychologique."
+  },
+  {
+    "title": "CMPP",
+    "description": "Centre médico-psycho-pédagogique."
+  },
+  {
+    "title": "CNAF",
+    "description": "Caisse Nationale des allocations familiales",
+    "url": "https://caf.fr/"
+  },
+  {
+    "title": "CNAM",
+    "description": "Caisse Nationale d’Assurance Maladie",
+    "url": "https://www.ameli.fr"
+  },
+  {
+    "title": "CNIA",
+    "description": "Certificat national autisme."
+  },
+  {
+    "title": "CNSA",
+    "description": "Caisse nationale pour la solidarité et l’autonomie",
+    "url": "https://www.cnsa.fr/"
+  },
+  {
+    "title": "CRAIF",
+    "description": "Centre ressource autisme d’Île de France."
+  },
+  {
+    "title": "CRA",
+    "description": "Centre de ressources autisme."
+  },
+  {
+    "title": "CREAI",
+    "description": "Centre régional pour l'enfance et l'adolescence inadapté."
+  },
+  {
+    "title": "CRMH",
+    "description": "Centre de Ressources MultiHandicap."
+  },
+  {
+    "title": "DASEN",
+    "description": "Directeur académique des services de l'Éducation nationale."
+  },
+  {
+    "title": "DAR",
+    "description": "Dispositif d'autorégulation."
+  },
+  {
+    "title": "DIA",
+    "description": "Délégation interministérielle à la stratégie nationale pour l’Autisme."
+  },
+  {
+    "title": "DOM",
+    "description": "Département d’outre-mer."
+  },
+  {
+    "title": "DSM-5",
+    "description": "Manuel diagnostique et statistique des troubles mentaux, et des troubles psychiatriques."
+  },
+  {
+    "title": "DU",
+    "description": "Diplôme universitaire."
+  },
+  {
+    "title": "DYS",
+    "description": "Dyslexie, dyspraxie, dysphasie, dyscalculie, dysorthographie"
+  },
+  {
+    "title": "EN",
+    "description": "Éducation nationale."
+  },
+  {
+    "title": "ESAT",
+    "description": "Établissement et service d'aide par le travail."
+  },
+  {
+    "title": "ESMS",
+    "description": "Établissement ou service médico-social."
+  },
+  {
+    "title": "ESS",
+    "description": "Équipe de suivi de scolarisation."
+  },
+  {
+    "title": "FAM",
+    "description": "Foyer d'accueil médicalisé."
+  },
+  {
+    "title": "FDT",
+    "description": "Foyer à double tarification."
+  },
+  {
+    "title": "FDV",
+    "description": "Foyer de vie."
+  },
+  {
+    "title": "FEDEEH",
+    "description": "Fédération Etudiante pour une Dynamique Études et Emploi avec un Handicap."
+  },
+  {
+    "title": "FH",
+    "description": "Foyer d'hébergement."
+  },
+  {
+    "title": "FIPHFP",
+    "description": "Fonds pour l’Insertion des Personnes Handicapées dans la Fonction Publique",
+    "url": "http://www.fiphfp.fr/"
+  },
+  {
+    "title": "GEM",
+    "description": "Groupement d’entraide mutuelle."
+  },
+  {
+    "title": "GIS",
+    "description": "Groupement d’intérêt scientifique",
+    "URL": "https://itneuro.aviesan.fr/invitation-a-rejoindre-le-gis-autisme-et-troubles-du-neuro-developpement.html"
+  },
+  {
+    "title": "GNCRA",
+    "description": "Groupement national des centres de ressources autisme."
+  },
+  {
+    "title": "HAS",
+    "description": "Haute autorité de santé.",
+    "url": "https://www.has-sante.fr/"
+  },
+  {
+    "title": "IA-DASEN",
+    "description": "Directeur académique des services de l’Éducation nationale."
+  },
+  {
+    "title": "IEN de circonscription",
+    "description": "Inspecteur de l’Éducation Nationale de circonscription "
+  },
+  {
+    "title": "IEN-ASH",
+    "description": "Inspecteurs de l’Éducation nationale chargés de l’adaptation scolaire et de la scolarisation des élèves handicapés."
+  },
+  {
+    "title": "IME",
+    "description": "Institut médico-éducatif."
+  },
+  {
+    "title": "IMP",
+    "description": "Institut médico-pédagogique."
+  },
+  {
+    "title": "IMPRO",
+    "description": "Institut médico-professionnel."
+  },
+  {
+    "title": "INRA",
+    "description": " Institut national de recherche agronomique."
+  },
+  {
+    "title": "INSERM",
+    "description": "Institut national de la santé et de la recherche médicale."
+  },
+  {
+    "title": "INSHEA",
+    "description": "Institut national supérieur de formation et de recherche pour l’éducation des jeunes handicapés et les enseignements adaptés.",
+    "url": "www.inshea.fr/index.php"
+  },
+  {
+    "title": "MAS",
+    "description": "Maison d'accueil spécialisée."
+  },
+  {
+    "title": "MDPH",
+    "description": "Maison départementale des personnes handicapées."
+  },
+  {
+    "title": "MPH",
+    "description": "Mon parcours handicap",
+    "url": "www.monparcourshandicap.gouv.fr "
+  },
+  {
+    "title": "MS",
+    "description": "Médico-social."
+  },
+  {
+    "title": "OETH",
+    "description": "Obligation d'emploi de travailleur handicapé."
+  },
+  {
+    "title": "ONDAM",
+    "description": "Objectif national de dépenses d’assurance maladie."
+  },
+  {
+    "title": "PAI",
+    "description": "Projet d'accueil individualisé."
+  },
+  {
+    "title": "PAP",
+    "description": "Plan d’accompagnement personnalisé."
+  },
+  {
+    "title": "PCH",
+    "description": "Prestation de compensation du handicap."
+  },
+  {
+    "title": "PIA",
+    "description": "Projet individualisé d’accompagnement."
+  },
+  {
+    "title": "PPI",
+    "description": "Projet pédagogique individuel."
+  },
+  {
+    "title": "PPS",
+    "description": "Projet personnalisé de scolarisation."
+  },
+  {
+    "title": "PUPH",
+    "description": "Professeur des universités - praticien hospitalier."
+  },
+  {
+    "title": "RBPP",
+    "description": "Recommandation des bonnes pratiques professionnelles."
+  },
+  {
+    "title": "RQTH",
+    "description": "Reconnaissance de la qualité de travailleur handicapé."
+  },
+  {
+    "title": "SAAD",
+    "description": "Service d'aide et d'accompagnement à domicile."
+  },
+  {
+    "title": "SAJ",
+    "description": "Service d'accueil de jour."
+  },
+  {
+    "title": "SAJH",
+    "description": "Service d'accueil de jour et d'hébergement."
+  },
+  {
+    "title": "SAMSAH",
+    "description": "Service d'accompagnement médico-social pour adultes handicapés."
+  },
+  {
+    "title": "SAS",
+    "description": "Section d'accompagnement spécialisé."
+  },
+  {
+    "title": "SDEI",
+    "description": "Service Départemental de l'Ecole Inclusive."
+  },
+  {
+    "title": "SEGPA",
+    "description": "Sections d’enseignement général adapté."
+  },
+  {
+    "title": "SESSAD",
+    "description": "Service d’éducation spéciale et de soins à domicile."
+  },
+  {
+    "title": "SPF",
+    "description": "Santé Publique France."
+  },
+  {
+    "title": "TED",
+    "description": "Troubles envahissants du développement."
+  },
+  {
+    "title": "TND",
+    "description": "Troubles du neuro-développement."
+  },
+  {
+    "title": "TSA",
+    "description": "Troubles du spectre de l’autisme."
+  },
+  {
+    "title": "TDA/H",
+    "description": "Trouble du déficit de l’attention avec ou sans hyperactivité."
+  },
+  {
+    "title": "TDI",
+    "description": "Trouble du développement intellectuel."
+  },
+  {
+    "title": "TSLA",
+    "description": "Troubles spécifiques du langage et des apprentissages."
+  },
+  {
+    "title": "UEEA",
+    "description": "Unité d’enseignement en élémentaire Autisme"
+  },
+  {
+    "title": "UEMA",
+    "description": "Unités d’enseignement en maternelle Autisme"
+  },
+  {
+    "title": "UFR",
+    "description": "Unités de formations et de recherche"
+  },
+  {
+    "title": "ULIS",
+    "description": "Unités localisées pour l’inclusion scolaire."
+  },
+  {
+    "title": "UNAFORIS",
+    "description": "Union Nationale des Acteurs de Formation et de Recherche en Intervention Sociale.",
+    "url": "https://www.unaforis.eu/dossiers-thematiques/troubles-du-spectre-de-lautisme"
+  },
+  {
+    "title": "UNAPEI",
+    "description": "Union nationale des associations de parents d’enfants inadaptés."
+  },
+  {
+    "title": "UPI",
+    "description": "Unité pédagogique d'intégration."
+  }
+]

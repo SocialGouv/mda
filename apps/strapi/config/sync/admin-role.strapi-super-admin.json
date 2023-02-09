@@ -56,6 +56,48 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::glossaire-item.glossaire-item",
+      "properties": {
+        "fields": [
+          "title",
+          "description",
+          "url"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::glossaire-item.glossaire-item",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::glossaire-item.glossaire-item",
+      "properties": {
+        "fields": [
+          "title",
+          "description",
+          "url"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::glossaire-item.glossaire-item",
+      "properties": {
+        "fields": [
+          "title",
+          "description",
+          "url"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::question.question",
       "properties": {
         "fields": [

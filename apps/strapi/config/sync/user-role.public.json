@@ -10,6 +10,12 @@
       "action": "api::fiche-pratique.fiche-pratique.findOne"
     },
     {
+      "action": "api::glossaire-item.glossaire-item.find"
+    },
+    {
+      "action": "api::glossaire-item.glossaire-item.findOne"
+    },
+    {
       "action": "api::question.question.find"
     },
     {
