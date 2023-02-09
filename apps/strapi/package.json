@@ -4,8 +4,6 @@
   "private": true,
   "author": "Fabrique des ministères sociaux",
   "license": "SEE LICENSE IN ../../LICENSE",
-  "types": "index.d.ts",
-  "main": "index.d.ts",
   "scripts": {
     "dev": "strapi dev",
     "start": "strapi start",
@@ -13,10 +11,12 @@
     "lint": "eslint",
     "content:dump": "strapi export --no-encrypt --only content --file content-dump",
     "content:import": "strapi import --only content --force --file content-dump.tar.gz",
-    "generate-types": "strapi ts:generate-types -f ../../packages/strapi-types/index.d.ts && echo \"/* eslint-disable */\n$(cat ../../packages/strapi-types/index.d.ts)\" > ../../packages/strapi-types/index.d.ts",
+    "generate-types": "ts-node src/commands/strapi-generate-types.ts -f ../../packages/strapi-types/index.d.ts && echo \"/* eslint-disable */\n$(cat ../../packages/strapi-types/index.d.ts)\" > ../../packages/strapi-types/index.d.ts",
     "generate-env": "echo \"MDA_ENV=dev\nAPP_KEYS=$(openssl rand -base64 32),$(openssl rand -base64 32)\nAPI_TOKEN_SALT=$(openssl rand -base64 32)\nADMIN_JWT_SECRET=$(openssl rand -base64 32)\nJWT_SECRET=$(openssl rand -base64 32)\" > .env"
   },
   "devDependencies": {
+    "@mda/eslint-config": "*",
+    "@mda/strapi-types": "*",
     "@types/jsonwebtoken": "^9.0.0",
     "@types/koa": "^2.13.5",
     "@types/koa2-ratelimit": "^0.9.3",
@@ -24,8 +24,6 @@
     "@types/node-schedule": "^2.1.0"
   },
   "dependencies": {
-    "@mda/config": "*",
-    "@mda/strapi-types": "*",
     "@strapi/plugin-users-permissions": "4.6.0",
     "@strapi/strapi": "4.6.0",
     "pg": "8.8.0",

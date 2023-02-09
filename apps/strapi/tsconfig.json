@@ -3,6 +3,7 @@
   "compilerOptions": {
     "strict": true,
     "outDir": "dist",
+    "allowJs": true,
     "types": [
       "@mda/strapi-types"
     ]

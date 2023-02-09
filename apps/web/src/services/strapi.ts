@@ -86,14 +86,14 @@ type WhereParams<T> = LogicalOperators<T> & {
 };
 
 interface PaginationByPage {
-  page: number;
-  pageSize: number;
+  page?: number;
+  pageSize?: number;
   withCount?: boolean;
 }
 
 interface PaginationByOffset {
-  limit: number;
-  start: number;
+  limit?: number;
+  start?: number;
   withCount?: boolean;
 }
 
@@ -104,6 +104,7 @@ interface FetchParam<T extends keyof Model, Dto extends GetAttributesValues<T> =
   populate?: UnknownMapping | "*" | "deep";
   /** @default "live" */
   publicationState?: "live" | "preview";
+  revalidate?: number;
   sort?: Array<GetAttributesKey<T> | "id"> | GetAttributesKey<T> | "id";
 }
 
@@ -125,7 +126,10 @@ export async function fetchStrapi<
   TResPath extends T | `${T}/${number}`,
   TParams extends FetchParam<ReverseModel[T]>,
   Ret extends Response<ReverseModel[T]> | ResponseCollection<ReverseModel[T]>,
->(ressource: TResPath, params?: TParams): Promise<Ret> {
+>(
+  ressource: TResPath,
+  { revalidate, ...params } = { revalidate: config.server.env === "dev" ? 5 : config.fetchRevalidate } as TParams,
+): Promise<Ret> {
   const query = params ? qsStringify(params) : null;
 
   const url = new URL(`/api/${ressource}${query ? `?${query}` : ""}`, config.strapi.apiUrl);
@@ -134,7 +138,7 @@ export async function fetchStrapi<
       "Content-Type": "application/json",
     },
     next: {
-      revalidate: config.fetchRevalidate,
+      revalidate,
     },
   });
 

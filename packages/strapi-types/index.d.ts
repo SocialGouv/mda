@@ -582,7 +582,7 @@ export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
     singularName: 'fiche-pratique';
     pluralName: 'fiche-pratiques';
     displayName: 'Fiches Pratiques';
-    description: 'Une fiche pratique est un ensemble d\'informations regroupé par catégorie.';
+    description: "Une fiche pratique est un ensemble d'informations regroup\u00E9 par cat\u00E9gorie.";
   };
   options: {
     draftAndPublish: false;
@@ -592,10 +592,7 @@ export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
     recap: ComponentAttribute<'fiche-pratique-content.encart'> &
       RequiredAttribute;
     section: ComponentAttribute<'fiche-pratique-content.encart', true>;
-    /**
-     * Fake required because auto filled
-     */
-    slug: StringAttribute & RequiredAttribute & UniqueAttribute;
+    slug: StringAttribute & UniqueAttribute;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
@@ -613,12 +610,42 @@ export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
   };
 }
 
+export interface ApiGlossaireItemGlossaireItem extends CollectionTypeSchema {
+  info: {
+    singularName: 'glossaire-item';
+    pluralName: 'glossaire-items';
+    displayName: 'glossaire-item';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    description: StringAttribute & RequiredAttribute;
+    url: StringAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::glossaire-item.glossaire-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::glossaire-item.glossaire-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiQuestionQuestion extends CollectionTypeSchema {
   info: {
     singularName: 'question';
     pluralName: 'questions';
     displayName: 'Parcours Diag';
-    description: 'Une question est une étape du parcours de diagnostic.';
+    description: 'Une question est une \u00E9tape du parcours de diagnostic.';
   };
   options: {
     draftAndPublish: false;
@@ -627,7 +654,7 @@ export interface ApiQuestionQuestion extends CollectionTypeSchema {
     content: StringAttribute & RequiredAttribute;
     answers: ComponentAttribute<'parcours-diag.answer', true>;
     info: TextAttribute;
-    first: BooleanAttribute & RequiredAttribute;
+    first: BooleanAttribute & RequiredAttribute & DefaultTo<false>;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
@@ -659,7 +686,7 @@ export interface FichePratiqueContentEncart extends ComponentSchema {
 export interface ParcoursDiagAnswer extends ComponentSchema {
   info: {
     displayName: 'answer';
-    description: 'Une réponse potentielle à une question menant soit à une sous réponse, soit a une nouvelle question.';
+    description: 'Une r\u00E9ponse potentielle \u00E0 une question menant soit \u00E0 une sous r\u00E9ponse, soit a une nouvelle question.';
   };
   attributes: {
     content: StringAttribute & RequiredAttribute;
@@ -676,7 +703,7 @@ export interface ParcoursDiagAnswer extends ComponentSchema {
 export interface ParcoursDiagSubAnswer extends ComponentSchema {
   info: {
     displayName: 'SubAnswer';
-    description: 'Une sous réponse suit une réponse et mène obligatoirement vers une nouvelle question.';
+    description: 'Une sous r\u00E9ponse suit une r\u00E9ponse et m\u00E8ne obligatoirement vers une nouvelle question.';
   };
   attributes: {
     content: StringAttribute & RequiredAttribute;
@@ -705,6 +732,7 @@ declare global {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;
+      'api::glossaire-item.glossaire-item': ApiGlossaireItemGlossaireItem;
       'api::question.question': ApiQuestionQuestion;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
       'parcours-diag.answer': ParcoursDiagAnswer;
