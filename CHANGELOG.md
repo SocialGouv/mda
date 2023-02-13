@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/SocialGouv/mda/compare/v1.4.5...v1.5.0) (2023-02-13)
+
+
+### Features
+
+* add sitemap page ([#102](https://github.com/SocialGouv/mda/issues/102)) ([1710ad4](https://github.com/SocialGouv/mda/commit/1710ad4a043d2328b2f58d076c2323f0a3ddfdd0))
+
 ## [1.4.5](https://github.com/SocialGouv/mda/compare/v1.4.4...v1.4.5) (2023-02-02)
 
 
