@@ -26,7 +26,7 @@
   "dependencies": {
     "@strapi/plugin-users-permissions": "4.6.0",
     "@strapi/strapi": "4.6.0",
-    "pg": "8.8.0",
+    "pg": "8.9.0",
     "strapi-plugin-config-sync": "^1.1.0",
     "strapi-plugin-import-export-entries": "^1.18.0",
     "strapi-plugin-populate-deep": "^2.0.0",
