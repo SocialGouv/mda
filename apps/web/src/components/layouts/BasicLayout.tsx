@@ -1,12 +1,4 @@
-import "@gouvfr/dsfr/dist/dsfr.main.min.css";
-import "@gouvfr/dsfr/dist/utility/icons/icons-system/icons-system.min.css";
-import "@gouvfr/dsfr/dist/utility/icons/icons-user/icons-user.min.css";
-import "@gouvfr/dsfr/dist/utility/icons/icons-business/icons-business.min.css";
-import "@gouvfr/dsfr/dist/utility/icons/icons-map/icons-map.min.css";
-import "@gouvfr/dsfr/dist/utility/icons/icons-design/icons-design.min.css";
-
 import { config } from "@common/config";
-import { ScrollUp } from "@components/base/client/ScrollUp";
 import {
   ButtonAsLink,
   Container,
@@ -34,6 +26,7 @@ import { type PropsWithChildren } from "react";
 
 import { BreadcrumbDynamic } from "../base/client/BreadcrumbDynamic";
 import { Header } from "../base/client/Header";
+import { ScrollUp } from "../base/client/ScrollUp";
 
 export const BasicLayout = ({ children }: PropsWithChildren) => {
   return (

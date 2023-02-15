@@ -4,7 +4,7 @@ import { type config } from "@common/config";
 import Script, { type ScriptProps } from "next/script";
 import { useCallback } from "react";
 
-export type TOCGDPRProps = Pick<(typeof config)["server"], "env">;
+export type TOCGDPRProps = Pick<typeof config, "env">;
 
 export const TarteAuCitronGDPR = ({ env: _env }: TOCGDPRProps) => {
   const handleLoad: ScriptProps["onLoad"] = useCallback(() => {

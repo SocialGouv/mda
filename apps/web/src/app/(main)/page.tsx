@@ -23,8 +23,8 @@ import {
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 import Image from "next/image";
 
-import heroPic from "../../public/home-hero.jpeg";
-import mdaPic from "../../public/mda.jpg";
+import heroPic from "../../../public/home-hero.jpeg";
+import mdaPic from "../../../public/mda.jpg";
 import styles from "./index.module.css";
 
 const HomePage = () => {

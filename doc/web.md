@@ -55,7 +55,7 @@ import { config } from "@common/config";
 const ServerComponent = () => {
     const data = await fetch("url");
 
-    return <ClientComposant env={config.server.env}>{data}</ClientComposant>
+    return <ClientComposant env={config.env}>{data}</ClientComposant>
 }
 ```
 
