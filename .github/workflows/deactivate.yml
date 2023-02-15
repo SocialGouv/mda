@@ -7,7 +7,6 @@ on:
       - "**"
       - "!v*"
       - "!main"
-      - "!dev"
 
 concurrency:
   cancel-in-progress: true

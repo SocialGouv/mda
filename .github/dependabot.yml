@@ -6,7 +6,7 @@ updates:
     schedule:
       interval: monthly
   - package-ecosystem: npm
-    target-branch: dev
+    target-branch: main
     labels:
       - bot
       - dependencies

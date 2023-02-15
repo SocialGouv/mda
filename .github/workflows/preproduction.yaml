@@ -1,7 +1,7 @@
 name: 😎 PreProd
 on:
   push:
-    branches: ["dev"]
+    branches: ["main"]
 
 concurrency:
   cancel-in-progress: true

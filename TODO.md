@@ -1,5 +1,5 @@
 # Global / CI / CD
-- [ ] switch from "main/dev" branches with auto releases to "main" only with manual releases
+- [x] switch from "main/dev" branches with auto releases to "main" only with manual releases
 - [ ] auto ci cache cleanup
 - [ ] change releaserc config to adapt for monorepo (needed for sub package.json version sync)
 - [ ] regenerate sitemap after asked revalidate
