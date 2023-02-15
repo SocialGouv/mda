@@ -70,6 +70,7 @@ Maintenant que l'élément est créé il faut configurer son accès API public (
 
 - Enfin, créer de la donnée puis l'exporter (cf [doc strapi "Exporter des données"](./strapi.md#exporter-des-données))
 - Par rapport à l'exemple, le fichier sera le cas présent nommé `glossaire-item.json` et placé dans le dossier `apps/strapi/src/utils/seed/`
+- Ajouter la référence au seed dans le fichier `src/bootstrap/dev/seed-db.ts` dans la const `seed`
 
 Maintenant que la structure de données est prête, il faut regen les types TypeScript pour faciliter l'autocomplete du projet :
 ```sh

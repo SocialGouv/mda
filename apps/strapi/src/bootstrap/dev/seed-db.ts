@@ -5,6 +5,7 @@ import { type StrapiLifecycle } from "../../utils/types";
 const seeds = {
   "api::fiche-pratique.fiche-pratique": import("../../utils/seed/fiche-pratique.json"),
   "api::question.question": import("../../utils/seed/question.json"),
+  "api::glossaire-item.glossaire-item": import("../../utils/seed/glossaire-item.json"),
 };
 
 const hasData = async (strapi: Strapi) => {

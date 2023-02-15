@@ -20,7 +20,9 @@ export const config = {
   },
   githubSha: process.env.NEXT_PUBLIC_GITHUB_SHA?.substring(0, 7) ?? "<dev>",
   /** In seconds */
-  fetchRevalidate: 60 * 3,
+  get fetchRevalidate() {
+    return this.server.env === "dev" ? 5 : 60 * 3;
+  },
   server: {
     env: ensureOsEnvVar("MDA_ENV") as "dev" | "preprod" | "prod",
     webhookRevalidateToken: ensureOsEnvVar("WEBHOOK_REVALIDATE_TOKEN"),
