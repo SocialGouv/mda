@@ -1,3 +1,18 @@
+# [1.5.0](https://github.com/SocialGouv/mda/compare/v1.4.3...v1.5.0) (2023-02-15)
+
+
+### Bug Fixes
+
+* dom node error ([#99](https://github.com/SocialGouv/mda/issues/99)) ([af66072](https://github.com/SocialGouv/mda/commit/af660721408bacfff9f5b9d9e555137631f4e1c7))
+* dummy url ([#93](https://github.com/SocialGouv/mda/issues/93)) ([2988a5c](https://github.com/SocialGouv/mda/commit/2988a5c8139394c16309fe521befead5d9b0618d))
+* fetch revalidate default value ([#111](https://github.com/SocialGouv/mda/issues/111)) ([630f056](https://github.com/SocialGouv/mda/commit/630f056431acf26787cd009da556102cf99d96d1))
+
+
+### Features
+
+* add maintenance page ([8cab48a](https://github.com/SocialGouv/mda/commit/8cab48ab8e9c22e65a927105d0e1d1108f57b1e8))
+* add sitemap page ([#102](https://github.com/SocialGouv/mda/issues/102)) ([72f8939](https://github.com/SocialGouv/mda/commit/72f8939bd39ab518e9549168155cf6fc585b1103))
+
 ## [1.4.3](https://github.com/SocialGouv/mda/compare/v1.4.2...v1.4.3) (2023-01-31)
 
 
