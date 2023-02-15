@@ -126,11 +126,9 @@ export async function fetchStrapi<
   TResPath extends T | `${T}/${number}`,
   TParams extends FetchParam<ReverseModel[T]>,
   Ret extends Response<ReverseModel[T]> | ResponseCollection<ReverseModel[T]>,
->(
-  ressource: TResPath,
-  { revalidate, ...params } = { revalidate: config.server.env === "dev" ? 5 : config.fetchRevalidate } as TParams,
-): Promise<Ret> {
+>(ressource: TResPath, { revalidate, ...params } = {} as TParams): Promise<Ret> {
   const query = params ? qsStringify(params) : null;
+  if (typeof revalidate === "undefined") revalidate = config.fetchRevalidate;
 
   const url = new URL(`/api/${ressource}${query ? `?${query}` : ""}`, config.strapi.apiUrl);
   const response = await fetch(url, {
