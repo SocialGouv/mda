@@ -6,6 +6,7 @@ const seeds = {
   "api::fiche-pratique.fiche-pratique": import("../../utils/seed/fiche-pratique.json"),
   "api::question.question": import("../../utils/seed/question.json"),
   "api::glossaire-item.glossaire-item": import("../../utils/seed/glossaire-item.json"),
+  "api::maison-de-l-autisme.maison-de-l-autisme": import("../../utils/seed/maison-de-l-autisme.json"),
 };
 
 const hasData = async (strapi: Strapi) => {
