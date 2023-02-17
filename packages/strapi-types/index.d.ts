@@ -672,6 +672,37 @@ export interface ApiMaisonDeLAutismeMaisonDeLAutisme extends SingleTypeSchema {
   };
 }
 
+export interface ApiMesAidesMesAides extends SingleTypeSchema {
+  info: {
+    singularName: 'mes-aides';
+    pluralName: 'mes-aidess';
+    displayName: 'Mes aides';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+    sections: ComponentAttribute<'sections.sections', true>;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::mes-aides.mes-aides',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::mes-aides.mes-aides',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiQuestionQuestion extends CollectionTypeSchema {
   info: {
     singularName: 'question';
@@ -776,6 +807,7 @@ declare global {
       'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;
       'api::glossaire-item.glossaire-item': ApiGlossaireItemGlossaireItem;
       'api::maison-de-l-autisme.maison-de-l-autisme': ApiMaisonDeLAutismeMaisonDeLAutisme;
+      'api::mes-aides.mes-aides': ApiMesAidesMesAides;
       'api::question.question': ApiQuestionQuestion;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
       'parcours-diag.answer': ParcoursDiagAnswer;

@@ -58,7 +58,7 @@ const MonParcoursAidant = () => {
               </TimelineItem>
               <TimelineItem isEnlargeLink>
                 <TimelineItemTitle>
-                  <NextLinkOrA href="/fiches-pratiques/mes-aides">Je prends connaissance de mes aides</NextLinkOrA>
+                  <NextLinkOrA href="/mes-aides">Je prends connaissance de mes aides</NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
                   Mon enfant ou mon proche peut bénéficier d’aides financières, matérielles et humaines, même s'ils
@@ -80,9 +80,7 @@ const MonParcoursAidant = () => {
 
               <TimelineItem isEnlargeLink>
                 <TimelineItemTitle>
-                  <NextLinkOrA href="/fiches-pratiques/mes-aides">
-                    Je prends connaissance des nouvelles aides
-                  </NextLinkOrA>
+                  <NextLinkOrA href="/mes-aides">Je prends connaissance des nouvelles aides</NextLinkOrA>
                 </TimelineItemTitle>
                 <TimelineDescription>
                   Lorsque mon enfant ou mon proche ont reçu une réponse de la Maison Départementale des Personnes
