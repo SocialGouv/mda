@@ -143,6 +143,51 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::mes-aides.mes-aides",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "sections.title",
+          "sections.content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::mes-aides.mes-aides",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::mes-aides.mes-aides",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "sections.title",
+          "sections.content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::mes-aides.mes-aides",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "sections.title",
+          "sections.content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::question.question",
       "properties": {
         "fields": [
