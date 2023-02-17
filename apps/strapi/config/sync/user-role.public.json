@@ -16,6 +16,9 @@
       "action": "api::glossaire-item.glossaire-item.findOne"
     },
     {
+      "action": "api::maison-de-l-autisme.maison-de-l-autisme.find"
+    },
+    {
       "action": "api::question.question.find"
     },
     {

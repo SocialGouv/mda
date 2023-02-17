@@ -20,8 +20,9 @@ import {
   SetMinMax,
   TextAttribute,
   ComponentAttribute,
-  ComponentSchema,
+  SingleTypeSchema,
   RichTextAttribute,
+  ComponentSchema,
 } from '@strapi/strapi';
 
 export interface AdminPermission extends CollectionTypeSchema {
@@ -640,6 +641,37 @@ export interface ApiGlossaireItemGlossaireItem extends CollectionTypeSchema {
   };
 }
 
+export interface ApiMaisonDeLAutismeMaisonDeLAutisme extends SingleTypeSchema {
+  info: {
+    singularName: 'maison-de-l-autisme';
+    pluralName: 'maison-de-l-autismes';
+    displayName: "Maison de l'autisme";
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+    sections: ComponentAttribute<'sections.sections', true>;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::maison-de-l-autisme.maison-de-l-autisme',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::maison-de-l-autisme.maison-de-l-autisme',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiQuestionQuestion extends CollectionTypeSchema {
   info: {
     singularName: 'question';
@@ -717,6 +749,16 @@ export interface ParcoursDiagSubAnswer extends ComponentSchema {
   };
 }
 
+export interface SectionsSections extends ComponentSchema {
+  info: {
+    displayName: 'sections';
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+  };
+}
+
 declare global {
   namespace Strapi {
     interface Schemas {
@@ -733,10 +775,12 @@ declare global {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;
       'api::glossaire-item.glossaire-item': ApiGlossaireItemGlossaireItem;
+      'api::maison-de-l-autisme.maison-de-l-autisme': ApiMaisonDeLAutismeMaisonDeLAutisme;
       'api::question.question': ApiQuestionQuestion;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
       'parcours-diag.answer': ParcoursDiagAnswer;
       'parcours-diag.sub-answer': ParcoursDiagSubAnswer;
+      'sections.sections': SectionsSections;
     }
   }
 }

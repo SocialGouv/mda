@@ -98,6 +98,51 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::maison-de-l-autisme.maison-de-l-autisme",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "sections.title",
+          "sections.content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::maison-de-l-autisme.maison-de-l-autisme",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::maison-de-l-autisme.maison-de-l-autisme",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "sections.title",
+          "sections.content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::maison-de-l-autisme.maison-de-l-autisme",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "sections.title",
+          "sections.content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::question.question",
       "properties": {
         "fields": [

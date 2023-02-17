@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "maison_de_l_autismes",
+  "info": {
+    "singularName": "maison-de-l-autisme",
+    "pluralName": "maison-de-l-autismes",
+    "displayName": "Maison de l'autisme",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "sections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.sections"
+    }
+  }
+}
