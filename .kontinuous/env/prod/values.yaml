@@ -1,6 +1,20 @@
 global:
   host: maisondelautisme.fabrique.social.gouv.fr
   # host: maisondelautisme.gouv.fr #TODO enable when domain is ok
+  redirectFrom: 
+    - lamaisondelautisme.com
+    - lamaisondelautisme.eu
+    - lamaisondelautisme.fr
+    - lamaisondelautisme.net
+    - lamaisondelautisme.org
+    - maisonautisme.com
+    - maisonautisme.eu
+    - maisonautisme.fr
+    - maisonautisme.net
+    - maisonautisme.org
+    - maisondelautisme.com
+    - maisondelautisme.eu
+    - maisondelautisme.net
 
 web:
   envFrom:
