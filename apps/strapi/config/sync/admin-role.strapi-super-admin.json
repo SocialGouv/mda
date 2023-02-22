@@ -58,7 +58,8 @@
           "recap.content",
           "section.title",
           "section.content",
-          "slug"
+          "slug",
+          "excerpt"
         ]
       },
       "conditions": []
@@ -79,7 +80,8 @@
           "recap.content",
           "section.title",
           "section.content",
-          "slug"
+          "slug",
+          "excerpt"
         ]
       },
       "conditions": []
@@ -94,7 +96,8 @@
           "recap.content",
           "section.title",
           "section.content",
-          "slug"
+          "slug",
+          "excerpt"
         ]
       },
       "conditions": []
