@@ -34,6 +34,9 @@ cd apps/strapi
 yarn dev
 ```
 
+
+(to be removed) this is a test !
+
 **Web :**
 ```sh
 cd apps/web
