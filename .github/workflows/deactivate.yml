@@ -8,9 +8,9 @@ on:
       - "!v*"
       - "!main"
 
-concurrency:
-  cancel-in-progress: true
-  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.ref }}
+# concurrency:
+#   cancel-in-progress: true
+#   group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.ref }}
 
 jobs:
   kontinuous:
