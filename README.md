@@ -1,4 +1,4 @@
-# Maison Numérique de l'autisme
+# Maison Numérique de l'autisme (RGAA)
 
 ## Init
 ### Node
