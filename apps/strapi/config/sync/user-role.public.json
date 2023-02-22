@@ -4,6 +4,9 @@
   "type": "public",
   "permissions": [
     {
+      "action": "api::annuaire.annuaire.find"
+    },
+    {
       "action": "api::fiche-pratique.fiche-pratique.find"
     },
     {
@@ -17,9 +20,6 @@
     },
     {
       "action": "api::maison-de-l-autisme.maison-de-l-autisme.find"
-    },
-    {
-      "action": "api::mes-aides.mes-aides.find"
     },
     {
       "action": "api::question.question.find"

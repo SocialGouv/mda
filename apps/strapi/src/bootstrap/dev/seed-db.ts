@@ -8,6 +8,7 @@ const seeds = {
   "api::glossaire-item.glossaire-item": import("../../utils/seed/glossaire-item.json"),
   "api::maison-de-l-autisme.maison-de-l-autisme": import("../../utils/seed/maison-de-l-autisme.json"),
   "api::mes-aides.mes-aides": import("../../utils/seed/mes-aides.json"),
+  "api::annuaire.annuaire": import("../../utils/seed/annuaire.json"),
 };
 
 const hasData = async (strapi: Strapi) => {

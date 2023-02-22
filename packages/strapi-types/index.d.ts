@@ -19,9 +19,9 @@ import {
   DecimalAttribute,
   SetMinMax,
   TextAttribute,
-  ComponentAttribute,
   SingleTypeSchema,
   RichTextAttribute,
+  ComponentAttribute,
   ComponentSchema,
 } from '@strapi/strapi';
 
@@ -578,6 +578,37 @@ export interface PluginUsersPermissionsUser extends CollectionTypeSchema {
   };
 }
 
+export interface ApiAnnuaireAnnuaire extends SingleTypeSchema {
+  info: {
+    singularName: 'annuaire';
+    pluralName: 'annuaires';
+    displayName: 'Annuaire';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+    links: ComponentAttribute<'link.link', true>;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::annuaire.annuaire',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::annuaire.annuaire',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
   info: {
     singularName: 'fiche-pratique';
@@ -746,6 +777,16 @@ export interface FichePratiqueContentEncart extends ComponentSchema {
   };
 }
 
+export interface LinkLink extends ComponentSchema {
+  info: {
+    displayName: 'link';
+  };
+  attributes: {
+    text: StringAttribute & RequiredAttribute;
+    url: StringAttribute & RequiredAttribute;
+  };
+}
+
 export interface ParcoursDiagAnswer extends ComponentSchema {
   info: {
     displayName: 'answer';
@@ -804,12 +845,14 @@ declare global {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::annuaire.annuaire': ApiAnnuaireAnnuaire;
       'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;
       'api::glossaire-item.glossaire-item': ApiGlossaireItemGlossaireItem;
       'api::maison-de-l-autisme.maison-de-l-autisme': ApiMaisonDeLAutismeMaisonDeLAutisme;
       'api::mes-aides.mes-aides': ApiMesAidesMesAides;
       'api::question.question': ApiQuestionQuestion;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
+      'link.link': LinkLink;
       'parcours-diag.answer': ParcoursDiagAnswer;
       'parcours-diag.sub-answer': ParcoursDiagSubAnswer;
       'sections.sections': SectionsSections;

@@ -5,6 +5,51 @@
   "permissions": [
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::annuaire.annuaire",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "links.text",
+          "links.url"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::annuaire.annuaire",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::annuaire.annuaire",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "links.text",
+          "links.url"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::annuaire.annuaire",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "links.text",
+          "links.url"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::fiche-pratique.fiche-pratique",
       "properties": {
         "fields": [
