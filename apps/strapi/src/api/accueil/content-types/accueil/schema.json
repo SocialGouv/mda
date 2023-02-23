@@ -1,0 +1,44 @@
+{
+  "kind": "singleType",
+  "collectionName": "accueils",
+  "info": {
+    "singularName": "accueil",
+    "pluralName": "accueils",
+    "displayName": "Accueil",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "links": {
+      "displayName": "links",
+      "type": "component",
+      "repeatable": true,
+      "component": "links.links"
+    },
+    "MDA_title": {
+      "type": "string",
+      "required": true
+    },
+    "MDA_subtitle": {
+      "type": "text"
+    },
+    "MDA_content": {
+      "type": "richtext",
+      "required": true
+    },
+    "MDA_link_text": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

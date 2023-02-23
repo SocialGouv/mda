@@ -21,7 +21,7 @@ const Directory = async () => {
                 {link.text}
               </a>
             </li>
-          ))}{" "}
+          ))}
         </ul>
       )}
     </SimpleContentPage>

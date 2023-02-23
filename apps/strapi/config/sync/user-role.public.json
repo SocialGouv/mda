@@ -4,6 +4,9 @@
   "type": "public",
   "permissions": [
     {
+      "action": "api::accueil.accueil.find"
+    },
+    {
       "action": "api::annuaire.annuaire.find"
     },
     {

@@ -5,6 +5,72 @@
   "permissions": [
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::accueil.accueil",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "links.text",
+          "links.href",
+          "links.theme",
+          "MDA_title",
+          "MDA_subtitle",
+          "MDA_content",
+          "MDA_link_text"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::accueil.accueil",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::accueil.accueil",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::accueil.accueil",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "links.text",
+          "links.href",
+          "links.theme",
+          "MDA_title",
+          "MDA_subtitle",
+          "MDA_content",
+          "MDA_link_text"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::accueil.accueil",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "links.text",
+          "links.href",
+          "links.theme",
+          "MDA_title",
+          "MDA_subtitle",
+          "MDA_content",
+          "MDA_link_text"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::annuaire.annuaire",
       "properties": {
         "fields": [
