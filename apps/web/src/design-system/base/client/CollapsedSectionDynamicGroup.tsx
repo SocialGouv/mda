@@ -30,6 +30,7 @@ export const CollapsedSectionDynamicGroup = ({ className, data }: CollapsedSecti
     if (sectionAlreadyOpen) {
       setIsOpenIds(isOpenIds.filter(id => sectionId !== id));
     }
+    setIsOpenAll(data.length === isOpenIds.length + 1);
   };
 
   return (
