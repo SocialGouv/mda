@@ -1,0 +1,38 @@
+{
+  "name": "@mda/strapi-plugin-mda",
+  "version": "0.0.0",
+  "description": "This is the description of the plugin.",
+  "strapi": {
+    "name": "mda",
+    "description": "Description of strapi-plugin-mda plugin",
+    "kind": "plugin"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@mda/eslint-config": "*",
+    "@strapi/design-system": "1.6.1",
+    "@strapi/helper-plugin": "4.6.0",
+    "@strapi/icons": "1.6.1",
+    "@strapi/typescript-utils": "4.6.0",
+    "@strapi/utils": "4.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "4.6.0"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "maintainers": [
+    {
+      "name": "A Strapi developer"
+    }
+  ],
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc",
+    "lint": "eslint"
+  },
+  "license": "MIT"
+}

@@ -3,16 +3,11 @@
   "compilerOptions": {
     "strict": true,
     "outDir": "dist",
-    "allowJs": true,
-    "types": [
-      "@mda/strapi-types"
-    ]
   },
   "include": [
-    "./",
-    "./**/*.ts",
-    "./**/*.js",
-    "src/**/*.json"
+    "./src",
+    "src/**/*.json",
+    "types/**/*.d.ts",
   ],
   "exclude": [
     "node_modules/",
@@ -20,8 +15,7 @@
     "dist/",
     ".cache/",
     ".tmp/",
-    "src/admin/",
-    "**/*.test.*",
-    "src/plugins/**"
+    "src/admin",
+    "**/*.test.*"
   ]
 }

@@ -14,6 +14,8 @@ const admin: StrapiConfigSetter<AdminPanelConfig> = ({ env }) => ({
     },
   },
   watchIgnoreFiles: ["**/config/sync/**", "**/src/utils/seed/**"],
+  host: env("HOST", "127.0.0.1"),
+  port: "8080",
 });
 
 export default admin;

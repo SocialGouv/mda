@@ -1,0 +1,16 @@
+{
+  "extends": "@strapi/typescript-utils/tsconfigs/admin",
+  "compilerOptions": {
+    "strict": true,
+  },
+  "include": [
+    "./",
+    "../types/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules/",
+    "build/",
+    "dist/",
+    "**/*.test.ts"
+  ]
+}
