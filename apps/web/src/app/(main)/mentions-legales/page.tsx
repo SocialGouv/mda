@@ -45,7 +45,7 @@ const LegalNotice = () => {
       <p>
         Pour en savoir plus sur la politique d’accessibilité numérique de l’État &nbsp;:{" "}
         <a href="https://accessibilite.numerique.gouv.fr/" target="_blank" rel="noreferrer">
-          http://references.modernisation.gouv.fr/accessibilite-numerique
+          Référentiel général d’amélioration de l’accessibilité
         </a>
       </p>
       <h2>Signaler un dysfonctionnement</h2>
@@ -67,7 +67,7 @@ const LegalNotice = () => {
             target="_blank"
             rel="noreferrer"
           >
-            https://formulaire.defenseurdesdroits.fr/code/afficher.php?ETAPE=accueil_2016
+            Défenseur des droits&nbsp;: formulaire de réclamation
           </a>
         </li>
         <li>Composer le 09 69 39 00 00 (du lundi au vendredi de 8h à 20h)</li>
