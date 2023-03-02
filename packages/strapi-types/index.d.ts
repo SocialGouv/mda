@@ -22,6 +22,7 @@ import {
   SingleTypeSchema,
   RichTextAttribute,
   ComponentAttribute,
+  MediaAttribute,
   ComponentSchema,
 } from '@strapi/strapi';
 
