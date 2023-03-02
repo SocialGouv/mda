@@ -15,6 +15,15 @@ export const Header = () => {
     } else {
       document.body.style.removeProperty("--scroll-top");
     }
+    function handleKeyDown(event: { keyCode: number }) {
+      if (event.keyCode === 27) {
+        setNavOpen(false);
+      }
+    }
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, [navOpen]);
 
   const MainNavLink = ({ href, children }: PropsWithChildren<{ href: string }>) => (
