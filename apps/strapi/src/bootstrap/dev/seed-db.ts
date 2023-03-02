@@ -9,7 +9,7 @@ const seeds = {
   "api::maison-de-l-autisme.maison-de-l-autisme": import("../../utils/seed/maison-de-l-autisme.json"),
   "api::mes-aides.mes-aides": import("../../utils/seed/mes-aides.json"),
   "api::annuaire.annuaire": import("../../utils/seed/annuaire.json"),
-  "api::accueil.accueil": import("../../utils/seed/home.json"),
+  "api::accueil.accueil": import("../../utils/seed/accueil.json"),
 };
 
 const hasData = async (strapi: Strapi) => {
