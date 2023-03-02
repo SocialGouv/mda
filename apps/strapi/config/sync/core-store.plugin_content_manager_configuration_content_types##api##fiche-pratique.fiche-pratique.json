@@ -76,6 +76,20 @@
           "sortable": true
         }
       },
+      "excerpt": {
+        "edit": {
+          "label": "excerpt",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "excerpt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -134,6 +148,10 @@
         [
           {
             "name": "slug",
+            "size": 6
+          },
+          {
+            "name": "excerpt",
             "size": 6
           }
         ]

@@ -21,13 +21,18 @@ import {
   TileImg,
 } from "@design-system";
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
+import { fetchStrapi } from "@services/strapi";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
 
 import heroPic from "../../../public/home-hero.jpeg";
 import mdaPic from "../../../public/mda.jpg";
 import styles from "./index.module.css";
 
-const HomePage = () => {
+const HomePage = async () => {
+  const strapiData = await fetchStrapi("accueil", { populate: "links", sort: "id" });
+  const data = strapiData.data?.attributes;
+
   return (
     <>
       <section>
@@ -35,24 +40,19 @@ const HomePage = () => {
           <Container>
             <Grid haveGutters>
               <GridCol lg={7}>
-                <h1>Qu'est-ce que l'autisme&nbsp;?</h1>
-                <p>
-                  L’autisme est un trouble du neurodéveloppement (TND) précoce qui impacte les capacités de
-                  communication, les interactions sociales et les comportements des personnes. Ce trouble va souvent de
-                  pair avec d’autres manifestations&nbsp;: hyper ou hypo sensibilité aux sons, lumières, odeurs… ,
-                  trouble du déficit de l’attention avec ou sans hyperactivité (TDA/H), troubles “dys” (dyslexie,
-                  dyspraxie, dysphasie,…)
-                </p>
-                <ButtonGroup inline="mobile-up">
-                  <ButtonGroupItem>
-                    <ButtonAsLink href="/fiches-pratiques/qu-est-ce-que-l-autisme">Comprendre l'autisme</ButtonAsLink>
-                  </ButtonGroupItem>
-                  <ButtonGroupItem>
-                    <ButtonAsLink variant="secondary" href="/mon-diagnostic">
-                      J'ai un doute
-                    </ButtonAsLink>
-                  </ButtonGroupItem>
-                </ButtonGroup>
+                {data?.title && <h1>{data.title}</h1>}
+                {data?.content && <ReactMarkdown>{data.content}</ReactMarkdown>}
+                {data?.links && (
+                  <ButtonGroup inline="mobile-up">
+                    {data.links.map((link, index) => (
+                      <ButtonGroupItem key={index}>
+                        <ButtonAsLink variant={link.theme} href={link.href}>
+                          {link.text}
+                        </ButtonAsLink>
+                      </ButtonGroupItem>
+                    ))}
+                  </ButtonGroup>
+                )}
               </GridCol>
               <GridCol md={6} lg={5} className="fr-mx-auto">
                 <Image
@@ -262,22 +262,14 @@ const HomePage = () => {
               />
             </GridCol>
             <GridCol lg={7} className="fr-pt-2w fr-pt-lg-6w fr-pl-lg-4w">
-              <h2 className="fr-h1">La Maison de l’autisme</h2>
-              <p className="fr-text--lg fr-text--bold">
-                La Maison de l'autisme sera située 10 rue Waldeck Rochet à Aubervilliers, en Seine-Saint-Denis. Les
-                services du département de la Seine-Saint-Denis et la RATP faciliteront l'accès à la Maison de
-                l'autisme.
-              </p>
-              <p>
-                La Maison de l’autisme permettra d’accéder facilement et de manière simple à des ressources humaines,
-                matérielles et immatérielles. La Maison de l'autisme sera dans un premier temps animée par trois acteurs
-                : le Groupement National des Centres Ressources Autisme (GNCRA), Centre Ressources Autisme Île-de-France
-                (CRAIF) et Autisme Info Service. Par la suite, les associations volontaires pourront rejoindre cette
-                initiative
-              </p>
-              <div className="fr-mt-4w">
-                <ButtonAsLink href="/la-maison-de-l-autisme">En savoir plus</ButtonAsLink>
-              </div>
+              {data?.MDA_title && <h2 className="fr-h1">{data.MDA_title}</h2>}
+              {data?.MDA_subtitle && <p className="fr-text--lg fr-text--bold">{data.MDA_subtitle}</p>}
+              {data?.MDA_content && <ReactMarkdown>{data.MDA_content}</ReactMarkdown>}
+              {data?.MDA_link_text && (
+                <div className="fr-mt-4w">
+                  <ButtonAsLink href="/la-maison-de-l-autisme">{data.MDA_link_text}</ButtonAsLink>
+                </div>
+              )}
             </GridCol>
           </Grid>
         </Container>

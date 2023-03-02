@@ -1,0 +1,26 @@
+{
+	"id": 1,
+	"title": "Qu'est-ce que l'autisme ?",
+	"content": "L’autisme est un trouble du neurodéveloppement (TND) précoce qui impacte les capacités de communication, les interactions sociales et les comportements des personnes. Ce trouble va souvent de pair avec d’autres manifestations : hyper ou hypo sensibilité aux sons, lumières, odeurs… , trouble du déficit de l’attention avec ou sans hyperactivité (TDA/H), troubles “dys” (dyslexie, dyspraxie, dysphasie,…)",
+	"createdAt": "2023-02-23T14:50:55.422Z",
+	"updatedAt": "2023-02-23T15:51:35.801Z",
+	"publishedAt": "2023-02-23T14:53:49.028Z",
+	"MDA_title": "La Maison de l’autisme",
+	"MDA_subtitle": "La Maison de l'autisme sera située 10 rue Waldeck Rochet à Aubervilliers, en Seine-Saint-Denis. Les services du département de la Seine-Saint-Denis et la RATP faciliteront l'accès à la Maison de l'autisme.",
+	"MDA_content": "La Maison de l’autisme permettra d’accéder facilement et de manière simple à des ressources humaines,  matérielles et immatérielles. La Maison de l'autisme sera dans un premier temps animée par trois acteurs : le Groupement National des Centres Ressources Autisme (GNCRA), Centre Ressources Autisme Île-de-France (CRAIF) et Autisme Info Service. Par la suite, les associations volontaires pourront rejoindre cette initiative.",
+	"MDA_link_text": "En savoir plus",
+	"links": [
+		{
+			"id": 1,
+			"text": "Comprendre l'autisme",
+			"href": "/fiches-pratiques/qu-est-ce-que-l-autisme",
+			"theme": "primary"
+		},
+		{
+			"id": 2,
+			"text": "J'ai un doute",
+			"href": "/mon-diagnostic",
+			"theme": "secondary"
+		}
+	]
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "annuaires",
+  "info": {
+    "singularName": "annuaire",
+    "pluralName": "annuaires",
+    "displayName": "Annuaire",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "links": {
+      "displayName": "link",
+      "type": "component",
+      "repeatable": true,
+      "component": "link.link"
+    }
+  }
+}

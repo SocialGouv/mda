@@ -1,0 +1,97 @@
+{
+  "key": "plugin_content_manager_configuration_components::links.links",
+  "value": {
+    "uid": "links.links",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "text",
+      "defaultSortBy": "text",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "text": {
+        "edit": {
+          "label": "text",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "text",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "href": {
+        "edit": {
+          "label": "href",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "href",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "theme": {
+        "edit": {
+          "label": "theme",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "theme",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "text",
+        "href",
+        "theme"
+      ],
+      "edit": [
+        [
+          {
+            "name": "text",
+            "size": 6
+          },
+          {
+            "name": "href",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "theme",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

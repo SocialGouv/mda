@@ -1,19 +1,29 @@
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
+import { fetchStrapi } from "@services/strapi";
+import ReactMarkdown from "react-markdown";
 
-const Directory = () => {
+const Directory = async () => {
+  const strapiData = await fetchStrapi("annuaire", { populate: "links", sort: "id" });
+  const data = strapiData.data?.attributes;
   return (
     <SimpleContentPage>
-      <h1>Annuaire</h1>
-      <p className="fr-text--lg">
-        Vous cherchez des contacts de confiance&nbsp;? Un établissement ou un organisme&nbsp;? Des professionnels de
-        santé&nbsp;? Une association&nbsp;?
-      </p>
-      <p className="fr-mt-6w">
-        Rendez-vous sur l'annuaire d'
-        <a href="https://annuaire.autismeinfoservice.fr/" target="_blank" rel="noreferrer">
-          Autisme Info Service
-        </a>
-      </p>
+      {data?.title && <h1>{data.title}</h1>}
+      {data?.content && (
+        <div className="fr-text--xl">
+          <ReactMarkdown>{data.content}</ReactMarkdown>
+        </div>
+      )}
+      {data?.links && (
+        <ul>
+          {data.links.map((link, index) => (
+            <li key={index}>
+              <a href={link.url} target="_blank" rel="noreferrer">
+                {link.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </SimpleContentPage>
   );
 };

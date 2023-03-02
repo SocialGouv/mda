@@ -2,10 +2,10 @@
   "key": "plugin_users-permissions_advanced",
   "value": {
     "unique_email": true,
-    "allow_register": false,
+    "allow_register": true,
     "email_confirmation": false,
     "email_reset_password": null,
-    "email_confirmation_redirection": "",
+    "email_confirmation_redirection": null,
     "default_role": "authenticated"
   },
   "type": "object",

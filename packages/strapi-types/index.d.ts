@@ -19,9 +19,9 @@ import {
   DecimalAttribute,
   SetMinMax,
   TextAttribute,
-  ComponentAttribute,
   SingleTypeSchema,
   RichTextAttribute,
+  ComponentAttribute,
   ComponentSchema,
 } from '@strapi/strapi';
 
@@ -578,6 +578,73 @@ export interface PluginUsersPermissionsUser extends CollectionTypeSchema {
   };
 }
 
+export interface ApiAccueilAccueil extends SingleTypeSchema {
+  info: {
+    singularName: 'accueil';
+    pluralName: 'accueils';
+    displayName: 'Accueil';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+    links: ComponentAttribute<'links.links', true>;
+    MDA_title: StringAttribute & RequiredAttribute;
+    MDA_subtitle: TextAttribute;
+    MDA_content: RichTextAttribute & RequiredAttribute;
+    MDA_link_text: StringAttribute & RequiredAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    publishedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::accueil.accueil',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::accueil.accueil',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
+export interface ApiAnnuaireAnnuaire extends SingleTypeSchema {
+  info: {
+    singularName: 'annuaire';
+    pluralName: 'annuaires';
+    displayName: 'Annuaire';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+    links: ComponentAttribute<'link.link', true>;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::annuaire.annuaire',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::annuaire.annuaire',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
   info: {
     singularName: 'fiche-pratique';
@@ -594,6 +661,11 @@ export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
       RequiredAttribute;
     section: ComponentAttribute<'fiche-pratique-content.encart', true>;
     slug: StringAttribute & UniqueAttribute;
+    excerpt: TextAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        maxLength: 200;
+      }>;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
@@ -746,6 +818,30 @@ export interface FichePratiqueContentEncart extends ComponentSchema {
   };
 }
 
+export interface LinkLink extends ComponentSchema {
+  info: {
+    displayName: 'link';
+  };
+  attributes: {
+    text: StringAttribute & RequiredAttribute;
+    url: StringAttribute & RequiredAttribute;
+  };
+}
+
+export interface LinksLinks extends ComponentSchema {
+  info: {
+    displayName: 'links';
+    description: '';
+  };
+  attributes: {
+    text: StringAttribute & RequiredAttribute;
+    href: StringAttribute;
+    theme: EnumerationAttribute<['primary', 'secondary']> &
+      RequiredAttribute &
+      DefaultTo<'primary'>;
+  };
+}
+
 export interface ParcoursDiagAnswer extends ComponentSchema {
   info: {
     displayName: 'answer';
@@ -804,12 +900,16 @@ declare global {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::accueil.accueil': ApiAccueilAccueil;
+      'api::annuaire.annuaire': ApiAnnuaireAnnuaire;
       'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;
       'api::glossaire-item.glossaire-item': ApiGlossaireItemGlossaireItem;
       'api::maison-de-l-autisme.maison-de-l-autisme': ApiMaisonDeLAutismeMaisonDeLAutisme;
       'api::mes-aides.mes-aides': ApiMesAidesMesAides;
       'api::question.question': ApiQuestionQuestion;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
+      'link.link': LinkLink;
+      'links.links': LinksLinks;
       'parcours-diag.answer': ParcoursDiagAnswer;
       'parcours-diag.sub-answer': ParcoursDiagSubAnswer;
       'sections.sections': SectionsSections;
