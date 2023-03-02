@@ -14,12 +14,13 @@ export const FormGroup = ({ isValid, isError, children }: FormGroupProps) => (
 
 export type FormLabelProps = PropsWithChildren<{
   as?: "label" | "legend";
+  className?: string;
   hint?: string;
   htmlFor: string;
 }>;
 
-export const FormGroupLabel = ({ as: HtmlTag = "label", htmlFor, hint, children }: FormLabelProps) => (
-  <HtmlTag className={clsx("fr-label", HtmlTag === "legend" && "fr-pl-0")} htmlFor={htmlFor}>
+export const FormGroupLabel = ({ className, as: HtmlTag = "label", htmlFor, hint, children }: FormLabelProps) => (
+  <HtmlTag className={clsx("fr-label", HtmlTag === "legend" && "fr-pl-0", className)} htmlFor={htmlFor}>
     {children}
     {hint && (
       <span className="fr-hint-text" id={`${htmlFor}-hint`}>
