@@ -1,5 +1,3 @@
-import { type Strapi } from "@strapi/strapi";
-
 import { type StrapiLifecycle } from "../../utils/types";
 
 const seeds = {
@@ -12,23 +10,8 @@ const seeds = {
   "api::accueil.accueil": import("../../utils/seed/accueil.json"),
 };
 
-const hasData = async (strapi: Strapi) => {
-  for (const uid of Object.keys(seeds)) {
-    const entries = await strapi.db.query(uid).findMany({});
-    if (entries.length > 0) {
-      return true;
-    }
-  }
-  return false;
-};
-
 const devSeedDb: StrapiLifecycle = async ({ strapi }) => {
   if (process.env.MDA_ENV !== "dev") {
-    return;
-  }
-
-  if (await hasData(strapi)) {
-    strapi.log.warn(`[MDA devSeedDb] Entries found. No seeding.`);
     return;
   }
 
@@ -36,6 +19,11 @@ const devSeedDb: StrapiLifecycle = async ({ strapi }) => {
 
   for (const [slug, json] of Object.entries(seeds)) {
     try {
+      const entries = await strapi.db.query(slug).findMany({});
+      if (entries.length > 0) {
+        strapi.log.warn(`[MDA devSeedDb] Entries found for ${slug}. No seeding.`);
+        continue;
+      }
       await importService.importData((await json).default, { format: "jso", slug });
       strapi.log.info(`[MDA devSeedDb] 🌱 => ${slug}`);
     } catch (error) {
