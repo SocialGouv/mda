@@ -8,7 +8,7 @@ export type ButtonStylesProps = {
   iconRight?: IconStyles;
   isRounded?: boolean;
   size?: "lg" | "sm";
-  variant?: "secondary" | "tertiary-no-border" | "tertiary";
+  variant?: "primary" | "secondary" | "tertiary-no-border" | "tertiary";
 };
 
 export const buttonStyles = ({ variant, size, iconLeft, iconRight, iconOnly, isRounded }: ButtonStylesProps): string =>

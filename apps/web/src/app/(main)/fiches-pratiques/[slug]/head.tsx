@@ -15,7 +15,7 @@ const Head = async ({ params }: FichePratiqueProps) => {
   ).data?.[0];
   return (
     <head>
-      <Next13Seo title={`Fiche Pratique${currentFiche ? ` - ${currentFiche.attributes.title}` : ""}`} />
+      <Next13Seo title={`Fiche pratique${currentFiche ? ` - ${currentFiche.attributes.title}` : ""}`} />
     </head>
   );
 };

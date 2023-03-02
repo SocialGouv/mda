@@ -16,6 +16,7 @@ const FichesPratiques = async () => {
   const fiches = await fetchStrapi("fiche-pratiques", { populate: "recap", sort: "id" }).then(
     responses => responses.data ?? [],
   );
+
   return (
     <section className="fr-py-6w fr-py-md-12w">
       <Container>
@@ -33,13 +34,11 @@ const FichesPratiques = async () => {
                           {fiche.attributes.title}
                         </NextLinkOrA>
                       </CardBodyContentTitle>
-                      <CardBodyContentDescription>
-                        <ReactMarkdown>
-                          {fiche.attributes.recap.content.length < 160
-                            ? fiche.attributes.recap.content
-                            : `${fiche.attributes.recap.content.substring(0, 157)}...`}
-                        </ReactMarkdown>
-                      </CardBodyContentDescription>
+                      {fiche.attributes.excerpt && (
+                        <CardBodyContentDescription>
+                          <ReactMarkdown>{fiche.attributes.excerpt}</ReactMarkdown>
+                        </CardBodyContentDescription>
+                      )}
                     </CardBodyContent>
                   </CardBody>
                 </Card>

@@ -44,8 +44,10 @@
     flex-grow: 1;
     color: var(--text-action-high-blue-france);
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.425rem;
     margin: 0;
+    line-height: 1.25;
+    padding-right: 2.5rem;
 }
 
 .bullet {

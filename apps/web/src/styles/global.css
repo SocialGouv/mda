@@ -54,6 +54,19 @@
     border-radius: 50%;
 }
 
+
+@media (prefers-color-scheme: dark) {
+  .fr-header__operator svg path {
+    fill : #cecece
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .fr-header__operator svg path{
+    fill : #212D52
+  }
+}
+
 @page {
     margin: 2cm;
 }

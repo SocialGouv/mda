@@ -1,7 +1,7 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::mes-aides.mes-aides",
+  "key": "plugin_content_manager_configuration_content_types::api::accueil.accueil",
   "value": {
-    "uid": "api::mes-aides.mes-aides",
+    "uid": "api::accueil.accueil",
     "settings": {
       "bulkable": true,
       "filterable": true,
@@ -48,18 +48,74 @@
           "sortable": false
         }
       },
-      "sections": {
+      "links": {
         "edit": {
-          "label": "sections",
+          "label": "links",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "sections",
+          "label": "links",
           "searchable": false,
           "sortable": false
+        }
+      },
+      "MDA_title": {
+        "edit": {
+          "label": "MDA_title",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "MDA_title",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "MDA_subtitle": {
+        "edit": {
+          "label": "MDA_subtitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "MDA_subtitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "MDA_content": {
+        "edit": {
+          "label": "MDA_content",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "MDA_content",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "MDA_link_text": {
+        "edit": {
+          "label": "MDA_link_text",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "MDA_link_text",
+          "searchable": true,
+          "sortable": true
         }
       },
       "createdAt": {
@@ -95,8 +151,8 @@
       "list": [
         "id",
         "title",
-        "sections",
-        "createdAt"
+        "links",
+        "MDA_title"
       ],
       "edit": [
         [
@@ -113,8 +169,30 @@
         ],
         [
           {
-            "name": "sections",
+            "name": "links",
             "size": 12
+          }
+        ],
+        [
+          {
+            "name": "MDA_title",
+            "size": 6
+          },
+          {
+            "name": "MDA_subtitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "MDA_content",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "MDA_link_text",
+            "size": 6
           }
         ]
       ]
