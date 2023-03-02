@@ -25,6 +25,9 @@
       "action": "api::maison-de-l-autisme.maison-de-l-autisme.find"
     },
     {
+      "action": "api::mes-aides.mes-aides.find"
+    },
+    {
       "action": "api::question.question.find"
     },
     {
@@ -32,6 +35,12 @@
     },
     {
       "action": "plugin::slugify.slugController.findSlug"
+    },
+    {
+      "action": "plugin::upload.content-api.find"
+    },
+    {
+      "action": "plugin::upload.content-api.findOne"
     }
   ]
 }

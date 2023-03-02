@@ -8,7 +8,7 @@
       "searchable": true,
       "pageSize": 10,
       "mainField": "content",
-      "defaultSortBy": "first",
+      "defaultSortBy": "content",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -106,6 +106,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "content",
+        "answers",
+        "info"
+      ],
       "edit": [
         [
           {
@@ -129,12 +135,6 @@
             "size": 4
           }
         ]
-      ],
-      "list": [
-        "id",
-        "content",
-        "answers",
-        "info"
       ]
     }
   },

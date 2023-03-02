@@ -150,9 +150,9 @@
     "layouts": {
       "list": [
         "id",
-        "createdAt",
-        "updatedAt",
-        "title"
+        "title",
+        "links",
+        "MDA_title"
       ],
       "edit": [
         [
@@ -177,9 +177,7 @@
           {
             "name": "MDA_title",
             "size": 6
-          }
-        ],
-        [
+          },
           {
             "name": "MDA_subtitle",
             "size": 6

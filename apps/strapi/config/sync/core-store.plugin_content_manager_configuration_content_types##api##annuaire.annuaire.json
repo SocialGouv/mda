@@ -95,8 +95,8 @@
       "list": [
         "id",
         "title",
-        "createdAt",
-        "updatedAt"
+        "links",
+        "createdAt"
       ],
       "edit": [
         [
