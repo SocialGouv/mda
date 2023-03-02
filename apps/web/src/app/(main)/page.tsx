@@ -70,8 +70,8 @@ const HomePage = () => {
         <div className="fr-pt-6w fr-pt-md-8w">
           <Container>
             <h2>Démarches et outils</h2>
-            <Grid haveGutters>
-              <GridCol lg={6}>
+            <Grid as="ul" haveGutters>
+              <GridCol as="li" lg={6}>
                 <Tile>
                   <TileBody>
                     <TileBodyTitle href="/mon-parcours" titleAs="h3">
@@ -87,7 +87,7 @@ const HomePage = () => {
                   </TileImg>
                 </Tile>
               </GridCol>
-              <GridCol lg={6}>
+              <GridCol as="li" lg={6}>
                 <Tile>
                   <TileBody>
                     <TileBodyTitle href="/modeles-de-courrier" titleAs="h3">
@@ -103,7 +103,7 @@ const HomePage = () => {
                   </TileImg>
                 </Tile>
               </GridCol>
-              <GridCol lg={6}>
+              <GridCol as="li" lg={6}>
                 <Tile>
                   <TileBody>
                     <TileBodyTitle href="/mes-aides" titleAs="h3">
@@ -119,7 +119,7 @@ const HomePage = () => {
                   </TileImg>
                 </Tile>
               </GridCol>
-              <GridCol lg={6}>
+              <GridCol as="li" lg={6}>
                 <Tile>
                   <TileBody>
                     <TileBodyTitle href="/mon-diagnostic" titleAs="h3">
@@ -138,8 +138,8 @@ const HomePage = () => {
               </GridCol>
             </Grid>
             <h2 className="fr-mt-8w fr-mt-md-12w">Fiches pratiques les plus lues</h2>
-            <Grid haveGutters>
-              <GridCol md={6} lg={4}>
+            <Grid as="ul" haveGutters>
+              <GridCol as="li" md={6} lg={4}>
                 <Card isEnlargeLink>
                   <CardBody>
                     <CardBodyContent>
@@ -156,7 +156,7 @@ const HomePage = () => {
                   </CardBody>
                 </Card>
               </GridCol>
-              <GridCol md={6} lg={4}>
+              <GridCol as="li" md={6} lg={4}>
                 <Card isEnlargeLink>
                   <CardBody>
                     <CardBodyContent>
@@ -174,7 +174,7 @@ const HomePage = () => {
                   </CardBody>
                 </Card>
               </GridCol>
-              <GridCol md={6} lg={4}>
+              <GridCol as="li" md={6} lg={4}>
                 <Card isEnlargeLink>
                   <CardBody>
                     <CardBodyContent>
@@ -191,7 +191,7 @@ const HomePage = () => {
                   </CardBody>
                 </Card>
               </GridCol>
-              <GridCol md={6} lg={4}>
+              <GridCol as="li" md={6} lg={4}>
                 <Card isEnlargeLink>
                   <CardBody>
                     <CardBodyContent>
@@ -207,7 +207,7 @@ const HomePage = () => {
                   </CardBody>
                 </Card>
               </GridCol>
-              <GridCol md={6} lg={4}>
+              <GridCol as="li" md={6} lg={4}>
                 <Card isEnlargeLink>
                   <CardBody>
                     <CardBodyContent>
@@ -222,7 +222,7 @@ const HomePage = () => {
                   </CardBody>
                 </Card>
               </GridCol>
-              <GridCol md={6} lg={4}>
+              <GridCol as="li" md={6} lg={4}>
                 <Card isEnlargeLink>
                   <CardBody>
                     <CardBodyContent>

@@ -15,8 +15,8 @@ const MonParcours = () => {
     <section className="fr-py-6w fr-py-md-12w">
       <Container>
         <h1>Mon parcours</h1>
-        <Grid haveGutters>
-          <GridCol lg={6}>
+        <Grid as="ul" haveGutters>
+          <GridCol as="li" lg={6}>
             <Card isEnlargeLink>
               <CardBody>
                 <CardBodyContent>
@@ -32,8 +32,8 @@ const MonParcours = () => {
                 </CardBodyContent>
               </CardBody>
             </Card>
-          </GridCol>{" "}
-          <GridCol lg={6}>
+          </GridCol>
+          <GridCol as="li" lg={6}>
             <Card isEnlargeLink>
               <CardBody>
                 <CardBodyContent>
@@ -51,8 +51,8 @@ const MonParcours = () => {
                 </CardBodyContent>
               </CardBody>
             </Card>
-          </GridCol>{" "}
-          <GridCol lg={6}>
+          </GridCol>
+          <GridCol as="li" lg={6}>
             <Card isEnlargeLink>
               <CardBody>
                 <CardBodyContent>
