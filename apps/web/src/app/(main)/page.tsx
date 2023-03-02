@@ -19,7 +19,7 @@ import {
   TileBody,
   TileBodyDescription,
   TileBodyTitle,
-  TileImg
+  TileImg,
 } from "@design-system";
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 import { fetchStrapi } from "@services/strapi";
@@ -37,7 +37,7 @@ const HomePage = async () => {
 
   const data = strapiData.data?.attributes;
   const homeImgPath = data?.MDA_img?.data?.attributes.url;
-  const homeImgSrc = homeImgPath ? new URL(homeImgPath, config.strapi.apiUrl) : new URL("/home-hero.jpeg");
+  const homeImgSrc = homeImgPath ? new URL(homeImgPath, config.strapi.apiUrl).toString() : "/home-hero.jpeg";
 
   return (
     <>
@@ -61,7 +61,7 @@ const HomePage = async () => {
                 )}
               </GridCol>
               <GridCol md={6} lg={5} className="fr-mx-auto">
-                <Image className="fr-fluid-img" src={homeImgSrc.toString()} alt="" width={486} height={324} />
+                <Image className="fr-fluid-img" src={homeImgSrc} alt="" width={486} height={324} />
               </GridCol>
             </Grid>
           </Container>
