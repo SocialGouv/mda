@@ -36,7 +36,7 @@ const HomePage = async () => {
   });
 
   const data = strapiData.data?.attributes;
-  const homeImgPath = data?.MDA_img?.data.attributes.url;
+  const homeImgPath = data?.MDA_img?.data?.attributes.url;
   const homeImgSrc = homeImgPath ? new URL(homeImgPath, config.strapi.apiUrl) : new URL("/home-hero.jpeg");
 
   return (
