@@ -5,13 +5,17 @@ import { Logo, LogoMda } from "@design-system";
 import { MainNav, MainNavItem, MainNavItemWithDropdown } from "@design-system/client";
 import clsx from "clsx";
 import Link from "next/link";
-import { type PropsWithChildren, useEffect, useState } from "react";
+import { type PropsWithChildren, useEffect, useRef, useState } from "react";
 
 export const Header = () => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const [navOpen, setNavOpen] = useState(false);
   useEffect(() => {
     if (navOpen) {
       document.body.style.setProperty("--scroll-top", "0px");
+      if (buttonRef.current !== null) {
+        buttonRef.current.focus();
+      }
     } else {
       document.body.style.removeProperty("--scroll-top");
     }
@@ -75,6 +79,7 @@ export const Header = () => {
       >
         <div className="fr-container">
           <button
+            ref={buttonRef}
             className="fr-btn--close fr-btn"
             aria-controls="modal-main-nav"
             title="Fermer"
