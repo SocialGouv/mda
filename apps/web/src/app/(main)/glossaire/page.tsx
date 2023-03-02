@@ -21,7 +21,7 @@ const Glossary = async () => {
                     href={item.attributes.url}
                     target="_blank"
                     rel="noreferrer"
-                    title={`Lien vers le site : ${item.attributes.description}`}
+                    aria-label={`${item.attributes.title}, ouvrir dans une nouvelle fenêtre`}
                   >
                     {item.attributes.title}
                   </a>
