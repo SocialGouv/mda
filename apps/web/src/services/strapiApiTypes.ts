@@ -42,10 +42,10 @@ type ContentAPIComponentValue<T extends Attribute> = T extends ComponentAttribut
   : never;
 
 // Custom GetMediaAttributeValue implementation for the content api
-type ContentAPIMediaValue<T extends Attribute> = T extends MediaAttribute<infer R>
-  ? R extends true
-    ? DataWrapper
-    : DataWrapper[]
+type ContentAPIMediaValue<T extends Attribute> = T extends MediaAttribute<infer _, infer R>
+  ? {
+      data: R extends true ? Array<DataWrapper<"plugin::upload.file">> : DataWrapper<"plugin::upload.file">;
+    }
   : never;
 
 // Custom GetDynamicZoneAttributeValue implementation for the content api

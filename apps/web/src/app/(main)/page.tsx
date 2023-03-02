@@ -1,3 +1,4 @@
+import { config } from "@common/config";
 import { PictoDocumentDownload } from "@components/pictos/PictoDocumentDownload";
 import { PictoHealth } from "@components/pictos/PictoHealth";
 import { PictoHumanCooperation } from "@components/pictos/PictoHumanCooperation";
@@ -18,20 +19,25 @@ import {
   TileBody,
   TileBodyDescription,
   TileBodyTitle,
-  TileImg,
+  TileImg
 } from "@design-system";
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 import { fetchStrapi } from "@services/strapi";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 
-import heroPic from "../../../public/home-hero.jpeg";
 import mdaPic from "../../../public/mda.jpg";
 import styles from "./index.module.css";
 
 const HomePage = async () => {
-  const strapiData = await fetchStrapi("accueil", { populate: "links", sort: "id" });
+  const strapiData = await fetchStrapi("accueil", {
+    populate: "links,MDA_img",
+    sort: "id",
+  });
+
   const data = strapiData.data?.attributes;
+  const homeImgPath = data?.MDA_img?.data.attributes.url;
+  const homeImgSrc = homeImgPath ? new URL(homeImgPath, config.strapi.apiUrl) : new URL("/home-hero.jpeg");
 
   return (
     <>
@@ -55,7 +61,7 @@ const HomePage = async () => {
                 )}
               </GridCol>
               <GridCol md={6} lg={5} className="fr-mx-auto">
-                <Image className="fr-fluid-img" src={heroPic} alt="" width={486} height={324} placeholder="blur" />
+                <Image className="fr-fluid-img" src={homeImgSrc.toString()} alt="" width={486} height={324} />
               </GridCol>
             </Grid>
           </Container>
