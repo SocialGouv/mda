@@ -92,11 +92,6 @@ const MonParcoursAidant = () => {
                 footer={
                   <ul>
                     <li>
-                      <TimelineItemFooterLink title="Cette page est en cours de rédaction et sera prochainement disponible.">
-                        Être scolarisé
-                      </TimelineItemFooterLink>
-                    </li>
-                    <li>
                       <TimelineItemFooterLink href="/fiches-pratiques/etudier-du-college-aux-etudes-superieures">
                         Étudier
                       </TimelineItemFooterLink>
@@ -108,11 +103,6 @@ const MonParcoursAidant = () => {
                     </li>
                     <li>
                       <TimelineItemFooterLink href="/fiches-pratiques/se-loger">Logement</TimelineItemFooterLink>
-                    </li>
-                    <li>
-                      <TimelineItemFooterLink title="Cette page est en cours de rédaction et sera prochainement disponible.">
-                        Travailler quand on est parent ou aidant
-                      </TimelineItemFooterLink>
                     </li>
                     <li>
                       <TimelineItemFooterLink href="/fiches-pratiques/se-soigner">Se soigner</TimelineItemFooterLink>
