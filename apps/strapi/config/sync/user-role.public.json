@@ -25,6 +25,9 @@
       "action": "api::maison-de-l-autisme.maison-de-l-autisme.find"
     },
     {
+      "action": "api::mentions-legales.mentions-legales.find"
+    },
+    {
       "action": "api::mes-aides.mes-aides.find"
     },
     {

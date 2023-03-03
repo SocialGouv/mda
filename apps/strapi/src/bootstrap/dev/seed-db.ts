@@ -8,6 +8,7 @@ const seeds = {
   "api::mes-aides.mes-aides": import("../../utils/seed/mes-aides.json"),
   "api::annuaire.annuaire": import("../../utils/seed/annuaire.json"),
   "api::accueil.accueil": import("../../utils/seed/accueil.json"),
+  "api::mentions-legales.mentions-legales": import("../../utils/seed/mentions-legales.json"),
 };
 
 const devSeedDb: StrapiLifecycle = async ({ strapi }) => {

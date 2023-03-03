@@ -744,6 +744,35 @@ export interface ApiMaisonDeLAutismeMaisonDeLAutisme extends SingleTypeSchema {
   };
 }
 
+export interface ApiMentionsLegalesMentionsLegales extends SingleTypeSchema {
+  info: {
+    singularName: 'mentions-legales';
+    pluralName: 'mentions-legaless';
+    displayName: 'Mentions l\u00E9gales';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::mentions-legales.mentions-legales',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::mentions-legales.mentions-legales',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiMesAidesMesAides extends SingleTypeSchema {
   info: {
     singularName: 'mes-aides';
@@ -905,6 +934,7 @@ declare global {
       'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;
       'api::glossaire-item.glossaire-item': ApiGlossaireItemGlossaireItem;
       'api::maison-de-l-autisme.maison-de-l-autisme': ApiMaisonDeLAutismeMaisonDeLAutisme;
+      'api::mentions-legales.mentions-legales': ApiMentionsLegalesMentionsLegales;
       'api::mes-aides.mes-aides': ApiMesAidesMesAides;
       'api::question.question': ApiQuestionQuestion;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
