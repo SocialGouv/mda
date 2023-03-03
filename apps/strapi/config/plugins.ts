@@ -25,6 +25,48 @@ const plugins: PluginsConfig = {
       ],
     },
   },
+  meilisearch: {
+    config: {
+      host: process.env.MEILISEARCH_HOST!,
+      apiKey: process.env.MEILISEARCH_MASTER_KEY!,
+      "fiche-pratique": {
+        indexName: "pages",
+        transformEntry: ({ entry }) => {
+          return {
+            id: entry.id,
+            excerpt: entry.excerpt,
+            recapContent: entry.recap.content,
+            recapTitle: entry.recap.title,
+            slug: entry.slug,
+            title: entry.title,
+          };
+        },
+        entriesQuery: {
+          limit: 1000,
+        },
+      },
+      "glossaire-item": {
+        indexName: "pages",
+        entriesQuery: {
+          limit: 1000,
+        },
+        transformEntry: ({ entry }) => {
+          return {
+            id: entry.id,
+            description: entry.description,
+            title: entry.title,
+            url: entry.url,
+          };
+        },
+        filterEntry: ({ entry }) => {
+          if (entry.url) {
+            console.log(entry, !!entry.url);
+          }
+          return !!entry.url;
+        },
+      },
+    },
+  },
   "strapi-plugin-populate-deep": {
     enabled: true,
     config: {

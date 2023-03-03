@@ -21,6 +21,7 @@
     "db:stop": "docker-compose stop db pgadmin",
     "db:down": "docker-compose rm -sv db pgadmin",
     "maildev": "docker-compose up -d --remove-orphans --build maildev && open http://localhost:1080",
+    "meilisearch": "docker-compose up -d --remove-orphans meilisearch",
     "dev": "yarn db && turbo dev --parallel --continue",
     "lint": "turbo lint --continue"
   },

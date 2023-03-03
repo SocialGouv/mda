@@ -22,6 +22,8 @@ const devSeedDb: StrapiLifecycle = async ({ strapi }) => {
     return;
   }
 
+  strapi.entityService.findMany
+
   const importService = strapi.plugin("import-export-entries").service("import");
 
   for (const [slug, json] of Object.entries(seeds)) {

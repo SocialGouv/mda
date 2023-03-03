@@ -4,12 +4,15 @@ import {
   type GetAttributesKey,
   type SingleTypeSchema,
   type Strapi,
+  type utils,
 } from "@strapi/strapi";
 import { type SignOptions } from "jsonwebtoken";
 import { type Knex } from "knex";
 import type Koa from "koa";
 import { type RateLimitOptions } from "koa2-ratelimit";
 import { type Timezone } from "node-schedule";
+
+import { type GetAttributesValues } from "./strapiDbTypes";
 
 type UniqueString<T extends string = string> = Record<never, never> & T;
 
@@ -337,6 +340,26 @@ interface SlugifySettings {
   slugifyWithCount?: boolean;
 }
 
+type MeillisearchEntry<T extends utils.SchemaUID> = {
+  entry: GetAttributesValues<T>;
+};
+
+interface MeilisearchIndex<Entry> {
+  entriesQuery?: {
+    limit?: number;
+  };
+  filterEntry?(entry: Entry): boolean;
+  indexName?: string;
+  transformEntry?(entry: Entry): unknown;
+}
+
+interface MeilisearchConfigSettings {
+  apiKey: string;
+  "fiche-pratique": MeilisearchIndex<MeillisearchEntry<"api::fiche-pratique.fiche-pratique">>;
+  "glossaire-item": MeilisearchIndex<MeillisearchEntry<"api::glossaire-item.glossaire-item">>;
+  host: string;
+}
+
 type PluginEntry<T = unknown> =
   | boolean
   | {
@@ -349,6 +372,7 @@ export type PluginsConfig = {
   [P: string]: PluginEntry;
   "config-sync": PluginEntry<StrapiConfigSyncSettings>;
   "import-export-entries": PluginEntry;
+  meilisearch: PluginEntry<MeilisearchConfigSettings>;
   slugify: PluginEntry<SlugifySettings>;
   "strapi-plugin-populate-deep": PluginEntry<PopulateDeepSettings>;
 };

@@ -58,5 +58,15 @@ services:
       - "1080:1080"
     restart: always
 
+  meilisearch:
+    image: getmeili/meilisearch
+    command: meilisearch
+    environment:
+      - MEILI_MASTER_KEY=masterKey
+      - MEILI_NO_ANALYTICS=true
+    ports:
+      - "7700:7700"
+    restart: always
+
 volumes:
   pgdata:

@@ -29,6 +29,7 @@
     "pg": "8.8.0",
     "strapi-plugin-config-sync": "^1.1.0",
     "strapi-plugin-import-export-entries": "^1.18.0",
+    "strapi-plugin-meilisearch": "^0.9.1",
     "strapi-plugin-populate-deep": "^2.0.0",
     "strapi-plugin-slugify": "^2.3.2"
   },
