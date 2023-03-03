@@ -35,7 +35,7 @@ export const CollapsedSection = ({ children, title, id, isOpen, openSection }: C
         <h2 className={styles.title}>{title}</h2>
         <button onClick={_ => openSection(id, !!isOpen)} className={styles.button}>
           <span className={clsx(styles.icon, isOpen ? "fr-icon-arrow-up-s-line" : "fr-icon-arrow-down-s-line")} />
-          <span className="fr-sr-only">Ouvrir la section</span>
+          <span className="fr-sr-only">{isOpen ? "Fermer la section" : "Ouvrir la section"}</span>
         </button>
       </div>
 
