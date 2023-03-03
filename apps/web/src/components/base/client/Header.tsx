@@ -10,6 +10,7 @@ import { type PropsWithChildren, useEffect, useRef, useState } from "react";
 export const Header = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const [navOpen, setNavOpen] = useState(false);
+  const [isDialog, setIsDialog] = useState(false);
   useEffect(() => {
     if (navOpen) {
       document.body.style.setProperty("--scroll-top", "0px");
@@ -19,16 +20,28 @@ export const Header = () => {
     } else {
       document.body.style.removeProperty("--scroll-top");
     }
-    function handleKeyDown(event: { keyCode: number }) {
+    const handleKeyDown = (event: { keyCode: number }) => {
       if (event.keyCode === 27) {
         setNavOpen(false);
       }
-    }
+    };
     window.addEventListener("keydown", handleKeyDown);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [navOpen]);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 992) {
+        setIsDialog(true);
+      } else {
+        setIsDialog(false);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const MainNavLink = ({ href, children }: PropsWithChildren<{ href: string }>) => (
     <MainNavItem onClick={() => setNavOpen(false)} href={href}>
@@ -75,7 +88,9 @@ export const Header = () => {
       <div
         className={clsx("fr-no-print fr-header__menu fr-modal", navOpen && "fr-modal--opened")}
         id="modal-main-nav"
+        role={isDialog ? "dialog" : undefined}
         aria-labelledby="button-main-nav"
+        aria-modal={isDialog ? "true" : undefined}
       >
         <div className="fr-container">
           <button
