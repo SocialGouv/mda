@@ -26,10 +26,6 @@
     padding-top: 1rem !important;
 }
 
-.numberWithLink:hover::after {
-    color: var(--border-default-grey);
-}
-
 .number::after {
     position: absolute;
     top: 1.5rem;
@@ -39,9 +35,8 @@
     pointer-events: none;
     counter-increment: section;
     content: "0" counter(section);
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    color: var(--background-action-low-blue-france);
 }
 
 .item::before {
