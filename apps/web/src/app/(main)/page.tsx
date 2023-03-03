@@ -55,14 +55,7 @@ const HomePage = async () => {
                 )}
               </GridCol>
               <GridCol md={6} lg={5} className="fr-mx-auto">
-                <Image
-                  className="fr-fluid-img"
-                  src={heroPic}
-                  alt="Maman et enfant autiste"
-                  width={486}
-                  height={324}
-                  placeholder="blur"
-                />
+                <Image className="fr-fluid-img" src={heroPic} alt="" width={486} height={324} placeholder="blur" />
               </GridCol>
             </Grid>
           </Container>
@@ -252,14 +245,7 @@ const HomePage = async () => {
         <Container>
           <Grid haveGutters>
             <GridCol lg={5}>
-              <Image
-                className="fr-fluid-img"
-                src={mdaPic}
-                alt="La Maison de l'autisme"
-                width={441}
-                height={291}
-                placeholder="blur"
-              />
+              <Image className="fr-fluid-img" src={mdaPic} alt="" width={441} height={291} placeholder="blur" />
             </GridCol>
             <GridCol lg={7} className="fr-pt-2w fr-pt-lg-6w fr-pl-lg-4w">
               {data?.MDA_title && <h2 className="fr-h1">{data.MDA_title}</h2>}
