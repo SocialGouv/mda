@@ -12,7 +12,7 @@ export type CollapsedSectionProps = PropsWithChildren<{
 
 export const CollapsedSection = ({ children, title, id, isOpen, openSection }: CollapsedSectionProps) => {
   return (
-    <div className={styles.section} id={id}>
+    <li className={styles.section} id={id}>
       <div className={styles.head}>
         <div className={styles.bullet}>
           <svg
@@ -35,11 +35,11 @@ export const CollapsedSection = ({ children, title, id, isOpen, openSection }: C
         <h2 className={styles.title}>{title}</h2>
         <button onClick={_ => openSection(id, !!isOpen)} className={styles.button}>
           <span className={clsx(styles.icon, isOpen ? "fr-icon-arrow-up-s-line" : "fr-icon-arrow-down-s-line")} />
-          <span className="fr-sr-only">Ouvrir la section</span>
+          <span className="fr-sr-only">{isOpen ? "Fermer la section" : "Ouvrir la section"}</span>
         </button>
       </div>
 
       <div className={clsx(!isOpen ? styles.hiddenContent : styles.content)}>{children}</div>
-    </div>
+    </li>
   );
 };

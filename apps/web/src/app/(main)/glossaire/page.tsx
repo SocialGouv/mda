@@ -17,7 +17,12 @@ const Glossary = async () => {
             {item.attributes.url ? (
               <>
                 <dt className="fr-text--bold fr-text--lg fr-mb-0" id={`glossaire-item-${item.id}`}>
-                  <a href={item.attributes.url} target="_blank" rel="noreferrer">
+                  <a
+                    href={item.attributes.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${item.attributes.title}, ouvrir dans une nouvelle fenêtre`}
+                  >
                     {item.attributes.title}
                   </a>
                 </dt>

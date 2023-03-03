@@ -36,7 +36,14 @@ export const CollapsedSectionDynamicGroup = ({ className, data }: CollapsedSecti
   return (
     <div className={className}>
       <CollapsedSectionGroupHead className="fr-no-print">
-        <FormButton variant="secondary" size="sm" onClick={handleOpenAll}>
+        <FormButton
+          variant="secondary"
+          size="sm"
+          onClick={handleOpenAll}
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
           {isOpenAll ? "Tout replier" : "Tout déplier"}
         </FormButton>
       </CollapsedSectionGroupHead>

@@ -1,3 +1,7 @@
 .justifyCenter {
     justify-content: center;
 }
+ul.grid,
+ol.grid {
+    list-style: none;
+}

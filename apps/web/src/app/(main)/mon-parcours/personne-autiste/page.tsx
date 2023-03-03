@@ -137,8 +137,8 @@ const MonParcoursAidant = () => {
             </Timeline>
           </GridCol>
           <GridCol md={10} lg={8} className="fr-mt-4w">
-            <Grid haveGutters>
-              <GridCol md={6}>
+            <Grid as="ul" haveGutters>
+              <GridCol as="li" md={6}>
                 <Card isEnlargeLink>
                   <CardBody>
                     <CardBodyContent>
@@ -153,8 +153,7 @@ const MonParcoursAidant = () => {
                   </CardBody>
                 </Card>
               </GridCol>
-
-              <GridCol md={6}>
+              <GridCol as="li" md={6}>
                 <Card isEnlargeLink>
                   <CardBody>
                     <CardBodyContent>
@@ -172,7 +171,7 @@ const MonParcoursAidant = () => {
                   </CardBody>
                 </Card>
               </GridCol>
-              <GridCol md={6}>
+              <GridCol as="li" md={6}>
                 <Card isEnlargeLink>
                   <CardBody>
                     <CardBodyContent>
@@ -187,7 +186,7 @@ const MonParcoursAidant = () => {
                   </CardBody>
                 </Card>
               </GridCol>
-              <GridCol md={6}>
+              <GridCol as="li" md={6}>
                 <Card isEnlargeLink>
                   <CardBody>
                     <CardBodyContent>

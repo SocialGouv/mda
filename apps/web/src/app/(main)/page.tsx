@@ -55,14 +55,7 @@ const HomePage = async () => {
                 )}
               </GridCol>
               <GridCol md={6} lg={5} className="fr-mx-auto">
-                <Image
-                  className="fr-fluid-img"
-                  src={heroPic}
-                  alt="Maman et enfant autiste"
-                  width={486}
-                  height={324}
-                  placeholder="blur"
-                />
+                <Image className="fr-fluid-img" src={heroPic} alt="" width={486} height={324} placeholder="blur" />
               </GridCol>
             </Grid>
           </Container>
@@ -70,8 +63,8 @@ const HomePage = async () => {
         <div className="fr-pt-6w fr-pt-md-8w">
           <Container>
             <h2>Démarches et outils</h2>
-            <Grid haveGutters>
-              <GridCol lg={6}>
+            <Grid as="ul" haveGutters>
+              <GridCol as="li" lg={6}>
                 <Tile>
                   <TileBody>
                     <TileBodyTitle href="/mon-parcours" titleAs="h3">
@@ -87,7 +80,7 @@ const HomePage = async () => {
                   </TileImg>
                 </Tile>
               </GridCol>
-              <GridCol lg={6}>
+              <GridCol as="li" lg={6}>
                 <Tile>
                   <TileBody>
                     <TileBodyTitle href="/modeles-de-courrier" titleAs="h3">
@@ -103,7 +96,7 @@ const HomePage = async () => {
                   </TileImg>
                 </Tile>
               </GridCol>
-              <GridCol lg={6}>
+              <GridCol as="li" lg={6}>
                 <Tile>
                   <TileBody>
                     <TileBodyTitle href="/mes-aides" titleAs="h3">
@@ -119,7 +112,7 @@ const HomePage = async () => {
                   </TileImg>
                 </Tile>
               </GridCol>
-              <GridCol lg={6}>
+              <GridCol as="li" lg={6}>
                 <Tile>
                   <TileBody>
                     <TileBodyTitle href="/mon-diagnostic" titleAs="h3">
@@ -138,8 +131,8 @@ const HomePage = async () => {
               </GridCol>
             </Grid>
             <h2 className="fr-mt-8w fr-mt-md-12w">Fiches pratiques les plus lues</h2>
-            <Grid haveGutters>
-              <GridCol md={6} lg={4}>
+            <Grid as="ul" haveGutters>
+              <GridCol as="li" md={6} lg={4}>
                 <Card isEnlargeLink>
                   <CardBody>
                     <CardBodyContent>
@@ -156,7 +149,7 @@ const HomePage = async () => {
                   </CardBody>
                 </Card>
               </GridCol>
-              <GridCol md={6} lg={4}>
+              <GridCol as="li" md={6} lg={4}>
                 <Card isEnlargeLink>
                   <CardBody>
                     <CardBodyContent>
@@ -174,7 +167,7 @@ const HomePage = async () => {
                   </CardBody>
                 </Card>
               </GridCol>
-              <GridCol md={6} lg={4}>
+              <GridCol as="li" md={6} lg={4}>
                 <Card isEnlargeLink>
                   <CardBody>
                     <CardBodyContent>
@@ -191,7 +184,7 @@ const HomePage = async () => {
                   </CardBody>
                 </Card>
               </GridCol>
-              <GridCol md={6} lg={4}>
+              <GridCol as="li" md={6} lg={4}>
                 <Card isEnlargeLink>
                   <CardBody>
                     <CardBodyContent>
@@ -207,7 +200,7 @@ const HomePage = async () => {
                   </CardBody>
                 </Card>
               </GridCol>
-              <GridCol md={6} lg={4}>
+              <GridCol as="li" md={6} lg={4}>
                 <Card isEnlargeLink>
                   <CardBody>
                     <CardBodyContent>
@@ -222,7 +215,7 @@ const HomePage = async () => {
                   </CardBody>
                 </Card>
               </GridCol>
-              <GridCol md={6} lg={4}>
+              <GridCol as="li" md={6} lg={4}>
                 <Card isEnlargeLink>
                   <CardBody>
                     <CardBodyContent>
@@ -252,14 +245,7 @@ const HomePage = async () => {
         <Container>
           <Grid haveGutters>
             <GridCol lg={5}>
-              <Image
-                className="fr-fluid-img"
-                src={mdaPic}
-                alt="La Maison de l'autisme"
-                width={441}
-                height={291}
-                placeholder="blur"
-              />
+              <Image className="fr-fluid-img" src={mdaPic} alt="" width={441} height={291} placeholder="blur" />
             </GridCol>
             <GridCol lg={7} className="fr-pt-2w fr-pt-lg-6w fr-pl-lg-4w">
               {data?.MDA_title && <h2 className="fr-h1">{data.MDA_title}</h2>}

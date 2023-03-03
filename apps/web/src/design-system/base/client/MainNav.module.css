@@ -1,0 +1,3 @@
+.sublink[data-headlessui-state="active"] {
+    background: var(--hover-tint);
+}

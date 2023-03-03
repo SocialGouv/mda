@@ -120,6 +120,9 @@ const QuestionBox = ({ question, index }: QuestionBoxProps) => {
       </FormGroup>
       {question.attributes.answers?.[currentAnswerIndex]?.subanswers?.length ? (
         <FormGroup>
+          <FormGroupLabel htmlFor={`select-question-subanswer-${index}`} className="fr-sr-only">
+            {question.attributes.content} {question.attributes.answers?.[currentAnswerIndex].content.toLowerCase()}
+          </FormGroupLabel>
           <FormSelect
             id={`select-question-subanswer-${index}`}
             onChange={handleSubAnswerChange}
