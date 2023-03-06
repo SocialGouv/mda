@@ -777,6 +777,39 @@ export interface ApiMesAidesMesAides extends SingleTypeSchema {
   };
 }
 
+export interface ApiParcoursParcours extends CollectionTypeSchema {
+  info: {
+    singularName: 'parcours';
+    pluralName: 'parcourss';
+    displayName: 'Parcours';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    slug: StringAttribute & RequiredAttribute & UniqueAttribute;
+    description: RichTextAttribute & RequiredAttribute;
+    items: ComponentAttribute<'parcours-content.item', true>;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    publishedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::parcours.parcours',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::parcours.parcours',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiQuestionQuestion extends CollectionTypeSchema {
   info: {
     singularName: 'question';
@@ -844,6 +877,20 @@ export interface LinksLinks extends ComponentSchema {
   };
 }
 
+export interface ParcoursContentItem extends ComponentSchema {
+  info: {
+    displayName: 'Item';
+    description: '';
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    description: RichTextAttribute & RequiredAttribute;
+    timeline: BooleanAttribute & RequiredAttribute & DefaultTo<false>;
+    order: IntegerAttribute & RequiredAttribute & DefaultTo<0>;
+    links: ComponentAttribute<'link.link', true>;
+  };
+}
+
 export interface ParcoursDiagAnswer extends ComponentSchema {
   info: {
     displayName: 'answer';
@@ -908,10 +955,12 @@ declare global {
       'api::glossaire-item.glossaire-item': ApiGlossaireItemGlossaireItem;
       'api::maison-de-l-autisme.maison-de-l-autisme': ApiMaisonDeLAutismeMaisonDeLAutisme;
       'api::mes-aides.mes-aides': ApiMesAidesMesAides;
+      'api::parcours.parcours': ApiParcoursParcours;
       'api::question.question': ApiQuestionQuestion;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
       'link.link': LinkLink;
       'links.links': LinksLinks;
+      'parcours-content.item': ParcoursContentItem;
       'parcours-diag.answer': ParcoursDiagAnswer;
       'parcours-diag.sub-answer': ParcoursDiagSubAnswer;
       'sections.sections': SectionsSections;
