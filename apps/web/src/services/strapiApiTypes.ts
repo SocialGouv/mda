@@ -38,7 +38,9 @@ type ContentAPIRelationValue<T extends Attribute> = T extends RelationAttribute<
 
 // Custom GetComponentAttributeValue implementation for the content api
 type ContentAPIComponentValue<T extends Attribute> = T extends ComponentAttribute<infer U, infer R>
-  ? WithID & (R extends true ? Array<GetAttributesValues<U>> : GetAttributesValues<U>)
+  ? R extends true
+    ? Array<GetAttributesValues<U> & WithID>
+    : GetAttributesValues<U> & WithID
   : never;
 
 // Custom GetMediaAttributeValue implementation for the content api
