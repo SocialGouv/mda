@@ -86,9 +86,9 @@ const PrivacyPolicy = () => {
         preuve de votre identité.
       </p>
       <p>
-        Pour vous aider dans votre démarche, vous trouverez un modèle de courrier élaboré par la CNIL ici&nbsp;:
+        Pour vous aider dans votre démarche, vous trouverez un modèle de courrier élaboré par la CNIL ici&nbsp;:{" "}
         <a href=" https://www.cnil.fr/fr/modele/courrier/exercer-son-droit-dacces" target="_blank" rel="noreferrer">
-          https://www.cnil.fr/fr/modele/courrier/exercer-son-droit-dacces
+          Exercer son droit d’accès
         </a>
       </p>
       <p>
