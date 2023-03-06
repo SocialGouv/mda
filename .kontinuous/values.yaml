@@ -8,9 +8,10 @@ meilisearch:
   image: getmeili/meilisearch
   containerPort: 7700
   probesPath: /health
+  envFrom:
+    - secretRef:
+        name: "mda-meilisearch.sealed-secret"
   env:
-     - name: MEILI_MASTER_KEY
-       value: masterKey # TODO change with sealed-secret
      - name: MEILI_NO_ANALYTICS
        value: "true"
   ingress:
@@ -44,6 +45,8 @@ strapi:
         name: "mda-strapi"
     - secretRef:
         name: "mda-revalidate-webhook"
+    - secretRef:
+        name: "mda-meilisearch.sealed-secret"
   vars:
     DATABASE_HOST: "$(PGHOST)"
     DATABASE_PORT: "$(PGPORT)"
@@ -56,7 +59,6 @@ strapi:
     MDA_ENV: "{{ .Values.global.env }}"
     WEB_URL: "https://{{ .Values.global.host }}"
     MEILISEARCH_HOST: "http://meilisearch"
-    MEILISEARCH_MASTER_KEY: "masterKey" # TODO change with sealed-secret
 
 jobs:
   runs:
