@@ -1,5 +1,4 @@
 import "../../styles/global.css";
-import "../../styles/tac.css";
 
 import { config } from "@common/config";
 import { DEFAULT_SEO_CONFIG } from "@common/config/next-seo";
