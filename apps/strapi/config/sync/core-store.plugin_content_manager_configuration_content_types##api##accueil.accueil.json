@@ -118,6 +118,20 @@
           "sortable": true
         }
       },
+      "MDA_img": {
+        "edit": {
+          "label": "MDA_img",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "MDA_img",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -192,6 +206,12 @@
         [
           {
             "name": "MDA_link_text",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "MDA_img",
             "size": 6
           }
         ]

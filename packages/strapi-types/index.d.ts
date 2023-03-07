@@ -22,6 +22,7 @@ import {
   SingleTypeSchema,
   RichTextAttribute,
   ComponentAttribute,
+  MediaAttribute,
   ComponentSchema,
 } from '@strapi/strapi';
 
@@ -596,6 +597,7 @@ export interface ApiAccueilAccueil extends SingleTypeSchema {
     MDA_subtitle: TextAttribute;
     MDA_content: RichTextAttribute & RequiredAttribute;
     MDA_link_text: StringAttribute & RequiredAttribute;
+    MDA_img: MediaAttribute;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     publishedAt: DateTimeAttribute;
