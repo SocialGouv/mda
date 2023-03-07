@@ -15,7 +15,7 @@ export const TarteAuCitronGDPR = ({ env: _env }: TOCGDPRProps) => {
       hashtag: "#tarteaucitron" /* Open the panel with this hashtag */,
       cookieName: "tarteaucitron" /* Cookie name */,
 
-      orientation: "middle" /* Banner position (top - bottom) */,
+      orientation: "bottom" /* Banner position (top - bottom) */,
 
       groupServices: false /* Group services by category */,
       serviceDefaultState: "wait" /* Default state (true - wait - false) */,
@@ -27,7 +27,7 @@ export const TarteAuCitronGDPR = ({ env: _env }: TOCGDPRProps) => {
 
       showIcon: true /* Show cookie icon to manage cookies */,
       //"iconSrc": "", /* Optionnal: URL or base64 encoded image */
-      iconPosition: "BottomRight" /* BottomRight, BottomLeft, TopRight and TopLeft */,
+      iconPosition: "BottomLeft" /* BottomRight, BottomLeft, TopRight and TopLeft */,
 
       adblocker: true /* Show a Warning if an adblocker is detected */,
 
@@ -40,7 +40,7 @@ export const TarteAuCitronGDPR = ({ env: _env }: TOCGDPRProps) => {
       removeCredit: true /* Remove credit link */,
       moreInfoLink: true /* Show more info link */,
 
-      useExternalCss: false /* If false, the tarteaucitron.css file will be loaded */,
+      useExternalCss: true /* If false, the tarteaucitron.css file will be loaded */,
       useExternalJs: false /* If false, the tarteaucitron.js file will be loaded */,
 
       //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
