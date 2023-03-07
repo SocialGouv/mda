@@ -69,7 +69,7 @@ export const FeedbackForm = () => {
       }}
       className="fr-mt-6w"
     >
-      <Fieldset label="Votre profil et vos retours">
+      <Fieldset label="Votre avis sur le site internet de la Maison de l'autisme">
         <FieldsetElement>
           <FormGroupSelect
             label="Votre profil"
@@ -95,7 +95,7 @@ export const FeedbackForm = () => {
         Si vous souhaitez être recontacté pour participer à des ateliers de co-création ou des entretiens utilisateurs,
         vous pouvez nous laisser vos coordonnées ci-dessous&nbsp;:
       </p>
-      <Fieldset label="Votre numéro de téléphone et votre email" className="fr-mt-4w">
+      <Fieldset label="Vos coordonnées" className="fr-mt-4w">
         <FieldsetElement>
           <FormGroupInput
             type="tel"
