@@ -7,7 +7,12 @@ const LegalNotice = () => {
       <h2>Éditeur de la Plateforme</h2>
       <p>
         La Plateforme est éditée par la{" "}
-        <a href="https://www.fabrique.social.gouv.fr/" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.fabrique.social.gouv.fr/"
+          target="_blank"
+          rel="noreferrer"
+          title=" Fabrique des Ministères sociaux - nouvelle fenêtre"
+        >
           Fabrique des Ministères sociaux
         </a>{" "}
         située&nbsp;:{" "}
@@ -44,7 +49,12 @@ const LegalNotice = () => {
       <h2>En savoir plus</h2>
       <p>
         Pour en savoir plus sur la politique d’accessibilité numérique de l’État &nbsp;:{" "}
-        <a href="https://accessibilite.numerique.gouv.fr/" target="_blank" rel="noreferrer">
+        <a
+          href="https://accessibilite.numerique.gouv.fr/"
+          target="_blank"
+          rel="noreferrer"
+          title="Référentiel général d’amélioration de l’accessibilité - nouvelle fenêtre"
+        >
           Référentiel général d’amélioration de l’accessibilité
         </a>
       </p>
@@ -66,6 +76,7 @@ const LegalNotice = () => {
             href="https://formulaire.defenseurdesdroits.fr/code/afficher.php?ETAPE=accueil_2016"
             target="_blank"
             rel="noreferrer"
+            title="Formulaire de réclamation du défenseur des droits - nouvelle fenêtre"
           >
             Défenseur des droits&nbsp;: formulaire de réclamation
           </a>
