@@ -124,14 +124,24 @@ const RootLayout = ({ children }: PropsWithChildren) => {
                 concernées. C'est une version beta en cours de déploiement progressif. Vos commentaires, réactions et
                 propositions sont précieux pour nous aider à améliorer ce service au fur et à mesure. Un oubli&nbsp;?
                 Une suggestion&nbsp;? Utilisez le module{" "}
-                <NextLinkOrA href="/je-donne-mon-avis">Je donne mon avis</NextLinkOrA> pour soumettre vos idées afin de
-                contribuer à enrichir ce service public.
+                <NextLinkOrA
+                  href="/je-donne-mon-avis"
+                  title="Partagez votre avis sur ce site internet et vos idées d'amélioration"
+                >
+                  Je donne mon avis
+                </NextLinkOrA>{" "}
+                pour soumettre vos idées afin de contribuer à enrichir ce service public.
               </FooterBodyContentDescription>
               <FooterBodyContentDescription>
                 Attention, les demandes personnelles transmises via ce formulaire ne pourront être traitées sur ce site.
                 Pour les demandes personnelles, veuillez vous rapprocher de l'organisme en charge de votre dossier. Pour
                 toute question, vous pouvez contacter{" "}
-                <a href="https://www.autismeinfoservice.fr/" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.autismeinfoservice.fr/"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Site Autisme Info Service - nouvelle fenêtre"
+                >
                   Autisme Info Service
                 </a>
                 .
@@ -143,6 +153,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
                     target="_blank"
                     rel="noreferrer"
                     isExternal
+                    title="Site du ministère chargé des personnes handicapées - nouvelle fenêtre"
                   >
                     Handicap.gouv.fr
                   </FooterContentLink>
@@ -153,6 +164,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
                     target="_blank"
                     rel="noreferrer"
                     isExternal
+                    title="Site mon parcours handicap - nouvelle fenêtre"
                   >
                     Mon Parcours Handicap
                   </FooterContentLink>
@@ -163,6 +175,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
                     target="_blank"
                     rel="noreferrer"
                     isExternal
+                    title="Site mes droits sociaux - nouvelle fenêtre"
                   >
                     Mes Droits Sociaux
                   </FooterContentLink>
@@ -173,6 +186,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
                     target="_blank"
                     rel="noreferrer"
                     isExternal
+                    title="Site Ministère des Solidarités, de l'Autonomie et des Personnes Handicapées - nouvelle fenêtre"
                   >
                     Ministère des Solidarités, de l'Autonomie et des Personnes Handicapées
                   </FooterContentLink>
@@ -180,22 +194,46 @@ const RootLayout = ({ children }: PropsWithChildren) => {
               </FooterBodyContentItems>
               <FooterBodyContentItems>
                 <FooterBodyItem>
-                  <FooterContentLink href="https://www.legifrance.gouv.fr/" target="_blank" rel="noreferrer" isExternal>
+                  <FooterContentLink
+                    href="https://www.legifrance.gouv.fr/"
+                    target="_blank"
+                    rel="noreferrer"
+                    isExternal
+                    title="Site legifrance.gouv.fr - nouvelle fenêtre"
+                  >
                     legifrance.gouv.fr
                   </FooterContentLink>
                 </FooterBodyItem>
                 <FooterBodyItem>
-                  <FooterContentLink href="https://www.gouvernement.fr/" target="_blank" rel="noreferrer" isExternal>
+                  <FooterContentLink
+                    href="https://www.gouvernement.fr/"
+                    target="_blank"
+                    rel="noreferrer"
+                    isExternal
+                    title="Site gouvernement.fr - nouvelle fenêtre"
+                  >
                     gouvernement.fr
                   </FooterContentLink>
                 </FooterBodyItem>
                 <FooterBodyItem>
-                  <FooterContentLink href="https://www.service-public.fr/" target="_blank" rel="noreferrer" isExternal>
+                  <FooterContentLink
+                    href="https://www.service-public.fr/"
+                    target="_blank"
+                    rel="noreferrer"
+                    isExternal
+                    title="Site service-public.fr - nouvelle fenêtre"
+                  >
                     service-public.fr
                   </FooterContentLink>
                 </FooterBodyItem>
                 <FooterBodyItem>
-                  <FooterContentLink href="https://www.data.gouv.fr/" target="_blank" rel="noreferrer" isExternal>
+                  <FooterContentLink
+                    href="https://www.data.gouv.fr/"
+                    target="_blank"
+                    rel="noreferrer"
+                    isExternal
+                    title="Site data.gouv.fr - nouvelle fenêtre"
+                  >
                     data.gouv.fr
                   </FooterContentLink>
                 </FooterBodyItem>
