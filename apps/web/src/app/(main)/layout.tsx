@@ -8,7 +8,6 @@ import { ScrollUp } from "@components/base/client/ScrollUp";
 import { DarkTheme } from "@components/utils/client/DarkTheme";
 import { DsfrScript } from "@components/utils/client/DsfrScript";
 import { Matomo } from "@components/utils/client/Matomo";
-import { TarteAuCitronGDPR } from "@components/utils/client/TarteAuCitronGDPR";
 import {
   ButtonAsLink,
   Container,
@@ -41,7 +40,6 @@ const RootLayout = ({ children }: PropsWithChildren) => {
       <head>
         <NextSeo {...DEFAULT_SEO_CONFIG} />
         <Matomo env={config.env} />
-        <TarteAuCitronGDPR env={config.env} />
         <DarkTheme />
         <DsfrScript />
         <meta charSet="utf-8" />
