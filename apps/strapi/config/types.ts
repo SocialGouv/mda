@@ -1,3 +1,4 @@
+import { type GetAttributesValues, type WithID } from "@mda/strapi-types";
 import {
   type CollectionTypeSchema,
   type ComponentSchema,
@@ -11,8 +12,6 @@ import { type Knex } from "knex";
 import type Koa from "koa";
 import { type RateLimitOptions } from "koa2-ratelimit";
 import { type Timezone } from "node-schedule";
-
-import { type GetAttributesValues } from "./strapiDbTypes";
 
 type UniqueString<T extends string = string> = Record<never, never> & T;
 
@@ -341,7 +340,7 @@ interface SlugifySettings {
 }
 
 type MeillisearchEntry<T extends utils.SchemaUID> = {
-  entry: GetAttributesValues<T>;
+  entry: GetAttributesValues<T> & WithID;
 };
 
 interface MeilisearchIndex<Entry> {

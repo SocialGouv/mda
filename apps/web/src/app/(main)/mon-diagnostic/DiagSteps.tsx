@@ -11,8 +11,8 @@ import {
   FormSelect,
   Notice,
 } from "@design-system";
+import { type Response } from "@mda/strapi-types";
 import { fetchStrapi } from "@services/strapi";
-import { type Response } from "@services/strapiApiTypes";
 import { push } from "@socialgouv/matomo-next";
 import { useCallback, useState } from "react";
 

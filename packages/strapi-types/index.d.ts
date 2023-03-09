@@ -1,1080 +1,219 @@
-/* eslint-disable */
 import {
-  CollectionTypeSchema,
-  StringAttribute,
-  RequiredAttribute,
-  SetMinMaxLength,
-  JSONAttribute,
-  DefaultTo,
-  RelationAttribute,
-  DateTimeAttribute,
-  PrivateAttribute,
-  EmailAttribute,
-  UniqueAttribute,
-  PasswordAttribute,
-  BooleanAttribute,
-  EnumerationAttribute,
-  BigIntegerAttribute,
-  IntegerAttribute,
-  DecimalAttribute,
-  SetMinMax,
-  TextAttribute,
-  SingleTypeSchema,
-  RichTextAttribute,
-  ComponentAttribute,
-  MediaAttribute,
-  ComponentSchema,
-} from '@strapi/strapi';
+  type Attribute,
+  type ComponentAttribute,
+  type CollectionTypeSchema,
+  type DynamicZoneAttribute,
+  type GetAttribute,
+  type GetAttributes,
+  type GetAttributesKey,
+  type GetAttributesOptionalKeys,
+  type GetAttributesRequiredKeys,
+  type GetAttributeValue,
+  type GetComponentAttributeValue,
+  type GetDynamicZoneAttributeValue,
+  type GetMediaAttributeValue,
+  type GetRelationAttributeValue,
+  type MediaAttribute,
+  type PasswordAttribute,
+  type PrivateAttribute,
+  type RelationAttribute,
+  type SingleTypeSchema,
+  type utils,
+} from "@strapi/strapi";
 
-export interface AdminPermission extends CollectionTypeSchema {
-  info: {
-    name: 'Permission';
-    description: '';
-    singularName: 'permission';
-    pluralName: 'permissions';
-    displayName: 'Permission';
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    action: StringAttribute &
-      RequiredAttribute &
-      SetMinMaxLength<{
-        minLength: 1;
-      }>;
-    subject: StringAttribute &
-      SetMinMaxLength<{
-        minLength: 1;
-      }>;
-    properties: JSONAttribute & DefaultTo<{}>;
-    conditions: JSONAttribute & DefaultTo<[]>;
-    role: RelationAttribute<'admin::permission', 'manyToOne', 'admin::role'>;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'admin::permission',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'admin::permission',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
+export * from './strapi'
 
-export interface AdminUser extends CollectionTypeSchema {
-  info: {
-    name: 'User';
-    description: '';
-    singularName: 'user';
-    pluralName: 'users';
-    displayName: 'User';
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    firstname: StringAttribute &
-      SetMinMaxLength<{
-        minLength: 1;
-      }>;
-    lastname: StringAttribute &
-      SetMinMaxLength<{
-        minLength: 1;
-      }>;
-    username: StringAttribute;
-    email: EmailAttribute &
-      RequiredAttribute &
-      PrivateAttribute &
-      UniqueAttribute &
-      SetMinMaxLength<{
-        minLength: 6;
-      }>;
-    password: PasswordAttribute &
-      PrivateAttribute &
-      SetMinMaxLength<{
-        minLength: 6;
-      }>;
-    resetPasswordToken: StringAttribute & PrivateAttribute;
-    registrationToken: StringAttribute & PrivateAttribute;
-    isActive: BooleanAttribute & PrivateAttribute & DefaultTo<false>;
-    roles: RelationAttribute<'admin::user', 'manyToMany', 'admin::role'> &
-      PrivateAttribute;
-    blocked: BooleanAttribute & PrivateAttribute & DefaultTo<false>;
-    preferedLanguage: StringAttribute;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<'admin::user', 'oneToOne', 'admin::user'> &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<'admin::user', 'oneToOne', 'admin::user'> &
-      PrivateAttribute;
-  };
-}
+// Helper used to add an ID attribute to another type
+export type WithID = { id: number };
 
-export interface AdminRole extends CollectionTypeSchema {
-  info: {
-    name: 'Role';
-    description: '';
-    singularName: 'role';
-    pluralName: 'roles';
-    displayName: 'Role';
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    name: StringAttribute &
-      RequiredAttribute &
-      UniqueAttribute &
-      SetMinMaxLength<{
-        minLength: 1;
-      }>;
-    code: StringAttribute &
-      RequiredAttribute &
-      UniqueAttribute &
-      SetMinMaxLength<{
-        minLength: 1;
-      }>;
-    description: StringAttribute;
-    users: RelationAttribute<'admin::role', 'manyToMany', 'admin::user'>;
-    permissions: RelationAttribute<
-      'admin::role',
-      'oneToMany',
-      'admin::permission'
-    >;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<'admin::role', 'oneToOne', 'admin::user'> &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<'admin::role', 'oneToOne', 'admin::user'> &
-      PrivateAttribute;
-  };
-}
+// Values resolvers that we need to replace by custom ones & remove from the base GetAttributesValues implementation
+type ExcludedValuesResolvers<T extends Attribute> =
+  | GetComponentAttributeValue<T>
+  | GetDynamicZoneAttributeValue<T>
+  | GetMediaAttributeValue<T>
+  | GetRelationAttributeValue<T>;
 
-export interface AdminApiToken extends CollectionTypeSchema {
-  info: {
-    name: 'Api Token';
-    singularName: 'api-token';
-    pluralName: 'api-tokens';
-    displayName: 'Api Token';
-    description: '';
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    name: StringAttribute &
-      RequiredAttribute &
-      UniqueAttribute &
-      SetMinMaxLength<{
-        minLength: 1;
-      }>;
-    description: StringAttribute &
-      SetMinMaxLength<{
-        minLength: 1;
-      }> &
-      DefaultTo<''>;
-    type: EnumerationAttribute<['read-only', 'full-access', 'custom']> &
-      RequiredAttribute &
-      DefaultTo<'read-only'>;
-    accessKey: StringAttribute &
-      RequiredAttribute &
-      SetMinMaxLength<{
-        minLength: 1;
-      }>;
-    lastUsedAt: DateTimeAttribute;
-    permissions: RelationAttribute<
-      'admin::api-token',
-      'oneToMany',
-      'admin::api-token-permission'
-    >;
-    expiresAt: DateTimeAttribute;
-    lifespan: BigIntegerAttribute;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'admin::api-token',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'admin::api-token',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
+// Custom GetRelationAttributeValue implementation for the content api
+type ContentAPIRelationValue<T extends Attribute> = T extends RelationAttribute<infer _S, infer R, infer G>
+  ? R extends `${string}Many`
+    ? Omit<ResponseCollection<G>, "meta">
+    : Response<G>
+  : never;
 
-export interface AdminApiTokenPermission extends CollectionTypeSchema {
-  info: {
-    name: 'API Token Permission';
-    description: '';
-    singularName: 'api-token-permission';
-    pluralName: 'api-token-permissions';
-    displayName: 'API Token Permission';
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    action: StringAttribute &
-      RequiredAttribute &
-      SetMinMaxLength<{
-        minLength: 1;
-      }>;
-    token: RelationAttribute<
-      'admin::api-token-permission',
-      'manyToOne',
-      'admin::api-token'
-    >;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'admin::api-token-permission',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'admin::api-token-permission',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
+// Custom GetComponentAttributeValue implementation for the content api
+type ContentAPIComponentValue<T extends Attribute> = T extends ComponentAttribute<infer U, infer R>
+  ? R extends true ? Array<WithID & GetAttributesValues<U>> : (WithID & GetAttributesValues<U>)
+  : never;
 
-export interface PluginUploadFile extends CollectionTypeSchema {
-  info: {
-    singularName: 'file';
-    pluralName: 'files';
-    displayName: 'File';
-    description: '';
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    name: StringAttribute & RequiredAttribute;
-    alternativeText: StringAttribute;
-    caption: StringAttribute;
-    width: IntegerAttribute;
-    height: IntegerAttribute;
-    formats: JSONAttribute;
-    hash: StringAttribute & RequiredAttribute;
-    ext: StringAttribute;
-    mime: StringAttribute & RequiredAttribute;
-    size: DecimalAttribute & RequiredAttribute;
-    url: StringAttribute & RequiredAttribute;
-    previewUrl: StringAttribute;
-    provider: StringAttribute & RequiredAttribute;
-    provider_metadata: JSONAttribute;
-    related: RelationAttribute<'plugin::upload.file', 'morphToMany'>;
-    folder: RelationAttribute<
-      'plugin::upload.file',
-      'manyToOne',
-      'plugin::upload.folder'
-    > &
-      PrivateAttribute;
-    folderPath: StringAttribute &
-      RequiredAttribute &
-      PrivateAttribute &
-      SetMinMax<{
-        min: 1;
-      }>;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'plugin::upload.file',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'plugin::upload.file',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface PluginUploadFolder extends CollectionTypeSchema {
-  info: {
-    singularName: 'folder';
-    pluralName: 'folders';
-    displayName: 'Folder';
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    name: StringAttribute &
-      RequiredAttribute &
-      SetMinMax<{
-        min: 1;
-      }>;
-    pathId: IntegerAttribute & RequiredAttribute & UniqueAttribute;
-    parent: RelationAttribute<
-      'plugin::upload.folder',
-      'manyToOne',
-      'plugin::upload.folder'
-    >;
-    children: RelationAttribute<
-      'plugin::upload.folder',
-      'oneToMany',
-      'plugin::upload.folder'
-    >;
-    files: RelationAttribute<
-      'plugin::upload.folder',
-      'oneToMany',
-      'plugin::upload.file'
-    >;
-    path: StringAttribute &
-      RequiredAttribute &
-      SetMinMax<{
-        min: 1;
-      }>;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'plugin::upload.folder',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'plugin::upload.folder',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface PluginSlugifySlug extends CollectionTypeSchema {
-  info: {
-    singularName: 'slug';
-    pluralName: 'slugs';
-    displayName: 'slug';
-  };
-  options: {
-    draftAndPublish: false;
-    comment: '';
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    slug: TextAttribute;
-    count: IntegerAttribute;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'plugin::slugify.slug',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'plugin::slugify.slug',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface PluginUsersPermissionsPermission extends CollectionTypeSchema {
-  info: {
-    name: 'permission';
-    description: '';
-    singularName: 'permission';
-    pluralName: 'permissions';
-    displayName: 'Permission';
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    action: StringAttribute & RequiredAttribute;
-    role: RelationAttribute<
-      'plugin::users-permissions.permission',
-      'manyToOne',
-      'plugin::users-permissions.role'
-    >;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'plugin::users-permissions.permission',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'plugin::users-permissions.permission',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface PluginUsersPermissionsRole extends CollectionTypeSchema {
-  info: {
-    name: 'role';
-    description: '';
-    singularName: 'role';
-    pluralName: 'roles';
-    displayName: 'Role';
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    name: StringAttribute &
-      RequiredAttribute &
-      SetMinMaxLength<{
-        minLength: 3;
-      }>;
-    description: StringAttribute;
-    type: StringAttribute & UniqueAttribute;
-    permissions: RelationAttribute<
-      'plugin::users-permissions.role',
-      'oneToMany',
-      'plugin::users-permissions.permission'
-    >;
-    users: RelationAttribute<
-      'plugin::users-permissions.role',
-      'oneToMany',
-      'plugin::users-permissions.user'
-    >;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'plugin::users-permissions.role',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'plugin::users-permissions.role',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface PluginUsersPermissionsUser extends CollectionTypeSchema {
-  info: {
-    name: 'user';
-    description: '';
-    singularName: 'user';
-    pluralName: 'users';
-    displayName: 'User';
-  };
-  options: {
-    draftAndPublish: false;
-    timestamps: true;
-  };
-  attributes: {
-    username: StringAttribute &
-      RequiredAttribute &
-      UniqueAttribute &
-      SetMinMaxLength<{
-        minLength: 3;
-      }>;
-    email: EmailAttribute &
-      RequiredAttribute &
-      SetMinMaxLength<{
-        minLength: 6;
-      }>;
-    provider: StringAttribute;
-    password: PasswordAttribute &
-      PrivateAttribute &
-      SetMinMaxLength<{
-        minLength: 6;
-      }>;
-    resetPasswordToken: StringAttribute & PrivateAttribute;
-    confirmationToken: StringAttribute & PrivateAttribute;
-    confirmed: BooleanAttribute & DefaultTo<false>;
-    blocked: BooleanAttribute & DefaultTo<false>;
-    role: RelationAttribute<
-      'plugin::users-permissions.user',
-      'manyToOne',
-      'plugin::users-permissions.role'
-    >;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'plugin::users-permissions.user',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'plugin::users-permissions.user',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface ApiAccessibiliteAccessibilite extends SingleTypeSchema {
-  info: {
-    singularName: 'accessibilite';
-    pluralName: 'accessibilites';
-    displayName: 'Accessibilit\u00E9';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    title: StringAttribute & RequiredAttribute;
-    content: RichTextAttribute & RequiredAttribute;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::accessibilite.accessibilite',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::accessibilite.accessibilite',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface ApiAccueilAccueil extends SingleTypeSchema {
-  info: {
-    singularName: 'accueil';
-    pluralName: 'accueils';
-    displayName: 'Accueil';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: StringAttribute & RequiredAttribute;
-    content: RichTextAttribute & RequiredAttribute;
-    links: ComponentAttribute<'common.links', true>;
-    MDA_title: StringAttribute & RequiredAttribute;
-    MDA_subtitle: TextAttribute;
-    MDA_content: RichTextAttribute & RequiredAttribute;
-    MDA_link_text: StringAttribute & RequiredAttribute;
-    MDA_img: MediaAttribute;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    publishedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::accueil.accueil',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::accueil.accueil',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface ApiAnnuaireAnnuaire extends SingleTypeSchema {
-  info: {
-    singularName: 'annuaire';
-    pluralName: 'annuaires';
-    displayName: 'Annuaire';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    title: StringAttribute & RequiredAttribute;
-    content: RichTextAttribute & RequiredAttribute;
-    links: ComponentAttribute<'common.links', true>;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::annuaire.annuaire',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::annuaire.annuaire',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
-  info: {
-    singularName: 'fiche-pratique';
-    pluralName: 'fiche-pratiques';
-    displayName: 'Fiches Pratiques';
-    description: "Une fiche pratique est un ensemble d'informations regroup\u00E9 par cat\u00E9gorie.";
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    title: StringAttribute & RequiredAttribute & UniqueAttribute;
-    recap: ComponentAttribute<'fiche-pratique-content.encart'> &
-      RequiredAttribute;
-    section: ComponentAttribute<'fiche-pratique-content.encart', true>;
-    slug: StringAttribute & UniqueAttribute;
-    excerpt: TextAttribute &
-      RequiredAttribute &
-      SetMinMaxLength<{
-        maxLength: 200;
-      }>;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::fiche-pratique.fiche-pratique',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::fiche-pratique.fiche-pratique',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface ApiGlossaireItemGlossaireItem extends CollectionTypeSchema {
-  info: {
-    singularName: 'glossaire-item';
-    pluralName: 'glossaire-items';
-    displayName: 'Glossaire';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    title: StringAttribute & RequiredAttribute;
-    description: StringAttribute & RequiredAttribute;
-    url: StringAttribute;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::glossaire-item.glossaire-item',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::glossaire-item.glossaire-item',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface ApiMaisonDeLAutismeMaisonDeLAutisme extends SingleTypeSchema {
-  info: {
-    singularName: 'maison-de-l-autisme';
-    pluralName: 'maison-de-l-autismes';
-    displayName: "Maison de l'autisme";
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    title: StringAttribute & RequiredAttribute;
-    content: RichTextAttribute & RequiredAttribute;
-    sections: ComponentAttribute<'common.sections', true>;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::maison-de-l-autisme.maison-de-l-autisme',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::maison-de-l-autisme.maison-de-l-autisme',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface ApiMentionsLegalesMentionsLegales extends SingleTypeSchema {
-  info: {
-    singularName: 'mentions-legales';
-    pluralName: 'mentions-legaless';
-    displayName: 'Mentions l\u00E9gales';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    title: StringAttribute & RequiredAttribute;
-    content: RichTextAttribute & RequiredAttribute;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::mentions-legales.mentions-legales',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::mentions-legales.mentions-legales',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface ApiMesAidesMesAides extends SingleTypeSchema {
-  info: {
-    singularName: 'mes-aides';
-    pluralName: 'mes-aidess';
-    displayName: 'Mes aides';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    title: StringAttribute & RequiredAttribute;
-    content: RichTextAttribute & RequiredAttribute;
-    sections: ComponentAttribute<'common.sections', true>;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::mes-aides.mes-aides',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::mes-aides.mes-aides',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface ApiParcoursParcours extends CollectionTypeSchema {
-  info: {
-    singularName: 'parcours';
-    pluralName: 'parcourss';
-    displayName: 'Parcours';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: StringAttribute & RequiredAttribute;
-    slug: StringAttribute & RequiredAttribute & UniqueAttribute;
-    description: RichTextAttribute & RequiredAttribute;
-    items: ComponentAttribute<'parcours-content.item', true>;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    publishedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::parcours.parcours',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::parcours.parcours',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface ApiPlanDuSitePlanDuSite extends SingleTypeSchema {
-  info: {
-    singularName: 'plan-du-site';
-    pluralName: 'plan-du-sites';
-    displayName: 'Plan du site';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    title: StringAttribute & RequiredAttribute;
-    content: RichTextAttribute & RequiredAttribute;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::plan-du-site.plan-du-site',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::plan-du-site.plan-du-site',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface ApiPolitiqueDeConfidentialitePolitiqueDeConfidentialite
-  extends SingleTypeSchema {
-  info: {
-    singularName: 'politique-de-confidentialite';
-    pluralName: 'politique-de-confidentialites';
-    displayName: 'Politique de confidentialit\u00E9';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    title: StringAttribute & RequiredAttribute;
-    content: RichTextAttribute & RequiredAttribute;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::politique-de-confidentialite.politique-de-confidentialite',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::politique-de-confidentialite.politique-de-confidentialite',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface ApiQuestionQuestion extends CollectionTypeSchema {
-  info: {
-    singularName: 'question';
-    pluralName: 'questions';
-    displayName: 'Diagnostic';
-    description: 'Une question est une \u00E9tape du parcours de diagnostic.';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    content: StringAttribute & RequiredAttribute;
-    answers: ComponentAttribute<'diagnostic.answer', true>;
-    info: TextAttribute;
-    first: BooleanAttribute & RequiredAttribute & DefaultTo<false>;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::question.question',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::question.question',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface CommonLinks extends ComponentSchema {
-  info: {
-    displayName: 'links';
-    description: '';
-  };
-  attributes: {
-    text: StringAttribute & RequiredAttribute;
-    url: StringAttribute;
-    theme: EnumerationAttribute<['primary', 'secondary']> &
-      RequiredAttribute &
-      DefaultTo<'primary'>;
-  };
-}
-
-export interface CommonSections extends ComponentSchema {
-  info: {
-    displayName: 'sections';
-  };
-  attributes: {
-    title: StringAttribute & RequiredAttribute;
-    content: RichTextAttribute & RequiredAttribute;
-  };
-}
-
-export interface DiagnosticAnswer extends ComponentSchema {
-  info: {
-    displayName: 'answer';
-    description: 'Une r\u00E9ponse potentielle \u00E0 une question menant soit \u00E0 une sous r\u00E9ponse, soit a une nouvelle question.';
-  };
-  attributes: {
-    content: StringAttribute & RequiredAttribute;
-    destination: RelationAttribute<
-      'diagnostic.answer',
-      'oneToOne',
-      'api::question.question'
-    >;
-    info: TextAttribute;
-    subanswers: ComponentAttribute<'diagnostic.sub-answer', true>;
-  };
-}
-
-export interface DiagnosticSubAnswer extends ComponentSchema {
-  info: {
-    displayName: 'SubAnswer';
-    description: 'Une sous r\u00E9ponse suit une r\u00E9ponse et m\u00E8ne obligatoirement vers une nouvelle question.';
-  };
-  attributes: {
-    content: StringAttribute & RequiredAttribute;
-    destination: RelationAttribute<
-      'diagnostic.sub-answer',
-      'oneToOne',
-      'api::question.question'
-    > &
-      RequiredAttribute;
-    info: TextAttribute;
-  };
-}
-
-export interface FichePratiqueContentEncart extends ComponentSchema {
-  info: {
-    displayName: 'encart';
-    description: '';
-  };
-  attributes: {
-    title: StringAttribute & RequiredAttribute;
-    content: RichTextAttribute & RequiredAttribute;
-  };
-}
-
-export interface ParcoursContentItem extends ComponentSchema {
-  info: {
-    displayName: 'Item';
-    description: '';
-  };
-  attributes: {
-    title: StringAttribute & RequiredAttribute;
-    description: RichTextAttribute & RequiredAttribute;
-    timeline: BooleanAttribute & RequiredAttribute & DefaultTo<false>;
-    order: IntegerAttribute & RequiredAttribute & DefaultTo<0>;
-    links: ComponentAttribute<'common.links', true>;
-  };
-}
-
-declare global {
-  namespace Strapi {
-    interface Schemas {
-      'admin::permission': AdminPermission;
-      'admin::user': AdminUser;
-      'admin::role': AdminRole;
-      'admin::api-token': AdminApiToken;
-      'admin::api-token-permission': AdminApiTokenPermission;
-      'plugin::upload.file': PluginUploadFile;
-      'plugin::upload.folder': PluginUploadFolder;
-      'plugin::slugify.slug': PluginSlugifySlug;
-      'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
-      'plugin::users-permissions.role': PluginUsersPermissionsRole;
-      'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'api::accessibilite.accessibilite': ApiAccessibiliteAccessibilite;
-      'api::accueil.accueil': ApiAccueilAccueil;
-      'api::annuaire.annuaire': ApiAnnuaireAnnuaire;
-      'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;
-      'api::glossaire-item.glossaire-item': ApiGlossaireItemGlossaireItem;
-      'api::maison-de-l-autisme.maison-de-l-autisme': ApiMaisonDeLAutismeMaisonDeLAutisme;
-      'api::mentions-legales.mentions-legales': ApiMentionsLegalesMentionsLegales;
-      'api::mes-aides.mes-aides': ApiMesAidesMesAides;
-      'api::parcours.parcours': ApiParcoursParcours;
-      'api::plan-du-site.plan-du-site': ApiPlanDuSitePlanDuSite;
-      'api::politique-de-confidentialite.politique-de-confidentialite': ApiPolitiqueDeConfidentialitePolitiqueDeConfidentialite;
-      'api::question.question': ApiQuestionQuestion;
-      'common.links': CommonLinks;
-      'common.sections': CommonSections;
-      'diagnostic.answer': DiagnosticAnswer;
-      'diagnostic.sub-answer': DiagnosticSubAnswer;
-      'fiche-pratique-content.encart': FichePratiqueContentEncart;
-      'parcours-content.item': ParcoursContentItem;
+// Custom GetMediaAttributeValue implementation for the content api
+type ContentAPIMediaValue<T extends Attribute> = T extends MediaAttribute<infer _, infer R>
+  ? {
+      data: (R extends true ? Array<DataWrapper<"plugin::upload.file">> : DataWrapper<"plugin::upload.file">) | null;
     }
-  }
+  : never;
+
+// Custom GetDynamicZoneAttributeValue implementation for the content api
+type ContentAPIDynamicZoneValue<T extends Attribute> = T extends DynamicZoneAttribute<infer C>
+  ? Array<
+      utils.GetArrayValues<C> extends infer P
+        ? P extends utils.SchemaUID
+          ? GetAttributesValues<P> & WithID & { __component: P }
+          : never
+        : never
+    >
+  : never;
+
+// Aggregation of all the custom content api's custom value resolvers
+type ContentAPIValueResolvers<T extends Attribute> =
+  | ContentAPIComponentValue<T>
+  | ContentAPIDynamicZoneValue<T>
+  | ContentAPIMediaValue<T>
+  | ContentAPIRelationValue<T>;
+
+// Custom GetAttributeValue implementation based on specific content api rules
+// If the given attribute isn't handled by the custom resolvers, then it'll fallback
+// to the base implementation and its resolvers
+type GetValue<T extends utils.SchemaUID, U extends GetAttributesKey<T>> = GetAttribute<T, U> extends infer P
+  ? P extends Attribute
+    ? ContentAPIValueResolvers<P> | Exclude<GetAttributeValue<P>, ExcludedValuesResolvers<P>>
+    : never
+  : never;
+
+// Get the list of allowed attributes' names for the content api
+// Removes privates and password fields for now
+// note: creatorsFields are already handled since their private value is dynamic (set at content-type loading & dumped into the schemas typings)
+type _GetAllowedAttributesKey<T extends utils.SchemaUID> = GetAttributes<T> extends infer A
+  ? keyof Omit<A, utils.KeysBy<A, PasswordAttribute | PrivateAttribute>>
+  : never;
+
+// Custom GetAttributesValues implementation which includes specific
+// content API logic (sanitation, custom value resolvers, etc...)
+// type GetAttributesValues<T extends utils.SchemaUID> = {
+//   [key in GetAllowedAttributesKey<T>]?: GetValue<T, key>;
+// };
+
+export type GetAttributesValues<T extends utils.SchemaUID> = {
+  // Handle optional attributes
+  [key in GetAttributesOptionalKeys<T>]?: GetValue<T, key>;
+} & {
+  // Handle required attributes
+  [key in GetAttributesRequiredKeys<T>]-?: GetValue<T, key>;
+};
+
+// Wrapper which contains the id/attributes couple, used to type the responses' data property
+// interface DataWrapper<T extends utils.SchemaUID | null = null> extends WithID {
+//   attributes: T extends utils.SchemaUID ? GetAttributesValues<T> : unknown;
+// }
+
+export interface DataWrapper<T extends utils.SchemaUID | null = null> extends WithID {
+  attributes: T extends utils.SchemaUID ? GetAttributesValues<T> : unknown;
+}
+
+// Represent a response structure for a single entity
+export interface Response<T extends utils.SchemaUID> {
+  data: DataWrapper<T> | null;
+}
+
+// Represent a response structure for an entity collection
+export interface ResponseCollection<T extends utils.SchemaUID> {
+  data: Array<DataWrapper<T>> | null;
+  meta: CollectionMetadata;
+}
+
+export interface CollectionMetadata {
+  pagination: {
+    page: number;
+    pageCount: number;
+    pageSize: number;
+    total: number;
+  };
+}
+
+type NeverKey<T> = { [P in keyof T]: T[P] extends never ? P : never }[keyof T];
+type OmitNever<T> = Pick<T, Exclude<keyof T, NeverKey<T>>>;
+type SingularModel = OmitNever<{
+  [Id in utils.SchemaUID]: Id extends `api::${string}`
+    ? Strapi.Schemas[Id] extends SingleTypeSchema
+      ? Strapi.Schemas[Id]["info"]["singularName"]
+      : never
+    : never;
+}>;
+type PluralModel = OmitNever<{
+  [Id in utils.SchemaUID]: Id extends `api::${string}`
+    ? Strapi.Schemas[Id] extends CollectionTypeSchema
+      ? Strapi.Schemas[Id]["info"]["pluralName"]
+      : never
+    : never;
+}>;
+
+export type Model = PluralModel & SingularModel;
+
+type Reverse<T extends Record<string, string>> = {
+  [Id in keyof T as T[Id]]: Id;
+};
+
+export type ReverseSingularModel = Reverse<SingularModel>;
+export type ReversePluralModel = Reverse<PluralModel>;
+export type ReverseModel = Reverse<Model>;
+
+type LogicalOperators<T> = {
+  /** Joins the filters in an "and" expression */
+  $and?: Array<WhereParams<T>>;
+  /** Joins the filters in an "or" expression */
+  $or?: Array<WhereParams<T>>;
+};
+
+type AttributeOperators<T, K extends keyof T> = {
+  /** Is between */
+  $between?: [T[K], T[K]];
+  /** Contains */
+  $contains?: T[K];
+  /** Contains (case-insensitive) */
+  $containsi?: T[K];
+  /** Ends with */
+  $endsWith?: T[K];
+  /** Equal */
+  $eq?: Array<T[K]> | T[K];
+  /** Equal (case-insensitive) */
+  $eqi?: Array<T[K]> | T[K];
+  /** Greater than */
+  $gt?: T[K];
+  /** Greater than or equal to */
+  $gte?: T[K];
+  /** Included in an array */
+  $in?: Array<T[K]>;
+  /** Less than */
+  $lt?: T[K];
+  /** Less than or equal to */
+  $lte?: T[K];
+  /** Not equal */
+  $ne?: Array<T[K]> | T[K];
+  /** Does not contain */
+  $notContains?: T[K];
+  /** Does not contain (case-insensitive) */
+  $notContainsi?: T[K];
+  /** Not included in an array */
+  $notIn?: Array<T[K]>;
+  /** Is not null */
+  $notNull?: boolean;
+  /** Is null */
+  $null?: boolean;
+  /** Starts with */
+  $startsWith?: T[K];
+};
+
+export type WhereParams<T> = LogicalOperators<T> & {
+  [K in keyof T]?: Array<T[K]> | AttributeOperators<T, K> | T[K];
+};
+
+export interface PaginationByPage {
+  page?: number;
+  pageSize?: number;
+  withCount?: boolean;
+}
+
+export interface PaginationByOffset {
+  limit?: number;
+  start?: number;
+  withCount?: boolean;
 }
