@@ -1,5 +1,5 @@
 {
-  "collectionName": "components_links_links",
+  "collectionName": "components_common_links",
   "info": {
     "displayName": "links",
     "description": ""
@@ -10,7 +10,7 @@
       "type": "string",
       "required": true
     },
-    "href": {
+    "url": {
       "type": "string"
     },
     "theme": {

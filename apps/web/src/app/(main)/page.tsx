@@ -52,7 +52,7 @@ const HomePage = async () => {
                   <ButtonGroup inline="mobile-up">
                     {data.links.map((link, index) => (
                       <ButtonGroupItem key={index}>
-                        <ButtonAsLink variant={link.theme} href={link.href}>
+                        <ButtonAsLink variant={link.theme} href={link.url}>
                           {link.text}
                         </ButtonAsLink>
                       </ButtonGroupItem>

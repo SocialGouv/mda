@@ -1,5 +1,5 @@
 {
-  "collectionName": "components_parcours_diag_answers",
+  "collectionName": "components_diagnostic_answers",
   "info": {
     "displayName": "answer",
     "description": "Une réponse potentielle à une question menant soit à une sous réponse, soit a une nouvelle question."
@@ -21,7 +21,7 @@
     "subanswers": {
       "type": "component",
       "repeatable": true,
-      "component": "parcours-diag.sub-answer"
+      "component": "diagnostic.sub-answer"
     }
   }
 }

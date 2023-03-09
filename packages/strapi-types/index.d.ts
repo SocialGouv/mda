@@ -621,7 +621,7 @@ export interface ApiAccueilAccueil extends SingleTypeSchema {
   attributes: {
     title: StringAttribute & RequiredAttribute;
     content: RichTextAttribute & RequiredAttribute;
-    links: ComponentAttribute<'links.links', true>;
+    links: ComponentAttribute<'common.links', true>;
     MDA_title: StringAttribute & RequiredAttribute;
     MDA_subtitle: TextAttribute;
     MDA_content: RichTextAttribute & RequiredAttribute;
@@ -658,7 +658,7 @@ export interface ApiAnnuaireAnnuaire extends SingleTypeSchema {
   attributes: {
     title: StringAttribute & RequiredAttribute;
     content: RichTextAttribute & RequiredAttribute;
-    links: ComponentAttribute<'link.link', true>;
+    links: ComponentAttribute<'common.links', true>;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
@@ -718,7 +718,7 @@ export interface ApiGlossaireItemGlossaireItem extends CollectionTypeSchema {
   info: {
     singularName: 'glossaire-item';
     pluralName: 'glossaire-items';
-    displayName: 'glossaire-item';
+    displayName: 'Glossaire';
   };
   options: {
     draftAndPublish: false;
@@ -757,7 +757,7 @@ export interface ApiMaisonDeLAutismeMaisonDeLAutisme extends SingleTypeSchema {
   attributes: {
     title: StringAttribute & RequiredAttribute;
     content: RichTextAttribute & RequiredAttribute;
-    sections: ComponentAttribute<'sections.sections', true>;
+    sections: ComponentAttribute<'common.sections', true>;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
@@ -817,7 +817,7 @@ export interface ApiMesAidesMesAides extends SingleTypeSchema {
   attributes: {
     title: StringAttribute & RequiredAttribute;
     content: RichTextAttribute & RequiredAttribute;
-    sections: ComponentAttribute<'sections.sections', true>;
+    sections: ComponentAttribute<'common.sections', true>;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
@@ -932,7 +932,7 @@ export interface ApiQuestionQuestion extends CollectionTypeSchema {
   info: {
     singularName: 'question';
     pluralName: 'questions';
-    displayName: 'Parcours Diag';
+    displayName: 'Diagnostic';
     description: 'Une question est une \u00E9tape du parcours de diagnostic.';
   };
   options: {
@@ -940,7 +940,7 @@ export interface ApiQuestionQuestion extends CollectionTypeSchema {
   };
   attributes: {
     content: StringAttribute & RequiredAttribute;
-    answers: ComponentAttribute<'parcours-diag.answer', true>;
+    answers: ComponentAttribute<'diagnostic.answer', true>;
     info: TextAttribute;
     first: BooleanAttribute & RequiredAttribute & DefaultTo<false>;
     createdAt: DateTimeAttribute;
@@ -960,6 +960,64 @@ export interface ApiQuestionQuestion extends CollectionTypeSchema {
   };
 }
 
+export interface CommonLinks extends ComponentSchema {
+  info: {
+    displayName: 'links';
+    description: '';
+  };
+  attributes: {
+    text: StringAttribute & RequiredAttribute;
+    url: StringAttribute;
+    theme: EnumerationAttribute<['primary', 'secondary']> &
+      RequiredAttribute &
+      DefaultTo<'primary'>;
+  };
+}
+
+export interface CommonSections extends ComponentSchema {
+  info: {
+    displayName: 'sections';
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+  };
+}
+
+export interface DiagnosticAnswer extends ComponentSchema {
+  info: {
+    displayName: 'answer';
+    description: 'Une r\u00E9ponse potentielle \u00E0 une question menant soit \u00E0 une sous r\u00E9ponse, soit a une nouvelle question.';
+  };
+  attributes: {
+    content: StringAttribute & RequiredAttribute;
+    destination: RelationAttribute<
+      'diagnostic.answer',
+      'oneToOne',
+      'api::question.question'
+    >;
+    info: TextAttribute;
+    subanswers: ComponentAttribute<'diagnostic.sub-answer', true>;
+  };
+}
+
+export interface DiagnosticSubAnswer extends ComponentSchema {
+  info: {
+    displayName: 'SubAnswer';
+    description: 'Une sous r\u00E9ponse suit une r\u00E9ponse et m\u00E8ne obligatoirement vers une nouvelle question.';
+  };
+  attributes: {
+    content: StringAttribute & RequiredAttribute;
+    destination: RelationAttribute<
+      'diagnostic.sub-answer',
+      'oneToOne',
+      'api::question.question'
+    > &
+      RequiredAttribute;
+    info: TextAttribute;
+  };
+}
+
 export interface FichePratiqueContentEncart extends ComponentSchema {
   info: {
     displayName: 'encart';
@@ -968,30 +1026,6 @@ export interface FichePratiqueContentEncart extends ComponentSchema {
   attributes: {
     title: StringAttribute & RequiredAttribute;
     content: RichTextAttribute & RequiredAttribute;
-  };
-}
-
-export interface LinkLink extends ComponentSchema {
-  info: {
-    displayName: 'link';
-  };
-  attributes: {
-    text: StringAttribute & RequiredAttribute;
-    url: StringAttribute & RequiredAttribute;
-  };
-}
-
-export interface LinksLinks extends ComponentSchema {
-  info: {
-    displayName: 'links';
-    description: '';
-  };
-  attributes: {
-    text: StringAttribute & RequiredAttribute;
-    href: StringAttribute;
-    theme: EnumerationAttribute<['primary', 'secondary']> &
-      RequiredAttribute &
-      DefaultTo<'primary'>;
   };
 }
 
@@ -1005,51 +1039,7 @@ export interface ParcoursContentItem extends ComponentSchema {
     description: RichTextAttribute & RequiredAttribute;
     timeline: BooleanAttribute & RequiredAttribute & DefaultTo<false>;
     order: IntegerAttribute & RequiredAttribute & DefaultTo<0>;
-    links: ComponentAttribute<'link.link', true>;
-  };
-}
-
-export interface ParcoursDiagAnswer extends ComponentSchema {
-  info: {
-    displayName: 'answer';
-    description: 'Une r\u00E9ponse potentielle \u00E0 une question menant soit \u00E0 une sous r\u00E9ponse, soit a une nouvelle question.';
-  };
-  attributes: {
-    content: StringAttribute & RequiredAttribute;
-    destination: RelationAttribute<
-      'parcours-diag.answer',
-      'oneToOne',
-      'api::question.question'
-    >;
-    info: TextAttribute;
-    subanswers: ComponentAttribute<'parcours-diag.sub-answer', true>;
-  };
-}
-
-export interface ParcoursDiagSubAnswer extends ComponentSchema {
-  info: {
-    displayName: 'SubAnswer';
-    description: 'Une sous r\u00E9ponse suit une r\u00E9ponse et m\u00E8ne obligatoirement vers une nouvelle question.';
-  };
-  attributes: {
-    content: StringAttribute & RequiredAttribute;
-    destination: RelationAttribute<
-      'parcours-diag.sub-answer',
-      'oneToOne',
-      'api::question.question'
-    > &
-      RequiredAttribute;
-    info: TextAttribute;
-  };
-}
-
-export interface SectionsSections extends ComponentSchema {
-  info: {
-    displayName: 'sections';
-  };
-  attributes: {
-    title: StringAttribute & RequiredAttribute;
-    content: RichTextAttribute & RequiredAttribute;
+    links: ComponentAttribute<'common.links', true>;
   };
 }
 
@@ -1079,13 +1069,12 @@ declare global {
       'api::plan-du-site.plan-du-site': ApiPlanDuSitePlanDuSite;
       'api::politique-de-confidentialite.politique-de-confidentialite': ApiPolitiqueDeConfidentialitePolitiqueDeConfidentialite;
       'api::question.question': ApiQuestionQuestion;
+      'common.links': CommonLinks;
+      'common.sections': CommonSections;
+      'diagnostic.answer': DiagnosticAnswer;
+      'diagnostic.sub-answer': DiagnosticSubAnswer;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
-      'link.link': LinkLink;
-      'links.links': LinksLinks;
       'parcours-content.item': ParcoursContentItem;
-      'parcours-diag.answer': ParcoursDiagAnswer;
-      'parcours-diag.sub-answer': ParcoursDiagSubAnswer;
-      'sections.sections': SectionsSections;
     }
   }
 }

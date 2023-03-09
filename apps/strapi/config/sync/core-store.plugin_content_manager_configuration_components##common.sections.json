@@ -1,14 +1,14 @@
 {
-  "key": "plugin_content_manager_configuration_components::parcours-diag.sub-answer",
+  "key": "plugin_content_manager_configuration_components::common.sections",
   "value": {
-    "uid": "parcours-diag.sub-answer",
+    "uid": "common.sections",
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "content",
-      "defaultSortBy": "content",
+      "mainField": "title",
+      "defaultSortBy": "title",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -18,6 +18,20 @@
           "label": "id",
           "searchable": false,
           "sortable": false
+        }
+      },
+      "title": {
+        "edit": {
+          "label": "title",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "title",
+          "searchable": true,
+          "sortable": true
         }
       },
       "content": {
@@ -30,62 +44,27 @@
         },
         "list": {
           "label": "content",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "destination": {
-        "edit": {
-          "label": "destination",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true,
-          "mainField": "content"
-        },
-        "list": {
-          "label": "destination",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "info": {
-        "edit": {
-          "label": "info",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "info",
-          "searchable": true,
-          "sortable": true
+          "searchable": false,
+          "sortable": false
         }
       }
     },
     "layouts": {
       "list": [
         "id",
-        "content",
-        "destination",
-        "info"
+        "title"
       ],
       "edit": [
         [
           {
-            "name": "content",
-            "size": 6
-          },
-          {
-            "name": "destination",
+            "name": "title",
             "size": 6
           }
         ],
         [
           {
-            "name": "info",
-            "size": 6
+            "name": "content",
+            "size": 12
           }
         ]
       ]

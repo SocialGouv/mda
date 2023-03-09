@@ -1,5 +1,5 @@
 {
-  "collectionName": "components_parcours_diag_sub_answers",
+  "collectionName": "components_diagnostic_sub_answers",
   "info": {
     "displayName": "SubAnswer",
     "description": "Une sous réponse suit une réponse et mène obligatoirement vers une nouvelle question."

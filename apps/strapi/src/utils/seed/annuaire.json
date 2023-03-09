@@ -8,7 +8,8 @@
 		{
 			"id": 2,
 			"text": "Annuaire Autisme Info Service",
-			"url": "https://annuaire.autismeinfoservice.fr/"
+			"url": "https://annuaire.autismeinfoservice.fr/",
+			"theme": "primary"
 		}
 	]
 }

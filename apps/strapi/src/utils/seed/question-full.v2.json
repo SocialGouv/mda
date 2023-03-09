@@ -238,7 +238,7 @@
         ]
       }
     },
-    "parcours-diag.sub-answer": {
+    "diagnostic.sub-answer": {
       "4": {
         "id": 4,
         "content": "Je suis un adulte autonome",
@@ -384,7 +384,7 @@
         "destination": 22
       }
     },
-    "parcours-diag.answer": {
+    "diagnostic.answer": {
       "1": {
         "id": 1,
         "content": "Un parent",
