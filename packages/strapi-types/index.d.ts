@@ -579,6 +579,35 @@ export interface PluginUsersPermissionsUser extends CollectionTypeSchema {
   };
 }
 
+export interface ApiAccessibiliteAccessibilite extends SingleTypeSchema {
+  info: {
+    singularName: 'accessibilite';
+    pluralName: 'accessibilites';
+    displayName: 'Accessibilit\u00E9';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::accessibilite.accessibilite',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::accessibilite.accessibilite',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiAccueilAccueil extends SingleTypeSchema {
   info: {
     singularName: 'accueil';
@@ -746,6 +775,35 @@ export interface ApiMaisonDeLAutismeMaisonDeLAutisme extends SingleTypeSchema {
   };
 }
 
+export interface ApiMentionsLegalesMentionsLegales extends SingleTypeSchema {
+  info: {
+    singularName: 'mentions-legales';
+    pluralName: 'mentions-legaless';
+    displayName: 'Mentions l\u00E9gales';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::mentions-legales.mentions-legales',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::mentions-legales.mentions-legales',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiMesAidesMesAides extends SingleTypeSchema {
   info: {
     singularName: 'mes-aides';
@@ -803,6 +861,66 @@ export interface ApiParcoursParcours extends CollectionTypeSchema {
       PrivateAttribute;
     updatedBy: RelationAttribute<
       'api::parcours.parcours',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
+export interface ApiPlanDuSitePlanDuSite extends SingleTypeSchema {
+  info: {
+    singularName: 'plan-du-site';
+    pluralName: 'plan-du-sites';
+    displayName: 'Plan du site';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::plan-du-site.plan-du-site',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::plan-du-site.plan-du-site',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
+export interface ApiPolitiqueDeConfidentialitePolitiqueDeConfidentialite
+  extends SingleTypeSchema {
+  info: {
+    singularName: 'politique-de-confidentialite';
+    pluralName: 'politique-de-confidentialites';
+    displayName: 'Politique de confidentialit\u00E9';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::politique-de-confidentialite.politique-de-confidentialite',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::politique-de-confidentialite.politique-de-confidentialite',
       'oneToOne',
       'admin::user'
     > &
@@ -949,13 +1067,17 @@ declare global {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::accessibilite.accessibilite': ApiAccessibiliteAccessibilite;
       'api::accueil.accueil': ApiAccueilAccueil;
       'api::annuaire.annuaire': ApiAnnuaireAnnuaire;
       'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;
       'api::glossaire-item.glossaire-item': ApiGlossaireItemGlossaireItem;
       'api::maison-de-l-autisme.maison-de-l-autisme': ApiMaisonDeLAutismeMaisonDeLAutisme;
+      'api::mentions-legales.mentions-legales': ApiMentionsLegalesMentionsLegales;
       'api::mes-aides.mes-aides': ApiMesAidesMesAides;
       'api::parcours.parcours': ApiParcoursParcours;
+      'api::plan-du-site.plan-du-site': ApiPlanDuSitePlanDuSite;
+      'api::politique-de-confidentialite.politique-de-confidentialite': ApiPolitiqueDeConfidentialitePolitiqueDeConfidentialite;
       'api::question.question': ApiQuestionQuestion;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
       'link.link': LinkLink;

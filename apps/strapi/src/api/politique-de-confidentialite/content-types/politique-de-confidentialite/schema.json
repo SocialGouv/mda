@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "politique_de_confidentialites",
+  "info": {
+    "singularName": "politique-de-confidentialite",
+    "pluralName": "politique-de-confidentialites",
+    "displayName": "Politique de confidentialité"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

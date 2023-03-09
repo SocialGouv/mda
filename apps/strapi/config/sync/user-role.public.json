@@ -4,6 +4,9 @@
   "type": "public",
   "permissions": [
     {
+      "action": "api::accessibilite.accessibilite.find"
+    },
+    {
       "action": "api::accueil.accueil.find"
     },
     {
@@ -25,13 +28,23 @@
       "action": "api::maison-de-l-autisme.maison-de-l-autisme.find"
     },
     {
-      "action": "api::mes-aides.mes-aides.find"
+      "action": "api::mentions-legales.mentions-legales.find"
     },
     {
+      "action": "api::mes-aides.mes-aides.find"
+    },
+    
+   {
       "action": "api::parcours.parcours.find"
     },
     {
       "action": "api::parcours.parcours.findOne"
+    },
+    {
+      "action": "api::plan-du-site.plan-du-site.find"
+    },
+    {
+      "action": "api::politique-de-confidentialite.politique-de-confidentialite.find"
     },
     {
       "action": "api::question.question.find"

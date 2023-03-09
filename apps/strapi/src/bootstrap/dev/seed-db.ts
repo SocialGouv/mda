@@ -9,6 +9,12 @@ const seeds = {
   "api::mes-aides.mes-aides": import("../../utils/seed/mes-aides.json"),
   "api::parcours.parcours": import("../../utils/seed/parcours.json"),
   "api::question.question": import("../../utils/seed/question.json"),
+  "api::accessibilite.accessibilite": import("../../utils/seed/accessibilite.json"),
+  "api::mentions-legales.mentions-legales": import("../../utils/seed/mentions-legales.json"),
+  "api::plan-du-site.plan-du-site": import("../../utils/seed/plan-du-site.json"),
+  "api::politique-de-confidentialite.politique-de-confidentialite": import(
+    "../../utils/seed/politique-de-confidentialite.json"
+  ),
 };
 
 const devSeedDb: StrapiLifecycle = async ({ strapi }) => {

@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "mentions_legaless",
+  "info": {
+    "singularName": "mentions-legales",
+    "pluralName": "mentions-legaless",
+    "displayName": "Mentions légales"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
