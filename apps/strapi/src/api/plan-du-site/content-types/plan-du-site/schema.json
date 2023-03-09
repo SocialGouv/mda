@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "plan_du_sites",
+  "info": {
+    "singularName": "plan-du-site",
+    "pluralName": "plan-du-sites",
+    "displayName": "Plan du site",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

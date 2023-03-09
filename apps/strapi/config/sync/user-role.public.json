@@ -31,6 +31,9 @@
       "action": "api::mes-aides.mes-aides.find"
     },
     {
+      "action": "api::plan-du-site.plan-du-site.find"
+    },
+    {
       "action": "api::question.question.find"
     },
     {

@@ -806,6 +806,36 @@ export interface ApiMesAidesMesAides extends SingleTypeSchema {
   };
 }
 
+export interface ApiPlanDuSitePlanDuSite extends SingleTypeSchema {
+  info: {
+    singularName: 'plan-du-site';
+    pluralName: 'plan-du-sites';
+    displayName: 'Plan du site';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    publishedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::plan-du-site.plan-du-site',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::plan-du-site.plan-du-site',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiQuestionQuestion extends CollectionTypeSchema {
   info: {
     singularName: 'question';
@@ -938,6 +968,7 @@ declare global {
       'api::maison-de-l-autisme.maison-de-l-autisme': ApiMaisonDeLAutismeMaisonDeLAutisme;
       'api::mentions-legales.mentions-legales': ApiMentionsLegalesMentionsLegales;
       'api::mes-aides.mes-aides': ApiMesAidesMesAides;
+      'api::plan-du-site.plan-du-site': ApiPlanDuSitePlanDuSite;
       'api::question.question': ApiQuestionQuestion;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
       'link.link': LinkLink;
