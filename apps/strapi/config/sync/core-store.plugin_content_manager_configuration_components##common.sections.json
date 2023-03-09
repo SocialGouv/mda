@@ -1,14 +1,14 @@
 {
-  "key": "plugin_content_manager_configuration_components::links.links",
+  "key": "plugin_content_manager_configuration_components::common.sections",
   "value": {
-    "uid": "links.links",
+    "uid": "common.sections",
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "text",
-      "defaultSortBy": "text",
+      "mainField": "title",
+      "defaultSortBy": "title",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -20,71 +20,51 @@
           "sortable": false
         }
       },
-      "text": {
+      "title": {
         "edit": {
-          "label": "text",
+          "label": "title",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "text",
+          "label": "title",
           "searchable": true,
           "sortable": true
         }
       },
-      "href": {
+      "content": {
         "edit": {
-          "label": "href",
+          "label": "content",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "href",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "theme": {
-        "edit": {
-          "label": "theme",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "theme",
-          "searchable": true,
-          "sortable": true
+          "label": "content",
+          "searchable": false,
+          "sortable": false
         }
       }
     },
     "layouts": {
       "list": [
         "id",
-        "text",
-        "href",
-        "theme"
+        "title"
       ],
       "edit": [
         [
           {
-            "name": "text",
-            "size": 6
-          },
-          {
-            "name": "href",
+            "name": "title",
             "size": 6
           }
         ],
         [
           {
-            "name": "theme",
-            "size": 6
+            "name": "content",
+            "size": 12
           }
         ]
       ]

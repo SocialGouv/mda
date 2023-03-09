@@ -23,7 +23,7 @@
       "displayName": "links",
       "type": "component",
       "repeatable": true,
-      "component": "links.links"
+      "component": "common.links"
     },
     "MDA_title": {
       "type": "string",

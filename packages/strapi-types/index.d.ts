@@ -621,7 +621,7 @@ export interface ApiAccueilAccueil extends SingleTypeSchema {
   attributes: {
     title: StringAttribute & RequiredAttribute;
     content: RichTextAttribute & RequiredAttribute;
-    links: ComponentAttribute<'links.links', true>;
+    links: ComponentAttribute<'common.links', true>;
     MDA_title: StringAttribute & RequiredAttribute;
     MDA_subtitle: TextAttribute;
     MDA_content: RichTextAttribute & RequiredAttribute;
@@ -658,7 +658,7 @@ export interface ApiAnnuaireAnnuaire extends SingleTypeSchema {
   attributes: {
     title: StringAttribute & RequiredAttribute;
     content: RichTextAttribute & RequiredAttribute;
-    links: ComponentAttribute<'link.link', true>;
+    links: ComponentAttribute<'common.links', true>;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
@@ -757,7 +757,7 @@ export interface ApiMaisonDeLAutismeMaisonDeLAutisme extends SingleTypeSchema {
   attributes: {
     title: StringAttribute & RequiredAttribute;
     content: RichTextAttribute & RequiredAttribute;
-    sections: ComponentAttribute<'sections.sections', true>;
+    sections: ComponentAttribute<'common.sections', true>;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
@@ -817,7 +817,7 @@ export interface ApiMesAidesMesAides extends SingleTypeSchema {
   attributes: {
     title: StringAttribute & RequiredAttribute;
     content: RichTextAttribute & RequiredAttribute;
-    sections: ComponentAttribute<'sections.sections', true>;
+    sections: ComponentAttribute<'common.sections', true>;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
@@ -960,6 +960,30 @@ export interface ApiQuestionQuestion extends CollectionTypeSchema {
   };
 }
 
+export interface CommonLinks extends ComponentSchema {
+  info: {
+    displayName: 'links';
+    description: '';
+  };
+  attributes: {
+    text: StringAttribute & RequiredAttribute;
+    url: StringAttribute;
+    theme: EnumerationAttribute<['primary', 'secondary']> &
+      RequiredAttribute &
+      DefaultTo<'primary'>;
+  };
+}
+
+export interface CommonSections extends ComponentSchema {
+  info: {
+    displayName: 'sections';
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+  };
+}
+
 export interface DiagnosticAnswer extends ComponentSchema {
   info: {
     displayName: 'answer';
@@ -1005,30 +1029,6 @@ export interface FichePratiqueContentEncart extends ComponentSchema {
   };
 }
 
-export interface LinkLink extends ComponentSchema {
-  info: {
-    displayName: 'link';
-  };
-  attributes: {
-    text: StringAttribute & RequiredAttribute;
-    url: StringAttribute & RequiredAttribute;
-  };
-}
-
-export interface LinksLinks extends ComponentSchema {
-  info: {
-    displayName: 'links';
-    description: '';
-  };
-  attributes: {
-    text: StringAttribute & RequiredAttribute;
-    href: StringAttribute;
-    theme: EnumerationAttribute<['primary', 'secondary']> &
-      RequiredAttribute &
-      DefaultTo<'primary'>;
-  };
-}
-
 export interface ParcoursContentItem extends ComponentSchema {
   info: {
     displayName: 'Item';
@@ -1039,17 +1039,7 @@ export interface ParcoursContentItem extends ComponentSchema {
     description: RichTextAttribute & RequiredAttribute;
     timeline: BooleanAttribute & RequiredAttribute & DefaultTo<false>;
     order: IntegerAttribute & RequiredAttribute & DefaultTo<0>;
-    links: ComponentAttribute<'link.link', true>;
-  };
-}
-
-export interface SectionsSections extends ComponentSchema {
-  info: {
-    displayName: 'sections';
-  };
-  attributes: {
-    title: StringAttribute & RequiredAttribute;
-    content: RichTextAttribute & RequiredAttribute;
+    links: ComponentAttribute<'common.links', true>;
   };
 }
 
@@ -1079,13 +1069,12 @@ declare global {
       'api::plan-du-site.plan-du-site': ApiPlanDuSitePlanDuSite;
       'api::politique-de-confidentialite.politique-de-confidentialite': ApiPolitiqueDeConfidentialitePolitiqueDeConfidentialite;
       'api::question.question': ApiQuestionQuestion;
+      'common.links': CommonLinks;
+      'common.sections': CommonSections;
       'diagnostic.answer': DiagnosticAnswer;
       'diagnostic.sub-answer': DiagnosticSubAnswer;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
-      'link.link': LinkLink;
-      'links.links': LinksLinks;
       'parcours-content.item': ParcoursContentItem;
-      'sections.sections': SectionsSections;
     }
   }
 }

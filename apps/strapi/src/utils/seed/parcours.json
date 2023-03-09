@@ -18,7 +18,8 @@
           {
             "id": 3,
             "text": "Je m'interroge",
-            "url": "/fiches-pratiques/je-m-interroge-envers-moi-meme"
+            "url": "/fiches-pratiques/je-m-interroge-envers-moi-meme",
+            "theme": "primary"
           }
         ]
       },
@@ -32,7 +33,8 @@
           {
             "id": 4,
             "text": "Mon diagnostic",
-            "url": "/mon-diagnostic"
+            "url": "/mon-diagnostic",
+            "theme": "primary"
           }
         ]
       },
@@ -46,7 +48,8 @@
           {
             "id": 5,
             "text": "Mes aides",
-            "url": "/mes-aides"
+            "url": "/mes-aides",
+            "theme": "primary"
           }
         ]
       },
@@ -60,7 +63,8 @@
           {
             "id": 6,
             "text": "Monter un dossier",
-            "url": "/fiches-pratiques/je-sollicite-la-mdph-et-je-monte-un-dossier"
+            "url": "/fiches-pratiques/je-sollicite-la-mdph-et-je-monte-un-dossier",
+            "theme": "primary"
           }
         ]
       },
@@ -74,7 +78,8 @@
           {
             "id": 7,
             "text": "Mes aides",
-            "url": "/mes-aides"
+            "url": "/mes-aides",
+            "theme": "primary"
           }
         ]
       },
@@ -88,47 +93,56 @@
           {
             "id": 8,
             "text": "Étudier",
-            "url": "/fiches-pratiques/etudier-du-college-aux-etudes-superieures"
+            "url": "/fiches-pratiques/etudier-du-college-aux-etudes-superieures",
+            "theme": "primary"
           },
           {
             "id": 9,
             "text": "Travailler",
-            "url": "/fiches-pratiques/personne-tsa-travailler"
+            "url": "/fiches-pratiques/personne-tsa-travailler",
+            "theme": "primary"
           },
           {
             "id": 10,
             "text": "Se soigner",
-            "url": "/fiches-pratiques/se-soigner"
+            "url": "/fiches-pratiques/se-soigner",
+            "theme": "primary"
           },
           {
             "id": 11,
             "text": "Se déplacer",
-            "url": "/fiches-pratiques/se-deplacer"
+            "url": "/fiches-pratiques/se-deplacer",
+            "theme": "primary"
           },
           {
             "id": 12,
             "text": "Se loger",
-            "url": "/fiches-pratiques/se-loger"
+            "url": "/fiches-pratiques/se-loger",
+            "theme": "primary"
           },
           {
             "id": 13,
             "text": "Partir en vacances",
-            "url": "/fiches-pratiques/partir-en-vacances"
+            "url": "/fiches-pratiques/partir-en-vacances",
+            "theme": "primary"
           },
           {
             "id": 14,
             "text": "Avoir des loisirs",
-            "url": "/fiches-pratiques/avoir-des-loisirs"
+            "url": "/fiches-pratiques/avoir-des-loisirs",
+            "theme": "primary"
           },
           {
             "id": 15,
             "text": "Tisser du lien amical, amoureux et familial",
-            "url": "/fiches-pratiques/tisser-du-lien-amical-amoureux-et-familial"
+            "url": "/fiches-pratiques/tisser-du-lien-amical-amoureux-et-familial",
+            "theme": "primary"
           },
           {
             "id": 16,
             "text": "Être protégé",
-            "url": "/fiches-pratiques/etre-protege"
+            "url": "/fiches-pratiques/etre-protege",
+            "theme": "primary"
           }
         ]
       },
@@ -142,7 +156,8 @@
           {
             "id": 17,
             "text": "La maison de l'autisme",
-            "url": "/la-maison-de-l-autisme"
+            "url": "/la-maison-de-l-autisme",
+            "theme": "primary"
           }
         ]
       },
@@ -156,7 +171,8 @@
           {
             "id": 18,
             "text": "Groupes d'entraide",
-            "url": "/fiches-pratiques/je-cherche-des-groupes-d-entraide"
+            "url": "/fiches-pratiques/je-cherche-des-groupes-d-entraide",
+            "theme": "primary"
           }
         ]
       },
@@ -170,7 +186,8 @@
           {
             "id": 19,
             "text": "Mon avis",
-            "url": "/je-donne-mon-avis"
+            "url": "/je-donne-mon-avis",
+            "theme": "primary"
           }
         ]
       },
@@ -184,7 +201,8 @@
           {
             "id": 20,
             "text": "Annuaire",
-            "url": "/annuaire"
+            "url": "/annuaire",
+            "theme": "primary"
           }
         ]
       }
@@ -211,7 +229,8 @@
           {
             "id": 21,
             "text": "Je m'interroge",
-            "url": "/fiches-pratiques/je-m-interroge-sur-mon-enfant"
+            "url": "/fiches-pratiques/je-m-interroge-sur-mon-enfant",
+            "theme": "primary"
           }
         ]
       },
@@ -225,7 +244,8 @@
           {
             "id": 22,
             "text": "Mon diagnostic",
-            "url": "/mon-diagnostic"
+            "url": "/mon-diagnostic",
+            "theme": "primary"
           }
         ]
       },
@@ -239,7 +259,8 @@
           {
             "id": 23,
             "text": "Mes aides",
-            "url": "/mes-aides"
+            "url": "/mes-aides",
+            "theme": "primary"
           }
         ]
       },
@@ -253,7 +274,8 @@
           {
             "id": 24,
             "text": "Monter un dossier",
-            "url": "/fiches-pratiques/je-sollicite-la-mdph-et-je-monte-un-dossier"
+            "url": "/fiches-pratiques/je-sollicite-la-mdph-et-je-monte-un-dossier",
+            "theme": "primary"
           }
         ]
       },
@@ -267,7 +289,8 @@
           {
             "id": 25,
             "text": "Mes aides",
-            "url": "/mes-aides"
+            "url": "/mes-aides",
+            "theme": "primary"
           }
         ]
       },
@@ -281,52 +304,62 @@
           {
             "id": 26,
             "text": "Étudier",
-            "url": "/fiches-pratiques/etudier-du-college-aux-etudes-superieures"
+            "url": "/fiches-pratiques/etudier-du-college-aux-etudes-superieures",
+            "theme": "primary"
           },
           {
             "id": 27,
             "text": "Travailler",
-            "url": "/fiches-pratiques/personne-tsa-travailler"
+            "url": "/fiches-pratiques/personne-tsa-travailler",
+            "theme": "primary"
           },
           {
             "id": 28,
             "text": "Logement",
-            "url": "/fiches-pratiques/se-loger"
+            "url": "/fiches-pratiques/se-loger",
+            "theme": "primary"
           },
           {
             "id": 29,
             "text": "Se soigner",
-            "url": "/fiches-pratiques/se-soigner"
+            "url": "/fiches-pratiques/se-soigner",
+            "theme": "primary"
           },
           {
             "id": 30,
             "text": "Se déplacer",
-            "url": "/fiches-pratiques/se-deplacer"
+            "url": "/fiches-pratiques/se-deplacer",
+            "theme": "primary"
           },
           {
             "id": 31,
             "text": "Se loger",
-            "url": "/fiches-pratiques/se-loger"
+            "url": "/fiches-pratiques/se-loger",
+            "theme": "primary"
           },
           {
             "id": 32,
             "text": "Partir en vacances",
-            "url": "/fiches-pratiques/partir-en-vacances"
+            "url": "/fiches-pratiques/partir-en-vacances",
+            "theme": "primary"
           },
           {
             "id": 33,
             "text": "Avoir des loisirs",
-            "url": "/fiches-pratiques/avoir-des-loisirs"
+            "url": "/fiches-pratiques/avoir-des-loisirs",
+            "theme": "primary"
           },
           {
             "id": 34,
             "text": "Tisser du lien amical, amoureux et familial",
-            "url": "/fiches-pratiques/tisser-du-lien-amical-amoureux-et-familial"
+            "url": "/fiches-pratiques/tisser-du-lien-amical-amoureux-et-familial",
+            "theme": "primary"
           },
           {
             "id": 35,
             "text": "Mettre en place des mesures de protection",
-            "url": "/fiches-pratiques/etre-protege"
+            "url": "/fiches-pratiques/etre-protege",
+            "theme": "primary"
           }
         ]
       },
@@ -340,7 +373,8 @@
           {
             "id": 36,
             "text": "Demander de l'aide",
-            "url": "/fiches-pratiques/je-demande-de-l-aide-a-mon-entourage"
+            "url": "/fiches-pratiques/je-demande-de-l-aide-a-mon-entourage",
+            "theme": "primary"
           }
         ]
       },
@@ -354,7 +388,8 @@
           {
             "id": 37,
             "text": "Groupes d'entraide",
-            "url": "/fiches-pratiques/je-cherche-des-groupes-d-entraide"
+            "url": "/fiches-pratiques/je-cherche-des-groupes-d-entraide",
+            "theme": "primary"
           }
         ]
       },
@@ -368,7 +403,8 @@
           {
             "id": 38,
             "text": "Mon avis",
-            "url": "/je-donne-mon-avis"
+            "url": "/je-donne-mon-avis",
+            "theme": "primary"
           }
         ]
       },
@@ -382,7 +418,8 @@
           {
             "id": 39,
             "text": "Annuaire",
-            "url": "/annuaire"
+            "url": "/annuaire",
+            "theme": "primary"
           }
         ]
       }
@@ -409,7 +446,8 @@
           {
             "id": 40,
             "text": "",
-            "url": "/fiches-pratiques/comment-puis-je-diagnostiquer-un-patient-potentiellement-autiste"
+            "url": "/fiches-pratiques/comment-puis-je-diagnostiquer-un-patient-potentiellement-autiste",
+            "theme": "primary"
           }
         ]
       },
@@ -423,7 +461,8 @@
           {
             "id": 41,
             "text": "Parcours de diagnostic",
-            "url": "/fiches-pratiques/parcours-de-diagnostic"
+            "url": "/fiches-pratiques/parcours-de-diagnostic",
+            "theme": "primary"
           }
         ]
       },
@@ -437,7 +476,8 @@
           {
             "id": 42,
             "text": "Mon avis",
-            "url": "/je-donne-mon-avis"
+            "url": "/je-donne-mon-avis",
+            "theme": "primary"
           }
         ]
       },
@@ -451,7 +491,8 @@
           {
             "id": 43,
             "text": "Bonnes pratiques",
-            "url": "/fiches-pratiques/recommandations-de-bonnes-pratiques-professionnelles"
+            "url": "/fiches-pratiques/recommandations-de-bonnes-pratiques-professionnelles",
+            "theme": "primary"
           }
         ]
       }

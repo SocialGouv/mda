@@ -50,7 +50,7 @@
           "title",
           "content",
           "links.text",
-          "links.href",
+          "links.url",
           "links.theme",
           "MDA_title",
           "MDA_subtitle",
@@ -81,7 +81,7 @@
           "title",
           "content",
           "links.text",
-          "links.href",
+          "links.url",
           "links.theme",
           "MDA_title",
           "MDA_subtitle",
@@ -100,7 +100,7 @@
           "title",
           "content",
           "links.text",
-          "links.href",
+          "links.url",
           "links.theme",
           "MDA_title",
           "MDA_subtitle",
@@ -119,7 +119,8 @@
           "title",
           "content",
           "links.text",
-          "links.url"
+          "links.url",
+          "links.theme"
         ]
       },
       "conditions": []
@@ -138,7 +139,8 @@
           "title",
           "content",
           "links.text",
-          "links.url"
+          "links.url",
+          "links.theme"
         ]
       },
       "conditions": []
@@ -151,7 +153,8 @@
           "title",
           "content",
           "links.text",
-          "links.url"
+          "links.url",
+          "links.theme"
         ]
       },
       "conditions": []
@@ -394,7 +397,8 @@
           "items.timeline",
           "items.order",
           "items.links.text",
-          "items.links.url"
+          "items.links.url",
+          "items.links.theme"
         ]
       },
       "conditions": []
@@ -424,7 +428,8 @@
           "items.timeline",
           "items.order",
           "items.links.text",
-          "items.links.url"
+          "items.links.url",
+          "items.links.theme"
         ]
       },
       "conditions": []
@@ -442,7 +447,8 @@
           "items.timeline",
           "items.order",
           "items.links.text",
-          "items.links.url"
+          "items.links.url",
+          "items.links.theme"
         ]
       },
       "conditions": []

@@ -14,13 +14,13 @@
 		{
 			"id": 1,
 			"text": "Comprendre l'autisme",
-			"href": "/fiches-pratiques/qu-est-ce-que-l-autisme",
+			"url": "/fiches-pratiques/qu-est-ce-que-l-autisme",
 			"theme": "primary"
 		},
 		{
 			"id": 2,
 			"text": "J'ai un doute",
-			"href": "/mon-diagnostic",
+			"url": "/mon-diagnostic",
 			"theme": "secondary"
 		}
 	]

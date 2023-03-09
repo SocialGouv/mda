@@ -1,7 +1,7 @@
 {
-  "key": "plugin_content_manager_configuration_components::link.link",
+  "key": "plugin_content_manager_configuration_components::common.links",
   "value": {
-    "uid": "link.link",
+    "uid": "common.links",
     "settings": {
       "bulkable": true,
       "filterable": true,
@@ -47,13 +47,28 @@
           "searchable": true,
           "sortable": true
         }
+      },
+      "theme": {
+        "edit": {
+          "label": "theme",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "theme",
+          "searchable": true,
+          "sortable": true
+        }
       }
     },
     "layouts": {
       "list": [
         "id",
         "text",
-        "url"
+        "url",
+        "theme"
       ],
       "edit": [
         [
@@ -63,6 +78,12 @@
           },
           {
             "name": "url",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "theme",
             "size": 6
           }
         ]

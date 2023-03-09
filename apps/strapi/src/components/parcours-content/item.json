@@ -27,7 +27,7 @@
     "links": {
       "type": "component",
       "repeatable": true,
-      "component": "link.link"
+      "component": "common.links"
     }
   }
 }
