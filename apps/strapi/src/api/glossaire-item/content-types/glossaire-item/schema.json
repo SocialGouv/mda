@@ -4,7 +4,7 @@
   "info": {
     "singularName": "glossaire-item",
     "pluralName": "glossaire-items",
-    "displayName": "glossaire-item"
+    "displayName": "Glossaire"
   },
   "options": {
     "draftAndPublish": false

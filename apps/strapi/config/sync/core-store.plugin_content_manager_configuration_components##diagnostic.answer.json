@@ -1,7 +1,7 @@
 {
-  "key": "plugin_content_manager_configuration_components::parcours-diag.sub-answer",
+  "key": "plugin_content_manager_configuration_components::diagnostic.answer",
   "value": {
-    "uid": "parcours-diag.sub-answer",
+    "uid": "diagnostic.answer",
     "settings": {
       "bulkable": true,
       "filterable": true,
@@ -62,6 +62,20 @@
           "searchable": true,
           "sortable": true
         }
+      },
+      "subanswers": {
+        "edit": {
+          "label": "subanswers",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "subanswers",
+          "searchable": false,
+          "sortable": false
+        }
       }
     },
     "layouts": {
@@ -86,6 +100,12 @@
           {
             "name": "info",
             "size": 6
+          }
+        ],
+        [
+          {
+            "name": "subanswers",
+            "size": 12
           }
         ]
       ]
