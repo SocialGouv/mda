@@ -579,6 +579,35 @@ export interface PluginUsersPermissionsUser extends CollectionTypeSchema {
   };
 }
 
+export interface ApiAccessibiliteAccessibilite extends SingleTypeSchema {
+  info: {
+    singularName: 'accessibilite';
+    pluralName: 'accessibilites';
+    displayName: 'Accessibilit\u00E9';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::accessibilite.accessibilite',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::accessibilite.accessibilite',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiAccueilAccueil extends SingleTypeSchema {
   info: {
     singularName: 'accueil';
@@ -811,16 +840,16 @@ export interface ApiPlanDuSitePlanDuSite extends SingleTypeSchema {
     singularName: 'plan-du-site';
     pluralName: 'plan-du-sites';
     displayName: 'Plan du site';
+    description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     title: StringAttribute & RequiredAttribute;
     content: RichTextAttribute & RequiredAttribute;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
-    publishedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
       'api::plan-du-site.plan-du-site',
       'oneToOne',
@@ -961,6 +990,7 @@ declare global {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::accessibilite.accessibilite': ApiAccessibiliteAccessibilite;
       'api::accueil.accueil': ApiAccueilAccueil;
       'api::annuaire.annuaire': ApiAnnuaireAnnuaire;
       'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;

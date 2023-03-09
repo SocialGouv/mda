@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "accessibilites",
+  "info": {
+    "singularName": "accessibilite",
+    "pluralName": "accessibilites",
+    "displayName": "Accessibilité"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
