@@ -2,7 +2,8 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "cssModules.camelCase": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.organizeImports": false
   },
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
