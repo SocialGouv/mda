@@ -16,7 +16,8 @@
           "MDA_title",
           "MDA_subtitle",
           "MDA_content",
-          "MDA_link_text"
+          "MDA_link_text",
+          "MDA_img"
         ]
       },
       "conditions": []
@@ -46,7 +47,8 @@
           "MDA_title",
           "MDA_subtitle",
           "MDA_content",
-          "MDA_link_text"
+          "MDA_link_text",
+          "MDA_img"
         ]
       },
       "conditions": []
@@ -64,7 +66,8 @@
           "MDA_title",
           "MDA_subtitle",
           "MDA_content",
-          "MDA_link_text"
+          "MDA_link_text",
+          "MDA_img"
         ]
       },
       "conditions": []

@@ -1,7 +1,5 @@
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
 
-import { GDPRButton } from "./GDPRButton";
-
 const PrivacyPolicy = () => {
   return (
     <SimpleContentPage>
@@ -86,9 +84,9 @@ const PrivacyPolicy = () => {
         preuve de votre identité.
       </p>
       <p>
-        Pour vous aider dans votre démarche, vous trouverez un modèle de courrier élaboré par la CNIL ici&nbsp;:
+        Pour vous aider dans votre démarche, vous trouverez un modèle de courrier élaboré par la CNIL ici&nbsp;:{" "}
         <a href=" https://www.cnil.fr/fr/modele/courrier/exercer-son-droit-dacces" target="_blank" rel="noreferrer">
-          https://www.cnil.fr/fr/modele/courrier/exercer-son-droit-dacces
+          Exercer son droit d’accès
         </a>
       </p>
       <p>
@@ -182,39 +180,11 @@ const PrivacyPolicy = () => {
         la recommandation « Cookies » de la CNIL. Cela signifie que votre adresse IP, par exemple, est anonymisée avant
         d’être enregistrée. Il est donc impossible d’associer vos visites sur ce cette application à votre personne.
       </p>
-      <p>Vous pouvez néanmoins le désactivez via ce bouton&nbsp;:</p>
-      <div className="fr-my-2w">
-        <GDPRButton>Modifier les réglages</GDPRButton>
-      </div>
       <p>
         À tout moment, vous pouvez refuser l’utilisation des cookies et désactiver le dépôt sur votre ordinateur en
         utilisant la fonction dédiée de votre navigateur (fonction disponible notamment sur Microsoft Internet Explorer
         11, Google Chrome, Mozilla Firefox, Apple Safari et Opera).
       </p>
-      <p>
-        Pour aller plus loin, vous pouvez consulter les ﬁches proposées par la Commission Nationale de l'Informatique et
-        des Libertés (CNIL)&nbsp;:
-      </p>
-      <ul>
-        <li>
-          <a
-            href="https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookies/que-dit-la-loi"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Cookies & traceurs&nbsp;: que dit la loi ?
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.cnil.fr/fr/cookies-et-autres-traceurs/comment-se-proteger/maitriser-votre-navigateur"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Cookies&nbsp;: les outils pour les maîtriser
-          </a>
-        </li>
-      </ul>
     </SimpleContentPage>
   );
 };

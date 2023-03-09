@@ -19,7 +19,12 @@ const Feedback = () => {
         <p>
           Pour les demandes personnelles, veuillez vous rapprocher de l'organisme en charge de votre dossier. Pour toute
           question, vous pouvez contacter{" "}
-          <a href="https://www.autismeinfoservice.fr/" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.autismeinfoservice.fr/"
+            target="_blank"
+            rel="noreferrer"
+            title="Site Autisme Info Service - nouvelle fenêtre"
+          >
             Autisme Info Service
           </a>
           .

@@ -39,6 +39,11 @@
     "MDA_link_text": {
       "type": "string",
       "required": true
+    },
+    "MDA_img": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false
     }
   }
 }

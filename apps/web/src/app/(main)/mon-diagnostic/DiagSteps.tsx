@@ -90,61 +90,66 @@ const QuestionBox = ({ question, index }: QuestionBoxProps) => {
 
   return (
     <FormGroupStep>
-      <FormGroup>
-        <FormGroupLabel htmlFor={`select-question-${index}`}>{question.attributes.content}</FormGroupLabel>
-        {question.attributes.info && (
-          <Notice className="fr-my-1w" isInsideContent>
-            <ReactMarkdown>{question.attributes.info}</ReactMarkdown>
-          </Notice>
-        )}
-        {question.attributes.answers?.length ? (
-          <FormSelect
-            id={`select-question-${index}`}
-            onChange={handleAnswerChange}
-            placeholder="Veuillez sélectionner une réponse"
-            placeholderSelected={true}
-            placeholderHidden={false}
-          >
-            {question.attributes.answers.map((answer, answerIdx) => (
-              <option key={`${question.id}-answer-${answerIdx}`} value={answerIdx}>
-                {answer.content}
-              </option>
-            ))}
-          </FormSelect>
-        ) : null}
-        {question.attributes.answers?.[currentAnswerIndex]?.info && (
-          <Notice className="fr-my-1w" isInsideContent>
-            <ReactMarkdown>{question.attributes.answers?.[currentAnswerIndex]?.info ?? ""}</ReactMarkdown>
-          </Notice>
-        )}
-      </FormGroup>
-      {question.attributes.answers?.[currentAnswerIndex]?.subanswers?.length ? (
-        <FormGroup>
-          <FormGroupLabel htmlFor={`select-question-subanswer-${index}`} className="fr-sr-only">
-            {question.attributes.content} {question.attributes.answers?.[currentAnswerIndex].content.toLowerCase()}
-          </FormGroupLabel>
-          <FormSelect
-            id={`select-question-subanswer-${index}`}
-            onChange={handleSubAnswerChange}
-            placeholder="Veuillez sélectionner une réponse"
-            placeholderSelected={true}
-            placeholderHidden={false}
-          >
-            {question.attributes.answers[currentAnswerIndex].subanswers?.map((subAnswer, subAnswerIdx) => (
-              <option key={`${question.id}-${currentAnswerIndex}-subanswer-${subAnswerIdx}`} value={subAnswerIdx}>
-                {subAnswer.content}
-              </option>
-            ))}
-          </FormSelect>
-          {question.attributes.answers?.[currentAnswerIndex]?.subanswers?.[currentSubanswerIndex]?.info && (
-            <Notice className="fr-my-1w" isInsideContent>
-              <ReactMarkdown>
-                {question.attributes.answers?.[currentAnswerIndex]?.subanswers?.[currentSubanswerIndex]?.info ?? ""}
-              </ReactMarkdown>
-            </Notice>
-          )}
-        </FormGroup>
-      ) : null}
+      {question.attributes.info && (
+        <Notice className="fr-my-1w" isInsideContent>
+          <ReactMarkdown>{question.attributes.info}</ReactMarkdown>
+        </Notice>
+      )}
+      {question.attributes.answers?.length ? (
+        <fieldset className="fr-fieldset-reset">
+          <legend className="fr-sr-only">{question.attributes.content}</legend>
+          <FormGroup>
+            <FormGroupLabel htmlFor={`select-question-${index}`}>{question.attributes.content}</FormGroupLabel>
+            <FormSelect
+              id={`select-question-${index}`}
+              onChange={handleAnswerChange}
+              placeholder="Veuillez sélectionner une réponse"
+              placeholderSelected={true}
+              placeholderHidden={false}
+            >
+              {question.attributes.answers.map((answer, answerIdx) => (
+                <option key={`${question.id}-answer-${answerIdx}`} value={answerIdx}>
+                  {answer.content}
+                </option>
+              ))}
+            </FormSelect>
+          </FormGroup>
+          {question.attributes.answers?.[currentAnswerIndex]?.subanswers?.length ? (
+            <FormGroup>
+              <FormGroupLabel htmlFor={`select-question-subanswer-${index}`} className="fr-sr-only">
+                {question.attributes.content} {question.attributes.answers?.[currentAnswerIndex].content.toLowerCase()}
+              </FormGroupLabel>
+              <FormSelect
+                id={`select-question-subanswer-${index}`}
+                onChange={handleSubAnswerChange}
+                placeholder="Veuillez sélectionner une réponse"
+                placeholderSelected={true}
+                placeholderHidden={false}
+              >
+                {question.attributes.answers[currentAnswerIndex].subanswers?.map((subAnswer, subAnswerIdx) => (
+                  <option key={`${question.id}-${currentAnswerIndex}-subanswer-${subAnswerIdx}`} value={subAnswerIdx}>
+                    {subAnswer.content}
+                  </option>
+                ))}
+              </FormSelect>
+              {question.attributes.answers?.[currentAnswerIndex]?.subanswers?.[currentSubanswerIndex]?.info && (
+                <Notice className="fr-my-1w" isInsideContent>
+                  <ReactMarkdown>
+                    {question.attributes.answers?.[currentAnswerIndex]?.subanswers?.[currentSubanswerIndex]?.info ?? ""}
+                  </ReactMarkdown>
+                </Notice>
+              )}
+            </FormGroup>
+          ) : null}
+        </fieldset>
+      ) : (
+        <p>{question.attributes.content}</p>
+      )}
+      {question.attributes.answers?.[currentAnswerIndex]?.info && (
+        <Notice className="fr-my-1w" isInsideContent>
+          <ReactMarkdown>{question.attributes.answers?.[currentAnswerIndex]?.info ?? ""}</ReactMarkdown>
+        </Notice>
+      )}
     </FormGroupStep>
   );
 };
