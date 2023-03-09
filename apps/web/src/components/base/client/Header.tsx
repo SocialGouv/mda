@@ -7,9 +7,12 @@ import clsx from "clsx";
 import Link from "next/link";
 import { type PropsWithChildren, useEffect, useRef, useState } from "react";
 
+import styles from "./Header.module.css";
+
 export const Header = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const [navOpen, setNavOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const [isDialog, setIsDialog] = useState(false);
   useEffect(() => {
     if (navOpen) {
@@ -64,6 +67,16 @@ export const Header = () => {
                 </div>
                 <div className="fr-header__navbar">
                   <button
+                    className="fr-btn--search fr-btn"
+                    data-fr-opened="false"
+                    aria-controls="modal-search"
+                    id="button-search"
+                    title="Rechercher"
+                    onClick={() => setSearchOpen(true)}
+                  >
+                    Rechercher
+                  </button>
+                  <button
                     className="fr-btn--menu fr-btn"
                     data-fr-opened={navOpen ? "true" : "false"}
                     aria-controls="modal-main-nav"
@@ -80,6 +93,46 @@ export const Header = () => {
                 <Link href="/" aria-label="Retour à la page d'accueil de La Maison de l'autisme">
                   <p className="fr-header__service-title">{config.siteTitle}</p>
                 </Link>
+              </div>
+            </div>
+
+            <div className="fr-header__tools">
+              <div
+                className={clsx("fr-header__search fr-modal", searchOpen && "fr-modal--opened")}
+                id="modal-search"
+                aria-labelledby="button-search"
+                role={isDialog ? "dialog" : undefined}
+                aria-modal={isDialog ? "true" : undefined}
+              >
+                <div className="fr-container fr-container-lg--fluid">
+                  <button
+                    className="fr-btn--close fr-btn"
+                    aria-controls="modal-search"
+                    title="Fermer"
+                    onClick={() => setSearchOpen(false)}
+                  >
+                    Fermer
+                  </button>
+                  <div className="fr-search-bar" role="search">
+                    <label className="fr-label" htmlFor="search">
+                      Rechercher
+                    </label>
+                    <input className="fr-input" placeholder="Rechercher" type="search" id="search" name="search" />
+                    <div className={clsx(styles.searchSuggestions)}>
+                      <ul role="listbox">
+                        <li aria-hidden="true">
+                          <p>Aucun résultat</p>
+                        </li>
+                        <li role="option" tabIndex={-1}>
+                          option 1
+                        </li>
+                      </ul>
+                    </div>
+                    <button className="fr-btn" title="Rechercher">
+                      Rechercher
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

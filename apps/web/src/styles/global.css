@@ -60,6 +60,17 @@
     margin: 0;
 }
 
+@media (min-width: 62em) {
+    .fr-header__search.fr-modal {
+        position: relative !important;
+    }
+}
+@media (max-width: 62em) {
+    .fr-header__search.fr-modal--opened .fr-search-bar {
+        position: relative !important;
+    }
+}
+
 .fr-video-container {
   position: relative;
   padding-bottom: 56.25%;
