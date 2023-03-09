@@ -422,6 +422,45 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::politique-de-confidentialite.politique-de-confidentialite",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::politique-de-confidentialite.politique-de-confidentialite",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::politique-de-confidentialite.politique-de-confidentialite",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::politique-de-confidentialite.politique-de-confidentialite",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::question.question",
       "properties": {
         "fields": [

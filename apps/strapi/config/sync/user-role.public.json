@@ -37,6 +37,9 @@
       "action": "api::plan-du-site.plan-du-site.find"
     },
     {
+      "action": "api::politique-de-confidentialite.politique-de-confidentialite.find"
+    },
+    {
       "action": "api::question.question.find"
     },
     {

@@ -865,6 +865,36 @@ export interface ApiPlanDuSitePlanDuSite extends SingleTypeSchema {
   };
 }
 
+export interface ApiPolitiqueDeConfidentialitePolitiqueDeConfidentialite
+  extends SingleTypeSchema {
+  info: {
+    singularName: 'politique-de-confidentialite';
+    pluralName: 'politique-de-confidentialites';
+    displayName: 'Politique de confidentialit\u00E9';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::politique-de-confidentialite.politique-de-confidentialite',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::politique-de-confidentialite.politique-de-confidentialite',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiQuestionQuestion extends CollectionTypeSchema {
   info: {
     singularName: 'question';
@@ -999,6 +1029,7 @@ declare global {
       'api::mentions-legales.mentions-legales': ApiMentionsLegalesMentionsLegales;
       'api::mes-aides.mes-aides': ApiMesAidesMesAides;
       'api::plan-du-site.plan-du-site': ApiPlanDuSitePlanDuSite;
+      'api::politique-de-confidentialite.politique-de-confidentialite': ApiPolitiqueDeConfidentialitePolitiqueDeConfidentialite;
       'api::question.question': ApiQuestionQuestion;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
       'link.link': LinkLink;
