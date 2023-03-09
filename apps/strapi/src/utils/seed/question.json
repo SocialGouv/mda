@@ -8,75 +8,44 @@
     "first": true,
     "answers": [
       {
-        "id": 1,
         "content": "Un parent",
         "info": null,
         "destination": null,
         "subanswers": [
           {
-            "id": 15,
             "content": "Mon enfant a moins de 6 ans",
             "info": null,
             "destination": {
-              "id": 2,
-              "content": "Prenez rendez-vous avec le pédiatre, le médecin de la crèche ou de la Protection maternelle et infantile (PMI).",
-              "info": null,
-              "createdAt": "2023-01-23T14:53:42.029Z",
-              "updatedAt": "2023-01-26T23:39:37.794Z",
-              "first": false,
-              "answers": []
+              "id": 2
             }
           },
           {
-            "id": 16,
             "content": "Mon enfant a entre 7 et 12 ans",
             "info": null,
             "destination": {
-              "id": 3,
-              "content": "Prenez rendez-vous avec le médecin traitant ou le médecin scolaire. (ref 7/12)",
-              "info": null,
-              "createdAt": "2023-01-23T14:53:48.339Z",
-              "updatedAt": "2023-01-26T23:39:37.799Z",
-              "first": false,
-              "answers": []
+              "id": 3
             }
           },
           {
-            "id": 17,
             "content": "Mon enfant a entre 13 et 18 ans",
             "info": null,
             "destination": {
-              "id": 4,
-              "content": "Prenez rendez-vous avec le médecin traitant ou le médecin scolaire. (ref. 13/18)",
-              "info": null,
-              "createdAt": "2023-01-23T14:53:59.540Z",
-              "updatedAt": "2023-01-26T23:39:37.804Z",
-              "first": false,
-              "answers": []
+              "id": 4
             }
           },
           {
-            "id": 18,
             "content": "Mon enfant a plus de 18 ans",
             "info": null,
             "destination": {
-              "id": 5,
-              "content": "Prenez rendez-vous avec le médecin traitant, le médecin universitaire, ou le médecin du travail.",
-              "info": null,
-              "createdAt": "2023-01-23T14:54:15.390Z",
-              "updatedAt": "2023-01-26T23:39:37.851Z",
-              "first": false,
-              "answers": []
+              "id": 5
             }
           }
         ]
       },
       {
-        "id": 2,
         "content": "Un proche ou un aidant",
         "info": null,
         "destination": {
-          "id": 6,
           "content": "Vous réalisez ce questionnaire pour le compte de",
           "info": null,
           "createdAt": "2023-01-23T15:02:28.707Z",
@@ -84,82 +53,46 @@
           "first": false,
           "answers": [
             {
-              "id": 3,
               "content": "Une personne mineure",
               "info": null,
               "destination": null,
               "subanswers": [
                 {
-                  "id": 19,
                   "content": "Une personne mineure de moins de 6 ans",
                   "info": null,
                   "destination": {
-                    "id": 2,
-                    "content": "Prenez rendez-vous avec le pédiatre, le médecin de la crèche ou de la Protection maternelle et infantile (PMI).",
-                    "info": null,
-                    "createdAt": "2023-01-23T14:53:42.029Z",
-                    "updatedAt": "2023-01-26T23:39:37.794Z",
-                    "first": false,
-                    "answers": []
+                    "id": 2
                   }
                 },
                 {
-                  "id": 20,
                   "content": "Une personne mineure entre 7 et 12 ans",
                   "info": null,
                   "destination": {
-                    "id": 3,
-                    "content": "Prenez rendez-vous avec le médecin traitant ou le médecin scolaire. (ref 7/12)",
-                    "info": null,
-                    "createdAt": "2023-01-23T14:53:48.339Z",
-                    "updatedAt": "2023-01-26T23:39:37.799Z",
-                    "first": false,
-                    "answers": []
+                    "id": 3
                   }
                 },
                 {
-                  "id": 21,
                   "content": "Une personne mineure entre 13 et 18 ans",
                   "info": null,
                   "destination": {
-                    "id": 4,
-                    "content": "Prenez rendez-vous avec le médecin traitant ou le médecin scolaire. (ref. 13/18)",
-                    "info": null,
-                    "createdAt": "2023-01-23T14:53:59.540Z",
-                    "updatedAt": "2023-01-26T23:39:37.804Z",
-                    "first": false,
-                    "answers": []
+                    "id": 4
                   }
                 }
               ]
             },
             {
-              "id": 4,
               "content": "Une personne majeure",
               "info": null,
               "destination": {
-                "id": 5,
-                "content": "Prenez rendez-vous avec le médecin traitant, le médecin universitaire, ou le médecin du travail.",
-                "info": null,
-                "createdAt": "2023-01-23T14:54:15.390Z",
-                "updatedAt": "2023-01-26T23:39:37.851Z",
-                "first": false,
-                "answers": []
+                "id": 5
               },
               "subanswers": []
             },
             {
-              "id": 5,
               "content": "Une personne majeure sous tutelle",
               "info": null,
               "destination": {
-                "id": 5,
-                "content": "Prenez rendez-vous avec le médecin traitant, le médecin universitaire, ou le médecin du travail.",
-                "info": null,
-                "createdAt": "2023-01-23T14:54:15.390Z",
-                "updatedAt": "2023-01-26T23:39:37.851Z",
-                "first": false,
-                "answers": []
+                "id": 5
               },
               "subanswers": []
             }
@@ -214,82 +147,46 @@
     "first": false,
     "answers": [
       {
-        "id": 3,
         "content": "Une personne mineure",
         "info": null,
         "destination": null,
         "subanswers": [
           {
-            "id": 19,
             "content": "Une personne mineure de moins de 6 ans",
             "info": null,
             "destination": {
-              "id": 2,
-              "content": "Prenez rendez-vous avec le pédiatre, le médecin de la crèche ou de la Protection maternelle et infantile (PMI).",
-              "info": null,
-              "createdAt": "2023-01-23T14:53:42.029Z",
-              "updatedAt": "2023-01-26T23:39:37.794Z",
-              "first": false,
-              "answers": []
+              "id": 2
             }
           },
           {
-            "id": 20,
             "content": "Une personne mineure entre 7 et 12 ans",
             "info": null,
             "destination": {
-              "id": 3,
-              "content": "Prenez rendez-vous avec le médecin traitant ou le médecin scolaire. (ref 7/12)",
-              "info": null,
-              "createdAt": "2023-01-23T14:53:48.339Z",
-              "updatedAt": "2023-01-26T23:39:37.799Z",
-              "first": false,
-              "answers": []
+              "id": 3
             }
           },
           {
-            "id": 21,
             "content": "Une personne mineure entre 13 et 18 ans",
             "info": null,
             "destination": {
-              "id": 4,
-              "content": "Prenez rendez-vous avec le médecin traitant ou le médecin scolaire. (ref. 13/18)",
-              "info": null,
-              "createdAt": "2023-01-23T14:53:59.540Z",
-              "updatedAt": "2023-01-26T23:39:37.804Z",
-              "first": false,
-              "answers": []
+              "id": 4
             }
           }
         ]
       },
       {
-        "id": 4,
         "content": "Une personne majeure",
         "info": null,
         "destination": {
-          "id": 5,
-          "content": "Prenez rendez-vous avec le médecin traitant, le médecin universitaire, ou le médecin du travail.",
-          "info": null,
-          "createdAt": "2023-01-23T14:54:15.390Z",
-          "updatedAt": "2023-01-26T23:39:37.851Z",
-          "first": false,
-          "answers": []
+          "id": 5
         },
         "subanswers": []
       },
       {
-        "id": 5,
         "content": "Une personne majeure sous tutelle",
         "info": null,
         "destination": {
-          "id": 5,
-          "content": "Prenez rendez-vous avec le médecin traitant, le médecin universitaire, ou le médecin du travail.",
-          "info": null,
-          "createdAt": "2023-01-23T14:54:15.390Z",
-          "updatedAt": "2023-01-26T23:39:37.851Z",
-          "first": false,
-          "answers": []
+          "id": 5
         },
         "subanswers": []
       }
