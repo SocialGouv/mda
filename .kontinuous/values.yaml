@@ -10,7 +10,7 @@ meilisearch:
   probesPath: /health
   envFrom:
     - secretRef:
-        name: "mda-meilisearch.sealed-secret"
+        name: "mda-meilisearch"
   env:
      - name: MEILI_NO_ANALYTICS
        value: "true"
@@ -46,7 +46,7 @@ strapi:
     - secretRef:
         name: "mda-revalidate-webhook"
     - secretRef:
-        name: "mda-meilisearch.sealed-secret"
+        name: "mda-meilisearch"
   vars:
     DATABASE_HOST: "$(PGHOST)"
     DATABASE_PORT: "$(PGPORT)"
