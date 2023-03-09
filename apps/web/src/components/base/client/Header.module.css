@@ -1,0 +1,21 @@
+
+
+.searchSuggestions {
+    text-align: left;
+    position: absolute;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2.5em;
+    max-height: 10em;
+    overflow-y: auto;
+    border: 1px solid var(--sp-blue);
+    padding: 0;
+    background-color: red;
+    border-top: none;
+    z-index: 10000;
+}
+
+.searchSuggestions li a {
+    padding: 1rem;
+}

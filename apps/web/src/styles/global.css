@@ -60,6 +60,10 @@
     margin: 0;
 }
 
+.fr-header__search {
+    position: relative;
+}
+
 
 @media (prefers-color-scheme: dark) {
   .fr-header__operator svg path {
