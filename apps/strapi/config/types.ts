@@ -352,17 +352,17 @@ interface MeilisearchIndex<Entry> {
   transformEntry?(entry: Entry): unknown;
 }
 
-type ApiIndex<T extends Record<string, string>> = {
+type ApiCollectionIndex<T extends Record<string, string>> = {
   [Id in keyof T as T[Id]]?: Id extends utils.SchemaUID ? MeilisearchIndex<MeillisearchEntry<Id>> : never;
 };
 
-type ApiIndexes = ApiIndex<
+type ApiCollectionIndexes = ApiCollectionIndex<
   OmitNever<{
     [Id in utils.SchemaUID]: Id extends `api::${string}` ? Strapi.Schemas[Id]["info"]["singularName"] : never;
   }>
 >;
 
-interface MeilisearchConfigSettings extends ApiIndexes {
+interface MeilisearchConfigSettings extends ApiCollectionIndexes {
   apiKey: string;
   host: string;
 }
