@@ -835,6 +835,39 @@ export interface ApiMesAidesMesAides extends SingleTypeSchema {
   };
 }
 
+export interface ApiParcoursParcours extends CollectionTypeSchema {
+  info: {
+    singularName: 'parcours';
+    pluralName: 'parcourss';
+    displayName: 'Parcours';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    slug: StringAttribute & RequiredAttribute & UniqueAttribute;
+    description: RichTextAttribute & RequiredAttribute;
+    items: ComponentAttribute<'parcours-content.item', true>;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    publishedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::parcours.parcours',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::parcours.parcours',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiPlanDuSitePlanDuSite extends SingleTypeSchema {
   info: {
     singularName: 'plan-du-site';
@@ -962,6 +995,20 @@ export interface LinksLinks extends ComponentSchema {
   };
 }
 
+export interface ParcoursContentItem extends ComponentSchema {
+  info: {
+    displayName: 'Item';
+    description: '';
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    description: RichTextAttribute & RequiredAttribute;
+    timeline: BooleanAttribute & RequiredAttribute & DefaultTo<false>;
+    order: IntegerAttribute & RequiredAttribute & DefaultTo<0>;
+    links: ComponentAttribute<'link.link', true>;
+  };
+}
+
 export interface ParcoursDiagAnswer extends ComponentSchema {
   info: {
     displayName: 'answer';
@@ -1028,12 +1075,14 @@ declare global {
       'api::maison-de-l-autisme.maison-de-l-autisme': ApiMaisonDeLAutismeMaisonDeLAutisme;
       'api::mentions-legales.mentions-legales': ApiMentionsLegalesMentionsLegales;
       'api::mes-aides.mes-aides': ApiMesAidesMesAides;
+      'api::parcours.parcours': ApiParcoursParcours;
       'api::plan-du-site.plan-du-site': ApiPlanDuSitePlanDuSite;
       'api::politique-de-confidentialite.politique-de-confidentialite': ApiPolitiqueDeConfidentialitePolitiqueDeConfidentialite;
       'api::question.question': ApiQuestionQuestion;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
       'link.link': LinkLink;
       'links.links': LinksLinks;
+      'parcours-content.item': ParcoursContentItem;
       'parcours-diag.answer': ParcoursDiagAnswer;
       'parcours-diag.sub-answer': ParcoursDiagSubAnswer;
       'sections.sections': SectionsSections;

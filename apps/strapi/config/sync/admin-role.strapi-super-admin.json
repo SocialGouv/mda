@@ -383,6 +383,72 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::parcours.parcours",
+      "properties": {
+        "fields": [
+          "title",
+          "slug",
+          "description",
+          "items.title",
+          "items.description",
+          "items.timeline",
+          "items.order",
+          "items.links.text",
+          "items.links.url"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::parcours.parcours",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::parcours.parcours",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::parcours.parcours",
+      "properties": {
+        "fields": [
+          "title",
+          "slug",
+          "description",
+          "items.title",
+          "items.description",
+          "items.timeline",
+          "items.order",
+          "items.links.text",
+          "items.links.url"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::parcours.parcours",
+      "properties": {
+        "fields": [
+          "title",
+          "slug",
+          "description",
+          "items.title",
+          "items.description",
+          "items.timeline",
+          "items.order",
+          "items.links.text",
+          "items.links.url"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::plan-du-site.plan-du-site",
       "properties": {
         "fields": [

@@ -33,6 +33,13 @@
     {
       "action": "api::mes-aides.mes-aides.find"
     },
+    
+   {
+      "action": "api::parcours.parcours.find"
+    },
+    {
+      "action": "api::parcours.parcours.findOne"
+    },
     {
       "action": "api::plan-du-site.plan-du-site.find"
     },
