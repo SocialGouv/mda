@@ -61,6 +61,16 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return {
+      fallback: [
+        {
+          source: "/uploads/:path*",
+          destination: `${strapiUrl.toString()}/uploads/:path*`,
+        },
+      ],
+    };
+  },
 };
 
 module.exports = nextConfig;
