@@ -3,6 +3,7 @@
 import { config } from "@common/config";
 import { Logo, LogoMda } from "@design-system";
 import { MainNav, MainNavItem, MainNavItemWithDropdown } from "@design-system/client";
+import { type SearchHit, mapMeilisearchHit, searchStrapi } from "@services/strapi";
 import clsx from "clsx";
 import Link from "next/link";
 import { type PropsWithChildren, useEffect, useRef, useState } from "react";
@@ -13,6 +14,8 @@ export const Header = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const [navOpen, setNavOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [searchPhrase, setSearchPhrase] = useState("");
+  const [searchResults, setSearchResults] = useState<SearchHit[]>([]);
   const [isDialog, setIsDialog] = useState(false);
   useEffect(() => {
     if (navOpen) {
@@ -46,6 +49,20 @@ export const Header = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const search = () => {
+    if (!searchPhrase) {
+      setSearchOpen(false);
+      return;
+    }
+
+    searchStrapi(searchPhrase)
+      .then(hits => {
+        setSearchResults(hits.map(mapMeilisearchHit).filter((hit): hit is SearchHit => !!hit));
+        setSearchOpen(true);
+      })
+      .catch(console.error);
+  };
+
   const MainNavLink = ({ href, children }: PropsWithChildren<{ href: string }>) => (
     <MainNavItem onClick={() => setNavOpen(false)} href={href}>
       {children}
@@ -72,7 +89,7 @@ export const Header = () => {
                     aria-controls="modal-search"
                     id="button-search"
                     title="Rechercher"
-                    onClick={() => setSearchOpen(true)}
+                    onClick={() => search()}
                   >
                     Rechercher
                   </button>
@@ -117,18 +134,33 @@ export const Header = () => {
                     <label className="fr-label" htmlFor="search">
                       Rechercher
                     </label>
-                    <input className="fr-input" placeholder="Rechercher" type="search" id="search" name="search" />
-                    <div className={clsx(styles.searchSuggestions)}>
-                      <ul role="listbox">
-                        <li aria-hidden="true">
-                          <p>Aucun résultat</p>
-                        </li>
-                        <li role="option" tabIndex={-1}>
-                          option 1
-                        </li>
-                      </ul>
-                    </div>
-                    <button className="fr-btn" title="Rechercher">
+                    <input
+                      className="fr-input"
+                      placeholder="Rechercher"
+                      type="search"
+                      id="search"
+                      name="search"
+                      value={searchPhrase}
+                      onChange={e => setSearchPhrase(e.target.value)}
+                    />
+                    {searchOpen && (
+                      <div className={clsx(styles.searchSuggestions)}>
+                        <ul role="listbox">
+                          {searchResults.length ? (
+                            searchResults.map(result => (
+                              <li role="option" tabIndex={-1} key={result.id}>
+                                <a href={result.url}>{result.title}</a>
+                              </li>
+                            ))
+                          ) : (
+                            <li aria-hidden="true">
+                              <p>Aucun résultat</p>
+                            </li>
+                          )}
+                        </ul>
+                      </div>
+                    )}
+                    <button className="fr-btn" title="Rechercher" onClick={() => search()}>
                       Rechercher
                     </button>
                   </div>

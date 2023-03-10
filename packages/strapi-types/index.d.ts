@@ -24,7 +24,11 @@ import {
 export * from './strapi'
 
 // Helper used to add an ID attribute to another type
-export type WithID = { id: number };
+type WithID = { id: number };
+
+type WithMeilisearchID<T extends utils.SchemaUID> = { _meilisearch_id: `${Strapi.Schemas[T]["info"]["singularName"]}-${string}` };
+
+type APISchemaUID<T extends utils.SchemaUID> = T extends `api::${string}` ? T : never;
 
 // Values resolvers that we need to replace by custom ones & remove from the base GetAttributesValues implementation
 type ExcludedValuesResolvers<T extends Attribute> =
@@ -132,17 +136,13 @@ export interface CollectionMetadata {
 type NeverKey<T> = { [P in keyof T]: T[P] extends never ? P : never }[keyof T];
 type OmitNever<T> = Pick<T, Exclude<keyof T, NeverKey<T>>>;
 type SingularModel = OmitNever<{
-  [Id in utils.SchemaUID]: Id extends `api::${string}`
-    ? Strapi.Schemas[Id] extends SingleTypeSchema
-      ? Strapi.Schemas[Id]["info"]["singularName"]
-      : never
+  [Id in APISchemaUID<utils.SchemaUID>]: Strapi.Schemas[Id] extends SingleTypeSchema
+    ? Strapi.Schemas[Id]["info"]["singularName"]
     : never;
 }>;
 type PluralModel = OmitNever<{
-  [Id in utils.SchemaUID]: Id extends `api::${string}`
-    ? Strapi.Schemas[Id] extends CollectionTypeSchema
-      ? Strapi.Schemas[Id]["info"]["pluralName"]
-      : never
+  [Id in APISchemaUID<utils.SchemaUID>]: Strapi.Schemas[Id] extends CollectionTypeSchema
+    ? Strapi.Schemas[Id]["info"]["pluralName"]
     : never;
 }>;
 
@@ -210,10 +210,33 @@ export interface PaginationByPage {
   page?: number;
   pageSize?: number;
   withCount?: boolean;
-}
+};
 
 export interface PaginationByOffset {
   limit?: number;
   start?: number;
   withCount?: boolean;
-}
+};
+
+export type MeillisearchPluginEntry<T extends utils.SchemaUID> = {
+  entry: GetAttributesValues<T> & WithID;
+};
+
+export type MeilisearchIndexModel = OmitNever<{
+  [Id in APISchemaUID<utils.SchemaUID>]: Strapi.Schemas[Id]["info"]["singularName"];
+}>;
+
+export type ReverseMeilisearchIndexModel = Reverse<MeilisearchIndexModel>;
+
+export type MeilisearchApiHit<T extends utils.SchemaUID> = GetAttributesValues<T> & WithID & WithMeilisearchID<T>;
+
+export type MeilisearchApiHits<T extends utils.SchemaUID> = MeilisearchApiHit<APISchemaUID<T>>;
+
+export interface ResponseSearch<T> {
+  estimatedTotalHits: number;
+  hits: Array<T>
+  limit: number;
+  offset: number;
+  processingTimeMs: number;
+  query: string;
+};

@@ -1,4 +1,4 @@
-import { type GetAttributesValues, type WithID } from "@mda/strapi-types";
+import { type MeilisearchIndexModel, type MeillisearchPluginEntry } from "@mda/strapi-types";
 import {
   type CollectionTypeSchema,
   type ComponentSchema,
@@ -339,11 +339,7 @@ interface SlugifySettings {
   slugifyWithCount?: boolean;
 }
 
-type MeillisearchEntry<T extends utils.SchemaUID> = {
-  entry: GetAttributesValues<T> & WithID;
-};
-
-interface MeilisearchIndex<Entry> {
+interface MeilisearchPluginIndex<Entry> {
   entriesQuery?: {
     limit?: number;
   };
@@ -353,14 +349,10 @@ interface MeilisearchIndex<Entry> {
 }
 
 type ApiCollectionIndex<T extends Record<string, string>> = {
-  [Id in keyof T as T[Id]]?: Id extends utils.SchemaUID ? MeilisearchIndex<MeillisearchEntry<Id>> : never;
+  [Id in keyof T as T[Id]]?: Id extends utils.SchemaUID ? MeilisearchPluginIndex<MeillisearchPluginEntry<Id>> : never;
 };
 
-type ApiCollectionIndexes = ApiCollectionIndex<
-  OmitNever<{
-    [Id in utils.SchemaUID]: Id extends `api::${string}` ? Strapi.Schemas[Id]["info"]["singularName"] : never;
-  }>
->;
+type ApiCollectionIndexes = ApiCollectionIndex<MeilisearchIndexModel>;
 
 interface MeilisearchConfigSettings extends ApiCollectionIndexes {
   apiKey: string;

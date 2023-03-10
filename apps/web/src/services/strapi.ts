@@ -1,11 +1,15 @@
 import { config } from "@common/config";
 import { type UnknownMapping } from "@common/utils/types";
 import {
+  type MeilisearchApiHit,
+  type MeilisearchApiHits,
   type Model,
   type PaginationByOffset,
   type PaginationByPage,
   type Response,
   type ResponseCollection,
+  type ResponseSearch,
+  type ReverseMeilisearchIndexModel,
   type ReverseModel,
   type ReversePluralModel,
   type ReverseSingularModel,
@@ -65,4 +69,74 @@ export async function fetchStrapi<
 
   console.error(response.statusText);
   throw new Error("Fetch Strapi error", { cause: response });
+}
+
+type MeilisearchHit = MeilisearchApiHits<keyof Strapi.Schemas>;
+
+export interface SearchHit {
+  id: string;
+  title: string;
+  url: string;
+}
+
+export async function searchStrapi(query: string): Promise<MeilisearchHit[]> {
+  const url = new URL(`/meilisearch/search?q=${query}`, config.strapi.apiUrl);
+  const response = await fetch(url, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  const payload = (await response.json()) as ResponseSearch<MeilisearchHit>;
+
+  if (response.ok) {
+    return payload.hits;
+  }
+
+  console.error(response.statusText);
+  throw new Error("Fetch Strapi error", { cause: response });
+}
+
+const isMeilisearchHitOf = <T extends keyof ReverseMeilisearchIndexModel>(
+  hit: MeilisearchApiHit<keyof Strapi.Schemas>,
+  of: T,
+): hit is MeilisearchApiHit<ReverseMeilisearchIndexModel[T]> => {
+  return hit._meilisearch_id.startsWith(of as string);
+};
+
+export function mapMeilisearchHit(hit: MeilisearchHit): SearchHit | undefined {
+  if (isMeilisearchHitOf(hit, "fiche-pratique") && hit.slug) {
+    return {
+      id: hit._meilisearch_id,
+      title: hit.title,
+      url: `/fiches-pratiques/${hit.slug}`,
+    };
+  }
+
+  if (isMeilisearchHitOf(hit, "glossaire-item") && hit.title) {
+    return {
+      id: hit._meilisearch_id,
+      title: hit.title,
+      url: `/glossaire#${hit.title}`,
+    };
+  }
+
+  if (isMeilisearchHitOf(hit, "maison-de-l-autisme")) {
+    return {
+      id: hit._meilisearch_id,
+      title: hit.title,
+      url: `/la-maison-de-l-autisme`,
+    };
+  }
+
+  if (isMeilisearchHitOf(hit, "parcours") && hit.slug) {
+    return {
+      id: hit._meilisearch_id,
+      title: hit.title,
+      url: `/mon-parcours/${hit.slug}`,
+    };
+  }
+
+  console.warn("Unknown hit", hit);
+  return;
 }
