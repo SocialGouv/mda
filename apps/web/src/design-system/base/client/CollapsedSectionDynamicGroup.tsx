@@ -32,34 +32,35 @@ export const CollapsedSectionDynamicGroup = ({ className, data }: CollapsedSecti
     }
     setIsOpenAll(data.length === isOpenIds.length + 1);
   };
-
-  return (
-    <div className={className}>
-      <CollapsedSectionGroupHead className="fr-no-print">
-        <FormButton
-          variant="secondary"
-          size="sm"
-          onClick={handleOpenAll}
-          role="status"
-          aria-live="polite"
-          aria-atomic="true"
-        >
-          {isOpenAll ? "Tout replier" : "Tout déplier"}
-        </FormButton>
-      </CollapsedSectionGroupHead>
-      <CollapsedSectionGroupBody>
-        {data.map(({ content, id, title }) => (
-          <CollapsedSection
-            title={title}
-            key={`collapsedSection-${id}`}
-            id={id}
-            isOpen={isOpenIds.includes(id)}
-            openSection={handleOpenSection}
+  if (data.length !== 0) {
+    return (
+      <div className={className}>
+        <CollapsedSectionGroupHead className="fr-no-print">
+          <FormButton
+            variant="secondary"
+            size="sm"
+            onClick={handleOpenAll}
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
           >
-            {content}
-          </CollapsedSection>
-        ))}
-      </CollapsedSectionGroupBody>
-    </div>
-  );
+            {isOpenAll ? "Tout replier" : "Tout déplier"}
+          </FormButton>
+        </CollapsedSectionGroupHead>
+        <CollapsedSectionGroupBody>
+          {data.map(({ content, id, title }) => (
+            <CollapsedSection
+              title={title}
+              key={`collapsedSection-${id}`}
+              id={id}
+              isOpen={isOpenIds.includes(id)}
+              openSection={handleOpenSection}
+            >
+              {content}
+            </CollapsedSection>
+          ))}
+        </CollapsedSectionGroupBody>
+      </div>
+    );
+  }
 };
