@@ -1,3 +1,4 @@
+import { Markdown } from "@components/utils/Markdown";
 import {
   Card,
   CardBody,
@@ -10,7 +11,6 @@ import {
 } from "@design-system";
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 import { fetchStrapi } from "@services/strapi";
-import ReactMarkdown from "react-markdown";
 
 const FichesPratiques = async () => {
   const fiches = await fetchStrapi("fiche-pratiques", { populate: "recap", sort: "id" }).then(
@@ -36,7 +36,7 @@ const FichesPratiques = async () => {
                       </CardBodyContentTitle>
                       {fiche.attributes.excerpt && (
                         <CardBodyContentDescription>
-                          <ReactMarkdown>{fiche.attributes.excerpt}</ReactMarkdown>
+                          <Markdown>{fiche.attributes.excerpt}</Markdown>
                         </CardBodyContentDescription>
                       )}
                     </CardBodyContent>

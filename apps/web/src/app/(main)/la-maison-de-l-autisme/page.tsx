@@ -1,8 +1,8 @@
 import { ActionsButtons } from "@components/base/client/ActionsButtons";
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
+import { Markdown } from "@components/utils/Markdown";
 import { CollapsedSectionDynamicGroup } from "@design-system/client";
 import { fetchStrapi } from "@services/strapi";
-import ReactMarkdown from "react-markdown";
 
 const AutismHouse = async () => {
   const strapiData = await fetchStrapi("maison-de-l-autisme", { populate: "sections", sort: "id" });
@@ -14,7 +14,7 @@ const AutismHouse = async () => {
       {data?.title && <h1>{data.title}</h1>}
       {data?.content && (
         <div className="fr-text--xl">
-          <ReactMarkdown>{data.content}</ReactMarkdown>
+          <Markdown>{data.content}</Markdown>
         </div>
       )}
       {data?.sections && (
@@ -23,7 +23,7 @@ const AutismHouse = async () => {
             data.sections.map((s, sectionIdx) => ({
               id: `section-${sectionIdx}`,
               title: s.title,
-              content: <ReactMarkdown>{s.content}</ReactMarkdown>,
+              content: <Markdown>{s.content}</Markdown>,
             })) ?? []
           }
         />

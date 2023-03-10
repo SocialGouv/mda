@@ -1,5 +1,6 @@
 import { type Next13ServerPageProps } from "@common/utils/next13";
 import { ActionsButtons } from "@components/base/client/ActionsButtons";
+import { Markdown } from "@components/utils/Markdown";
 import {
   Card,
   CardBody,
@@ -18,7 +19,6 @@ import {
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 import { fetchStrapi } from "@services/strapi";
 import { notFound } from "next/navigation";
-import ReactMarkdown from "react-markdown";
 
 export type ParcoursProps = Next13ServerPageProps<"slug">;
 
@@ -45,7 +45,7 @@ const Parcours = async ({ params }: ParcoursProps) => {
             <ActionsButtons />
             <h1>{currentParcours.attributes.title}</h1>
             <div className="fr-text--xl">
-              <ReactMarkdown>{currentParcours.attributes.description}</ReactMarkdown>
+              <Markdown>{currentParcours.attributes.description}</Markdown>
             </div>
           </GridCol>
           <GridCol md={10} lg={6}>
@@ -79,9 +79,9 @@ const Parcours = async ({ params }: ParcoursProps) => {
                         {hasOneLink ? <NextLinkOrA href={link.url}>{item.title}</NextLinkOrA> : item.title}
                       </TimelineItemTitle>
                       <TimelineDescription>
-                        <ReactMarkdown disallowedElements={["a"]} unwrapDisallowed={true}>
+                        <Markdown disallowedElements={["a"]} unwrapDisallowed={true}>
                           {item.description}
-                        </ReactMarkdown>
+                        </Markdown>
                       </TimelineDescription>
                     </TimelineItem>
                   );
@@ -104,9 +104,9 @@ const Parcours = async ({ params }: ParcoursProps) => {
                               {link ? <NextLinkOrA href={link.url}>{item.title}</NextLinkOrA> : item.title}
                             </CardBodyContentTitle>
                             <CardBodyContentDescription>
-                              <ReactMarkdown disallowedElements={["a"]} unwrapDisallowed={true}>
+                              <Markdown disallowedElements={["a"]} unwrapDisallowed={true}>
                                 {item.description}
-                              </ReactMarkdown>
+                              </Markdown>
                             </CardBodyContentDescription>
                           </CardBodyContent>
                         </CardBody>

@@ -1,6 +1,6 @@
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
+import { Markdown } from "@components/utils/Markdown";
 import { fetchStrapi } from "@services/strapi";
-import ReactMarkdown from "react-markdown";
 
 const PrivacyPolicy = async () => {
   const strapiData = await fetchStrapi("politique-de-confidentialite");
@@ -8,7 +8,7 @@ const PrivacyPolicy = async () => {
   return (
     <SimpleContentPage>
       {data?.title && <h1>{data.title}</h1>}
-      {data?.content && <ReactMarkdown>{data.content}</ReactMarkdown>}
+      {data?.content && <Markdown>{data.content}</Markdown>}
     </SimpleContentPage>
   );
 };
