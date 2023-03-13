@@ -1,7 +1,11 @@
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown, { type Options } from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
-export const Markdown = ({ children }: { children: string }) => (
+type MarkdownProps = Options & {
+  children: string;
+};
+
+export const Markdown = ({ children, ...rest }: MarkdownProps) => (
   <ReactMarkdown
     rehypePlugins={[rehypeRaw]}
     components={{
@@ -11,6 +15,7 @@ export const Markdown = ({ children }: { children: string }) => (
         </div>
       ),
     }}
+    {...rest}
   >
     {children}
   </ReactMarkdown>

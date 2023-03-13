@@ -63,4 +63,5 @@ export const CollapsedSectionDynamicGroup = ({ className, data }: CollapsedSecti
       </div>
     );
   }
+  return null;
 };
