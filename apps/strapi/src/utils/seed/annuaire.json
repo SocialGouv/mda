@@ -1,15 +1,14 @@
 {
-	"id": 1,
-	"title": "Annuaire",
-	"content": "Vous êtes un professionnel, une association, un organisme etc... qui souhaitez être référencé sur notre annuaire ? Rendez-vous à cette adresse pour savoir comment faire : [https://annuaire.autismeinfoservice.fr/etre-reference-annuaire/](https://annuaire.autismeinfoservice.fr/etre-reference-annuaire/)",
-	"createdAt": "2023-02-22T14:30:35.220Z",
-	"updatedAt": "2023-02-22T14:38:36.749Z",
-	"links": [
-		{
-			"id": 2,
-			"text": "Annuaire Autisme Info Service",
-			"url": "https://annuaire.autismeinfoservice.fr/",
-			"theme": "primary"
-		}
-	]
+  "id": 1,
+  "title": "Annuaire",
+  "content": "Vous êtes un professionnel, une association, un organisme etc... qui souhaitez être référencé sur notre annuaire ? Rendez-vous à cette adresse pour savoir comment faire : [https://annuaire.autismeinfoservice.fr/etre-reference-annuaire/](https://annuaire.autismeinfoservice.fr/etre-reference-annuaire/)",
+  "createdAt": "2023-02-22T14:30:35.220Z",
+  "updatedAt": "2023-02-22T14:38:36.749Z",
+  "links": [
+    {
+      "text": "Annuaire Autisme Info Service",
+      "url": "https://annuaire.autismeinfoservice.fr/",
+      "theme": "primary"
+    }
+  ]
 }
