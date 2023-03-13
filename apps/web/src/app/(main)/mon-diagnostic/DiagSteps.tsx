@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffectOnce } from "@components/hooks/useEffectOnce";
+import { Markdown } from "@components/utils/Markdown";
 import {
   type FormSelectProps,
   FormGroup,
@@ -14,7 +15,6 @@ import { fetchStrapi } from "@services/strapi";
 import { type Response } from "@services/strapiApiTypes";
 import { push } from "@socialgouv/matomo-next";
 import { useCallback, useState } from "react";
-import ReactMarkdown from "react-markdown";
 
 import { useDiagnosticStore } from "./diagnosticStore";
 
@@ -92,7 +92,7 @@ const QuestionBox = ({ question, index }: QuestionBoxProps) => {
     <FormGroupStep>
       {question.attributes.info && (
         <Notice className="fr-my-1w" isInsideContent>
-          <ReactMarkdown>{question.attributes.info}</ReactMarkdown>
+          <Markdown>{question.attributes.info}</Markdown>
         </Notice>
       )}
       {question.attributes.answers?.length ? (
@@ -134,9 +134,9 @@ const QuestionBox = ({ question, index }: QuestionBoxProps) => {
               </FormSelect>
               {question.attributes.answers?.[currentAnswerIndex]?.subanswers?.[currentSubanswerIndex]?.info && (
                 <Notice className="fr-my-1w" isInsideContent>
-                  <ReactMarkdown>
+                  <Markdown>
                     {question.attributes.answers?.[currentAnswerIndex]?.subanswers?.[currentSubanswerIndex]?.info ?? ""}
-                  </ReactMarkdown>
+                  </Markdown>
                 </Notice>
               )}
             </FormGroup>
@@ -147,7 +147,7 @@ const QuestionBox = ({ question, index }: QuestionBoxProps) => {
       )}
       {question.attributes.answers?.[currentAnswerIndex]?.info && (
         <Notice className="fr-my-1w" isInsideContent>
-          <ReactMarkdown>{question.attributes.answers?.[currentAnswerIndex]?.info ?? ""}</ReactMarkdown>
+          <Markdown>{question.attributes.answers?.[currentAnswerIndex]?.info ?? ""}</Markdown>
         </Notice>
       )}
     </FormGroupStep>

@@ -3,6 +3,7 @@ import { PictoDocumentDownload } from "@components/pictos/PictoDocumentDownload"
 import { PictoHealth } from "@components/pictos/PictoHealth";
 import { PictoHumanCooperation } from "@components/pictos/PictoHumanCooperation";
 import { PictoMap } from "@components/pictos/PictoMap";
+import { Markdown } from "@components/utils/Markdown";
 import {
   ButtonAsLink,
   ButtonGroup,
@@ -24,7 +25,6 @@ import {
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 import { fetchStrapi } from "@services/strapi";
 import Image from "next/image";
-import ReactMarkdown from "react-markdown";
 
 import mdaPic from "../../../public/mda.jpg";
 import styles from "./index.module.css";
@@ -47,7 +47,7 @@ const HomePage = async () => {
             <Grid haveGutters>
               <GridCol lg={7}>
                 {data?.title && <h1>{data.title}</h1>}
-                {data?.content && <ReactMarkdown>{data.content}</ReactMarkdown>}
+                {data?.content && <Markdown>{data.content}</Markdown>}
                 {data?.links && (
                   <ButtonGroup inline="mobile-up">
                     {data.links.map((link, index) => (
@@ -256,7 +256,7 @@ const HomePage = async () => {
             <GridCol lg={7} className="fr-pt-2w fr-pt-lg-6w fr-pl-lg-4w">
               {data?.MDA_title && <h2 className="fr-h1">{data.MDA_title}</h2>}
               {data?.MDA_subtitle && <p className="fr-text--lg fr-text--bold">{data.MDA_subtitle}</p>}
-              {data?.MDA_content && <ReactMarkdown>{data.MDA_content}</ReactMarkdown>}
+              {data?.MDA_content && <Markdown>{data.MDA_content}</Markdown>}
               {data?.MDA_link_text && (
                 <div className="fr-mt-4w">
                   <ButtonAsLink href="/la-maison-de-l-autisme">{data.MDA_link_text}</ButtonAsLink>

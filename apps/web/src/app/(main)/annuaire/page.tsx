@@ -1,6 +1,6 @@
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
+import { Markdown } from "@components/utils/Markdown";
 import { fetchStrapi } from "@services/strapi";
-import ReactMarkdown from "react-markdown";
 
 const Directory = async () => {
   const strapiData = await fetchStrapi("annuaire", { populate: "links", sort: "id" });
@@ -10,7 +10,7 @@ const Directory = async () => {
       {data?.title && <h1>{data.title}</h1>}
       {data?.content && (
         <div className="fr-text--xl">
-          <ReactMarkdown>{data.content}</ReactMarkdown>
+          <Markdown>{data.content}</Markdown>
         </div>
       )}
       {data?.links && (
