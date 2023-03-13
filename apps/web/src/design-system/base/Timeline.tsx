@@ -37,7 +37,7 @@ export const TimelineItemTitle = ({
 };
 
 export const TimelineDescription = ({ children }: PropsWithChildren) => {
-  return <p className="fr-card__desc">{children}</p>;
+  return <div className="fr-card__desc">{children}</div>;
 };
 
 export const TimelineItemFooterLink = ({
