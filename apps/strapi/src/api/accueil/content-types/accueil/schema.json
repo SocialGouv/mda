@@ -19,6 +19,13 @@
       "type": "richtext",
       "required": true
     },
+    "img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
     "links": {
       "displayName": "links",
       "type": "component",
@@ -41,7 +48,9 @@
       "required": true
     },
     "MDA_img": {
-      "allowedTypes": ["images"],
+      "allowedTypes": [
+        "images"
+      ],
       "type": "media",
       "multiple": false
     }

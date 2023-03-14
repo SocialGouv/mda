@@ -49,6 +49,7 @@
         "fields": [
           "title",
           "content",
+          "img",
           "links.text",
           "links.url",
           "links.theme",
@@ -80,6 +81,7 @@
         "fields": [
           "title",
           "content",
+          "img",
           "links.text",
           "links.url",
           "links.theme",
@@ -99,6 +101,7 @@
         "fields": [
           "title",
           "content",
+          "img",
           "links.text",
           "links.url",
           "links.theme",

@@ -26,18 +26,19 @@ import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 import { fetchStrapi } from "@services/strapi";
 import Image from "next/image";
 
-import mdaPic from "../../../public/mda.jpg";
 import styles from "./index.module.css";
 
 const HomePage = async () => {
   const strapiData = await fetchStrapi("accueil", {
-    populate: "links,MDA_img",
+    populate: "img,links,MDA_img",
     sort: "id",
   });
 
   const data = strapiData.data?.attributes;
-  const homeImgPath = data?.MDA_img?.data?.attributes.url;
+  const homeImgPath = data?.img?.data?.attributes.url;
   const homeImgSrc = homeImgPath ? new URL(homeImgPath, config.strapi.apiUrl).toString() : "/home-hero.jpeg";
+  const mdaImgPath = data?.img?.data?.attributes.url;
+  const mdaImgSrc = mdaImgPath ? new URL(mdaImgPath, config.strapi.apiUrl).toString() : "/mda.jpg";
 
   return (
     <>
@@ -251,7 +252,7 @@ const HomePage = async () => {
         <Container>
           <Grid haveGutters>
             <GridCol lg={5}>
-              <Image className="fr-fluid-img" src={mdaPic} alt="" width={441} height={291} placeholder="blur" />
+              <Image className="fr-fluid-img" src={mdaImgSrc} alt="" width={441} height={291} />
             </GridCol>
             <GridCol lg={7} className="fr-pt-2w fr-pt-lg-6w fr-pl-lg-4w">
               {data?.MDA_title && <h2 className="fr-h1">{data.MDA_title}</h2>}
