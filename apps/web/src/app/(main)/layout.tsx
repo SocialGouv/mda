@@ -243,7 +243,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
               <FooterBottomLink href="/plan-du-site">Plan du site</FooterBottomLink>
             </FooterBottomItem>
             <FooterBottomItem>
-              <FooterBottomLink href="/accessibilite">Accessibilité&nbsp;: non conforme</FooterBottomLink>
+              <FooterBottomLink href="/accessibilite">Accessibilité&nbsp;: partiellement conforme</FooterBottomLink>
             </FooterBottomItem>
             <FooterBottomItem>
               <FooterBottomLink href="/mentions-legales">Mentions légales</FooterBottomLink>
