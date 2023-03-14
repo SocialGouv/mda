@@ -12,8 +12,6 @@ web:
 
 maildev: {}
 
-pgweb: {}
-
 jobs:
   runs:
     build-web:
