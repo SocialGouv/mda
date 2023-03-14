@@ -48,6 +48,20 @@
           "sortable": false
         }
       },
+      "img": {
+        "edit": {
+          "label": "img",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "img",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "links": {
         "edit": {
           "label": "links",
@@ -58,6 +72,20 @@
         },
         "list": {
           "label": "links",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "DEMO_content": {
+        "edit": {
+          "label": "DEMO_content",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "DEMO_content",
           "searchable": false,
           "sortable": false
         }
@@ -173,11 +201,21 @@
           {
             "name": "title",
             "size": 6
+          },
+          {
+            "name": "img",
+            "size": 6
           }
         ],
         [
           {
             "name": "content",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "DEMO_content",
             "size": 12
           }
         ],

@@ -19,11 +19,21 @@
       "type": "richtext",
       "required": true
     },
+    "img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
     "links": {
       "displayName": "links",
       "type": "component",
       "repeatable": true,
       "component": "common.links"
+    },
+    "DEMO_content": {
+      "type": "richtext"
     },
     "MDA_title": {
       "type": "string",
@@ -41,7 +51,9 @@
       "required": true
     },
     "MDA_img": {
-      "allowedTypes": ["images"],
+      "allowedTypes": [
+        "images"
+      ],
       "type": "media",
       "multiple": false
     }
