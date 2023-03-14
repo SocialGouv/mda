@@ -1,6 +1,6 @@
-import { type PluginsConfig } from "./types";
+import { type PluginsConfig, type StrapiConfigSetter } from "./types";
 
-const plugins: PluginsConfig = {
+const plugins: StrapiConfigSetter<PluginsConfig> = ({ env }) => ({
   "config-sync": {
     enabled: true,
     config: {
@@ -25,6 +25,79 @@ const plugins: PluginsConfig = {
       ],
     },
   },
+  meilisearch: {
+    config: {
+      host: env("MEILISEARCH_HOST"),
+      apiKey: env("MEILISEARCH_MASTER_KEY"),
+      "fiche-pratique": {
+        indexName: "pages",
+        transformEntry: ({ entry }) => {
+          return {
+            id: entry.id,
+            excerpt: entry.excerpt,
+            recapContent: entry.recap.content,
+            recapTitle: entry.recap.title,
+            slug: entry.slug,
+            title: entry.title,
+          };
+        },
+        entriesQuery: {
+          limit: 1000,
+        },
+      },
+      "glossaire-item": {
+        entriesQuery: {
+          limit: 1000,
+        },
+        indexName: "pages",
+        transformEntry: ({ entry }) => {
+          return {
+            id: entry.id,
+            description: entry.description,
+            title: entry.title,
+            url: entry.url,
+          };
+        },
+      },
+      "maison-de-l-autisme": {
+        indexName: "pages",
+        transformEntry: ({ entry }) => {
+          return {
+            id: entry.id,
+            title: entry.title,
+            content: entry.content,
+            sections: (entry.sections ?? []).map(section => ({
+              id: section.id,
+              title: section.title,
+              content: section.content,
+            })),
+          };
+        },
+        entriesQuery: {
+          limit: 1000,
+        },
+      },
+      parcours: {
+        indexName: "pages",
+        transformEntry: ({ entry }) => {
+          return {
+            id: entry.id,
+            description: entry.description,
+            slug: entry.slug,
+            title: entry.title,
+            items: (entry.items ?? []).map(item => ({
+              id: item.id,
+              title: item.title,
+              description: item.description,
+            })),
+          };
+        },
+        entriesQuery: {
+          limit: 1000,
+        },
+      },
+    },
+  },
   "strapi-plugin-populate-deep": {
     enabled: true,
     config: {
@@ -43,6 +116,6 @@ const plugins: PluginsConfig = {
     },
   },
   "import-export-entries": true,
-};
+});
 
 export default plugins;

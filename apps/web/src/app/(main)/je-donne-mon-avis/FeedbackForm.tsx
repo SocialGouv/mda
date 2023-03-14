@@ -99,7 +99,7 @@ export const FeedbackForm = () => {
         <FieldsetElement>
           <FormGroupInput
             type="tel"
-            autocomplete="tel"
+            autoComplete="tel"
             error={errors.phoneNumber}
             label="Votre numéro de téléphone"
             hint="Format attendu : 0122334455"
@@ -109,7 +109,7 @@ export const FeedbackForm = () => {
         <FieldsetElement className="fr-mt-2w">
           <FormGroupInput
             type="email"
-            autocomplete="email"
+            autoComplete="email"
             error={errors.email}
             label="Votre email"
             hint="Format attendu : nom@domaine.fr"

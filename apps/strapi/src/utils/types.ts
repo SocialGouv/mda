@@ -31,15 +31,15 @@ export interface StrapiApp {
   register?: StrapiLifecycle;
 }
 
-export interface ContentTypeLifecyleHookEvent<T extends keyof Strapi.Schemas, S> {
+export interface ContentTypeLifecyleBeforeHookEvent<T extends keyof Strapi.Schemas, S> {
   action: ContentTypeLifecyleType;
-  model: object & { uid: T };
+  model: object & { singularName: string; uid: T };
   params: object;
   state: S;
 }
 
 export interface ContentTypeLifecyleAfterHookEvent<T extends keyof Strapi.Schemas, S>
-  extends ContentTypeLifecyleHookEvent<T, S> {
+  extends ContentTypeLifecyleBeforeHookEvent<T, S> {
   result: GetAttributesValues<T>;
 }
 
@@ -49,8 +49,24 @@ export type ContentTypeLifecyleType = `${"after" | "before"}${
   | "FindOne"
   | `${"Create" | "Delete" | "Update"}${"" | "Many"}`}`;
 
-export type ContentTypeLifecyle<T extends keyof Strapi.Schemas, S = object> = {
-  [P in ContentTypeLifecyleType]?: (
-    event: P extends `after${string}` ? ContentTypeLifecyleAfterHookEvent<T, S> : ContentTypeLifecyleHookEvent<T, S>,
-  ) => Promise<void> | void;
+export type ContentTypeLifecyleBeforeType = Exclude<ContentTypeLifecyleType, `after${string}`>;
+
+export type ContentTypeLifecyleAfterType = Exclude<ContentTypeLifecyleType, `before${string}`>;
+
+export type ContentTypeLifecyleBeforeHookHandler<T extends keyof Strapi.Schemas, S> = (
+  event: ContentTypeLifecyleBeforeHookEvent<T, S>,
+) => Promise<void> | ReturnType<(typeof Promise)["allSettled"]> | void;
+
+export type ContentTypeLifecyleAfterHookHandler<T extends keyof Strapi.Schemas, S> = (
+  event: ContentTypeLifecyleAfterHookEvent<T, S>,
+) => Promise<void> | ReturnType<(typeof Promise)["allSettled"]> | void;
+
+export type ContentTypeLifecyleHandler<
+  P extends ContentTypeLifecyleType,
+  T extends keyof Strapi.Schemas,
+  S,
+> = P extends `after${string}` ? ContentTypeLifecyleAfterHookHandler<T, S> : ContentTypeLifecyleBeforeHookHandler<T, S>;
+
+export type ContentTypeLifecyle<T extends keyof Strapi.Schemas, S> = {
+  [P in ContentTypeLifecyleType]?: ContentTypeLifecyleHandler<P, T, S>;
 };

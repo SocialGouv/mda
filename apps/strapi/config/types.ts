@@ -1,9 +1,11 @@
+import { type MeilisearchIndexModel, type MeillisearchPluginEntry } from "@mda/strapi-types";
 import {
   type CollectionTypeSchema,
   type ComponentSchema,
   type GetAttributesKey,
   type SingleTypeSchema,
   type Strapi,
+  type utils,
 } from "@strapi/strapi";
 import { type SignOptions } from "jsonwebtoken";
 import { type Knex } from "knex";
@@ -337,6 +339,26 @@ interface SlugifySettings {
   slugifyWithCount?: boolean;
 }
 
+interface MeilisearchPluginIndex<Entry> {
+  entriesQuery?: {
+    limit?: number;
+  };
+  filterEntry?(entry: Entry): boolean;
+  indexName?: string;
+  transformEntry?(entry: Entry): unknown;
+}
+
+type ApiCollectionIndex<T extends Record<string, string>> = {
+  [Id in keyof T as T[Id]]?: Id extends utils.SchemaUID ? MeilisearchPluginIndex<MeillisearchPluginEntry<Id>> : never;
+};
+
+type ApiCollectionIndexes = ApiCollectionIndex<MeilisearchIndexModel>;
+
+interface MeilisearchConfigSettings extends ApiCollectionIndexes {
+  apiKey: string;
+  host: string;
+}
+
 type PluginEntry<T = unknown> =
   | boolean
   | {
@@ -349,6 +371,7 @@ export type PluginsConfig = {
   [P: string]: PluginEntry;
   "config-sync": PluginEntry<StrapiConfigSyncSettings>;
   "import-export-entries": PluginEntry;
+  meilisearch: PluginEntry<MeilisearchConfigSettings>;
   slugify: PluginEntry<SlugifySettings>;
   "strapi-plugin-populate-deep": PluginEntry<PopulateDeepSettings>;
 };

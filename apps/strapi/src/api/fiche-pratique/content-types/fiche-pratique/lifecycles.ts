@@ -1,17 +1,21 @@
 import { fetchWebhook } from "../../../../utils/fetchWebhookHelper";
-import { type ContentTypeLifecyle } from "../../../../utils/types";
+import { lifecycles } from "../../../../utils/lifecyclesHelpers";
 
-const lifecycles: ContentTypeLifecyle<"api::fiche-pratique.fiche-pratique"> = {
-  async afterCreate(event) {
-    if (!strapi.isLoaded || !event.result.slug) return;
-    strapi.log.info(`[MDA][${event.model.uid}][${event.action}] Call webhook for "${event.result.slug}"`);
-    await fetchWebhook(event.model.uid, event.result.slug);
+const fichesPratiqueLifecycle = lifecycles.createLifeCycle<"api::fiche-pratique.fiche-pratique">({
+  afterHook: {
+    events: ["afterCreate", "afterUpdate"],
+    handler: event => {
+      if (!strapi.isLoaded || !event.result.slug) return;
+      strapi.log.info(`[MDA][${event.model.uid}][${event.action}] Call webhook for "${event.result.slug}"`);
+      strapi.log.info(
+        `[MDA][${event.model.uid}][${event.action}] Update index "${event.model.singularName}" in meilisearch"`,
+      );
+      return Promise.allSettled([
+        fetchWebhook(event.model.uid, event.result.slug),
+        strapi.plugin("meilisearch").service("meilisearch").updateContentTypeInMeiliSearch(event.model.singularName),
+      ]);
+    },
   },
-  async afterUpdate(event) {
-    if (!strapi.isLoaded || !event.result.slug) return;
-    strapi.log.info(`[MDA][${event.model.uid}][${event.action}] Call webhook for "${event.result.slug}"`);
-    await fetchWebhook(event.model.uid, event.result.slug);
-  },
-};
+});
 
-export default lifecycles;
+export default fichesPratiqueLifecycle;
