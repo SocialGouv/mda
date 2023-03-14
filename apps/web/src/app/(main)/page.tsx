@@ -67,6 +67,13 @@ const HomePage = async () => {
             </Grid>
           </Container>
         </div>
+        {data?.DEMO_content && (
+          <div className="fr-py-6w fr-py-md-12w">
+            <Container>
+              <Markdown>{data.DEMO_content}</Markdown>
+            </Container>
+          </div>
+        )}
         <div className="fr-pt-6w fr-pt-md-8w">
           <Container>
             <h2>Démarches et outils</h2>

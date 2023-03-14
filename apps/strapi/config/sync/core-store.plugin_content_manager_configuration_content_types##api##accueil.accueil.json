@@ -76,6 +76,20 @@
           "sortable": false
         }
       },
+      "DEMO_content": {
+        "edit": {
+          "label": "DEMO_content",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "DEMO_content",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "MDA_title": {
         "edit": {
           "label": "MDA_title",
@@ -196,6 +210,12 @@
         [
           {
             "name": "content",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "DEMO_content",
             "size": 12
           }
         ],
