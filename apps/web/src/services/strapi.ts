@@ -29,29 +29,35 @@ interface FetchParam<T extends keyof Model, Dto extends GetAttributesValues<T> =
   sort?: Array<GetAttributesKey<T> | "id"> | GetAttributesKey<T> | "id";
 }
 
+export class FetchStrapiError extends Error {
+  constructor(public message: string, public cause?: globalThis.Response) {
+    super(message, { cause });
+  }
+}
+
 export async function fetchStrapi<
   T extends `${keyof ReversePluralModel}/${number}`,
   TModel extends T extends `${infer InferT extends keyof ReversePluralModel}/${number}` ? InferT : never,
   TParams extends FetchParam<ReverseModel[TModel]>,
->(ressource: T, params?: TParams): Promise<Response<ReverseModel[TModel]>>;
+>(resource: T, params?: TParams): Promise<Response<ReverseModel[TModel]>>;
 export async function fetchStrapi<
   T extends keyof ReversePluralModel,
   TParams extends FetchParam<ReversePluralModel[T]>,
->(ressource: T, params?: TParams): Promise<ResponseCollection<ReverseModel[T]>>;
+>(resource: T, params?: TParams): Promise<ResponseCollection<ReverseModel[T]>>;
 export async function fetchStrapi<
   T extends keyof ReverseSingularModel,
   TParams extends FetchParam<ReverseSingularModel[T]>,
->(ressource: T, params?: TParams): Promise<Response<ReverseModel[T]>>;
+>(resource: T, params?: TParams): Promise<Response<ReverseModel[T]>>;
 export async function fetchStrapi<
   T extends keyof ReverseModel,
   TResPath extends T | `${T}/${number}`,
   TParams extends FetchParam<ReverseModel[T]>,
   Ret extends Response<ReverseModel[T]> | ResponseCollection<ReverseModel[T]>,
->(ressource: TResPath, { revalidate, ...params } = {} as TParams): Promise<Ret> {
+>(resource: TResPath, { revalidate, ...params } = {} as TParams): Promise<Ret> {
   const query = params ? qsStringify(params) : null;
   if (typeof revalidate === "undefined") revalidate = config.fetchRevalidate;
 
-  const url = new URL(`/api/${ressource}${query ? `?${query}` : ""}`, config.strapi.apiUrl);
+  const url = new URL(`/api/${resource}${query ? `?${query}` : ""}`, config.strapi.apiUrl);
   const response = await fetch(url, {
     headers: {
       "Content-Type": "application/json",
@@ -67,8 +73,8 @@ export async function fetchStrapi<
     return payload;
   }
 
-  console.error(response.statusText);
-  throw new Error("Fetch Strapi error", { cause: response });
+  console.error(`Fetch failed for ${resource}`, response.status, response.statusText);
+  return { data: null } as Ret;
 }
 
 type MeilisearchHit = MeilisearchApiHits<keyof Strapi.Schemas>;
@@ -93,8 +99,8 @@ export async function searchStrapi(query: string): Promise<MeilisearchHit[]> {
     return payload.hits;
   }
 
-  console.error(response.statusText);
-  throw new Error("Fetch Strapi error", { cause: response });
+  console.error(`Search failed for query "${query}"`, response.status, response.statusText);
+  return [];
 }
 
 const isMeilisearchHitOf = <T extends keyof ReverseMeilisearchIndexModel>(
