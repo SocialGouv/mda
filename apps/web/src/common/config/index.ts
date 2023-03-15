@@ -17,8 +17,11 @@ export const config = {
     return this.env === "dev" ? 5 : 60 * 3;
   },
   get ff() {
-    return { maintenance: this.env === "prod" };
-    // return { maintenance: false }; // disable maintenance
+    return {
+      maintenance: this.env === "prod",
+      // maintenance: false, // disable maintenance
+      previewMonDiag: true,
+    };
   },
   env: ensureApiEnvVar<"dev" | "preprod" | "prod">(process.env.MDA_ENV, "dev"),
   server: {
