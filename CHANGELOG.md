@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/SocialGouv/mda/compare/v1.6.0...v1.6.1) (2023-03-15)
+
+
+### Bug Fixes
+
+* silent fetch/search strapi errors ([934034d](https://github.com/SocialGouv/mda/commit/934034d8d80bfdd3ca468cb7629d7afcd9231a4e))
+
 # [1.6.0](https://github.com/SocialGouv/mda/compare/v1.5.0...v1.6.0) (2023-03-15)
 
 
