@@ -1,0 +1,7 @@
+{
+  "key": "plugin_meilisearch_meilisearch_host",
+  "value": "http://localhost:7700",
+  "type": "string",
+  "environment": null,
+  "tag": null
+}

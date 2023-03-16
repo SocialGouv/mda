@@ -1,0 +1,7 @@
+{
+  "key": "plugin_meilisearch_meilisearch_api_key",
+  "value": "masterKey",
+  "type": "string",
+  "environment": null,
+  "tag": null
+}
