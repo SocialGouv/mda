@@ -18,12 +18,6 @@
     line-height: inherit;
 }
 
-.fr-beta-banner {
-    position: sticky !important;
-    top: 0;
-    z-index: 666;
-}
-
 @media (min-width: 62em) {
     .fr-pl-lg-4w {
         padding-left: 2rem !important;

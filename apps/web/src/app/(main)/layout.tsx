@@ -25,7 +25,6 @@ import {
   Grid,
   GridCol,
   Logo,
-  Notice,
   SkipLinks,
   SkipLinksItem,
 } from "@design-system";
@@ -52,9 +51,6 @@ const RootLayout = ({ children }: PropsWithChildren) => {
           <SkipLinksItem href="#header">Menu</SkipLinksItem>
           <SkipLinksItem href="#footer">Pied de page</SkipLinksItem>
         </SkipLinks>
-        <Notice className="fr-no-print fr-beta-banner">
-          <NextLinkOrA href="je-donne-mon-avis">Service en version beta</NextLinkOrA>
-        </Notice>
         <Header />
         <BreadcrumbDynamic />
         <main role="main" id="content">
@@ -119,9 +115,8 @@ const RootLayout = ({ children }: PropsWithChildren) => {
             <FooterBodyContent>
               <FooterBodyContentDescription>
                 Ce site est fait pour les personnes autistes, par des personnes autistes, et avec des personnes
-                concernées. C'est une version beta en cours de déploiement progressif. Vos commentaires, réactions et
-                propositions sont précieux pour nous aider à améliorer ce service au fur et à mesure. Un oubli&nbsp;?
-                Une suggestion&nbsp;? Utilisez le module{" "}
+                concernées. Vos commentaires, réactions et propositions sont précieux pour nous aider à améliorer ce
+                service au fur et à mesure. Un oubli&nbsp;? Une suggestion&nbsp;? Utilisez le module{" "}
                 <NextLinkOrA
                   href="/je-donne-mon-avis"
                   title="Partagez votre avis sur ce site internet et vos idées d'amélioration"
