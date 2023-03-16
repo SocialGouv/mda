@@ -13,6 +13,12 @@
       "action": "api::annuaire.annuaire.find"
     },
     {
+      "action": "api::event.event.find"
+    },
+    {
+      "action": "api::event.event.findOne"
+    },
+    {
       "action": "api::fiche-pratique.fiche-pratique.find"
     },
     {
@@ -28,13 +34,15 @@
       "action": "api::maison-de-l-autisme.maison-de-l-autisme.find"
     },
     {
+      "action": "api::maison-de-l-autisme.maison-de-l-autisme.upcomingEvents"
+    },
+    {
       "action": "api::mentions-legales.mentions-legales.find"
     },
     {
       "action": "api::mes-aides.mes-aides.find"
     },
-    
-   {
+    {
       "action": "api::parcours.parcours.find"
     },
     {

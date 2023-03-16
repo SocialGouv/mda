@@ -219,8 +219,10 @@ export interface PaginationByOffset {
 };
 
 export type MeillisearchPluginEntry<T extends utils.SchemaUID> = {
-  entry: GetAttributesValues<T> & WithID;
+  entry: DbEntry<T>;
 };
+
+export type DbEntry<T extends utils.SchemaUID> = GetAttributesValues<T> & WithID;
 
 export type MeilisearchIndexModel = OmitNever<{
   [Id in APISchemaUID<utils.SchemaUID>]: Strapi.Schemas[Id]["info"]["singularName"];

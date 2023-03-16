@@ -678,6 +678,40 @@ export interface ApiAnnuaireAnnuaire extends SingleTypeSchema {
   };
 }
 
+export interface ApiEventEvent extends CollectionTypeSchema {
+  info: {
+    singularName: 'event';
+    pluralName: 'events';
+    displayName: 'Events';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    description: RichTextAttribute;
+    start_date: DateTimeAttribute & RequiredAttribute;
+    end_date: DateTimeAttribute & RequiredAttribute;
+    connection_link: StringAttribute & RequiredAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    publishedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::event.event',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::event.event',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
   info: {
     singularName: 'fiche-pratique';
@@ -760,6 +794,11 @@ export interface ApiMaisonDeLAutismeMaisonDeLAutisme extends SingleTypeSchema {
     title: StringAttribute & RequiredAttribute;
     content: RichTextAttribute & RequiredAttribute;
     sections: ComponentAttribute<'common.sections', true>;
+    events: RelationAttribute<
+      'api::maison-de-l-autisme.maison-de-l-autisme',
+      'oneToMany',
+      'api::event.event'
+    >;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
@@ -1062,6 +1101,7 @@ declare global {
       'api::accessibilite.accessibilite': ApiAccessibiliteAccessibilite;
       'api::accueil.accueil': ApiAccueilAccueil;
       'api::annuaire.annuaire': ApiAnnuaireAnnuaire;
+      'api::event.event': ApiEventEvent;
       'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;
       'api::glossaire-item.glossaire-item': ApiGlossaireItemGlossaireItem;
       'api::maison-de-l-autisme.maison-de-l-autisme': ApiMaisonDeLAutismeMaisonDeLAutisme;
