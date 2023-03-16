@@ -1,0 +1,7 @@
+{
+  "key": "plugin_meilisearch_meilisearch_host_config",
+  "value": true,
+  "type": "boolean",
+  "environment": null,
+  "tag": null
+}
