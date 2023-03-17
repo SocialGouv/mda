@@ -201,21 +201,11 @@
           {
             "name": "title",
             "size": 6
-          },
-          {
-            "name": "img",
-            "size": 6
           }
         ],
         [
           {
             "name": "content",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "DEMO_content",
             "size": 12
           }
         ],
@@ -249,6 +239,18 @@
           {
             "name": "MDA_img",
             "size": 6
+          }
+        ],
+        [
+          {
+            "name": "img",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "DEMO_content",
+            "size": 12
           }
         ]
       ]
