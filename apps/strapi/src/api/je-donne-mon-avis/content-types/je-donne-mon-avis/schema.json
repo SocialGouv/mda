@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "je_donne_mon_aviss",
+  "info": {
+    "singularName": "je-donne-mon-avis",
+    "pluralName": "je-donne-mon-aviss",
+    "displayName": "Je donne mon avis",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "alerts": {
+      "displayName": "Alerts",
+      "type": "component",
+      "repeatable": true,
+      "component": "common.alerts"
+    },
+    "feedbackForm": {
+      "displayName": "FeedbackForm",
+      "type": "component",
+      "repeatable": false,
+      "component": "je-donne-mon-avis.feedback-form",
+      "required": true
+    }
+  }
+}

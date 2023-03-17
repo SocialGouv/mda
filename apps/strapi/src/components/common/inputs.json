@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_common_inputs",
+  "info": {
+    "displayName": "Inputs",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "hint": {
+      "type": "text",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "email",
+        "tel"
+      ],
+      "required": true
+    },
+    "autocomplete": {
+      "type": "enumeration",
+      "enum": [
+        "email",
+        "tel"
+      ],
+      "required": true
+    }
+  }
+}

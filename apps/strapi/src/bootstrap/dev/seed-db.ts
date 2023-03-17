@@ -6,6 +6,7 @@ const seeds = {
   "api::annuaire.annuaire": import("../../utils/seed/annuaire.json"),
   "api::fiche-pratique.fiche-pratique": import("../../utils/seed/fiche-pratique.json"),
   "api::glossaire-item.glossaire-item": import("../../utils/seed/glossaire-item.json"),
+  "api::je-donne-mon-avis.je-donne-mon-avis": import("../../utils/seed/je-donne-mon-avis.json"),
   "api::maison-de-l-autisme.maison-de-l-autisme": import("../../utils/seed/maison-de-l-autisme.json"),
   "api::mentions-legales.mentions-legales": import("../../utils/seed/mentions-legales.json"),
   "api::mes-aides.mes-aides": import("../../utils/seed/mes-aides.json"),
