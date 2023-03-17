@@ -22,6 +22,7 @@ export default factories.createCoreService("api::maison-de-l-autisme.maison-de-l
     strapi.db
       .connection({ events: "events", mdaEvents: "maison_de_l_autismes_events_links" })
       .whereRaw("?? = ??", ["events.id", "mdaEvents.event_id"])
+      .whereNotNull("events.published_at")
       .andWhereRaw("events.end_date > now()");
 
   return {
