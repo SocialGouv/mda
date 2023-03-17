@@ -7,8 +7,12 @@ import {
   CardBodyContent,
   CardBodyContentDescription,
   CardBodyContentTitle,
+  CardBodyFooter,
   Grid,
   GridCol,
+  Link,
+  LinkGroup,
+  LinkGroupItem,
 } from "@design-system";
 import { CollapsedSectionDynamicGroup } from "@design-system/client";
 import { fetchStrapi } from "@services/strapi";
@@ -43,69 +47,85 @@ const AutismHouse = async () => {
           }
         />
       )}
-      <h2 id="events">Évènements</h2>
+      <h2 className="fr-mt-6w" id="events">
+        Évènements
+      </h2>
       {!!currentEvents.length && (
         <>
-          <h3>En cours</h3>
-          <Grid haveGutters justifyCenter>
-            <GridCol md={10} lg={8} className="fr-mt-4w">
-              <Grid as="ul" haveGutters>
-                {currentEvents.map(event => {
-                  return (
-                    <GridCol as="li" md={6} key={event.id}>
-                      <Card isEnlargeLink>
-                        <CardBody>
-                          <CardBodyContent>
-                            <CardBodyContentTitle titleAs="h2">{event.attributes.title}</CardBodyContentTitle>
-                            <CardBodyContentDescription>
-                              {event.attributes.description && (
-                                <Markdown disallowedElements={["a"]} unwrapDisallowed={true}>
-                                  {event.attributes.description}
-                                </Markdown>
-                              )}
-                            </CardBodyContentDescription>
-                            {/* TODO: Connect me button */}
-                          </CardBodyContent>
-                        </CardBody>
-                      </Card>
-                    </GridCol>
-                  );
-                })}
-              </Grid>
-            </GridCol>
+          <h3 className="fr-mt-4w">En cours</h3>
+          <Grid as="ul" haveGutters>
+            {currentEvents.map(event => {
+              return (
+                <GridCol as="li" md={6} key={event.id}>
+                  <Card isEnlargeLink>
+                    <CardBody>
+                      <CardBodyContent>
+                        <CardBodyContentTitle titleAs="h2">
+                          <a
+                            className="fr-no-external-icon"
+                            href={event.attributes.connection_link}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {event.attributes.title}
+                          </a>
+                        </CardBodyContentTitle>
+                        <CardBodyContentDescription>
+                          {event.attributes.description && (
+                            <Markdown disallowedElements={["a"]} unwrapDisallowed={true}>
+                              {event.attributes.description}
+                            </Markdown>
+                          )}
+                        </CardBodyContentDescription>
+                      </CardBodyContent>
+                    </CardBody>
+                  </Card>
+                </GridCol>
+              );
+            })}
           </Grid>
         </>
       )}
 
       {!!upcomingEvents.length && (
         <>
-          <h3>À venir</h3>
-          <Grid haveGutters justifyCenter>
-            <GridCol md={10} lg={8} className="fr-mt-4w">
-              <Grid as="ul" haveGutters>
-                {upcomingEvents.map(event => {
-                  return (
-                    <GridCol as="li" md={6} key={event.id}>
-                      <Card isEnlargeLink>
-                        <CardBody>
-                          <CardBodyContent>
-                            <CardBodyContentTitle titleAs="h2">{event.attributes.title}</CardBodyContentTitle>
-                            <CardBodyContentDescription>
-                              {event.attributes.description && (
-                                <Markdown disallowedElements={["a"]} unwrapDisallowed={true}>
-                                  {event.attributes.description}
-                                </Markdown>
-                              )}
-                            </CardBodyContentDescription>
-                            {/* TODO: Add to calendar buttons */}
-                          </CardBodyContent>
-                        </CardBody>
-                      </Card>
-                    </GridCol>
-                  );
-                })}
-              </Grid>
-            </GridCol>
+          <h3 className="fr-mt-4w">À venir</h3>
+          <Grid as="ul" haveGutters>
+            {upcomingEvents.map(event => {
+              return (
+                <GridCol as="li" md={6} key={event.id}>
+                  <Card>
+                    <CardBody>
+                      <CardBodyContent>
+                        <CardBodyContentTitle titleAs="h2">{event.attributes.title}</CardBodyContentTitle>
+                        <CardBodyContentDescription>
+                          {event.attributes.description && (
+                            <Markdown disallowedElements={["a"]} unwrapDisallowed={true}>
+                              {event.attributes.description}
+                            </Markdown>
+                          )}
+                        </CardBodyContentDescription>
+                      </CardBodyContent>
+                      <CardBodyFooter>
+                        {/* TODO: Dynamise to calendar buttons */}
+                        <LinkGroup>
+                          <LinkGroupItem>
+                            <Link iconLeft="fr-icon-calendar-line" href="#" title="Ajouter à iCal">
+                              iCal
+                            </Link>
+                          </LinkGroupItem>
+                          <LinkGroupItem>
+                            <Link iconLeft="fr-icon-calendar-line" href="#" title="Ajouter à Google Calendar">
+                              Google Calendar
+                            </Link>
+                          </LinkGroupItem>
+                        </LinkGroup>
+                      </CardBodyFooter>
+                    </CardBody>
+                  </Card>
+                </GridCol>
+              );
+            })}
           </Grid>
         </>
       )}
