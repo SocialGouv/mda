@@ -25,7 +25,24 @@ const AutismHouse = async () => {
   const currentEvents = events.filter(
     e => new Date(e.attributes.start_date) <= now && new Date(e.attributes.end_date) > now,
   );
-  const upcomingEvents = events.filter(e => new Date(e.attributes.start_date) > now);
+  const upcomingEvents = events
+    .filter(e => new Date(e.attributes.start_date) > now)
+    .map(event => {
+      const {
+        attributes: { title, description, start_date, end_date, connection_link },
+      } = event;
+
+      const body = encodeURIComponent(description ? description + "\n\n" + connection_link : connection_link);
+
+      return {
+        ...event,
+        googleLink: `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${start_date.replace(
+          /[-:]/g,
+          "",
+        )}/${end_date.replace(/[-:]/g, "")}&details=${body}&output=xml`,
+        outlookLink: `https://outlook.office.com/calendar/0/deeplink/compose?subject=${title}&body=${body}&startdt=${start_date}&enddt=${end_date}&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent`,
+      };
+    });
 
   return (
     <SimpleContentPage>
@@ -107,16 +124,25 @@ const AutismHouse = async () => {
                         </CardBodyContentDescription>
                       </CardBodyContent>
                       <CardBodyFooter>
-                        {/* TODO: Dynamise to calendar buttons */}
                         <LinkGroup>
                           <LinkGroupItem>
-                            <Link iconLeft="fr-icon-calendar-line" href="#" title="Ajouter à iCal">
-                              iCal
+                            <Link
+                              iconLeft="fr-icon-calendar-line"
+                              href={event.googleLink}
+                              title="Ajouter à Google Calendar"
+                              target="_blank"
+                            >
+                              Google
                             </Link>
                           </LinkGroupItem>
                           <LinkGroupItem>
-                            <Link iconLeft="fr-icon-calendar-line" href="#" title="Ajouter à Google Calendar">
-                              Google Calendar
+                            <Link
+                              iconLeft="fr-icon-calendar-line"
+                              href={event.outlookLink}
+                              title="Ajouter à Outlook"
+                              target="_blank"
+                            >
+                              Outlook
                             </Link>
                           </LinkGroupItem>
                         </LinkGroup>
