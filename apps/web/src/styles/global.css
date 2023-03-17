@@ -78,6 +78,10 @@
   height: 100%;
 }
 
+.fr-no-external-icon::after {
+    display: none !important;
+}
+
 @media (prefers-color-scheme: dark) {
   .fr-header__operator svg path {
     fill : #cecece

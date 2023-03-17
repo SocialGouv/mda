@@ -23,6 +23,11 @@
       "type": "component",
       "repeatable": true,
       "component": "common.sections"
+    },
+    "events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event"
     }
   }
 }

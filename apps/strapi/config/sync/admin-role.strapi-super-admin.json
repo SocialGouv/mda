@@ -167,6 +167,60 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::event.event",
+      "properties": {
+        "fields": [
+          "title",
+          "description",
+          "start_date",
+          "end_date",
+          "connection_link"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::event.event",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::event.event",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::event.event",
+      "properties": {
+        "fields": [
+          "title",
+          "description",
+          "start_date",
+          "end_date",
+          "connection_link"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::event.event",
+      "properties": {
+        "fields": [
+          "title",
+          "description",
+          "start_date",
+          "end_date",
+          "connection_link"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::fiche-pratique.fiche-pratique",
       "properties": {
         "fields": [
@@ -269,7 +323,8 @@
           "title",
           "content",
           "sections.title",
-          "sections.content"
+          "sections.content",
+          "events"
         ]
       },
       "conditions": []
@@ -288,7 +343,8 @@
           "title",
           "content",
           "sections.title",
-          "sections.content"
+          "sections.content",
+          "events"
         ]
       },
       "conditions": []
@@ -301,7 +357,8 @@
           "title",
           "content",
           "sections.title",
-          "sections.content"
+          "sections.content",
+          "events"
         ]
       },
       "conditions": []

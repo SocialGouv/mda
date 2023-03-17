@@ -1,7 +1,7 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::maison-de-l-autisme.maison-de-l-autisme",
+  "key": "plugin_content_manager_configuration_content_types::api::event.event",
   "value": {
-    "uid": "api::maison-de-l-autisme.maison-de-l-autisme",
+    "uid": "api::event.event",
     "settings": {
       "bulkable": true,
       "filterable": true,
@@ -34,47 +34,60 @@
           "sortable": true
         }
       },
-      "content": {
+      "description": {
         "edit": {
-          "label": "content",
+          "label": "description",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "content",
+          "label": "description",
           "searchable": false,
           "sortable": false
         }
       },
-      "sections": {
+      "start_date": {
         "edit": {
-          "label": "sections",
+          "label": "start_date",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "sections",
-          "searchable": false,
-          "sortable": false
+          "label": "start_date",
+          "searchable": true,
+          "sortable": true
         }
       },
-      "events": {
+      "end_date": {
         "edit": {
-          "label": "events",
+          "label": "end_date",
           "description": "",
           "placeholder": "",
           "visible": true,
-          "editable": true,
-          "mainField": "title"
+          "editable": true
         },
         "list": {
-          "label": "events",
-          "searchable": false,
-          "sortable": false
+          "label": "end_date",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "connection_link": {
+        "edit": {
+          "label": "connection_link",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "connection_link",
+          "searchable": true,
+          "sortable": true
         }
       },
       "createdAt": {
@@ -110,8 +123,8 @@
       "list": [
         "id",
         "title",
-        "sections",
-        "createdAt"
+        "start_date",
+        "end_date"
       ],
       "edit": [
         [
@@ -122,19 +135,23 @@
         ],
         [
           {
-            "name": "content",
+            "name": "description",
             "size": 12
           }
         ],
         [
           {
-            "name": "sections",
-            "size": 12
+            "name": "start_date",
+            "size": 6
+          },
+          {
+            "name": "end_date",
+            "size": 6
           }
         ],
         [
           {
-            "name": "events",
+            "name": "connection_link",
             "size": 6
           }
         ]

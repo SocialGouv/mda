@@ -1,6 +1,8 @@
 import { type Context } from "koa";
 import { parse } from "querystring";
 
+import { ctxParams } from "../../utils/ctxParamsHelper";
+
 /**
  * This is supposed to work with a POST request but for some reason
  * Promise is never resolved
@@ -21,7 +23,7 @@ const getBody = async (rawrequest: Context["req"]) => {
 const searchController = () => {
   return {
     async search(ctx: Context) {
-      const params = new URL(`protocol://hostname${ctx.request.url}`).searchParams;
+      const params = ctxParams(ctx);
 
       try {
         /**

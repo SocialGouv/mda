@@ -29,12 +29,21 @@ interface FetchParam<T extends keyof Model, Dto extends GetAttributesValues<T> =
   sort?: Array<GetAttributesKey<T> | "id"> | GetAttributesKey<T> | "id";
 }
 
+interface FetchMethodParams {
+  page: number;
+}
+
 export class FetchStrapiError extends Error {
   constructor(public message: string, public cause?: globalThis.Response) {
     super(message, { cause });
   }
 }
 
+export async function fetchStrapi<
+  TModel extends keyof Model,
+  TParams extends FetchMethodParams = FetchMethodParams,
+  T extends `${keyof ReverseSingularModel}/${string}` = `${keyof ReverseSingularModel}/${string}`,
+>(resource: T, params?: TParams): Promise<ResponseCollection<TModel>>;
 export async function fetchStrapi<
   T extends `${keyof ReversePluralModel}/${number}`,
   TModel extends T extends `${infer InferT extends keyof ReversePluralModel}/${number}` ? InferT : never,
@@ -50,7 +59,7 @@ export async function fetchStrapi<
 >(resource: T, params?: TParams): Promise<Response<ReverseModel[T]>>;
 export async function fetchStrapi<
   T extends keyof ReverseModel,
-  TResPath extends T | `${T}/${number}`,
+  TResPath extends T | `${T}/${number}` | `${T}/${string}`,
   TParams extends FetchParam<ReverseModel[T]>,
   Ret extends Response<ReverseModel[T]> | ResponseCollection<ReverseModel[T]>,
 >(resource: TResPath, { revalidate, ...params } = {} as TParams): Promise<Ret> {
