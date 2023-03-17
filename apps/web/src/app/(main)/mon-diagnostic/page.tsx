@@ -22,7 +22,9 @@ const DiagnosticPage = async () => {
           <GridCol md={10} lg={8} className="fr-bg-white fr-px-2w fr-py-4w fr-py-md-8w fr-px-md-12w">
             {data?.title && <h1 className="fr-h2 fr-text-center">{data.title}</h1>}
             {data?.content && <Markdown>{data.content}</Markdown>}
-            <DiagSteps firstQuestion={firstQuestion} />
+            <div aria-live="polite">
+              <DiagSteps firstQuestion={firstQuestion} />
+            </div>
             <div className="fr-mt-4w fr-text-center">
               <ActionsButtons />
             </div>

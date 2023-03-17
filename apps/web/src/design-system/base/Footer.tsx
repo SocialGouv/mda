@@ -43,7 +43,9 @@ export const FooterBodyItem = ({ children }: PropsWithChildren) => {
 export const FooterBottom = ({ children }: PropsWithChildren) => {
   return (
     <div className="fr-footer__bottom">
-      <ul className="fr-footer__bottom-list">{children}</ul>
+      <nav>
+        <ul className="fr-footer__bottom-list">{children}</ul>
+      </nav>
       <div className="fr-footer__bottom-copy">
         <p>
           Sauf mention contraire, tous les contenus de ce site sont sous{" "}

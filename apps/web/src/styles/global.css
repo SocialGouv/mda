@@ -82,6 +82,10 @@
     display: none !important;
 }
 
+textarea {
+  resize: vertical;
+}
+
 @media (prefers-color-scheme: dark) {
   .fr-header__operator svg path {
     fill : #cecece
