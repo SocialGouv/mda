@@ -9,8 +9,8 @@ web:
     maxReplicas: 10
   resources:
     limits:
-      cpu: "250m"
-      memory: "256Mi"
+      cpu: "350m"
+      memory: "384Mi"
     requests:
       cpu: "250m"
       memory: "256Mi"
@@ -34,8 +34,8 @@ strapi:
     maxReplicas: 10
   resources:
     limits:
-      cpu: "400m"
-      memory: "512Mi"
+      cpu: "500m"
+      memory: "640Mi"
     requests:
       cpu: "400m"
       memory: "512Mi"
@@ -47,8 +47,8 @@ meilisearch:
     maxReplicas: 10
   resources:
     limits:
-      cpu: "250m"
-      memory: "256Mi"
+      cpu: "350m"
+      memory: "384Mi"
     requests:
       cpu: "250m"
       memory: "256Mi"      
