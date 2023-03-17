@@ -3,6 +3,17 @@ global:
   # host: maisondelautisme.gouv.fr #TODO enable when domain is ok
 
 web:
+  autoscale:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 10
+  resources:
+    limits:
+      cpu: "250m"
+      memory: "256Mi"
+    requests:
+      cpu: "250m"
+      memory: "256Mi"
   envFrom:
     - secretRef:
         name: "mda-revalidate-webhook"
@@ -16,3 +27,28 @@ jobs:
         buildArgs:
           PRODUCTION: "true"
           ROBOT: "true"
+strapi:
+  autoscale:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 10
+  resources:
+    limits:
+      cpu: "400m"
+      memory: "512Mi"
+    requests:
+      cpu: "400m"
+      memory: "512Mi"
+      
+meilisearch:
+  autoscale:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 10
+  resources:
+    limits:
+      cpu: "250m"
+      memory: "256Mi"
+    requests:
+      cpu: "250m"
+      memory: "256Mi"      
