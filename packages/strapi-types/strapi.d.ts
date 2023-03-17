@@ -678,6 +678,37 @@ export interface ApiAnnuaireAnnuaire extends SingleTypeSchema {
   };
 }
 
+export interface ApiDiagnosticDiagnostic extends SingleTypeSchema {
+  info: {
+    singularName: 'diagnostic';
+    pluralName: 'diagnostics';
+    displayName: 'Diagnostic';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: StringAttribute;
+    content: RichTextAttribute;
+    bottom_content: RichTextAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::diagnostic.diagnostic',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::diagnostic.diagnostic',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiEventEvent extends CollectionTypeSchema {
   info: {
     singularName: 'event';
@@ -773,6 +804,40 @@ export interface ApiGlossaireItemGlossaireItem extends CollectionTypeSchema {
       PrivateAttribute;
     updatedBy: RelationAttribute<
       'api::glossaire-item.glossaire-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
+export interface ApiJeDonneMonAvisJeDonneMonAvis extends SingleTypeSchema {
+  info: {
+    singularName: 'je-donne-mon-avis';
+    pluralName: 'je-donne-mon-aviss';
+    displayName: 'Je donne mon avis';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute;
+    alerts: ComponentAttribute<'common.alerts', true>;
+    feedbackForm: ComponentAttribute<'je-donne-mon-avis.feedback-form'> &
+      RequiredAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    publishedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::je-donne-mon-avis.je-donne-mon-avis',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::je-donne-mon-avis.je-donne-mon-avis',
       'oneToOne',
       'admin::user'
     > &
@@ -1001,6 +1066,31 @@ export interface ApiQuestionQuestion extends CollectionTypeSchema {
   };
 }
 
+export interface CommonAlerts extends ComponentSchema {
+  info: {
+    displayName: 'Alerts';
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute;
+    content: RichTextAttribute & RequiredAttribute;
+    type: EnumerationAttribute<['info', 'success', 'warning', 'error']> &
+      DefaultTo<'info'>;
+  };
+}
+
+export interface CommonInputs extends ComponentSchema {
+  info: {
+    displayName: 'Inputs';
+    description: '';
+  };
+  attributes: {
+    label: StringAttribute & RequiredAttribute;
+    hint: TextAttribute & RequiredAttribute;
+    type: EnumerationAttribute<['email', 'tel']> & RequiredAttribute;
+    autocomplete: EnumerationAttribute<['email', 'tel']> & RequiredAttribute;
+  };
+}
+
 export interface CommonLinks extends ComponentSchema {
   info: {
     displayName: 'links';
@@ -1015,6 +1105,16 @@ export interface CommonLinks extends ComponentSchema {
   };
 }
 
+export interface CommonOptions extends ComponentSchema {
+  info: {
+    displayName: 'Options';
+  };
+  attributes: {
+    label: StringAttribute & RequiredAttribute;
+    value: StringAttribute & RequiredAttribute;
+  };
+}
+
 export interface CommonSections extends ComponentSchema {
   info: {
     displayName: 'sections';
@@ -1022,6 +1122,26 @@ export interface CommonSections extends ComponentSchema {
   attributes: {
     title: StringAttribute & RequiredAttribute;
     content: RichTextAttribute & RequiredAttribute;
+  };
+}
+
+export interface CommonSelects extends ComponentSchema {
+  info: {
+    displayName: 'Selects';
+  };
+  attributes: {
+    label: StringAttribute & RequiredAttribute;
+    options: ComponentAttribute<'common.options', true>;
+  };
+}
+
+export interface CommonTextareas extends ComponentSchema {
+  info: {
+    displayName: 'Textareas';
+  };
+  attributes: {
+    label: StringAttribute & RequiredAttribute;
+    hint: TextAttribute & RequiredAttribute;
   };
 }
 
@@ -1070,6 +1190,28 @@ export interface FichePratiqueContentEncart extends ComponentSchema {
   };
 }
 
+export interface JeDonneMonAvisFeedbackForm extends ComponentSchema {
+  info: {
+    displayName: 'FeedbackForm';
+    description: '';
+  };
+  attributes: {
+    opinion_title: StringAttribute & RequiredAttribute;
+    profile: ComponentAttribute<'common.selects'> & RequiredAttribute;
+    opinion: ComponentAttribute<'common.textareas'> & RequiredAttribute;
+    contact_details_title: StringAttribute & RequiredAttribute;
+    contact_details_content: TextAttribute;
+    contact_details_phone: ComponentAttribute<'common.inputs'> &
+      RequiredAttribute;
+    contact_details_email: ComponentAttribute<'common.inputs'> &
+      RequiredAttribute;
+    success_message: ComponentAttribute<'common.alerts'> & RequiredAttribute;
+    error_message: ComponentAttribute<'common.alerts'> & RequiredAttribute;
+    submit_message: StringAttribute & RequiredAttribute;
+    loading_message: StringAttribute & RequiredAttribute;
+  };
+}
+
 export interface ParcoursContentItem extends ComponentSchema {
   info: {
     displayName: 'Item';
@@ -1101,9 +1243,11 @@ declare global {
       'api::accessibilite.accessibilite': ApiAccessibiliteAccessibilite;
       'api::accueil.accueil': ApiAccueilAccueil;
       'api::annuaire.annuaire': ApiAnnuaireAnnuaire;
+      'api::diagnostic.diagnostic': ApiDiagnosticDiagnostic;
       'api::event.event': ApiEventEvent;
       'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;
       'api::glossaire-item.glossaire-item': ApiGlossaireItemGlossaireItem;
+      'api::je-donne-mon-avis.je-donne-mon-avis': ApiJeDonneMonAvisJeDonneMonAvis;
       'api::maison-de-l-autisme.maison-de-l-autisme': ApiMaisonDeLAutismeMaisonDeLAutisme;
       'api::mentions-legales.mentions-legales': ApiMentionsLegalesMentionsLegales;
       'api::mes-aides.mes-aides': ApiMesAidesMesAides;
@@ -1111,11 +1255,17 @@ declare global {
       'api::plan-du-site.plan-du-site': ApiPlanDuSitePlanDuSite;
       'api::politique-de-confidentialite.politique-de-confidentialite': ApiPolitiqueDeConfidentialitePolitiqueDeConfidentialite;
       'api::question.question': ApiQuestionQuestion;
+      'common.alerts': CommonAlerts;
+      'common.inputs': CommonInputs;
       'common.links': CommonLinks;
+      'common.options': CommonOptions;
       'common.sections': CommonSections;
+      'common.selects': CommonSelects;
+      'common.textareas': CommonTextareas;
       'diagnostic.answer': DiagnosticAnswer;
       'diagnostic.sub-answer': DiagnosticSubAnswer;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
+      'je-donne-mon-avis.feedback-form': JeDonneMonAvisFeedbackForm;
       'parcours-content.item': ParcoursContentItem;
     }
   }

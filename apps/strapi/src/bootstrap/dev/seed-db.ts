@@ -15,6 +15,7 @@ const seeds = {
     "../../utils/seed/politique-de-confidentialite.json"
   ),
   "api::question.question": import("../../utils/seed/question.json"),
+  "api::diagnostic.diagnostic": import("../../utils/seed/diagnostic.json"),
 };
 
 const devSeedDb: StrapiLifecycle = async ({ strapi }) => {

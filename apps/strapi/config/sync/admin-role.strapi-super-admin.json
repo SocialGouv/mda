@@ -167,6 +167,48 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::diagnostic.diagnostic",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "bottom_content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::diagnostic.diagnostic",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::diagnostic.diagnostic",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "bottom_content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::diagnostic.diagnostic",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "bottom_content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::event.event",
       "properties": {
         "fields": [

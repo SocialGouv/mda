@@ -13,6 +13,9 @@
       "action": "api::annuaire.annuaire.find"
     },
     {
+      "action": "api::diagnostic.diagnostic.find"
+    },
+    {
       "action": "api::event.event.find"
     },
     {

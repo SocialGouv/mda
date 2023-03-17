@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "diagnostics",
+  "info": {
+    "singularName": "diagnostic",
+    "pluralName": "diagnostics",
+    "displayName": "Diagnostic",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext",
+      "required": false
+    },
+    "bottom_content": {
+      "type": "richtext"
+    }
+  }
+}
