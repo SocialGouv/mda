@@ -359,6 +359,132 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::je-donne-mon-avis.je-donne-mon-avis",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "alerts.title",
+          "alerts.content",
+          "alerts.type",
+          "feedbackForm.opinion_title",
+          "feedbackForm.profile.label",
+          "feedbackForm.profile.options.label",
+          "feedbackForm.profile.options.value",
+          "feedbackForm.opinion.label",
+          "feedbackForm.opinion.hint",
+          "feedbackForm.contact_details_title",
+          "feedbackForm.contact_details_content",
+          "feedbackForm.contact_details_phone.label",
+          "feedbackForm.contact_details_phone.hint",
+          "feedbackForm.contact_details_phone.type",
+          "feedbackForm.contact_details_phone.autocomplete",
+          "feedbackForm.contact_details_email.label",
+          "feedbackForm.contact_details_email.hint",
+          "feedbackForm.contact_details_email.type",
+          "feedbackForm.contact_details_email.autocomplete",
+          "feedbackForm.success_message.title",
+          "feedbackForm.success_message.content",
+          "feedbackForm.success_message.type",
+          "feedbackForm.error_message.title",
+          "feedbackForm.error_message.content",
+          "feedbackForm.error_message.type",
+          "feedbackForm.submit_message",
+          "feedbackForm.loading_message"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::je-donne-mon-avis.je-donne-mon-avis",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::je-donne-mon-avis.je-donne-mon-avis",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::je-donne-mon-avis.je-donne-mon-avis",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "alerts.title",
+          "alerts.content",
+          "alerts.type",
+          "feedbackForm.opinion_title",
+          "feedbackForm.profile.label",
+          "feedbackForm.profile.options.label",
+          "feedbackForm.profile.options.value",
+          "feedbackForm.opinion.label",
+          "feedbackForm.opinion.hint",
+          "feedbackForm.contact_details_title",
+          "feedbackForm.contact_details_content",
+          "feedbackForm.contact_details_phone.label",
+          "feedbackForm.contact_details_phone.hint",
+          "feedbackForm.contact_details_phone.type",
+          "feedbackForm.contact_details_phone.autocomplete",
+          "feedbackForm.contact_details_email.label",
+          "feedbackForm.contact_details_email.hint",
+          "feedbackForm.contact_details_email.type",
+          "feedbackForm.contact_details_email.autocomplete",
+          "feedbackForm.success_message.title",
+          "feedbackForm.success_message.content",
+          "feedbackForm.success_message.type",
+          "feedbackForm.error_message.title",
+          "feedbackForm.error_message.content",
+          "feedbackForm.error_message.type",
+          "feedbackForm.submit_message",
+          "feedbackForm.loading_message"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::je-donne-mon-avis.je-donne-mon-avis",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "alerts.title",
+          "alerts.content",
+          "alerts.type",
+          "feedbackForm.opinion_title",
+          "feedbackForm.profile.label",
+          "feedbackForm.profile.options.label",
+          "feedbackForm.profile.options.value",
+          "feedbackForm.opinion.label",
+          "feedbackForm.opinion.hint",
+          "feedbackForm.contact_details_title",
+          "feedbackForm.contact_details_content",
+          "feedbackForm.contact_details_phone.label",
+          "feedbackForm.contact_details_phone.hint",
+          "feedbackForm.contact_details_phone.type",
+          "feedbackForm.contact_details_phone.autocomplete",
+          "feedbackForm.contact_details_email.label",
+          "feedbackForm.contact_details_email.hint",
+          "feedbackForm.contact_details_email.type",
+          "feedbackForm.contact_details_email.autocomplete",
+          "feedbackForm.success_message.title",
+          "feedbackForm.success_message.content",
+          "feedbackForm.success_message.type",
+          "feedbackForm.error_message.title",
+          "feedbackForm.error_message.content",
+          "feedbackForm.error_message.type",
+          "feedbackForm.submit_message",
+          "feedbackForm.loading_message"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::maison-de-l-autisme.maison-de-l-autisme",
       "properties": {
         "fields": [

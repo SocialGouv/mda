@@ -1,14 +1,14 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::accueil.accueil",
+  "key": "plugin_content_manager_configuration_components::je-donne-mon-avis.feedback-form",
   "value": {
-    "uid": "api::accueil.accueil",
+    "uid": "je-donne-mon-avis.feedback-form",
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "title",
-      "defaultSortBy": "title",
+      "mainField": "opinion_title",
+      "defaultSortBy": "opinion_title",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -16,174 +16,160 @@
         "edit": {},
         "list": {
           "label": "id",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "title": {
-        "edit": {
-          "label": "title",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "title",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "content": {
-        "edit": {
-          "label": "content",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "content",
           "searchable": false,
           "sortable": false
         }
       },
-      "img": {
+      "opinion_title": {
         "edit": {
-          "label": "img",
+          "label": "opinion_title",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "img",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "links": {
-        "edit": {
-          "label": "links",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "links",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "DEMO_content": {
-        "edit": {
-          "label": "DEMO_content",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "DEMO_content",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "MDA_title": {
-        "edit": {
-          "label": "MDA_title",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "MDA_title",
+          "label": "opinion_title",
           "searchable": true,
           "sortable": true
         }
       },
-      "MDA_subtitle": {
+      "profile": {
         "edit": {
-          "label": "MDA_subtitle",
+          "label": "profile",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "MDA_subtitle",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "MDA_content": {
-        "edit": {
-          "label": "MDA_content",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "MDA_content",
+          "label": "profile",
           "searchable": false,
           "sortable": false
         }
       },
-      "MDA_link_text": {
+      "opinion": {
         "edit": {
-          "label": "MDA_link_text",
+          "label": "opinion",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "MDA_link_text",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "MDA_img": {
-        "edit": {
-          "label": "MDA_img",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "MDA_img",
+          "label": "opinion",
           "searchable": false,
           "sortable": false
         }
       },
-      "createdAt": {
+      "contact_details_title": {
         "edit": {
-          "label": "createdAt",
+          "label": "contact_details_title",
           "description": "",
           "placeholder": "",
-          "visible": false,
+          "visible": true,
           "editable": true
         },
         "list": {
-          "label": "createdAt",
+          "label": "contact_details_title",
           "searchable": true,
           "sortable": true
         }
       },
-      "updatedAt": {
+      "contact_details_content": {
         "edit": {
-          "label": "updatedAt",
+          "label": "contact_details_content",
           "description": "",
           "placeholder": "",
-          "visible": false,
+          "visible": true,
           "editable": true
         },
         "list": {
-          "label": "updatedAt",
+          "label": "contact_details_content",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "contact_details_phone": {
+        "edit": {
+          "label": "contact_details_phone",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "contact_details_phone",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "contact_details_email": {
+        "edit": {
+          "label": "contact_details_email",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "contact_details_email",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "success_message": {
+        "edit": {
+          "label": "success_message",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "success_message",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "error_message": {
+        "edit": {
+          "label": "error_message",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "error_message",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "submit_message": {
+        "edit": {
+          "label": "submit_message",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "submit_message",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "loading_message": {
+        "edit": {
+          "label": "loading_message",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "loading_message",
           "searchable": true,
           "sortable": true
         }
@@ -192,67 +178,76 @@
     "layouts": {
       "list": [
         "id",
-        "title",
-        "links",
-        "MDA_title"
+        "opinion_title",
+        "profile",
+        "opinion"
       ],
       "edit": [
         [
           {
-            "name": "title",
+            "name": "opinion_title",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "profile",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "opinion",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "contact_details_title",
             "size": 6
           },
           {
-            "name": "img",
+            "name": "contact_details_content",
             "size": 6
           }
         ],
         [
           {
-            "name": "content",
+            "name": "contact_details_phone",
             "size": 12
           }
         ],
         [
           {
-            "name": "DEMO_content",
+            "name": "contact_details_email",
             "size": 12
           }
         ],
         [
           {
-            "name": "links",
+            "name": "success_message",
             "size": 12
           }
         ],
         [
           {
-            "name": "MDA_title",
-            "size": 6
-          },
-          {
-            "name": "MDA_subtitle",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "MDA_content",
+            "name": "error_message",
             "size": 12
           }
         ],
         [
           {
-            "name": "MDA_link_text",
+            "name": "submit_message",
             "size": 6
           },
           {
-            "name": "MDA_img",
+            "name": "loading_message",
             "size": 6
           }
         ]
       ]
-    }
+    },
+    "isComponent": true
   },
   "type": "object",
   "environment": null,
