@@ -8,9 +8,8 @@ const Feedback = () => {
     <SimpleContentPage>
       <h1>Partagez votre avis sur ce site internet et vos idées d'amélioration.</h1>
       <p className="fr-text--lg">
-        Ce site est fait pour les personnes autistes, par des personnes autistes, et avec des personnes concernées.
-        C'est une version beta en cours de déploiement progressif. Vos commentaires, réactions et propositions sont
-        précieux pour nous aider à améliorer ce service au fur et à mesure.
+        Ce site est fait pour les personnes autistes, par des personnes autistes, et avec des personnes concernées. Vos
+        commentaires, réactions et propositions sont précieux pour nous aider à améliorer ce service au fur et à mesure.
       </p>
       <Alert>
         <AlertTitle as="h2">
