@@ -1,0 +1,255 @@
+{
+  "key": "plugin_content_manager_configuration_components::je-donne-mon-avis.feedback-form",
+  "value": {
+    "uid": "je-donne-mon-avis.feedback-form",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "opinion_title",
+      "defaultSortBy": "opinion_title",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "opinion_title": {
+        "edit": {
+          "label": "opinion_title",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "opinion_title",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "profile": {
+        "edit": {
+          "label": "profile",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "profile",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "opinion": {
+        "edit": {
+          "label": "opinion",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "opinion",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "contact_details_title": {
+        "edit": {
+          "label": "contact_details_title",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "contact_details_title",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "contact_details_content": {
+        "edit": {
+          "label": "contact_details_content",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "contact_details_content",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "contact_details_phone": {
+        "edit": {
+          "label": "contact_details_phone",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "contact_details_phone",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "contact_details_email": {
+        "edit": {
+          "label": "contact_details_email",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "contact_details_email",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "success_message": {
+        "edit": {
+          "label": "success_message",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "success_message",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "error_message": {
+        "edit": {
+          "label": "error_message",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "error_message",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "submit_message": {
+        "edit": {
+          "label": "submit_message",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "submit_message",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "loading_message": {
+        "edit": {
+          "label": "loading_message",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "loading_message",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "opinion_title",
+        "profile",
+        "opinion"
+      ],
+      "edit": [
+        [
+          {
+            "name": "opinion_title",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "profile",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "opinion",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "contact_details_title",
+            "size": 6
+          },
+          {
+            "name": "contact_details_content",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "contact_details_phone",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "contact_details_email",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "success_message",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "error_message",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "submit_message",
+            "size": 6
+          },
+          {
+            "name": "loading_message",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

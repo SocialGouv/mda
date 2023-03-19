@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_common_textareas",
+  "info": {
+    "displayName": "Textareas"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "hint": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

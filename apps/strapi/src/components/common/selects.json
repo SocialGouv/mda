@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_common_selects",
+  "info": {
+    "displayName": "Selects"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "options": {
+      "displayName": "Options",
+      "type": "component",
+      "repeatable": true,
+      "component": "common.options"
+    }
+  }
+}

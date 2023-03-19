@@ -250,7 +250,7 @@ export const Header = () => {
                 },
               ]}
             />
-            <MainNavLink href="/mon-diagnostic">Mon diagnostic</MainNavLink>
+            <MainNavLink href="/mon-diagnostic">Guide des parcours de diagnostic</MainNavLink>
             <MainNavLink href="/mes-aides">Mes aides</MainNavLink>
 
             <MainNavLink href="/fiches-pratiques">Fiches pratiques</MainNavLink>

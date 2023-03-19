@@ -13,6 +13,9 @@
       "action": "api::annuaire.annuaire.find"
     },
     {
+      "action": "api::diagnostic.diagnostic.find"
+    },
+    {
       "action": "api::event.event.find"
     },
     {
@@ -29,6 +32,9 @@
     },
     {
       "action": "api::glossaire-item.glossaire-item.findOne"
+    },
+    {
+      "action": "api::je-donne-mon-avis.je-donne-mon-avis.find"
     },
     {
       "action": "api::maison-de-l-autisme.maison-de-l-autisme.find"

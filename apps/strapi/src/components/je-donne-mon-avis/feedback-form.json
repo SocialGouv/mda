@@ -1,0 +1,67 @@
+{
+  "collectionName": "components_je_donne_mon_avis_feedback_forms",
+  "info": {
+    "displayName": "FeedbackForm",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "opinion_title": {
+      "type": "string",
+      "required": true
+    },
+    "profile": {
+      "displayName": "Select",
+      "type": "component",
+      "repeatable": false,
+      "component": "common.selects",
+      "required": true
+    },
+    "opinion": {
+      "displayName": "Textarea",
+      "type": "component",
+      "repeatable": false,
+      "component": "common.textareas",
+      "required": true
+    },
+    "contact_details_title": {
+      "type": "string",
+      "required": true
+    },
+    "contact_details_content": {
+      "type": "text"
+    },
+    "contact_details_phone": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.inputs",
+      "required": true
+    },
+    "contact_details_email": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.inputs",
+      "required": true
+    },
+    "success_message": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.alerts",
+      "required": true
+    },
+    "error_message": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.alerts",
+      "required": true
+    },
+    "submit_message": {
+      "type": "string",
+      "required": true
+    },
+    "loading_message": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

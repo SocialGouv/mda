@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_common_options",
+  "info": {
+    "displayName": "Options"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

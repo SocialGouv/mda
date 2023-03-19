@@ -46,17 +46,15 @@ export const MainNavItemWithDropdown = ({
       <Menu.Button className="fr-nav__btn" aria-current={isCurrent}>
         {title}
       </Menu.Button>
-      <Menu.Items>
-        <div className="fr-menu">
-          <div className="fr-menu__list">
-            {links.map(link => (
-              <Menu.Item key={link.href} as={Fragment}>
-                <Link href={link.href} className={clsx("fr-nav__link", styles.sublink)} onClick={link.onClick}>
-                  {link.label}
-                </Link>
-              </Menu.Item>
-            ))}
-          </div>
+      <Menu.Items className="fr-menu">
+        <div className="fr-menu__list">
+          {links.map(link => (
+            <Menu.Item key={link.href} as={Fragment}>
+              <Link href={link.href} className={clsx("fr-nav__link", styles.sublink)} onClick={link.onClick}>
+                {link.label}
+              </Link>
+            </Menu.Item>
+          ))}
         </div>
       </Menu.Items>
     </Menu>
