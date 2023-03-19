@@ -4,7 +4,6 @@ import { config } from "@common/config";
 import { DEFAULT_SEO_CONFIG } from "@common/config/next-seo";
 import { BreadcrumbDynamic } from "@components/base/client/BreadcrumbDynamic";
 import { Header } from "@components/base/client/Header";
-import { ScrollUp } from "@components/base/client/ScrollUp";
 import { DarkTheme } from "@components/utils/client/DarkTheme";
 import { DsfrScript } from "@components/utils/client/DsfrScript";
 import { Matomo } from "@components/utils/client/Matomo";
@@ -47,7 +46,6 @@ const RootLayout = ({ children }: PropsWithChildren) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body>
-        <ScrollUp />
         <SkipLinks>
           <SkipLinksItem href="#content">Contenu</SkipLinksItem>
           <SkipLinksItem href="#header">Menu</SkipLinksItem>

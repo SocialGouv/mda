@@ -7,11 +7,14 @@ import { type SearchHit, mapMeilisearchHit, searchStrapi } from "@services/strap
 import clsx from "clsx";
 import debounce from "lodash/debounce";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { type PropsWithChildren, useEffect, useRef, useState } from "react";
 
 import styles from "./Header.module.css";
 
 export const Header = () => {
+  const inputRef = useRef<HTMLInputElement>(null);
+  const router = useRouter();
   const buttonRef = useRef<HTMLButtonElement>(null);
   const [navOpen, setNavOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -19,6 +22,15 @@ export const Header = () => {
   const [searchPhrase, setSearchPhrase] = useState("");
   const [searchResults, setSearchResults] = useState<SearchHit[]>([]);
   const [isDialog, setIsDialog] = useState(false);
+  const pathname = usePathname();
+  useEffect(() => {
+    const handleRouteChange = () => {
+      if (inputRef.current !== null) {
+        inputRef.current.value = "";
+      }
+    };
+    handleRouteChange();
+  }, [pathname]);
 
   useEffect(() => {
     if (navOpen) {
@@ -55,6 +67,7 @@ export const Header = () => {
   const search = () => {
     if (!searchPhrase) {
       setSearchOpen(false);
+      setSearchSuggestionsIsOpen(false);
       return;
     }
 
@@ -62,11 +75,17 @@ export const Header = () => {
       .then(hits => {
         setSearchResults(hits.map(mapMeilisearchHit).filter((hit): hit is SearchHit => !!hit));
         setSearchOpen(true);
+        setSearchSuggestionsIsOpen(true);
       })
       .catch(console.error);
   };
 
   const handleChange = debounce(() => search(), 500);
+  const handleSearch = () => {
+    router.push(`/recherche?keyword=${searchPhrase}`);
+    setSearchSuggestionsIsOpen(false);
+    setSearchOpen(false);
+  };
 
   useEffect(() => {
     const input = document.querySelector("#search");
@@ -156,12 +175,19 @@ export const Header = () => {
                       type="search"
                       id="search"
                       name="search"
+                      ref={inputRef}
                       value={searchPhrase}
                       onChange={e => setSearchPhrase(e.target.value)}
+                      onKeyDown={e => {
+                        if (e.keyCode === 13) {
+                          handleSearch();
+                        }
+                      }}
                     />
 
-                    {/* <button className="fr-btn" title="Rechercher" onClick={() => search()}>                      Rechercher
-                    </button>*/}
+                    <button className="fr-btn" title="Rechercher" type="submit" onClick={() => handleSearch()}>
+                      Rechercher
+                    </button>
                   </div>
                   {searchSuggestionsIsOpen && searchResults.length >= 1 && (
                     <div className={clsx(styles.searchSuggestions)}>
