@@ -1,9 +1,9 @@
 "use client";
 import { type ReactNode, useState } from "react";
 
-import { type CollapsedSectionProps, CollapsedSection } from "../CollapsedSection";
+import { CollapsedSection, type CollapsedSectionProps } from "../CollapsedSection";
 import { CollapsedSectionGroupBody, CollapsedSectionGroupHead } from "../CollapsedSectionGroup";
-import { type FormButtonProps, FormButton } from "../FormButton";
+import { FormButton, type FormButtonProps } from "../FormButton";
 
 interface CollapsedSectionDynamicGroupProps {
   className?: string;

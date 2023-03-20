@@ -4,7 +4,7 @@ import { Menu } from "@headlessui/react";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { type PropsWithChildren, Fragment } from "react";
+import { Fragment, type PropsWithChildren } from "react";
 
 import { NextLinkOrA } from "../../utils/NextLinkOrA";
 import styles from "./MainNav.module.css";
