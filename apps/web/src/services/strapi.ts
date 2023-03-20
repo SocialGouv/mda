@@ -91,6 +91,7 @@ type MeilisearchHit = MeilisearchApiHits<keyof Strapi.Schemas>;
 export interface SearchHit {
   id: string;
   title: string;
+  type?: "fiches-pratiques" | "glossaire-item" | "page";
   url: string;
 }
 
@@ -125,6 +126,7 @@ export function mapMeilisearchHit(hit: MeilisearchHit): SearchHit | undefined {
       id: hit._meilisearch_id,
       title: hit.title,
       url: `/fiches-pratiques/${hit.slug}`,
+      type: "fiches-pratiques",
     };
   }
 
@@ -133,6 +135,7 @@ export function mapMeilisearchHit(hit: MeilisearchHit): SearchHit | undefined {
       id: hit._meilisearch_id,
       title: hit.title,
       url: `/glossaire#${hit.title}`,
+      type: "glossaire-item",
     };
   }
 
@@ -141,6 +144,7 @@ export function mapMeilisearchHit(hit: MeilisearchHit): SearchHit | undefined {
       id: hit._meilisearch_id,
       title: hit.title,
       url: `/la-maison-de-l-autisme`,
+      type: "page",
     };
   }
 
@@ -149,6 +153,7 @@ export function mapMeilisearchHit(hit: MeilisearchHit): SearchHit | undefined {
       id: hit._meilisearch_id,
       title: hit.title,
       url: `/mon-parcours/${hit.slug}`,
+      type: "page",
     };
   }
 
