@@ -10,5 +10,7 @@ if (MDA_ENV === "dev") {
   bootstraps.push(import("./dev/seed-db"));
 }
 
+bootstraps.push(import("./meilisearch/seed-pages"));
+
 strapi.log.info(`[MDA] Load common bootstraps`);
 // bootstraps.push(import("./*")); // replace "*" by common bootstrap file
