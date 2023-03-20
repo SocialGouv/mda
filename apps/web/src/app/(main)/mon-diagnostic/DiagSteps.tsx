@@ -3,12 +3,12 @@
 import { useEffectOnce } from "@components/hooks/useEffectOnce";
 import { Markdown } from "@components/utils/Markdown";
 import {
-  type FormSelectProps,
   FormGroup,
   FormGroupLabel,
   FormGroupStep,
   FormGroupSteps,
   FormSelect,
+  type FormSelectProps,
   Notice,
 } from "@design-system";
 import { type Response } from "@mda/strapi-types";

@@ -1,13 +1,13 @@
 "use client";
 
 import { SearchResultsList } from "@components/base/SearchResultsList";
-import { type SearchHit, mapMeilisearchHit, searchStrapi } from "@services/strapi";
+import { mapMeilisearchHit, type SearchHit, searchStrapi } from "@services/strapi";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const SearchResults = () => {
   const searchParams = useSearchParams();
-  const keyword = searchParams.get("keyword");
+  const keyword = searchParams?.get("keyword");
   const [searchResults, setSearchResults] = useState<SearchHit[]>([]);
 
   const search = (keyword: string) => {

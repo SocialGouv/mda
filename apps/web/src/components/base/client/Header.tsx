@@ -3,7 +3,7 @@
 import { config } from "@common/config";
 import { Logo, LogoMda } from "@design-system";
 import { MainNav, MainNavItem, MainNavItemWithDropdown } from "@design-system/client";
-import { type SearchHit, mapMeilisearchHit, searchStrapi } from "@services/strapi";
+import { mapMeilisearchHit, type SearchHit, searchStrapi } from "@services/strapi";
 import clsx from "clsx";
 import debounce from "lodash/debounce";
 import Link from "next/link";

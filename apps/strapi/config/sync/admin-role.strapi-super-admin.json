@@ -859,18 +859,6 @@
       "conditions": []
     },
     {
-      "action": "admin::marketplace.plugins.install",
-      "subject": null,
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "admin::marketplace.plugins.uninstall",
-      "subject": null,
-      "properties": {},
-      "conditions": []
-    },
-    {
       "action": "admin::marketplace.read",
       "subject": null,
       "properties": {},
@@ -908,6 +896,42 @@
     },
     {
       "action": "admin::roles.update",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "admin::transfer.tokens.access",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "admin::transfer.tokens.create",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "admin::transfer.tokens.delete",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "admin::transfer.tokens.read",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "admin::transfer.tokens.regenerate",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "admin::transfer.tokens.update",
       "subject": null,
       "properties": {},
       "conditions": []
