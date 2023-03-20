@@ -89,10 +89,11 @@ export async function fetchStrapi<
 type MeilisearchHit = MeilisearchApiHits<keyof Strapi.Schemas>;
 
 export interface SearchHit {
+  description?: string;
   id: string;
   title: string;
   type?: "fiches-pratiques" | "glossaire-item" | "page";
-  url: string;
+  url?: string;
 }
 
 export async function searchStrapi(query: string): Promise<MeilisearchHit[]> {
@@ -134,7 +135,7 @@ export function mapMeilisearchHit(hit: MeilisearchHit): SearchHit | undefined {
     return {
       id: hit._meilisearch_id,
       title: hit.title,
-      url: `/glossaire#${hit.title}`,
+      description: hit.description,
       type: "glossaire-item",
     };
   }
@@ -153,6 +154,33 @@ export function mapMeilisearchHit(hit: MeilisearchHit): SearchHit | undefined {
       id: hit._meilisearch_id,
       title: hit.title,
       url: `/mon-parcours/${hit.slug}`,
+      type: "page",
+    };
+  }
+
+  if (isMeilisearchHitOf(hit, "annuaire")) {
+    return {
+      id: hit._meilisearch_id,
+      title: hit.title,
+      url: `/annuaire`,
+      type: "page",
+    };
+  }
+
+  if (isMeilisearchHitOf(hit, "je-donne-mon-avis")) {
+    return {
+      id: hit._meilisearch_id,
+      title: hit.title,
+      url: `/je-donne-mon-avis`,
+      type: "page",
+    };
+  }
+
+  if (isMeilisearchHitOf(hit, "mes-aides")) {
+    return {
+      id: hit._meilisearch_id,
+      title: hit.title,
+      url: `/mes-aides`,
       type: "page",
     };
   }

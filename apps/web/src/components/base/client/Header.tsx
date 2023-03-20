@@ -3,14 +3,10 @@
 import { config } from "@common/config";
 import { Logo, LogoMda } from "@design-system";
 import { MainNav, MainNavItem, MainNavItemWithDropdown } from "@design-system/client";
-import { mapMeilisearchHit, type SearchHit, searchStrapi } from "@services/strapi";
 import clsx from "clsx";
-import debounce from "lodash/debounce";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { type PropsWithChildren, useEffect, useRef, useState } from "react";
-
-import styles from "./Header.module.css";
 
 export const Header = () => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -18,9 +14,7 @@ export const Header = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const [navOpen, setNavOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const [searchSuggestionsIsOpen, setSearchSuggestionsIsOpen] = useState(false);
   const [searchPhrase, setSearchPhrase] = useState("");
-  const [searchResults, setSearchResults] = useState<SearchHit[]>([]);
   const [isDialog, setIsDialog] = useState(false);
   const pathname = usePathname();
   useEffect(() => {
@@ -64,39 +58,10 @@ export const Header = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const search = () => {
-    if (!searchPhrase) {
-      setSearchOpen(false);
-      setSearchSuggestionsIsOpen(false);
-      return;
-    }
-
-    searchStrapi(searchPhrase)
-      .then(hits => {
-        setSearchResults(hits.map(mapMeilisearchHit).filter((hit): hit is SearchHit => !!hit));
-        setSearchOpen(true);
-        setSearchSuggestionsIsOpen(true);
-      })
-      .catch(console.error);
-  };
-
-  const handleChange = debounce(() => search(), 500);
   const handleSearch = () => {
     router.push(`/recherche?keyword=${searchPhrase}`);
-    setSearchSuggestionsIsOpen(false);
     setSearchOpen(false);
   };
-
-  useEffect(() => {
-    const input = document.querySelector("#search");
-    const handleFocus = () => setSearchSuggestionsIsOpen(true);
-    input?.addEventListener("input", handleChange);
-    input?.addEventListener("focus", handleFocus);
-    return () => {
-      input?.removeEventListener("input", handleChange);
-      input?.removeEventListener("focus", handleFocus);
-    };
-  }, [handleChange]);
 
   const MainNavLink = ({ href, children }: PropsWithChildren<{ href: string }>) => (
     <MainNavItem onClick={() => setNavOpen(false)} href={href}>
@@ -189,23 +154,6 @@ export const Header = () => {
                       Rechercher
                     </button>
                   </div>
-                  {searchSuggestionsIsOpen && searchResults.length >= 1 && (
-                    <div className={clsx(styles.searchSuggestions)}>
-                      <ul role="listbox">
-                        {searchResults.length ? (
-                          searchResults.map(result => (
-                            <li role="option" aria-selected="false" tabIndex={-1} key={result.id}>
-                              <a href={result.url}>{result.title}</a>
-                            </li>
-                          ))
-                        ) : (
-                          <li aria-hidden="true">
-                            <p>Aucun résultat</p>
-                          </li>
-                        )}
-                      </ul>
-                    </div>
-                  )}
                 </div>
               </div>
             </div>
