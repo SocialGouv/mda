@@ -89,10 +89,11 @@ export async function fetchStrapi<
 type MeilisearchHit = MeilisearchApiHits<keyof Strapi.Schemas>;
 
 export interface SearchHit {
+  description?: string;
   id: string;
   title: string;
   type?: "fiches-pratiques" | "glossaire-item" | "page";
-  url: string;
+  url?: string;
 }
 
 export async function searchStrapi(query: string): Promise<MeilisearchHit[]> {
@@ -134,7 +135,7 @@ export function mapMeilisearchHit(hit: MeilisearchHit): SearchHit | undefined {
     return {
       id: hit._meilisearch_id,
       title: hit.title,
-      url: `/glossaire#${hit.title}`,
+      description: hit.description,
       type: "glossaire-item",
     };
   }
