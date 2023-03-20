@@ -158,6 +158,33 @@ export function mapMeilisearchHit(hit: MeilisearchHit): SearchHit | undefined {
     };
   }
 
+  if (isMeilisearchHitOf(hit, "annuaire")) {
+    return {
+      id: hit._meilisearch_id,
+      title: hit.title,
+      url: `/annuaire`,
+      type: "page",
+    };
+  }
+
+  if (isMeilisearchHitOf(hit, "je-donne-mon-avis")) {
+    return {
+      id: hit._meilisearch_id,
+      title: hit.title,
+      url: `/je-donne-mon-avis`,
+      type: "page",
+    };
+  }
+
+  if (isMeilisearchHitOf(hit, "mes-aides")) {
+    return {
+      id: hit._meilisearch_id,
+      title: hit.title,
+      url: `/mes-aides`,
+      type: "page",
+    };
+  }
+
   console.warn("Unknown hit", hit);
   return;
 }

@@ -29,6 +29,20 @@ const plugins: StrapiConfigSetter<PluginsConfig> = ({ env }) => ({
     config: {
       host: env("MEILISEARCH_HOST"),
       apiKey: env("MEILISEARCH_MASTER_KEY"),
+      annuaire: {
+        indexName: "pages",
+        transformEntry: ({ entry }) => {
+          return {
+            id: entry.id,
+            title: entry.title,
+            content: entry.content,
+            links: entry.links,
+          };
+        },
+        entriesQuery: {
+          limit: 1000,
+        },
+      },
       "fiche-pratique": {
         indexName: "pages",
         transformEntry: ({ entry }) => {
@@ -59,6 +73,20 @@ const plugins: StrapiConfigSetter<PluginsConfig> = ({ env }) => ({
           };
         },
       },
+      "je-donne-mon-avis": {
+        indexName: "pages",
+        transformEntry: ({ entry }) => {
+          return {
+            id: entry.id,
+            title: entry.title,
+            content: entry.content,
+            alerts: entry.alerts,
+          };
+        },
+        entriesQuery: {
+          limit: 1000,
+        },
+      },
       "maison-de-l-autisme": {
         indexName: "pages",
         transformEntry: ({ entry }) => {
@@ -71,6 +99,20 @@ const plugins: StrapiConfigSetter<PluginsConfig> = ({ env }) => ({
               title: section.title,
               content: section.content,
             })),
+          };
+        },
+        entriesQuery: {
+          limit: 1000,
+        },
+      },
+      "mes-aides": {
+        indexName: "pages",
+        transformEntry: ({ entry }) => {
+          return {
+            id: entry.id,
+            title: entry.title,
+            content: entry.content,
+            sections: entry.sections,
           };
         },
         entriesQuery: {
