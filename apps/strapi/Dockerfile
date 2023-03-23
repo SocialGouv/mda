@@ -62,8 +62,10 @@ RUN addgroup --system --gid 1001 nodejs && \
 USER 1001
 
 COPY --from=installer --chown=strapi:nodejs /app/node_modules ./node_modules
+COPY --from=installer --chown=strapi:nodejs /app/packages/strapi-types/node_modules ./packages/strapi-types/node_modules
 COPY --from=installer --chown=strapi:nodejs /app/apps/strapi/node_modules ./apps/strapi/node_modules
 ENV PATH /app/node_modules/.bin:/app/apps/strapi/node_modules/.bin:$PATH
+COPY --from=installer --chown=strapi:nodejs /app/packages/strapi-types/ ./packages/strapi-types/
 COPY --from=installer --chown=strapi:nodejs /app/apps/strapi/ ./apps/strapi/
 
 EXPOSE 1337
