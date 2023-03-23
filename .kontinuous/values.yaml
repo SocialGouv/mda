@@ -12,10 +12,10 @@ meilisearch:
     - secretRef:
         name: "mda-meilisearch"
   env:
-     - name: MEILI_NO_ANALYTICS
-       value: "true"
+    - name: MEILI_NO_ANALYTICS
+      value: "true"
   ingress:
-     enabled: false
+    enabled: false
 
 web:
   ~chart: app
@@ -38,11 +38,6 @@ strapi:
   imagePackage: strapi
   probesPath: /_health
   host: "strapi-{{ .Values.global.host }}"
-  addVolumes:
-    - uploads
-  volumeMounts:
-    - mountPath: /app/public/uploads
-      name: uploads
   envFrom:
     - secretRef:
         name: "{{ .Values.global.pgSecretName }}"
