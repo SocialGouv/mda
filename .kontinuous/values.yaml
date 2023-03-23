@@ -38,6 +38,11 @@ strapi:
   imagePackage: strapi
   probesPath: /_health
   host: "strapi-{{ .Values.global.host }}"
+  addVolumes:
+    - uploads
+  volumeMounts:
+    - mountPath: /app/public/uploads
+      name: uploads
   envFrom:
     - secretRef:
         name: "{{ .Values.global.pgSecretName }}"
