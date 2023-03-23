@@ -7,6 +7,7 @@ declare global {
       initEvents: {
         loadEvent(oldBrowser: boolean): void;
       };
+      job?: unknown[];
       userInterface: {
         openPanel(): void;
       };
