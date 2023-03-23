@@ -39,7 +39,23 @@ strapi:
     requests:
       cpu: "400m"
       memory: "512Mi"
-      
+  addVolumes:
+    - uploads
+  volumeMounts:
+    - mountPath: /app/public/uploads
+      name: uploads
+  envFrom:
+    - secretRef:
+        name: "{{ .Values.global.pgSecretName }}"
+    - secretRef:
+        name: "mda-strapi"
+    - secretRef:
+        name: "mda-revalidate-webhook"
+    - secretRef:
+        name: "mda-meilisearch"
+    - secretRef:
+        name: "azure-mda-volume"
+
 meilisearch:
   autoscale:
     enabled: true
@@ -51,4 +67,4 @@ meilisearch:
       memory: "384Mi"
     requests:
       cpu: "250m"
-      memory: "256Mi"      
+      memory: "256Mi"

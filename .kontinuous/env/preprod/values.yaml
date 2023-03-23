@@ -7,6 +7,24 @@ web:
     MAILER_SMTP_PASSWORD: ""
     MAILER_SMTP_SSL: "False"
 
+strapi:
+  addVolumes:
+    - uploads
+  volumeMounts:
+    - mountPath: /app/public/uploads
+      name: uploads
+  envFrom:
+    - secretRef:
+        name: "{{ .Values.global.pgSecretName }}"
+    - secretRef:
+        name: "mda-strapi"
+    - secretRef:
+        name: "mda-revalidate-webhook"
+    - secretRef:
+        name: "mda-meilisearch"
+    - secretRef:
+        name: "azure-mda-volume"
+
 maildev: {}
 
 jobs:

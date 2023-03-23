@@ -12,10 +12,10 @@ meilisearch:
     - secretRef:
         name: "mda-meilisearch"
   env:
-     - name: MEILI_NO_ANALYTICS
-       value: "true"
+    - name: MEILI_NO_ANALYTICS
+      value: "true"
   ingress:
-     enabled: false
+    enabled: false
 
 web:
   ~chart: app

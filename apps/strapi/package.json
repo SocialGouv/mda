@@ -12,7 +12,7 @@
     "content:dump": "strapi export --no-encrypt --only content --file content-dump",
     "content:import": "strapi import --only content --force --file content-dump.tar.gz",
     "generate-types": "ts-node src/commands/strapi-generate-types.ts -f ../../packages/strapi-types/strapi.d.ts && echo \"/* eslint-disable */\n$(cat ../../packages/strapi-types/strapi.d.ts)\" > ../../packages/strapi-types/strapi.d.ts",
-    "generate-env": "echo \"MDA_ENV=dev\nAPP_KEYS=$(openssl rand -base64 32),$(openssl rand -base64 32)\nAPI_TOKEN_SALT=$(openssl rand -base64 32)\nADMIN_JWT_SECRET=$(openssl rand -base64 32)\nJWT_SECRET=$(openssl rand -base64 32)\" > .env"
+    "generate-env": "echo \"MDA_ENV=dev\nAPP_KEYS=$(openssl rand -base64 32),$(openssl rand -base64 32)\nAPI_TOKEN_SALT=$(openssl rand -base64 32)\nADMIN_JWT_SECRET=$(openssl rand -base64 32)\nJWT_SECRET=$(openssl rand -base64 32)\nTRANSFER_TOKEN_SALT=$(openssl rand -base64 32)\nMEILISEARCH_HOST=http://localhost:7700\nMEILISEARCH_MASTER_KEY=masterKey\" > .env"
   },
   "devDependencies": {
     "@mda/eslint-config": "*",
