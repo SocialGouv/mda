@@ -1,3 +1,25 @@
+# [1.7.0](https://github.com/SocialGouv/mda/compare/v1.6.1...v1.7.0) (2023-03-23)
+
+
+### Bug Fixes
+
+* resize textarea only vertically ([#181](https://github.com/SocialGouv/mda/issues/181)) ([3f6b87e](https://github.com/SocialGouv/mda/commit/3f6b87eadc049efe94cd8dacd021ad1f511d562b))
+* **tarteaucitron:** modal not opening ([#192](https://github.com/SocialGouv/mda/issues/192)) ([1926ab3](https://github.com/SocialGouv/mda/commit/1926ab35409f70a4d6f06c3ac813fa006917b5bc))
+
+
+### Features
+
+* add responsive iframe and img in strapi content ([#173](https://github.com/SocialGouv/mda/issues/173)) ([35dc448](https://github.com/SocialGouv/mda/commit/35dc4483ea5598b2cc755def6e8e0413b8442e06))
+* add search page ([#183](https://github.com/SocialGouv/mda/issues/183)) ([a904e5c](https://github.com/SocialGouv/mda/commit/a904e5c2276aad0d5207d6ce3a331366f21f272b))
+* add TarteAuCitron ([#177](https://github.com/SocialGouv/mda/issues/177)) ([01c027a](https://github.com/SocialGouv/mda/commit/01c027a1862c24f54d1017f8dbd863c254a5dd00))
+* dynamicizing the diagnostic page ([#179](https://github.com/SocialGouv/mda/issues/179)) ([1555df3](https://github.com/SocialGouv/mda/commit/1555df3e753e038ba217fff25f3c15037cbbc66c))
+* **etapes-de-vie:** Dissociate from fiches-pratiques ([#195](https://github.com/SocialGouv/mda/issues/195)) ([35b1b82](https://github.com/SocialGouv/mda/commit/35b1b82158568c6c7eda6af50dbfed47834cddb1))
+* **events:** MDA events ([#175](https://github.com/SocialGouv/mda/issues/175)) ([f18b0f1](https://github.com/SocialGouv/mda/commit/f18b0f19e5cbc9c65dc3b3572c85de95150cfa4c))
+* **je-donne-mon-avis:** dynamisation ([#182](https://github.com/SocialGouv/mda/issues/182)) ([eb45758](https://github.com/SocialGouv/mda/commit/eb45758f78df709b64dc5ad64f08b5d822e11842))
+* remove beta mode ([#174](https://github.com/SocialGouv/mda/issues/174)) ([68910ab](https://github.com/SocialGouv/mda/commit/68910abc25b74e4429912034510a873d298ac1a1))
+* **search:** last adjustments ([#188](https://github.com/SocialGouv/mda/issues/188)) ([bfa9199](https://github.com/SocialGouv/mda/commit/bfa919940267e509db958711010900e1a4a42440))
+* **strapi:** Activate transfer feature + azure storage ([#193](https://github.com/SocialGouv/mda/issues/193)) ([83cb675](https://github.com/SocialGouv/mda/commit/83cb675699b4a4b7fba4dcfdb460238c21611491))
+
 ## [1.6.1](https://github.com/SocialGouv/mda/compare/v1.6.0...v1.6.1) (2023-03-15)
 
 
