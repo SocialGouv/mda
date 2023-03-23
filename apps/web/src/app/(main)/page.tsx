@@ -250,7 +250,7 @@ const HomePage = async () => {
                   <CardBody>
                     <CardBodyContent>
                       <CardBodyContentTitle titleAs="h3">
-                        <NextLinkOrA href="/fiches-pratiques/je-cherche-des-groupes-d-entraide">
+                        <NextLinkOrA href="/parcours/je-cherche-des-groupes-d-entraide">
                           Je cherche des groupes d'entraide
                         </NextLinkOrA>
                       </CardBodyContentTitle>

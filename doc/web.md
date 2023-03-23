@@ -31,13 +31,13 @@ Un fichier `.env.development` est disponible, mais doit être obligatoirement co
 
 Sauf si les ports de l'application sont changés en local par exemple, les variables par défaut suffisent pour la faire fonctionner.
 
-Ces variables sont chargées via le fichier [`@common/config`](../apps/web/src/common/config/index.ts).  
+Ces variables sont chargées via le fichier [`@common/config`](../apps/web/src/common/config/index.ts).
 Elles sont séparées en deux catégories, les variables utilisables uniquement côté serveur, qui sont sous l'objet `config.server`, et celles utilisables partout, accessibles via `config` directement.
 
 Pour faciliter l'autocomplete dans le fichier de config, il fortement conseillé d'utiliser la commande `yarn generateEnvDeclaration` directement dans le dossier `web` pour regénérer le fichier `.end.d.ts` après chaque modification du `.env.development`.
 
-Une variable serveur ne doit pas être préfixée par `NEXT_PUBLIC_`. Quand aux variables serveur, elle ne sont utilisables que sur les composants serveur. Côté client, ils n'auront qu'une valeur vide (`""`).  
-En revanche il est possible de passer des variables serveur vers des composants client en les passant comme des props depuis un composant serveur.  
+Une variable serveur ne doit pas être préfixée par `NEXT_PUBLIC_`. Quand aux variables serveur, elle ne sont utilisables que sur les composants serveur. Côté client, ils n'auront qu'une valeur vide (`""`).
+En revanche il est possible de passer des variables serveur vers des composants client en les passant comme des props depuis un composant serveur.
 Example avec la variable `env` :
 ```tsx
 "use client";
@@ -64,13 +64,13 @@ Il faut toutefois rester prudent sur cette méthode et ne jamais passer de varia
 Plus d'info sur les server components : https://beta.nextjs.org/docs/rendering/server-and-client-components
 
 ## Webhook de revalidation
-Dans l'application, une seule route d'API est en place, la route de webhook pour Strapi permettant de revalider les pages serveur.  
-Le webhook n'est accesible qu'en POST et un token d'authentification doit être ajouté aux headers.  
-Example : `fetch("/api/strapi/webhook", { type: "api::fiche-pratique.fiche-pratique", fragment: "je-m-interroge-sur-mon-enfant" })`
+Dans l'application, une seule route d'API est en place, la route de webhook pour Strapi permettant de revalider les pages serveur.
+Le webhook n'est accesible qu'en POST et un token d'authentification doit être ajouté aux headers.
+Example : `fetch("/api/strapi/webhook", { type: "api::fiche-pratique.fiche-pratique", fragment: "etre-protege" })`
 
 ## Appeler des données venant de Strapi
-Une fonction dédiée est disponible pour récupérer des données de Strapi : `fetchStrapi()`.  
-Elle complètement typée et donne l'autocomplete nécessaire à sa bonne utilisation. Suivant les arguments donnés, elle permet de récupérer soit des objets uniques, soit des collections (tableaux). Elle se base sur le nom de la resource plutôt que son slug Strapi par soucis de facilité d'utilisation.  
+Une fonction dédiée est disponible pour récupérer des données de Strapi : `fetchStrapi()`.
+Elle complètement typée et donne l'autocomplete nécessaire à sa bonne utilisation. Suivant les arguments donnés, elle permet de récupérer soit des objets uniques, soit des collections (tableaux). Elle se base sur le nom de la resource plutôt que son slug Strapi par soucis de facilité d'utilisation.
 Example :
 ```ts
 // fetch multiple items
@@ -81,13 +81,13 @@ console.log(fiches.length);
 const fiche = await fetchStrapi("fiche-pratiques/1", { populate: "deep" });
 ```
 
-Le second argument est un ensemble d'option permettant d'affiner la requête : tris, selection de certains champs uniquement, filtres, pagination, chargement des relations (`populate`).  
+Le second argument est un ensemble d'option permettant d'affiner la requête : tris, selection de certains champs uniquement, filtres, pagination, chargement des relations (`populate`).
 Se référer à la documentation REST de Strapi pour la description des paramêtres : https://docs.strapi.io/developer-docs/latest/developer-resources/database-apis-reference/rest/api-parameters.html
 
 "Populate" peut aussi prendre la valeur `deep` pour récupérer tous les niveaux de relation en même temps, grâce au plugin [strapi-plugin-populate-deep](https://github.com/Barelydead/strapi-plugin-populate-deep).
 
 ## Composants
-L'application étant en mode `app` avec Next13, les composants serveur sont activés par défaut. Il est donc important de bien découpler ses logiques d'affichage et d'utiliser `"use client"` avec parcimonie et uniquement dans des composants bas niveau ou parallèles.  
+L'application étant en mode `app` avec Next13, les composants serveur sont activés par défaut. Il est donc important de bien découpler ses logiques d'affichage et d'utiliser `"use client"` avec parcimonie et uniquement dans des composants bas niveau ou parallèles.
 Ne pas hésiter donc à séparer une composant qui ne contiendrait qu'une partie utilisant des hooks front ou des interractions.
 
 Essayer aussi au maximum d'avoir des composants clients dans dossier séparé, comme dans `src/components/base/client` ou `src/design-system/base/client`. Cette séparation évitera d'exporter en même temps des composants clients et serveurs dans le même [barrel](https://basarat.gitbook.io/typescript/main-1/barrel) ; d'ailleurs, il existe pour ça deux barrels distincts dans le design system pour garder des import propres : `src/design-system/client.ts` & `src/design-system/server.ts`.
