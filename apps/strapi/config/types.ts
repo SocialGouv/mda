@@ -109,6 +109,14 @@ export interface AdminPanelConfig {
    * @default true
    */
   serveAdminPanel?: boolean;
+  transfer?: {
+    token: {
+      /**
+       * Salt used to generate Transfer tokens. If no transfer token salt is defined, transfer features will be disabled.
+       */
+      salt: string;
+    };
+  };
   /**
    * Url of your admin panel. Default value: `/admin`. Note: If the url is relative,
    * it will be concatenated with `url`.
