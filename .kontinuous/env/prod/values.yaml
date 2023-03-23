@@ -1,5 +1,5 @@
 global:
-  host: maisondelautisme.fabrique.social.gouv.fr
+  host: maisondelautisme-recette.fabrique.social.gouv.fr
   # host: maisondelautisme.gouv.fr #TODO enable when domain is ok
 
 web:
@@ -42,7 +42,7 @@ strapi:
   addVolumes:
     - uploads
   volumeMounts:
-    - mountPath: /app/public/uploads
+    - mountPath: /app/apps/strapi/public/uploads
       name: uploads
   envFrom:
     - secretRef:

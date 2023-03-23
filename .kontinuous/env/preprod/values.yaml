@@ -11,7 +11,7 @@ strapi:
   addVolumes:
     - uploads
   volumeMounts:
-    - mountPath: /app/public/uploads
+    - mountPath: /app/apps/strapi/public/uploads
       name: uploads
   envFrom:
     - secretRef:

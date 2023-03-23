@@ -4,7 +4,6 @@ import { NextResponse } from "next/server";
 
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
-  if (pathname.startsWith("/mon-diagnostic") && conf.ff.previewMonDiag) return NextResponse.next();
   if (!pathname.startsWith("/maintenance") && conf.ff.maintenance) {
     console.log({ pathname });
     return NextResponse.redirect(new URL("/maintenance", req.url));

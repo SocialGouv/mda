@@ -18,8 +18,7 @@ export const config = {
   },
   get ff() {
     return {
-      maintenance: this.env === "prod",
-      // maintenance: false, // disable maintenance
+      maintenance: false,
       previewMonDiag: true,
     };
   },
