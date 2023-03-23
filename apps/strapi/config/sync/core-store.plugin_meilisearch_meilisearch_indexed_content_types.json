@@ -1,6 +1,14 @@
 {
   "key": "plugin_meilisearch_meilisearch_indexed_content_types",
-  "value": [],
+  "value": [
+    "api::annuaire.annuaire",
+    "api::fiche-pratique.fiche-pratique",
+    "api::glossaire-item.glossaire-item",
+    "api::je-donne-mon-avis.je-donne-mon-avis",
+    "api::maison-de-l-autisme.maison-de-l-autisme",
+    "api::mes-aides.mes-aides",
+    "api::parcours.parcours"
+  ],
   "type": "object",
   "environment": null,
   "tag": null

@@ -811,11 +811,49 @@ export interface ApiDiagnosticDiagnostic extends SingleTypeSchema {
   };
 }
 
+export interface ApiEtapeDeVieEtapeDeVie extends CollectionTypeSchema {
+  info: {
+    singularName: 'etape-de-vie';
+    pluralName: 'etape-de-vies';
+    displayName: '\u00C9tapes de vie';
+    description: "Une \u00E9tape de vie est un ensemble d'informations regroup\u00E9 par cat\u00E9gorie.";
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: StringAttribute & RequiredAttribute & UniqueAttribute;
+    recap: ComponentAttribute<'fiche-pratique-content.encart'> &
+      RequiredAttribute;
+    section: ComponentAttribute<'fiche-pratique-content.encart', true>;
+    slug: StringAttribute & UniqueAttribute;
+    excerpt: TextAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        maxLength: 200;
+      }>;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::etape-de-vie.etape-de-vie',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::etape-de-vie.etape-de-vie',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiEventEvent extends CollectionTypeSchema {
   info: {
     singularName: 'event';
     pluralName: 'events';
-    displayName: 'Events';
+    displayName: '\u00C9v\u00E8nements';
     description: '';
   };
   options: {
@@ -1348,6 +1386,7 @@ declare global {
       'api::accueil.accueil': ApiAccueilAccueil;
       'api::annuaire.annuaire': ApiAnnuaireAnnuaire;
       'api::diagnostic.diagnostic': ApiDiagnosticDiagnostic;
+      'api::etape-de-vie.etape-de-vie': ApiEtapeDeVieEtapeDeVie;
       'api::event.event': ApiEventEvent;
       'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;
       'api::glossaire-item.glossaire-item': ApiGlossaireItemGlossaireItem;

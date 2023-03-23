@@ -209,6 +209,60 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::etape-de-vie.etape-de-vie",
+      "properties": {
+        "fields": [
+          "title",
+          "recap.title",
+          "recap.content",
+          "section.title",
+          "section.content",
+          "slug",
+          "excerpt"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::etape-de-vie.etape-de-vie",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::etape-de-vie.etape-de-vie",
+      "properties": {
+        "fields": [
+          "title",
+          "recap.title",
+          "recap.content",
+          "section.title",
+          "section.content",
+          "slug",
+          "excerpt"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::etape-de-vie.etape-de-vie",
+      "properties": {
+        "fields": [
+          "title",
+          "recap.title",
+          "recap.content",
+          "section.title",
+          "section.content",
+          "slug",
+          "excerpt"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::event.event",
       "properties": {
         "fields": [

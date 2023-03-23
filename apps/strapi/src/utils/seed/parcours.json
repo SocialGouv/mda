@@ -16,7 +16,7 @@
         "links": [
           {
             "text": "Je m'interroge",
-            "url": "/fiches-pratiques/je-m-interroge-envers-moi-meme",
+            "url": "/parcours/je-m-interroge-envers-moi-meme",
             "theme": "primary"
           }
         ]
@@ -55,7 +55,7 @@
         "links": [
           {
             "text": "Monter un dossier",
-            "url": "/fiches-pratiques/je-sollicite-la-mdph-et-je-monte-un-dossier",
+            "url": "/parcours/je-sollicite-la-mdph-et-je-monte-un-dossier",
             "theme": "primary"
           }
         ]
@@ -147,7 +147,7 @@
         "links": [
           {
             "text": "Groupes d'entraide",
-            "url": "/fiches-pratiques/je-cherche-des-groupes-d-entraide",
+            "url": "/parcours/je-cherche-des-groupes-d-entraide",
             "theme": "primary"
           }
         ]
@@ -199,7 +199,7 @@
         "links": [
           {
             "text": "Je m'interroge",
-            "url": "/fiches-pratiques/je-m-interroge-sur-mon-enfant",
+            "url": "/parcours/je-m-interroge-sur-mon-enfant",
             "theme": "primary"
           }
         ]
@@ -238,7 +238,7 @@
         "links": [
           {
             "text": "Monter un dossier",
-            "url": "/fiches-pratiques/je-sollicite-la-mdph-et-je-monte-un-dossier",
+            "url": "/parcours/je-sollicite-la-mdph-et-je-monte-un-dossier",
             "theme": "primary"
           }
         ]
@@ -322,7 +322,7 @@
         "links": [
           {
             "text": "Demander de l'aide",
-            "url": "/fiches-pratiques/je-demande-de-l-aide-a-mon-entourage",
+            "url": "/parcours/je-demande-de-l-aide-a-mon-entourage",
             "theme": "primary"
           }
         ]
@@ -335,7 +335,7 @@
         "links": [
           {
             "text": "Groupes d'entraide",
-            "url": "/fiches-pratiques/je-cherche-des-groupes-d-entraide",
+            "url": "/parcours/je-cherche-des-groupes-d-entraide",
             "theme": "primary"
           }
         ]
@@ -387,7 +387,7 @@
         "links": [
           {
             "text": "",
-            "url": "/fiches-pratiques/comment-puis-je-diagnostiquer-un-patient-potentiellement-autiste",
+            "url": "/parcours/comment-puis-je-diagnostiquer-un-patient-potentiellement-autiste",
             "theme": "primary"
           }
         ]

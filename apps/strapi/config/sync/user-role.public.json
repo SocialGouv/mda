@@ -16,6 +16,12 @@
       "action": "api::diagnostic.diagnostic.find"
     },
     {
+      "action": "api::etape-de-vie.etape-de-vie.find"
+    },
+    {
+      "action": "api::etape-de-vie.etape-de-vie.findOne"
+    },
+    {
       "action": "api::event.event.find"
     },
     {
