@@ -13,11 +13,7 @@ const Head = async ({ params }: FichePratiqueProps) => {
       },
     })
   ).data?.[0];
-  return (
-    <head>
-      <Next13Seo title={`Étape de vie${currentEtape ? ` - ${currentEtape.attributes.title}` : ""}`} />
-    </head>
-  );
+  return <Next13Seo title={`Étape de vie${currentEtape ? ` - ${currentEtape.attributes.title}` : ""}`} />;
 };
 
 export default Head;
