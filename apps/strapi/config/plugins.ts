@@ -43,6 +43,22 @@ const plugins: StrapiConfigSetter<PluginsConfig> = ({ env }) => ({
           limit: 1000,
         },
       },
+      "etape-de-vie": {
+        indexName: "pages",
+        transformEntry: ({ entry }) => {
+          return {
+            id: entry.id,
+            excerpt: entry.excerpt,
+            recapContent: entry.recap.content,
+            recapTitle: entry.recap.title,
+            slug: entry.slug,
+            title: entry.title,
+          };
+        },
+        entriesQuery: {
+          limit: 1000,
+        },
+      },
       "fiche-pratique": {
         indexName: "pages",
         transformEntry: ({ entry }) => {

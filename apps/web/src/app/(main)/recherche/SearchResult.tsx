@@ -24,6 +24,7 @@ const SearchResults = () => {
   }, [keyword]);
 
   const glossaryItems = (searchResults ?? []).filter(item => item.type === "glossaire-item");
+  const lifeStepItems = (searchResults ?? []).filter(item => item.type === "etape-de-vie");
   const practicalGuideItems = (searchResults ?? []).filter(item => item.type === "fiches-pratiques");
   const pagesItems = (searchResults ?? []).filter(item => item.type === "page");
 
@@ -38,6 +39,7 @@ const SearchResults = () => {
               </strong>{" "}
               pour&nbsp;: <strong>«{keyword}»</strong>
             </h1>
+            {lifeStepItems.length ? <SearchResultsList title="Étapes de vie" data={lifeStepItems} /> : null}
             {practicalGuideItems.length ? (
               <SearchResultsList title="Fiches pratiques" data={practicalGuideItems} />
             ) : null}

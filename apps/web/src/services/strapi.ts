@@ -92,7 +92,7 @@ export interface SearchHit {
   description?: string;
   id: string;
   title: string;
-  type?: "fiches-pratiques" | "glossaire-item" | "page";
+  type?: "etape-de-vie" | "fiches-pratiques" | "glossaire-item" | "page";
   url?: string;
 }
 
@@ -128,6 +128,15 @@ export function mapMeilisearchHit(hit: MeilisearchHit): SearchHit | undefined {
       title: hit.title,
       url: `/fiches-pratiques/${hit.slug}`,
       type: "fiches-pratiques",
+    };
+  }
+
+  if (isMeilisearchHitOf(hit, "etape-de-vie") && hit.slug) {
+    return {
+      id: hit._meilisearch_id,
+      title: hit.title,
+      url: `/parcours/${hit.slug}`,
+      type: "etape-de-vie",
     };
   }
 
