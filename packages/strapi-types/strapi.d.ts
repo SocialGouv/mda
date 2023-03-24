@@ -825,6 +825,9 @@ export interface ApiEtapeDeVieEtapeDeVie extends CollectionTypeSchema {
     title: StringAttribute & RequiredAttribute & UniqueAttribute;
     recap: ComponentAttribute<'fiche-pratique-content.encart'> &
       RequiredAttribute;
+    type: EnumerationAttribute<['pro', 'perso']> &
+      RequiredAttribute &
+      DefaultTo<'perso'>;
     section: ComponentAttribute<'fiche-pratique-content.encart', true>;
     slug: StringAttribute & UniqueAttribute;
     excerpt: TextAttribute &

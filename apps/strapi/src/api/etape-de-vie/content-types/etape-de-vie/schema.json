@@ -22,6 +22,15 @@
       "required": true,
       "component": "fiche-pratique-content.encart"
     },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "pro",
+        "perso"
+      ],
+      "default": "perso",
+      "required": true
+    },
     "section": {
       "type": "component",
       "repeatable": true,
