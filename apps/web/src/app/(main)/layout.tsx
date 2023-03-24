@@ -1,7 +1,6 @@
 import "../../styles/global.css";
 
 import { config } from "@common/config";
-import { DEFAULT_SEO_CONFIG } from "@common/config/next-seo";
 import { BreadcrumbDynamic } from "@components/base/client/BreadcrumbDynamic";
 import { Header } from "@components/base/client/Header";
 import { DarkTheme } from "@components/utils/client/DarkTheme";
@@ -30,14 +29,12 @@ import {
 } from "@design-system";
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 import Link from "next/link";
-import { NextSeo } from "next-seo";
 import { type PropsWithChildren } from "react";
 
 const RootLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang="fr">
       <head>
-        <NextSeo {...DEFAULT_SEO_CONFIG} />
         <Matomo env={config.env} />
         <TarteAuCitronGDPR env={config.env} />
         <DarkTheme />

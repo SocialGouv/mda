@@ -13,11 +13,7 @@ const Head = async ({ params }: ParcoursProps) => {
       },
     })
   ).data?.[0];
-  return (
-    <head>
-      <Next13Seo title={`${currentParcours ? currentParcours.attributes.title : ""}`} />
-    </head>
-  );
+  return <Next13Seo title={`${currentParcours ? currentParcours.attributes.title : ""}`} />;
 };
 
 export default Head;
