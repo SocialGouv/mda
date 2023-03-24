@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/SocialGouv/mda/compare/v1.8.0...v1.8.1) (2023-03-24)
+
+
+### Bug Fixes
+
+* **search:** Add sections ([#202](https://github.com/SocialGouv/mda/issues/202)) ([aebac32](https://github.com/SocialGouv/mda/commit/aebac32d5c13c7d080f733098440a6fcbb3e310f))
+
 # [1.8.0](https://github.com/SocialGouv/mda/compare/v1.7.0...v1.8.0) (2023-03-24)
 
 
