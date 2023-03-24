@@ -11,6 +11,9 @@ const middlewares: MiddlewaresConfig = [
     name: "strapi::body",
     config: {
       jsonLimit: "50mb",
+      formidable: {
+        maxFileSize: 512 * 1024 * 1024,
+      },
     },
   },
   "strapi::session",
