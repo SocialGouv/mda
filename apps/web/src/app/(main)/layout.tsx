@@ -6,7 +6,7 @@ import { Header } from "@components/base/client/Header";
 import { DarkTheme } from "@components/utils/client/DarkTheme";
 import { DsfrScript } from "@components/utils/client/DsfrScript";
 import { Matomo } from "@components/utils/client/Matomo";
-import { TarteAuCitronGDPR } from "@components/utils/client/TarteAuCitronGDPR";
+import { OrejimeGDPR } from "@components/utils/client/orejimeGDPR";
 import {
   ButtonAsLink,
   Container,
@@ -35,8 +35,8 @@ const RootLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang="fr">
       <head>
+        <link rel="stylesheet" href="https://unpkg.com/orejime@latest/dist/orejime.css" />
         <Matomo env={config.env} />
-        <TarteAuCitronGDPR env={config.env} />
         <DarkTheme />
         <DsfrScript />
         <meta charSet="utf-8" />
@@ -253,6 +253,8 @@ const RootLayout = ({ children }: PropsWithChildren) => {
             </FooterBottomItem>
           </FooterBottom>
         </Footer>
+        <div id="orejime"></div>
+        <OrejimeGDPR />
       </body>
     </html>
   );
