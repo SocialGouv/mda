@@ -53,6 +53,11 @@ const plugins: StrapiConfigSetter<PluginsConfig> = ({ env }) => ({
             recapTitle: entry.recap.title,
             slug: entry.slug,
             title: entry.title,
+            sections: (entry.section ?? []).map(section => ({
+              id: section.id,
+              title: section.title,
+              content: section.content,
+            })),
           };
         },
         entriesQuery: {
@@ -69,6 +74,11 @@ const plugins: StrapiConfigSetter<PluginsConfig> = ({ env }) => ({
             recapTitle: entry.recap.title,
             slug: entry.slug,
             title: entry.title,
+            sections: (entry.section ?? []).map(section => ({
+              id: section.id,
+              title: section.title,
+              content: section.content,
+            })),
           };
         },
         entriesQuery: {
