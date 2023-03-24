@@ -1,3 +1,16 @@
+# [1.8.0](https://github.com/SocialGouv/mda/compare/v1.7.0...v1.8.0) (2023-03-24)
+
+
+### Bug Fixes
+
+* **breadCrumb:** Do not generate title twice ([#201](https://github.com/SocialGouv/mda/issues/201)) ([ba1f615](https://github.com/SocialGouv/mda/commit/ba1f615c30852bffb88e8830d6b86e78600f45f3))
+* **dockerfile:** Add strapi-types to container to be able to run commands ([1609467](https://github.com/SocialGouv/mda/commit/1609467c67dc8d432cebb27489ca9df382db3e0f))
+
+
+### Features
+
+* **uploads:** Increase file size to 512Mb ([#198](https://github.com/SocialGouv/mda/issues/198)) ([44e3727](https://github.com/SocialGouv/mda/commit/44e372730ed324552a6f0fbf6f3ad31f8f795a7a))
+
 # [1.7.0](https://github.com/SocialGouv/mda/compare/v1.6.1...v1.7.0) (2023-03-23)
 
 
