@@ -14,7 +14,9 @@ export const BreadcrumbDynamic = () => {
 
   useEffect(() => {
     const pageTitle = document.title;
-    setPageTitle(pageTitle.replace(" | Maison de l'autisme", "").replace("Fiche pratique - ", ""));
+    setPageTitle(
+      pageTitle.replace(" | Maison de l'autisme", "").replace("Fiche pratique - ", "").replace("Étape de vie - ", ""),
+    );
   }, [currentPathName]);
 
   if (currentPathName === "/") return null;

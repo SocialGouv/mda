@@ -32,15 +32,17 @@ const FichePratique = async ({ params }: FichePratiqueProps) => {
         <Grid haveGutters>
           <GridCol md={4} lg={3} className="fr-no-print">
             <SideMenuDynamic buttonLabel="Sommaire des étapes de vie">
-              {etapes?.map((f, index) => {
-                if (!f.attributes.slug) return;
-                const href = `/parcours/${f.attributes.slug}`;
-                return (
-                  <SideMenuLink key={index} href={href} isCurrent={f.attributes.slug === params?.slug}>
-                    {f.attributes.title}
-                  </SideMenuLink>
-                );
-              })}
+              {etapes
+                ?.filter(({ attributes: { type } }) => type === currentEtape.attributes.type)
+                .map((f, index) => {
+                  if (!f.attributes.slug) return;
+                  const href = `/parcours/${f.attributes.slug}`;
+                  return (
+                    <SideMenuLink key={index} href={href} isCurrent={f.attributes.slug === params?.slug}>
+                      {f.attributes.title}
+                    </SideMenuLink>
+                  );
+                })}
             </SideMenuDynamic>
           </GridCol>
           <GridCol className="fr-py-6w fr-pt-md-0" md={8} lg={9}>
