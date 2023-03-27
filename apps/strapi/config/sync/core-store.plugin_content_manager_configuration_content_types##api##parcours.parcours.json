@@ -23,8 +23,8 @@
       "title": {
         "edit": {
           "label": "title",
-          "description": "",
-          "placeholder": "",
+          "description": "Le titre du parcours. Exemple : Mon parcours",
+          "placeholder": "Le titre du parcours. Exemple : Mon parcours",
           "visible": true,
           "editable": true
         },
@@ -37,8 +37,8 @@
       "slug": {
         "edit": {
           "label": "slug",
-          "description": "",
-          "placeholder": "",
+          "description": "L'identifiant url du parcours. Example mon-parcours",
+          "placeholder": "L'identifiant url du parcours. Example mon-parcours",
           "visible": true,
           "editable": true
         },
@@ -51,7 +51,7 @@
       "description": {
         "edit": {
           "label": "description",
-          "description": "",
+          "description": "La description du parcours. Le markdown est supporté et vous pouvez intégrer des fichiers images, pdf et vidéos à l'aide du bouton image dans les outils ci-dessus",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -65,7 +65,7 @@
       "items": {
         "edit": {
           "label": "items",
-          "description": "",
+          "description": "Les rubriques du parcours timeline + tuiles",
           "placeholder": "",
           "visible": true,
           "editable": true

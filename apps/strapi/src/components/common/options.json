@@ -7,11 +7,16 @@
   "attributes": {
     "label": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
     },
     "value": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1,
+      "regex": "[a-z\\/-]+"
     }
   }
 }

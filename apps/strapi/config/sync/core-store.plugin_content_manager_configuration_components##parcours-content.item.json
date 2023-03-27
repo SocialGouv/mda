@@ -23,8 +23,8 @@
       "title": {
         "edit": {
           "label": "title",
-          "description": "",
-          "placeholder": "",
+          "description": "Le titre de la rubrique de parcours. Exemple : Je me pose des questions",
+          "placeholder": "Le titre de la rubrique de parcours. Exemple : Je me pose des questions",
           "visible": true,
           "editable": true
         },
@@ -37,7 +37,7 @@
       "description": {
         "edit": {
           "label": "description",
-          "description": "",
+          "description": "Le contenu de la rubrique de parcours. Le markdown est supporté et vous pouvez intégrer des fichiers images, pdf et vidéos à l'aide du bouton image dans les outils ci-dessus",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -51,7 +51,7 @@
       "timeline": {
         "edit": {
           "label": "timeline",
-          "description": "",
+          "description": "Est ce que cette rubrique doit apparaitre dans la timeline du parcours (true) ? Ou dans les tuiles (false)",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -65,7 +65,7 @@
       "order": {
         "edit": {
           "label": "order",
-          "description": "",
+          "description": "Ordre d'apparition dans le parcours / dans les tuiles",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -79,7 +79,7 @@
       "links": {
         "edit": {
           "label": "links",
-          "description": "",
+          "description": "Liens navigables de la rubrique",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -102,7 +102,7 @@
         [
           {
             "name": "title",
-            "size": 6
+            "size": 12
           }
         ],
         [
@@ -114,11 +114,11 @@
         [
           {
             "name": "timeline",
-            "size": 4
+            "size": 6
           },
           {
             "name": "order",
-            "size": 4
+            "size": 6
           }
         ],
         [

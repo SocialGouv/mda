@@ -23,8 +23,8 @@
       "title": {
         "edit": {
           "label": "title",
-          "description": "",
-          "placeholder": "",
+          "description": "Le titre de l'étape. Exemple : Mon étape",
+          "placeholder": "Le titre de l'étape. Exemple : Mon étape",
           "visible": true,
           "editable": true
         },
@@ -37,7 +37,7 @@
       "recap": {
         "edit": {
           "label": "recap",
-          "description": "",
+          "description": "Le récapitulatif de l'étape",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -51,7 +51,7 @@
       "type": {
         "edit": {
           "label": "type",
-          "description": "",
+          "description": "Le type d'étape. Valeurs possibles perso (parcours personnel) / pro (parcours professionnel)",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -65,7 +65,7 @@
       "section": {
         "edit": {
           "label": "section",
-          "description": "",
+          "description": "Les sections de l'étape de vie",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -79,8 +79,8 @@
       "slug": {
         "edit": {
           "label": "slug",
-          "description": "",
-          "placeholder": "",
+          "description": "L'identifiant url de l'étape de vie. Example mon-etape-de-vie",
+          "placeholder": "L'identifiant url de l'étape de vie. Example mon-etape-de-vie",
           "visible": true,
           "editable": true
         },
@@ -93,8 +93,8 @@
       "excerpt": {
         "edit": {
           "label": "excerpt",
-          "description": "",
-          "placeholder": "",
+          "description": "Résumé (chapô) de l'étape de vie",
+          "placeholder": "Résumé (chapô) de l'étape de vie",
           "visible": true,
           "editable": true
         },
@@ -134,6 +134,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "title",
+        "recap",
+        "type"
+      ],
       "edit": [
         [
           {
@@ -142,6 +148,16 @@
           },
           {
             "name": "slug",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "excerpt",
+            "size": 6
+          },
+          {
+            "name": "type",
             "size": 6
           }
         ],
@@ -156,23 +172,7 @@
             "name": "section",
             "size": 12
           }
-        ],
-        [
-          {
-            "name": "type",
-            "size": 6
-          },
-          {
-            "name": "excerpt",
-            "size": 6
-          }
         ]
-      ],
-      "list": [
-        "id",
-        "title",
-        "recap",
-        "type"
       ]
     }
   },

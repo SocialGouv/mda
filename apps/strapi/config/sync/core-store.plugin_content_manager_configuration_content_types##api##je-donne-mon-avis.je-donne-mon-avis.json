@@ -23,8 +23,8 @@
       "title": {
         "edit": {
           "label": "title",
-          "description": "",
-          "placeholder": "",
+          "description": "Le titre de la page. Exemple : Je donne mon avis",
+          "placeholder": "Le titre de la page. Exemple : Je donne mon avis",
           "visible": true,
           "editable": true
         },
@@ -37,7 +37,7 @@
       "content": {
         "edit": {
           "label": "content",
-          "description": "",
+          "description": "Le contenu de la page. Le markdown est supporté et vous pouvez intégrer des fichiers images, pdf et vidéos à l'aide du bouton image dans les outils ci-dessus",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -51,7 +51,7 @@
       "alerts": {
         "edit": {
           "label": "alerts",
-          "description": "",
+          "description": "L'encart informatif sur le formulaire",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -65,7 +65,7 @@
       "feedbackForm": {
         "edit": {
           "label": "feedbackForm",
-          "description": "",
+          "description": "Le formulaire de feedback",
           "placeholder": "",
           "visible": true,
           "editable": true

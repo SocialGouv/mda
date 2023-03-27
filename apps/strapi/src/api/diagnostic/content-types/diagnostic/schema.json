@@ -12,7 +12,10 @@
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
     },
     "content": {
       "type": "richtext",

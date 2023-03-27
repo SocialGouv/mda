@@ -2,6 +2,7 @@
   "key": "plugin_meilisearch_meilisearch_indexed_content_types",
   "value": [
     "api::annuaire.annuaire",
+    "api::etape-de-vie.etape-de-vie",
     "api::fiche-pratique.fiche-pratique",
     "api::glossaire-item.glossaire-item",
     "api::je-donne-mon-avis.je-donne-mon-avis",

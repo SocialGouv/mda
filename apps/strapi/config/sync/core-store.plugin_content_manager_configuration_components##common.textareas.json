@@ -23,8 +23,8 @@
       "label": {
         "edit": {
           "label": "label",
-          "description": "",
-          "placeholder": "",
+          "description": "Le label de la zone de texte. Exemple : Saisissez ici votre message",
+          "placeholder": "Le label de la zone de texte. Exemple : Saisissez ici votre message",
           "visible": true,
           "editable": true
         },
@@ -37,7 +37,7 @@
       "hint": {
         "edit": {
           "label": "hint",
-          "description": "",
+          "description": "Le conseil de remplissage de la zone de texte. Exemple : Saisie limitée à 1000 caractères",
           "placeholder": "",
           "visible": true,
           "editable": true
