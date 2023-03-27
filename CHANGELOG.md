@@ -1,3 +1,16 @@
+# [1.9.0](https://github.com/SocialGouv/mda/compare/v1.8.1...v1.9.0) (2023-03-27)
+
+
+### Bug Fixes
+
+* **glossary:** Broken url regex ([#209](https://github.com/SocialGouv/mda/issues/209)) ([b35f992](https://github.com/SocialGouv/mda/commit/b35f992b6d36dbe94c6cc1b0031fd2e2737b7407))
+* **nginx:** Support 512mb files ([#211](https://github.com/SocialGouv/mda/issues/211)) ([3a7d06e](https://github.com/SocialGouv/mda/commit/3a7d06e35c5ac3d41a3e9ce7396d541a0e63b4fd))
+
+
+### Features
+
+* activating Matomo session time calculation ([#210](https://github.com/SocialGouv/mda/issues/210)) ([3924457](https://github.com/SocialGouv/mda/commit/39244578695491d0405eef325d43655259728d87))
+
 ## [1.8.1](https://github.com/SocialGouv/mda/compare/v1.8.0...v1.8.1) (2023-03-24)
 
 
