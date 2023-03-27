@@ -47,6 +47,9 @@ strapi:
         name: "mda-revalidate-webhook"
     - secretRef:
         name: "mda-meilisearch"
+  ingress:
+    annotations:
+      nginx.ingress.kubernetes.io/proxy-body-size: 512m
   vars:
     DATABASE_HOST: "$(PGHOST)"
     DATABASE_PORT: "$(PGPORT)"
