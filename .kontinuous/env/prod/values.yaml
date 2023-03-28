@@ -26,8 +26,8 @@ jobs:
           PRODUCTION: "true"
           ROBOT: "true"
 strapi:
-host: strapi.maisondelautisme.gouv.fr
-certSecretName: 2023-mda-strapi-crt
+  host: strapi.maisondelautisme.gouv.fr
+  certSecretName: 2023-mda-strapi-crt
   autoscale:
     enabled: true
     minReplicas: 2
