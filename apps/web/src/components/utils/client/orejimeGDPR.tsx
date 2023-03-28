@@ -12,6 +12,7 @@ export const OrejimeGDPR = () => {
         {
           name: "internal-tracker",
           title: "Cookies techniques nécessaires au bon fonctionnement du site",
+          purposes: ["Analytics"],
           description:
             "Utilisation: Ces cookies permettent au site de fonctionner de manière optimale. Vous pouvez vous y opposer et les supprimer en utilisant les paramètres de votre navigateur, cependant votre expérience utilisateur risque d’être dégradée.",
           required: !0,
@@ -19,6 +20,7 @@ export const OrejimeGDPR = () => {
         {
           name: "streaming-video",
           title: "Streaming Vidéo",
+          purposes: ["Streaming vidéo"],
           description:
             'Utilisation: Ces cookies permettent la lecture de vidéos sur le site maisondelautisme en provenance de sites d’hébergement de contenus. <a href="https://policies.google.com/privacy" target="_blank" title="politique de confidentialité de YouTube - nouvelle fenêtre">"Politique de confidentialité de YouTube"</a>',
           callback: function (...args: unknown[]) {
