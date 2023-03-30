@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/SocialGouv/mda/compare/v1.9.1...v1.9.2) (2023-03-30)
+
+
+### Bug Fixes
+
+* Revert "fix(prod): Increase memory limit killing pods during upload" ([#221](https://github.com/SocialGouv/mda/issues/221)) ([dfee7af](https://github.com/SocialGouv/mda/commit/dfee7affc136108bbb2ed5149d71fba909ef2064))
+
 ## [1.9.1](https://github.com/SocialGouv/mda/compare/v1.9.0...v1.9.1) (2023-03-30)
 
 
