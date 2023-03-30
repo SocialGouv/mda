@@ -11,13 +11,13 @@
     "lint": "eslint",
     "content:dump": "strapi export --no-encrypt --only content --file content-dump",
     "content:import": "strapi import --only content --force --file content-dump.tar.gz",
-    "generate-types": "ts-node src/commands/strapi-generate-types.ts -f ../../packages/strapi-types/index.d.ts && echo \"/* eslint-disable */\n$(cat ../../packages/strapi-types/index.d.ts)\" > ../../packages/strapi-types/index.d.ts",
-    "generate-env": "echo \"MDA_ENV=dev\nAPP_KEYS=$(openssl rand -base64 32),$(openssl rand -base64 32)\nAPI_TOKEN_SALT=$(openssl rand -base64 32)\nADMIN_JWT_SECRET=$(openssl rand -base64 32)\nJWT_SECRET=$(openssl rand -base64 32)\" > .env"
+    "generate-types": "ts-node src/commands/strapi-generate-types.ts -f ../../packages/strapi-types/strapi.d.ts && echo \"/* eslint-disable */\n$(cat ../../packages/strapi-types/strapi.d.ts)\" > ../../packages/strapi-types/strapi.d.ts",
+    "generate-env": "echo \"MDA_ENV=dev\nAPP_KEYS=$(openssl rand -base64 32),$(openssl rand -base64 32)\nAPI_TOKEN_SALT=$(openssl rand -base64 32)\nADMIN_JWT_SECRET=$(openssl rand -base64 32)\nJWT_SECRET=$(openssl rand -base64 32)\nTRANSFER_TOKEN_SALT=$(openssl rand -base64 32)\nMEILISEARCH_HOST=http://localhost:7700\nMEILISEARCH_MASTER_KEY=masterKey\" > .env"
   },
   "devDependencies": {
     "@mda/eslint-config": "*",
     "@mda/strapi-types": "*",
-    "@types/jsonwebtoken": "^9.0.0",
+    "@types/jsonwebtoken": "^9.0.1",
     "@types/koa": "^2.13.5",
     "@types/koa2-ratelimit": "^0.9.3",
     "@types/node-fetch": "^2.6.2",
@@ -25,11 +25,13 @@
   },
   "dependencies": {
     "@mda/strapi-plugin-mda": "*",
-    "@strapi/plugin-users-permissions": "4.6.0",
-    "@strapi/strapi": "4.6.0",
-    "pg": "8.8.0",
-    "strapi-plugin-config-sync": "^1.1.0",
+    "@strapi/plugin-users-permissions": "4.8.2",
+    "@strapi/strapi": "4.8.2",
+    "pg": "8.10.0",
+    "request": "^2.88.2",
+    "strapi-plugin-config-sync": "^1.1.1",
     "strapi-plugin-import-export-entries": "^1.18.0",
+    "strapi-plugin-meilisearch": "^0.9.1",
     "strapi-plugin-populate-deep": "^2.0.0",
     "strapi-plugin-slugify": "^2.3.2"
   },

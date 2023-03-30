@@ -4,7 +4,7 @@ import clsx from "clsx";
 import type { PropsWithChildren } from "react";
 import { useState } from "react";
 
-import { type NextLinkOrAProps, NextLinkOrA } from "../../utils/NextLinkOrA";
+import { NextLinkOrA, type NextLinkOrAProps } from "../../utils/NextLinkOrA";
 
 export const Breadcrumb = ({ children, className }: PropsWithChildren<{ className?: string }>) => {
   const [isExpanded, setIsExpanded] = useState(false);

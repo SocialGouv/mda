@@ -3,6 +3,20 @@ global:
   imageProject: maison-de-l-autisme
   imageRepository: mda
 
+meilisearch:
+  ~chart: app
+  image: getmeili/meilisearch
+  containerPort: 7700
+  probesPath: /health
+  envFrom:
+    - secretRef:
+        name: "mda-meilisearch"
+  env:
+    - name: MEILI_NO_ANALYTICS
+      value: "true"
+  ingress:
+    enabled: false
+
 web:
   ~chart: app
   containerPort: 3000
@@ -31,6 +45,11 @@ strapi:
         name: "mda-strapi"
     - secretRef:
         name: "mda-revalidate-webhook"
+    - secretRef:
+        name: "mda-meilisearch"
+  ingress:
+    annotations:
+      nginx.ingress.kubernetes.io/proxy-body-size: 512m
   vars:
     DATABASE_HOST: "$(PGHOST)"
     DATABASE_PORT: "$(PGPORT)"
@@ -42,6 +61,7 @@ strapi:
     GITHUB_SHA: "{{ $.Values.global.sha }}"
     MDA_ENV: "{{ .Values.global.env }}"
     WEB_URL: "https://{{ .Values.global.host }}"
+    MEILISEARCH_HOST: "http://meilisearch"
 
 jobs:
   runs:

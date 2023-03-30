@@ -16,8 +16,13 @@ const Glossary = async () => {
           <div key={index} className={clsx(index > 0 && "fr-mt-2w")}>
             {item.attributes.url ? (
               <>
-                <dt className="fr-text--bold fr-text--lg fr-mb-0" id={`glossaire-item-${item.id}`}>
-                  <a href={item.attributes.url} target="_blank" rel="noreferrer">
+                <dt className="fr-text--bold fr-text--lg fr-mb-0" id={item.attributes.title}>
+                  <a
+                    href={item.attributes.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${item.attributes.title}, ouvrir dans une nouvelle fenêtre`}
+                  >
                     {item.attributes.title}
                   </a>
                 </dt>
@@ -26,7 +31,7 @@ const Glossary = async () => {
               </>
             ) : (
               <>
-                <dt className="fr-text--bold fr-text--lg fr-mb-0" id={`glossaire-item-${item.id}`}>
+                <dt className="fr-text--bold fr-text--lg fr-mb-0" id={item.attributes.title}>
                   {item.attributes.title}
                 </dt>
                 <dd className="fr-m-0">{item.attributes.description}</dd>

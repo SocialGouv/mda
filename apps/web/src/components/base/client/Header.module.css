@@ -1,0 +1,55 @@
+
+@media (min-width: 62em) {
+    .searchSuggestions {
+        text-align: left;
+        position: absolute;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 2.5em;
+        max-height: 10em;
+        overflow-y: auto;
+        border-left: 1px solid var(--border-action-high-blue-france);
+        border-right: 1px solid var(--border-action-high-blue-france);
+        border-bottom: 1px solid var(--border-action-high-blue-france);
+        padding: 0;
+        background-color: var(--background-raised-grey);
+        border-top: none;
+        z-index: 10000;
+    }
+    .searchSuggestions ul {
+        padding: .25rem 0;
+    }
+    .searchSuggestions li > * {
+        padding: .25rem 1rem;
+        font-size: .875rem;
+        line-height: 1.25;
+    }
+}
+
+@media (max-width: 62em) {
+    .searchSuggestions ul {
+        padding: 1rem 0;
+    }
+}
+
+.searchSuggestions li > * {
+    display: block;
+    padding: .25rem 1rem;
+    font-size: .875rem;
+    line-height: 1.25;
+}
+
+.searchSuggestions li a {
+    color: var(--text-active-blue-france);
+}
+
+.searchSuggestions li a:hover,
+.searchSuggestions li a:focus {
+    background: var(--background-action-high-blue-france);
+    color: var(--text-inverted-blue-france);
+}
+.searchSuggestions li a:active {
+    background: var(--background-action-high-blue-france-active);
+    color: var(--text-inverted-blue-france);
+}

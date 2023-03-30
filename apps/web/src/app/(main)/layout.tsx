@@ -1,10 +1,8 @@
 import "../../styles/global.css";
 
 import { config } from "@common/config";
-import { DEFAULT_SEO_CONFIG } from "@common/config/next-seo";
 import { BreadcrumbDynamic } from "@components/base/client/BreadcrumbDynamic";
 import { Header } from "@components/base/client/Header";
-import { ScrollUp } from "@components/base/client/ScrollUp";
 import { DarkTheme } from "@components/utils/client/DarkTheme";
 import { DsfrScript } from "@components/utils/client/DsfrScript";
 import { Matomo } from "@components/utils/client/Matomo";
@@ -26,20 +24,17 @@ import {
   Grid,
   GridCol,
   Logo,
-  Notice,
   SkipLinks,
   SkipLinksItem,
 } from "@design-system";
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 import Link from "next/link";
-import { NextSeo } from "next-seo";
 import { type PropsWithChildren } from "react";
 
 const RootLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang="fr">
       <head>
-        <NextSeo {...DEFAULT_SEO_CONFIG} />
         <Matomo env={config.env} />
         <TarteAuCitronGDPR env={config.env} />
         <DarkTheme />
@@ -48,15 +43,11 @@ const RootLayout = ({ children }: PropsWithChildren) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body>
-        <ScrollUp />
         <SkipLinks>
           <SkipLinksItem href="#content">Contenu</SkipLinksItem>
           <SkipLinksItem href="#header">Menu</SkipLinksItem>
           <SkipLinksItem href="#footer">Pied de page</SkipLinksItem>
         </SkipLinks>
-        <Notice className="fr-no-print fr-beta-banner">
-          <NextLinkOrA href="je-donne-mon-avis">Service en version beta</NextLinkOrA>
-        </Notice>
         <Header />
         <BreadcrumbDynamic />
         <main role="main" id="content">
@@ -121,17 +112,26 @@ const RootLayout = ({ children }: PropsWithChildren) => {
             <FooterBodyContent>
               <FooterBodyContentDescription>
                 Ce site est fait pour les personnes autistes, par des personnes autistes, et avec des personnes
-                concernées. C'est une version beta en cours de déploiement progressif. Vos commentaires, réactions et
-                propositions sont précieux pour nous aider à améliorer ce service au fur et à mesure. Un oubli&nbsp;?
-                Une suggestion&nbsp;? Utilisez le module{" "}
-                <NextLinkOrA href="/je-donne-mon-avis">Je donne mon avis</NextLinkOrA> pour soumettre vos idées afin de
-                contribuer à enrichir ce service public.
+                concernées. Vos commentaires, réactions et propositions sont précieux pour nous aider à améliorer ce
+                service au fur et à mesure. Un oubli&nbsp;? Une suggestion&nbsp;? Utilisez le module{" "}
+                <NextLinkOrA
+                  href="/je-donne-mon-avis"
+                  title="Partagez votre avis sur ce site internet et vos idées d'amélioration"
+                >
+                  Je donne mon avis
+                </NextLinkOrA>{" "}
+                pour soumettre vos idées afin de contribuer à enrichir ce service public.
               </FooterBodyContentDescription>
               <FooterBodyContentDescription>
                 Attention, les demandes personnelles transmises via ce formulaire ne pourront être traitées sur ce site.
                 Pour les demandes personnelles, veuillez vous rapprocher de l'organisme en charge de votre dossier. Pour
                 toute question, vous pouvez contacter{" "}
-                <a href="https://www.autismeinfoservice.fr/" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.autismeinfoservice.fr/"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Site Autisme Info Service - nouvelle fenêtre"
+                >
                   Autisme Info Service
                 </a>
                 .
@@ -143,6 +143,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
                     target="_blank"
                     rel="noreferrer"
                     isExternal
+                    title="Site du ministère chargé des personnes handicapées - nouvelle fenêtre"
                   >
                     Handicap.gouv.fr
                   </FooterContentLink>
@@ -153,6 +154,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
                     target="_blank"
                     rel="noreferrer"
                     isExternal
+                    title="Site mon parcours handicap - nouvelle fenêtre"
                   >
                     Mon Parcours Handicap
                   </FooterContentLink>
@@ -163,6 +165,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
                     target="_blank"
                     rel="noreferrer"
                     isExternal
+                    title="Site mes droits sociaux - nouvelle fenêtre"
                   >
                     Mes Droits Sociaux
                   </FooterContentLink>
@@ -173,6 +176,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
                     target="_blank"
                     rel="noreferrer"
                     isExternal
+                    title="Site Ministère des Solidarités, de l'Autonomie et des Personnes Handicapées - nouvelle fenêtre"
                   >
                     Ministère des Solidarités, de l'Autonomie et des Personnes Handicapées
                   </FooterContentLink>
@@ -180,22 +184,46 @@ const RootLayout = ({ children }: PropsWithChildren) => {
               </FooterBodyContentItems>
               <FooterBodyContentItems>
                 <FooterBodyItem>
-                  <FooterContentLink href="https://www.legifrance.gouv.fr/" target="_blank" rel="noreferrer" isExternal>
+                  <FooterContentLink
+                    href="https://www.legifrance.gouv.fr/"
+                    target="_blank"
+                    rel="noreferrer"
+                    isExternal
+                    title="Site legifrance.gouv.fr - nouvelle fenêtre"
+                  >
                     legifrance.gouv.fr
                   </FooterContentLink>
                 </FooterBodyItem>
                 <FooterBodyItem>
-                  <FooterContentLink href="https://www.gouvernement.fr/" target="_blank" rel="noreferrer" isExternal>
+                  <FooterContentLink
+                    href="https://www.gouvernement.fr/"
+                    target="_blank"
+                    rel="noreferrer"
+                    isExternal
+                    title="Site gouvernement.fr - nouvelle fenêtre"
+                  >
                     gouvernement.fr
                   </FooterContentLink>
                 </FooterBodyItem>
                 <FooterBodyItem>
-                  <FooterContentLink href="https://www.service-public.fr/" target="_blank" rel="noreferrer" isExternal>
+                  <FooterContentLink
+                    href="https://www.service-public.fr/"
+                    target="_blank"
+                    rel="noreferrer"
+                    isExternal
+                    title="Site service-public.fr - nouvelle fenêtre"
+                  >
                     service-public.fr
                   </FooterContentLink>
                 </FooterBodyItem>
                 <FooterBodyItem>
-                  <FooterContentLink href="https://www.data.gouv.fr/" target="_blank" rel="noreferrer" isExternal>
+                  <FooterContentLink
+                    href="https://www.data.gouv.fr/"
+                    target="_blank"
+                    rel="noreferrer"
+                    isExternal
+                    title="Site data.gouv.fr - nouvelle fenêtre"
+                  >
                     data.gouv.fr
                   </FooterContentLink>
                 </FooterBodyItem>
@@ -207,7 +235,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
               <FooterBottomLink href="/plan-du-site">Plan du site</FooterBottomLink>
             </FooterBottomItem>
             <FooterBottomItem>
-              <FooterBottomLink href="/accessibilite">Accessibilité&nbsp;: non conforme</FooterBottomLink>
+              <FooterBottomLink href="/accessibilite">Accessibilité&nbsp;: partiellement conforme</FooterBottomLink>
             </FooterBottomItem>
             <FooterBottomItem>
               <FooterBottomLink href="/mentions-legales">Mentions légales</FooterBottomLink>

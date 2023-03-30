@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "etape_de_vies",
+  "info": {
+    "singularName": "etape-de-vie",
+    "pluralName": "etape-de-vies",
+    "displayName": "Étapes de vie",
+    "description": "Une étape de vie est un ensemble d'informations regroupé par catégorie."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "recap": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "fiche-pratique-content.encart"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "pro",
+        "perso"
+      ],
+      "default": "perso",
+      "required": true
+    },
+    "section": {
+      "type": "component",
+      "repeatable": true,
+      "component": "fiche-pratique-content.encart"
+    },
+    "slug": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "excerpt": {
+      "type": "text",
+      "required": true,
+      "maxLength": 200
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { type Response } from "@services/strapiApiTypes";
+import { type Response } from "@mda/strapi-types";
 import { mountStoreDevtool } from "simple-zustand-devtools";
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";

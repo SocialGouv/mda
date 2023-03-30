@@ -12,5 +12,5 @@ export const CollapsedSectionGroupHead = ({ children, className }: PropsWithChil
 );
 
 export const CollapsedSectionGroupBody = ({ children }: PropsWithChildren) => (
-  <div className={styles.body}>{children}</div>
+  <ul className={styles.body}>{children}</ul>
 );

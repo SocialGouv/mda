@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_parcours_item_parcour_items",
+  "info": {
+    "displayName": "Item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "timeline": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.links"
+    }
+  }
+}

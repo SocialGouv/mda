@@ -4,6 +4,30 @@
   "type": "public",
   "permissions": [
     {
+      "action": "api::accessibilite.accessibilite.find"
+    },
+    {
+      "action": "api::accueil.accueil.find"
+    },
+    {
+      "action": "api::annuaire.annuaire.find"
+    },
+    {
+      "action": "api::diagnostic.diagnostic.find"
+    },
+    {
+      "action": "api::etape-de-vie.etape-de-vie.find"
+    },
+    {
+      "action": "api::etape-de-vie.etape-de-vie.findOne"
+    },
+    {
+      "action": "api::event.event.find"
+    },
+    {
+      "action": "api::event.event.findOne"
+    },
+    {
       "action": "api::fiche-pratique.fiche-pratique.find"
     },
     {
@@ -16,10 +40,31 @@
       "action": "api::glossaire-item.glossaire-item.findOne"
     },
     {
+      "action": "api::je-donne-mon-avis.je-donne-mon-avis.find"
+    },
+    {
       "action": "api::maison-de-l-autisme.maison-de-l-autisme.find"
     },
     {
+      "action": "api::maison-de-l-autisme.maison-de-l-autisme.upcomingEvents"
+    },
+    {
+      "action": "api::mentions-legales.mentions-legales.find"
+    },
+    {
       "action": "api::mes-aides.mes-aides.find"
+    },
+    {
+      "action": "api::parcours.parcours.find"
+    },
+    {
+      "action": "api::parcours.parcours.findOne"
+    },
+    {
+      "action": "api::plan-du-site.plan-du-site.find"
+    },
+    {
+      "action": "api::politique-de-confidentialite.politique-de-confidentialite.find"
     },
     {
       "action": "api::question.question.find"
@@ -29,6 +74,12 @@
     },
     {
       "action": "plugin::slugify.slugController.findSlug"
+    },
+    {
+      "action": "plugin::upload.content-api.find"
+    },
+    {
+      "action": "plugin::upload.content-api.findOne"
     }
   ]
 }

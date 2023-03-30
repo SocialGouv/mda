@@ -5,6 +5,321 @@
   "permissions": [
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::accessibilite.accessibilite",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::accessibilite.accessibilite",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::accessibilite.accessibilite",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::accessibilite.accessibilite",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::accueil.accueil",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "img",
+          "links.text",
+          "links.url",
+          "links.theme",
+          "DEMO_content",
+          "MDA_title",
+          "MDA_subtitle",
+          "MDA_content",
+          "MDA_link_text",
+          "MDA_img"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::accueil.accueil",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::accueil.accueil",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::accueil.accueil",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "img",
+          "links.text",
+          "links.url",
+          "links.theme",
+          "DEMO_content",
+          "MDA_title",
+          "MDA_subtitle",
+          "MDA_content",
+          "MDA_link_text",
+          "MDA_img"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::accueil.accueil",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "img",
+          "links.text",
+          "links.url",
+          "links.theme",
+          "DEMO_content",
+          "MDA_title",
+          "MDA_subtitle",
+          "MDA_content",
+          "MDA_link_text",
+          "MDA_img"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::annuaire.annuaire",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "links.text",
+          "links.url",
+          "links.theme"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::annuaire.annuaire",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::annuaire.annuaire",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "links.text",
+          "links.url",
+          "links.theme"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::annuaire.annuaire",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "links.text",
+          "links.url",
+          "links.theme"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::diagnostic.diagnostic",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "bottom_content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::diagnostic.diagnostic",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::diagnostic.diagnostic",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "bottom_content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::diagnostic.diagnostic",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "bottom_content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::etape-de-vie.etape-de-vie",
+      "properties": {
+        "fields": [
+          "title",
+          "recap.title",
+          "recap.content",
+          "type",
+          "section.title",
+          "section.content",
+          "slug",
+          "excerpt"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::etape-de-vie.etape-de-vie",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::etape-de-vie.etape-de-vie",
+      "properties": {
+        "fields": [
+          "title",
+          "recap.title",
+          "recap.content",
+          "type",
+          "section.title",
+          "section.content",
+          "slug",
+          "excerpt"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::etape-de-vie.etape-de-vie",
+      "properties": {
+        "fields": [
+          "title",
+          "recap.title",
+          "recap.content",
+          "type",
+          "section.title",
+          "section.content",
+          "slug",
+          "excerpt"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::event.event",
+      "properties": {
+        "fields": [
+          "title",
+          "description",
+          "start_date",
+          "end_date",
+          "connection_link"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::event.event",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::event.event",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::event.event",
+      "properties": {
+        "fields": [
+          "title",
+          "description",
+          "start_date",
+          "end_date",
+          "connection_link"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::event.event",
+      "properties": {
+        "fields": [
+          "title",
+          "description",
+          "start_date",
+          "end_date",
+          "connection_link"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::fiche-pratique.fiche-pratique",
       "properties": {
         "fields": [
@@ -13,7 +328,8 @@
           "recap.content",
           "section.title",
           "section.content",
-          "slug"
+          "slug",
+          "excerpt"
         ]
       },
       "conditions": []
@@ -34,7 +350,8 @@
           "recap.content",
           "section.title",
           "section.content",
-          "slug"
+          "slug",
+          "excerpt"
         ]
       },
       "conditions": []
@@ -49,7 +366,8 @@
           "recap.content",
           "section.title",
           "section.content",
-          "slug"
+          "slug",
+          "excerpt"
         ]
       },
       "conditions": []
@@ -98,13 +416,140 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::je-donne-mon-avis.je-donne-mon-avis",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "alerts.title",
+          "alerts.content",
+          "alerts.type",
+          "feedbackForm.opinion_title",
+          "feedbackForm.profile.label",
+          "feedbackForm.profile.options.label",
+          "feedbackForm.profile.options.value",
+          "feedbackForm.opinion.label",
+          "feedbackForm.opinion.hint",
+          "feedbackForm.contact_details_title",
+          "feedbackForm.contact_details_content",
+          "feedbackForm.contact_details_phone.label",
+          "feedbackForm.contact_details_phone.hint",
+          "feedbackForm.contact_details_phone.type",
+          "feedbackForm.contact_details_phone.autocomplete",
+          "feedbackForm.contact_details_email.label",
+          "feedbackForm.contact_details_email.hint",
+          "feedbackForm.contact_details_email.type",
+          "feedbackForm.contact_details_email.autocomplete",
+          "feedbackForm.success_message.title",
+          "feedbackForm.success_message.content",
+          "feedbackForm.success_message.type",
+          "feedbackForm.error_message.title",
+          "feedbackForm.error_message.content",
+          "feedbackForm.error_message.type",
+          "feedbackForm.submit_message",
+          "feedbackForm.loading_message"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::je-donne-mon-avis.je-donne-mon-avis",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::je-donne-mon-avis.je-donne-mon-avis",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::je-donne-mon-avis.je-donne-mon-avis",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "alerts.title",
+          "alerts.content",
+          "alerts.type",
+          "feedbackForm.opinion_title",
+          "feedbackForm.profile.label",
+          "feedbackForm.profile.options.label",
+          "feedbackForm.profile.options.value",
+          "feedbackForm.opinion.label",
+          "feedbackForm.opinion.hint",
+          "feedbackForm.contact_details_title",
+          "feedbackForm.contact_details_content",
+          "feedbackForm.contact_details_phone.label",
+          "feedbackForm.contact_details_phone.hint",
+          "feedbackForm.contact_details_phone.type",
+          "feedbackForm.contact_details_phone.autocomplete",
+          "feedbackForm.contact_details_email.label",
+          "feedbackForm.contact_details_email.hint",
+          "feedbackForm.contact_details_email.type",
+          "feedbackForm.contact_details_email.autocomplete",
+          "feedbackForm.success_message.title",
+          "feedbackForm.success_message.content",
+          "feedbackForm.success_message.type",
+          "feedbackForm.error_message.title",
+          "feedbackForm.error_message.content",
+          "feedbackForm.error_message.type",
+          "feedbackForm.submit_message",
+          "feedbackForm.loading_message"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::je-donne-mon-avis.je-donne-mon-avis",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "alerts.title",
+          "alerts.content",
+          "alerts.type",
+          "feedbackForm.opinion_title",
+          "feedbackForm.profile.label",
+          "feedbackForm.profile.options.label",
+          "feedbackForm.profile.options.value",
+          "feedbackForm.opinion.label",
+          "feedbackForm.opinion.hint",
+          "feedbackForm.contact_details_title",
+          "feedbackForm.contact_details_content",
+          "feedbackForm.contact_details_phone.label",
+          "feedbackForm.contact_details_phone.hint",
+          "feedbackForm.contact_details_phone.type",
+          "feedbackForm.contact_details_phone.autocomplete",
+          "feedbackForm.contact_details_email.label",
+          "feedbackForm.contact_details_email.hint",
+          "feedbackForm.contact_details_email.type",
+          "feedbackForm.contact_details_email.autocomplete",
+          "feedbackForm.success_message.title",
+          "feedbackForm.success_message.content",
+          "feedbackForm.success_message.type",
+          "feedbackForm.error_message.title",
+          "feedbackForm.error_message.content",
+          "feedbackForm.error_message.type",
+          "feedbackForm.submit_message",
+          "feedbackForm.loading_message"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::maison-de-l-autisme.maison-de-l-autisme",
       "properties": {
         "fields": [
           "title",
           "content",
           "sections.title",
-          "sections.content"
+          "sections.content",
+          "events"
         ]
       },
       "conditions": []
@@ -123,7 +568,8 @@
           "title",
           "content",
           "sections.title",
-          "sections.content"
+          "sections.content",
+          "events"
         ]
       },
       "conditions": []
@@ -136,7 +582,47 @@
           "title",
           "content",
           "sections.title",
-          "sections.content"
+          "sections.content",
+          "events"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::mentions-legales.mentions-legales",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::mentions-legales.mentions-legales",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::mentions-legales.mentions-legales",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::mentions-legales.mentions-legales",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
         ]
       },
       "conditions": []
@@ -182,6 +668,153 @@
           "content",
           "sections.title",
           "sections.content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::parcours.parcours",
+      "properties": {
+        "fields": [
+          "title",
+          "slug",
+          "description",
+          "items.title",
+          "items.description",
+          "items.timeline",
+          "items.order",
+          "items.links.text",
+          "items.links.url",
+          "items.links.theme"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::parcours.parcours",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::parcours.parcours",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::parcours.parcours",
+      "properties": {
+        "fields": [
+          "title",
+          "slug",
+          "description",
+          "items.title",
+          "items.description",
+          "items.timeline",
+          "items.order",
+          "items.links.text",
+          "items.links.url",
+          "items.links.theme"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::parcours.parcours",
+      "properties": {
+        "fields": [
+          "title",
+          "slug",
+          "description",
+          "items.title",
+          "items.description",
+          "items.timeline",
+          "items.order",
+          "items.links.text",
+          "items.links.url",
+          "items.links.theme"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::plan-du-site.plan-du-site",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::plan-du-site.plan-du-site",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::plan-du-site.plan-du-site",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::plan-du-site.plan-du-site",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::politique-de-confidentialite.politique-de-confidentialite",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::politique-de-confidentialite.politique-de-confidentialite",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::politique-de-confidentialite.politique-de-confidentialite",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::politique-de-confidentialite.politique-de-confidentialite",
+      "properties": {
+        "fields": [
+          "title",
+          "content"
         ]
       },
       "conditions": []
@@ -283,18 +916,6 @@
       "conditions": []
     },
     {
-      "action": "admin::marketplace.plugins.install",
-      "subject": null,
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "admin::marketplace.plugins.uninstall",
-      "subject": null,
-      "properties": {},
-      "conditions": []
-    },
-    {
       "action": "admin::marketplace.read",
       "subject": null,
       "properties": {},
@@ -332,6 +953,42 @@
     },
     {
       "action": "admin::roles.update",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "admin::transfer.tokens.access",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "admin::transfer.tokens.create",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "admin::transfer.tokens.delete",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "admin::transfer.tokens.read",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "admin::transfer.tokens.regenerate",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "admin::transfer.tokens.update",
       "subject": null,
       "properties": {},
       "conditions": []

@@ -22,7 +22,12 @@
     "sections": {
       "type": "component",
       "repeatable": true,
-      "component": "sections.sections"
+      "component": "common.sections"
+    },
+    "events": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event"
     }
   }
 }

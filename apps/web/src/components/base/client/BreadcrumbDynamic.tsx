@@ -3,20 +3,38 @@
 import { Breadcrumb, BreadcrumbItem, ClientContainer } from "@design-system/client";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 import styles from "./BreadcrumbDynamic.module.css";
 
 export const BreadcrumbDynamic = () => {
   const currentPathName = usePathname();
+
+  const [pageTitle, setPageTitle] = useState("");
+
+  useEffect(() => {
+    const pageTitle = document.title;
+    setPageTitle(
+      pageTitle.replace(" | Maison de l'autisme", "").replace("Fiche pratique - ", "").replace("Étape de vie - ", ""),
+    );
+  }, [currentPathName]);
+
   if (currentPathName === "/") return null;
 
   const filteredPath = currentPathName?.split("/").filter(el => el !== "");
 
   const breadcrumbs = filteredPath?.map((path, index) => {
     const href = "/" + filteredPath.slice(0, index + 1).join("/");
+    const getLabel = (label?: string) => {
+      if (index === filteredPath.length - 1) {
+        return label ? label : (path.charAt(0).toUpperCase() + path.slice(1)).replace(/-/g, " ");
+      } else {
+        return (path.charAt(0).toUpperCase() + path.slice(1)).replace(/-/g, " ");
+      }
+    };
     return {
       href,
-      label: (path.charAt(0).toUpperCase() + path.slice(1)).replace(/-/g, " "),
+      label: getLabel(pageTitle),
       isCurrent: index === filteredPath.length - 1,
     };
   });

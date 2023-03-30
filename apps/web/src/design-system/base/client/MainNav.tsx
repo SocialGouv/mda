@@ -2,10 +2,12 @@
 
 import { Menu } from "@headlessui/react";
 import clsx from "clsx";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { type PropsWithChildren, Fragment } from "react";
+import { Fragment, type PropsWithChildren } from "react";
 
 import { NextLinkOrA } from "../../utils/NextLinkOrA";
+import styles from "./MainNav.module.css";
 
 export const MainNav = ({ children }: PropsWithChildren) => {
   return (
@@ -34,7 +36,7 @@ export const MainNavItem = ({ children, href, onClick }: MainNavItemProps) => {
 export const MainNavItemWithDropdown = ({
   links,
   title,
-}: PropsWithChildren<{ links: Array<{ href: string; label: string; onClick: () => void }>; title: string }>) => {
+}: PropsWithChildren<{ links: Array<{ href: string; label: string; onClick?: () => void }>; title: string }>) => {
   const currentPathName = usePathname();
   const parentPath = currentPathName ? `/${currentPathName.split("/")[1]}` : undefined;
   const subLinkParentUrl = `/${links.map(link => link.href.split("/")[1])[0]}`;
@@ -44,17 +46,15 @@ export const MainNavItemWithDropdown = ({
       <Menu.Button className="fr-nav__btn" aria-current={isCurrent}>
         {title}
       </Menu.Button>
-      <Menu.Items>
-        <div className="fr-menu">
-          <div className="fr-menu__list">
-            {links.map(link => (
-              <Menu.Item key={link.href} as={Fragment}>
-                <NextLinkOrA href={link.href} className={clsx("fr-nav__link")} onClick={link.onClick}>
-                  {link.label}
-                </NextLinkOrA>
-              </Menu.Item>
-            ))}
-          </div>
+      <Menu.Items className="fr-menu">
+        <div className="fr-menu__list">
+          {links.map(link => (
+            <Menu.Item key={link.href} as={Fragment}>
+              <Link href={link.href} className={clsx("fr-nav__link", styles.sublink)} onClick={link.onClick}>
+                {link.label}
+              </Link>
+            </Menu.Item>
+          ))}
         </div>
       </Menu.Items>
     </Menu>

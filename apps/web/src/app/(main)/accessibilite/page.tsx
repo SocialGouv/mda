@@ -1,13 +1,14 @@
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
+import { Markdown } from "@components/utils/Markdown";
+import { fetchStrapi } from "@services/strapi";
 
-const Directory = () => {
+const Directory = async () => {
+  const strapiData = await fetchStrapi("accessibilite");
+  const data = strapiData.data?.attributes;
   return (
     <SimpleContentPage>
-      <h1>Accessibilité</h1>
-      <p>
-        Un audit d'accessibilité est prévu dans les prochaines semaines et permettra d'afficher un statut
-        d'accessibilité certifié par l'organisme auditeur.
-      </p>
+      {data?.title && <h1>{data.title}</h1>}
+      {data?.content && <Markdown>{data.content}</Markdown>}
     </SimpleContentPage>
   );
 };

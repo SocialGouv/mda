@@ -4,7 +4,7 @@ import type { PropsWithChildren } from "react";
 import { forwardRef } from "react";
 
 import { Container } from "../layout/Container";
-import { type NextLinkOrAProps, NextLinkOrA } from "../utils/NextLinkOrA";
+import { NextLinkOrA, type NextLinkOrAProps } from "../utils/NextLinkOrA";
 
 export const Footer = ({ children, className }: PropsWithChildren<{ className?: string }>) => (
   <footer className={clsx("fr-footer", className)} role="contentinfo" id="footer">
@@ -43,7 +43,9 @@ export const FooterBodyItem = ({ children }: PropsWithChildren) => {
 export const FooterBottom = ({ children }: PropsWithChildren) => {
   return (
     <div className="fr-footer__bottom">
-      <ul className="fr-footer__bottom-list">{children}</ul>
+      <nav>
+        <ul className="fr-footer__bottom-list">{children}</ul>
+      </nav>
       <div className="fr-footer__bottom-copy">
         <p>
           Sauf mention contraire, tous les contenus de ce site sont sous{" "}

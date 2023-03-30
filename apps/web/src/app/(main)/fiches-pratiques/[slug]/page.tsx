@@ -1,11 +1,11 @@
 import { type Next13ServerPageProps } from "@common/utils/next13";
 import { ActionsButtons } from "@components/base/client/ActionsButtons";
+import { Markdown } from "@components/utils/Markdown";
 import { Container, Grid, GridCol, SideMenuLink } from "@design-system";
 import { CollapsedSectionDynamicGroup, SideMenuDynamic } from "@design-system/client";
 import { fetchStrapi } from "@services/strapi";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import ReactMarkdown from "react-markdown";
 
 export type FichePratiqueProps = Next13ServerPageProps<"slug">;
 const FichePratique = async ({ params }: FichePratiqueProps) => {
@@ -55,7 +55,7 @@ const FichePratique = async ({ params }: FichePratiqueProps) => {
               </>
             </p>
             <div className="fr-text--xl">
-              <ReactMarkdown>{currentFiche.attributes.recap.content}</ReactMarkdown>
+              <Markdown>{currentFiche.attributes.recap.content}</Markdown>
             </div>
             <div className="fr-mt-8w">
               <Suspense fallback={<>Chargement des sections...</>}>
@@ -64,7 +64,7 @@ const FichePratique = async ({ params }: FichePratiqueProps) => {
                     currentFiche.attributes.section?.map((s, sectionIdx) => ({
                       id: `section-${sectionIdx}`,
                       title: s.title,
-                      content: <ReactMarkdown>{s.content}</ReactMarkdown>,
+                      content: <Markdown>{s.content}</Markdown>,
                     })) ?? []
                   }
                 />

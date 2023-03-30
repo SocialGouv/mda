@@ -8,6 +8,7 @@ export type TOCGDPRProps = Pick<typeof config, "env">;
 
 export const TarteAuCitronGDPR = ({ env: _env }: TOCGDPRProps) => {
   const handleLoad: ScriptProps["onLoad"] = useCallback(() => {
+    tarteaucitron.job = [];
     tarteaucitron.init({
       privacyUrl: "/politique-de-confidentialite#cookies" /* Privacy policy url */,
       bodyPosition: "bottom" /* or top to bring it as first element for accessibility */,

@@ -1,0 +1,78 @@
+{
+  "key": "plugin_content_manager_configuration_components::common.selects",
+  "value": {
+    "uid": "common.selects",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "label",
+      "defaultSortBy": "label",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "label": {
+        "edit": {
+          "label": "label",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "label",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "options": {
+        "edit": {
+          "label": "options",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "options",
+          "searchable": false,
+          "sortable": false
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "label",
+        "options"
+      ],
+      "edit": [
+        [
+          {
+            "name": "label",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "options",
+            "size": 12
+          }
+        ]
+      ]
+    },
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

@@ -1,9 +1,9 @@
 "use client";
 import { type ReactNode, useState } from "react";
 
-import { type CollapsedSectionProps, CollapsedSection } from "../CollapsedSection";
+import { CollapsedSection, type CollapsedSectionProps } from "../CollapsedSection";
 import { CollapsedSectionGroupBody, CollapsedSectionGroupHead } from "../CollapsedSectionGroup";
-import { type FormButtonProps, FormButton } from "../FormButton";
+import { FormButton, type FormButtonProps } from "../FormButton";
 
 interface CollapsedSectionDynamicGroupProps {
   className?: string;
@@ -30,28 +30,38 @@ export const CollapsedSectionDynamicGroup = ({ className, data }: CollapsedSecti
     if (sectionAlreadyOpen) {
       setIsOpenIds(isOpenIds.filter(id => sectionId !== id));
     }
+    setIsOpenAll(data.length === isOpenIds.length + 1);
   };
-
-  return (
-    <div className={className}>
-      <CollapsedSectionGroupHead className="fr-no-print">
-        <FormButton variant="secondary" size="sm" onClick={handleOpenAll}>
-          {isOpenAll ? "Tout replier" : "Tout déplier"}
-        </FormButton>
-      </CollapsedSectionGroupHead>
-      <CollapsedSectionGroupBody>
-        {data.map(({ content, id, title }) => (
-          <CollapsedSection
-            title={title}
-            key={`collapsedSection-${id}`}
-            id={id}
-            isOpen={isOpenIds.includes(id)}
-            openSection={handleOpenSection}
+  if (data.length !== 0) {
+    return (
+      <div className={className}>
+        <CollapsedSectionGroupHead className="fr-no-print">
+          <FormButton
+            variant="secondary"
+            size="sm"
+            onClick={handleOpenAll}
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
           >
-            {content}
-          </CollapsedSection>
-        ))}
-      </CollapsedSectionGroupBody>
-    </div>
-  );
+            {isOpenAll ? "Tout replier" : "Tout déplier"}
+          </FormButton>
+        </CollapsedSectionGroupHead>
+        <CollapsedSectionGroupBody>
+          {data.map(({ content, id, title }) => (
+            <CollapsedSection
+              title={title}
+              key={`collapsedSection-${id}`}
+              id={id}
+              isOpen={isOpenIds.includes(id)}
+              openSection={handleOpenSection}
+            >
+              {content}
+            </CollapsedSection>
+          ))}
+        </CollapsedSectionGroupBody>
+      </div>
+    );
+  }
+  return null;
 };

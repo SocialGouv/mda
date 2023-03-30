@@ -1,3 +1,89 @@
+# [1.9.0](https://github.com/SocialGouv/mda/compare/v1.8.1...v1.9.0) (2023-03-27)
+
+
+### Bug Fixes
+
+* **glossary:** Broken url regex ([#209](https://github.com/SocialGouv/mda/issues/209)) ([b35f992](https://github.com/SocialGouv/mda/commit/b35f992b6d36dbe94c6cc1b0031fd2e2737b7407))
+* **nginx:** Support 512mb files ([#211](https://github.com/SocialGouv/mda/issues/211)) ([3a7d06e](https://github.com/SocialGouv/mda/commit/3a7d06e35c5ac3d41a3e9ce7396d541a0e63b4fd))
+
+
+### Features
+
+* activating Matomo session time calculation ([#210](https://github.com/SocialGouv/mda/issues/210)) ([3924457](https://github.com/SocialGouv/mda/commit/39244578695491d0405eef325d43655259728d87))
+
+## [1.8.1](https://github.com/SocialGouv/mda/compare/v1.8.0...v1.8.1) (2023-03-24)
+
+
+### Bug Fixes
+
+* **search:** Add sections ([#202](https://github.com/SocialGouv/mda/issues/202)) ([aebac32](https://github.com/SocialGouv/mda/commit/aebac32d5c13c7d080f733098440a6fcbb3e310f))
+
+# [1.8.0](https://github.com/SocialGouv/mda/compare/v1.7.0...v1.8.0) (2023-03-24)
+
+
+### Bug Fixes
+
+* **breadCrumb:** Do not generate title twice ([#201](https://github.com/SocialGouv/mda/issues/201)) ([ba1f615](https://github.com/SocialGouv/mda/commit/ba1f615c30852bffb88e8830d6b86e78600f45f3))
+* **dockerfile:** Add strapi-types to container to be able to run commands ([1609467](https://github.com/SocialGouv/mda/commit/1609467c67dc8d432cebb27489ca9df382db3e0f))
+
+
+### Features
+
+* **uploads:** Increase file size to 512Mb ([#198](https://github.com/SocialGouv/mda/issues/198)) ([44e3727](https://github.com/SocialGouv/mda/commit/44e372730ed324552a6f0fbf6f3ad31f8f795a7a))
+
+# [1.7.0](https://github.com/SocialGouv/mda/compare/v1.6.1...v1.7.0) (2023-03-23)
+
+
+### Bug Fixes
+
+* resize textarea only vertically ([#181](https://github.com/SocialGouv/mda/issues/181)) ([3f6b87e](https://github.com/SocialGouv/mda/commit/3f6b87eadc049efe94cd8dacd021ad1f511d562b))
+* **tarteaucitron:** modal not opening ([#192](https://github.com/SocialGouv/mda/issues/192)) ([1926ab3](https://github.com/SocialGouv/mda/commit/1926ab35409f70a4d6f06c3ac813fa006917b5bc))
+
+
+### Features
+
+* add responsive iframe and img in strapi content ([#173](https://github.com/SocialGouv/mda/issues/173)) ([35dc448](https://github.com/SocialGouv/mda/commit/35dc4483ea5598b2cc755def6e8e0413b8442e06))
+* add search page ([#183](https://github.com/SocialGouv/mda/issues/183)) ([a904e5c](https://github.com/SocialGouv/mda/commit/a904e5c2276aad0d5207d6ce3a331366f21f272b))
+* add TarteAuCitron ([#177](https://github.com/SocialGouv/mda/issues/177)) ([01c027a](https://github.com/SocialGouv/mda/commit/01c027a1862c24f54d1017f8dbd863c254a5dd00))
+* dynamicizing the diagnostic page ([#179](https://github.com/SocialGouv/mda/issues/179)) ([1555df3](https://github.com/SocialGouv/mda/commit/1555df3e753e038ba217fff25f3c15037cbbc66c))
+* **etapes-de-vie:** Dissociate from fiches-pratiques ([#195](https://github.com/SocialGouv/mda/issues/195)) ([35b1b82](https://github.com/SocialGouv/mda/commit/35b1b82158568c6c7eda6af50dbfed47834cddb1))
+* **events:** MDA events ([#175](https://github.com/SocialGouv/mda/issues/175)) ([f18b0f1](https://github.com/SocialGouv/mda/commit/f18b0f19e5cbc9c65dc3b3572c85de95150cfa4c))
+* **je-donne-mon-avis:** dynamisation ([#182](https://github.com/SocialGouv/mda/issues/182)) ([eb45758](https://github.com/SocialGouv/mda/commit/eb45758f78df709b64dc5ad64f08b5d822e11842))
+* remove beta mode ([#174](https://github.com/SocialGouv/mda/issues/174)) ([68910ab](https://github.com/SocialGouv/mda/commit/68910abc25b74e4429912034510a873d298ac1a1))
+* **search:** last adjustments ([#188](https://github.com/SocialGouv/mda/issues/188)) ([bfa9199](https://github.com/SocialGouv/mda/commit/bfa919940267e509db958711010900e1a4a42440))
+* **strapi:** Activate transfer feature + azure storage ([#193](https://github.com/SocialGouv/mda/issues/193)) ([83cb675](https://github.com/SocialGouv/mda/commit/83cb675699b4a4b7fba4dcfdb460238c21611491))
+
+## [1.6.1](https://github.com/SocialGouv/mda/compare/v1.6.0...v1.6.1) (2023-03-15)
+
+
+### Bug Fixes
+
+* silent fetch/search strapi errors ([934034d](https://github.com/SocialGouv/mda/commit/934034d8d80bfdd3ca468cb7629d7afcd9231a4e))
+
+# [1.6.0](https://github.com/SocialGouv/mda/compare/v1.5.0...v1.6.0) (2023-03-15)
+
+
+### Bug Fixes
+
+* **prod:** temp enable mon-diagnostic page ([776e0c5](https://github.com/SocialGouv/mda/commit/776e0c5aa9b5610b6f7833bb824e275f959c4c25))
+* RG2A ([#141](https://github.com/SocialGouv/mda/issues/141)) ([1f7702d](https://github.com/SocialGouv/mda/commit/1f7702d777296f656fcba12944dbeabee961f93e))
+* rg2a (Fixes [#145](https://github.com/SocialGouv/mda/issues/145)) (Fixes [#146](https://github.com/SocialGouv/mda/issues/146)) ([05dc534](https://github.com/SocialGouv/mda/commit/05dc5342586cb4fac56466a997033a0a0ea162ce))
+* **seed:** Remove overlapping ids ([#151](https://github.com/SocialGouv/mda/issues/151)) ([55252bf](https://github.com/SocialGouv/mda/commit/55252bf580223fb76382443f093a40417afcb3a8))
+
+
+### Features
+
+* **accueil:** Dynamisation end ([#169](https://github.com/SocialGouv/mda/issues/169)) ([5dc6675](https://github.com/SocialGouv/mda/commit/5dc66752de2d3e1183f5b4f4de8c53c8a104d624))
+* add editable Maison de l'autisme page on Strapi ([#117](https://github.com/SocialGouv/mda/issues/117)) ([9202312](https://github.com/SocialGouv/mda/commit/9202312a846b5dc37d450c803c1e038301723b5e))
+* add iframe support ([#153](https://github.com/SocialGouv/mda/issues/153)) ([a372c06](https://github.com/SocialGouv/mda/commit/a372c068fe624676ffed0a37bc8dea81f001ca02))
+* add strapi annuaire & home page, breadcrumbs & dark theme & collpased section fix ([#132](https://github.com/SocialGouv/mda/issues/132)) ([94ba3f8](https://github.com/SocialGouv/mda/commit/94ba3f88837cb3ba8c745cd4fd9d3e6523ff079d))
+* add strapi Mes aides page ([#118](https://github.com/SocialGouv/mda/issues/118)) ([d709192](https://github.com/SocialGouv/mda/commit/d709192c47089b2e05522ad1bab46bcc6ec343c8))
+* dynamisation Strapi des pages de contenu simple ([#147](https://github.com/SocialGouv/mda/issues/147)) ([1ced0e8](https://github.com/SocialGouv/mda/commit/1ced0e86c300e590eadc2daab80e4d27f05ee55f))
+* **home:** Add dynamic image ([#140](https://github.com/SocialGouv/mda/issues/140)) ([678d7ef](https://github.com/SocialGouv/mda/commit/678d7efc6c95f573b75048758d6d1bebaf3181e8))
+* **mon-parcours:** dynamisation pages ([#144](https://github.com/SocialGouv/mda/issues/144)) ([23e0218](https://github.com/SocialGouv/mda/commit/23e0218f8fe25f83d78b2e17c8e04f6305fd06af))
+* **next:** assets proxy ([#154](https://github.com/SocialGouv/mda/issues/154)) ([bf9f8de](https://github.com/SocialGouv/mda/commit/bf9f8de8c41456d89c9899d44a2ffeef800c3ed1))
+* **search-bar:** search with meilisearch ([#148](https://github.com/SocialGouv/mda/issues/148)) ([dd2ec67](https://github.com/SocialGouv/mda/commit/dd2ec67bd28f31ad73facb1d34d2dd6acdf75873))
+
 # [1.5.0](https://github.com/SocialGouv/mda/compare/v1.4.3...v1.5.0) (2023-02-15)
 
 

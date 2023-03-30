@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "parcourss",
+  "info": {
+    "singularName": "parcours",
+    "pluralName": "parcourss",
+    "displayName": "Parcours",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "items": {
+      "displayName": "Parcours Item",
+      "type": "component",
+      "repeatable": true,
+      "component": "parcours-content.item"
+    }
+  }
+}

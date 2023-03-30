@@ -1,3 +1,4 @@
+import { Markdown } from "@components/utils/Markdown";
 import {
   Card,
   CardBody,
@@ -10,21 +11,21 @@ import {
 } from "@design-system";
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 import { fetchStrapi } from "@services/strapi";
-import ReactMarkdown from "react-markdown";
 
 const FichesPratiques = async () => {
   const fiches = await fetchStrapi("fiche-pratiques", { populate: "recap", sort: "id" }).then(
     responses => responses.data ?? [],
   );
+
   return (
     <section className="fr-py-6w fr-py-md-12w">
       <Container>
         <h1>Fiches pratiques</h1>
-        <Grid haveGutters>
+        <Grid as="ul" haveGutters>
           {fiches.map(fiche => {
             if (!fiche.attributes.slug) return;
             return (
-              <GridCol md={6} lg={4} key={fiche.id}>
+              <GridCol as="li" md={6} lg={4} key={fiche.id}>
                 <Card isEnlargeLink>
                   <CardBody>
                     <CardBodyContent>
@@ -33,13 +34,11 @@ const FichesPratiques = async () => {
                           {fiche.attributes.title}
                         </NextLinkOrA>
                       </CardBodyContentTitle>
-                      <CardBodyContentDescription>
-                        <ReactMarkdown>
-                          {fiche.attributes.recap.content.length < 160
-                            ? fiche.attributes.recap.content
-                            : `${fiche.attributes.recap.content.substring(0, 157)}...`}
-                        </ReactMarkdown>
-                      </CardBodyContentDescription>
+                      {fiche.attributes.excerpt && (
+                        <CardBodyContentDescription>
+                          <Markdown>{fiche.attributes.excerpt}</Markdown>
+                        </CardBodyContentDescription>
+                      )}
                     </CardBodyContent>
                   </CardBody>
                 </Card>

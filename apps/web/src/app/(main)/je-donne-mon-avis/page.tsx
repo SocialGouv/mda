@@ -1,31 +1,26 @@
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
+import { Markdown } from "@components/utils/Markdown";
 import { Alert, AlertTitle } from "@design-system";
+import { fetchStrapi } from "@services/strapi";
 
 import { FeedbackForm } from "./FeedbackForm";
 
-const Feedback = () => {
+const Feedback = async () => {
+  const strapiData = await fetchStrapi("je-donne-mon-avis", { populate: "deep" });
+  const data = strapiData.data?.attributes;
+
   return (
     <SimpleContentPage>
-      <h1>Partagez votre avis sur ce site internet et vos idées d'amélioration.</h1>
-      <p className="fr-text--lg">
-        Ce site est fait pour les personnes autistes, par des personnes autistes, et avec des personnes concernées.
-        C'est une version beta en cours de déploiement progressif. Vos commentaires, réactions et propositions sont
-        précieux pour nous aider à améliorer ce service au fur et à mesure.
-      </p>
-      <Alert>
-        <AlertTitle as="h2">
-          Attention, les demandes personnelles transmises via ce formulaire ne pourront être traitées sur ce site.
-        </AlertTitle>
-        <p>
-          Pour les demandes personnelles, veuillez vous rapprocher de l'organisme en charge de votre dossier. Pour toute
-          question, vous pouvez contacter{" "}
-          <a href="https://www.autismeinfoservice.fr/" target="_blank" rel="noreferrer">
-            Autisme Info Service
-          </a>
-          .
-        </p>
-      </Alert>
-      <FeedbackForm />
+      {data?.title && <h1>{data.title}</h1>}
+      {data?.content && <Markdown>{data?.content}</Markdown>}
+      {(data?.alerts || []).map(alert => (
+        <Alert type={alert.type} key={alert.id}>
+          <AlertTitle as="h2">{alert.title}</AlertTitle>
+          <Markdown>{alert.content}</Markdown>
+        </Alert>
+      ))}
+
+      {data && <FeedbackForm {...data.feedbackForm} />}
     </SimpleContentPage>
   );
 };

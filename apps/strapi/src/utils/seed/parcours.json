@@ -1,0 +1,438 @@
+[
+  {
+    "id": 1,
+    "title": "Mon parcours de personne autiste",
+    "slug": "personne-autiste",
+    "description": "En tant que personne autiste, plusieurs étapes clés sont à réaliser pour mener votre vie de la manière la plus autonome possible. Quelque soit votre situation, retrouvez ci-dessous des contenus et outils de guidance pour vous aider à y voir plus clair sur le déroulé de ces grandes étapes.",
+    "createdAt": "2023-03-06T13:06:14.148Z",
+    "updatedAt": "2023-03-06T15:53:43.243Z",
+    "publishedAt": "2023-03-06T13:21:49.955Z",
+    "items": [
+      {
+        "title": "Je me pose des questions",
+        "description": "Je m'interroge sur mes comportements ou mes ressentis. Je souhaite repérer des signes qui pourraient relever d'un trouble du neurodéveloppement comme l'autisme.",
+        "timeline": true,
+        "order": 1,
+        "links": [
+          {
+            "text": "Je m'interroge",
+            "url": "/parcours/je-m-interroge-envers-moi-meme",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Je démarre un diagnostic",
+        "description": "Je consulte un professionnel de santé et selon son avis médical le parcours de diagnostic peut démarrer.",
+        "timeline": true,
+        "order": 2,
+        "links": [
+          {
+            "text": "Mon diagnostic",
+            "url": "/mon-diagnostic",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Je prends connaissance de mes aides",
+        "description": "Je peux bénéficier d’aides financières, matérielles et humaines, même si je n'ai pas encore de diagnostic.",
+        "timeline": true,
+        "order": 3,
+        "links": [
+          {
+            "text": "Mes aides",
+            "url": "/mes-aides",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Je sollicite la MDPH et je dépose un dossier",
+        "description": "Lorsque j'ai finalisé mon parcours de diagnostic et qu'il conclut à des Troubles du Spectre de l'Autisme, je m'adresse à la Maison Départementale des Personnes Handicapées et je dépose un dossier.",
+        "timeline": true,
+        "order": 4,
+        "links": [
+          {
+            "text": "Monter un dossier",
+            "url": "/parcours/je-sollicite-la-mdph-et-je-monte-un-dossier",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Je prends connaissance des nouvelles aides",
+        "description": "Lorsque j'ai reçu une réponse de la Maison Départementale des Personnes Handicapées suite au dépôt de mon dossier, je peux bénéficier de nouvelles aides.",
+        "timeline": true,
+        "order": 5,
+        "links": [
+          {
+            "text": "Mes aides",
+            "url": "/mes-aides",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Je mène à bien les différentes étapes de ma vie",
+        "description": "Plusieurs étapes clés sont à réaliser pour mener sa vie de la manière la plus autonome possible.",
+        "timeline": true,
+        "order": 6,
+        "links": [
+          {
+            "text": "Étudier",
+            "url": "/fiches-pratiques/etudier-du-college-aux-etudes-superieures",
+            "theme": "primary"
+          },
+          {
+            "text": "Travailler",
+            "url": "/fiches-pratiques/personne-tsa-travailler",
+            "theme": "primary"
+          },
+          {
+            "text": "Se soigner",
+            "url": "/fiches-pratiques/se-soigner",
+            "theme": "primary"
+          },
+          {
+            "text": "Se déplacer",
+            "url": "/fiches-pratiques/se-deplacer",
+            "theme": "primary"
+          },
+          {
+            "text": "Se loger",
+            "url": "/fiches-pratiques/se-loger",
+            "theme": "primary"
+          },
+          {
+            "text": "Partir en vacances",
+            "url": "/fiches-pratiques/partir-en-vacances",
+            "theme": "primary"
+          },
+          {
+            "text": "Avoir des loisirs",
+            "url": "/fiches-pratiques/avoir-des-loisirs",
+            "theme": "primary"
+          },
+          {
+            "text": "Tisser du lien amical, amoureux et familial",
+            "url": "/fiches-pratiques/tisser-du-lien-amical-amoureux-et-familial",
+            "theme": "primary"
+          },
+          {
+            "text": "Être protégé",
+            "url": "/fiches-pratiques/etre-protege",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "La Maison de l'autisme physique",
+        "description": "La Maison de l’autisme n’est plus un projet, c’est une réalité. Elle se poursuit avec vous. Elle a hâte de vous accueillir à Aubervilliers et en ligne dès avril prochain.",
+        "timeline": false,
+        "order": 7,
+        "links": [
+          {
+            "text": "La maison de l'autisme",
+            "url": "/la-maison-de-l-autisme",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Je cherche des groupes avec qui échanger",
+        "description": "Échanger avec des personnes permet de trouver du soutien, de rompre avec l’isolement, de mieux comprendre la situation et de rechercher des solutions, mais également de valoriser votre expérience.",
+        "timeline": false,
+        "order": 8,
+        "links": [
+          {
+            "text": "Groupes d'entraide",
+            "url": "/parcours/je-cherche-des-groupes-d-entraide",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Je donne mon avis",
+        "description": "Un oubli ? Une suggestion ? Utilisez le module Je donne mon avis pour soumettre vos idées afin de contribuer à enrichir ce service public.",
+        "timeline": false,
+        "order": 9,
+        "links": [
+          {
+            "text": "Mon avis",
+            "url": "/je-donne-mon-avis",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Annuaire",
+        "description": "Vous cherchez des contacts de confiance ? Un établissement ou un organisme ? Des professionnels de santé ? Une association ?",
+        "timeline": false,
+        "order": 9,
+        "links": [
+          {
+            "text": "Annuaire",
+            "url": "/annuaire",
+            "theme": "primary"
+          }
+        ]
+      }
+    ],
+    "createdBy": null,
+    "updatedBy": null
+  },
+  {
+    "id": 2,
+    "title": "Mon parcours de parent ou d'aidant",
+    "slug": "parent-personne-aidante",
+    "description": "En tant que parent ou proche aidant, plusieurs étapes clés sont à réaliser pour accompagner votre enfant ou votre proche à mener sa vie de la manière la plus autonome possible. Quelque soit votre situation, retrouvez ci-dessous des contenus et outils de guidance pour vous aider à y voir plus clair sur le déroulé de ces grandes étapes.",
+    "createdAt": "2023-03-06T13:06:14.148Z",
+    "updatedAt": "2023-03-06T15:53:43.243Z",
+    "publishedAt": "2023-03-06T13:21:49.955Z",
+    "items": [
+      {
+        "title": "Je me pose des questions",
+        "description": "Je m'interroge sur les comportements de mon enfant ou de mon proche. Je souhaite repérer des signes de comportements ou de ressentis qui pourraient relever d'un trouble du neurodéveloppement comme l'autisme.",
+        "timeline": true,
+        "order": 1,
+        "links": [
+          {
+            "text": "Je m'interroge",
+            "url": "/parcours/je-m-interroge-sur-mon-enfant",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Je démarre un diagnostic",
+        "description": "J'accompagne mon enfant ou mon proche auprès d'un professionnel de santé et selon son avis médical le parcours de diagnostic peut démarrer.",
+        "timeline": true,
+        "order": 2,
+        "links": [
+          {
+            "text": "Mon diagnostic",
+            "url": "/mon-diagnostic",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Je prends connaissance de mes aides",
+        "description": "Mon enfant ou mon proche peut bénéficier d’aides financières, matérielles et humaines, même s'ils n'ont pas encore de diagnostic.",
+        "timeline": true,
+        "order": 3,
+        "links": [
+          {
+            "text": "Mes aides",
+            "url": "/mes-aides",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Je sollicite la MDPH et je dépose un dossier",
+        "description": "Lorsque mon enfant ou mon proche a finalisé son parcours de diagnostic et qu'il conclut à des Troubles du Spectre de l'Autisme, je m'adresse à la Maison Départementale des Personnes Handicapées et je dépose un dossier.",
+        "timeline": true,
+        "order": 4,
+        "links": [
+          {
+            "text": "Monter un dossier",
+            "url": "/parcours/je-sollicite-la-mdph-et-je-monte-un-dossier",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Je prends connaissance des nouvelles aides",
+        "description": "Lorsque mon enfant ou mon proche ont reçu une réponse de la Maison Départementale des Personnes Handicapées suite au dépôt de leur dossier, ils peuvent bénéficier de nouvelles aides.",
+        "timeline": true,
+        "order": 5,
+        "links": [
+          {
+            "text": "Mes aides",
+            "url": "/mes-aides",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Je mène à bien les différentes étapes de ma vie",
+        "description": "Plusieurs étapes clés sont à réaliser pour mener sa vie de la manière la plus autonome possible.",
+        "timeline": true,
+        "order": 6,
+        "links": [
+          {
+            "text": "Étudier",
+            "url": "/fiches-pratiques/etudier-du-college-aux-etudes-superieures",
+            "theme": "primary"
+          },
+          {
+            "text": "Travailler",
+            "url": "/fiches-pratiques/personne-tsa-travailler",
+            "theme": "primary"
+          },
+          {
+            "text": "Logement",
+            "url": "/fiches-pratiques/se-loger",
+            "theme": "primary"
+          },
+          {
+            "text": "Se soigner",
+            "url": "/fiches-pratiques/se-soigner",
+            "theme": "primary"
+          },
+          {
+            "text": "Se déplacer",
+            "url": "/fiches-pratiques/se-deplacer",
+            "theme": "primary"
+          },
+          {
+            "text": "Se loger",
+            "url": "/fiches-pratiques/se-loger",
+            "theme": "primary"
+          },
+          {
+            "text": "Partir en vacances",
+            "url": "/fiches-pratiques/partir-en-vacances",
+            "theme": "primary"
+          },
+          {
+            "text": "Avoir des loisirs",
+            "url": "/fiches-pratiques/avoir-des-loisirs",
+            "theme": "primary"
+          },
+          {
+            "text": "Tisser du lien amical, amoureux et familial",
+            "url": "/fiches-pratiques/tisser-du-lien-amical-amoureux-et-familial",
+            "theme": "primary"
+          },
+          {
+            "text": "Mettre en place des mesures de protection",
+            "url": "/fiches-pratiques/etre-protege",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Je demande de l'aide à mon entourage",
+        "description": "Demander de l'aide à son entourage est un réflexe important pour améliorer sa qualité de vie en tant que parent, et faire face aux nombreux défis auxquels on se trouve confronté après le diagnostic de son enfant.",
+        "timeline": false,
+        "order": 7,
+        "links": [
+          {
+            "text": "Demander de l'aide",
+            "url": "/parcours/je-demande-de-l-aide-a-mon-entourage",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Je cherche des groupes avec qui échanger",
+        "description": "Échanger avec des personnes permet de trouver du soutien, de rompre avec l’isolement, de mieux comprendre la situation et de rechercher des solutions, mais également de valoriser votre expérience.",
+        "timeline": false,
+        "order": 8,
+        "links": [
+          {
+            "text": "Groupes d'entraide",
+            "url": "/parcours/je-cherche-des-groupes-d-entraide",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Je donne mon avis",
+        "description": "Un oubli ? Une suggestion ? Utilisez le module Je donne mon avis pour soumettre vos idées afin de contribuer à enrichir ce service public.",
+        "timeline": false,
+        "order": 9,
+        "links": [
+          {
+            "text": "Mon avis",
+            "url": "/je-donne-mon-avis",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Annuaire",
+        "description": "Vous cherchez des contacts de confiance ? Un établissement ou un organisme ? Des professionnels de santé ? Une association ?",
+        "timeline": false,
+        "order": 10,
+        "links": [
+          {
+            "text": "Annuaire",
+            "url": "/annuaire",
+            "theme": "primary"
+          }
+        ]
+      }
+    ],
+    "createdBy": null,
+    "updatedBy": null
+  },
+  {
+    "id": 3,
+    "title": "Mon parcours de professionnel de santé ou du médico-social",
+    "slug": "professionnel-de-sante",
+    "description": "Cette rubrique du site internet est en cours de construction pour le moment. Si vous êtes un professionnel de santé ou du médico-social, partagez-nous vos attentes en donnant votre avis via le formulaire [Je donne mon avis](/je-donne-mon-avis).",
+    "createdAt": "2023-03-06T13:06:14.148Z",
+    "updatedAt": "2023-03-06T15:53:43.243Z",
+    "publishedAt": "2023-03-06T13:21:49.955Z",
+    "items": [
+      {
+        "title": "Comment diagnostiquer un patient potentiellement autiste",
+        "description": "Le diagnostic de troubles du spectre de l’autisme relève d’un médecin, qui s’appuie autant que nécessaire sur une démarche pluridisciplinaire.",
+        "timeline": false,
+        "order": 1,
+        "links": [
+          {
+            "text": "",
+            "url": "/parcours/comment-puis-je-diagnostiquer-un-patient-potentiellement-autiste",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Parcours de diagnostic",
+        "description": "Le diagnostic est un parcours qui se réalise auprès de plusieurs professionnels de santé. Plusieurs types de parcours existent selon l'âge de la personne.",
+        "timeline": false,
+        "order": 2,
+        "links": [
+          {
+            "text": "Parcours de diagnostic",
+            "url": "/fiches-pratiques/parcours-de-diagnostic",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Je donne mon avis",
+        "description": "Un oubli&nbsp;? Une suggestion&nbsp;? Utilisez le module Je donne mon avis pour soumettre vos idées afin de contribuer à enrichir ce service public.",
+        "timeline": false,
+        "order": 3,
+        "links": [
+          {
+            "text": "Mon avis",
+            "url": "/je-donne-mon-avis",
+            "theme": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Recommandations de Bonnes Pratiques Professionnelles",
+        "description": "Les recommandations de bonnes pratiques professionnelles (aussi appelées les RBPP) sont des synthèses rigoureuses de l’état de l’art, des connaissances et des pratiques sur l’autisme, à un temps donné.",
+        "timeline": false,
+        "order": 4,
+        "links": [
+          {
+            "text": "Bonnes pratiques",
+            "url": "/fiches-pratiques/recommandations-de-bonnes-pratiques-professionnelles",
+            "theme": "primary"
+          }
+        ]
+      }
+    ],
+    "createdBy": null,
+    "updatedBy": null
+  }
+]

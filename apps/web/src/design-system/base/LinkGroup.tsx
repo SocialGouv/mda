@@ -1,14 +1,18 @@
 import clsx from "clsx";
 import type { PropsWithChildren } from "react";
 
-export type LinkGroupProps = PropsWithChildren<{
+export const LinkGroup = ({
+  className,
+  children,
+  ...rest
+}: PropsWithChildren<{
   className?: string;
-}>;
-
-export const LinkGroup = ({ className, children, ...rest }: LinkGroupProps) => {
+}>) => {
   return (
-    <div className={clsx("fr-links-group", className)} {...rest}>
+    <ul className={clsx("fr-links-group", className)} {...rest}>
       {children}
-    </div>
+    </ul>
   );
 };
+
+export const LinkGroupItem = ({ children }: PropsWithChildren) => <li>{children}</li>;
