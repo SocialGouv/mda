@@ -59,7 +59,7 @@ export const FeedbackForm = ({
 
   if (formState === "submitted") {
     return (
-      <Alert type={error_message.type} className="fr-mt-6w">
+      <Alert type={success_message.type} className="fr-mt-6w">
         <AlertTitle>{success_message.title}</AlertTitle>
         <Markdown>{success_message.content}</Markdown>
       </Alert>
