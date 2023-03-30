@@ -23,6 +23,7 @@ import {
   RichTextAttribute,
   MediaAttribute,
   ComponentAttribute,
+  DynamicZoneAttribute,
   ComponentSchema,
 } from '@strapi/strapi';
 
@@ -686,12 +687,18 @@ export interface ApiAccessibiliteAccessibilite extends SingleTypeSchema {
     singularName: 'accessibilite';
     pluralName: 'accessibilites';
     displayName: 'Accessibilit\u00E9';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     content: RichTextAttribute & RequiredAttribute;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
@@ -721,15 +728,30 @@ export interface ApiAccueilAccueil extends SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     content: RichTextAttribute & RequiredAttribute;
     img: MediaAttribute;
     links: ComponentAttribute<'common.links', true>;
     DEMO_content: RichTextAttribute;
-    MDA_title: StringAttribute & RequiredAttribute;
+    MDA_title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     MDA_subtitle: TextAttribute;
     MDA_content: RichTextAttribute & RequiredAttribute;
-    MDA_link_text: StringAttribute & RequiredAttribute;
+    MDA_link_text: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     MDA_img: MediaAttribute;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
@@ -760,7 +782,12 @@ export interface ApiAnnuaireAnnuaire extends SingleTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     content: RichTextAttribute & RequiredAttribute;
     links: ComponentAttribute<'common.links', true>;
     createdAt: DateTimeAttribute;
@@ -791,7 +818,12 @@ export interface ApiDiagnosticDiagnostic extends SingleTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    title: StringAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     content: RichTextAttribute;
     bottom_content: RichTextAttribute;
     createdAt: DateTimeAttribute;
@@ -822,17 +854,29 @@ export interface ApiEtapeDeVieEtapeDeVie extends CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute & UniqueAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     recap: ComponentAttribute<'fiche-pratique-content.encart'> &
       RequiredAttribute;
     type: EnumerationAttribute<['pro', 'perso']> &
       RequiredAttribute &
       DefaultTo<'perso'>;
     section: ComponentAttribute<'fiche-pratique-content.encart', true>;
-    slug: StringAttribute & UniqueAttribute;
+    slug: StringAttribute &
+      RequiredAttribute &
+      UniqueAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     excerpt: TextAttribute &
       RequiredAttribute &
       SetMinMaxLength<{
+        minLength: 1;
         maxLength: 200;
       }>;
     createdAt: DateTimeAttribute;
@@ -863,11 +907,21 @@ export interface ApiEventEvent extends CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     description: RichTextAttribute;
     start_date: DateTimeAttribute & RequiredAttribute;
     end_date: DateTimeAttribute & RequiredAttribute;
-    connection_link: StringAttribute & RequiredAttribute;
+    connection_link: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     publishedAt: DateTimeAttribute;
@@ -897,14 +951,25 @@ export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute & UniqueAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     recap: ComponentAttribute<'fiche-pratique-content.encart'> &
       RequiredAttribute;
     section: ComponentAttribute<'fiche-pratique-content.encart', true>;
-    slug: StringAttribute & UniqueAttribute;
+    slug: StringAttribute &
+      UniqueAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     excerpt: TextAttribute &
       RequiredAttribute &
       SetMinMaxLength<{
+        minLength: 1;
         maxLength: 200;
       }>;
     createdAt: DateTimeAttribute;
@@ -929,14 +994,29 @@ export interface ApiGlossaireItemGlossaireItem extends CollectionTypeSchema {
     singularName: 'glossaire-item';
     pluralName: 'glossaire-items';
     displayName: 'Glossaire';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute;
-    description: StringAttribute & RequiredAttribute;
-    url: StringAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    description: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    url: StringAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
@@ -965,7 +1045,12 @@ export interface ApiJeDonneMonAvisJeDonneMonAvis extends SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     content: RichTextAttribute;
     alerts: ComponentAttribute<'common.alerts', true>;
     feedbackForm: ComponentAttribute<'je-donne-mon-avis.feedback-form'> &
@@ -999,7 +1084,12 @@ export interface ApiMaisonDeLAutismeMaisonDeLAutisme extends SingleTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     content: RichTextAttribute & RequiredAttribute;
     sections: ComponentAttribute<'common.sections', true>;
     events: RelationAttribute<
@@ -1034,7 +1124,12 @@ export interface ApiMentionsLegalesMentionsLegales extends SingleTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     content: RichTextAttribute & RequiredAttribute;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
@@ -1053,6 +1148,27 @@ export interface ApiMentionsLegalesMentionsLegales extends SingleTypeSchema {
   };
 }
 
+export interface ApiMenuMenu extends SingleTypeSchema {
+  info: {
+    singularName: 'menu';
+    pluralName: 'menus';
+    displayName: 'Menu';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    item: DynamicZoneAttribute<['menu.dropdown-menu-item', 'menu.menu-item']>;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<'api::menu.menu', 'oneToOne', 'admin::user'> &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<'api::menu.menu', 'oneToOne', 'admin::user'> &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiMesAidesMesAides extends SingleTypeSchema {
   info: {
     singularName: 'mes-aides';
@@ -1064,7 +1180,12 @@ export interface ApiMesAidesMesAides extends SingleTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     content: RichTextAttribute & RequiredAttribute;
     sections: ComponentAttribute<'common.sections', true>;
     createdAt: DateTimeAttribute;
@@ -1095,8 +1216,19 @@ export interface ApiParcoursParcours extends CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute;
-    slug: StringAttribute & RequiredAttribute & UniqueAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    slug: StringAttribute &
+      RequiredAttribute &
+      UniqueAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     description: RichTextAttribute & RequiredAttribute;
     items: ComponentAttribute<'parcours-content.item', true>;
     createdAt: DateTimeAttribute;
@@ -1128,7 +1260,12 @@ export interface ApiPlanDuSitePlanDuSite extends SingleTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     content: RichTextAttribute & RequiredAttribute;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
@@ -1158,7 +1295,12 @@ export interface ApiPolitiqueDeConfidentialitePolitiqueDeConfidentialite
     draftAndPublish: false;
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     content: RichTextAttribute & RequiredAttribute;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
@@ -1188,7 +1330,12 @@ export interface ApiQuestionQuestion extends CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    content: StringAttribute & RequiredAttribute;
+    content: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     answers: ComponentAttribute<'diagnostic.answer', true>;
     info: TextAttribute;
     first: BooleanAttribute & RequiredAttribute & DefaultTo<false>;
@@ -1214,7 +1361,12 @@ export interface CommonAlerts extends ComponentSchema {
     displayName: 'Alerts';
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     content: RichTextAttribute & RequiredAttribute;
     type: EnumerationAttribute<['info', 'success', 'warning', 'error']> &
       DefaultTo<'info'>;
@@ -1227,7 +1379,12 @@ export interface CommonInputs extends ComponentSchema {
     description: '';
   };
   attributes: {
-    label: StringAttribute & RequiredAttribute;
+    label: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     hint: TextAttribute & RequiredAttribute;
     type: EnumerationAttribute<['email', 'tel']> & RequiredAttribute;
     autocomplete: EnumerationAttribute<['email', 'tel']> & RequiredAttribute;
@@ -1240,8 +1397,17 @@ export interface CommonLinks extends ComponentSchema {
     description: '';
   };
   attributes: {
-    text: StringAttribute & RequiredAttribute;
-    url: StringAttribute;
+    text: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    url: StringAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     theme: EnumerationAttribute<['primary', 'secondary']> &
       RequiredAttribute &
       DefaultTo<'primary'>;
@@ -1253,8 +1419,18 @@ export interface CommonOptions extends ComponentSchema {
     displayName: 'Options';
   };
   attributes: {
-    label: StringAttribute & RequiredAttribute;
-    value: StringAttribute & RequiredAttribute;
+    label: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    value: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
   };
 }
 
@@ -1263,7 +1439,12 @@ export interface CommonSections extends ComponentSchema {
     displayName: 'sections';
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     content: RichTextAttribute & RequiredAttribute;
   };
 }
@@ -1273,7 +1454,12 @@ export interface CommonSelects extends ComponentSchema {
     displayName: 'Selects';
   };
   attributes: {
-    label: StringAttribute & RequiredAttribute;
+    label: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     options: ComponentAttribute<'common.options', true>;
   };
 }
@@ -1283,7 +1469,12 @@ export interface CommonTextareas extends ComponentSchema {
     displayName: 'Textareas';
   };
   attributes: {
-    label: StringAttribute & RequiredAttribute;
+    label: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     hint: TextAttribute & RequiredAttribute;
   };
 }
@@ -1294,7 +1485,12 @@ export interface DiagnosticAnswer extends ComponentSchema {
     description: 'Une r\u00E9ponse potentielle \u00E0 une question menant soit \u00E0 une sous r\u00E9ponse, soit a une nouvelle question.';
   };
   attributes: {
-    content: StringAttribute & RequiredAttribute;
+    content: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     destination: RelationAttribute<
       'diagnostic.answer',
       'oneToOne',
@@ -1311,7 +1507,12 @@ export interface DiagnosticSubAnswer extends ComponentSchema {
     description: 'Une sous r\u00E9ponse suit une r\u00E9ponse et m\u00E8ne obligatoirement vers une nouvelle question.';
   };
   attributes: {
-    content: StringAttribute & RequiredAttribute;
+    content: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     destination: RelationAttribute<
       'diagnostic.sub-answer',
       'oneToOne',
@@ -1328,7 +1529,12 @@ export interface FichePratiqueContentEncart extends ComponentSchema {
     description: '';
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     content: RichTextAttribute & RequiredAttribute;
   };
 }
@@ -1339,10 +1545,20 @@ export interface JeDonneMonAvisFeedbackForm extends ComponentSchema {
     description: '';
   };
   attributes: {
-    opinion_title: StringAttribute & RequiredAttribute;
+    opinion_title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     profile: ComponentAttribute<'common.selects'> & RequiredAttribute;
     opinion: ComponentAttribute<'common.textareas'> & RequiredAttribute;
-    contact_details_title: StringAttribute & RequiredAttribute;
+    contact_details_title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     contact_details_content: TextAttribute;
     contact_details_phone: ComponentAttribute<'common.inputs'> &
       RequiredAttribute;
@@ -1350,8 +1566,40 @@ export interface JeDonneMonAvisFeedbackForm extends ComponentSchema {
       RequiredAttribute;
     success_message: ComponentAttribute<'common.alerts'> & RequiredAttribute;
     error_message: ComponentAttribute<'common.alerts'> & RequiredAttribute;
-    submit_message: StringAttribute & RequiredAttribute;
-    loading_message: StringAttribute & RequiredAttribute;
+    submit_message: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    loading_message: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+  };
+}
+
+export interface MenuDropdownMenuItem extends ComponentSchema {
+  info: {
+    displayName: 'Dropdown menu item';
+    description: '';
+  };
+  attributes: {
+    text: StringAttribute & RequiredAttribute;
+    link: ComponentAttribute<'menu.menu-item', true> & RequiredAttribute;
+  };
+}
+
+export interface MenuMenuItem extends ComponentSchema {
+  info: {
+    displayName: 'Menu item';
+    description: '';
+  };
+  attributes: {
+    text: StringAttribute & RequiredAttribute;
+    url: StringAttribute & RequiredAttribute;
   };
 }
 
@@ -1361,7 +1609,12 @@ export interface ParcoursContentItem extends ComponentSchema {
     description: '';
   };
   attributes: {
-    title: StringAttribute & RequiredAttribute;
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     description: RichTextAttribute & RequiredAttribute;
     timeline: BooleanAttribute & RequiredAttribute & DefaultTo<false>;
     order: IntegerAttribute & RequiredAttribute & DefaultTo<0>;
@@ -1396,6 +1649,7 @@ declare global {
       'api::je-donne-mon-avis.je-donne-mon-avis': ApiJeDonneMonAvisJeDonneMonAvis;
       'api::maison-de-l-autisme.maison-de-l-autisme': ApiMaisonDeLAutismeMaisonDeLAutisme;
       'api::mentions-legales.mentions-legales': ApiMentionsLegalesMentionsLegales;
+      'api::menu.menu': ApiMenuMenu;
       'api::mes-aides.mes-aides': ApiMesAidesMesAides;
       'api::parcours.parcours': ApiParcoursParcours;
       'api::plan-du-site.plan-du-site': ApiPlanDuSitePlanDuSite;
@@ -1412,6 +1666,8 @@ declare global {
       'diagnostic.sub-answer': DiagnosticSubAnswer;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
       'je-donne-mon-avis.feedback-form': JeDonneMonAvisFeedbackForm;
+      'menu.dropdown-menu-item': MenuDropdownMenuItem;
+      'menu.menu-item': MenuMenuItem;
       'parcours-content.item': ParcoursContentItem;
     }
   }

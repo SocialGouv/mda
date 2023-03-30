@@ -3,12 +3,13 @@
 import { config } from "@common/config";
 import { Logo, LogoMda } from "@design-system";
 import { MainNav, MainNavItem, MainNavItemWithDropdown } from "@design-system/client";
+import { type GetAttributesValues } from "@mda/strapi-types";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { type PropsWithChildren, useEffect, useRef, useState } from "react";
 
-export const Header = () => {
+export const Header = ({ menuItems }: { menuItems: GetAttributesValues<"api::menu.menu">["item"] }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -178,34 +179,26 @@ export const Header = () => {
             Fermer
           </button>
           <MainNav>
-            <MainNavItemWithDropdown
-              title="Mon parcours"
-              links={[
-                {
-                  href: "/mon-parcours/personne-autiste",
-                  label: "Personne autiste",
-                  onClick: () => setNavOpen(false),
-                },
-                {
-                  href: "/mon-parcours/parent-personne-aidante",
-                  label: "Parent ou aidant",
-                  onClick: () => setNavOpen(false),
-                },
-                {
-                  href: "/mon-parcours/professionnel-de-sante",
-                  label: "Professionnel de santé ou du médico-social",
-                  onClick: () => setNavOpen(false),
-                },
-              ]}
-            />
-            <MainNavLink href="/mon-diagnostic">Guide des parcours de diagnostic</MainNavLink>
-            <MainNavLink href="/mes-aides">Mes aides</MainNavLink>
-
-            <MainNavLink href="/fiches-pratiques">Fiches pratiques</MainNavLink>
-            <MainNavLink href="/annuaire">Annuaire</MainNavLink>
-            <MainNavLink href="/glossaire">Glossaire</MainNavLink>
-            <MainNavLink href="/la-maison-de-l-autisme">La Maison de l'autisme</MainNavLink>
-            <MainNavLink href="/je-donne-mon-avis">Je donne mon avis</MainNavLink>
+            {menuItems?.map(item =>
+              item.__component === "menu.menu-item" ? (
+                <MainNavLink key={item.id} href={item.url}>
+                  {item.text}
+                </MainNavLink>
+              ) : (
+                <MainNavItemWithDropdown
+                  key={item.id}
+                  title={item.text}
+                  links={item.link.map(item => {
+                    return {
+                      id: item.id,
+                      label: item.text,
+                      href: item.url,
+                      onClick: () => setNavOpen(false),
+                    };
+                  })}
+                />
+              ),
+            )}
           </MainNav>
         </div>
       </div>
