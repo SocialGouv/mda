@@ -1,14 +1,19 @@
+import "../../global.d";
+
 import { prefixPluginTranslations } from "@strapi/helper-plugin";
+import { type FC } from "react";
 
 import pluginPkg from "../../../package.json";
 import Initializer from "./components/Initializer";
 import PluginIcon from "./components/PluginIcon";
 import pluginId from "./pluginId";
+import { type PluginRegistConfig, type StrapiPlugin } from "./types";
 
 const name = pluginPkg.strapi.name;
 
-const plugin = {
-  register(app: any) {
+const plugin: StrapiPlugin = {
+  register(app) {
+    console.log("MDA === register", app);
     app.addMenuLink({
       to: `/plugins/${pluginId}`,
       icon: PluginIcon,
@@ -19,7 +24,7 @@ const plugin = {
       Component: async () => {
         const component = await import(/* webpackChunkName: "mda-[request]" */ "./pages/App");
 
-        return component;
+        return component as unknown as FC;
       },
       permissions: [
         // Uncomment to set the permissions of the plugin here
@@ -29,7 +34,7 @@ const plugin = {
         // },
       ],
     });
-    const plugin = {
+    const plugin: PluginRegistConfig = {
       id: pluginId,
       initializer: Initializer,
       isReady: false,
@@ -39,11 +44,12 @@ const plugin = {
     app.registerPlugin(plugin);
   },
 
-  bootstrap(app: any) {
-    //
+  bootstrap(app) {
+    console.log("MDA === bootstrap", app);
   },
-  async registerTrads(app: any) {
-    const { locales } = app as { locales: string[] };
+  async registerTrads(app) {
+    console.log("MDA === registerTrads", app);
+    const { locales } = app;
 
     const importedTrads = await Promise.all(
       locales.map(async locale => {

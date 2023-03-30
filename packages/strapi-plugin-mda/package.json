@@ -7,9 +7,12 @@
     "description": "Description of strapi-plugin-mda plugin",
     "kind": "plugin"
   },
-  "dependencies": {},
+  "dependencies": {
+    "reactflow": "^11.7.0"
+  },
   "devDependencies": {
     "@mda/eslint-config": "*",
+    "@mda/strapi-types": "*",
     "@strapi/design-system": "1.6.1",
     "@strapi/helper-plugin": "4.6.0",
     "@strapi/icons": "1.6.1",

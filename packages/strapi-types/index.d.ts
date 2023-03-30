@@ -242,3 +242,31 @@ export interface ResponseSearch<T> {
   processingTimeMs: number;
   query: string;
 };
+
+
+export namespace Diag {
+    export type QuestionID = string;
+    export type AnswerID = string;
+    export type SubAnswerID = string;
+    export interface Question {
+        id: QuestionID;
+        content: string;
+        answers?: AnswerID[];
+        info?: string;
+    }
+
+    export interface Answer {
+        id: AnswerID;
+        content: string;
+        destination?: QuestionID;
+        subanswers?: SubAnswerID[];
+        info?: string;
+    }
+
+    export interface SubAnswer {
+        id: SubAnswerID;
+        content: string;
+        destination?: QuestionID;
+        info?: string;
+    }
+}

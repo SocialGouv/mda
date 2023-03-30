@@ -5,16 +5,183 @@
  *
  */
 
-import React from "react";
+import "reactflow/dist/style.css";
+import "./index.css";
 
-import pluginId from "../../pluginId";
+import { type Diag } from "@mda/strapi-types";
+import { Box } from "@strapi/design-system/Box";
+import { ContentLayout, HeaderLayout } from "@strapi/design-system/Layout";
+import _ from "lodash";
+import React, { useMemo } from "react";
+import ReactFlow, {
+  Background,
+  BackgroundVariant,
+  Controls,
+  type Edge,
+  MiniMap,
+  type Node,
+  type NodeTypes,
+  type XYPosition,
+} from "reactflow";
+
+import { TextNode } from "../../components/mindmap/TextNode";
+import baseJson from "./content.json";
+
+let rootQuestion: Diag.Question = null as any;
+const questionsSet = new Set<Diag.Question>();
+const answersSet = new Set<Diag.Answer>();
+const subanswersSet = new Set<Diag.SubAnswer>();
+
+const edges: Edge[] = [];
+
+for (const elt of baseJson) {
+  if (elt.attributes.answers) {
+    const id = `question-${elt.id}`;
+    if (elt.attributes.first) {
+      rootQuestion = {
+        ...elt.attributes,
+        id,
+        answers: elt.attributes.answers.map(answer => {
+          const anwserId = `answer-${answer.id}`;
+          edges.push({
+            id: `e${id}-${anwserId}`,
+            source: id,
+            target: anwserId,
+          });
+          return anwserId;
+        }),
+        info: elt.attributes.info ?? "",
+      };
+    } else {
+      questionsSet.add({
+        ...elt.attributes,
+        id,
+        answers: elt.attributes.answers.map(answer => {
+          const anwserId = `answer-${answer.id}`;
+          edges.push({
+            id: `e${id}-${anwserId}`,
+            source: id,
+            target: anwserId,
+          });
+          return anwserId;
+        }),
+        info: elt.attributes.info ?? "",
+      });
+    }
+
+    for (const answer of elt.attributes.answers) {
+      const answerId = `answer-${answer.id}`;
+      if (answer.subanswers) {
+        answersSet.add({
+          ...answer,
+          destination: String(answer.destination.data?.id ?? ""),
+          id: answerId,
+          info: answer.info ?? "",
+          subanswers: answer.subanswers.map(subanswer => {
+            const subanswerId = `subanswer-${subanswer.id}`;
+            edges.push({
+              id: `e${answerId}-${subanswerId}`,
+              source: answerId,
+              target: subanswerId,
+            });
+            return subanswerId;
+          }),
+        });
+
+        for (const subanswer of answer.subanswers) {
+          const subanswerId = `subanswer-${subanswer.id}`;
+          const destinationId = `question-${subanswer.destination.data.id}`;
+          subanswersSet.add({
+            ...subanswer,
+            id: subanswerId,
+            destination: destinationId,
+            info: subanswer.info ?? "",
+          });
+          edges.push({
+            id: `e${subanswerId}-${destinationId}`,
+            source: subanswerId,
+            target: destinationId,
+            animated: true,
+          });
+        }
+      }
+    }
+  }
+}
+
+const questions = _.sortBy(Array.from(questionsSet), "id");
+const answers = _.sortBy(Array.from(answersSet), "id");
+const subanswers = _.sortBy(Array.from(subanswersSet), "id");
+
+console.log({ rootQuestion, questions, answers, subanswers, edges });
+
+const rand500 = () => Math.floor(Math.random() * 500);
+const randXY = (): XYPosition => ({ x: rand500(), y: rand500() });
+
+const initialNodes: Array<Node<Diag.Answer | Diag.Question | Diag.SubAnswer>> = [
+  ...questions.map<Node<Diag.Question>>(question => ({
+    id: question.id,
+    position: randXY(),
+    data: question,
+    type: "textNode",
+  })),
+  ...answers.map<Node<Diag.Answer>>(answer => ({
+    id: answer.id,
+    position: randXY(),
+    data: answer,
+    type: "textNode",
+  })),
+  ...subanswers.map<Node<Diag.SubAnswer>>(subanswer => ({
+    id: subanswer.id,
+    position: randXY(),
+    data: subanswer,
+    type: "textNode",
+  })),
+  // {
+  //   id: "1",
+  //   position: { x: 0, y: 0 },
+  //   data: { label: "1" },
+  // },
+  // {
+  //   id: "2",
+  //   position: { x: 0, y: 100 },
+  //   data: { label: "2" },
+  // },
+];
+const initialEdges: Edge[] = [
+  // { id: "e1-2", source: "1", target: "2" }
+  ...edges,
+];
+
+console.log({ initialNodes });
 
 const App = () => {
+  const nodeTypes: NodeTypes = useMemo(() => ({ textNode: TextNode }), []);
+
   return (
-    <div>
-      <h1>{pluginId}&apos;s HomePage</h1>
-      <p>Happy coding</p>
-    </div>
+    <Box className="MDA-ROOT" height="100vh">
+      <Box background="neutral100">
+        <HeaderLayout title="Parcours de diagnostic V2" />
+      </Box>
+      <ContentLayout>
+        <Box borderColor="neutral1000" padding="4px" hasRadius height="calc(100vh - 140px)">
+          <ReactFlow
+            defaultNodes={initialNodes}
+            defaultEdges={initialEdges}
+            style={{ backgroundColor: "#fff" }}
+            proOptions={{ hideAttribution: true }}
+            fitView
+            onNodesDelete={nodes => console.log("NODES DELETE", nodes)}
+            nodeTypes={nodeTypes}
+          >
+            <Background id="1" gap={10} color="#f1f1f1" variant={BackgroundVariant.Lines} />
+            <Background id="2" gap={100} offset={1} color="#ccc" variant={BackgroundVariant.Lines} />
+            <Controls />
+            <MiniMap position="top-right" />
+          </ReactFlow>
+        </Box>
+      </ContentLayout>
+    </Box>
   );
 };
 

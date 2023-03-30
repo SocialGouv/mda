@@ -1,12 +1,6 @@
-/**
- *
- * PluginIcon
- *
- */
-
-import { Puzzle } from "@strapi/icons";
+import { ManyWays } from "@strapi/icons";
 import React from "react";
 
-const PluginIcon = () => <Puzzle />;
+const PluginIcon = () => <ManyWays />;
 
 export default PluginIcon;
