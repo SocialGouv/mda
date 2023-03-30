@@ -1,3 +1,11 @@
+## [1.9.1](https://github.com/SocialGouv/mda/compare/v1.9.0...v1.9.1) (2023-03-30)
+
+
+### Bug Fixes
+
+* changing the style of the contact page feedback component ([#216](https://github.com/SocialGouv/mda/issues/216)) ([8e5f2fc](https://github.com/SocialGouv/mda/commit/8e5f2fcca3bd59417d4800d44f975a56c1610707))
+* **prod:** Increase memory limit killing pods during upload ([#219](https://github.com/SocialGouv/mda/issues/219)) ([4e2e5a4](https://github.com/SocialGouv/mda/commit/4e2e5a4796d9afd7f15637647888dfe6497adc6e))
+
 # [1.9.0](https://github.com/SocialGouv/mda/compare/v1.8.1...v1.9.0) (2023-03-27)
 
 
