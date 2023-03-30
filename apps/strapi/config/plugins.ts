@@ -25,6 +25,10 @@ const plugins: StrapiConfigSetter<PluginsConfig> = ({ env }) => ({
       ],
     },
   },
+  mda: {
+    enabled: true,
+    config: {},
+  },
   meilisearch: {
     config: {
       host: env("MEILISEARCH_HOST"),
