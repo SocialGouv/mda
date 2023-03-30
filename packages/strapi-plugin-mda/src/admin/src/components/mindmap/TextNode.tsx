@@ -6,7 +6,8 @@ export const TextNode = ({ data, id, selected }: NodeProps<Diag.Answer | Diag.Qu
   return (
     <>
       <Handle type="target" position={Position.Left} />
-      {selected ? <input id={`node-${id}`} name={`node-${id}`} className="nodrag" /> : data.content}
+      {/* {selected ? <input id={`node-${id}`} name={`node-${id}`} className="nodrag" /> : data.content} */}
+      {data.content}
       <Handle type="source" position={Position.Right} />
     </>
   );

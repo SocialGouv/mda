@@ -21,6 +21,7 @@ import ReactFlow, {
   MiniMap,
   type Node,
   type NodeTypes,
+  Position,
   type XYPosition,
 } from "reactflow";
 
@@ -72,9 +73,10 @@ for (const elt of baseJson) {
     for (const answer of elt.attributes.answers) {
       const answerId = `answer-${answer.id}`;
       if (answer.subanswers) {
+        const answerDestinationId = String(answer.destination.data?.id ?? "");
         answersSet.add({
           ...answer,
-          destination: String(answer.destination.data?.id ?? ""),
+          destination: answerDestinationId,
           id: answerId,
           info: answer.info ?? "",
           subanswers: answer.subanswers.map(subanswer => {
@@ -87,6 +89,15 @@ for (const elt of baseJson) {
             return subanswerId;
           }),
         });
+
+        if (answerDestinationId) {
+          edges.push({
+            id: `e${answerId}-${answerDestinationId}`,
+            source: answerId,
+            target: answerDestinationId,
+            animated: true,
+          });
+        }
 
         for (const subanswer of answer.subanswers) {
           const subanswerId = `subanswer-${subanswer.id}`;
@@ -115,10 +126,23 @@ const subanswers = _.sortBy(Array.from(subanswersSet), "id");
 
 console.log({ rootQuestion, questions, answers, subanswers, edges });
 
-const rand500 = () => Math.floor(Math.random() * 500);
-const randXY = (): XYPosition => ({ x: rand500(), y: rand500() });
+// const rand500 = () => Math.floor(Math.random() * 500);
+let baseX = -20;
+let baseY = -20;
+const getY = () => (baseY < 0 ? (baseY = Math.abs(baseY) + 20) : (baseY = -baseY));
+const randXY = (): XYPosition => ({ x: (baseX += 20), y: getY() });
 
 const initialNodes: Array<Node<Diag.Answer | Diag.Question | Diag.SubAnswer>> = [
+  {
+    id: rootQuestion.id,
+    position: { x: 0, y: 0 },
+    data: {
+      ...rootQuestion,
+      label: rootQuestion.content,
+    },
+    sourcePosition: Position.Right,
+    targetPosition: void 0,
+  },
   ...questions.map<Node<Diag.Question>>(question => ({
     id: question.id,
     position: randXY(),
