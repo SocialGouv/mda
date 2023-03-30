@@ -35,7 +35,7 @@ strapi:
   resources:
     limits:
       cpu: "500m"
-      memory: "2Gi"
+      memory: "640Mi"
     requests:
       cpu: "400m"
       memory: "512Mi"
