@@ -23,8 +23,8 @@
       "label": {
         "edit": {
           "label": "label",
-          "description": "",
-          "placeholder": "",
+          "description": "Le texte à afficher dans la sélection. Exemple : Option 1",
+          "placeholder": "Le texte à afficher dans la sélection. Exemple : Option 1",
           "visible": true,
           "editable": true
         },
@@ -37,8 +37,8 @@
       "value": {
         "edit": {
           "label": "value",
-          "description": "",
-          "placeholder": "",
+          "description": "La valeur au sens formulaire. Exemple : option-1",
+          "placeholder": "La valeur au sens formulaire. Exemple : option-1",
           "visible": true,
           "editable": true
         },

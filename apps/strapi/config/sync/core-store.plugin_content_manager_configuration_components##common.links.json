@@ -23,8 +23,8 @@
       "text": {
         "edit": {
           "label": "text",
-          "description": "",
-          "placeholder": "",
+          "description": "Le label du lien. Example : Cliquez ici",
+          "placeholder": "Le label du lien. Example : Cliquez ici",
           "visible": true,
           "editable": true
         },
@@ -37,7 +37,7 @@
       "url": {
         "edit": {
           "label": "url",
-          "description": "",
+          "description": "L'url du lien. Example : https://www.google.com ou /fiches-pratiques/ma-fiche-pratique si lien interne",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -51,7 +51,7 @@
       "theme": {
         "edit": {
           "label": "theme",
-          "description": "",
+          "description": "Le thème à appliquer au lien. Valeurs possible primary, secondary",
           "placeholder": "",
           "visible": true,
           "editable": true

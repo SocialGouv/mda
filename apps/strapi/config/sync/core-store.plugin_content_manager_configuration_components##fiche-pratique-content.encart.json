@@ -23,8 +23,8 @@
       "title": {
         "edit": {
           "label": "title",
-          "description": "",
-          "placeholder": "",
+          "description": "Le titre de l'encart. Exemple : Pour aller plus loin",
+          "placeholder": "Le titre de l'encart. Exemple : Pour aller plus loin",
           "visible": true,
           "editable": true
         },
@@ -37,7 +37,7 @@
       "content": {
         "edit": {
           "label": "content",
-          "description": "",
+          "description": "Le contenu de l'encart. Le markdown est supporté et vous pouvez intégrer des fichiers images, pdf et vidéos à l'aide du bouton image dans les outils ci-dessus",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -58,7 +58,7 @@
         [
           {
             "name": "title",
-            "size": 6
+            "size": 12
           }
         ],
         [

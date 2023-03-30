@@ -23,8 +23,8 @@
       "opinion_title": {
         "edit": {
           "label": "opinion_title",
-          "description": "",
-          "placeholder": "",
+          "description": "Le titre du formulaire. Exemple : Je donne mon avis",
+          "placeholder": "Le titre du formulaire. Exemple : Je donne mon avis",
           "visible": true,
           "editable": true
         },
@@ -37,7 +37,7 @@
       "profile": {
         "edit": {
           "label": "profile",
-          "description": "",
+          "description": "Les informations du profil utilisateur",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -51,7 +51,7 @@
       "opinion": {
         "edit": {
           "label": "opinion",
-          "description": "",
+          "description": "L'opinion de l'utilisateur sur le site",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -65,8 +65,8 @@
       "contact_details_title": {
         "edit": {
           "label": "contact_details_title",
-          "description": "",
-          "placeholder": "",
+          "description": "Titre de l'encart détail de l'utilisateur. Exemple : vos informations",
+          "placeholder": "Titre de l'encart détail de l'utilisateur. Exemple : vos informations",
           "visible": true,
           "editable": true
         },
@@ -79,7 +79,7 @@
       "contact_details_content": {
         "edit": {
           "label": "contact_details_content",
-          "description": "",
+          "description": "Le paragraphe de l'encart détail de l'utilisateur. Exemple : veuillez saisir vos informations de contact",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -93,7 +93,7 @@
       "contact_details_phone": {
         "edit": {
           "label": "contact_details_phone",
-          "description": "",
+          "description": "L'encart champ téléphone",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -107,7 +107,7 @@
       "contact_details_email": {
         "edit": {
           "label": "contact_details_email",
-          "description": "",
+          "description": "L'encart champ email",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -121,7 +121,7 @@
       "success_message": {
         "edit": {
           "label": "success_message",
-          "description": "",
+          "description": "Le message de succès du formulaire",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -135,7 +135,7 @@
       "error_message": {
         "edit": {
           "label": "error_message",
-          "description": "",
+          "description": "Le message d'erreur du formulaire'",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -149,8 +149,8 @@
       "submit_message": {
         "edit": {
           "label": "submit_message",
-          "description": "",
-          "placeholder": "",
+          "description": "Le message du bouton du formulaire. Exemple : Valider",
+          "placeholder": "Le message du bouton du formulaire. Exemple : Valider",
           "visible": true,
           "editable": true
         },
@@ -163,8 +163,8 @@
       "loading_message": {
         "edit": {
           "label": "loading_message",
-          "description": "",
-          "placeholder": "",
+          "description": "Le message de chargement du formulaire. Exemple : Chargement",
+          "placeholder": "Le message de chargement du formulaire. Exemple : Chargement",
           "visible": true,
           "editable": true
         },

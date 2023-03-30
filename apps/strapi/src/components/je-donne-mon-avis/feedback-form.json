@@ -8,7 +8,9 @@
   "attributes": {
     "opinion_title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
     },
     "profile": {
       "displayName": "Select",
@@ -26,7 +28,9 @@
     },
     "contact_details_title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
     },
     "contact_details_content": {
       "type": "text"
@@ -57,11 +61,15 @@
     },
     "submit_message": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
     },
     "loading_message": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
     }
   }
 }

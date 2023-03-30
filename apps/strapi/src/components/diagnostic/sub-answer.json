@@ -8,7 +8,9 @@
   "attributes": {
     "content": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
     },
     "destination": {
       "type": "relation",

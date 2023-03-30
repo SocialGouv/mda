@@ -23,8 +23,8 @@
       "title": {
         "edit": {
           "label": "title",
-          "description": "",
-          "placeholder": "",
+          "description": "Le titre de l'encart sur l'autisme. Exemple : Qu'est-ce que l'autisme ?",
+          "placeholder": "Le titre de l'encart sur l'autisme. Exemple : Qu'est-ce que l'autisme ?",
           "visible": true,
           "editable": true
         },
@@ -37,7 +37,7 @@
       "content": {
         "edit": {
           "label": "content",
-          "description": "",
+          "description": "Le contenu de l'encart sur l'autisme. Le markdown est supporté et vous pouvez intégrer des fichiers images, pdf et vidéos à l'aide du bouton image dans les outils ci-dessus",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -51,7 +51,7 @@
       "img": {
         "edit": {
           "label": "img",
-          "description": "",
+          "description": "L'image de l'encart sur l'autisme.",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -65,7 +65,7 @@
       "links": {
         "edit": {
           "label": "links",
-          "description": "",
+          "description": "Les liens de l'encart sur l'autisme.",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -79,7 +79,7 @@
       "DEMO_content": {
         "edit": {
           "label": "DEMO_content",
-          "description": "",
+          "description": "Le contenu de l'encart sur la démo. Le markdown est supporté et vous pouvez intégrer des fichiers images, pdf et vidéos à l'aide du bouton image dans les outils ci-dessus",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -93,8 +93,8 @@
       "MDA_title": {
         "edit": {
           "label": "MDA_title",
-          "description": "",
-          "placeholder": "",
+          "description": "Le titre de l'encart sur la maison de l'autisme. Exemple : La maison de l'autisme",
+          "placeholder": "Le titre de l'encart sur la maison de l'autisme. Exemple : La maison de l'autisme",
           "visible": true,
           "editable": true
         },
@@ -107,7 +107,7 @@
       "MDA_subtitle": {
         "edit": {
           "label": "MDA_subtitle",
-          "description": "",
+          "description": "Le sous-titre de l'encart sur la maison de l'autisme",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -121,7 +121,7 @@
       "MDA_content": {
         "edit": {
           "label": "MDA_content",
-          "description": "",
+          "description": "Le contenu de l'encart sur la maison de l'autisme. Le markdown est supporté et vous pouvez intégrer des fichiers images, pdf et vidéos à l'aide du bouton image dans les outils ci-dessus",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -135,8 +135,8 @@
       "MDA_link_text": {
         "edit": {
           "label": "MDA_link_text",
-          "description": "",
-          "placeholder": "",
+          "description": "Le label du lien vers la page la maison de l'autisme",
+          "placeholder": "Le label du lien vers la page la maison de l'autisme",
           "visible": true,
           "editable": true
         },
@@ -149,7 +149,7 @@
       "MDA_img": {
         "edit": {
           "label": "MDA_img",
-          "description": "",
+          "description": "L'image de l'encart sur la maison de l'autisme",
           "placeholder": "",
           "visible": true,
           "editable": true

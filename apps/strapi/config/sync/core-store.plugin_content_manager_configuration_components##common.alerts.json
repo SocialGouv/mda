@@ -23,8 +23,8 @@
       "title": {
         "edit": {
           "label": "title",
-          "description": "",
-          "placeholder": "",
+          "description": "Le titre de l'alerte. Exemple : Succès",
+          "placeholder": "Le titre de l'alerte. Exemple : Succès",
           "visible": true,
           "editable": true
         },
@@ -37,7 +37,7 @@
       "content": {
         "edit": {
           "label": "content",
-          "description": "",
+          "description": "Le contenu de l'alerte. Exemple : Votre saisie est prise en compte",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -51,7 +51,7 @@
       "type": {
         "edit": {
           "label": "type",
-          "description": "",
+          "description": "Le type de l'alerte. Valeurs possibles info, success, warning, error",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -74,18 +74,16 @@
           {
             "name": "title",
             "size": 6
+          },
+          {
+            "name": "type",
+            "size": 6
           }
         ],
         [
           {
             "name": "content",
             "size": 12
-          }
-        ],
-        [
-          {
-            "name": "type",
-            "size": 6
           }
         ]
       ]

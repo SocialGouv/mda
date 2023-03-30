@@ -14,7 +14,8 @@
     "title": {
       "type": "string",
       "required": true,
-      "unique": true
+      "maxLength": 255,
+      "minLength": 1
     },
     "recap": {
       "type": "component",
@@ -30,12 +31,16 @@
     "slug": {
       "type": "string",
       "required": false,
-      "unique": true
+      "unique": true,
+      "maxLength": 255,
+      "minLength": 1,
+      "regex": "[a-z\\/-]+"
     },
     "excerpt": {
       "type": "text",
       "required": true,
-      "maxLength": 200
+      "maxLength": 200,
+      "minLength": 1
     }
   }
 }

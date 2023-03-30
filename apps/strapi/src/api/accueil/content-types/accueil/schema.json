@@ -13,7 +13,9 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
     },
     "content": {
       "type": "richtext",
@@ -37,7 +39,9 @@
     },
     "MDA_title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
     },
     "MDA_subtitle": {
       "type": "text"
@@ -48,7 +52,9 @@
     },
     "MDA_link_text": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
     },
     "MDA_img": {
       "allowedTypes": [

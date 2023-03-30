@@ -13,12 +13,17 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
     },
     "slug": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "maxLength": 255,
+      "minLength": 1,
+      "regex": "[a-z\\/-]+"
     },
     "description": {
       "type": "richtext",
