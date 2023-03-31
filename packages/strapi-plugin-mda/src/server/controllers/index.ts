@@ -1,5 +1,7 @@
-import myController from "./my-controller";
+import diagnosticTreeController from "./diagnostic-tree-controller";
 
-export default {
-  myController,
+const controllers = {
+  diagnosticTreeController,
 };
+
+export default controllers;

@@ -1,5 +1,7 @@
-import myService from "./my-service";
+import diagnosticTreeService from "./diagnostic-tree-service";
 
-export default {
-  myService,
+const services = {
+  "diagnostic-tree": diagnosticTreeService,
 };
+
+export default services;
