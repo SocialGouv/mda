@@ -28,10 +28,13 @@ import {
   SkipLinksItem,
 } from "@design-system";
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
+import { fetchStrapi } from "@services/strapi";
 import Link from "next/link";
 import { type PropsWithChildren } from "react";
 
-const RootLayout = ({ children }: PropsWithChildren) => {
+const RootLayout = async ({ children }: PropsWithChildren) => {
+  const strapiMenu = await fetchStrapi("menu", { populate: "deep" });
+  const menuItems = strapiMenu.data?.attributes.item;
   return (
     <html lang="fr">
       <head>
@@ -48,7 +51,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
           <SkipLinksItem href="#header">Menu</SkipLinksItem>
           <SkipLinksItem href="#footer">Pied de page</SkipLinksItem>
         </SkipLinks>
-        <Header />
+        <Header menuItems={menuItems} />
         <BreadcrumbDynamic />
         <main role="main" id="content">
           {children}
