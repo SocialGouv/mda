@@ -188,7 +188,7 @@ export const Header = ({ menuItems }: { menuItems: GetAttributesValues<"api::men
                 <MainNavItemWithDropdown
                   key={item.id}
                   title={item.text}
-                  links={item.link.map(item => {
+                  links={item.dropdown.map(item => {
                     return {
                       id: item.id,
                       label: item.text,

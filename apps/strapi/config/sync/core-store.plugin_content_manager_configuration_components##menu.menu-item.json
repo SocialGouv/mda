@@ -23,8 +23,8 @@
       "text": {
         "edit": {
           "label": "text",
-          "description": "",
-          "placeholder": "",
+          "description": "Le titre du menu. Exemple : Mes Aides",
+          "placeholder": "Le titre du menu. Exemple : Mes Aides",
           "visible": true,
           "editable": true
         },
@@ -37,8 +37,8 @@
       "url": {
         "edit": {
           "label": "url",
-          "description": "",
-          "placeholder": "",
+          "description": "L'url de navigation. Exemple : /mes-aides",
+          "placeholder": "L'url de navigation. Exemple : /mes-aides",
           "visible": true,
           "editable": true
         },

@@ -23,8 +23,8 @@
       "text": {
         "edit": {
           "label": "text",
-          "description": "",
-          "placeholder": "",
+          "description": "Le titre du menu. Exemple : Parcours",
+          "placeholder": "Le titre du menu. Exemple : Parcours",
           "visible": true,
           "editable": true
         },
@@ -34,16 +34,16 @@
           "sortable": true
         }
       },
-      "link": {
+      "dropdown": {
         "edit": {
-          "label": "link",
-          "description": "",
+          "label": "dropdown",
+          "description": "Les sous-menus",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "link",
+          "label": "dropdown",
           "searchable": false,
           "sortable": false
         }
@@ -53,7 +53,7 @@
       "list": [
         "id",
         "text",
-        "link"
+        "dropdown"
       ],
       "edit": [
         [
@@ -64,7 +64,7 @@
         ],
         [
           {
-            "name": "link",
+            "name": "dropdown",
             "size": 12
           }
         ]

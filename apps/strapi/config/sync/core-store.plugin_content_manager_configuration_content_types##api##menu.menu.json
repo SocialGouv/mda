@@ -23,7 +23,7 @@
       "item": {
         "edit": {
           "label": "item",
-          "description": "",
+          "description": "Les menus du site",
           "placeholder": "",
           "visible": true,
           "editable": true

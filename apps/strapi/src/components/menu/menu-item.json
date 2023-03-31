@@ -8,11 +8,16 @@
   "attributes": {
     "text": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
     },
     "url": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1,
+      "regex": "[a-z\\/-]+"
     }
   }
 }

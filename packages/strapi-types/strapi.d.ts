@@ -1587,8 +1587,13 @@ export interface MenuDropdownMenuItem extends ComponentSchema {
     description: '';
   };
   attributes: {
-    text: StringAttribute & RequiredAttribute;
-    link: ComponentAttribute<'menu.menu-item', true> & RequiredAttribute;
+    text: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    dropdown: ComponentAttribute<'menu.menu-item', true> & RequiredAttribute;
   };
 }
 
@@ -1598,8 +1603,18 @@ export interface MenuMenuItem extends ComponentSchema {
     description: '';
   };
   attributes: {
-    text: StringAttribute & RequiredAttribute;
-    url: StringAttribute & RequiredAttribute;
+    text: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    url: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
   };
 }
 
