@@ -1,8 +1,6 @@
-global:
-  host: maisondelautisme-recette.fabrique.social.gouv.fr
-  # host: maisondelautisme.gouv.fr #TODO enable when domain is ok
-
 web:
+  host: maisondelautisme.gouv.fr
+  certSecretName: 2023-mda-web-crt
   autoscale:
     enabled: true
     minReplicas: 2
@@ -28,6 +26,8 @@ jobs:
           PRODUCTION: "true"
           ROBOT: "true"
 strapi:
+  host: strapi.maisondelautisme.gouv.fr
+  certSecretName: 2023-mda-strapi-crt
   autoscale:
     enabled: true
     minReplicas: 2
