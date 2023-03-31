@@ -1,5 +1,9 @@
-web:
+global:
   host: maisondelautisme.gouv.fr
+
+web:
+  redirectFrom:
+    - "maisondelautisme-recette.fabrique.social.gouv.fr"
   certSecretName: 2023-mda-web-crt
   autoscale:
     enabled: true
@@ -26,7 +30,6 @@ jobs:
           PRODUCTION: "true"
           ROBOT: "true"
 strapi:
-  host: strapi.maisondelautisme.gouv.fr
   certSecretName: 2023-mda-strapi-crt
   autoscale:
     enabled: true

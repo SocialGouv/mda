@@ -37,7 +37,7 @@ strapi:
   ~needs: [build-strapi]
   imagePackage: strapi
   probesPath: /_health
-  host: "strapi-{{ .Values.global.host }}"
+  host: "strapi.{{ .Values.global.host }}"
   envFrom:
     - secretRef:
         name: "{{ .Values.global.pgSecretName }}"
@@ -74,7 +74,7 @@ jobs:
         buildArgs:
           NEXT_PUBLIC_GITHUB_SHA: "{{ $.Values.global.sha }}"
           NEXT_PUBLIC_SITE_URL: "https://{{ .Values.global.host }}"
-          NEXT_PUBLIC_STRAPI_API_URL: "https://strapi-{{ .Values.global.host }}"
+          NEXT_PUBLIC_STRAPI_API_URL: "https://strapi.{{ .Values.global.host }}"
           MDA_ENV: "{{ .Values.global.env }}"
 
     build-strapi:
