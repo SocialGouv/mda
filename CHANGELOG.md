@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/SocialGouv/mda/compare/v1.10.0...v1.10.1) (2023-03-31)
+
+
+### Bug Fixes
+
+* adapt strapi url with cert wildcard dns zone ([#224](https://github.com/SocialGouv/mda/issues/224)) ([cdbcc12](https://github.com/SocialGouv/mda/commit/cdbcc122168867d1a95fc23a049807b2b6606cc8))
+
 # [1.10.0](https://github.com/SocialGouv/mda/compare/v1.9.3...v1.10.0) (2023-03-31)
 
 
