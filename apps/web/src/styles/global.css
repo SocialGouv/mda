@@ -217,6 +217,10 @@ textarea {
     padding: 2rem !important;
 }
 
+.orejimeBody-WithModalOpen .orejime-Notice.orejime-Notice {
+    z-index: calc(var(--ground) + 500) !important;
+}
+
 .orejime-Notice-title,
 .orejime-Notice-description {
     color: var(--text-default-grey) !important;
