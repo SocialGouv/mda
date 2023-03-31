@@ -629,6 +629,42 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::menu.menu",
+      "properties": {
+        "fields": [
+          "item"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::menu.menu",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::menu.menu",
+      "properties": {
+        "fields": [
+          "item"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::menu.menu",
+      "properties": {
+        "fields": [
+          "item"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::mes-aides.mes-aides",
       "properties": {
         "fields": [

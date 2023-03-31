@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_menu_item_dropdown_menu_items",
+  "info": {
+    "displayName": "Dropdown menu item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
+    },
+    "dropdown": {
+      "type": "component",
+      "repeatable": true,
+      "component": "menu.menu-item",
+      "required": true
+    }
+  }
+}

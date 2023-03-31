@@ -52,6 +52,9 @@
       "action": "api::mentions-legales.mentions-legales.find"
     },
     {
+      "action": "api::menu.menu.find"
+    },
+    {
       "action": "api::mes-aides.mes-aides.find"
     },
     {

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_menu_item_menu_items",
+  "info": {
+    "displayName": "Menu item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
+    },
+    "url": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1,
+      "regex": "[a-z\\/-]+"
+    }
+  }
+}

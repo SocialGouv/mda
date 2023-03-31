@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "menus",
+  "info": {
+    "singularName": "menu",
+    "pluralName": "menus",
+    "displayName": "Menu",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "item": {
+      "type": "dynamiczone",
+      "components": [
+        "menu.dropdown-menu-item",
+        "menu.menu-item"
+      ]
+    }
+  }
+}

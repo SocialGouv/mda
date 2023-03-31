@@ -1,0 +1,59 @@
+{
+  "createdAt": "2023-03-30T13:00:02.259Z",
+  "updatedAt": "2023-03-30T16:49:29.467Z",
+  "item": [
+    {
+      "__component": "menu.dropdown-menu-item",
+      "text": "Mon parcours",
+      "dropdown": [
+        {
+          "text": "Personne autiste",
+          "url": "/mon-parcours/personne-autiste"
+        },
+        {
+          "text": "Parent ou aidant",
+          "url": "/mon-parcours/parent-personne-aidante"
+        },
+        {
+          "text": "Professionnel de santé ou du médico-social",
+          "url": "/mon-parcours/professionnel-de-sante"
+        }
+      ]
+    },
+    {
+      "__component": "menu.menu-item",
+      "text": "Guide des parcours de diagnostic",
+      "url": "/mon-diagnostic"
+    },
+    {
+      "__component": "menu.menu-item",
+      "text": "Mes aides",
+      "url": "/mes-aides"
+    },
+    {
+      "__component": "menu.menu-item",
+      "text": "Fiches pratiques",
+      "url": "/fiches-pratiques"
+    },
+    {
+      "__component": "menu.menu-item",
+      "text": "Annuaire",
+      "url": "/annuaire"
+    },
+    {
+      "__component": "menu.menu-item",
+      "text": "Glossaire",
+      "url": "/glossaire"
+    },
+    {
+      "__component": "menu.menu-item",
+      "text": "La Maison de l'autisme",
+      "url": "/la-maison-de-l-autisme"
+    },
+    {
+      "__component": "menu.menu-item",
+      "text": "Je donne mon avis",
+      "url": "/je-donne-mon-avis"
+    }
+  ]
+}
