@@ -8,6 +8,7 @@ web:
     MAILER_SMTP_SSL: "False"
 
 strapi:
+  host: "strapi-{{ .Values.global.host }}"
   addVolumes:
     - uploads
   volumeMounts:
