@@ -1,3 +1,11 @@
+# [1.10.0](https://github.com/SocialGouv/mda/compare/v1.9.3...v1.10.0) (2023-03-31)
+
+
+### Features
+
+* dynamic menu ([#222](https://github.com/SocialGouv/mda/issues/222)) ([ae540ad](https://github.com/SocialGouv/mda/commit/ae540adfa6b8d7d8993b8c2f337565cafbf7301a))
+* prepare move to gouv.fr ([#212](https://github.com/SocialGouv/mda/issues/212)) ([8099426](https://github.com/SocialGouv/mda/commit/80994260f4b2ef2300aba4af34e633f7074db3f7))
+
 ## [1.9.3](https://github.com/SocialGouv/mda/compare/v1.9.2...v1.9.3) (2023-03-31)
 
 
