@@ -21,10 +21,13 @@ import ReactFlow, {
   MiniMap,
   type Node,
   type NodeTypes,
-  Position,
   type XYPosition,
 } from "reactflow";
 
+import { AnswerNode } from "../../components/mindmap/AnswerNode";
+import { QuestionNode } from "../../components/mindmap/QuestionNode";
+import { RootQuestionNode } from "../../components/mindmap/RootQuestionNode";
+import { SubAnswerNode } from "../../components/mindmap/SubAnswerNode";
 import { TextNode } from "../../components/mindmap/TextNode";
 import baseJson from "./content.json";
 
@@ -136,30 +139,26 @@ const initialNodes: Array<Node<Diag.Answer | Diag.Question | Diag.SubAnswer>> = 
   {
     id: rootQuestion.id,
     position: { x: 0, y: 0 },
-    data: {
-      ...rootQuestion,
-      label: rootQuestion.content,
-    },
-    sourcePosition: Position.Right,
-    targetPosition: void 0,
+    data: rootQuestion,
+    type: RootQuestionNode.nodeName,
   },
   ...questions.map<Node<Diag.Question>>(question => ({
     id: question.id,
     position: randXY(),
     data: question,
-    type: "textNode",
+    type: QuestionNode.nodeName,
   })),
   ...answers.map<Node<Diag.Answer>>(answer => ({
     id: answer.id,
     position: randXY(),
     data: answer,
-    type: "textNode",
+    type: AnswerNode.nodeName,
   })),
   ...subanswers.map<Node<Diag.SubAnswer>>(subanswer => ({
     id: subanswer.id,
     position: randXY(),
     data: subanswer,
-    type: "textNode",
+    type: SubAnswerNode.nodeName,
   })),
   // {
   //   id: "1",
@@ -180,7 +179,16 @@ const initialEdges: Edge[] = [
 console.log({ initialNodes });
 
 const App = () => {
-  const nodeTypes: NodeTypes = useMemo(() => ({ textNode: TextNode }), []);
+  const nodeTypes: NodeTypes = useMemo(
+    () => ({
+      textNode: TextNode,
+      [RootQuestionNode.nodeName]: RootQuestionNode,
+      [QuestionNode.nodeName]: QuestionNode,
+      [AnswerNode.nodeName]: AnswerNode,
+      [SubAnswerNode.nodeName]: SubAnswerNode,
+    }),
+    [],
+  );
 
   return (
     <Box className="MDA-ROOT" height="100vh">
