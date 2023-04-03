@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/SocialGouv/mda/compare/v1.10.1...v1.11.0) (2023-04-03)
+
+
+### Features
+
+* dynamic menu frontend ([#223](https://github.com/SocialGouv/mda/issues/223)) ([733dea1](https://github.com/SocialGouv/mda/commit/733dea1cb3444675084768fdebeb3456ce1a211e))
+
 ## [1.10.1](https://github.com/SocialGouv/mda/compare/v1.10.0...v1.10.1) (2023-03-31)
 
 
