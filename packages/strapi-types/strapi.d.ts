@@ -737,7 +737,6 @@ export interface ApiAccueilAccueil extends SingleTypeSchema {
     content: RichTextAttribute & RequiredAttribute;
     img: MediaAttribute;
     links: ComponentAttribute<'common.links', true>;
-    DEMO_content: RichTextAttribute;
     MDA_title: StringAttribute &
       RequiredAttribute &
       SetMinMaxLength<{
