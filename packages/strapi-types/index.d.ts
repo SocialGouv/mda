@@ -244,7 +244,7 @@ export interface ResponseSearch<T> {
 };
 
 
-export namespace Diag {
+export namespace Diag {
     export type QuestionID = string;
     export type AnswerID = string;
     export type SubAnswerID = string;

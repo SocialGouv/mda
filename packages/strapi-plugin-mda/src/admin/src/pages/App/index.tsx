@@ -36,7 +36,9 @@ const answersSet = new Set<Diag.Answer>();
 const subanswersSet = new Set<Diag.SubAnswer>();
 
 const edges: Edge[] = [];
+const edgesIdSet = new Set<string>();
 
+const EDGE_SPLIT = "NIQUE";
 for (const elt of baseJson) {
   if (elt.attributes.answers) {
     const id = `question-${elt.id}`;
@@ -46,11 +48,12 @@ for (const elt of baseJson) {
         id,
         answers: elt.attributes.answers.map(answer => {
           const anwserId = `answer-${answer.id}`;
-          edges.push({
-            id: `e${id}-${anwserId}`,
-            source: id,
-            target: anwserId,
-          });
+          edgesIdSet.add(`e${id}${EDGE_SPLIT}${anwserId}`);
+          // edges.push({
+          //   id: `e${id}-${anwserId}`,
+          //   source: id,
+          //   target: anwserId,
+          // });
           return anwserId;
         }),
         info: elt.attributes.info ?? "",
@@ -61,11 +64,12 @@ for (const elt of baseJson) {
         id,
         answers: elt.attributes.answers.map(answer => {
           const anwserId = `answer-${answer.id}`;
-          edges.push({
-            id: `e${id}-${anwserId}`,
-            source: id,
-            target: anwserId,
-          });
+          edgesIdSet.add(`e${id}${EDGE_SPLIT}${anwserId}`);
+          // edges.push({
+          //   id: `e${id}-${anwserId}`,
+          //   source: id,
+          //   target: anwserId,
+          // });
           return anwserId;
         }),
         info: elt.attributes.info ?? "",
@@ -83,21 +87,23 @@ for (const elt of baseJson) {
           info: answer.info ?? "",
           subanswers: answer.subanswers.map(subanswer => {
             const subanswerId = `subanswer-${subanswer.id}`;
-            edges.push({
-              id: `e${answerId}-${subanswerId}`,
-              source: answerId,
-              target: subanswerId,
-            });
+            edgesIdSet.add(`e${answerId}${EDGE_SPLIT}${subanswerId}`);
+            // edges.push({
+            //   id: `e${answerId}-${subanswerId}`,
+            //   source: answerId,
+            //   target: subanswerId,
+            // });
             return subanswerId;
           }),
         });
 
         if (answerDestinationId) {
-          edges.push({
-            id: `e${answerId}-${answerDestinationId}`,
-            source: answerId,
-            target: answerDestinationId,
-          });
+          edgesIdSet.add(`e${answerId}${EDGE_SPLIT}${answerDestinationId}`);
+          // edges.push({
+          //   id: `e${answerId}-${answerDestinationId}`,
+          //   source: answerId,
+          //   target: answerDestinationId,
+          // });
         }
 
         for (const subanswer of answer.subanswers) {
@@ -109,11 +115,12 @@ for (const elt of baseJson) {
             destination: destinationId,
             info: subanswer.info ?? "",
           });
-          edges.push({
-            id: `e${subanswerId}-${destinationId}`,
-            source: subanswerId,
-            target: destinationId,
-          });
+          edgesIdSet.add(`e${subanswerId}-${destinationId}`);
+          // edges.push({
+          //   id: `e${subanswerId}-${destinationId}`,
+          //   source: subanswerId,
+          //   target: destinationId,
+          // });
         }
       }
     }
@@ -123,6 +130,15 @@ for (const elt of baseJson) {
 const questions = _.sortBy(Array.from(questionsSet), "id");
 const answers = _.sortBy(Array.from(answersSet), "id");
 const subanswers = _.sortBy(Array.from(subanswersSet), "id");
+
+edgesIdSet.forEach(id => {
+  const [badSource, target] = id.split(EDGE_SPLIT);
+  edges.push({
+    id,
+    source: badSource.substring(1),
+    target,
+  });
+});
 
 console.log({ rootQuestion, questions, answers, subanswers, edges });
 
