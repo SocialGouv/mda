@@ -14,8 +14,6 @@ meilisearch:
   env:
     - name: MEILI_NO_ANALYTICS
       value: "true"
-    - name: MEILI_DB_PATH
-      value: /meilifiles
   ingress:
     enabled: false
 
