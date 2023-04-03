@@ -28,7 +28,6 @@ import { AnswerNode } from "../../components/mindmap/AnswerNode";
 import { QuestionNode } from "../../components/mindmap/QuestionNode";
 import { RootQuestionNode } from "../../components/mindmap/RootQuestionNode";
 import { SubAnswerNode } from "../../components/mindmap/SubAnswerNode";
-import { TextNode } from "../../components/mindmap/TextNode";
 import baseJson from "./content.json";
 
 let rootQuestion: Diag.Question = null as any;
@@ -98,7 +97,6 @@ for (const elt of baseJson) {
             id: `e${answerId}-${answerDestinationId}`,
             source: answerId,
             target: answerDestinationId,
-            animated: true,
           });
         }
 
@@ -115,7 +113,6 @@ for (const elt of baseJson) {
             id: `e${subanswerId}-${destinationId}`,
             source: subanswerId,
             target: destinationId,
-            animated: true,
           });
         }
       }
@@ -160,28 +157,27 @@ const initialNodes: Array<Node<Diag.Answer | Diag.Question | Diag.SubAnswer>> = 
     data: subanswer,
     type: SubAnswerNode.nodeName,
   })),
-  // {
-  //   id: "1",
-  //   position: { x: 0, y: 0 },
-  //   data: { label: "1" },
-  // },
-  // {
-  //   id: "2",
-  //   position: { x: 0, y: 100 },
-  //   data: { label: "2" },
-  // },
 ];
-const initialEdges: Edge[] = [
-  // { id: "e1-2", source: "1", target: "2" }
-  ...edges,
-];
+const initialEdges: Edge[] = [...edges];
 
-console.log({ initialNodes });
+const nodeColor = (node: Node) => {
+  switch (node.type) {
+    case RootQuestionNode.nodeName:
+      return "#ad2a1a";
+    case QuestionNode.nodeName:
+      return "#829356";
+    case AnswerNode.nodeName:
+      return "#107896";
+    case SubAnswerNode.nodeName:
+      return "#093145";
+    default:
+      return "#ccc";
+  }
+};
 
 const App = () => {
   const nodeTypes: NodeTypes = useMemo(
     () => ({
-      textNode: TextNode,
       [RootQuestionNode.nodeName]: RootQuestionNode,
       [QuestionNode.nodeName]: QuestionNode,
       [AnswerNode.nodeName]: AnswerNode,
@@ -205,11 +201,13 @@ const App = () => {
             fitView
             onNodesDelete={nodes => console.log("NODES DELETE", nodes)}
             nodeTypes={nodeTypes}
+            snapToGrid
+            snapGrid={[50, 50]}
           >
             <Background id="1" gap={10} color="#f1f1f1" variant={BackgroundVariant.Lines} />
             <Background id="2" gap={100} offset={1} color="#ccc" variant={BackgroundVariant.Lines} />
             <Controls />
-            <MiniMap position="top-right" />
+            <MiniMap position="top-right" nodeColor={nodeColor} zoomable pannable />
           </ReactFlow>
         </Box>
       </ContentLayout>
