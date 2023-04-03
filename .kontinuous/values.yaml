@@ -22,7 +22,8 @@ meilisearch:
 web:
   ~chart: app
   containerPort: 3000
-  ~needs: [build-web]
+  ~needs:
+    - build-web
   imagePackage: web
   probesPath: /healthz
   host: "{{ .Values.global.host }}"
@@ -36,7 +37,9 @@ web:
 strapi:
   ~chart: app
   containerPort: 1337
-  ~needs: [build-strapi]
+  ~needs:
+    - build-strapi
+    - meilisearch
   imagePackage: strapi
   probesPath: /_health
   host: "strapi.{{ .Values.global.host }}"
@@ -68,7 +71,8 @@ strapi:
 jobs:
   runs:
     build-web:
-      ~needs: [strapi]
+      ~needs:
+        - strapi
       use: build
       with:
         imagePackage: web

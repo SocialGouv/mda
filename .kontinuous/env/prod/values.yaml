@@ -1,6 +1,86 @@
 global:
   host: maisondelautisme.gouv.fr
 
+x-meilisearch-volume: &meilisearchVolume
+  name: meilifiles
+  csi:
+    driver: file.csi.azure.com
+    readOnly: false
+    volumeAttributes:
+      secretName: azure-mda-volume
+      shareName: meilisearch
+
+jobs:
+  runs:
+    build-web:
+      with:
+        buildArgs:
+          PRODUCTION: "true"
+          ROBOT: "true"
+    clean-meilisearch:
+      volume:
+        - *meilisearchVolume
+      volumeMounts:
+        - mountPath: /meilifiles
+          name: meilifiles
+      image: alpine:3
+      run: |
+        rm -rf /meilifiles/*
+
+meilisearch:
+  ~needs:
+    - clean-meilisearch
+  # See https://github.com/meilisearch/meilisearch-kubernetes/issues/111
+  replicas: 1
+  autoscale:
+    enabled: false
+  volume:
+    - *meilisearchVolume
+  volumeMounts:
+    - mountPath: /meilifiles
+      name: meilifiles
+  resources:
+    limits:
+      cpu: "350m"
+      memory: "384Mi"
+    requests:
+      cpu: "250m"
+      memory: "256Mi"
+
+strapi:
+  certSecretName: 2023-mda-strapi-crt
+  autoscale:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 10
+  resources:
+    limits:
+      cpu: "500m"
+      memory: "2Gi"
+    requests:
+      cpu: "400m"
+      memory: "512Mi"
+  volume:
+    - name: uploads
+      csi:
+        driver: file.csi.azure.com
+        readOnly: false
+        volumeAttributes:
+          secretName: azure-mda-volume
+          shareName: uploads
+  volumeMounts:
+    - mountPath: /app/apps/strapi/public/uploads
+      name: uploads
+  envFrom:
+    - secretRef:
+        name: "{{ .Values.global.pgSecretName }}"
+    - secretRef:
+        name: "mda-strapi"
+    - secretRef:
+        name: "mda-revalidate-webhook"
+    - secretRef:
+        name: "mda-meilisearch"
+
 web:
   redirectFrom:
     - "maisondelautisme-recette.fabrique.social.gouv.fr"
@@ -21,58 +101,3 @@ web:
         name: "mda-revalidate-webhook"
     - secretRef:
         name: "mda-web-smtp"
-
-jobs:
-  runs:
-    build-web:
-      with:
-        buildArgs:
-          PRODUCTION: "true"
-          ROBOT: "true"
-strapi:
-  certSecretName: 2023-mda-strapi-crt
-  autoscale:
-    enabled: true
-    minReplicas: 2
-    maxReplicas: 10
-  resources:
-    limits:
-      cpu: "500m"
-      memory: "2Gi"
-    requests:
-      cpu: "400m"
-      memory: "512Mi"
-  addVolumes:
-    - uploads
-  volumeMounts:
-    - mountPath: /app/apps/strapi/public/uploads
-      name: uploads
-  envFrom:
-    - secretRef:
-        name: "{{ .Values.global.pgSecretName }}"
-    - secretRef:
-        name: "mda-strapi"
-    - secretRef:
-        name: "mda-revalidate-webhook"
-    - secretRef:
-        name: "mda-meilisearch"
-    - secretRef:
-        name: "azure-mda-volume"
-
-meilisearch:
-  # See https://github.com/meilisearch/meilisearch-kubernetes/issues/111
-  replicas: 1
-  autoscale:
-    enabled: false
-  addVolumes:
-    - meilisearch
-  volumeMounts:
-    - mountPath: /meilifiles
-      name: meilisearch
-  resources:
-    limits:
-      cpu: "350m"
-      memory: "384Mi"
-    requests:
-      cpu: "250m"
-      memory: "256Mi"
