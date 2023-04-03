@@ -60,10 +60,14 @@ strapi:
         name: "azure-mda-volume"
 
 meilisearch:
+  replicas: 1
   autoscale:
-    enabled: true
-    minReplicas: 2
-    maxReplicas: 10
+    enabled: false
+  addVolumes:
+    - meilisearch
+  volumeMounts:
+    - mountPath: /meilifiles
+      name: meilisearch
   resources:
     limits:
       cpu: "350m"
