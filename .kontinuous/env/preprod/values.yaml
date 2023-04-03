@@ -37,8 +37,14 @@ meilisearch:
 
 strapi:
   host: "strapi-{{ .Values.global.host }}"
-  addVolumes:
-    - uploads
+  volumes:
+    - name: uploads
+      csi:
+        driver: file.csi.azure.com
+        readOnly: false
+        volumeAttributes:
+          secretName: azure-mda-volume
+          shareName: uploads
   volumeMounts:
     - mountPath: /app/apps/strapi/public/uploads
       name: uploads
