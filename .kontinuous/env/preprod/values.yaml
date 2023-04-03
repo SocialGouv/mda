@@ -26,6 +26,13 @@ strapi:
     - secretRef:
         name: "azure-mda-volume"
 
+meilisearch:
+  addVolumes:
+    - meilisearch
+  volumeMounts:
+    - mountPath: /meilifiles
+      name: meilisearch
+
 maildev: {}
 
 jobs:
