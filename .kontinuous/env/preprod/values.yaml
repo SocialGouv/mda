@@ -1,11 +1,12 @@
-x-meilisearch-volume: &meilisearchVolume
-  name: meilifiles
-  csi:
-    driver: file.csi.azure.com
-    readOnly: false
-    volumeAttributes:
-      secretName: azure-mda-volume
-      shareName: meilisearch
+global:
+  x-meilisearch-volume: &meilisearchVolume
+    name: meilifiles
+    csi:
+      driver: file.csi.azure.com
+      readOnly: false
+      volumeAttributes:
+        secretName: azure-mda-volume
+        shareName: meilisearch
 
 jobs:
   runs:
@@ -15,12 +16,13 @@ jobs:
           PRODUCTION: "true"
           NEXT_PUBLIC_STRAPI_API_URL: "https://strapi-{{ .Values.global.host }}"
     clean-meilisearch:
-      volume:
+      volumes:
         - *meilisearchVolume
       volumeMounts:
         - mountPath: /meilifiles
           name: meilifiles
       image: alpine:3
+      shell: sh
       run: |
         rm -rf /meilifiles/*
 
@@ -29,7 +31,7 @@ maildev: {}
 meilisearch:
   ~needs:
     - clean-meilisearch
-  volume:
+  volumes:
     - *meilisearchVolume
   volumeMounts:
     - mountPath: /meilifiles

@@ -1,14 +1,13 @@
 global:
   host: maisondelautisme.gouv.fr
-
-x-meilisearch-volume: &meilisearchVolume
-  name: meilifiles
-  csi:
-    driver: file.csi.azure.com
-    readOnly: false
-    volumeAttributes:
-      secretName: azure-mda-volume
-      shareName: meilisearch
+  x-meilisearch-volume: &meilisearchVolume
+    name: meilifiles
+    csi:
+      driver: file.csi.azure.com
+      readOnly: false
+      volumeAttributes:
+        secretName: azure-mda-volume
+        shareName: meilisearch
 
 jobs:
   runs:
@@ -18,12 +17,13 @@ jobs:
           PRODUCTION: "true"
           ROBOT: "true"
     clean-meilisearch:
-      volume:
+      volumes:
         - *meilisearchVolume
       volumeMounts:
         - mountPath: /meilifiles
           name: meilifiles
       image: alpine:3
+      shell: sh
       run: |
         rm -rf /meilifiles/*
 
@@ -34,7 +34,7 @@ meilisearch:
   replicas: 1
   autoscale:
     enabled: false
-  volume:
+  volumes:
     - *meilisearchVolume
   volumeMounts:
     - mountPath: /meilifiles
@@ -60,7 +60,7 @@ strapi:
     requests:
       cpu: "400m"
       memory: "512Mi"
-  volume:
+  volumes:
     - name: uploads
       csi:
         driver: file.csi.azure.com
