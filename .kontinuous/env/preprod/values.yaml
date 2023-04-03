@@ -19,12 +19,20 @@ jobs:
       volumes:
         - *meilisearchVolume
       volumeMounts:
-        - mountPath: /meilifiles
+        - mountPath: /meilifiles-root
           name: meilifiles
-      image: alpine:3
-      shell: sh
+      image: debian:buster
       run: |
-        rm -rf /meilifiles/*
+        if [ -f "/meilifiles-root/current.sha" ]; then
+          previousSha="$(cat /meilifiles-root/current.sha)"
+        else
+          previousSha=""
+        fi
+        currentSha="{{ .Values.global.sha }}"
+        mkdir -p "/meilifiles-root/deployments/$currentSha"
+        rm -rf "/meilifiles-root/deployments/!($previousSha|$currentSha)"
+        echo "$currentSha">/meilifiles-root/current.sha
+        echo "current sha: $currentSha"
 
 maildev: {}
 
@@ -36,6 +44,7 @@ meilisearch:
   volumeMounts:
     - mountPath: /meilifiles
       name: meilifiles
+      subPath: "deployments/{{ .Values.global.sha }}"
 
 strapi:
   host: "strapi-{{ .Values.global.host }}"
