@@ -1,6 +1,15 @@
 global:
   host: maisondelautisme.gouv.fr
 
+x-meilisearch-volume: &meilisearchVolume
+  name: meilifiles
+  csi:
+    driver: file.csi.azure.com
+    readOnly: false
+    volumeAttributes:
+      secretName: azure-mda-volume
+      shareName: meilisearch
+
 web:
   redirectFrom:
     - "maisondelautisme-recette.fabrique.social.gouv.fr"
@@ -29,6 +38,16 @@ jobs:
         buildArgs:
           PRODUCTION: "true"
           ROBOT: "true"
+    clean-meilisearch:
+      volume:
+        - *meilisearchVolume
+      volumeMounts:
+        - mountPath: /meilifiles
+          name: meilifiles
+      image: alpine:3
+      run: |
+        rm -rf /meilifiles/*
+
 strapi:
   certSecretName: 2023-mda-strapi-crt
   autoscale:
@@ -42,8 +61,14 @@ strapi:
     requests:
       cpu: "400m"
       memory: "512Mi"
-  addVolumes:
-    - uploads
+  volume:
+    - name: uploads
+      csi:
+        driver: file.csi.azure.com
+        readOnly: false
+        volumeAttributes:
+          secretName: azure-mda-volume
+          shareName: uploads
   volumeMounts:
     - mountPath: /app/apps/strapi/public/uploads
       name: uploads
@@ -56,19 +81,17 @@ strapi:
         name: "mda-revalidate-webhook"
     - secretRef:
         name: "mda-meilisearch"
-    - secretRef:
-        name: "azure-mda-volume"
 
 meilisearch:
   # See https://github.com/meilisearch/meilisearch-kubernetes/issues/111
   replicas: 1
   autoscale:
     enabled: false
-  addVolumes:
-    - meilisearch
+  volume:
+    - *meilisearchVolume
   volumeMounts:
     - mountPath: /meilifiles
-      name: meilisearch
+      name: meilifiles
   resources:
     limits:
       cpu: "350m"
