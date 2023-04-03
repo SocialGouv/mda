@@ -60,10 +60,15 @@ strapi:
         name: "azure-mda-volume"
 
 meilisearch:
+  # See https://github.com/meilisearch/meilisearch-kubernetes/issues/111
+  replicas: 1
   autoscale:
-    enabled: true
-    minReplicas: 2
-    maxReplicas: 10
+    enabled: false
+  addVolumes:
+    - meilisearch
+  volumeMounts:
+    - mountPath: /meilifiles
+      name: meilisearch
   resources:
     limits:
       cpu: "350m"
