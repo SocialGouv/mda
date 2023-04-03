@@ -10,27 +10,6 @@ x-meilisearch-volume: &meilisearchVolume
       secretName: azure-mda-volume
       shareName: meilisearch
 
-web:
-  redirectFrom:
-    - "maisondelautisme-recette.fabrique.social.gouv.fr"
-  certSecretName: 2023-mda-web-crt
-  autoscale:
-    enabled: true
-    minReplicas: 2
-    maxReplicas: 10
-  resources:
-    limits:
-      cpu: "350m"
-      memory: "384Mi"
-    requests:
-      cpu: "250m"
-      memory: "256Mi"
-  envFrom:
-    - secretRef:
-        name: "mda-revalidate-webhook"
-    - secretRef:
-        name: "mda-web-smtp"
-
 jobs:
   runs:
     build-web:
@@ -47,6 +26,26 @@ jobs:
       image: alpine:3
       run: |
         rm -rf /meilifiles/*
+
+meilisearch:
+  ~needs:
+    - clean-meilisearch
+  # See https://github.com/meilisearch/meilisearch-kubernetes/issues/111
+  replicas: 1
+  autoscale:
+    enabled: false
+  volume:
+    - *meilisearchVolume
+  volumeMounts:
+    - mountPath: /meilifiles
+      name: meilifiles
+  resources:
+    limits:
+      cpu: "350m"
+      memory: "384Mi"
+    requests:
+      cpu: "250m"
+      memory: "256Mi"
 
 strapi:
   certSecretName: 2023-mda-strapi-crt
@@ -82,16 +81,14 @@ strapi:
     - secretRef:
         name: "mda-meilisearch"
 
-meilisearch:
-  # See https://github.com/meilisearch/meilisearch-kubernetes/issues/111
-  replicas: 1
+web:
+  redirectFrom:
+    - "maisondelautisme-recette.fabrique.social.gouv.fr"
+  certSecretName: 2023-mda-web-crt
   autoscale:
-    enabled: false
-  volume:
-    - *meilisearchVolume
-  volumeMounts:
-    - mountPath: /meilifiles
-      name: meilifiles
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 10
   resources:
     limits:
       cpu: "350m"
@@ -99,3 +96,8 @@ meilisearch:
     requests:
       cpu: "250m"
       memory: "256Mi"
+  envFrom:
+    - secretRef:
+        name: "mda-revalidate-webhook"
+    - secretRef:
+        name: "mda-web-smtp"
