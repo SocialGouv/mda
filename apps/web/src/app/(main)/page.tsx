@@ -34,12 +34,6 @@ const HomePage = async () => {
     sort: "id",
   });
 
-  const {
-    meta: {
-      pagination: { total: totalEvents },
-    },
-  } = await fetchStrapi<"api::event.event">("maison-de-l-autisme/upcoming-events");
-
   const data = strapiData.data?.attributes;
   const homeImgPath = data?.img?.data?.attributes.url;
   const homeImgSrc = homeImgPath ? new URL(homeImgPath, config.strapi.apiUrl).toString() : "/home-hero.jpeg";
@@ -73,23 +67,6 @@ const HomePage = async () => {
             </Grid>
           </Container>
         </div>
-        {data?.DEMO_content && (
-          <div className="fr-py-6w fr-py-md-12w">
-            <Container>
-              <Markdown>{data.DEMO_content}</Markdown>
-            </Container>
-          </div>
-        )}
-        {totalEvents && (
-          <div className="fr-py-6w fr-py-md-12w">
-            <Container>
-              <h2>
-                Il y a {totalEvents} évènement{totalEvents > 1 ? "s" : ""} planifié{totalEvents > 1 ? "s" : ""}
-              </h2>
-              <ButtonAsLink href="/la-maison-de-l-autisme#events">Voir les évènements</ButtonAsLink>
-            </Container>
-          </div>
-        )}
         <div className="fr-pt-6w fr-pt-md-8w">
           <Container>
             <h2>Démarches et outils</h2>
@@ -146,7 +123,7 @@ const HomePage = async () => {
                 <Tile>
                   <TileBody>
                     <TileBodyTitle href="/mon-diagnostic" titleAs="h3">
-                      Mon diagnostic
+                      Guide des parcours de diagnostic
                     </TileBodyTitle>
                     <TileBodyDescription>
                       Le diagnostic est une suite de rendez-vous médicaux qui se réalise auprès de plusieurs
