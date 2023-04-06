@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/SocialGouv/mda/compare/v1.12.0...v1.12.1) (2023-04-06)
+
+
+### Bug Fixes
+
+* **next:** Do not cache search requests ([#250](https://github.com/SocialGouv/mda/issues/250)) ([36623e1](https://github.com/SocialGouv/mda/commit/36623e1c2e7895a0ee1c04c5cff4316831caf4e7))
+
 # [1.12.0](https://github.com/SocialGouv/mda/compare/v1.11.0...v1.12.0) (2023-04-06)
 
 
