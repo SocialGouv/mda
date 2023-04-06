@@ -3,6 +3,7 @@ import "../../styles/global.css";
 import { config } from "@common/config";
 import { BreadcrumbDynamic } from "@components/base/client/BreadcrumbDynamic";
 import { Header } from "@components/base/client/Header";
+import { ThemeSwitcher } from "@components/base/client/ThemeSwitcher";
 import { DarkTheme } from "@components/utils/client/DarkTheme";
 import { DsfrScript } from "@components/utils/client/DsfrScript";
 import { Matomo } from "@components/utils/client/Matomo";
@@ -253,6 +254,9 @@ const RootLayout = async ({ children }: PropsWithChildren) => {
             </FooterBottomItem>
             <FooterBottomItem>
               <FooterBottomLink href="/je-donne-mon-avis">Je donne mon avis</FooterBottomLink>
+            </FooterBottomItem>
+            <FooterBottomItem>
+              <ThemeSwitcher />
             </FooterBottomItem>
           </FooterBottom>
         </Footer>
