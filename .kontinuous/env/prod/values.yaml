@@ -1,5 +1,7 @@
 global:
   host: maisondelautisme.gouv.fr
+    redirectFrom:
+    - www.maisondelautisme.gouv.fr
   x-meilisearch-volume: &meilisearchVolume
     name: meilifiles
     csi:
