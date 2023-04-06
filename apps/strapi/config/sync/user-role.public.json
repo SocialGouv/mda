@@ -58,6 +58,9 @@
       "action": "api::mes-aides.mes-aides.find"
     },
     {
+      "action": "api::modeles-de-courrier.modeles-de-courrier.find"
+    },
+    {
       "action": "api::parcours.parcours.find"
     },
     {

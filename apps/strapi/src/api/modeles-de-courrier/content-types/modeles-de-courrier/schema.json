@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "modeles_de_courriers",
+  "info": {
+    "singularName": "modeles-de-courrier",
+    "pluralName": "modeles-de-courriers",
+    "displayName": "Modèles de courriers"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "files": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

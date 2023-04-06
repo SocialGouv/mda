@@ -707,6 +707,54 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::modeles-de-courrier.modeles-de-courrier",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "files"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::modeles-de-courrier.modeles-de-courrier",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::modeles-de-courrier.modeles-de-courrier",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::modeles-de-courrier.modeles-de-courrier",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "files"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::modeles-de-courrier.modeles-de-courrier",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "files"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::parcours.parcours",
       "properties": {
         "fields": [
