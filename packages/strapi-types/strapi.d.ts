@@ -1204,6 +1204,43 @@ export interface ApiMesAidesMesAides extends SingleTypeSchema {
   };
 }
 
+export interface ApiModelesDeCourrierModelesDeCourrier
+  extends SingleTypeSchema {
+  info: {
+    singularName: 'modeles-de-courrier';
+    pluralName: 'modeles-de-courriers';
+    displayName: 'Mod\u00E8les de courriers';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    content: RichTextAttribute;
+    files: MediaAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    publishedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::modeles-de-courrier.modeles-de-courrier',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::modeles-de-courrier.modeles-de-courrier',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiParcoursParcours extends CollectionTypeSchema {
   info: {
     singularName: 'parcours';
@@ -1665,6 +1702,7 @@ declare global {
       'api::mentions-legales.mentions-legales': ApiMentionsLegalesMentionsLegales;
       'api::menu.menu': ApiMenuMenu;
       'api::mes-aides.mes-aides': ApiMesAidesMesAides;
+      'api::modeles-de-courrier.modeles-de-courrier': ApiModelesDeCourrierModelesDeCourrier;
       'api::parcours.parcours': ApiParcoursParcours;
       'api::plan-du-site.plan-du-site': ApiPlanDuSitePlanDuSite;
       'api::politique-de-confidentialite.politique-de-confidentialite': ApiPolitiqueDeConfidentialitePolitiqueDeConfidentialite;
