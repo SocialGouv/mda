@@ -15,7 +15,7 @@
   "dependencies": {
     "@gouvfr/dsfr": "^1.9.0",
     "@headlessui/react": "^1.7.13",
-    "@hookform/resolvers": "^2.9.11",
+    "@hookform/resolvers": "^3.0.1",
     "@socialgouv/matomo-next": "^1.6.1",
     "clsx": "^1.2.1",
     "date-fns": "^2.29.3",
