@@ -1,0 +1,126 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::modeles-de-courrier.modeles-de-courrier",
+  "value": {
+    "uid": "api::modeles-de-courrier.modeles-de-courrier",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "title",
+      "defaultSortBy": "title",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "title": {
+        "edit": {
+          "label": "title",
+          "description": "Le titre de la page. Exemple : Modèles de courrier",
+          "placeholder": "Le titre de la page. Exemple : Modèles de courrier",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "title",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "content": {
+        "edit": {
+          "label": "content",
+          "description": "Le contenu de la page. Le markdown est supporté et vous pouvez intégrer des fichiers images, pdf et vidéos à l'aide du bouton image dans les outils ci-dessus",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "content",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "files": {
+        "edit": {
+          "label": "files",
+          "description": "La liste des fichiers de la page",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "files",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "title",
+        "files",
+        "createdAt"
+      ],
+      "edit": [
+        [
+          {
+            "name": "title",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "content",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "files",
+            "size": 12
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}
