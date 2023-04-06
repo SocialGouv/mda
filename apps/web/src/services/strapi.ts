@@ -194,6 +194,15 @@ export function mapMeilisearchHit(hit: MeilisearchHit): SearchHit | undefined {
     };
   }
 
+  if (isMeilisearchHitOf(hit, "modeles-de-courrier")) {
+    return {
+      id: hit._meilisearch_id,
+      title: hit.title,
+      url: `/modeles-de-courrier`,
+      type: "page",
+    };
+  }
+
   console.warn("Unknown hit", hit);
   return;
 }
