@@ -102,6 +102,7 @@ export async function searchStrapi(query: string): Promise<MeilisearchHit[]> {
     headers: {
       "Content-Type": "application/json",
     },
+    cache: "no-store",
   });
 
   const payload = (await response.json()) as ResponseSearch<MeilisearchHit>;

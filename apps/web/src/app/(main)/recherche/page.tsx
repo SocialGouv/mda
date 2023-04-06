@@ -4,6 +4,8 @@ import { SimpleContentPage } from "@components/base/SimpleContentPage";
 import { Link } from "@design-system";
 import { mapMeilisearchHit, type SearchHit, searchStrapi } from "@services/strapi";
 
+export const dynamic = "force-dynamic";
+
 export type SearchProps = Next13ServerPageProps<"", "keyword">;
 const Search = async ({ searchParams: { keyword } }: SearchProps) => {
   const searchResults = keyword
