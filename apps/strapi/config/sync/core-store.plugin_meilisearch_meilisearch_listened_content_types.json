@@ -8,7 +8,8 @@
     "api::je-donne-mon-avis.je-donne-mon-avis",
     "api::maison-de-l-autisme.maison-de-l-autisme",
     "api::mes-aides.mes-aides",
-    "api::parcours.parcours"
+    "api::parcours.parcours",
+    "api::modeles-de-courrier.modeles-de-courrier"
   ],
   "type": "object",
   "environment": null,
