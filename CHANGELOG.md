@@ -1,3 +1,19 @@
+# [1.12.0](https://github.com/SocialGouv/mda/compare/v1.11.0...v1.12.0) (2023-04-06)
+
+
+### Bug Fixes
+
+* clean meilisearch script ([e7b5d73](https://github.com/SocialGouv/mda/commit/e7b5d736faa444ab4b5d004cc120414394ec3527))
+* **search:** Use server component ([#249](https://github.com/SocialGouv/mda/issues/249)) ([0cbe387](https://github.com/SocialGouv/mda/commit/0cbe387ac534fe01cfbea5e2bd9f724f59c1e679))
+* typo ([45df88b](https://github.com/SocialGouv/mda/commit/45df88b462e1e0c3002b40205cf9f46920b08712))
+
+
+### Features
+
+* **modeles-de-courrier:** Add to search ([#244](https://github.com/SocialGouv/mda/issues/244)) ([c22e651](https://github.com/SocialGouv/mda/commit/c22e651b382f9a79edaa9cce3c8b8e4119c6bb60))
+* **modeles-de-courrier:** dynamisation ([#243](https://github.com/SocialGouv/mda/issues/243)) ([95e4778](https://github.com/SocialGouv/mda/commit/95e477812aea4fe7c9d68886b1aae35a46ece26f))
+* **parcours:** Last dynamisation ([#245](https://github.com/SocialGouv/mda/issues/245)) ([1e61f27](https://github.com/SocialGouv/mda/commit/1e61f273e46fe3ce7b242506b1759cbcc079ba7d))
+
 # [1.11.0](https://github.com/SocialGouv/mda/compare/v1.10.1...v1.11.0) (2023-04-03)
 
 
