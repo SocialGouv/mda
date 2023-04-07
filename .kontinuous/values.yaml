@@ -51,6 +51,8 @@ strapi:
     - secretRef:
         name: "mda-revalidate-webhook"
     - secretRef:
+        name: "mda-matomo"
+    - secretRef:
         name: "mda-meilisearch"
   ingress:
     annotations:
@@ -64,6 +66,8 @@ strapi:
     DATABASE_SSL: "$(PGSSLMODE)" # invetigate why knex doesn't work with "ssl: require"
     HOST: "0.0.0.0"
     GITHUB_SHA: "{{ $.Values.global.sha }}"
+    MATOMO_SITE_ID: "81"
+    MATOMO_URL: "https://matomo.fabrique.social.gouv.fr"
     MDA_ENV: "{{ .Values.global.env }}"
     WEB_URL: "https://{{ .Values.global.host }}"
     MEILISEARCH_HOST: "http://meilisearch"
