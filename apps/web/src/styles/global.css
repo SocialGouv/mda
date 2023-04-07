@@ -195,3 +195,13 @@ textarea {
         display: none !important;
     }
 }
+
+.home {
+    background: var(--blue-france-975-75);
+}
+
+.home p {
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
+    margin: var(--text-spacing);
+}
