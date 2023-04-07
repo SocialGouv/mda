@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/SocialGouv/mda/compare/v1.13.0...v1.14.0) (2023-04-07)
+
+
+### Features
+
+* add dynamic footer ([#253](https://github.com/SocialGouv/mda/issues/253)) ([1420d64](https://github.com/SocialGouv/mda/commit/1420d642533dc8b7a135fa68dfb376d516a4f726))
+
 # [1.13.0](https://github.com/SocialGouv/mda/compare/v1.12.1...v1.13.0) (2023-04-07)
 
 
