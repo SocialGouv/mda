@@ -33,7 +33,7 @@ export default factories.createCoreService("api::fiche-pratique.fiche-pratique",
       } else {
         const params = new URLSearchParams({
           date: "today",
-          filter_pattern: "fiches-pratiques",
+          filter_pattern: "fiches-pratiques/.*",
           flat: "1",
           format: "json",
           idSite: matomoSiteId,
@@ -70,6 +70,8 @@ export default factories.createCoreService("api::fiche-pratique.fiche-pratique",
 
             if (fiche) {
               data.push(fiche);
+            } else {
+              strapi.log.warn(`Cannot find fiche pratique for label ${label}`);
             }
           }
         } catch (e) {
