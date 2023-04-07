@@ -122,12 +122,7 @@ const RootLayout = async ({ children }: PropsWithChildren) => {
                 <FooterBodyContentItems>
                   {footerAttributes.link?.map(item => (
                     <FooterBodyItem key={item.id}>
-                      <FooterContentLink
-                        href={item.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        title="Site du ministère chargé des personnes handicapées - nouvelle fenêtre"
-                      >
+                      <FooterContentLink href={item.url} target="_blank" rel="noreferrer" title={item.title}>
                         {item.text}
                       </FooterContentLink>
                     </FooterBodyItem>
