@@ -988,36 +988,6 @@ export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
   };
 }
 
-export interface ApiFooterFooter extends SingleTypeSchema {
-  info: {
-    singularName: 'footer';
-    pluralName: 'footers';
-    displayName: 'Footer';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    content: RichTextAttribute & RequiredAttribute;
-    link: ComponentAttribute<'link.link', true>;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::footer.footer',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::footer.footer',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
 export interface ApiGlossaireItemGlossaireItem extends CollectionTypeSchema {
   info: {
     singularName: 'glossaire-item';
@@ -1647,16 +1617,6 @@ export interface JeDonneMonAvisFeedbackForm extends ComponentSchema {
   };
 }
 
-export interface LinkLink extends ComponentSchema {
-  info: {
-    displayName: 'link';
-  };
-  attributes: {
-    text: StringAttribute & RequiredAttribute;
-    url: StringAttribute & RequiredAttribute;
-  };
-}
-
 export interface MenuDropdownMenuItem extends ComponentSchema {
   info: {
     displayName: 'Dropdown menu item';
@@ -1691,7 +1651,6 @@ export interface MenuMenuItem extends ComponentSchema {
         minLength: 1;
         maxLength: 255;
       }>;
-    title: StringAttribute & RequiredAttribute;
   };
 }
 
@@ -1737,7 +1696,6 @@ declare global {
       'api::etape-de-vie.etape-de-vie': ApiEtapeDeVieEtapeDeVie;
       'api::event.event': ApiEventEvent;
       'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;
-      'api::footer.footer': ApiFooterFooter;
       'api::glossaire-item.glossaire-item': ApiGlossaireItemGlossaireItem;
       'api::je-donne-mon-avis.je-donne-mon-avis': ApiJeDonneMonAvisJeDonneMonAvis;
       'api::maison-de-l-autisme.maison-de-l-autisme': ApiMaisonDeLAutismeMaisonDeLAutisme;
@@ -1760,7 +1718,6 @@ declare global {
       'diagnostic.sub-answer': DiagnosticSubAnswer;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
       'je-donne-mon-avis.feedback-form': JeDonneMonAvisFeedbackForm;
-      'link.link': LinkLink;
       'menu.dropdown-menu-item': MenuDropdownMenuItem;
       'menu.menu-item': MenuMenuItem;
       'parcours-content.item': ParcoursContentItem;

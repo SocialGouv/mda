@@ -19,7 +19,6 @@ const seeds = {
   "api::question.question": import("../../utils/seed/question.json"),
   "api::diagnostic.diagnostic": import("../../utils/seed/diagnostic.json"),
   "api::menu.menu": import("../../utils/seed/menu.json"),
-  "api::footer.footer": import("../../utils/seed/footer.json"),
 };
 
 const devSeedDb: StrapiLifecycle = async ({ strapi }) => {
