@@ -1,3 +1,11 @@
+# [1.13.0](https://github.com/SocialGouv/mda/compare/v1.12.1...v1.13.0) (2023-04-07)
+
+
+### Features
+
+* footer strapi api ([#254](https://github.com/SocialGouv/mda/issues/254)) ([3a5afe3](https://github.com/SocialGouv/mda/commit/3a5afe30ccff9200d79d76ce303580a5bc484fb6))
+* **home:** v2 ([#251](https://github.com/SocialGouv/mda/issues/251)) ([75c7d45](https://github.com/SocialGouv/mda/commit/75c7d4525f0e6ba24c420cc49bcd9c4082d25056))
+
 ## [1.12.1](https://github.com/SocialGouv/mda/compare/v1.12.0...v1.12.1) (2023-04-06)
 
 
