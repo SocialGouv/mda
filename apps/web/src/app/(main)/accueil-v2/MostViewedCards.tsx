@@ -13,10 +13,12 @@ import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 import { type GetAttributesValues } from "@mda/strapi-types";
 
 interface CardProps {
-  excerpt: string;
+  attributes: {
+    excerpt: string;
+    slug: string;
+    title: string;
+  };
   id: number;
-  slug: string;
-  title: string;
 }
 
 interface MostViewedCardsProps<T extends CardProps> {
@@ -40,11 +42,11 @@ const MostViewedCards = ({ cards, section }: MostViewedCardsProps<CardProps>) =>
                 <CardBody>
                   <CardBodyContent>
                     <CardBodyContentTitle titleAs="h3">
-                      <NextLinkOrA href={`/${COLLECTIONS_BASE_SLUG[section.collection]}/${card.slug}`}>
-                        {card.title}
+                      <NextLinkOrA href={`/${COLLECTIONS_BASE_SLUG[section.collection]}/${card.attributes.slug}`}>
+                        {card.attributes.title}
                       </NextLinkOrA>
                     </CardBodyContentTitle>
-                    <CardBodyContentDescription>{card.excerpt}</CardBodyContentDescription>
+                    <CardBodyContentDescription>{card.attributes.excerpt}</CardBodyContentDescription>
                   </CardBodyContent>
                 </CardBody>
               </Card>

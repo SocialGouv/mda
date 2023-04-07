@@ -42,7 +42,7 @@ export class FetchStrapiError extends Error {
 export async function fetchStrapi<
   TModel extends keyof Model,
   TParams extends FetchMethodParams = FetchMethodParams,
-  T extends `${keyof ReverseSingularModel}/${string}` = `${keyof ReverseSingularModel}/${string}`,
+  T extends `${keyof ReverseModel}/${string}` = `${keyof ReverseModel}/${string}`,
 >(resource: T, params?: TParams): Promise<ResponseCollection<TModel>>;
 export async function fetchStrapi<
   T extends `${keyof ReversePluralModel}/${number}`,
