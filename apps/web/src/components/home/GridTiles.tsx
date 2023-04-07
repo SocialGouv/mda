@@ -16,7 +16,7 @@ const TILES_PICTO = {
   map: <PictoMap />,
 };
 
-const GridTiles = ({ grid }: GridTilesProps) => (
+export const GridTiles = ({ grid }: GridTilesProps) => (
   <div className="fr-pt-6w fr-pt-md-8w">
     <Container>
       <h2>{grid.title}</h2>
@@ -40,5 +40,3 @@ const GridTiles = ({ grid }: GridTilesProps) => (
     </Container>
   </div>
 );
-
-export default GridTiles;
