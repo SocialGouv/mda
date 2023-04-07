@@ -93,6 +93,7 @@
           "content",
           "img",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme",
           "MDA_title",
@@ -125,6 +126,7 @@
           "content",
           "img",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme",
           "MDA_title",
@@ -145,6 +147,7 @@
           "content",
           "img",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme",
           "MDA_title",
@@ -164,6 +167,7 @@
           "title",
           "content",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme"
         ]
@@ -184,6 +188,7 @@
           "title",
           "content",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme"
         ]
@@ -198,6 +203,7 @@
           "title",
           "content",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme"
         ]
@@ -407,6 +413,54 @@
           "section.content",
           "slug",
           "excerpt"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::footer.footer",
+      "properties": {
+        "fields": [
+          "content",
+          "link.text",
+          "link.title",
+          "link.url",
+          "link.theme"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::footer.footer",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::footer.footer",
+      "properties": {
+        "fields": [
+          "content",
+          "link.text",
+          "link.title",
+          "link.url",
+          "link.theme"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::footer.footer",
+      "properties": {
+        "fields": [
+          "content",
+          "link.text",
+          "link.title",
+          "link.url",
+          "link.theme"
         ]
       },
       "conditions": []
@@ -814,6 +868,7 @@
           "items.timeline",
           "items.order",
           "items.links.text",
+          "items.links.title",
           "items.links.url",
           "items.links.theme"
         ]
@@ -845,6 +900,7 @@
           "items.timeline",
           "items.order",
           "items.links.text",
+          "items.links.title",
           "items.links.url",
           "items.links.theme"
         ]
@@ -864,6 +920,7 @@
           "items.timeline",
           "items.order",
           "items.links.text",
+          "items.links.title",
           "items.links.url",
           "items.links.theme"
         ]
