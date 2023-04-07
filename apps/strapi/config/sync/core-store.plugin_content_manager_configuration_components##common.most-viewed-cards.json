@@ -75,9 +75,7 @@
           {
             "name": "title",
             "size": 6
-          }
-        ],
-        [
+          },
           {
             "name": "collection",
             "size": 6

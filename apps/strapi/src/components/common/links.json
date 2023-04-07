@@ -12,6 +12,11 @@
       "maxLength": 255,
       "minLength": 1
     },
+    "title": {
+      "type": "string",
+      "maxLength": 255,
+      "minLength": 1
+    },
     "url": {
       "type": "string",
       "maxLength": 255,
