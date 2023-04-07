@@ -30,7 +30,7 @@
     },
     "slug": {
       "type": "string",
-      "required": false,
+      "required": true,
       "unique": true,
       "maxLength": 255,
       "minLength": 1,

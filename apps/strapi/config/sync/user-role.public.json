@@ -37,6 +37,9 @@
       "action": "api::fiche-pratique.fiche-pratique.findOne"
     },
     {
+      "action": "api::fiche-pratique.fiche-pratique.mostViewed"
+    },
+    {
       "action": "api::glossaire-item.glossaire-item.find"
     },
     {

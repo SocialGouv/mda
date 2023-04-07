@@ -992,6 +992,7 @@ export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
       RequiredAttribute;
     section: ComponentAttribute<'fiche-pratique-content.encart', true>;
     slug: StringAttribute &
+      RequiredAttribute &
       UniqueAttribute &
       SetMinMaxLength<{
         minLength: 1;
