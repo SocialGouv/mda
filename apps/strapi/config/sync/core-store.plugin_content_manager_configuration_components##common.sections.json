@@ -34,6 +34,20 @@
           "sortable": true
         }
       },
+      "subtitle": {
+        "edit": {
+          "label": "subtitle",
+          "description": "Le sous titre de la section. Ne s'affiche que dans les articles",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "subtitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "content": {
         "edit": {
           "label": "content",
@@ -52,12 +66,19 @@
     "layouts": {
       "list": [
         "id",
-        "title"
+        "title",
+        "subtitle"
       ],
       "edit": [
         [
           {
             "name": "title",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "subtitle",
             "size": 12
           }
         ],

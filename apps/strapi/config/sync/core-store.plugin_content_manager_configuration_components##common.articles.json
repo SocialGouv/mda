@@ -1,0 +1,193 @@
+{
+  "key": "plugin_content_manager_configuration_components::common.articles",
+  "value": {
+    "uid": "common.articles",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "section": {
+        "edit": {
+          "label": "section",
+          "description": "Le corps de l'article",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "section",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "image": {
+        "edit": {
+          "label": "image",
+          "description": "L'image correspondante",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "image",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "image_position": {
+        "edit": {
+          "label": "image_position",
+          "description": "Position par rapport au texte. Valeurs possibles right (droite) left (gauche)",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "image_position",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "image_width": {
+        "edit": {
+          "label": "image_width",
+          "description": "Taille horizontale de l'image. Ce champ est requis si une image est présente",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "image_width",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "image_height": {
+        "edit": {
+          "label": "image_height",
+          "description": "Taille verticale de l'image. Ce champ est requis si une image est présente",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "image_height",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "buttons": {
+        "edit": {
+          "label": "buttons",
+          "description": "Liens en bas de l'article",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "buttons",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "buttons_position": {
+        "edit": {
+          "label": "buttons_position",
+          "description": "Position par rapport au texte. Valeurs possibles right (droite) center (centré) left (gauche)",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "buttons_position",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "theme": {
+        "edit": {
+          "label": "theme",
+          "description": "Thème à appliquer à l'article",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "theme",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "section",
+        "buttons",
+        "image"
+      ],
+      "edit": [
+        [
+          {
+            "name": "section",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "buttons",
+            "size": 8
+          },
+          {
+            "name": "buttons_position",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "image",
+            "size": 6
+          },
+          {
+            "name": "image_position",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "image_width",
+            "size": 6
+          },
+          {
+            "name": "image_height",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "theme",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}
