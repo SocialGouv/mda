@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_common_most_viewed_cards",
+  "info": {
+    "displayName": "MostViewedCards",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
+    },
+    "collection": {
+      "type": "enumeration",
+      "enum": [
+        "fiche-pratiques"
+      ],
+      "default": "fiche-pratiques",
+      "required": true
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.links"
+    }
+  }
+}

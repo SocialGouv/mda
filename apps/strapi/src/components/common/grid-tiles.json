@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_common_grid_tiles",
+  "info": {
+    "displayName": "GridTiles"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
+    },
+    "tiles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.tiles"
+    }
+  }
+}

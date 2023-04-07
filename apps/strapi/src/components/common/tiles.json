@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_common_tiles",
+  "info": {
+    "displayName": "Tiles",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1,
+      "regex": "[a-z\\\\/-]+"
+    },
+    "description": {
+      "type": "text"
+    },
+    "picto": {
+      "type": "enumeration",
+      "enum": [
+        "documentDownload",
+        "health",
+        "humanCooperation",
+        "map"
+      ],
+      "required": true,
+      "default": "documentDownload"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
-  "key": "plugin_content_manager_configuration_components::common.sections",
+  "key": "plugin_content_manager_configuration_components::common.grid-tiles",
   "value": {
-    "uid": "common.sections",
+    "uid": "common.grid-tiles",
     "settings": {
       "bulkable": true,
       "filterable": true,
@@ -23,8 +23,8 @@
       "title": {
         "edit": {
           "label": "title",
-          "description": "Le titre de la Section. Exemple : Bienvenue !",
-          "placeholder": "Le titre de la Section. Exemple : Bienvenue !",
+          "description": "Le titre de la grille. Exemple : Démarches et outils",
+          "placeholder": "Le titre de la grille. Exemple : Démarches et outils",
           "visible": true,
           "editable": true
         },
@@ -34,30 +34,16 @@
           "sortable": true
         }
       },
-      "subtitle": {
+      "tiles": {
         "edit": {
-          "label": "subtitle",
-          "description": "Le sous titre de la section. Ne s'affiche que dans les articles",
+          "label": "tiles",
+          "description": "Les tuiles à afficher dans la grille",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "subtitle",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "content": {
-        "edit": {
-          "label": "content",
-          "description": "Le contenu de la section. Le markdown est supporté et vous pouvez intégrer des fichiers images, pdf et vidéos à l'aide du bouton image dans les outils ci-dessus",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "content",
+          "label": "tiles",
           "searchable": false,
           "sortable": false
         }
@@ -67,7 +53,7 @@
       "list": [
         "id",
         "title",
-        "subtitle"
+        "tiles"
       ],
       "edit": [
         [
@@ -78,13 +64,7 @@
         ],
         [
           {
-            "name": "subtitle",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "content",
+            "name": "tiles",
             "size": 12
           }
         ]

@@ -1,7 +1,7 @@
 {
-  "key": "plugin_content_manager_configuration_components::common.sections",
+  "key": "plugin_content_manager_configuration_components::common.most-viewed-cards",
   "value": {
-    "uid": "common.sections",
+    "uid": "common.most-viewed-cards",
     "settings": {
       "bulkable": true,
       "filterable": true,
@@ -23,8 +23,8 @@
       "title": {
         "edit": {
           "label": "title",
-          "description": "Le titre de la Section. Exemple : Bienvenue !",
-          "placeholder": "Le titre de la Section. Exemple : Bienvenue !",
+          "description": "Le titre de la grille. Exemple : Fiches pratiques les plus lues",
+          "placeholder": "Le titre de la grille. Exemple : Fiches pratiques les plus lues",
           "visible": true,
           "editable": true
         },
@@ -34,30 +34,30 @@
           "sortable": true
         }
       },
-      "subtitle": {
+      "collection": {
         "edit": {
-          "label": "subtitle",
-          "description": "Le sous titre de la section. Ne s'affiche que dans les articles",
+          "label": "collection",
+          "description": "La collection à afficher. Valeurs possible: fiche-pratiques",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "subtitle",
+          "label": "collection",
           "searchable": true,
           "sortable": true
         }
       },
-      "content": {
+      "button": {
         "edit": {
-          "label": "content",
-          "description": "Le contenu de la section. Le markdown est supporté et vous pouvez intégrer des fichiers images, pdf et vidéos à l'aide du bouton image dans les outils ci-dessus",
+          "label": "button",
+          "description": "Le bouton affiché sous la grille",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "content",
+          "label": "button",
           "searchable": false,
           "sortable": false
         }
@@ -67,24 +67,25 @@
       "list": [
         "id",
         "title",
-        "subtitle"
+        "collection",
+        "button"
       ],
       "edit": [
         [
           {
             "name": "title",
-            "size": 12
+            "size": 6
           }
         ],
         [
           {
-            "name": "subtitle",
-            "size": 12
+            "name": "collection",
+            "size": 6
           }
         ],
         [
           {
-            "name": "content",
+            "name": "button",
             "size": 12
           }
         ]
