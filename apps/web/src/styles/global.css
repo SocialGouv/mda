@@ -18,11 +18,6 @@
     line-height: inherit;
 }
 
-.fr-footer__content-desc p {
-    font-size: inherit;
-    line-height: inherit;
-}
-
 @media (min-width: 62em) {
     .fr-pl-lg-4w {
         padding-left: 2rem !important;
