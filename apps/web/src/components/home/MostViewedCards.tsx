@@ -30,7 +30,7 @@ const COLLECTIONS_BASE_SLUG = {
   "fiche-pratiques": "fiches-pratiques",
 };
 
-const MostViewedCards = ({ cards, section }: MostViewedCardsProps<CardProps>) => (
+export const MostViewedCards = ({ cards, section }: MostViewedCardsProps<CardProps>) => (
   <div className="fr-pt-6w fr-pt-md-8w">
     <Container>
       <h2>{section.title}</h2>
@@ -64,5 +64,3 @@ const MostViewedCards = ({ cards, section }: MostViewedCardsProps<CardProps>) =>
     </Container>
   </div>
 );
-
-export default MostViewedCards;

@@ -14,7 +14,7 @@ const BUTTON_GROUPS_CLASSNAME = {
   right: ".fr-btns-group--right",
 };
 
-const Article = ({ article }: ArticleProps) => {
+export const Article = ({ article }: ArticleProps) => {
   const { section, buttons, buttons_position, image, image_position, image_height, image_width, theme } = article;
 
   const img =
@@ -72,5 +72,3 @@ const Article = ({ article }: ArticleProps) => {
     </div>
   );
 };
-
-export default Article;
