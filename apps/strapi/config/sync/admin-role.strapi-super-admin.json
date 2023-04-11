@@ -44,6 +44,48 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::accueil-v2.accueil-v2",
+      "properties": {
+        "fields": [
+          "widgets"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::accueil-v2.accueil-v2",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::accueil-v2.accueil-v2",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::accueil-v2.accueil-v2",
+      "properties": {
+        "fields": [
+          "widgets"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::accueil-v2.accueil-v2",
+      "properties": {
+        "fields": [
+          "widgets"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::accueil.accueil",
       "properties": {
         "fields": [
@@ -51,9 +93,9 @@
           "content",
           "img",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme",
-          "DEMO_content",
           "MDA_title",
           "MDA_subtitle",
           "MDA_content",
@@ -84,9 +126,9 @@
           "content",
           "img",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme",
-          "DEMO_content",
           "MDA_title",
           "MDA_subtitle",
           "MDA_content",
@@ -105,9 +147,9 @@
           "content",
           "img",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme",
-          "DEMO_content",
           "MDA_title",
           "MDA_subtitle",
           "MDA_content",
@@ -125,6 +167,7 @@
           "title",
           "content",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme"
         ]
@@ -145,6 +188,7 @@
           "title",
           "content",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme"
         ]
@@ -159,6 +203,7 @@
           "title",
           "content",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme"
         ]
@@ -374,6 +419,54 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::footer.footer",
+      "properties": {
+        "fields": [
+          "content",
+          "link.text",
+          "link.title",
+          "link.url",
+          "link.theme"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::footer.footer",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::footer.footer",
+      "properties": {
+        "fields": [
+          "content",
+          "link.text",
+          "link.title",
+          "link.url",
+          "link.theme"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::footer.footer",
+      "properties": {
+        "fields": [
+          "content",
+          "link.text",
+          "link.title",
+          "link.url",
+          "link.theme"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::glossaire-item.glossaire-item",
       "properties": {
         "fields": [
@@ -548,6 +641,7 @@
           "title",
           "content",
           "sections.title",
+          "sections.subtitle",
           "sections.content",
           "events"
         ]
@@ -568,6 +662,7 @@
           "title",
           "content",
           "sections.title",
+          "sections.subtitle",
           "sections.content",
           "events"
         ]
@@ -582,6 +677,7 @@
           "title",
           "content",
           "sections.title",
+          "sections.subtitle",
           "sections.content",
           "events"
         ]
@@ -671,6 +767,7 @@
           "title",
           "content",
           "sections.title",
+          "sections.subtitle",
           "sections.content"
         ]
       },
@@ -690,6 +787,7 @@
           "title",
           "content",
           "sections.title",
+          "sections.subtitle",
           "sections.content"
         ]
       },
@@ -703,7 +801,56 @@
           "title",
           "content",
           "sections.title",
+          "sections.subtitle",
           "sections.content"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::modeles-de-courrier.modeles-de-courrier",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "files"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::modeles-de-courrier.modeles-de-courrier",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::modeles-de-courrier.modeles-de-courrier",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::modeles-de-courrier.modeles-de-courrier",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "files"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::modeles-de-courrier.modeles-de-courrier",
+      "properties": {
+        "fields": [
+          "title",
+          "content",
+          "files"
         ]
       },
       "conditions": []
@@ -721,6 +868,7 @@
           "items.timeline",
           "items.order",
           "items.links.text",
+          "items.links.title",
           "items.links.url",
           "items.links.theme"
         ]
@@ -752,6 +900,7 @@
           "items.timeline",
           "items.order",
           "items.links.text",
+          "items.links.title",
           "items.links.url",
           "items.links.theme"
         ]
@@ -771,6 +920,7 @@
           "items.timeline",
           "items.order",
           "items.links.text",
+          "items.links.title",
           "items.links.url",
           "items.links.theme"
         ]

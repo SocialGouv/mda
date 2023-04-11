@@ -1,3 +1,70 @@
+## [1.14.1](https://github.com/SocialGouv/mda/compare/v1.14.0...v1.14.1) (2023-04-11)
+
+
+### Bug Fixes
+
+* **infra:** Temporary force replace meilisearch pod ([b0dd801](https://github.com/SocialGouv/mda/commit/b0dd80176727a27888dc3b1e2c239f5155bc281e))
+
+# [1.14.0](https://github.com/SocialGouv/mda/compare/v1.13.0...v1.14.0) (2023-04-07)
+
+
+### Features
+
+* add dynamic footer ([#253](https://github.com/SocialGouv/mda/issues/253)) ([1420d64](https://github.com/SocialGouv/mda/commit/1420d642533dc8b7a135fa68dfb376d516a4f726))
+
+# [1.13.0](https://github.com/SocialGouv/mda/compare/v1.12.1...v1.13.0) (2023-04-07)
+
+
+### Features
+
+* footer strapi api ([#254](https://github.com/SocialGouv/mda/issues/254)) ([3a5afe3](https://github.com/SocialGouv/mda/commit/3a5afe30ccff9200d79d76ce303580a5bc484fb6))
+* **home:** v2 ([#251](https://github.com/SocialGouv/mda/issues/251)) ([75c7d45](https://github.com/SocialGouv/mda/commit/75c7d4525f0e6ba24c420cc49bcd9c4082d25056))
+
+## [1.12.1](https://github.com/SocialGouv/mda/compare/v1.12.0...v1.12.1) (2023-04-06)
+
+
+### Bug Fixes
+
+* **next:** Do not cache search requests ([#250](https://github.com/SocialGouv/mda/issues/250)) ([36623e1](https://github.com/SocialGouv/mda/commit/36623e1c2e7895a0ee1c04c5cff4316831caf4e7))
+
+# [1.12.0](https://github.com/SocialGouv/mda/compare/v1.11.0...v1.12.0) (2023-04-06)
+
+
+### Bug Fixes
+
+* clean meilisearch script ([e7b5d73](https://github.com/SocialGouv/mda/commit/e7b5d736faa444ab4b5d004cc120414394ec3527))
+* **search:** Use server component ([#249](https://github.com/SocialGouv/mda/issues/249)) ([0cbe387](https://github.com/SocialGouv/mda/commit/0cbe387ac534fe01cfbea5e2bd9f724f59c1e679))
+* typo ([45df88b](https://github.com/SocialGouv/mda/commit/45df88b462e1e0c3002b40205cf9f46920b08712))
+
+
+### Features
+
+* **modeles-de-courrier:** Add to search ([#244](https://github.com/SocialGouv/mda/issues/244)) ([c22e651](https://github.com/SocialGouv/mda/commit/c22e651b382f9a79edaa9cce3c8b8e4119c6bb60))
+* **modeles-de-courrier:** dynamisation ([#243](https://github.com/SocialGouv/mda/issues/243)) ([95e4778](https://github.com/SocialGouv/mda/commit/95e477812aea4fe7c9d68886b1aae35a46ece26f))
+* **parcours:** Last dynamisation ([#245](https://github.com/SocialGouv/mda/issues/245)) ([1e61f27](https://github.com/SocialGouv/mda/commit/1e61f273e46fe3ce7b242506b1759cbcc079ba7d))
+
+# [1.11.0](https://github.com/SocialGouv/mda/compare/v1.10.1...v1.11.0) (2023-04-03)
+
+
+### Features
+
+* dynamic menu frontend ([#223](https://github.com/SocialGouv/mda/issues/223)) ([733dea1](https://github.com/SocialGouv/mda/commit/733dea1cb3444675084768fdebeb3456ce1a211e))
+
+## [1.10.1](https://github.com/SocialGouv/mda/compare/v1.10.0...v1.10.1) (2023-03-31)
+
+
+### Bug Fixes
+
+* adapt strapi url with cert wildcard dns zone ([#224](https://github.com/SocialGouv/mda/issues/224)) ([cdbcc12](https://github.com/SocialGouv/mda/commit/cdbcc122168867d1a95fc23a049807b2b6606cc8))
+
+# [1.10.0](https://github.com/SocialGouv/mda/compare/v1.9.3...v1.10.0) (2023-03-31)
+
+
+### Features
+
+* dynamic menu ([#222](https://github.com/SocialGouv/mda/issues/222)) ([ae540ad](https://github.com/SocialGouv/mda/commit/ae540adfa6b8d7d8993b8c2f337565cafbf7301a))
+* prepare move to gouv.fr ([#212](https://github.com/SocialGouv/mda/issues/212)) ([8099426](https://github.com/SocialGouv/mda/commit/80994260f4b2ef2300aba4af34e633f7074db3f7))
+
 ## [1.9.3](https://github.com/SocialGouv/mda/compare/v1.9.2...v1.9.3) (2023-03-31)
 
 

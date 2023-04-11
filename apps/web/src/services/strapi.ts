@@ -42,7 +42,7 @@ export class FetchStrapiError extends Error {
 export async function fetchStrapi<
   TModel extends keyof Model,
   TParams extends FetchMethodParams = FetchMethodParams,
-  T extends `${keyof ReverseSingularModel}/${string}` = `${keyof ReverseSingularModel}/${string}`,
+  T extends `${keyof ReverseModel}/${string}` = `${keyof ReverseModel}/${string}`,
 >(resource: T, params?: TParams): Promise<ResponseCollection<TModel>>;
 export async function fetchStrapi<
   T extends `${keyof ReversePluralModel}/${number}`,
@@ -102,6 +102,7 @@ export async function searchStrapi(query: string): Promise<MeilisearchHit[]> {
     headers: {
       "Content-Type": "application/json",
     },
+    cache: "no-store",
   });
 
   const payload = (await response.json()) as ResponseSearch<MeilisearchHit>;
@@ -190,6 +191,15 @@ export function mapMeilisearchHit(hit: MeilisearchHit): SearchHit | undefined {
       id: hit._meilisearch_id,
       title: hit.title,
       url: `/mes-aides`,
+      type: "page",
+    };
+  }
+
+  if (isMeilisearchHitOf(hit, "modeles-de-courrier")) {
+    return {
+      id: hit._meilisearch_id,
+      title: hit.title,
+      url: `/modeles-de-courrier`,
       type: "page",
     };
   }

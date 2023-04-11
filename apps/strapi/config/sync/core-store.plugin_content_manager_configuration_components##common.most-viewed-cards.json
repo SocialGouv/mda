@@ -1,0 +1,97 @@
+{
+  "key": "plugin_content_manager_configuration_components::common.most-viewed-cards",
+  "value": {
+    "uid": "common.most-viewed-cards",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "title",
+      "defaultSortBy": "title",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "title": {
+        "edit": {
+          "label": "title",
+          "description": "Le titre de la grille. Exemple : Fiches pratiques les plus lues",
+          "placeholder": "Le titre de la grille. Exemple : Fiches pratiques les plus lues",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "title",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "collection": {
+        "edit": {
+          "label": "collection",
+          "description": "La collection à afficher. Valeurs possible: fiche-pratiques",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "collection",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "button": {
+        "edit": {
+          "label": "button",
+          "description": "Le bouton affiché sous la grille",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "button",
+          "searchable": false,
+          "sortable": false
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "title",
+        "collection",
+        "button"
+      ],
+      "edit": [
+        [
+          {
+            "name": "title",
+            "size": 6
+          },
+          {
+            "name": "collection",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "button",
+            "size": 12
+          }
+        ]
+      ]
+    },
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

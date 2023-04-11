@@ -737,7 +737,6 @@ export interface ApiAccueilAccueil extends SingleTypeSchema {
     content: RichTextAttribute & RequiredAttribute;
     img: MediaAttribute;
     links: ComponentAttribute<'common.links', true>;
-    DEMO_content: RichTextAttribute;
     MDA_title: StringAttribute &
       RequiredAttribute &
       SetMinMaxLength<{
@@ -764,6 +763,38 @@ export interface ApiAccueilAccueil extends SingleTypeSchema {
       PrivateAttribute;
     updatedBy: RelationAttribute<
       'api::accueil.accueil',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
+export interface ApiAccueilV2AccueilV2 extends SingleTypeSchema {
+  info: {
+    singularName: 'accueil-v2';
+    pluralName: 'accueil-v2s';
+    displayName: 'Accueil V2';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    widgets: DynamicZoneAttribute<
+      ['common.grid-tiles', 'common.articles', 'common.most-viewed-cards']
+    > &
+      RequiredAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    publishedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::accueil-v2.accueil-v2',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::accueil-v2.accueil-v2',
       'oneToOne',
       'admin::user'
     > &
@@ -961,6 +992,7 @@ export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
       RequiredAttribute;
     section: ComponentAttribute<'fiche-pratique-content.encart', true>;
     slug: StringAttribute &
+      RequiredAttribute &
       UniqueAttribute &
       SetMinMaxLength<{
         minLength: 1;
@@ -982,6 +1014,36 @@ export interface ApiFichePratiqueFichePratique extends CollectionTypeSchema {
       PrivateAttribute;
     updatedBy: RelationAttribute<
       'api::fiche-pratique.fiche-pratique',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
+export interface ApiFooterFooter extends SingleTypeSchema {
+  info: {
+    singularName: 'footer';
+    pluralName: 'footers';
+    displayName: 'Footer';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    content: RichTextAttribute & RequiredAttribute;
+    link: ComponentAttribute<'common.links', true>;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::footer.footer',
       'oneToOne',
       'admin::user'
     > &
@@ -1205,6 +1267,43 @@ export interface ApiMesAidesMesAides extends SingleTypeSchema {
   };
 }
 
+export interface ApiModelesDeCourrierModelesDeCourrier
+  extends SingleTypeSchema {
+  info: {
+    singularName: 'modeles-de-courrier';
+    pluralName: 'modeles-de-courriers';
+    displayName: 'Mod\u00E8les de courriers';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    content: RichTextAttribute;
+    files: MediaAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    publishedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'api::modeles-de-courrier.modeles-de-courrier',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'api::modeles-de-courrier.modeles-de-courrier',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface ApiParcoursParcours extends CollectionTypeSchema {
   info: {
     singularName: 'parcours';
@@ -1373,6 +1472,42 @@ export interface CommonAlerts extends ComponentSchema {
   };
 }
 
+export interface CommonArticles extends ComponentSchema {
+  info: {
+    displayName: 'Articles';
+    description: '';
+  };
+  attributes: {
+    section: ComponentAttribute<'common.sections'>;
+    image: MediaAttribute;
+    image_position: EnumerationAttribute<['right', 'left']> &
+      RequiredAttribute &
+      DefaultTo<'right'>;
+    image_width: IntegerAttribute;
+    image_height: IntegerAttribute;
+    buttons: ComponentAttribute<'common.links', true>;
+    buttons_position: EnumerationAttribute<['left', 'center', 'right']> &
+      RequiredAttribute &
+      DefaultTo<'left'>;
+    theme: EnumerationAttribute<['home']>;
+  };
+}
+
+export interface CommonGridTiles extends ComponentSchema {
+  info: {
+    displayName: 'GridTiles';
+  };
+  attributes: {
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    tiles: ComponentAttribute<'common.tiles', true>;
+  };
+}
+
 export interface CommonInputs extends ComponentSchema {
   info: {
     displayName: 'Inputs';
@@ -1403,6 +1538,11 @@ export interface CommonLinks extends ComponentSchema {
         minLength: 1;
         maxLength: 255;
       }>;
+    title: StringAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     url: StringAttribute &
       SetMinMaxLength<{
         minLength: 1;
@@ -1411,6 +1551,25 @@ export interface CommonLinks extends ComponentSchema {
     theme: EnumerationAttribute<['primary', 'secondary']> &
       RequiredAttribute &
       DefaultTo<'primary'>;
+  };
+}
+
+export interface CommonMostViewedCards extends ComponentSchema {
+  info: {
+    displayName: 'MostViewedCards';
+    description: '';
+  };
+  attributes: {
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    collection: EnumerationAttribute<['fiche-pratiques']> &
+      RequiredAttribute &
+      DefaultTo<'fiche-pratiques'>;
+    button: ComponentAttribute<'common.links'>;
   };
 }
 
@@ -1437,6 +1596,7 @@ export interface CommonOptions extends ComponentSchema {
 export interface CommonSections extends ComponentSchema {
   info: {
     displayName: 'sections';
+    description: '';
   };
   attributes: {
     title: StringAttribute &
@@ -1445,6 +1605,7 @@ export interface CommonSections extends ComponentSchema {
         minLength: 1;
         maxLength: 255;
       }>;
+    subtitle: TextAttribute;
     content: RichTextAttribute & RequiredAttribute;
   };
 }
@@ -1476,6 +1637,33 @@ export interface CommonTextareas extends ComponentSchema {
         maxLength: 255;
       }>;
     hint: TextAttribute & RequiredAttribute;
+  };
+}
+
+export interface CommonTiles extends ComponentSchema {
+  info: {
+    displayName: 'Tiles';
+    description: '';
+  };
+  attributes: {
+    title: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    slug: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    description: TextAttribute;
+    picto: EnumerationAttribute<
+      ['documentDownload', 'health', 'humanCooperation', 'map']
+    > &
+      RequiredAttribute &
+      DefaultTo<'documentDownload'>;
   };
 }
 
@@ -1655,28 +1843,35 @@ declare global {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::accessibilite.accessibilite': ApiAccessibiliteAccessibilite;
       'api::accueil.accueil': ApiAccueilAccueil;
+      'api::accueil-v2.accueil-v2': ApiAccueilV2AccueilV2;
       'api::annuaire.annuaire': ApiAnnuaireAnnuaire;
       'api::diagnostic.diagnostic': ApiDiagnosticDiagnostic;
       'api::etape-de-vie.etape-de-vie': ApiEtapeDeVieEtapeDeVie;
       'api::event.event': ApiEventEvent;
       'api::fiche-pratique.fiche-pratique': ApiFichePratiqueFichePratique;
+      'api::footer.footer': ApiFooterFooter;
       'api::glossaire-item.glossaire-item': ApiGlossaireItemGlossaireItem;
       'api::je-donne-mon-avis.je-donne-mon-avis': ApiJeDonneMonAvisJeDonneMonAvis;
       'api::maison-de-l-autisme.maison-de-l-autisme': ApiMaisonDeLAutismeMaisonDeLAutisme;
       'api::mentions-legales.mentions-legales': ApiMentionsLegalesMentionsLegales;
       'api::menu.menu': ApiMenuMenu;
       'api::mes-aides.mes-aides': ApiMesAidesMesAides;
+      'api::modeles-de-courrier.modeles-de-courrier': ApiModelesDeCourrierModelesDeCourrier;
       'api::parcours.parcours': ApiParcoursParcours;
       'api::plan-du-site.plan-du-site': ApiPlanDuSitePlanDuSite;
       'api::politique-de-confidentialite.politique-de-confidentialite': ApiPolitiqueDeConfidentialitePolitiqueDeConfidentialite;
       'api::question.question': ApiQuestionQuestion;
       'common.alerts': CommonAlerts;
+      'common.articles': CommonArticles;
+      'common.grid-tiles': CommonGridTiles;
       'common.inputs': CommonInputs;
       'common.links': CommonLinks;
+      'common.most-viewed-cards': CommonMostViewedCards;
       'common.options': CommonOptions;
       'common.sections': CommonSections;
       'common.selects': CommonSelects;
       'common.textareas': CommonTextareas;
+      'common.tiles': CommonTiles;
       'diagnostic.answer': DiagnosticAnswer;
       'diagnostic.sub-answer': DiagnosticSubAnswer;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;

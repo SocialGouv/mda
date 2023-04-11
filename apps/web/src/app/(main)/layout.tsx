@@ -7,6 +7,7 @@ import { DarkTheme } from "@components/utils/client/DarkTheme";
 import { DsfrScript } from "@components/utils/client/DsfrScript";
 import { Matomo } from "@components/utils/client/Matomo";
 import { OrejimeGDPR } from "@components/utils/client/orejimeGDPR";
+import { Markdown } from "@components/utils/Markdown";
 import {
   ButtonAsLink,
   Container,
@@ -27,11 +28,15 @@ import {
   SkipLinks,
   SkipLinksItem,
 } from "@design-system";
-import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
+import { fetchStrapi } from "@services/strapi";
 import Link from "next/link";
 import { type PropsWithChildren } from "react";
 
-const RootLayout = ({ children }: PropsWithChildren) => {
+const RootLayout = async ({ children }: PropsWithChildren) => {
+  const strapiMenu = await fetchStrapi("menu", { populate: "deep" });
+  const strapiFooter = await fetchStrapi("footer", { populate: "deep" });
+  const menuItems = strapiMenu.data?.attributes.item;
+  const footerAttributes = strapiFooter.data?.attributes;
   return (
     <html lang="fr">
       <head>
@@ -48,7 +53,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
           <SkipLinksItem href="#header">Menu</SkipLinksItem>
           <SkipLinksItem href="#footer">Pied de page</SkipLinksItem>
         </SkipLinks>
-        <Header />
+        <Header menuItems={menuItems} />
         <BreadcrumbDynamic />
         <main role="main" id="content">
           {children}
@@ -111,123 +116,19 @@ const RootLayout = ({ children }: PropsWithChildren) => {
             </FooterBodyBrand>
             <FooterBodyContent>
               <FooterBodyContentDescription>
-                Ce site est fait pour les personnes autistes, par des personnes autistes, et avec des personnes
-                concernées. Vos commentaires, réactions et propositions sont précieux pour nous aider à améliorer ce
-                service au fur et à mesure. Un oubli&nbsp;? Une suggestion&nbsp;? Utilisez le module{" "}
-                <NextLinkOrA
-                  href="/je-donne-mon-avis"
-                  title="Partagez votre avis sur ce site internet et vos idées d'amélioration"
-                >
-                  Je donne mon avis
-                </NextLinkOrA>{" "}
-                pour soumettre vos idées afin de contribuer à enrichir ce service public.
+                {footerAttributes?.content && <Markdown>{footerAttributes.content}</Markdown>}
               </FooterBodyContentDescription>
-              <FooterBodyContentDescription>
-                Attention, les demandes personnelles transmises via ce formulaire ne pourront être traitées sur ce site.
-                Pour les demandes personnelles, veuillez vous rapprocher de l'organisme en charge de votre dossier. Pour
-                toute question, vous pouvez contacter{" "}
-                <a
-                  href="https://www.autismeinfoservice.fr/"
-                  target="_blank"
-                  rel="noreferrer"
-                  title="Site Autisme Info Service - nouvelle fenêtre"
-                >
-                  Autisme Info Service
-                </a>
-                .
-              </FooterBodyContentDescription>
-              <FooterBodyContentItems>
-                <FooterBodyItem>
-                  <FooterContentLink
-                    href="https://handicap.gouv.fr/accueil"
-                    target="_blank"
-                    rel="noreferrer"
-                    isExternal
-                    title="Site du ministère chargé des personnes handicapées - nouvelle fenêtre"
-                  >
-                    Handicap.gouv.fr
-                  </FooterContentLink>
-                </FooterBodyItem>
-                <FooterBodyItem>
-                  <FooterContentLink
-                    href="https://www.monparcourshandicap.gouv.fr/"
-                    target="_blank"
-                    rel="noreferrer"
-                    isExternal
-                    title="Site mon parcours handicap - nouvelle fenêtre"
-                  >
-                    Mon Parcours Handicap
-                  </FooterContentLink>
-                </FooterBodyItem>
-                <FooterBodyItem>
-                  <FooterContentLink
-                    href="https://www.mesdroitssociaux.gouv.fr/accueil/"
-                    target="_blank"
-                    rel="noreferrer"
-                    isExternal
-                    title="Site mes droits sociaux - nouvelle fenêtre"
-                  >
-                    Mes Droits Sociaux
-                  </FooterContentLink>
-                </FooterBodyItem>
-                <FooterBodyItem>
-                  <FooterContentLink
-                    href="https://solidarites.gouv.fr/accueil"
-                    target="_blank"
-                    rel="noreferrer"
-                    isExternal
-                    title="Site Ministère des Solidarités, de l'Autonomie et des Personnes Handicapées - nouvelle fenêtre"
-                  >
-                    Ministère des Solidarités, de l'Autonomie et des Personnes Handicapées
-                  </FooterContentLink>
-                </FooterBodyItem>
-              </FooterBodyContentItems>
-              <FooterBodyContentItems>
-                <FooterBodyItem>
-                  <FooterContentLink
-                    href="https://www.legifrance.gouv.fr/"
-                    target="_blank"
-                    rel="noreferrer"
-                    isExternal
-                    title="Site legifrance.gouv.fr - nouvelle fenêtre"
-                  >
-                    legifrance.gouv.fr
-                  </FooterContentLink>
-                </FooterBodyItem>
-                <FooterBodyItem>
-                  <FooterContentLink
-                    href="https://www.gouvernement.fr/"
-                    target="_blank"
-                    rel="noreferrer"
-                    isExternal
-                    title="Site gouvernement.fr - nouvelle fenêtre"
-                  >
-                    gouvernement.fr
-                  </FooterContentLink>
-                </FooterBodyItem>
-                <FooterBodyItem>
-                  <FooterContentLink
-                    href="https://www.service-public.fr/"
-                    target="_blank"
-                    rel="noreferrer"
-                    isExternal
-                    title="Site service-public.fr - nouvelle fenêtre"
-                  >
-                    service-public.fr
-                  </FooterContentLink>
-                </FooterBodyItem>
-                <FooterBodyItem>
-                  <FooterContentLink
-                    href="https://www.data.gouv.fr/"
-                    target="_blank"
-                    rel="noreferrer"
-                    isExternal
-                    title="Site data.gouv.fr - nouvelle fenêtre"
-                  >
-                    data.gouv.fr
-                  </FooterContentLink>
-                </FooterBodyItem>
-              </FooterBodyContentItems>
+              {footerAttributes?.link && (
+                <FooterBodyContentItems>
+                  {footerAttributes.link?.map(item => (
+                    <FooterBodyItem key={item.id}>
+                      <FooterContentLink href={item.url} target="_blank" rel="noreferrer" title={item.title}>
+                        {item.text}
+                      </FooterContentLink>
+                    </FooterBodyItem>
+                  ))}
+                </FooterBodyContentItems>
+              )}
             </FooterBodyContent>
           </FooterBody>
           <FooterBottom>

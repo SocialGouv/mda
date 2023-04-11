@@ -34,6 +34,20 @@
           "sortable": true
         }
       },
+      "title": {
+        "edit": {
+          "label": "title",
+          "description": "Le titre au hover. Exemple : Aller vers les fiches pratiques",
+          "placeholder": "Le titre au hover. Exemple : Aller vers les fiches pratiques",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "title",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "url": {
         "edit": {
           "label": "url",
@@ -82,6 +96,10 @@
           }
         ],
         [
+          {
+            "name": "title",
+            "size": 6
+          },
           {
             "name": "theme",
             "size": 6

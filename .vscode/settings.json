@@ -14,7 +14,6 @@
   "files.associations": {
     ".env*": "dotenv"
   },
-  "files.autoSave": "off",
   "json.schemas": [
     {
       "fileMatch": [

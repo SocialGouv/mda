@@ -76,20 +76,6 @@
           "sortable": false
         }
       },
-      "DEMO_content": {
-        "edit": {
-          "label": "DEMO_content",
-          "description": "Le contenu de l'encart sur la démo. Le markdown est supporté et vous pouvez intégrer des fichiers images, pdf et vidéos à l'aide du bouton image dans les outils ci-dessus",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "DEMO_content",
-          "searchable": false,
-          "sortable": false
-        }
-      },
       "MDA_title": {
         "edit": {
           "label": "MDA_title",
@@ -210,12 +196,6 @@
         [
           {
             "name": "content",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "DEMO_content",
             "size": 12
           }
         ],

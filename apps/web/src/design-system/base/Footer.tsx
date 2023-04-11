@@ -29,7 +29,7 @@ export const FooterBodyContent = ({ children }: PropsWithChildren) => {
 };
 
 export const FooterBodyContentDescription = ({ children }: PropsWithChildren) => {
-  return <p className="fr-footer__content-desc">{children}</p>;
+  return <div className="fr-footer__content-desc">{children}</div>;
 };
 
 export const FooterBodyContentItems = ({ children }: PropsWithChildren) => {
