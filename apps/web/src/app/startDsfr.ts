@@ -14,15 +14,6 @@ document.head.appendChild = node => {
   return originalAppendChild(node);
 };
 
-document.onreadystatechange = function () {
-  if (document.readyState == "complete") {
-    document.querySelectorAll("script").forEach(elt => {
-      console.log("Add nonce before interactive", elt);
-      elt.setAttribute("nonce", elt.getAttribute("nonce") || config.githubSha);
-    });
-  }
-};
-
 import { startReactDsfr } from "@codegouvfr/react-dsfr/next-appdir";
 import { defaultColorScheme } from "@components/utils/client/defaultColorScheme";
 import Link from "next/link";
