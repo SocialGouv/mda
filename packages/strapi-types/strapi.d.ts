@@ -21,9 +21,9 @@ import {
   TextAttribute,
   SingleTypeSchema,
   RichTextAttribute,
-  MediaAttribute,
-  ComponentAttribute,
   DynamicZoneAttribute,
+  ComponentAttribute,
+  MediaAttribute,
   ComponentSchema,
 } from '@strapi/strapi';
 
@@ -722,59 +722,6 @@ export interface ApiAccueilAccueil extends SingleTypeSchema {
     singularName: 'accueil';
     pluralName: 'accueils';
     displayName: 'Accueil';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: StringAttribute &
-      RequiredAttribute &
-      SetMinMaxLength<{
-        minLength: 1;
-        maxLength: 255;
-      }>;
-    content: RichTextAttribute & RequiredAttribute;
-    img: MediaAttribute;
-    links: ComponentAttribute<'common.links', true>;
-    MDA_title: StringAttribute &
-      RequiredAttribute &
-      SetMinMaxLength<{
-        minLength: 1;
-        maxLength: 255;
-      }>;
-    MDA_subtitle: TextAttribute;
-    MDA_content: RichTextAttribute & RequiredAttribute;
-    MDA_link_text: StringAttribute &
-      RequiredAttribute &
-      SetMinMaxLength<{
-        minLength: 1;
-        maxLength: 255;
-      }>;
-    MDA_img: MediaAttribute;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    publishedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::accueil.accueil',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::accueil.accueil',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
-export interface ApiAccueilV2AccueilV2 extends SingleTypeSchema {
-  info: {
-    singularName: 'accueil-v2';
-    pluralName: 'accueil-v2s';
-    displayName: 'Accueil V2';
   };
   options: {
     draftAndPublish: true;
@@ -788,13 +735,13 @@ export interface ApiAccueilV2AccueilV2 extends SingleTypeSchema {
     updatedAt: DateTimeAttribute;
     publishedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
-      'api::accueil-v2.accueil-v2',
+      'api::accueil.accueil',
       'oneToOne',
       'admin::user'
     > &
       PrivateAttribute;
     updatedBy: RelationAttribute<
-      'api::accueil-v2.accueil-v2',
+      'api::accueil.accueil',
       'oneToOne',
       'admin::user'
     > &
@@ -1843,7 +1790,6 @@ declare global {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::accessibilite.accessibilite': ApiAccessibiliteAccessibilite;
       'api::accueil.accueil': ApiAccueilAccueil;
-      'api::accueil-v2.accueil-v2': ApiAccueilV2AccueilV2;
       'api::annuaire.annuaire': ApiAnnuaireAnnuaire;
       'api::diagnostic.diagnostic': ApiDiagnosticDiagnostic;
       'api::etape-de-vie.etape-de-vie': ApiEtapeDeVieEtapeDeVie;

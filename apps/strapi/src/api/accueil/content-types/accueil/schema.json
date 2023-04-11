@@ -4,61 +4,20 @@
   "info": {
     "singularName": "accueil",
     "pluralName": "accueils",
-    "displayName": "Accueil",
-    "description": ""
+    "displayName": "Accueil"
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
-      "type": "string",
-      "required": true,
-      "maxLength": 255,
-      "minLength": 1
-    },
-    "content": {
-      "type": "richtext",
-      "required": true
-    },
-    "img": {
-      "allowedTypes": [
-        "images"
+    "widgets": {
+      "type": "dynamiczone",
+      "components": [
+        "common.grid-tiles",
+        "common.articles",
+        "common.most-viewed-cards"
       ],
-      "type": "media",
-      "multiple": false
-    },
-    "links": {
-      "displayName": "links",
-      "type": "component",
-      "repeatable": true,
-      "component": "common.links"
-    },
-    "MDA_title": {
-      "type": "string",
-      "required": true,
-      "maxLength": 255,
-      "minLength": 1
-    },
-    "MDA_subtitle": {
-      "type": "text"
-    },
-    "MDA_content": {
-      "type": "richtext",
       "required": true
-    },
-    "MDA_link_text": {
-      "type": "string",
-      "required": true,
-      "maxLength": 255,
-      "minLength": 1
-    },
-    "MDA_img": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false
     }
   }
 }
