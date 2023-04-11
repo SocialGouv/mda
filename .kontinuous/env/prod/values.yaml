@@ -88,6 +88,8 @@ strapi:
     - secretRef:
         name: "mda-revalidate-webhook"
     - secretRef:
+        name: "mda-matomo"
+    - secretRef:
         name: "mda-meilisearch"
 
 web:

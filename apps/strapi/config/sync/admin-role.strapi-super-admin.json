@@ -44,6 +44,48 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::accueil-v2.accueil-v2",
+      "properties": {
+        "fields": [
+          "widgets"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::accueil-v2.accueil-v2",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::accueil-v2.accueil-v2",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::accueil-v2.accueil-v2",
+      "properties": {
+        "fields": [
+          "widgets"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::accueil-v2.accueil-v2",
+      "properties": {
+        "fields": [
+          "widgets"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::accueil.accueil",
       "properties": {
         "fields": [
@@ -51,6 +93,7 @@
           "content",
           "img",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme",
           "MDA_title",
@@ -83,6 +126,7 @@
           "content",
           "img",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme",
           "MDA_title",
@@ -103,6 +147,7 @@
           "content",
           "img",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme",
           "MDA_title",
@@ -122,6 +167,7 @@
           "title",
           "content",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme"
         ]
@@ -142,6 +188,7 @@
           "title",
           "content",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme"
         ]
@@ -156,6 +203,7 @@
           "title",
           "content",
           "links.text",
+          "links.title",
           "links.url",
           "links.theme"
         ]
@@ -365,6 +413,54 @@
           "section.content",
           "slug",
           "excerpt"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::footer.footer",
+      "properties": {
+        "fields": [
+          "content",
+          "link.text",
+          "link.title",
+          "link.url",
+          "link.theme"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::footer.footer",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::footer.footer",
+      "properties": {
+        "fields": [
+          "content",
+          "link.text",
+          "link.title",
+          "link.url",
+          "link.theme"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::footer.footer",
+      "properties": {
+        "fields": [
+          "content",
+          "link.text",
+          "link.title",
+          "link.url",
+          "link.theme"
         ]
       },
       "conditions": []
@@ -545,6 +641,7 @@
           "title",
           "content",
           "sections.title",
+          "sections.subtitle",
           "sections.content",
           "events"
         ]
@@ -565,6 +662,7 @@
           "title",
           "content",
           "sections.title",
+          "sections.subtitle",
           "sections.content",
           "events"
         ]
@@ -579,6 +677,7 @@
           "title",
           "content",
           "sections.title",
+          "sections.subtitle",
           "sections.content",
           "events"
         ]
@@ -668,6 +767,7 @@
           "title",
           "content",
           "sections.title",
+          "sections.subtitle",
           "sections.content"
         ]
       },
@@ -687,6 +787,7 @@
           "title",
           "content",
           "sections.title",
+          "sections.subtitle",
           "sections.content"
         ]
       },
@@ -700,6 +801,7 @@
           "title",
           "content",
           "sections.title",
+          "sections.subtitle",
           "sections.content"
         ]
       },
@@ -766,6 +868,7 @@
           "items.timeline",
           "items.order",
           "items.links.text",
+          "items.links.title",
           "items.links.url",
           "items.links.theme"
         ]
@@ -797,6 +900,7 @@
           "items.timeline",
           "items.order",
           "items.links.text",
+          "items.links.title",
           "items.links.url",
           "items.links.theme"
         ]
@@ -816,6 +920,7 @@
           "items.timeline",
           "items.order",
           "items.links.text",
+          "items.links.title",
           "items.links.url",
           "items.links.theme"
         ]

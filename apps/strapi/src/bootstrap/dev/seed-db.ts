@@ -3,9 +3,11 @@ import { type StrapiLifecycle } from "../../utils/types";
 const seeds = {
   "api::accessibilite.accessibilite": import("../../utils/seed/accessibilite.json"),
   "api::accueil.accueil": import("../../utils/seed/accueil.json"),
+  "api::accueil-v2.accueil-v2": import("../../utils/seed/accueil-v2.json"),
   "api::annuaire.annuaire": import("../../utils/seed/annuaire.json"),
   "api::etape-de-vie.etape-de-vie": import("../../utils/seed/etape-de-vie.json"),
   "api::fiche-pratique.fiche-pratique": import("../../utils/seed/fiche-pratique.json"),
+  "api::footer.footer": import("../../utils/seed/footer.json"),
   "api::glossaire-item.glossaire-item": import("../../utils/seed/glossaire-item.json"),
   "api::je-donne-mon-avis.je-donne-mon-avis": import("../../utils/seed/je-donne-mon-avis.json"),
   "api::maison-de-l-autisme.maison-de-l-autisme": import("../../utils/seed/maison-de-l-autisme.json"),

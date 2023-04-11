@@ -1,0 +1,59 @@
+{
+  "collectionName": "components_common_articles",
+  "info": {
+    "displayName": "Articles",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.sections"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "image_position": {
+      "type": "enumeration",
+      "enum": [
+        "right",
+        "left"
+      ],
+      "default": "right",
+      "required": true
+    },
+    "image_width": {
+      "type": "integer"
+    },
+    "image_height": {
+      "type": "integer"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.links"
+    },
+    "buttons_position": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ],
+      "default": "left",
+      "required": true
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "home"
+      ]
+    }
+  }
+}
