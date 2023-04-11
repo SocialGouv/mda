@@ -96,7 +96,6 @@ web:
   redirectFrom:
     - maisondelautisme.fabrique.social.gouv.fr
     - maisondelautisme-recette.fabrique.social.gouv.fr
-    - www.maisondelautisme.gouv.fr
   certSecretName: 2023-mda-web-crt
   autoscale:
     enabled: true

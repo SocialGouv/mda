@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app-redirect-www-mda
+  namespace: mda
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/permanent-redirect: https://maisondelautisme.gouv.fr/$request_uri
+spec:
+  tls:
+    - hosts:
+        - www.maisondelautisme.gouv.fr
+      secretName: 2023-mda-web-crt
+  rules:
+    - host: www.maisondelautisme.gouv.fr
