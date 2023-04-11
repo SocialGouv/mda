@@ -27,6 +27,7 @@ const nextConfig = {
         pathname: "/uploads/**",
       },
     ],
+    unoptimized: true,
   },
   async headers() {
     return [
