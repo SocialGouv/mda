@@ -1,6 +1,10 @@
 import "../../styles/global.css";
 import "../startDsfr";
 
+declare let __webpack_nonce__: string;
+// eslint-disable-next-line prefer-const
+__webpack_nonce__ = config.githubSha;
+
 import { DsfrHead } from "@codegouvfr/react-dsfr/next-appdir/DsfrHead";
 import { DsfrProvider } from "@codegouvfr/react-dsfr/next-appdir/DsfrProvider";
 import { getColorSchemeHtmlAttributes } from "@codegouvfr/react-dsfr/next-appdir/getColorSchemeHtmlAttributes";
