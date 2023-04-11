@@ -1,3 +1,10 @@
+## [1.14.4](https://github.com/SocialGouv/mda/compare/v1.14.3...v1.14.4) (2023-04-11)
+
+
+### Bug Fixes
+
+* **images:** Remove next url parameters ([6518f85](https://github.com/SocialGouv/mda/commit/6518f858f05c67a062646580cb3ae90a591df401))
+
 ## [1.14.3](https://github.com/SocialGouv/mda/compare/v1.14.2...v1.14.3) (2023-04-11)
 
 
