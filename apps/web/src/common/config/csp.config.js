@@ -16,7 +16,7 @@ const ContentSecurityPolicy = nonce =>
   frame-ancestors 'self' https://*.gouv.fr;
   font-src 'self' data: blob:;
   base-uri 'self' https://*.gouv.fr;
-  form-action 'self' https://*.gouv.fr";
+  form-action 'self' https://*.gouv.fr;
 `
     .replace(/\n/g, " ")
     .trim();

@@ -50,7 +50,7 @@ const MainRootLayout = async ({ children }: PropsWithChildren) => {
   const footerAttributes = strapiFooter.data?.attributes;
   return (
     <html lang="fr" {...getColorSchemeHtmlAttributes({ defaultColorScheme })}>
-      <head>
+      <head nonce={config.githubSha}>
         <DsfrHead
           defaultColorScheme={defaultColorScheme}
           preloadFonts={[
@@ -69,6 +69,7 @@ const MainRootLayout = async ({ children }: PropsWithChildren) => {
         <Matomo env={config.env} />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="csp-nonce" content={config.githubSha} />
       </head>
       <body>
         <DsfrProvider defaultColorScheme={defaultColorScheme}>

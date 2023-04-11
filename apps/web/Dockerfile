@@ -28,7 +28,6 @@ COPY --from=builder /app/out/full/ /tmp-full/
 ########
 # Installer from pruned monorepo
 FROM base AS installer
-ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
 
 ARG NEXT_PUBLIC_SITE_URL

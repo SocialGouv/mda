@@ -4,13 +4,14 @@ import "../startDsfr";
 import { DsfrHead } from "@codegouvfr/react-dsfr/next-appdir/DsfrHead";
 import { DsfrProvider } from "@codegouvfr/react-dsfr/next-appdir/DsfrProvider";
 import { getColorSchemeHtmlAttributes } from "@codegouvfr/react-dsfr/next-appdir/getColorSchemeHtmlAttributes";
+import { config } from "@common/config";
 import { defaultColorScheme } from "@components/utils/client/defaultColorScheme";
 import { type PropsWithChildren } from "react";
 
 const TechnicalRootLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang="fr" {...getColorSchemeHtmlAttributes({ defaultColorScheme })}>
-      <head>
+      <head nonce={config.githubSha}>
         <DsfrHead
           defaultColorScheme={defaultColorScheme}
           preloadFonts={[
@@ -28,6 +29,7 @@ const TechnicalRootLayout = ({ children }: PropsWithChildren) => {
         />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="csp-nonce" content={config.githubSha} />
       </head>
       <body>
         <DsfrProvider defaultColorScheme={defaultColorScheme}>{children}</DsfrProvider>
