@@ -108,7 +108,7 @@ export const Header = ({ menuItems }: { menuItems: GetAttributesValues<"api::men
                 </div>
               </div>
               <div className="fr-header__service">
-                <Link href="/" aria-label="Retour à la page d'accueil de La Maison de l'autisme">
+                <Link href="/" aria-label={`Retour à la page d'accueil de : ${config.siteTitle}`}>
                   <p className="fr-header__service-title">{config.siteTitle}</p>
                 </Link>
               </div>
