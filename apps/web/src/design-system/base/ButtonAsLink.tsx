@@ -2,17 +2,18 @@ import { type PropsWithChildren } from "react";
 
 import type { ButtonStylesProps } from "../utils/ButtonStyles";
 import { buttonStyles } from "../utils/ButtonStyles";
-import { NextLinkOrA } from "../utils/NextLinkOrA";
+import { NextLinkOrA, type NextLinkOrAProps } from "../utils/NextLinkOrA";
 
-export type ButtonAsLinkProps = ButtonStylesProps & {
-  href?: string;
-  isCurrent?: boolean;
-  isDisabled?: boolean;
-  onClick?: () => void;
-  rel?: string;
-  target?: string;
-  title?: string;
-};
+export type ButtonAsLinkProps = ButtonStylesProps &
+  NextLinkOrAProps & {
+    href?: string;
+    isCurrent?: boolean;
+    isDisabled?: boolean;
+    onClick?: () => void;
+    rel?: string;
+    target?: string;
+    title?: string;
+  };
 
 export const ButtonAsLink = ({
   href,

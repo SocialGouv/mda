@@ -6,9 +6,11 @@ const strapiUrl = new URL(process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://loca
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
   output: "standalone",
+  transpilePackages: ["@codegouvfr/react-dsfr"],
   experimental: {
     appDir: true,
     outputFileTracingRoot: path.join(__dirname, "../../"),
@@ -17,6 +19,16 @@ const nextConfig = {
     NEXT_PUBLIC_APP_VERSION: version,
     NEXT_PUBLIC_APP_VERSION_COMMIT: process.env.GITHUB_SHA,
     NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT: process.env.PRODUCTION === "true",
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  webpack: config => {
+    config.module.rules.push({
+      test: /\.woff2$/,
+      type: "asset/resource",
+    });
+    return config;
   },
   images: {
     remotePatterns: [
@@ -71,6 +83,15 @@ const nextConfig = {
       ],
     };
   },
+  // Uncomment to debug dsfr script in node_modules with reload / nocache
+  //   webpack(config, context) {
+  //     if (!context.dev) return config;
+  //     config.snapshot = {
+  //       managedPaths: [/^(.+?[\\/]node_modules[\\/](?!(@gouvfr[\\/]dsfr))(@.+?[\\/])?.+?)[\\/]/],
+  //     };
+
+  //     return config;
+  //   },
 };
 
 module.exports = nextConfig;
