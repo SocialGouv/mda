@@ -5,21 +5,20 @@ type MarkdownProps = Options & {
   children: string;
 };
 
-export const Markdown = ({ children, ...rest }: MarkdownProps) => {
-  const content = children;
+export const Markdown = ({ children: content, ...rest }: MarkdownProps) => {
   const regex = /<iframe\s+[^>]*src="([^"]*\.pdf)"[^>]*/gi;
   const cleanContent: string = content.replace(regex, '<iframe src="$1#view=fitH"');
   return (
     <ReactMarkdown
       rehypePlugins={[rehypeRaw]}
       components={{
-        iframe: ({ ...props }) => (
+        iframe: ({ node: _, ...props }) => (
           <div className="fr-video-container">
-            <iframe {...props} />
+            <iframe {...props} sandbox="true" />
           </div>
         ),
-        img: ({ ...props }) => <img className="fr-fluid-img" {...props} />,
-        a: ({ node, children, ...props }) => {
+        img: ({ node: _, ...props }) => <img className="fr-fluid-img" {...props} />,
+        a: ({ node: _, children, ...props }) => {
           if (props.href?.includes("http")) {
             props.target = "_blank";
             props.rel = "noreferrer";

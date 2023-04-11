@@ -65,7 +65,7 @@ strapi:
     DATABASE_PASSWORD: "$(PGPASSWORD)"
     DATABASE_SSL: "$(PGSSLMODE)" # invetigate why knex doesn't work with "ssl: require"
     HOST: "0.0.0.0"
-    GITHUB_SHA: "{{ $.Values.global.sha }}"
+    GITHUB_SHA: "{{ $.Values.global.shortSha }}"
     MATOMO_SITE_ID: "81"
     MATOMO_URL: "https://matomo.fabrique.social.gouv.fr"
     MDA_ENV: "{{ .Values.global.env }}"
@@ -82,7 +82,7 @@ jobs:
         imagePackage: web
         dockerfile: apps/web/Dockerfile
         buildArgs:
-          NEXT_PUBLIC_GITHUB_SHA: "{{ $.Values.global.sha }}"
+          NEXT_PUBLIC_GITHUB_SHA: "{{ $.Values.global.shortSha }}"
           NEXT_PUBLIC_SITE_URL: "https://{{ .Values.global.host }}"
           NEXT_PUBLIC_STRAPI_API_URL: "https://strapi.{{ .Values.global.host }}"
           MDA_ENV: "{{ .Values.global.env }}"

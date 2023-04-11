@@ -7,8 +7,8 @@
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "id",
-      "defaultSortBy": "id",
+      "mainField": "title",
+      "defaultSortBy": "title",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -18,6 +18,20 @@
           "label": "id",
           "searchable": false,
           "sortable": false
+        }
+      },
+      "title": {
+        "edit": {
+          "label": "title",
+          "description": "Ce titre ne sert qu'au back office. C'est la section qui est affichée sur le site",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "title",
+          "searchable": true,
+          "sortable": true
         }
       },
       "section": {
@@ -136,11 +150,18 @@
     "layouts": {
       "list": [
         "id",
+        "title",
         "section",
         "buttons",
         "image"
       ],
       "edit": [
+        [
+          {
+            "name": "title",
+            "size": 12
+          }
+        ],
         [
           {
             "name": "section",

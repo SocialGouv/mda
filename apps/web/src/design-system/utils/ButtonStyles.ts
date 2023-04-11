@@ -22,5 +22,5 @@ export const buttonStyles = ({ variant, size, iconLeft, iconRight, iconOnly, isR
     isRounded && "fr-btn--round",
     iconLeft && `fr-btn--icon-left ${iconLeft}`,
     iconRight && `fr-btn--icon-right ${iconRight}`,
-    iconOnly && iconOnly,
+    iconOnly,
   );

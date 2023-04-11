@@ -14,7 +14,6 @@ jobs:
     build-web:
       with:
         buildArgs:
-          PRODUCTION: "true"
           ROBOT: "true"
     clean-meilisearch:
       volumes:
@@ -95,7 +94,8 @@ strapi:
 
 web:
   redirectFrom:
-    - "maisondelautisme-recette.fabrique.social.gouv.fr"
+    - maisondelautisme.fabrique.social.gouv.fr
+    - maisondelautisme-recette.fabrique.social.gouv.fr
   certSecretName: 2023-mda-web-crt
   autoscale:
     enabled: true

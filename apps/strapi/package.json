@@ -24,12 +24,12 @@
     "@types/node-schedule": "^2.1.0"
   },
   "dependencies": {
-    "@strapi/plugin-users-permissions": "4.9.0",
-    "@strapi/strapi": "4.9.0",
+    "@strapi/plugin-users-permissions": "4.9.2",
+    "@strapi/strapi": "4.9.2",
     "pg": "8.10.0",
     "request": "^2.88.2",
     "strapi-plugin-config-sync": "^1.1.1",
-    "strapi-plugin-import-export-entries": "^1.18.1",
+    "strapi-plugin-import-export-entries": "^1.19.0",
     "strapi-plugin-meilisearch": "^0.9.1",
     "strapi-plugin-populate-deep": "^2.0.0",
     "strapi-plugin-slugify": "^2.3.2"

@@ -10,16 +10,27 @@ import {
   GridCol,
 } from "@design-system";
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
+import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
-const MonParcours = async () => {
-  const strapiData = await fetchStrapi("parcourss", { sort: "id" });
-  const data = strapiData.data || [];
+const title = "Mon parcours";
+const slug = "mon-parcours";
+
+export const generateMetadata = generateMetadataFactory({
+  resolveMetadata: () => ({
+    title,
+    slug,
+  }),
+});
+
+const MonParcoursPage = async () => {
+  const pageData = await fetchStrapi("parcourss", { sort: "id" });
+  const data = pageData.data || [];
 
   return (
     <section className="fr-py-6w fr-py-md-12w">
       <Container>
-        <h1>Mon parcours</h1>
+        <h1>{title}</h1>
         <Grid as="ul" haveGutters>
           {data.map(parcours => (
             <GridCol as="li" key={parcours.id} lg={6}>
@@ -27,7 +38,7 @@ const MonParcours = async () => {
                 <CardBody>
                   <CardBodyContent>
                     <CardBodyContentTitle titleAs="h3">
-                      <NextLinkOrA href={`/mon-parcours/${parcours.attributes.slug}`}>
+                      <NextLinkOrA href={`/${slug}/${parcours.attributes.slug}`}>
                         {parcours.attributes.title}
                       </NextLinkOrA>
                     </CardBodyContentTitle>
@@ -47,4 +58,4 @@ const MonParcours = async () => {
   );
 };
 
-export default MonParcours;
+export default MonParcoursPage;

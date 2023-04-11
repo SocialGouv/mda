@@ -3,12 +3,42 @@ import { ActionsButtons } from "@components/base/client/ActionsButtons";
 import { Markdown } from "@components/utils/Markdown";
 import { Container, Grid, GridCol, SideMenuLink } from "@design-system";
 import { CollapsedSectionDynamicGroup, SideMenuDynamic } from "@design-system/client";
+import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
 export type FichePratiqueProps = Next13ServerPageProps<"slug">;
-const FichePratique = async ({ params }: FichePratiqueProps) => {
+
+export const generateMetadata = generateMetadataFactory({
+  async resolveMetadata({ params }: FichePratiqueProps) {
+    const head = (
+      await fetchStrapi("fiche-pratiques", {
+        filters: {
+          slug: {
+            $eq: params.slug,
+          },
+        },
+      })
+    ).data?.[0];
+
+    return {
+      title: head?.attributes.title as string,
+      slug: `fiches-pratiques/${params.slug}`,
+      description: head?.attributes.excerpt,
+    };
+  },
+});
+
+export async function generateStaticParams() {
+  const fiches = (await fetchStrapi("fiche-pratiques")).data ?? [];
+
+  return fiches.map(fiche => ({
+    slug: fiche.attributes.slug,
+  }));
+}
+
+const FichesPratiquesSlugPage = async ({ params }: FichePratiqueProps) => {
   const [fiches, currentFiche] = await Promise.all([
     fetchStrapi("fiche-pratiques").then(responses => responses.data ?? []),
     fetchStrapi("fiche-pratiques", {
@@ -77,12 +107,4 @@ const FichePratique = async ({ params }: FichePratiqueProps) => {
   );
 };
 
-export async function generateStaticParams() {
-  const fiches = (await fetchStrapi("fiche-pratiques")).data ?? [];
-
-  return fiches.map(fiche => ({
-    slug: fiche.attributes.slug,
-  }));
-}
-
-export default FichePratique;
+export default FichesPratiquesSlugPage;

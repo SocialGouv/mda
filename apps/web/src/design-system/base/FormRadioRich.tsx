@@ -5,6 +5,7 @@ export const FormRadioRich = ({
   checked,
   label,
   hint,
+  onChange,
   onClick,
   img,
 }: {
@@ -13,11 +14,20 @@ export const FormRadioRich = ({
   id: string;
   img?: ReactNode;
   label: string;
-  onClick: () => void;
+  onChange?: () => void;
+  onClick?: () => void;
 }) => {
   return (
     <div className="fr-radio-group fr-radio-rich">
-      <input checked={checked} value="light" type="radio" id={id} name="fr-radios-theme" onClick={onClick} />
+      <input
+        checked={checked}
+        value="light"
+        type="radio"
+        id={id}
+        name="fr-radios-theme"
+        onChange={onChange}
+        onClick={onClick}
+      />
       <label htmlFor={id} className="fr-label">
         {label}
         {hint && <span className="fr-hint-text">{hint}</span>}

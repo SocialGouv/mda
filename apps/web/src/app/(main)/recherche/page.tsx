@@ -2,12 +2,19 @@ import { type Next13ServerPageProps } from "@common/utils/next13";
 import { SearchResultsList } from "@components/base/SearchResultsList";
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
 import { Link } from "@design-system";
+import { generateMetadataFactory } from "@services/metadata";
 import { mapMeilisearchHit, type SearchHit, searchStrapi } from "@services/strapi";
 
 export const dynamic = "force-dynamic";
 
+export const generateMetadata = generateMetadataFactory({
+  noCanonicalLink: true,
+  resolveMetadata: () => ({ title: "Recherche" }),
+});
+
 export type SearchProps = Next13ServerPageProps<"", "keyword">;
-const Search = async ({ searchParams: { keyword } }: SearchProps) => {
+
+const RecherchePage = async ({ searchParams: { keyword } }: SearchProps) => {
   const searchResults = keyword
     ? await searchStrapi(keyword).then(hits => hits.map(mapMeilisearchHit).filter((hit): hit is SearchHit => !!hit))
     : [];
@@ -63,4 +70,4 @@ const Search = async ({ searchParams: { keyword } }: SearchProps) => {
   );
 };
 
-export default Search;
+export default RecherchePage;

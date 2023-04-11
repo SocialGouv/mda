@@ -1,3 +1,78 @@
+# [1.18.0](https://github.com/SocialGouv/mda/compare/v1.17.0...v1.18.0) (2023-04-24)
+
+
+### Bug Fixes
+
+* **carousel:** Do not use article full ([09cfa66](https://github.com/SocialGouv/mda/commit/09cfa66a4293ffdb550f06c5b76501df7b431239))
+* **seo:** canonical links ([69a0ea8](https://github.com/SocialGouv/mda/commit/69a0ea8cae2e2da9476f4f9ce83f121bac10385f))
+* **sitemap:** remove healthz ([50aaa69](https://github.com/SocialGouv/mda/commit/50aaa69586c5062d2ef61fda21759de9b87dd729))
+
+
+### Features
+
+* **home:** carousel ([#304](https://github.com/SocialGouv/mda/issues/304)) ([d98f031](https://github.com/SocialGouv/mda/commit/d98f031475eb7eb09d214a0f4bed06bd4ab3f1e3))
+
+# [1.17.0](https://github.com/SocialGouv/mda/compare/v1.16.0...v1.17.0) (2023-04-18)
+
+
+### Bug Fixes
+
+* **metadata:** remove unnecessary charset ([4888d50](https://github.com/SocialGouv/mda/commit/4888d50623d347ea559df6fc732127dc8c1891e7))
+
+
+### Features
+
+* **seo:** improve metadatas ([#297](https://github.com/SocialGouv/mda/issues/297)) ([ba427e5](https://github.com/SocialGouv/mda/commit/ba427e5086b9aa2f2f54cfa85b891fa437aaabd4))
+
+# [1.16.0](https://github.com/SocialGouv/mda/compare/v1.15.3...v1.16.0) (2023-04-18)
+
+
+### Features
+
+* **seo:** add canonical links ([#294](https://github.com/SocialGouv/mda/issues/294)) ([28d48c5](https://github.com/SocialGouv/mda/commit/28d48c58c215e92c9487fa394a0b002b09537ed8))
+
+## [1.15.3](https://github.com/SocialGouv/mda/compare/v1.15.2...v1.15.3) (2023-04-17)
+
+
+### Bug Fixes
+
+* **matomo:** Track navigation ([#286](https://github.com/SocialGouv/mda/issues/286)) ([1280ee9](https://github.com/SocialGouv/mda/commit/1280ee9025edf21412c947b475c28a9ca41ab630))
+* **pages:** Politique de confidentialite ([#289](https://github.com/SocialGouv/mda/issues/289)) ([2bbd962](https://github.com/SocialGouv/mda/commit/2bbd962b762341d7d65873b13246438bac32325f))
+* **prod:** Add www redirect ([#242](https://github.com/SocialGouv/mda/issues/242)) ([f7fd685](https://github.com/SocialGouv/mda/commit/f7fd6850e68ebe848739662383f3c5916261d044))
+* **seo:** Do not send headers on each environments ([#287](https://github.com/SocialGouv/mda/issues/287)) ([f9d5ba6](https://github.com/SocialGouv/mda/commit/f9d5ba6f3204d86e9683ded5285f8ff6059aec20))
+* **sonar:** easy bugs & code smells ([#290](https://github.com/SocialGouv/mda/issues/290)) ([6a5ab73](https://github.com/SocialGouv/mda/commit/6a5ab739837f8c47e0dedf48335f39108a1292b6))
+
+## [1.15.2](https://github.com/SocialGouv/mda/compare/v1.15.1...v1.15.2) (2023-04-14)
+
+
+### Bug Fixes
+
+* **pictos:** Add classes on <use> for chrome ([3db1a40](https://github.com/SocialGouv/mda/commit/3db1a401c7c21e49fb5a4a2e521e4c8fe21c622a))
+
+## [1.15.1](https://github.com/SocialGouv/mda/compare/v1.15.0...v1.15.1) (2023-04-13)
+
+
+### Bug Fixes
+
+* **csp:** Do not block static svgs ([bec6b61](https://github.com/SocialGouv/mda/commit/bec6b61bf76f5b2b9d25131666daf8673a7d3e53))
+
+# [1.15.0](https://github.com/SocialGouv/mda/compare/v1.14.4...v1.15.0) (2023-04-13)
+
+
+### Bug Fixes
+
+* change meta title by generateMetadata ([#274](https://github.com/SocialGouv/mda/issues/274)) ([272ae12](https://github.com/SocialGouv/mda/commit/272ae128a438d96918f1111eaada6bce804351e4))
+* docker and csp ([#269](https://github.com/SocialGouv/mda/issues/269)) ([5e2f7fe](https://github.com/SocialGouv/mda/commit/5e2f7fea08ff8f29de1303f34b5401dc3bf66de8))
+* **strapi:** Admin doc ([#277](https://github.com/SocialGouv/mda/issues/277)) ([12ff1cb](https://github.com/SocialGouv/mda/commit/12ff1cb1ef8309c91e0e1e7bf29a0452137fca01))
+
+
+### Features
+
+* assigning the site name to a variable ([#265](https://github.com/SocialGouv/mda/issues/265)) ([5803cd6](https://github.com/SocialGouv/mda/commit/5803cd611b0a3deea28d18fa666e502d8a3e94e0))
+* dsfr consent banner ([#268](https://github.com/SocialGouv/mda/issues/268)) ([38f7726](https://github.com/SocialGouv/mda/commit/38f772626910460ea016da6f5f257d73906b4dad))
+* **footer:** Banner dynamisation ([#276](https://github.com/SocialGouv/mda/issues/276)) ([d68e756](https://github.com/SocialGouv/mda/commit/d68e756739ef6f6361cea9825dbf22974737abb8))
+* **pictos:** Add all DSFR pictos ([#279](https://github.com/SocialGouv/mda/issues/279)) ([c8848f2](https://github.com/SocialGouv/mda/commit/c8848f20e1699114b35cba496ac46c090452c852))
+
 ## [1.14.4](https://github.com/SocialGouv/mda/compare/v1.14.3...v1.14.4) (2023-04-11)
 
 

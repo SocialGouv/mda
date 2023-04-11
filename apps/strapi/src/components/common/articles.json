@@ -6,6 +6,13 @@
   },
   "options": {},
   "attributes": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "maxLength": 255,
+      "minLength": 1,
+      "private": true
+    },
     "section": {
       "type": "component",
       "repeatable": false,

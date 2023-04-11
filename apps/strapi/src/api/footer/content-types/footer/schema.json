@@ -20,6 +20,17 @@
       "type": "component",
       "repeatable": true,
       "component": "common.links"
+    },
+    "banner_title": {
+      "type": "string",
+      "maxLength": 255,
+      "minLength": 1
+    },
+    "banner_icons": {
+      "displayName": "Icons",
+      "type": "component",
+      "repeatable": true,
+      "component": "common.icons"
     }
   }
 }

@@ -108,7 +108,7 @@ export const Header = ({ menuItems }: { menuItems: GetAttributesValues<"api::men
                 </div>
               </div>
               <div className="fr-header__service">
-                <Link href="/" aria-label="Retour à la page d'accueil de La Maison de l'autisme">
+                <Link href="/" aria-label={`Retour à la page d'accueil de : ${config.siteTitle}`}>
                   <p className="fr-header__service-title">{config.siteTitle}</p>
                 </Link>
               </div>
@@ -188,11 +188,11 @@ export const Header = ({ menuItems }: { menuItems: GetAttributesValues<"api::men
                 <MainNavItemWithDropdown
                   key={item.id}
                   title={item.text}
-                  links={item.dropdown.map(item => {
+                  links={item.dropdown.map(i => {
                     return {
-                      id: item.id,
-                      label: item.text,
-                      href: item.url,
+                      id: i.id,
+                      label: i.text,
+                      href: i.url,
                       onClick: () => setNavOpen(false),
                     };
                   })}

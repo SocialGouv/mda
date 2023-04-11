@@ -26,9 +26,6 @@
       ],
       "@design-system/hooks/*": [
         "src/design-system/hooks/*"
-      ],
-      "@design-system/theme": [
-        "src/design-system/theme"
       ]
     },
     "plugins": [

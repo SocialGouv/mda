@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_common_carousels",
+  "info": {
+    "displayName": "Carousels"
+  },
+  "options": {},
+  "attributes": {
+    "articles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.articles"
+    }
+  }
+}
