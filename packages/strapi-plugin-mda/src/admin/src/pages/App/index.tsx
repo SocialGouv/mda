@@ -10,9 +10,13 @@ import "./index.css";
 
 import { type Diag } from "@mda/strapi-types";
 import { Box } from "@strapi/design-system/Box";
+import { Button } from "@strapi/design-system/Button";
 import { ContentLayout, HeaderLayout } from "@strapi/design-system/Layout";
+import { Link } from "@strapi/design-system/Link";
+import { ArrowLeft } from "@strapi/icons";
 import _ from "lodash";
-import React, { useMemo } from "react";
+import React, { useCallback, useMemo, useState } from "react";
+import { useHistory } from "react-router-dom";
 import ReactFlow, {
   Background,
   BackgroundVariant,
@@ -21,6 +25,7 @@ import ReactFlow, {
   MiniMap,
   type Node,
   type NodeTypes,
+  type ReactFlowInstance,
   type XYPosition,
 } from "reactflow";
 
@@ -38,7 +43,7 @@ const subanswersSet = new Set<Diag.SubAnswer>();
 const edges: Edge[] = [];
 const edgesIdSet = new Set<string>();
 
-const EDGE_SPLIT = "NIQUE";
+const EDGE_SPLIT = "~";
 for (const elt of baseJson) {
   if (elt.attributes.answers) {
     const id = `question-${elt.id}`;
@@ -49,11 +54,6 @@ for (const elt of baseJson) {
         answers: elt.attributes.answers.map(answer => {
           const anwserId = `answer-${answer.id}`;
           edgesIdSet.add(`e${id}${EDGE_SPLIT}${anwserId}`);
-          // edges.push({
-          //   id: `e${id}-${anwserId}`,
-          //   source: id,
-          //   target: anwserId,
-          // });
           return anwserId;
         }),
         info: elt.attributes.info ?? "",
@@ -65,11 +65,6 @@ for (const elt of baseJson) {
         answers: elt.attributes.answers.map(answer => {
           const anwserId = `answer-${answer.id}`;
           edgesIdSet.add(`e${id}${EDGE_SPLIT}${anwserId}`);
-          // edges.push({
-          //   id: `e${id}-${anwserId}`,
-          //   source: id,
-          //   target: anwserId,
-          // });
           return anwserId;
         }),
         info: elt.attributes.info ?? "",
@@ -88,22 +83,12 @@ for (const elt of baseJson) {
           subanswers: answer.subanswers.map(subanswer => {
             const subanswerId = `subanswer-${subanswer.id}`;
             edgesIdSet.add(`e${answerId}${EDGE_SPLIT}${subanswerId}`);
-            // edges.push({
-            //   id: `e${answerId}-${subanswerId}`,
-            //   source: answerId,
-            //   target: subanswerId,
-            // });
             return subanswerId;
           }),
         });
 
         if (answerDestinationId) {
           edgesIdSet.add(`e${answerId}${EDGE_SPLIT}${answerDestinationId}`);
-          // edges.push({
-          //   id: `e${answerId}-${answerDestinationId}`,
-          //   source: answerId,
-          //   target: answerDestinationId,
-          // });
         }
 
         for (const subanswer of answer.subanswers) {
@@ -116,11 +101,6 @@ for (const elt of baseJson) {
             info: subanswer.info ?? "",
           });
           edgesIdSet.add(`e${subanswerId}-${destinationId}`);
-          // edges.push({
-          //   id: `e${subanswerId}-${destinationId}`,
-          //   source: subanswerId,
-          //   target: destinationId,
-          // });
         }
       }
     }
@@ -142,7 +122,6 @@ edgesIdSet.forEach(id => {
 
 console.log({ rootQuestion, questions, answers, subanswers, edges });
 
-// const rand500 = () => Math.floor(Math.random() * 500);
 let baseX = -20;
 let baseY = -20;
 const getY = () => (baseY < 0 ? (baseY = Math.abs(baseY) + 20) : (baseY = -baseY));
@@ -192,6 +171,8 @@ const nodeColor = (node: Node) => {
 };
 
 const App = () => {
+  const { goBack } = useHistory();
+  const [rfInstance, setRfInstance] = useState<ReactFlowInstance>();
   const nodeTypes: NodeTypes = useMemo(
     () => ({
       [RootQuestionNode.nodeName]: RootQuestionNode,
@@ -202,10 +183,33 @@ const App = () => {
     [],
   );
 
+  const onSave = useCallback(() => {
+    console.log(rfInstance?.toObject());
+  }, [rfInstance]);
+
   return (
     <Box className="MDA-ROOT" height="100vh">
       <Box background="neutral100">
-        <HeaderLayout title="Parcours de diagnostic V2" />
+        <HeaderLayout
+          title="Parcours de diagnostic V2"
+          navigationAction={
+            <Link
+              startIcon={<ArrowLeft />}
+              onClick={(e: MouseEvent) => {
+                e.preventDefault();
+                goBack();
+              }}
+              to="/"
+            >
+              Retour
+            </Link>
+          }
+          primaryAction={
+            <Button disabled={false} loading={false} onClick={onSave}>
+              Sauvegarder
+            </Button>
+          }
+        />
       </Box>
       <ContentLayout>
         <Box borderColor="neutral1000" padding="4px" hasRadius height="calc(100vh - 140px)">
@@ -219,6 +223,7 @@ const App = () => {
             nodeTypes={nodeTypes}
             snapToGrid
             snapGrid={[50, 50]}
+            onInit={setRfInstance}
           >
             <Background id="1" gap={10} color="#f1f1f1" variant={BackgroundVariant.Lines} />
             <Background id="2" gap={100} offset={1} color="#ccc" variant={BackgroundVariant.Lines} />

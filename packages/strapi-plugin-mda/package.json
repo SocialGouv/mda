@@ -8,6 +8,7 @@
     "kind": "plugin"
   },
   "dependencies": {
+    "clsx": "^1.2.1",
     "reactflow": "^11.7.0"
   },
   "devDependencies": {
@@ -18,6 +19,7 @@
     "@strapi/icons": "1.6.1",
     "@strapi/typescript-utils": "4.8.2",
     "@strapi/utils": "4.8.2",
+    "@types/react-router-dom": "^5.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

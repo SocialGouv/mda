@@ -5,8 +5,6 @@
       "content": "Un avis a-t-il été donné suite à cette consultation ? (ref adulte)",
       "info": null,
       "first": false,
-      "createdAt": "2023-01-27T15:47:54.374Z",
-      "updatedAt": "2023-03-23T20:40:32.408Z",
       "answers": [
         {
           "id": 8,
@@ -19,8 +17,6 @@
                 "content": "Un parcours de diagnostic vous a-t-il été proposé ?",
                 "info": null,
                 "first": false,
-                "createdAt": "2023-01-27T15:55:00.530Z",
-                "updatedAt": "2023-03-27T16:51:42.837Z",
                 "answers": [
                   {
                     "id": 47,
@@ -41,8 +37,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -55,8 +49,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -68,9 +60,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -107,8 +97,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -121,8 +109,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -134,9 +120,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -173,8 +157,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -187,8 +169,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -200,9 +180,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -239,8 +217,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -253,8 +229,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -266,9 +240,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -329,8 +301,6 @@
       "content": "Un avis a-t-il été donné suite à cette consultation ? (ref adulte)",
       "info": null,
       "first": false,
-      "createdAt": "2023-01-27T17:38:20.870Z",
-      "updatedAt": "2023-03-27T17:04:51.903Z",
       "answers": [
         {
           "id": 61,
@@ -351,8 +321,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -365,8 +333,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -379,8 +345,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -392,9 +356,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -446,8 +408,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -460,8 +420,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -474,8 +432,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -487,9 +443,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -541,8 +495,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -555,8 +507,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -569,8 +519,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -582,9 +530,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -636,8 +582,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -650,8 +594,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -664,8 +606,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -677,9 +617,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -740,8 +678,6 @@
       "content": "Avez-vous réalisé les entretiens et tests ?",
       "info": null,
       "first": false,
-      "createdAt": "2023-01-27T16:26:58.504Z",
-      "updatedAt": "2023-03-23T20:40:32.486Z",
       "answers": [
         {
           "id": 18,
@@ -754,8 +690,6 @@
                 "content": "Avez-vous eu votre bilan diagnostic ?",
                 "info": null,
                 "first": false,
-                "createdAt": "2023-01-27T16:27:40.250Z",
-                "updatedAt": "2023-03-23T20:40:32.505Z",
                 "answers": [
                   {
                     "id": 20,
@@ -768,8 +702,6 @@
                           "content": "Est-ce que le bilan diagnostic conclut à des troubles du spectre de l'autisme ?",
                           "info": null,
                           "first": false,
-                          "createdAt": "2023-01-27T16:28:10.834Z",
-                          "updatedAt": "2023-03-24T16:43:06.971Z",
                           "answers": [
                             {
                               "id": 22,
@@ -837,8 +769,6 @@
       "content": "Avez-vous eu votre bilan diagnostic ?",
       "info": null,
       "first": false,
-      "createdAt": "2023-01-27T16:27:40.250Z",
-      "updatedAt": "2023-03-23T20:40:32.505Z",
       "answers": [
         {
           "id": 20,
@@ -851,8 +781,6 @@
                 "content": "Est-ce que le bilan diagnostic conclut à des troubles du spectre de l'autisme ?",
                 "info": null,
                 "first": false,
-                "createdAt": "2023-01-27T16:28:10.834Z",
-                "updatedAt": "2023-03-24T16:43:06.971Z",
                 "answers": [
                   {
                     "id": 22,
@@ -905,8 +833,6 @@
       "content": "L'équipe de la PCO vous a-t-elle contacté ?",
       "info": null,
       "first": false,
-      "createdAt": "2023-01-27T16:43:44.419Z",
-      "updatedAt": "2023-03-23T20:40:32.600Z",
       "answers": [
         {
           "id": 51,
@@ -919,8 +845,6 @@
                 "content": "Avez-vous démarré le bilan diagnostic ?",
                 "info": null,
                 "first": false,
-                "createdAt": "2023-01-27T16:00:47.210Z",
-                "updatedAt": "2023-03-24T16:39:34.059Z",
                 "answers": [
                   {
                     "id": 44,
@@ -933,8 +857,6 @@
                           "content": "Avez-vous réalisé les entretiens et tests ?",
                           "info": null,
                           "first": false,
-                          "createdAt": "2023-01-27T16:26:58.504Z",
-                          "updatedAt": "2023-03-23T20:40:32.486Z",
                           "answers": [
                             {
                               "id": 18,
@@ -947,8 +869,6 @@
                                     "content": "Avez-vous eu votre bilan diagnostic ?",
                                     "info": null,
                                     "first": false,
-                                    "createdAt": "2023-01-27T16:27:40.250Z",
-                                    "updatedAt": "2023-03-23T20:40:32.505Z",
                                     "answers": [
                                       {
                                         "id": 20,
@@ -961,8 +881,6 @@
                                               "content": "Est-ce que le bilan diagnostic conclut à des troubles du spectre de l'autisme ?",
                                               "info": null,
                                               "first": false,
-                                              "createdAt": "2023-01-27T16:28:10.834Z",
-                                              "updatedAt": "2023-03-24T16:43:06.971Z",
                                               "answers": [
                                                 {
                                                   "id": 22,
@@ -1048,8 +966,6 @@
       "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 0-6)",
       "info": null,
       "first": false,
-      "createdAt": "2023-01-27T17:33:57.714Z",
-      "updatedAt": "2023-03-23T20:40:32.920Z",
       "answers": [
         {
           "id": 55,
@@ -1062,8 +978,6 @@
                 "content": "Avez-vous été dirigé vers une plateforme de coordination et d’orientation (PCO) ?",
                 "info": "Les plateformes de coordination et d’orientation (PCO) pour suspicion de troubles du neurodéveloppement (TND) s’adressent aux enfants de 0 à 12 ans pour qu’ils bénéficient, gratuitement et sans tarder, d’un parcours de soins comprenant :  \n- des bilans spécialisés permettant d’établir un diagnostic précisant le ou les troubles  ;  \n- des interventions rééducatives nécessaires.\n\n[Pour en savoir plus sur les PCO, cliquez ici.](/fiches-pratiques/plateforme-coordination-et-d-orientation)",
                 "first": false,
-                "createdAt": "2023-01-27T16:55:00.772Z",
-                "updatedAt": "2023-03-27T16:59:07.381Z",
                 "answers": [
                   {
                     "id": 53,
@@ -1076,8 +990,6 @@
                           "content": "L'équipe de la PCO vous a-t-elle contacté ?",
                           "info": null,
                           "first": false,
-                          "createdAt": "2023-01-27T16:43:44.419Z",
-                          "updatedAt": "2023-03-23T20:40:32.600Z",
                           "answers": [
                             {
                               "id": 51,
@@ -1090,8 +1002,6 @@
                                     "content": "Avez-vous démarré le bilan diagnostic ?",
                                     "info": null,
                                     "first": false,
-                                    "createdAt": "2023-01-27T16:00:47.210Z",
-                                    "updatedAt": "2023-03-24T16:39:34.059Z",
                                     "answers": [
                                       {
                                         "id": 44,
@@ -1104,8 +1014,6 @@
                                               "content": "Avez-vous réalisé les entretiens et tests ?",
                                               "info": null,
                                               "first": false,
-                                              "createdAt": "2023-01-27T16:26:58.504Z",
-                                              "updatedAt": "2023-03-23T20:40:32.486Z",
                                               "answers": [
                                                 {
                                                   "id": 18,
@@ -1172,8 +1080,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -1186,8 +1092,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -1199,9 +1103,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -1238,8 +1140,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -1252,8 +1152,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -1265,9 +1163,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -1304,8 +1200,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -1318,8 +1212,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -1331,9 +1223,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -1370,8 +1260,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -1384,8 +1272,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -1397,9 +1283,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -1436,8 +1320,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -1450,8 +1332,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -1463,9 +1343,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -1517,8 +1395,6 @@
       "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 7-12)",
       "info": null,
       "first": false,
-      "createdAt": "2023-01-27T17:35:10.173Z",
-      "updatedAt": "2023-03-23T20:40:32.939Z",
       "answers": [
         {
           "id": 57,
@@ -1531,8 +1407,6 @@
                 "content": "Avez-vous été dirigé vers une plateforme de coordination et d’orientation (PCO) ?",
                 "info": "Les plateformes de coordination et d’orientation (PCO) pour suspicion de troubles du neurodéveloppement (TND) s’adressent aux enfants de 0 à 12 ans pour qu’ils bénéficient, gratuitement et sans tarder, d’un parcours de soins comprenant :  \n- des bilans spécialisés permettant d’établir un diagnostic précisant le ou les troubles  ;  \n- des interventions rééducatives nécessaires.\n\n[Pour en savoir plus sur les PCO, cliquez ici.](/fiches-pratiques/plateforme-coordination-et-d-orientation)",
                 "first": false,
-                "createdAt": "2023-01-27T16:55:00.772Z",
-                "updatedAt": "2023-03-27T16:59:07.381Z",
                 "answers": [
                   {
                     "id": 53,
@@ -1545,8 +1419,6 @@
                           "content": "L'équipe de la PCO vous a-t-elle contacté ?",
                           "info": null,
                           "first": false,
-                          "createdAt": "2023-01-27T16:43:44.419Z",
-                          "updatedAt": "2023-03-23T20:40:32.600Z",
                           "answers": [
                             {
                               "id": 51,
@@ -1559,8 +1431,6 @@
                                     "content": "Avez-vous démarré le bilan diagnostic ?",
                                     "info": null,
                                     "first": false,
-                                    "createdAt": "2023-01-27T16:00:47.210Z",
-                                    "updatedAt": "2023-03-24T16:39:34.059Z",
                                     "answers": [
                                       {
                                         "id": 44,
@@ -1573,8 +1443,6 @@
                                               "content": "Avez-vous réalisé les entretiens et tests ?",
                                               "info": null,
                                               "first": false,
-                                              "createdAt": "2023-01-27T16:26:58.504Z",
-                                              "updatedAt": "2023-03-23T20:40:32.486Z",
                                               "answers": [
                                                 {
                                                   "id": 18,
@@ -1641,8 +1509,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -1655,8 +1521,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -1668,9 +1532,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -1707,8 +1569,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -1721,8 +1581,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -1734,9 +1592,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -1773,8 +1629,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -1787,8 +1641,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -1800,9 +1652,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -1839,8 +1689,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -1853,8 +1701,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -1866,9 +1712,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -1905,8 +1749,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -1919,8 +1761,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -1932,9 +1772,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -1986,8 +1824,6 @@
       "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un pédiatre, le médecin de la crèche ou de la Protection maternelle et infantile (PMI) ?",
       "info": null,
       "first": false,
-      "createdAt": "2023-01-27T17:41:49.214Z",
-      "updatedAt": "2023-03-23T20:40:32.995Z",
       "answers": [
         {
           "id": 63,
@@ -2000,8 +1836,6 @@
                 "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 0-6)",
                 "info": null,
                 "first": false,
-                "createdAt": "2023-01-27T17:33:57.714Z",
-                "updatedAt": "2023-03-23T20:40:32.920Z",
                 "answers": [
                   {
                     "id": 55,
@@ -2014,8 +1848,6 @@
                           "content": "Avez-vous été dirigé vers une plateforme de coordination et d’orientation (PCO) ?",
                           "info": "Les plateformes de coordination et d’orientation (PCO) pour suspicion de troubles du neurodéveloppement (TND) s’adressent aux enfants de 0 à 12 ans pour qu’ils bénéficient, gratuitement et sans tarder, d’un parcours de soins comprenant :  \n- des bilans spécialisés permettant d’établir un diagnostic précisant le ou les troubles  ;  \n- des interventions rééducatives nécessaires.\n\n[Pour en savoir plus sur les PCO, cliquez ici.](/fiches-pratiques/plateforme-coordination-et-d-orientation)",
                           "first": false,
-                          "createdAt": "2023-01-27T16:55:00.772Z",
-                          "updatedAt": "2023-03-27T16:59:07.381Z",
                           "answers": [
                             {
                               "id": 53,
@@ -2028,8 +1860,6 @@
                                     "content": "L'équipe de la PCO vous a-t-elle contacté ?",
                                     "info": null,
                                     "first": false,
-                                    "createdAt": "2023-01-27T16:43:44.419Z",
-                                    "updatedAt": "2023-03-23T20:40:32.600Z",
                                     "answers": [
                                       {
                                         "id": 51,
@@ -2042,8 +1872,6 @@
                                               "content": "Avez-vous démarré le bilan diagnostic ?",
                                               "info": null,
                                               "first": false,
-                                              "createdAt": "2023-01-27T16:00:47.210Z",
-                                              "updatedAt": "2023-03-24T16:39:34.059Z",
                                               "answers": [
                                                 {
                                                   "id": 44,
@@ -2095,8 +1923,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -2108,9 +1934,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -2132,8 +1956,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -2145,9 +1967,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -2169,8 +1989,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -2182,9 +2000,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -2206,8 +2022,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -2219,9 +2033,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -2243,8 +2055,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -2256,9 +2066,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -2310,8 +2118,6 @@
       "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin scolaire ? (ref 7-12)",
       "info": null,
       "first": false,
-      "createdAt": "2023-01-27T17:42:48.364Z",
-      "updatedAt": "2023-03-23T20:40:33.014Z",
       "answers": [
         {
           "id": 65,
@@ -2324,8 +2130,6 @@
                 "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 7-12)",
                 "info": null,
                 "first": false,
-                "createdAt": "2023-01-27T17:35:10.173Z",
-                "updatedAt": "2023-03-23T20:40:32.939Z",
                 "answers": [
                   {
                     "id": 57,
@@ -2338,8 +2142,6 @@
                           "content": "Avez-vous été dirigé vers une plateforme de coordination et d’orientation (PCO) ?",
                           "info": "Les plateformes de coordination et d’orientation (PCO) pour suspicion de troubles du neurodéveloppement (TND) s’adressent aux enfants de 0 à 12 ans pour qu’ils bénéficient, gratuitement et sans tarder, d’un parcours de soins comprenant :  \n- des bilans spécialisés permettant d’établir un diagnostic précisant le ou les troubles  ;  \n- des interventions rééducatives nécessaires.\n\n[Pour en savoir plus sur les PCO, cliquez ici.](/fiches-pratiques/plateforme-coordination-et-d-orientation)",
                           "first": false,
-                          "createdAt": "2023-01-27T16:55:00.772Z",
-                          "updatedAt": "2023-03-27T16:59:07.381Z",
                           "answers": [
                             {
                               "id": 53,
@@ -2352,8 +2154,6 @@
                                     "content": "L'équipe de la PCO vous a-t-elle contacté ?",
                                     "info": null,
                                     "first": false,
-                                    "createdAt": "2023-01-27T16:43:44.419Z",
-                                    "updatedAt": "2023-03-23T20:40:32.600Z",
                                     "answers": [
                                       {
                                         "id": 51,
@@ -2366,8 +2166,6 @@
                                               "content": "Avez-vous démarré le bilan diagnostic ?",
                                               "info": null,
                                               "first": false,
-                                              "createdAt": "2023-01-27T16:00:47.210Z",
-                                              "updatedAt": "2023-03-24T16:39:34.059Z",
                                               "answers": [
                                                 {
                                                   "id": 44,
@@ -2419,8 +2217,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -2432,9 +2228,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -2456,8 +2250,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -2469,9 +2261,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -2493,8 +2283,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -2506,9 +2294,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -2530,8 +2316,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -2543,9 +2327,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -2567,8 +2349,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -2580,9 +2360,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -2634,8 +2412,6 @@
       "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin scolaire ? (ref 13-18)",
       "info": null,
       "first": false,
-      "createdAt": "2023-01-27T17:44:31.314Z",
-      "updatedAt": "2023-03-23T20:40:33.039Z",
       "answers": [
         {
           "id": 67,
@@ -2648,8 +2424,6 @@
                 "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 13-18)",
                 "info": null,
                 "first": false,
-                "createdAt": "2023-01-27T17:37:40.750Z",
-                "updatedAt": "2023-03-24T16:47:01.945Z",
                 "answers": [
                   {
                     "id": 59,
@@ -2670,8 +2444,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -2684,8 +2456,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -2697,9 +2467,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -2736,8 +2504,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -2750,8 +2516,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -2763,9 +2527,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -2802,8 +2564,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -2816,8 +2576,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -2829,9 +2587,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -2868,8 +2624,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -2882,8 +2636,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -2895,9 +2647,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -2934,8 +2684,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -2948,8 +2696,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -2961,9 +2707,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -3024,8 +2768,6 @@
       "content": "Avez-vous pris un rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, le médecin du travail ou un professionnel de santé (psychologue, orthophoniste...) ? (ref adulte)",
       "info": null,
       "first": false,
-      "createdAt": "2023-01-27T17:46:14.316Z",
-      "updatedAt": "2023-03-23T20:40:33.057Z",
       "answers": [
         {
           "id": 69,
@@ -3038,8 +2780,6 @@
                 "content": "Un avis a-t-il été donné suite à cette consultation ? (ref adulte)",
                 "info": null,
                 "first": false,
-                "createdAt": "2023-01-27T17:38:20.870Z",
-                "updatedAt": "2023-03-27T17:04:51.903Z",
                 "answers": [
                   {
                     "id": 61,
@@ -3060,8 +2800,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -3074,8 +2812,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -3087,9 +2823,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -3126,8 +2860,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -3140,8 +2872,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -3153,9 +2883,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -3192,8 +2920,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -3206,8 +2932,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -3219,9 +2943,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -3258,8 +2980,6 @@
                               "content": "Démarrage du bilan diagnostic",
                               "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                               "first": false,
-                              "createdAt": "2023-01-27T15:59:17.051Z",
-                              "updatedAt": "2023-03-24T16:44:21.834Z",
                               "answers": [
                                 {
                                   "id": 46,
@@ -3272,8 +2992,6 @@
                                         "content": "Avez-vous démarré le bilan diagnostic ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:00:47.210Z",
-                                        "updatedAt": "2023-03-24T16:39:34.059Z",
                                         "answers": [
                                           {
                                             "id": 44,
@@ -3285,9 +3003,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous réalisé les entretiens et tests ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:26:58.504Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.486Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -3348,8 +3064,6 @@
       "content": "Je suis",
       "info": null,
       "first": true,
-      "createdAt": "2023-01-27T12:18:31.173Z",
-      "updatedAt": "2023-03-23T20:40:32.365Z",
       "answers": [
         {
           "id": 1,
@@ -3370,8 +3084,6 @@
                     "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin scolaire ? (ref 13-18)",
                     "info": null,
                     "first": false,
-                    "createdAt": "2023-01-27T17:44:31.314Z",
-                    "updatedAt": "2023-03-23T20:40:33.039Z",
                     "answers": [
                       {
                         "id": 67,
@@ -3384,8 +3096,6 @@
                               "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 13-18)",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T17:37:40.750Z",
-                              "updatedAt": "2023-03-24T16:47:01.945Z",
                               "answers": [
                                 {
                                   "id": 59,
@@ -3406,8 +3116,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -3430,8 +3138,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -3454,8 +3160,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -3478,8 +3182,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -3502,8 +3204,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -3557,8 +3257,6 @@
                     "content": "Avez-vous pris un rendez-vous avec votre médecin traitant ou un médecin généraliste, un psychiatre, le médecin du travail, ou un professionnel de santé (psychologue, orthophoniste...) ?",
                     "info": null,
                     "first": false,
-                    "createdAt": "2023-01-27T15:26:36.935Z",
-                    "updatedAt": "2023-03-24T16:32:27.384Z",
                     "answers": [
                       {
                         "id": 49,
@@ -3571,8 +3269,6 @@
                               "content": "Un avis a-t-il été donné suite à cette consultation ? (ref adulte)",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T15:47:54.374Z",
-                              "updatedAt": "2023-03-23T20:40:32.408Z",
                               "answers": [
                                 {
                                   "id": 8,
@@ -3585,8 +3281,6 @@
                                         "content": "Un parcours de diagnostic vous a-t-il été proposé ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:55:00.530Z",
-                                        "updatedAt": "2023-03-27T16:51:42.837Z",
                                         "answers": [
                                           {
                                             "id": 47,
@@ -3683,8 +3377,6 @@
                     "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un pédiatre, le médecin de la crèche ou de la Protection maternelle et infantile (PMI) ?",
                     "info": null,
                     "first": false,
-                    "createdAt": "2023-01-27T17:41:49.214Z",
-                    "updatedAt": "2023-03-23T20:40:32.995Z",
                     "answers": [
                       {
                         "id": 63,
@@ -3697,8 +3389,6 @@
                               "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 0-6)",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T17:33:57.714Z",
-                              "updatedAt": "2023-03-23T20:40:32.920Z",
                               "answers": [
                                 {
                                   "id": 55,
@@ -3711,8 +3401,6 @@
                                         "content": "Avez-vous été dirigé vers une plateforme de coordination et d’orientation (PCO) ?",
                                         "info": "Les plateformes de coordination et d’orientation (PCO) pour suspicion de troubles du neurodéveloppement (TND) s’adressent aux enfants de 0 à 12 ans pour qu’ils bénéficient, gratuitement et sans tarder, d’un parcours de soins comprenant :  \n- des bilans spécialisés permettant d’établir un diagnostic précisant le ou les troubles  ;  \n- des interventions rééducatives nécessaires.\n\n[Pour en savoir plus sur les PCO, cliquez ici.](/fiches-pratiques/plateforme-coordination-et-d-orientation)",
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:55:00.772Z",
-                                        "updatedAt": "2023-03-27T16:59:07.381Z",
                                         "answers": [
                                           {
                                             "id": 53,
@@ -3724,9 +3412,7 @@
                                                 "attributes": {
                                                   "content": "L'équipe de la PCO vous a-t-elle contacté ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:43:44.419Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.600Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -3813,8 +3499,6 @@
                     "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin scolaire ? (ref 7-12)",
                     "info": null,
                     "first": false,
-                    "createdAt": "2023-01-27T17:42:48.364Z",
-                    "updatedAt": "2023-03-23T20:40:33.014Z",
                     "answers": [
                       {
                         "id": 65,
@@ -3827,8 +3511,6 @@
                               "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 7-12)",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T17:35:10.173Z",
-                              "updatedAt": "2023-03-23T20:40:32.939Z",
                               "answers": [
                                 {
                                   "id": 57,
@@ -3841,8 +3523,6 @@
                                         "content": "Avez-vous été dirigé vers une plateforme de coordination et d’orientation (PCO) ?",
                                         "info": "Les plateformes de coordination et d’orientation (PCO) pour suspicion de troubles du neurodéveloppement (TND) s’adressent aux enfants de 0 à 12 ans pour qu’ils bénéficient, gratuitement et sans tarder, d’un parcours de soins comprenant :  \n- des bilans spécialisés permettant d’établir un diagnostic précisant le ou les troubles  ;  \n- des interventions rééducatives nécessaires.\n\n[Pour en savoir plus sur les PCO, cliquez ici.](/fiches-pratiques/plateforme-coordination-et-d-orientation)",
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:55:00.772Z",
-                                        "updatedAt": "2023-03-27T16:59:07.381Z",
                                         "answers": [
                                           {
                                             "id": 53,
@@ -3854,9 +3534,7 @@
                                                 "attributes": {
                                                   "content": "L'équipe de la PCO vous a-t-elle contacté ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:43:44.419Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.600Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -3943,8 +3621,6 @@
                     "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin scolaire ? (ref 13-18)",
                     "info": null,
                     "first": false,
-                    "createdAt": "2023-01-27T17:44:31.314Z",
-                    "updatedAt": "2023-03-23T20:40:33.039Z",
                     "answers": [
                       {
                         "id": 67,
@@ -3957,8 +3633,6 @@
                               "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 13-18)",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T17:37:40.750Z",
-                              "updatedAt": "2023-03-24T16:47:01.945Z",
                               "answers": [
                                 {
                                   "id": 59,
@@ -3979,8 +3653,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -4003,8 +3675,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -4027,8 +3697,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -4051,8 +3719,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -4075,8 +3741,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -4130,8 +3794,6 @@
                     "content": "Avez-vous pris un rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, le médecin du travail ou un professionnel de santé (psychologue, orthophoniste...) ? (ref adulte)",
                     "info": null,
                     "first": false,
-                    "createdAt": "2023-01-27T17:46:14.316Z",
-                    "updatedAt": "2023-03-23T20:40:33.057Z",
                     "answers": [
                       {
                         "id": 69,
@@ -4144,8 +3806,6 @@
                               "content": "Un avis a-t-il été donné suite à cette consultation ? (ref adulte)",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T17:38:20.870Z",
-                              "updatedAt": "2023-03-27T17:04:51.903Z",
                               "answers": [
                                 {
                                   "id": 61,
@@ -4166,8 +3826,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -4190,8 +3848,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -4214,8 +3870,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -4238,8 +3892,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -4295,8 +3947,6 @@
                 "content": "Vous réalisez ce questionnaire pour le compte de",
                 "info": null,
                 "first": false,
-                "createdAt": "2023-01-27T17:52:06.600Z",
-                "updatedAt": "2023-03-24T17:04:39.971Z",
                 "answers": [
                   {
                     "id": 41,
@@ -4317,8 +3967,6 @@
                               "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un pédiatre, le médecin de la crèche ou de la Protection maternelle et infantile (PMI) ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T17:41:49.214Z",
-                              "updatedAt": "2023-03-23T20:40:32.995Z",
                               "answers": [
                                 {
                                   "id": 63,
@@ -4331,8 +3979,6 @@
                                         "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 0-6)",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T17:33:57.714Z",
-                                        "updatedAt": "2023-03-23T20:40:32.920Z",
                                         "answers": [
                                           {
                                             "id": 55,
@@ -4344,9 +3990,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous été dirigé vers une plateforme de coordination et d’orientation (PCO) ?",
                                                   "info": "Les plateformes de coordination et d’orientation (PCO) pour suspicion de troubles du neurodéveloppement (TND) s’adressent aux enfants de 0 à 12 ans pour qu’ils bénéficient, gratuitement et sans tarder, d’un parcours de soins comprenant :  \n- des bilans spécialisés permettant d’établir un diagnostic précisant le ou les troubles  ;  \n- des interventions rééducatives nécessaires.\n\n[Pour en savoir plus sur les PCO, cliquez ici.](/fiches-pratiques/plateforme-coordination-et-d-orientation)",
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:55:00.772Z",
-                                                  "updatedAt": "2023-03-27T16:59:07.381Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -4392,8 +4036,6 @@
                               "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin scolaire ? (ref 7-12)",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T17:42:48.364Z",
-                              "updatedAt": "2023-03-23T20:40:33.014Z",
                               "answers": [
                                 {
                                   "id": 65,
@@ -4406,8 +4048,6 @@
                                         "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 7-12)",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T17:35:10.173Z",
-                                        "updatedAt": "2023-03-23T20:40:32.939Z",
                                         "answers": [
                                           {
                                             "id": 57,
@@ -4419,9 +4059,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous été dirigé vers une plateforme de coordination et d’orientation (PCO) ?",
                                                   "info": "Les plateformes de coordination et d’orientation (PCO) pour suspicion de troubles du neurodéveloppement (TND) s’adressent aux enfants de 0 à 12 ans pour qu’ils bénéficient, gratuitement et sans tarder, d’un parcours de soins comprenant :  \n- des bilans spécialisés permettant d’établir un diagnostic précisant le ou les troubles  ;  \n- des interventions rééducatives nécessaires.\n\n[Pour en savoir plus sur les PCO, cliquez ici.](/fiches-pratiques/plateforme-coordination-et-d-orientation)",
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:55:00.772Z",
-                                                  "updatedAt": "2023-03-27T16:59:07.381Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -4467,8 +4105,6 @@
                               "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin scolaire ? (ref 13-18)",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T17:44:31.314Z",
-                              "updatedAt": "2023-03-23T20:40:33.039Z",
                               "answers": [
                                 {
                                   "id": 67,
@@ -4481,8 +4117,6 @@
                                         "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 13-18)",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T17:37:40.750Z",
-                                        "updatedAt": "2023-03-24T16:47:01.945Z",
                                         "answers": [
                                           {
                                             "id": 59,
@@ -4561,8 +4195,6 @@
                           "content": "Avez-vous pris un rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, le médecin du travail ou un professionnel de santé (psychologue, orthophoniste...) ? (ref adulte)",
                           "info": null,
                           "first": false,
-                          "createdAt": "2023-01-27T17:46:14.316Z",
-                          "updatedAt": "2023-03-23T20:40:33.057Z",
                           "answers": [
                             {
                               "id": 69,
@@ -4575,8 +4207,6 @@
                                     "content": "Un avis a-t-il été donné suite à cette consultation ? (ref adulte)",
                                     "info": null,
                                     "first": false,
-                                    "createdAt": "2023-01-27T17:38:20.870Z",
-                                    "updatedAt": "2023-03-27T17:04:51.903Z",
                                     "answers": [
                                       {
                                         "id": 61,
@@ -4596,9 +4226,7 @@
                                                 "attributes": {
                                                   "content": "Démarrage du bilan diagnostic",
                                                   "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T15:59:17.051Z",
-                                                  "updatedAt": "2023-03-24T16:44:21.834Z"
+                                                  "first": false
                                                 }
                                               }
                                             }
@@ -4613,9 +4241,7 @@
                                                 "attributes": {
                                                   "content": "Démarrage du bilan diagnostic",
                                                   "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T15:59:17.051Z",
-                                                  "updatedAt": "2023-03-24T16:44:21.834Z"
+                                                  "first": false
                                                 }
                                               }
                                             }
@@ -4630,9 +4256,7 @@
                                                 "attributes": {
                                                   "content": "Démarrage du bilan diagnostic",
                                                   "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T15:59:17.051Z",
-                                                  "updatedAt": "2023-03-24T16:44:21.834Z"
+                                                  "first": false
                                                 }
                                               }
                                             }
@@ -4647,9 +4271,7 @@
                                                 "attributes": {
                                                   "content": "Démarrage du bilan diagnostic",
                                                   "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T15:59:17.051Z",
-                                                  "updatedAt": "2023-03-24T16:44:21.834Z"
+                                                  "first": false
                                                 }
                                               }
                                             }
@@ -4701,8 +4323,6 @@
       "content": "Avez-vous démarré le bilan diagnostic ?",
       "info": null,
       "first": false,
-      "createdAt": "2023-01-27T16:00:47.210Z",
-      "updatedAt": "2023-03-24T16:39:34.059Z",
       "answers": [
         {
           "id": 44,
@@ -4715,8 +4335,6 @@
                 "content": "Avez-vous réalisé les entretiens et tests ?",
                 "info": null,
                 "first": false,
-                "createdAt": "2023-01-27T16:26:58.504Z",
-                "updatedAt": "2023-03-23T20:40:32.486Z",
                 "answers": [
                   {
                     "id": 18,
@@ -4729,8 +4347,6 @@
                           "content": "Avez-vous eu votre bilan diagnostic ?",
                           "info": null,
                           "first": false,
-                          "createdAt": "2023-01-27T16:27:40.250Z",
-                          "updatedAt": "2023-03-23T20:40:32.505Z",
                           "answers": [
                             {
                               "id": 20,
@@ -4743,8 +4359,6 @@
                                     "content": "Est-ce que le bilan diagnostic conclut à des troubles du spectre de l'autisme ?",
                                     "info": null,
                                     "first": false,
-                                    "createdAt": "2023-01-27T16:28:10.834Z",
-                                    "updatedAt": "2023-03-24T16:43:06.971Z",
                                     "answers": [
                                       {
                                         "id": 22,
@@ -4827,8 +4441,6 @@
       "content": "Avez-vous pris un rendez-vous avec votre médecin traitant ou un médecin généraliste, un psychiatre, le médecin du travail, ou un professionnel de santé (psychologue, orthophoniste...) ?",
       "info": null,
       "first": false,
-      "createdAt": "2023-01-27T15:26:36.935Z",
-      "updatedAt": "2023-03-24T16:32:27.384Z",
       "answers": [
         {
           "id": 49,
@@ -4841,8 +4453,6 @@
                 "content": "Un avis a-t-il été donné suite à cette consultation ? (ref adulte)",
                 "info": null,
                 "first": false,
-                "createdAt": "2023-01-27T15:47:54.374Z",
-                "updatedAt": "2023-03-23T20:40:32.408Z",
                 "answers": [
                   {
                     "id": 8,
@@ -4855,8 +4465,6 @@
                           "content": "Un parcours de diagnostic vous a-t-il été proposé ?",
                           "info": null,
                           "first": false,
-                          "createdAt": "2023-01-27T15:55:00.530Z",
-                          "updatedAt": "2023-03-27T16:51:42.837Z",
                           "answers": [
                             {
                               "id": 47,
@@ -4877,8 +4485,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -4890,9 +4496,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -4914,8 +4518,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -4927,9 +4529,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -4951,8 +4551,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -4964,9 +4562,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -4988,8 +4584,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -5001,9 +4595,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -5064,8 +4656,6 @@
       "content": "Est-ce que le bilan diagnostic conclut à des troubles du spectre de l'autisme ?",
       "info": null,
       "first": false,
-      "createdAt": "2023-01-27T16:28:10.834Z",
-      "updatedAt": "2023-03-24T16:43:06.971Z",
       "answers": [
         {
           "id": 22,
@@ -5103,8 +4693,6 @@
       "content": "Démarrage du bilan diagnostic",
       "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
       "first": false,
-      "createdAt": "2023-01-27T15:59:17.051Z",
-      "updatedAt": "2023-03-24T16:44:21.834Z",
       "answers": [
         {
           "id": 46,
@@ -5117,8 +4705,6 @@
                 "content": "Avez-vous démarré le bilan diagnostic ?",
                 "info": null,
                 "first": false,
-                "createdAt": "2023-01-27T16:00:47.210Z",
-                "updatedAt": "2023-03-24T16:39:34.059Z",
                 "answers": [
                   {
                     "id": 44,
@@ -5131,8 +4717,6 @@
                           "content": "Avez-vous réalisé les entretiens et tests ?",
                           "info": null,
                           "first": false,
-                          "createdAt": "2023-01-27T16:26:58.504Z",
-                          "updatedAt": "2023-03-23T20:40:32.486Z",
                           "answers": [
                             {
                               "id": 18,
@@ -5145,8 +4729,6 @@
                                     "content": "Avez-vous eu votre bilan diagnostic ?",
                                     "info": null,
                                     "first": false,
-                                    "createdAt": "2023-01-27T16:27:40.250Z",
-                                    "updatedAt": "2023-03-23T20:40:32.505Z",
                                     "answers": [
                                       {
                                         "id": 20,
@@ -5159,8 +4741,6 @@
                                               "content": "Est-ce que le bilan diagnostic conclut à des troubles du spectre de l'autisme ?",
                                               "info": null,
                                               "first": false,
-                                              "createdAt": "2023-01-27T16:28:10.834Z",
-                                              "updatedAt": "2023-03-24T16:43:06.971Z",
                                               "answers": [
                                                 {
                                                   "id": 22,
@@ -5237,8 +4817,6 @@
       "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 13-18)",
       "info": null,
       "first": false,
-      "createdAt": "2023-01-27T17:37:40.750Z",
-      "updatedAt": "2023-03-24T16:47:01.945Z",
       "answers": [
         {
           "id": 59,
@@ -5259,8 +4837,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -5273,8 +4849,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -5287,8 +4861,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -5300,9 +4872,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -5354,8 +4924,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -5368,8 +4936,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -5382,8 +4948,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -5395,9 +4959,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -5449,8 +5011,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -5463,8 +5023,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -5477,8 +5035,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -5490,9 +5046,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -5544,8 +5098,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -5558,8 +5110,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -5572,8 +5122,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -5585,9 +5133,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -5639,8 +5185,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -5653,8 +5197,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -5667,8 +5209,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -5680,9 +5220,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -5743,8 +5281,6 @@
       "content": "Vous réalisez ce questionnaire pour le compte de",
       "info": null,
       "first": false,
-      "createdAt": "2023-01-27T17:52:06.600Z",
-      "updatedAt": "2023-03-24T17:04:39.971Z",
       "answers": [
         {
           "id": 41,
@@ -5765,8 +5301,6 @@
                     "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un pédiatre, le médecin de la crèche ou de la Protection maternelle et infantile (PMI) ?",
                     "info": null,
                     "first": false,
-                    "createdAt": "2023-01-27T17:41:49.214Z",
-                    "updatedAt": "2023-03-23T20:40:32.995Z",
                     "answers": [
                       {
                         "id": 63,
@@ -5779,8 +5313,6 @@
                               "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 0-6)",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T17:33:57.714Z",
-                              "updatedAt": "2023-03-23T20:40:32.920Z",
                               "answers": [
                                 {
                                   "id": 55,
@@ -5793,8 +5325,6 @@
                                         "content": "Avez-vous été dirigé vers une plateforme de coordination et d’orientation (PCO) ?",
                                         "info": "Les plateformes de coordination et d’orientation (PCO) pour suspicion de troubles du neurodéveloppement (TND) s’adressent aux enfants de 0 à 12 ans pour qu’ils bénéficient, gratuitement et sans tarder, d’un parcours de soins comprenant :  \n- des bilans spécialisés permettant d’établir un diagnostic précisant le ou les troubles  ;  \n- des interventions rééducatives nécessaires.\n\n[Pour en savoir plus sur les PCO, cliquez ici.](/fiches-pratiques/plateforme-coordination-et-d-orientation)",
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:55:00.772Z",
-                                        "updatedAt": "2023-03-27T16:59:07.381Z",
                                         "answers": [
                                           {
                                             "id": 53,
@@ -5806,9 +5336,7 @@
                                                 "attributes": {
                                                   "content": "L'équipe de la PCO vous a-t-elle contacté ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:43:44.419Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.600Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -5895,8 +5423,6 @@
                     "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin scolaire ? (ref 7-12)",
                     "info": null,
                     "first": false,
-                    "createdAt": "2023-01-27T17:42:48.364Z",
-                    "updatedAt": "2023-03-23T20:40:33.014Z",
                     "answers": [
                       {
                         "id": 65,
@@ -5909,8 +5435,6 @@
                               "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 7-12)",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T17:35:10.173Z",
-                              "updatedAt": "2023-03-23T20:40:32.939Z",
                               "answers": [
                                 {
                                   "id": 57,
@@ -5923,8 +5447,6 @@
                                         "content": "Avez-vous été dirigé vers une plateforme de coordination et d’orientation (PCO) ?",
                                         "info": "Les plateformes de coordination et d’orientation (PCO) pour suspicion de troubles du neurodéveloppement (TND) s’adressent aux enfants de 0 à 12 ans pour qu’ils bénéficient, gratuitement et sans tarder, d’un parcours de soins comprenant :  \n- des bilans spécialisés permettant d’établir un diagnostic précisant le ou les troubles  ;  \n- des interventions rééducatives nécessaires.\n\n[Pour en savoir plus sur les PCO, cliquez ici.](/fiches-pratiques/plateforme-coordination-et-d-orientation)",
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:55:00.772Z",
-                                        "updatedAt": "2023-03-27T16:59:07.381Z",
                                         "answers": [
                                           {
                                             "id": 53,
@@ -5936,9 +5458,7 @@
                                                 "attributes": {
                                                   "content": "L'équipe de la PCO vous a-t-elle contacté ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:43:44.419Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.600Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -6025,8 +5545,6 @@
                     "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin scolaire ? (ref 13-18)",
                     "info": null,
                     "first": false,
-                    "createdAt": "2023-01-27T17:44:31.314Z",
-                    "updatedAt": "2023-03-23T20:40:33.039Z",
                     "answers": [
                       {
                         "id": 67,
@@ -6039,8 +5557,6 @@
                               "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 13-18)",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T17:37:40.750Z",
-                              "updatedAt": "2023-03-24T16:47:01.945Z",
                               "answers": [
                                 {
                                   "id": 59,
@@ -6061,8 +5577,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -6085,8 +5599,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -6109,8 +5621,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -6133,8 +5643,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -6157,8 +5665,6 @@
                                             "content": "Démarrage du bilan diagnostic",
                                             "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                             "first": false,
-                                            "createdAt": "2023-01-27T15:59:17.051Z",
-                                            "updatedAt": "2023-03-24T16:44:21.834Z",
                                             "answers": [
                                               {
                                                 "id": 46,
@@ -6214,8 +5720,6 @@
                 "content": "Avez-vous pris un rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, le médecin du travail ou un professionnel de santé (psychologue, orthophoniste...) ? (ref adulte)",
                 "info": null,
                 "first": false,
-                "createdAt": "2023-01-27T17:46:14.316Z",
-                "updatedAt": "2023-03-23T20:40:33.057Z",
                 "answers": [
                   {
                     "id": 69,
@@ -6228,8 +5732,6 @@
                           "content": "Un avis a-t-il été donné suite à cette consultation ? (ref adulte)",
                           "info": null,
                           "first": false,
-                          "createdAt": "2023-01-27T17:38:20.870Z",
-                          "updatedAt": "2023-03-27T17:04:51.903Z",
                           "answers": [
                             {
                               "id": 61,
@@ -6250,8 +5752,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -6263,9 +5763,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -6287,8 +5785,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -6300,9 +5796,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -6324,8 +5818,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -6337,9 +5829,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -6361,8 +5851,6 @@
                                         "content": "Démarrage du bilan diagnostic",
                                         "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                                         "first": false,
-                                        "createdAt": "2023-01-27T15:59:17.051Z",
-                                        "updatedAt": "2023-03-24T16:44:21.834Z",
                                         "answers": [
                                           {
                                             "id": 46,
@@ -6374,9 +5862,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous démarré le bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:00:47.210Z",
-                                                  "updatedAt": "2023-03-24T16:39:34.059Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -6428,8 +5914,6 @@
       "content": "Un parcours de diagnostic vous a-t-il été proposé ?",
       "info": null,
       "first": false,
-      "createdAt": "2023-01-27T15:55:00.530Z",
-      "updatedAt": "2023-03-27T16:51:42.837Z",
       "answers": [
         {
           "id": 47,
@@ -6450,8 +5934,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -6464,8 +5946,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -6478,8 +5958,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -6491,9 +5969,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -6545,8 +6021,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -6559,8 +6033,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -6573,8 +6045,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -6586,9 +6056,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -6640,8 +6108,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -6654,8 +6120,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -6668,8 +6132,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -6681,9 +6143,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -6735,8 +6195,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -6749,8 +6207,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -6763,8 +6219,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -6776,9 +6230,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -6839,8 +6291,6 @@
       "content": "Avez-vous été dirigé vers une plateforme de coordination et d’orientation (PCO) ?",
       "info": "Les plateformes de coordination et d’orientation (PCO) pour suspicion de troubles du neurodéveloppement (TND) s’adressent aux enfants de 0 à 12 ans pour qu’ils bénéficient, gratuitement et sans tarder, d’un parcours de soins comprenant :  \n- des bilans spécialisés permettant d’établir un diagnostic précisant le ou les troubles  ;  \n- des interventions rééducatives nécessaires.\n\n[Pour en savoir plus sur les PCO, cliquez ici.](/fiches-pratiques/plateforme-coordination-et-d-orientation)",
       "first": false,
-      "createdAt": "2023-01-27T16:55:00.772Z",
-      "updatedAt": "2023-03-27T16:59:07.381Z",
       "answers": [
         {
           "id": 53,
@@ -6853,8 +6303,6 @@
                 "content": "L'équipe de la PCO vous a-t-elle contacté ?",
                 "info": null,
                 "first": false,
-                "createdAt": "2023-01-27T16:43:44.419Z",
-                "updatedAt": "2023-03-23T20:40:32.600Z",
                 "answers": [
                   {
                     "id": 51,
@@ -6867,8 +6315,6 @@
                           "content": "Avez-vous démarré le bilan diagnostic ?",
                           "info": null,
                           "first": false,
-                          "createdAt": "2023-01-27T16:00:47.210Z",
-                          "updatedAt": "2023-03-24T16:39:34.059Z",
                           "answers": [
                             {
                               "id": 44,
@@ -6881,8 +6327,6 @@
                                     "content": "Avez-vous réalisé les entretiens et tests ?",
                                     "info": null,
                                     "first": false,
-                                    "createdAt": "2023-01-27T16:26:58.504Z",
-                                    "updatedAt": "2023-03-23T20:40:32.486Z",
                                     "answers": [
                                       {
                                         "id": 18,
@@ -6895,8 +6339,6 @@
                                               "content": "Avez-vous eu votre bilan diagnostic ?",
                                               "info": null,
                                               "first": false,
-                                              "createdAt": "2023-01-27T16:27:40.250Z",
-                                              "updatedAt": "2023-03-23T20:40:32.505Z",
                                               "answers": [
                                                 {
                                                   "id": 20,
@@ -6978,8 +6420,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -6992,8 +6432,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -7006,8 +6444,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -7019,9 +6455,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -7073,8 +6507,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -7087,8 +6519,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -7101,8 +6531,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -7114,9 +6542,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -7168,8 +6594,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -7182,8 +6606,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -7196,8 +6618,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -7209,9 +6629,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -7263,8 +6681,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -7277,8 +6693,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -7291,8 +6705,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -7304,9 +6716,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
@@ -7358,8 +6768,6 @@
                     "content": "Démarrage du bilan diagnostic",
                     "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
                     "first": false,
-                    "createdAt": "2023-01-27T15:59:17.051Z",
-                    "updatedAt": "2023-03-24T16:44:21.834Z",
                     "answers": [
                       {
                         "id": 46,
@@ -7372,8 +6780,6 @@
                               "content": "Avez-vous démarré le bilan diagnostic ?",
                               "info": null,
                               "first": false,
-                              "createdAt": "2023-01-27T16:00:47.210Z",
-                              "updatedAt": "2023-03-24T16:39:34.059Z",
                               "answers": [
                                 {
                                   "id": 44,
@@ -7386,8 +6792,6 @@
                                         "content": "Avez-vous réalisé les entretiens et tests ?",
                                         "info": null,
                                         "first": false,
-                                        "createdAt": "2023-01-27T16:26:58.504Z",
-                                        "updatedAt": "2023-03-23T20:40:32.486Z",
                                         "answers": [
                                           {
                                             "id": 18,
@@ -7399,9 +6803,7 @@
                                                 "attributes": {
                                                   "content": "Avez-vous eu votre bilan diagnostic ?",
                                                   "info": null,
-                                                  "first": false,
-                                                  "createdAt": "2023-01-27T16:27:40.250Z",
-                                                  "updatedAt": "2023-03-23T20:40:32.505Z"
+                                                  "first": false
                                                 }
                                               }
                                             },
