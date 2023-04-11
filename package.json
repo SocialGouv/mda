@@ -1,6 +1,6 @@
 {
   "name": "mda-monorepo",
-  "version": "1.14.1",
+  "version": "1.14.2",
   "description": "Aider les personnes concernées par l'autisme à trouver leurs réponses et à mener à bien leurs démarches.",
   "repository": "git@github.com:SocialGouv/mda.git",
   "bugs": {

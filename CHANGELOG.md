@@ -1,3 +1,10 @@
+## [1.14.2](https://github.com/SocialGouv/mda/compare/v1.14.1...v1.14.2) (2023-04-11)
+
+
+### Bug Fixes
+
+* **infra:** Deploy prod ([7d21d1f](https://github.com/SocialGouv/mda/commit/7d21d1f4ad766d733a48f99041f0eb29f62841e0))
+
 ## [1.14.1](https://github.com/SocialGouv/mda/compare/v1.14.0...v1.14.1) (2023-04-11)
 
 
