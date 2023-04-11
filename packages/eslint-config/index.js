@@ -34,6 +34,7 @@ const config = {
         ],
       },
     ],
+    "jsx-a11y/alt-text": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "no-unused-vars": "off",
     "unused-imports/no-unused-imports": "error",

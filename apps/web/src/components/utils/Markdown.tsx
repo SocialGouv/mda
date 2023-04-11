@@ -19,7 +19,7 @@ export const Markdown = ({ children, ...rest }: MarkdownProps) => {
           </div>
         ),
         img: ({ ...props }) => <img className="fr-fluid-img" {...props} />,
-        a: ({ node, children, ...props }) => {
+        a: ({ node: _, children, ...props }) => {
           if (props.href?.includes("http")) {
             props.target = "_blank";
             props.rel = "noreferrer";
