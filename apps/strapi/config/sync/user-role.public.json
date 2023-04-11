@@ -7,9 +7,6 @@
       "action": "api::accessibilite.accessibilite.find"
     },
     {
-      "action": "api::accueil-v2.accueil-v2.find"
-    },
-    {
       "action": "api::accueil.accueil.find"
     },
     {

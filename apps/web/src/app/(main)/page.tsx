@@ -4,7 +4,7 @@ import { MostViewedCards } from "@components/home/MostViewedCards";
 import { fetchStrapi } from "@services/strapi";
 
 const HomePage = async () => {
-  const strapiData = await fetchStrapi("accueil-v2", {
+  const strapiData = await fetchStrapi("accueil", {
     populate: "deep",
   });
 
