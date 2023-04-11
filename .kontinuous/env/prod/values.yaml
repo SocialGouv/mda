@@ -14,7 +14,6 @@ jobs:
     build-web:
       with:
         buildArgs:
-          PRODUCTION: "true"
           ROBOT: "true"
     clean-meilisearch:
       volumes:

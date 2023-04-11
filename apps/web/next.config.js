@@ -1,5 +1,4 @@
 const ContentSecurityPolicy = require("./src/common/config/csp.config");
-const { version } = require("./package.json");
 const path = require("path");
 
 const strapiUrl = new URL(process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337");
@@ -15,21 +14,16 @@ const nextConfig = {
     appDir: true,
     outputFileTracingRoot: path.join(__dirname, "../../"),
   },
-  env: {
-    NEXT_PUBLIC_APP_VERSION: version,
-    NEXT_PUBLIC_APP_VERSION_COMMIT: process.env.GITHUB_SHA,
-    NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT: process.env.PRODUCTION === "true",
-  },
   eslint: {
     ignoreDuringBuilds: true,
   },
-  webpack: (config, context) => {
+  webpack: (config, _context) => {
     config.module.rules.push({
       test: /\.woff2$/,
       type: "asset/resource",
     });
     // Uncomment to debug dsfr script in node_modules with reload / nocache
-    //     if (!context.dev) return config;
+    //     if (!_context.dev) return config;
     //     config.snapshot = {
     //       managedPaths: [/^(.+?[\\/]node_modules[\\/](?!(@gouvfr[\\/]dsfr))(@.+?[\\/])?.+?)[\\/]/],
     //     };
@@ -54,9 +48,9 @@ const nextConfig = {
         headers: [
           {
             key: "X-Robots-Tag",
-            value: process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT ? "all" : "noindex, nofollow, nosnippet",
+            value: process.env.NODE_ENV === "production" ? "all" : "noindex, nofollow, nosnippet",
           },
-          ...(process.env.NEXT_PUBLIC_IS_PRODUCTION_DEPLOYMENT
+          ...(process.env.NODE_ENV === "production"
             ? [
                 {
                   key: "X-Frame-Options",
@@ -71,8 +65,12 @@ const nextConfig = {
                   value: "nosniff",
                 },
                 {
+                  key: "Referrer-Policy",
+                  value: "no-referrer, strict-origin-when-cross-origin",
+                },
+                {
                   key: "Content-Security-Policy",
-                  value: ContentSecurityPolicy,
+                  value: ContentSecurityPolicy(process.env.NEXT_PUBLIC_GITHUB_SHA),
                 },
               ]
             : []),

@@ -11,7 +11,7 @@ export const config = {
   strapi: {
     apiUrl: ensureNextEnvVar(process.env.NEXT_PUBLIC_STRAPI_API_URL, "http://127.0.0.1:1337"),
   },
-  githubSha: ensureNextEnvVar(process.env.NEXT_PUBLIC_GITHUB_SHA?.substring(0, 7), "<dev>"),
+  githubSha: ensureNextEnvVar(process.env.NEXT_PUBLIC_GITHUB_SHA, "<dev>"),
   /** In seconds */
   get fetchRevalidate() {
     return this.env === "dev" ? 5 : 60 * 3;
