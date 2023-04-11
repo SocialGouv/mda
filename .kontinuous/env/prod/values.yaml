@@ -42,6 +42,7 @@ meilisearch:
   replicas: 1
   autoscale:
     enabled: false
+  strategyType: Recreate
   volumes:
     - *meilisearchVolume
   volumeMounts:
