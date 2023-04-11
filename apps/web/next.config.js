@@ -23,11 +23,17 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  webpack: config => {
+  webpack: (config, context) => {
     config.module.rules.push({
       test: /\.woff2$/,
       type: "asset/resource",
     });
+    // Uncomment to debug dsfr script in node_modules with reload / nocache
+    //     if (!context.dev) return config;
+    //     config.snapshot = {
+    //       managedPaths: [/^(.+?[\\/]node_modules[\\/](?!(@gouvfr[\\/]dsfr))(@.+?[\\/])?.+?)[\\/]/],
+    //     };
+
     return config;
   },
   images: {
@@ -84,15 +90,6 @@ const nextConfig = {
       ],
     };
   },
-  // Uncomment to debug dsfr script in node_modules with reload / nocache
-  //   webpack(config, context) {
-  //     if (!context.dev) return config;
-  //     config.snapshot = {
-  //       managedPaths: [/^(.+?[\\/]node_modules[\\/](?!(@gouvfr[\\/]dsfr))(@.+?[\\/])?.+?)[\\/]/],
-  //     };
-
-  //     return config;
-  //   },
 };
 
 module.exports = nextConfig;
