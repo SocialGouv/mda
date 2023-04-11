@@ -108,10 +108,7 @@ export const ConsentBanner = ({
         <ConsentManager gdprPageLink={gdprPageLink} gdprPageLinkAs={GdprPageLinkAs} services={services} />
       </ConsentModal>
       {!stateFCM && (
-        <div
-          className="fr-consent-banner"
-          style={{ color: "var(--text-default-grey)" /* TODO remove when chakra is down */ }}
-        >
+        <div className="fr-consent-banner">
           <h2 className="fr-h6">À propos des cookies sur {siteName}</h2>
           <div className="fr-consent-banner__content">
             <p className="fr-text--sm">
@@ -150,11 +147,15 @@ const ConsentManager = ({ gdprPageLink, services, gdprPageLinkAs: GdprPageLinkAs
   const setConsent = useGdprStore(state => state.setConsent);
   const setFirstChoiceMade = useGdprStore(state => state.setFirstChoiceMade);
   const consents = useGdprStore(state => state.consents);
-  const [accepted, setAccepted] = useState<string[]>([
-    ...Object.entries(consents)
-      .filter(([, consent]) => consent)
-      .map(([name]) => name),
-  ]);
+  const [accepted, setAccepted] = useState<string[]>([]);
+
+  useEffect(() => {
+    setAccepted([
+      ...Object.entries(consents)
+        .filter(([, consent]) => consent)
+        .map(([name]) => name),
+    ]);
+  }, [consents]);
 
   const accept = <T extends string>(service?: GdprService<T>) => {
     console.info("GDPR accept", service?.name ?? "all services");
@@ -226,8 +227,9 @@ const ConsentManager = ({ gdprPageLink, services, gdprPageLinkAs: GdprPageLinkAs
               </div>
               <div className="fr-radio-group">
                 <input
-                  disabled={service.mandatory}
-                  checked={!service.mandatory && !accepted.includes(service.name)}
+                  {...(service.mandatory
+                    ? { disabled: true, checked: false }
+                    : { checked: !accepted.includes(service.name) })}
                   type="radio"
                   id={`consent-finality-${index}-refuse`}
                   name={`consent-finality-${index}`}
