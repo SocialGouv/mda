@@ -4,18 +4,17 @@ import { MostViewedCards } from "@components/home/MostViewedCards";
 import { fetchStrapi } from "@services/strapi";
 
 const HomePage = async () => {
-  const strapiData = await fetchStrapi("accueil-v2", {
+  const strapiData = await fetchStrapi("accueil", {
     populate: "deep",
   });
 
   const widgets = await Promise.all(
     (strapiData.data?.attributes.widgets || []).map(async widget => {
       if (widget.__component === "common.most-viewed-cards") {
-        // TODO find a solution for this cast
-        const strapiData = await fetchStrapi<"api::fiche-pratique.fiche-pratique">(`${widget.collection}/most-viewed`);
+        const strapiCardsData = await fetchStrapi<typeof widget.collection>(`${widget.collection}/most-viewed`);
         return {
           ...widget,
-          cards: strapiData.data || [],
+          cards: strapiCardsData.data || [],
         };
       }
       return widget;
