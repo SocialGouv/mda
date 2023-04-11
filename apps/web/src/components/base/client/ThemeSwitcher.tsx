@@ -17,7 +17,8 @@ import { useEffect, useState } from "react";
 type themeType = "dark" | "light" | "system";
 
 export const ThemeSwitcher = () => {
-  const initialThemeValue: themeType = (localStorage.getItem("data-fr-theme") as themeType) || "system";
+  const initialThemeValue: themeType =
+    typeof window !== "undefined" ? (localStorage.getItem("data-fr-theme") as themeType) : "system";
 
   const [modaleOpen, setModaleOpen] = useState(false);
   const [theme, setTheme] = useState<themeType>(initialThemeValue);
