@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/SocialGouv/mda/compare/v1.14.0...v1.14.1) (2023-04-11)
+
+
+### Bug Fixes
+
+* **infra:** Temporary force replace meilisearch pod ([b0dd801](https://github.com/SocialGouv/mda/commit/b0dd80176727a27888dc3b1e2c239f5155bc281e))
+
 # [1.14.0](https://github.com/SocialGouv/mda/compare/v1.13.0...v1.14.0) (2023-04-07)
 
 
