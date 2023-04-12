@@ -13,12 +13,12 @@ export const Markdown = ({ children, ...rest }: MarkdownProps) => {
     <ReactMarkdown
       rehypePlugins={[rehypeRaw]}
       components={{
-        iframe: ({ ...props }) => (
+        iframe: ({ node: _, ...props }) => (
           <div className="fr-video-container">
-            <iframe {...props} />
+            <iframe {...props} sandbox="true" />
           </div>
         ),
-        img: ({ ...props }) => <img className="fr-fluid-img" {...props} />,
+        img: ({ node: _, ...props }) => <img className="fr-fluid-img" {...props} />,
         a: ({ node: _, children, ...props }) => {
           if (props.href?.includes("http")) {
             props.target = "_blank";
