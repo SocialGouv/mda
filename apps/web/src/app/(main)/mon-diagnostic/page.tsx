@@ -5,6 +5,16 @@ import { fetchStrapi } from "@services/strapi";
 
 import { DiagSteps } from "./DiagSteps";
 
+const getData = async () => {
+  const res = fetchStrapi("diagnostic");
+  return res;
+};
+
+export const generateMetadata = async () => {
+  const strapiData = await getData();
+  return { title: strapiData.data?.attributes.title };
+};
+
 const DiagnosticPage = async () => {
   const firstQuestion = (await fetchStrapi("questions", { filters: { first: { $eq: true } }, populate: "deep,4" }))
     .data?.[0];
@@ -12,7 +22,7 @@ const DiagnosticPage = async () => {
     return null;
   }
 
-  const strapiData = await fetchStrapi("diagnostic");
+  const strapiData = await getData();
   const data = strapiData.data?.attributes;
 
   return (

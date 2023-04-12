@@ -3,6 +3,10 @@ import { SimpleContentPage } from "@components/base/SimpleContentPage";
 import { fetchStrapi } from "@services/strapi";
 import clsx from "clsx";
 
+export const generateMetadata = () => {
+  return { title: "Glossaire" };
+};
+
 // TODO: handle iterate over pagination in fetch
 const Glossary = async () => {
   const items = await fetchStrapi("glossaire-items", { sort: "title", pagination: { limit: 100 } });

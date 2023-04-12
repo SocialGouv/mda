@@ -4,8 +4,18 @@ import { fetchStrapi } from "@services/strapi";
 
 import { GDPRButton } from "./GDPRButton";
 
+const getData = async () => {
+  const res = fetchStrapi("plan-du-site");
+  return res;
+};
+
+export const generateMetadata = async () => {
+  const strapiData = await getData();
+  return { title: strapiData.data?.attributes.title };
+};
+
 const PrivacyPolicy = async () => {
-  const strapiData = await fetchStrapi("politique-de-confidentialite");
+  const strapiData = await getData();
   const data = strapiData.data?.attributes;
   return (
     <SimpleContentPage>

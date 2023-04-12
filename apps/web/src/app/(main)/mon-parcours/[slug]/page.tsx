@@ -22,6 +22,19 @@ import { notFound } from "next/navigation";
 
 export type ParcoursProps = Next13ServerPageProps<"slug">;
 
+export const generateMetadata = async ({ params }: ParcoursProps) => {
+  const strapiData = (
+    await fetchStrapi("parcourss", {
+      filters: {
+        slug: {
+          $eq: params.slug,
+        },
+      },
+    })
+  ).data?.[0];
+  return { title: strapiData?.attributes.title };
+};
+
 const Parcours = async ({ params }: ParcoursProps) => {
   const currentParcours = await fetchStrapi("parcourss", {
     populate: "deep",

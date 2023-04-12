@@ -2,8 +2,18 @@ import { SimpleContentPage } from "@components/base/SimpleContentPage";
 import { Markdown } from "@components/utils/Markdown";
 import { fetchStrapi } from "@services/strapi";
 
+const getData = async () => {
+  const res = fetchStrapi("mentions-legales");
+  return res;
+};
+
+export const generateMetadata = async () => {
+  const strapiData = await getData();
+  return { title: strapiData.data?.attributes.title };
+};
+
 const LegalNotice = async () => {
-  const strapiData = await fetchStrapi("mentions-legales");
+  const strapiData = await getData();
   const data = strapiData.data?.attributes;
   return (
     <SimpleContentPage>

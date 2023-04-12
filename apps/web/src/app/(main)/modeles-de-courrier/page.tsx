@@ -4,8 +4,18 @@ import { DownloadLink } from "@design-system";
 import { type DataWrapper } from "@mda/strapi-types";
 import { fetchStrapi } from "@services/strapi";
 
+const getData = async () => {
+  const res = fetchStrapi("modeles-de-courrier", { populate: "files" });
+  return res;
+};
+
+export const generateMetadata = async () => {
+  const strapiData = await getData();
+  return { title: strapiData.data?.attributes.title };
+};
+
 const Documents = async () => {
-  const strapiData = await fetchStrapi("modeles-de-courrier", { populate: "files" });
+  const strapiData = await getData();
   const data = strapiData.data?.attributes;
   // The cast is mandatory as the generated type is `files: MediaAttribute`
   const files = (data?.files?.data ?? []) as Array<DataWrapper<"plugin::upload.file">>;
