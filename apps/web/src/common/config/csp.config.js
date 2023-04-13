@@ -6,7 +6,7 @@
  */
 const ContentSecurityPolicy = _nonce =>
   `
-  default-src 'none';
+  default-src 'self';
   connect-src 'self' https://*.gouv.fr;
   media-src 'self' https://*.gouv.fr;
   img-src 'self' data: https://*.gouv.fr;
