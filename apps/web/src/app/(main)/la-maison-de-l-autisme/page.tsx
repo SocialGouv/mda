@@ -17,9 +17,8 @@ import {
 import { CollapsedSectionDynamicGroup } from "@design-system/client";
 import { fetchStrapi } from "@services/strapi";
 
-const getData = async () => {
-  const res = fetchStrapi("maison-de-l-autisme", { populate: "sections,events", sort: "id" });
-  return res;
+const getData = () => {
+  return fetchStrapi("maison-de-l-autisme", { populate: "sections,events", sort: "id" });
 };
 
 export const generateMetadata = async () => {

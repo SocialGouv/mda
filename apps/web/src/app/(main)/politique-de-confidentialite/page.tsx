@@ -4,9 +4,8 @@ import { fetchStrapi } from "@services/strapi";
 
 import { GDPRButton } from "./GDPRButton";
 
-const getData = async () => {
-  const res = fetchStrapi("plan-du-site");
-  return res;
+const getData = () => {
+  return fetchStrapi("plan-du-site");
 };
 
 export const generateMetadata = async () => {

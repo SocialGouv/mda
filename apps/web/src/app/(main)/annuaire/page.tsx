@@ -2,9 +2,8 @@ import { SimpleContentPage } from "@components/base/SimpleContentPage";
 import { Markdown } from "@components/utils/Markdown";
 import { fetchStrapi } from "@services/strapi";
 
-const getData = async () => {
-  const res = await fetchStrapi("annuaire", { populate: "links", sort: "id" });
-  return res;
+const getData = () => {
+  return fetchStrapi("annuaire", { populate: "links", sort: "id" });
 };
 
 export const generateMetadata = async () => {

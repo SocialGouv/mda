@@ -5,9 +5,8 @@ import { fetchStrapi } from "@services/strapi";
 
 import { DiagSteps } from "./DiagSteps";
 
-const getData = async () => {
-  const res = fetchStrapi("diagnostic");
-  return res;
+const getData = () => {
+  return fetchStrapi("diagnostic");
 };
 
 export const generateMetadata = async () => {

@@ -4,9 +4,8 @@ import { DownloadLink } from "@design-system";
 import { type DataWrapper } from "@mda/strapi-types";
 import { fetchStrapi } from "@services/strapi";
 
-const getData = async () => {
-  const res = fetchStrapi("modeles-de-courrier", { populate: "files" });
-  return res;
+const getData = () => {
+  return fetchStrapi("modeles-de-courrier", { populate: "files" });
 };
 
 export const generateMetadata = async () => {

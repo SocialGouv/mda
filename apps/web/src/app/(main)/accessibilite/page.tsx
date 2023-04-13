@@ -2,9 +2,8 @@ import { SimpleContentPage } from "@components/base/SimpleContentPage";
 import { Markdown } from "@components/utils/Markdown";
 import { fetchStrapi } from "@services/strapi";
 
-const getData = async () => {
-  const res = fetchStrapi("accessibilite");
-  return res;
+const getData = () => {
+  return fetchStrapi("accessibilite");
 };
 
 export const generateMetadata = async () => {
