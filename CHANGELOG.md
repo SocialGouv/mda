@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/SocialGouv/mda/compare/v1.15.0...v1.15.1) (2023-04-13)
+
+
+### Bug Fixes
+
+* **csp:** Do not block static svgs ([bec6b61](https://github.com/SocialGouv/mda/commit/bec6b61bf76f5b2b9d25131666daf8673a7d3e53))
+
 # [1.15.0](https://github.com/SocialGouv/mda/compare/v1.14.4...v1.15.0) (2023-04-13)
 
 
