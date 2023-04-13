@@ -1,3 +1,20 @@
+# [1.15.0](https://github.com/SocialGouv/mda/compare/v1.14.4...v1.15.0) (2023-04-13)
+
+
+### Bug Fixes
+
+* change meta title by generateMetadata ([#274](https://github.com/SocialGouv/mda/issues/274)) ([272ae12](https://github.com/SocialGouv/mda/commit/272ae128a438d96918f1111eaada6bce804351e4))
+* docker and csp ([#269](https://github.com/SocialGouv/mda/issues/269)) ([5e2f7fe](https://github.com/SocialGouv/mda/commit/5e2f7fea08ff8f29de1303f34b5401dc3bf66de8))
+* **strapi:** Admin doc ([#277](https://github.com/SocialGouv/mda/issues/277)) ([12ff1cb](https://github.com/SocialGouv/mda/commit/12ff1cb1ef8309c91e0e1e7bf29a0452137fca01))
+
+
+### Features
+
+* assigning the site name to a variable ([#265](https://github.com/SocialGouv/mda/issues/265)) ([5803cd6](https://github.com/SocialGouv/mda/commit/5803cd611b0a3deea28d18fa666e502d8a3e94e0))
+* dsfr consent banner ([#268](https://github.com/SocialGouv/mda/issues/268)) ([38f7726](https://github.com/SocialGouv/mda/commit/38f772626910460ea016da6f5f257d73906b4dad))
+* **footer:** Banner dynamisation ([#276](https://github.com/SocialGouv/mda/issues/276)) ([d68e756](https://github.com/SocialGouv/mda/commit/d68e756739ef6f6361cea9825dbf22974737abb8))
+* **pictos:** Add all DSFR pictos ([#279](https://github.com/SocialGouv/mda/issues/279)) ([c8848f2](https://github.com/SocialGouv/mda/commit/c8848f20e1699114b35cba496ac46c090452c852))
+
 ## [1.14.4](https://github.com/SocialGouv/mda/compare/v1.14.3...v1.14.4) (2023-04-11)
 
 
