@@ -1,7 +1,12 @@
+import { config } from "@common/config";
 import { Article } from "@components/home/Article";
 import { GridTiles } from "@components/home/GridTiles";
 import { MostViewedCards } from "@components/home/MostViewedCards";
 import { fetchStrapi } from "@services/strapi";
+
+export const generateMetadata = () => {
+  return { title: `Accueil | ${config.siteTitle}` };
+};
 
 const HomePage = async () => {
   const strapiData = await fetchStrapi("accueil", {

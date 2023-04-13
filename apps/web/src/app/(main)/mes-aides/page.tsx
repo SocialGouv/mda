@@ -4,8 +4,17 @@ import { Markdown } from "@components/utils/Markdown";
 import { CollapsedSectionDynamicGroup } from "@design-system/client";
 import { fetchStrapi } from "@services/strapi";
 
-const AutismHouse = async () => {
-  const strapiData = await fetchStrapi("mes-aides", { populate: "sections", sort: "id" });
+const getData = () => {
+  return fetchStrapi("mes-aides", { populate: "sections", sort: "id" });
+};
+
+export const generateMetadata = async () => {
+  const strapiData = await getData();
+  return { title: strapiData.data?.attributes.title };
+};
+
+const HelpPage = async () => {
+  const strapiData = await getData();
   const data = strapiData.data?.attributes;
 
   return (
@@ -32,4 +41,4 @@ const AutismHouse = async () => {
   );
 };
 
-export default AutismHouse;
+export default HelpPage;

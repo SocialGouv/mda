@@ -12,6 +12,10 @@ import {
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 import { fetchStrapi } from "@services/strapi";
 
+export const generateMetadata = () => {
+  return { title: "Mon parcours" };
+};
+
 const MonParcours = async () => {
   const strapiData = await fetchStrapi("parcourss", { sort: "id" });
   const data = strapiData.data || [];

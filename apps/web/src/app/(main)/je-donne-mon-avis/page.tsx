@@ -5,8 +5,17 @@ import { fetchStrapi } from "@services/strapi";
 
 import { FeedbackForm } from "./FeedbackForm";
 
+const getData = () => {
+  return fetchStrapi("je-donne-mon-avis", { populate: "deep" });
+};
+
+export const generateMetadata = async () => {
+  const strapiData = await getData();
+  return { title: strapiData.data?.attributes.title };
+};
+
 const Feedback = async () => {
-  const strapiData = await fetchStrapi("je-donne-mon-avis", { populate: "deep" });
+  const strapiData = await getData();
   const data = strapiData.data?.attributes;
 
   return (

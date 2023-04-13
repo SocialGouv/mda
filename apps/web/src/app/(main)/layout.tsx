@@ -47,6 +47,10 @@ declare module "@design-system/client" {
   }
 }
 
+export const metadata = {
+  title: { default: config.siteTitle, template: `%s | ${config.siteTitle}` },
+};
+
 const MainRootLayout = async ({ children }: PropsWithChildren) => {
   const strapiMenu = await fetchStrapi("menu", { populate: "deep" });
   const strapiFooter = await fetchStrapi("footer", { populate: "deep" });

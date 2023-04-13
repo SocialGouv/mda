@@ -7,6 +7,19 @@ import { fetchStrapi } from "@services/strapi";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
+export const generateMetadata = async ({ params }: FichePratiqueProps) => {
+  const strapiData = (
+    await fetchStrapi("fiche-pratiques", {
+      filters: {
+        slug: {
+          $eq: params.slug,
+        },
+      },
+    })
+  ).data?.[0];
+  return { title: strapiData?.attributes.title };
+};
+
 export type FichePratiqueProps = Next13ServerPageProps<"slug">;
 const FichePratique = async ({ params }: FichePratiqueProps) => {
   const [fiches, currentFiche] = await Promise.all([

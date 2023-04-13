@@ -6,6 +6,10 @@ import { mapMeilisearchHit, type SearchHit, searchStrapi } from "@services/strap
 
 export const dynamic = "force-dynamic";
 
+export const generateMetadata = () => {
+  return { title: "Recherche" };
+};
+
 export type SearchProps = Next13ServerPageProps<"", "keyword">;
 const Search = async ({ searchParams: { keyword } }: SearchProps) => {
   const searchResults = keyword
