@@ -47,18 +47,7 @@
       "subject": "api::accueil.accueil",
       "properties": {
         "fields": [
-          "title",
-          "content",
-          "img",
-          "links.text",
-          "links.title",
-          "links.url",
-          "links.theme",
-          "MDA_title",
-          "MDA_subtitle",
-          "MDA_content",
-          "MDA_link_text",
-          "MDA_img"
+          "widgets"
         ]
       },
       "conditions": []
@@ -80,18 +69,7 @@
       "subject": "api::accueil.accueil",
       "properties": {
         "fields": [
-          "title",
-          "content",
-          "img",
-          "links.text",
-          "links.title",
-          "links.url",
-          "links.theme",
-          "MDA_title",
-          "MDA_subtitle",
-          "MDA_content",
-          "MDA_link_text",
-          "MDA_img"
+          "widgets"
         ]
       },
       "conditions": []
@@ -101,18 +79,7 @@
       "subject": "api::accueil.accueil",
       "properties": {
         "fields": [
-          "title",
-          "content",
-          "img",
-          "links.text",
-          "links.title",
-          "links.url",
-          "links.theme",
-          "MDA_title",
-          "MDA_subtitle",
-          "MDA_content",
-          "MDA_link_text",
-          "MDA_img"
+          "widgets"
         ]
       },
       "conditions": []
@@ -384,7 +351,13 @@
           "link.text",
           "link.title",
           "link.url",
-          "link.theme"
+          "link.theme",
+          "banner_title",
+          "banner_icons.link.text",
+          "banner_icons.link.title",
+          "banner_icons.link.url",
+          "banner_icons.link.theme",
+          "banner_icons.svg"
         ]
       },
       "conditions": []
@@ -404,7 +377,13 @@
           "link.text",
           "link.title",
           "link.url",
-          "link.theme"
+          "link.theme",
+          "banner_title",
+          "banner_icons.link.text",
+          "banner_icons.link.title",
+          "banner_icons.link.url",
+          "banner_icons.link.theme",
+          "banner_icons.svg"
         ]
       },
       "conditions": []
@@ -418,7 +397,13 @@
           "link.text",
           "link.title",
           "link.url",
-          "link.theme"
+          "link.theme",
+          "banner_title",
+          "banner_icons.link.text",
+          "banner_icons.link.title",
+          "banner_icons.link.url",
+          "banner_icons.link.theme",
+          "banner_icons.svg"
         ]
       },
       "conditions": []

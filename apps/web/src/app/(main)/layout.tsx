@@ -93,47 +93,23 @@ const MainRootLayout = async ({ children }: PropsWithChildren) => {
               <Grid>
                 <GridCol>
                   <div className="fr-follow__social">
-                    <h2 className="fr-h5">
-                      Suivez-nous
-                      <br /> sur les réseaux sociaux
-                    </h2>
+                    <h2 className="fr-h5">{footerAttributes?.banner_title}</h2>
                     <ul className="fr-btns-group">
-                      <li>
-                        <ButtonAsLink
-                          iconOnly="fr-btn--instagram"
-                          href="https://www.instagram.com/lamaisondelautisme/"
-                          title="Page Instagram - nouvelle fenêtre"
-                          target="_blank"
-                          rel="noreferrer"
-                          isExternal
-                        >
-                          instagram
-                        </ButtonAsLink>
-                      </li>
-                      <li>
-                        <ButtonAsLink
-                          iconOnly="fr-btn--facebook"
-                          href="https://www.facebook.com/maisondelautisme"
-                          title="Page facebook - nouvelle fenêtre"
-                          target="_blank"
-                          rel="noreferrer"
-                          isExternal
-                        >
-                          facebook
-                        </ButtonAsLink>
-                      </li>
-                      <li>
-                        <ButtonAsLink
-                          iconOnly="fr-btn--linkedin"
-                          href=" https://www.linkedin.com/company/maisondelautisme"
-                          target="_blank"
-                          title="Page LinkedIn - nouvelle fenêtre"
-                          rel="noreferrer"
-                          isExternal
-                        >
-                          linkedin
-                        </ButtonAsLink>
-                      </li>
+                      {footerAttributes?.banner_icons &&
+                        footerAttributes?.banner_icons.map(icon => (
+                          <li key={icon.id}>
+                            <ButtonAsLink
+                              iconOnly={icon.svg}
+                              href={icon.link?.url || "#"}
+                              title={icon.link?.title}
+                              target="_blank"
+                              rel="noreferrer"
+                              isExternal
+                            >
+                              {icon.link?.text}
+                            </ButtonAsLink>
+                          </li>
+                        ))}
                     </ul>
                   </div>
                 </GridCol>

@@ -981,6 +981,12 @@ export interface ApiFooterFooter extends SingleTypeSchema {
   attributes: {
     content: RichTextAttribute & RequiredAttribute;
     link: ComponentAttribute<'common.links', true>;
+    banner_title: StringAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    banner_icons: ComponentAttribute<'common.icons', true>;
     createdAt: DateTimeAttribute;
     updatedAt: DateTimeAttribute;
     createdBy: RelationAttribute<
@@ -1455,6 +1461,43 @@ export interface CommonGridTiles extends ComponentSchema {
   };
 }
 
+export interface CommonIcons extends ComponentSchema {
+  info: {
+    displayName: 'Icons';
+    description: '';
+  };
+  attributes: {
+    link: ComponentAttribute<'common.links'>;
+    svg: EnumerationAttribute<
+      [
+        'fr-btn--facebook',
+        'fr-btn--instagram',
+        'fr-btn--linkedin',
+        'fr-fi-information-line',
+        'fr-icon-add-line',
+        'fr-icon-arrow-down-s-line',
+        'fr-icon-arrow-left-line',
+        'fr-icon-arrow-right-line',
+        'fr-icon-arrow-up-fill',
+        'fr-icon-arrow-up-s-line',
+        'fr-icon-calendar-line',
+        'fr-icon-edit-fill',
+        'fr-icon-error-fill',
+        'fr-icon-information-fill',
+        'fr-icon-line-fill',
+        'fr-icon-mail-line',
+        'fr-icon-printer-line',
+        'fr-icon-success-fill',
+        'fr-icon-success-line',
+        'fr-icon-user-fill',
+        'fr-icon-warning-fill',
+        'fr-icon-warning-line'
+      ]
+    > &
+      RequiredAttribute;
+  };
+}
+
 export interface CommonInputs extends ComponentSchema {
   info: {
     displayName: 'Inputs';
@@ -1810,6 +1853,7 @@ declare global {
       'common.alerts': CommonAlerts;
       'common.articles': CommonArticles;
       'common.grid-tiles': CommonGridTiles;
+      'common.icons': CommonIcons;
       'common.inputs': CommonInputs;
       'common.links': CommonLinks;
       'common.most-viewed-cards': CommonMostViewedCards;
