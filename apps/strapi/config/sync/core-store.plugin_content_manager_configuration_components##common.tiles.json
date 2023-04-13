@@ -65,7 +65,7 @@
       "picto": {
         "edit": {
           "label": "picto",
-          "description": "Le pictogramme à afficher sur la tuile",
+          "description": "Le pictogramme à afficher sur la tuile. Ils sont issus du DSFR https://www.systeme-de-design.gouv.fr/",
           "placeholder": "",
           "visible": true,
           "editable": true
