@@ -65,8 +65,8 @@
       "slug": {
         "edit": {
           "label": "slug",
-          "description": "L'identifiant url de la fiche. Example ma-fiche",
-          "placeholder": "L'identifiant url de la fiche. Example ma-fiche",
+          "description": "L'identifiant url de la fiche. Exemple ma-fiche",
+          "placeholder": "L'identifiant url de la fiche. Exemple ma-fiche",
           "visible": true,
           "editable": true
         },
@@ -79,8 +79,8 @@
       "excerpt": {
         "edit": {
           "label": "excerpt",
-          "description": "Résumé (chapô) de la fiche",
-          "placeholder": "Résumé (chapô) de la fiche",
+          "description": "Aperçu de la fiche - Nous vous conseillons de renseigner les 100 premiers caractères du chapô",
+          "placeholder": "Aperçu de la fiche - Nous vous conseillons de renseigner les 100 premiers caractères du chapô",
           "visible": true,
           "editable": true
         },

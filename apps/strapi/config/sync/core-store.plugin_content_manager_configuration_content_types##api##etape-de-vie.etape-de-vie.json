@@ -79,8 +79,8 @@
       "slug": {
         "edit": {
           "label": "slug",
-          "description": "L'identifiant url de l'étape de vie. Example mon-etape-de-vie",
-          "placeholder": "L'identifiant url de l'étape de vie. Example mon-etape-de-vie",
+          "description": "L'identifiant url de l'étape de vie. Exemple mon-etape-de-vie",
+          "placeholder": "L'identifiant url de l'étape de vie. Exemple mon-etape-de-vie",
           "visible": true,
           "editable": true
         },
@@ -93,8 +93,8 @@
       "excerpt": {
         "edit": {
           "label": "excerpt",
-          "description": "Résumé (chapô) de l'étape de vie",
-          "placeholder": "Résumé (chapô) de l'étape de vie",
+          "description": "Aperçu de l'étape de vie - Nous vous conseillons de renseigner les 100 premiers caractères du chapô",
+          "placeholder": "Aperçu de l'étape de vie - Nous vous conseillons de renseigner les 100 premiers caractères du chapô",
           "visible": true,
           "editable": true
         },
