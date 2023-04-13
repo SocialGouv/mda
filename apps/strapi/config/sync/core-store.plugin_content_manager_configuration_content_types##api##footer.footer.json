@@ -20,6 +20,34 @@
           "sortable": true
         }
       },
+      "banner_title": {
+        "edit": {
+          "label": "banner_title",
+          "description": "Le titre du bandeau au dessus du footer",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "banner_title",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "banner_icons": {
+        "edit": {
+          "label": "banner_icons",
+          "description": "Les icones à droite du bandeau",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "banner_icons",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "content": {
         "edit": {
           "label": "content",
@@ -85,6 +113,18 @@
         "updatedAt"
       ],
       "edit": [
+        [
+          {
+            "name": "banner_title",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "banner_icons",
+            "size": 12
+          }
+        ],
         [
           {
             "name": "content",
