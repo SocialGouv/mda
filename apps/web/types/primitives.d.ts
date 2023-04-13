@@ -21,3 +21,15 @@ declare type Any = any;
  */
 // eslint-disable-next-line @typescript-eslint/ban-types
 declare type __DEBUG_TYPE__<T> = { [P in keyof T]: T[P] } & {};
+
+declare module "@codegouvfr/react-dsfr/*.svg" {
+  export interface SVG {
+    height: number;
+    src: string;
+    width: number;
+  }
+
+  const content: SVG;
+
+  export = content;
+}
