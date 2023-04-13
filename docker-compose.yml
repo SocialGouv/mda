@@ -42,9 +42,6 @@ services:
       dockerfile: apps/web/Dockerfile
       args:
         NEXT_PUBLIC_STRAPI_API_URL: http://strapi:1337
-        PRODUCTION: "false"
-    environment:
-      PRODUCTION: "false"
     env_file:
       - apps/web/.env.development.local
     ports:

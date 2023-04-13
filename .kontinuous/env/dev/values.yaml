@@ -18,7 +18,6 @@ jobs:
     build-web:
       with:
         buildArgs:
-          PRODUCTION: "true"
           NEXT_PUBLIC_STRAPI_API_URL: "https://strapi-{{ .Values.global.host }}"
     create-db:
       use: create-db
