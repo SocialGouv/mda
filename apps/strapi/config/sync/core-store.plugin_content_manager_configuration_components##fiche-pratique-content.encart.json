@@ -38,7 +38,7 @@
         "edit": {
           "label": "content",
           "description": "Le contenu de l'encart. Le markdown est supporté et vous pouvez intégrer des fichiers images, pdf et vidéos à l'aide du bouton image dans les outils ci-dessus",
-          "placeholder": "",
+          "placeholder": "Chapô (résumé) de la page - Nous vous conseillons de rédiger ici une courte introduction aux contenus qui se trouvent sur cette page",
           "visible": true,
           "editable": true
         },

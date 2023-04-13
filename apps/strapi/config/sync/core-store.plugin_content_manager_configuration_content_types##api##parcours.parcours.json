@@ -37,8 +37,8 @@
       "slug": {
         "edit": {
           "label": "slug",
-          "description": "L'identifiant url du parcours. Example mon-parcours",
-          "placeholder": "L'identifiant url du parcours. Example mon-parcours",
+          "description": "L'identifiant url du parcours. Exemple mon-parcours",
+          "placeholder": "L'identifiant url du parcours. Exemple mon-parcours",
           "visible": true,
           "editable": true
         },

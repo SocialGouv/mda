@@ -37,7 +37,7 @@
       "slug": {
         "edit": {
           "label": "slug",
-          "description": "L'identifiant url de la tuile. Example modeles-de-courrier",
+          "description": "L'identifiant url de la tuile. Exemple modeles-de-courrier",
           "placeholder": "",
           "visible": true,
           "editable": true
