@@ -74,7 +74,6 @@ const MainRootLayout = async ({ children }: PropsWithChildren) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="csp-nonce" content={config.githubSha} />
-        <script async={false} src="./js/nonce.js" nonce={config.githubSha}></script>
       </head>
       <body>
         <DsfrProvider defaultColorScheme={defaultColorScheme}>
