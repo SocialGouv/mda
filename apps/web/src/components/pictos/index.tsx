@@ -77,9 +77,9 @@ const generateSvg = (svg: SVG) => (
                 fill: var(--blue-france-sun-113-625);
             }
         `}</style>
-    <use xlinkHref={`${svg.src}#artwork-decorative`} />
-    <use xlinkHref={`${svg.src}#artwork-minor`} />
-    <use xlinkHref={`${svg.src}#artwork-major`} />
+    <use xlinkHref={`${svg.src}#artwork-decorative`} className="fr-artwork-decorative" />
+    <use xlinkHref={`${svg.src}#artwork-minor`} className="fr-artwork-minor" />
+    <use xlinkHref={`${svg.src}#artwork-major`} className="fr-artwork-major" />
   </svg>
 );
 
