@@ -1,3 +1,10 @@
+## [1.15.2](https://github.com/SocialGouv/mda/compare/v1.15.1...v1.15.2) (2023-04-14)
+
+
+### Bug Fixes
+
+* **pictos:** Add classes on <use> for chrome ([3db1a40](https://github.com/SocialGouv/mda/commit/3db1a401c7c21e49fb5a4a2e521e4c8fe21c622a))
+
 ## [1.15.1](https://github.com/SocialGouv/mda/compare/v1.15.0...v1.15.1) (2023-04-13)
 
 
