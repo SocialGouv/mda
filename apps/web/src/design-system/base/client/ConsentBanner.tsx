@@ -67,7 +67,7 @@ export const useGdprStore = create<UseGdprStore>()(
 
 export interface ConsentBannerProps {
   gdprPageLink: string;
-  gdprPageLinkAs?: ElementType<PropsWithChildren<{ href: Any }>> | string;
+  gdprPageLinkAs?: ElementType<PropsWithChildren<{ href: any }>> | string;
   services: ServicesFromNames;
   siteName: string;
 }
@@ -164,9 +164,9 @@ const ConsentManager = ({ gdprPageLink, services, gdprPageLinkAs: GdprPageLinkAs
       return setAccepted([...accepted, service.name]);
     }
 
-    const filtered = services.filter(service => !service.mandatory).map(service => service.name);
+    const filtered = services.filter(s => !s.mandatory).map(s => s.name);
     const toAccept = [...new Set([...filtered, ...accepted])];
-    toAccept.forEach(service => setConsent(service, true));
+    toAccept.forEach(s => setConsent(s, true));
     setAccepted(toAccept);
   };
 
@@ -177,7 +177,7 @@ const ConsentManager = ({ gdprPageLink, services, gdprPageLinkAs: GdprPageLinkAs
       return setAccepted(accepted.filter(name => service.name !== name));
     }
 
-    accepted.forEach(service => setConsent(service, false));
+    accepted.forEach(s => setConsent(s, false));
     setAccepted([]);
   };
 

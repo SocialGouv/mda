@@ -39,6 +39,7 @@ import {
 import { fetchStrapi } from "@services/strapi";
 import Link from "next/link";
 import { type PropsWithChildren } from "react";
+import { Suspense } from "react";
 
 declare module "@design-system/client" {
   interface GdprServiceNames {
@@ -74,7 +75,9 @@ const MainRootLayout = async ({ children }: PropsWithChildren) => {
             //"Spectral-ExtraBold"
           ]}
         />
-        <Matomo env={config.env} />
+        <Suspense>
+          <Matomo env={config.env} />
+        </Suspense>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="csp-nonce" content={config.githubSha} />

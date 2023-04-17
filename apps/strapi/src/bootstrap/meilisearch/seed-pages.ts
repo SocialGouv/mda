@@ -1,6 +1,6 @@
 import { type StrapiLifecycle } from "../../utils/types";
 
-const seedMeilisearchPages: StrapiLifecycle = async ({ strapi }) => {
+const seedPages: StrapiLifecycle = async ({ strapi }) => {
   const plugin = strapi.plugin("meilisearch");
   const contentTypeService = plugin.service("contentType");
   const meilisearchService = plugin.service("meilisearch");
@@ -14,4 +14,4 @@ const seedMeilisearchPages: StrapiLifecycle = async ({ strapi }) => {
   }
 };
 
-export default seedMeilisearchPages;
+export default seedPages;

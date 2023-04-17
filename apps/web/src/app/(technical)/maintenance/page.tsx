@@ -1,6 +1,6 @@
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
 
-const Maintenance = () => {
+const Page = () => {
   return (
     <SimpleContentPage>
       <div className="fr-text-center">
@@ -16,4 +16,4 @@ const Maintenance = () => {
   );
 };
 
-export default Maintenance;
+export default Page;

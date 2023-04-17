@@ -22,7 +22,7 @@ const seeds = {
   "api::menu.menu": import("../../utils/seed/menu.json"),
 };
 
-const devSeedDb: StrapiLifecycle = async ({ strapi }) => {
+const seedDb: StrapiLifecycle = async ({ strapi }) => {
   if (process.env.MDA_ENV !== "dev") {
     return;
   }
@@ -45,4 +45,4 @@ const devSeedDb: StrapiLifecycle = async ({ strapi }) => {
   }
 };
 
-export default devSeedDb;
+export default seedDb;

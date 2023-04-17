@@ -8,7 +8,7 @@ import { config } from "@common/config";
 import { defaultColorScheme } from "@components/utils/client/defaultColorScheme";
 import { type PropsWithChildren } from "react";
 
-const TechnicalRootLayout = ({ children }: PropsWithChildren) => {
+const Layout = ({ children }: PropsWithChildren) => {
   return (
     <html lang="fr" {...getColorSchemeHtmlAttributes({ defaultColorScheme })}>
       <head nonce={config.githubSha}>
@@ -38,4 +38,4 @@ const TechnicalRootLayout = ({ children }: PropsWithChildren) => {
   );
 };
 
-export default TechnicalRootLayout;
+export default Layout;

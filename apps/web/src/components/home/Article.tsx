@@ -53,7 +53,7 @@ export const Article = ({ article }: ArticleProps) => {
     ) : null;
 
   return (
-    <div className={`fr-py-6w fr-py-md-12w${theme ? ` ${theme}` : ""}`}>
+    <div className={`fr-py-6w fr-py-md-12w ${theme ?? ""}`}>
       <Container>
         <Grid haveGutters>
           {img && image_position === "left" ? (

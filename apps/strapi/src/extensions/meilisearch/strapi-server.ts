@@ -67,7 +67,7 @@ const searchController = () => {
  * not have credentials on front end
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const meiliSearchextension = (plugin: any) => {
+const strapiServer = (plugin: any) => {
   plugin.controllers.searchController = searchController;
 
   plugin.routes.push({
@@ -82,4 +82,4 @@ const meiliSearchextension = (plugin: any) => {
   return plugin;
 };
 
-export default meiliSearchextension;
+export default strapiServer;
