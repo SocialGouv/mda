@@ -24,8 +24,8 @@
     "@types/node-schedule": "^2.1.0"
   },
   "dependencies": {
-    "@strapi/plugin-users-permissions": "4.9.0",
-    "@strapi/strapi": "4.9.0",
+    "@strapi/plugin-users-permissions": "4.9.1",
+    "@strapi/strapi": "4.9.1",
     "pg": "8.10.0",
     "request": "^2.88.2",
     "strapi-plugin-config-sync": "^1.1.1",
