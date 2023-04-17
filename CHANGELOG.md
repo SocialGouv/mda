@@ -1,3 +1,14 @@
+## [1.15.3](https://github.com/SocialGouv/mda/compare/v1.15.2...v1.15.3) (2023-04-17)
+
+
+### Bug Fixes
+
+* **matomo:** Track navigation ([#286](https://github.com/SocialGouv/mda/issues/286)) ([1280ee9](https://github.com/SocialGouv/mda/commit/1280ee9025edf21412c947b475c28a9ca41ab630))
+* **pages:** Politique de confidentialite ([#289](https://github.com/SocialGouv/mda/issues/289)) ([2bbd962](https://github.com/SocialGouv/mda/commit/2bbd962b762341d7d65873b13246438bac32325f))
+* **prod:** Add www redirect ([#242](https://github.com/SocialGouv/mda/issues/242)) ([f7fd685](https://github.com/SocialGouv/mda/commit/f7fd6850e68ebe848739662383f3c5916261d044))
+* **seo:** Do not send headers on each environments ([#287](https://github.com/SocialGouv/mda/issues/287)) ([f9d5ba6](https://github.com/SocialGouv/mda/commit/f9d5ba6f3204d86e9683ded5285f8ff6059aec20))
+* **sonar:** easy bugs & code smells ([#290](https://github.com/SocialGouv/mda/issues/290)) ([6a5ab73](https://github.com/SocialGouv/mda/commit/6a5ab739837f8c47e0dedf48335f39108a1292b6))
+
 ## [1.15.2](https://github.com/SocialGouv/mda/compare/v1.15.1...v1.15.2) (2023-04-14)
 
 
