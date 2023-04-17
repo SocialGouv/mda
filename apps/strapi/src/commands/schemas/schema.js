@@ -68,15 +68,13 @@ const generateSchemaDefinition = schema => {
   const schemaProperties = [...literalPropertiesDefinitions, attributesProp];
 
   // Generate the schema's interface declaration
-  const schemaType = factory.createInterfaceDeclaration(
+  return factory.createInterfaceDeclaration(
     [factory.createModifier(ts.SyntaxKind.ExportKeyword)],
     factory.createIdentifier(interfaceName),
     undefined,
     [factory.createHeritageClause(ts.SyntaxKind.ExtendsKeyword, [factory.createIdentifier(parentType)])],
     schemaProperties,
   );
-
-  return schemaType;
 };
 
 module.exports = { generateSchemaDefinition };

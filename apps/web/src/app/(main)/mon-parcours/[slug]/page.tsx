@@ -77,10 +77,10 @@ const Parcours = async ({ params }: ParcoursProps) => {
                       footer={
                         links.length > 1 && (
                           <ul>
-                            {links.map(link => {
+                            {links.map(l => {
                               return (
-                                <li key={link.id}>
-                                  <TimelineItemFooterLink href={link.url}>{link.text}</TimelineItemFooterLink>
+                                <li key={l.id}>
+                                  <TimelineItemFooterLink href={l.url}>{l.text}</TimelineItemFooterLink>
                                 </li>
                               );
                             })}

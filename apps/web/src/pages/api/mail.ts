@@ -22,7 +22,7 @@ const mailerConfig: SMTPConnection.Options = {
 const mailer = createTransport(mailerConfig);
 
 // TODO: clean
-const handler: NextApiHandler = async (req, res) => {
+const mail: NextApiHandler = async (req, res) => {
   if (req.method !== "POST") {
     res.status(405).send({ message: "Method not allowed" });
   }
@@ -53,4 +53,4 @@ Message : ${data.message}`,
   }
 };
 
-export default handler;
+export default mail;

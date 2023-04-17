@@ -64,10 +64,10 @@ export async function fetchStrapi<
   TParams extends FetchParam<ReverseModel[T]>,
   Ret extends Response<ReverseModel[T]> | ResponseCollection<ReverseModel[T]>,
 >(resource: TResPath, { revalidate, ...params } = {} as TParams): Promise<Ret> {
-  const query = params ? qsStringify(params) : null;
+  const query = params ? `?${qsStringify(params)}` : "";
   if (typeof revalidate === "undefined") revalidate = config.fetchRevalidate;
 
-  const url = new URL(`/api/${resource}${query ? `?${query}` : ""}`, config.strapi.apiUrl);
+  const url = new URL(`/api/${resource}${query}`, config.strapi.apiUrl);
   const response = await fetch(url, {
     headers: {
       "Content-Type": "application/json",
@@ -206,5 +206,4 @@ export function mapMeilisearchHit(hit: MeilisearchHit): SearchHit | undefined {
   }
 
   console.warn("Unknown hit", hit);
-  return;
 }

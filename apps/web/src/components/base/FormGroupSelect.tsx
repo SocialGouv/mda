@@ -10,13 +10,13 @@ type FormGroupSelectProps = {
 };
 
 export const FormGroupSelect = forwardRef<HTMLSelectElement, FormGroupSelectProps>(
-  ({ options, onChange, onBlur, name, label }, ref) => (
+  ({ options, onChange, onBlur, name, label: fGLabel }, ref) => (
     <FormGroup>
-      <FormGroupLabel htmlFor={name}>{label}</FormGroupLabel>
+      <FormGroupLabel htmlFor={name}>{fGLabel}</FormGroupLabel>
       <FormSelect id={name} name={name} onChange={onChange} onBlur={onBlur} ref={ref}>
-        {options.map(({ label, value }, index) => (
+        {options.map(({ label: oLabel, value }, index) => (
           <option value={value} key={index}>
-            {label}
+            {oLabel}
           </option>
         ))}
       </FormSelect>

@@ -10,7 +10,7 @@ const pageModelMapping = {
   "api::fiche-pratique.fiche-pratique": "/fiches-pratiques",
 } as unknown as Record<keyof Strapi.Schemas, string>;
 
-const strapiWebhookHandler: NextApiHandler = async (req, res) => {
+const webhook: NextApiHandler = async (req, res) => {
   if (req.method !== "POST") {
     res.status(405).send({ message: "Method not allowed" });
   }
@@ -31,4 +31,4 @@ const strapiWebhookHandler: NextApiHandler = async (req, res) => {
   res.status(200).send(null);
 };
 
-export default strapiWebhookHandler;
+export default webhook;

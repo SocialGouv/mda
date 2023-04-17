@@ -2,8 +2,8 @@
 import { useEffect, useState } from "react";
 
 export const useCollapse = (id: string, isExpanded: boolean) => {
-  const expandedItem = (isExpanded: boolean) => {
-    if (isExpanded) {
+  const expandedItem = (expanded: boolean) => {
+    if (expanded) {
       return {
         class: "fr-collapse fr-collapse--expanded",
         stateHeight: "none",
