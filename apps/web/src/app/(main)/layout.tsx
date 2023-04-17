@@ -38,8 +38,7 @@ import {
 } from "@design-system";
 import { fetchStrapi } from "@services/strapi";
 import Link from "next/link";
-import { type PropsWithChildren } from "react";
-import { Suspense } from "react";
+import { type PropsWithChildren, Suspense } from "react";
 
 declare module "@design-system/client" {
   interface GdprServiceNames {

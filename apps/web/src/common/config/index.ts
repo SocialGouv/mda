@@ -36,7 +36,7 @@ export const config = {
       },
       from: ensureApiEnvVar(
         process.env.MAILER_FROM_EMAIL,
-        "Maison de l'autisme <maisondelautisme@fabrique.social.gouv.fr>",
+        "Maison de l'autisme <maisondelautisme_feedback@fabrique.social.gouv.fr>",
       ),
       signature: ensureApiEnvVar(process.env.MAILER_EMAIL_SIGNATURE, "L'équipe Maison de l'autisme"),
     },
