@@ -160,18 +160,24 @@ const ConsentManager = ({ gdprPageLink, services, gdprPageLinkAs: GdprPageLinkAs
   const accept = <T extends string>(service?: GdprService<T>) => {
     console.info("GDPR accept", service?.name ?? "all services");
     if (service && !service.mandatory && !accepted.includes(service.name)) {
+      setConsent(service.name, true);
       return setAccepted([...accepted, service.name]);
     }
 
     const filtered = services.filter(service => !service.mandatory).map(service => service.name);
-    setAccepted([...new Set([...filtered, ...accepted])]);
+    const toAccept = [...new Set([...filtered, ...accepted])];
+    toAccept.forEach(service => setConsent(service, true));
+    setAccepted(toAccept);
   };
 
   const refuse = <T extends string>(service?: GdprService<T>) => {
     console.info("GDPR refuse", service?.name ?? "all services");
-    if (service && !service.mandatory && accepted.includes(service.name))
+    if (service && !service.mandatory && accepted.includes(service.name)) {
+      setConsent(service.name, false);
       return setAccepted(accepted.filter(name => service.name !== name));
+    }
 
+    accepted.forEach(service => setConsent(service, false));
     setAccepted([]);
   };
 
