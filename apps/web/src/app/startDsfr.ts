@@ -5,7 +5,6 @@ import { config } from "@common/config";
 const originalAppendChild = document.head.appendChild.bind(document.head);
 document.head.appendChild = node => {
   if (["style", "script"].includes(node.nodeName.toLocaleLowerCase())) {
-    console.info("Add nonce", node);
     (node as unknown as Element).setAttribute(
       "nonce",
       (node as unknown as Element).getAttribute("nonce") || config.githubSha,
