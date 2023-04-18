@@ -5,13 +5,9 @@ import { CollapsedSectionDynamicGroup } from "@design-system/client";
 import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
-const getData = () => {
-  return fetchStrapi("maison-de-l-autisme", { populate: "sections", sort: "id" });
-};
-
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await getData();
+    const strapiData = await fetchStrapi("maison-de-l-autisme");
     return {
       title: strapiData.data?.attributes.title as string,
       slug: "la-maison-de-l-autisme",
@@ -20,7 +16,7 @@ export const generateMetadata = generateMetadataFactory({
 });
 
 const Page = async () => {
-  const strapiData = await getData();
+  const strapiData = await fetchStrapi("maison-de-l-autisme", { populate: "sections" });
   const data = strapiData.data?.attributes;
 
   return (

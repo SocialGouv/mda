@@ -5,13 +5,9 @@ import { fetchStrapi } from "@services/strapi";
 
 import { GDPRButton } from "./GDPRButton";
 
-const getData = () => {
-  return fetchStrapi("politique-de-confidentialite");
-};
-
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await getData();
+    const strapiData = await fetchStrapi("politique-de-confidentialite");
     return {
       title: strapiData.data?.attributes.title as string,
       slug: "politique-de-confidentialite",
@@ -20,7 +16,7 @@ export const generateMetadata = generateMetadataFactory({
 });
 
 const Page = async () => {
-  const strapiData = await getData();
+  const strapiData = await fetchStrapi("politique-de-confidentialite");
   const data = strapiData.data?.attributes;
   return (
     <SimpleContentPage>

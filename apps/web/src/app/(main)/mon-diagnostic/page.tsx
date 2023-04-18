@@ -6,13 +6,9 @@ import { fetchStrapi } from "@services/strapi";
 
 import { DiagSteps } from "./DiagSteps";
 
-const getData = () => {
-  return fetchStrapi("diagnostic");
-};
-
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await getData();
+    const strapiData = await fetchStrapi("diagnostic");
     return {
       title: strapiData.data?.attributes.title as string,
       slug: "mon-diagnostic",
@@ -27,7 +23,7 @@ const Page = async () => {
     return null;
   }
 
-  const strapiData = await getData();
+  const strapiData = await fetchStrapi("diagnostic");
   const data = strapiData.data?.attributes;
 
   return (

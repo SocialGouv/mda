@@ -6,13 +6,9 @@ import { fetchStrapi } from "@services/strapi";
 
 import { FeedbackForm } from "./FeedbackForm";
 
-const getData = () => {
-  return fetchStrapi("je-donne-mon-avis", { populate: "deep" });
-};
-
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await getData();
+    const strapiData = await fetchStrapi("je-donne-mon-avis");
     return {
       title: strapiData.data?.attributes.title as string,
       slug: "je-donne-mon-avis",
@@ -21,7 +17,7 @@ export const generateMetadata = generateMetadataFactory({
 });
 
 const Page = async () => {
-  const strapiData = await getData();
+  const strapiData = await fetchStrapi("je-donne-mon-avis", { populate: "deep" });
   const data = strapiData.data?.attributes;
 
   return (

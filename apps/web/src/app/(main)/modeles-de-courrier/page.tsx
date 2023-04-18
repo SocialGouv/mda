@@ -5,13 +5,9 @@ import { type DataWrapper } from "@mda/strapi-types";
 import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
-const getData = () => {
-  return fetchStrapi("modeles-de-courrier", { populate: "files" });
-};
-
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await getData();
+    const strapiData = await fetchStrapi("modeles-de-courrier");
     return {
       title: strapiData.data?.attributes.title as string,
       slug: "modeles-de-courrier",
@@ -20,7 +16,7 @@ export const generateMetadata = generateMetadataFactory({
 });
 
 const Page = async () => {
-  const strapiData = await getData();
+  const strapiData = await fetchStrapi("modeles-de-courrier", { populate: "files" });
   const data = strapiData.data?.attributes;
   // The cast is mandatory as the generated type is `files: MediaAttribute`
   const files = (data?.files?.data ?? []) as Array<DataWrapper<"plugin::upload.file">>;

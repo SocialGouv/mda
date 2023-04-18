@@ -3,13 +3,9 @@ import { Markdown } from "@components/utils/Markdown";
 import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
-const getData = () => {
-  return fetchStrapi("annuaire", { populate: "links", sort: "id" });
-};
-
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await getData();
+    const strapiData = await fetchStrapi("annuaire");
     return {
       title: strapiData.data?.attributes.title as string,
       slug: "annuaire",
@@ -18,7 +14,7 @@ export const generateMetadata = generateMetadataFactory({
 });
 
 const Page = async () => {
-  const strapiData = await getData();
+  const strapiData = await fetchStrapi("annuaire", { populate: "links", sort: "id" });
   const data = strapiData.data?.attributes;
   return (
     <SimpleContentPage>
