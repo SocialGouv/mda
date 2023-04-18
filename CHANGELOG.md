@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/SocialGouv/mda/compare/v1.15.3...v1.16.0) (2023-04-18)
+
+
+### Features
+
+* **seo:** add canonical links ([#294](https://github.com/SocialGouv/mda/issues/294)) ([28d48c5](https://github.com/SocialGouv/mda/commit/28d48c58c215e92c9487fa394a0b002b09537ed8))
+
 ## [1.15.3](https://github.com/SocialGouv/mda/compare/v1.15.2...v1.15.3) (2023-04-17)
 
 
