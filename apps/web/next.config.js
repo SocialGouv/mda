@@ -48,7 +48,7 @@ const nextConfig = {
         headers: [
           {
             key: "X-Robots-Tag",
-            value: process.env.MDA_ENV === "production" ? "all" : "noindex, nofollow, nosnippet",
+            value: process.env.MDA_ENV === "prod" ? "all" : "noindex, nofollow, nosnippet",
           },
           ...(process.env.NODE_ENV === "production"
             ? [
