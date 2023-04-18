@@ -12,6 +12,7 @@ const seeds = {
   "api::maison-de-l-autisme.maison-de-l-autisme": import("../../utils/seed/maison-de-l-autisme.json"),
   "api::mentions-legales.mentions-legales": import("../../utils/seed/mentions-legales.json"),
   "api::mes-aides.mes-aides": import("../../utils/seed/mes-aides.json"),
+  "api::modeles-de-courrier.modeles-de-courrier": import("../../utils/seed/modeles-de-courrier.json"),
   "api::parcours.parcours": import("../../utils/seed/parcours.json"),
   "api::plan-du-site.plan-du-site": import("../../utils/seed/plan-du-site.json"),
   "api::politique-de-confidentialite.politique-de-confidentialite": import(
