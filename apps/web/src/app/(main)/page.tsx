@@ -2,13 +2,15 @@ import { config } from "@common/config";
 import { Article } from "@components/home/Article";
 import { GridTiles } from "@components/home/GridTiles";
 import { MostViewedCards } from "@components/home/MostViewedCards";
+import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
-export const generateMetadata = () => {
-  return { title: `Accueil | ${config.siteTitle}` };
-};
+export const generateMetadata = generateMetadataFactory({
+  // The layout template does not work here ?
+  resolveMetadata: () => ({ title: `Accueil | ${config.siteTitle}` }),
+});
 
-const HomePage = async () => {
+const Page = async () => {
   const strapiData = await fetchStrapi("accueil", {
     populate: "deep",
   });
@@ -44,4 +46,4 @@ const HomePage = async () => {
   );
 };
 
-export default HomePage;
+export default Page;

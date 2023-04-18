@@ -10,13 +10,20 @@ import {
   GridCol,
 } from "@design-system";
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
+import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
-export const generateMetadata = () => {
-  return { title: "Étapes de vie" };
-};
+const title = "Étapes de vie";
+const slug = "parcours";
 
-const FichesPratiques = async () => {
+export const generateMetadata = generateMetadataFactory({
+  resolveMetadata: () => ({
+    title,
+    slug,
+  }),
+});
+
+const Page = async () => {
   const etapes = await fetchStrapi("etape-de-vies", { populate: "recap", sort: "id" }).then(
     responses => responses.data ?? [],
   );
@@ -24,7 +31,7 @@ const FichesPratiques = async () => {
   return (
     <section className="fr-py-6w fr-py-md-12w">
       <Container>
-        <h1>Étapes de vie</h1>
+        <h1>{title}</h1>
         <Grid as="ul" haveGutters>
           {etapes.map(etape => {
             if (!etape.attributes.slug) return;
@@ -34,7 +41,7 @@ const FichesPratiques = async () => {
                   <CardBody>
                     <CardBodyContent>
                       <CardBodyContentTitle titleAs="h3">
-                        <NextLinkOrA href={`/parcours/${etape.attributes.slug}`}>{etape.attributes.title}</NextLinkOrA>
+                        <NextLinkOrA href={`/${slug}/${etape.attributes.slug}`}>{etape.attributes.title}</NextLinkOrA>
                       </CardBodyContentTitle>
                       {etape.attributes.excerpt && (
                         <CardBodyContentDescription>
@@ -53,4 +60,4 @@ const FichesPratiques = async () => {
   );
 };
 
-export default FichesPratiques;
+export default Page;

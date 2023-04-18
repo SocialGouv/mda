@@ -1,6 +1,7 @@
 import { ActionsButtons } from "@components/base/client/ActionsButtons";
 import { Markdown } from "@components/utils/Markdown";
 import { Container, Grid, GridCol } from "@design-system";
+import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
 import { DiagSteps } from "./DiagSteps";
@@ -9,12 +10,17 @@ const getData = () => {
   return fetchStrapi("diagnostic");
 };
 
-export const generateMetadata = async () => {
-  const strapiData = await getData();
-  return { title: strapiData.data?.attributes.title };
-};
+export const generateMetadata = generateMetadataFactory({
+  async resolveMetadata() {
+    const strapiData = await getData();
+    return {
+      title: strapiData.data?.attributes.title as string,
+      slug: "mon-diagnostic",
+    };
+  },
+});
 
-const DiagnosticPage = async () => {
+const Page = async () => {
   const firstQuestion = (await fetchStrapi("questions", { filters: { first: { $eq: true } }, populate: "deep,4" }))
     .data?.[0];
   if (!firstQuestion) {
@@ -52,4 +58,4 @@ const DiagnosticPage = async () => {
   );
 };
 
-export default DiagnosticPage;
+export default Page;

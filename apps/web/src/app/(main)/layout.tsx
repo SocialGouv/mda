@@ -36,6 +36,7 @@ import {
   SkipLinks,
   SkipLinksItem,
 } from "@design-system";
+import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 import Link from "next/link";
 import { type PropsWithChildren, Suspense } from "react";
@@ -47,11 +48,13 @@ declare module "@design-system/client" {
   }
 }
 
-export const metadata = {
-  title: { default: config.siteTitle, template: `%s | ${config.siteTitle}` },
-};
+export const generateMetadata = generateMetadataFactory({
+  resolveMetadata: () => ({
+    title: { default: config.siteTitle, template: `%s | ${config.siteTitle}` },
+  }),
+});
 
-const MainRootLayout = async ({ children }: PropsWithChildren) => {
+const Layout = async ({ children }: PropsWithChildren) => {
   const strapiMenu = await fetchStrapi("menu", { populate: "deep" });
   const strapiFooter = await fetchStrapi("footer", { populate: "deep" });
   const menuItems = strapiMenu.data?.attributes.item;
@@ -178,4 +181,4 @@ const MainRootLayout = async ({ children }: PropsWithChildren) => {
   );
 };
 
-export default MainRootLayout;
+export default Layout;

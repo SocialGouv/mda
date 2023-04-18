@@ -1,17 +1,23 @@
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
 import { Markdown } from "@components/utils/Markdown";
+import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
 const getData = () => {
   return fetchStrapi("mentions-legales");
 };
 
-export const generateMetadata = async () => {
-  const strapiData = await getData();
-  return { title: strapiData.data?.attributes.title };
-};
+export const generateMetadata = generateMetadataFactory({
+  async resolveMetadata() {
+    const strapiData = await getData();
+    return {
+      title: strapiData.data?.attributes.title as string,
+      slug: "mentions-legales",
+    };
+  },
+});
 
-const LegalNotice = async () => {
+const Page = async () => {
   const strapiData = await getData();
   const data = strapiData.data?.attributes;
   return (
@@ -26,4 +32,4 @@ const LegalNotice = async () => {
   );
 };
 
-export default LegalNotice;
+export default Page;
