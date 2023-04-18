@@ -1,6 +1,7 @@
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
 import { Markdown } from "@components/utils/Markdown";
 import { Alert, AlertTitle } from "@design-system";
+import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
 import { FeedbackForm } from "./FeedbackForm";
@@ -9,12 +10,15 @@ const getData = () => {
   return fetchStrapi("je-donne-mon-avis", { populate: "deep" });
 };
 
-export const generateMetadata = async () => {
-  const strapiData = await getData();
-  return { title: strapiData.data?.attributes.title };
-};
+export const generateMetadata = generateMetadataFactory({
+  resolveSlug: () => "je-donne-mon-avis",
+  async resolveTitle() {
+    const strapiData = await getData();
+    return strapiData.data?.attributes.title as string;
+  },
+});
 
-const Feedback = async () => {
+const Page = async () => {
   const strapiData = await getData();
   const data = strapiData.data?.attributes;
 
@@ -34,4 +38,4 @@ const Feedback = async () => {
   );
 };
 
-export default Feedback;
+export default Page;

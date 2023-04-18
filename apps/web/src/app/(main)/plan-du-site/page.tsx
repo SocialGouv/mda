@@ -1,17 +1,21 @@
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
 import { Markdown } from "@components/utils/Markdown";
+import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
 const getData = () => {
   return fetchStrapi("plan-du-site");
 };
 
-export const generateMetadata = async () => {
-  const strapiData = await getData();
-  return { title: strapiData.data?.attributes.title };
-};
+export const generateMetadata = generateMetadataFactory({
+  resolveSlug: () => "plan-du-site",
+  async resolveTitle() {
+    const strapiData = await getData();
+    return strapiData.data?.attributes.title as string;
+  },
+});
 
-const SiteMap = async () => {
+const Page = async () => {
   const strapiData = await getData();
   const data = strapiData.data?.attributes;
   return (
@@ -22,4 +26,4 @@ const SiteMap = async () => {
   );
 };
 
-export default SiteMap;
+export default Page;

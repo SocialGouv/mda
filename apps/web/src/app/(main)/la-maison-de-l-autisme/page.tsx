@@ -2,18 +2,22 @@ import { ActionsButtons } from "@components/base/client/ActionsButtons";
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
 import { Markdown } from "@components/utils/Markdown";
 import { CollapsedSectionDynamicGroup } from "@design-system/client";
+import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
 const getData = () => {
   return fetchStrapi("maison-de-l-autisme", { populate: "sections", sort: "id" });
 };
 
-export const generateMetadata = async () => {
-  const strapiData = await getData();
-  return { title: strapiData.data?.attributes.title };
-};
+export const generateMetadata = generateMetadataFactory({
+  resolveSlug: () => "la-maison-de-l-autisme",
+  async resolveTitle() {
+    const strapiData = await getData();
+    return strapiData.data?.attributes.title as string;
+  },
+});
 
-const AutismHouse = async () => {
+const Page = async () => {
   const strapiData = await getData();
   const data = strapiData.data?.attributes;
 
@@ -41,4 +45,4 @@ const AutismHouse = async () => {
   );
 };
 
-export default AutismHouse;
+export default Page;

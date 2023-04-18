@@ -17,25 +17,29 @@ import {
   TimelineItemTitle,
 } from "@design-system";
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
+import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 import { notFound } from "next/navigation";
 
 export type ParcoursProps = Next13ServerPageProps<"slug">;
 
-export const generateMetadata = async ({ params }: ParcoursProps) => {
-  const strapiData = (
-    await fetchStrapi("parcourss", {
-      filters: {
-        slug: {
-          $eq: params.slug,
+export const generateMetadata = generateMetadataFactory({
+  resolveSlug: ({ params }: ParcoursProps) => `mon-parcours/${params.slug}`,
+  async resolveTitle({ params }: ParcoursProps) {
+    const strapiData = (
+      await fetchStrapi("parcourss", {
+        filters: {
+          slug: {
+            $eq: params.slug,
+          },
         },
-      },
-    })
-  ).data?.[0];
-  return { title: strapiData?.attributes.title };
-};
+      })
+    ).data?.[0];
+    return strapiData?.attributes.title as string;
+  },
+});
 
-const Parcours = async ({ params }: ParcoursProps) => {
+const Page = async ({ params }: ParcoursProps) => {
   const currentParcours = await fetchStrapi("parcourss", {
     populate: "deep",
     filters: {
@@ -136,11 +140,11 @@ const Parcours = async ({ params }: ParcoursProps) => {
 };
 
 export async function generateStaticParams() {
-  const fiches = (await fetchStrapi("parcourss")).data ?? [];
+  const parcours = (await fetchStrapi("parcourss")).data ?? [];
 
-  return fiches.map(parcours => ({
-    slug: parcours.attributes.slug,
+  return parcours.map(p => ({
+    slug: p.attributes.slug,
   }));
 }
 
-export default Parcours;
+export default Page;

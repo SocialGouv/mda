@@ -2,18 +2,22 @@ import { SimpleContentPage } from "@components/base/SimpleContentPage";
 import { Markdown } from "@components/utils/Markdown";
 import { DownloadLink } from "@design-system";
 import { type DataWrapper } from "@mda/strapi-types";
+import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
 const getData = () => {
   return fetchStrapi("modeles-de-courrier", { populate: "files" });
 };
 
-export const generateMetadata = async () => {
-  const strapiData = await getData();
-  return { title: strapiData.data?.attributes.title };
-};
+export const generateMetadata = generateMetadataFactory({
+  resolveSlug: () => "modeles-de-courrier",
+  async resolveTitle() {
+    const strapiData = await getData();
+    return strapiData.data?.attributes.title as string;
+  },
+});
 
-const Documents = async () => {
+const Page = async () => {
   const strapiData = await getData();
   const data = strapiData.data?.attributes;
   // The cast is mandatory as the generated type is `files: MediaAttribute`
@@ -45,4 +49,4 @@ const Documents = async () => {
   );
 };
 
-export default Documents;
+export default Page;
