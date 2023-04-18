@@ -14,7 +14,7 @@ export const generateMetadata = generateMetadataFactory({
 });
 
 // TODO: handle iterate over pagination in fetch
-const Page = async () => {
+const GlossairePage = async () => {
   const items = await fetchStrapi("glossaire-items", { sort: "title", pagination: { limit: 100 } });
 
   return (
@@ -54,4 +54,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default GlossairePage;

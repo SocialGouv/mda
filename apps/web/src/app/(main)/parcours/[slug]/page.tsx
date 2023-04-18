@@ -12,7 +12,7 @@ export type EtapeDeVieProps = Next13ServerPageProps<"slug">;
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata({ params }: EtapeDeVieProps) {
-    const strapiData = (
+    const head = (
       await fetchStrapi("etape-de-vies", {
         filters: {
           slug: {
@@ -23,7 +23,7 @@ export const generateMetadata = generateMetadataFactory({
     ).data?.[0];
 
     return {
-      title: strapiData?.attributes.title as string,
+      title: head?.attributes.title as string,
       slug: `etape-de-vies/${params.slug}`,
     };
   },
@@ -37,7 +37,7 @@ export async function generateStaticParams() {
   }));
 }
 
-const Page = async ({ params }: EtapeDeVieProps) => {
+const ParcoursSlugPage = async ({ params }: EtapeDeVieProps) => {
   const [etapes, currentEtape] = await Promise.all([
     fetchStrapi("etape-de-vies").then(responses => responses.data ?? []),
     fetchStrapi("etape-de-vies", {
@@ -108,4 +108,4 @@ const Page = async ({ params }: EtapeDeVieProps) => {
   );
 };
 
-export default Page;
+export default ParcoursSlugPage;

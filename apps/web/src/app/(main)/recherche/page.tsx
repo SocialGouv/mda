@@ -14,7 +14,7 @@ export const generateMetadata = generateMetadataFactory({
 
 export type SearchProps = Next13ServerPageProps<"", "keyword">;
 
-const Page = async ({ searchParams: { keyword } }: SearchProps) => {
+const RecherchePage = async ({ searchParams: { keyword } }: SearchProps) => {
   const searchResults = keyword
     ? await searchStrapi(keyword).then(hits => hits.map(mapMeilisearchHit).filter((hit): hit is SearchHit => !!hit))
     : [];
@@ -70,4 +70,4 @@ const Page = async ({ searchParams: { keyword } }: SearchProps) => {
   );
 };
 
-export default Page;
+export default RecherchePage;

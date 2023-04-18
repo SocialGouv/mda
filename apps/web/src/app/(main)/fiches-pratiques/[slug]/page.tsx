@@ -12,7 +12,7 @@ export type FichePratiqueProps = Next13ServerPageProps<"slug">;
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata({ params }: FichePratiqueProps) {
-    const strapiData = (
+    const head = (
       await fetchStrapi("fiche-pratiques", {
         filters: {
           slug: {
@@ -23,7 +23,7 @@ export const generateMetadata = generateMetadataFactory({
     ).data?.[0];
 
     return {
-      title: strapiData?.attributes.title as string,
+      title: head?.attributes.title as string,
       slug: `fiches-pratiques/${params.slug}`,
     };
   },
@@ -37,7 +37,7 @@ export async function generateStaticParams() {
   }));
 }
 
-const Page = async ({ params }: FichePratiqueProps) => {
+const FichesPratiquesSlugPage = async ({ params }: FichePratiqueProps) => {
   const [fiches, currentFiche] = await Promise.all([
     fetchStrapi("fiche-pratiques").then(responses => responses.data ?? []),
     fetchStrapi("fiche-pratiques", {
@@ -106,4 +106,4 @@ const Page = async ({ params }: FichePratiqueProps) => {
   );
 };
 
-export default Page;
+export default FichesPratiquesSlugPage;

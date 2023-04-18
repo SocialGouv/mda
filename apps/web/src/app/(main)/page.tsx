@@ -10,13 +10,13 @@ export const generateMetadata = generateMetadataFactory({
   resolveMetadata: () => ({ title: `Accueil | ${config.siteTitle}` }),
 });
 
-const Page = async () => {
-  const strapiData = await fetchStrapi("accueil", {
+const AccueilPage = async () => {
+  const pageData = await fetchStrapi("accueil", {
     populate: "deep",
   });
 
   const widgets = await Promise.all(
-    (strapiData.data?.attributes.widgets || []).map(async widget => {
+    (pageData.data?.attributes.widgets || []).map(async widget => {
       if (widget.__component === "common.most-viewed-cards") {
         const strapiCardsData = await fetchStrapi<typeof widget.collection>(`${widget.collection}/most-viewed`);
         return {
@@ -46,4 +46,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default AccueilPage;

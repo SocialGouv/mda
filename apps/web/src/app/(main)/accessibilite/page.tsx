@@ -3,29 +3,25 @@ import { Markdown } from "@components/utils/Markdown";
 import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
-const getData = () => {
-  return fetchStrapi("accessibilite");
-};
-
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await getData();
+    const head = await fetchStrapi("accessibilite");
     return {
-      title: strapiData.data?.attributes.title as string,
+      title: head.data?.attributes.title as string,
       slug: "accessibilite",
     };
   },
 });
 
-const Page = async () => {
-  const strapiData = await getData();
-  const data = strapiData.data?.attributes;
+const AccessibilitePage = async () => {
+  const pageData = await fetchStrapi("accessibilite");
+  const accessibilite = pageData.data?.attributes;
   return (
     <SimpleContentPage>
-      {data?.title && <h1>{data.title}</h1>}
-      {data?.content && <Markdown>{data.content}</Markdown>}
+      {accessibilite?.title && <h1>{accessibilite.title}</h1>}
+      {accessibilite?.content && <Markdown>{accessibilite.content}</Markdown>}
     </SimpleContentPage>
   );
 };
 
-export default Page;
+export default AccessibilitePage;

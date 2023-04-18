@@ -5,25 +5,21 @@ import { type DataWrapper } from "@mda/strapi-types";
 import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
-const getData = () => {
-  return fetchStrapi("modeles-de-courrier", { populate: "files" });
-};
-
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await getData();
+    const head = await fetchStrapi("modeles-de-courrier");
     return {
-      title: strapiData.data?.attributes.title as string,
+      title: head.data?.attributes.title as string,
       slug: "modeles-de-courrier",
     };
   },
 });
 
-const Page = async () => {
-  const strapiData = await getData();
-  const data = strapiData.data?.attributes;
+const ModelesDeCourrierPage = async () => {
+  const pageData = await fetchStrapi("modeles-de-courrier", { populate: "files" });
+  const modelesDeCourrier = pageData.data?.attributes;
   // The cast is mandatory as the generated type is `files: MediaAttribute`
-  const files = (data?.files?.data ?? []) as Array<DataWrapper<"plugin::upload.file">>;
+  const files = (modelesDeCourrier?.files?.data ?? []) as Array<DataWrapper<"plugin::upload.file">>;
 
   const fileList = files.map(({ id, attributes: { name, ext, size, url } }) => ({
     type: ext?.substring(1).toLocaleUpperCase() || "",
@@ -35,8 +31,8 @@ const Page = async () => {
 
   return (
     <SimpleContentPage>
-      {data?.title && <h1>{data.title}</h1>}
-      {data?.content && <Markdown>{data.content}</Markdown>}
+      {modelesDeCourrier?.title && <h1>{modelesDeCourrier.title}</h1>}
+      {modelesDeCourrier?.content && <Markdown>{modelesDeCourrier.content}</Markdown>}
       {!!fileList.length && (
         <ul className="fr-mt-6w">
           {fileList.map(file => (
@@ -51,4 +47,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default ModelesDeCourrierPage;

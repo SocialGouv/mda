@@ -5,27 +5,23 @@ import { fetchStrapi } from "@services/strapi";
 
 import { GDPRButton } from "./GDPRButton";
 
-const getData = () => {
-  return fetchStrapi("politique-de-confidentialite");
-};
-
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await getData();
+    const head = await fetchStrapi("politique-de-confidentialite");
     return {
-      title: strapiData.data?.attributes.title as string,
+      title: head.data?.attributes.title as string,
       slug: "politique-de-confidentialite",
     };
   },
 });
 
-const Page = async () => {
-  const strapiData = await getData();
-  const data = strapiData.data?.attributes;
+const PolitiqueDeConfidentialitePage = async () => {
+  const pageData = await fetchStrapi("politique-de-confidentialite");
+  const politiqueDeConfidentialite = pageData.data?.attributes;
   return (
     <SimpleContentPage>
-      {data?.title && <h1>{data.title}</h1>}
-      {data?.content && <Markdown>{data.content}</Markdown>}
+      {politiqueDeConfidentialite?.title && <h1>{politiqueDeConfidentialite.title}</h1>}
+      {politiqueDeConfidentialite?.content && <Markdown>{politiqueDeConfidentialite.content}</Markdown>}
       <div className="fr-my-2w">
         <GDPRButton>Modifier les réglages</GDPRButton>
       </div>
@@ -33,4 +29,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default PolitiqueDeConfidentialitePage;

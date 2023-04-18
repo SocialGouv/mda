@@ -6,38 +6,34 @@ import { fetchStrapi } from "@services/strapi";
 
 import { FeedbackForm } from "./FeedbackForm";
 
-const getData = () => {
-  return fetchStrapi("je-donne-mon-avis", { populate: "deep" });
-};
-
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await getData();
+    const head = await fetchStrapi("je-donne-mon-avis");
     return {
-      title: strapiData.data?.attributes.title as string,
+      title: head.data?.attributes.title as string,
       slug: "je-donne-mon-avis",
     };
   },
 });
 
-const Page = async () => {
-  const strapiData = await getData();
-  const data = strapiData.data?.attributes;
+const JeDonneMonAvisPage = async () => {
+  const pageData = await fetchStrapi("je-donne-mon-avis", { populate: "deep" });
+  const jeDonneMonAvis = pageData.data?.attributes;
 
   return (
     <SimpleContentPage>
-      {data?.title && <h1>{data.title}</h1>}
-      {data?.content && <Markdown>{data?.content}</Markdown>}
-      {(data?.alerts || []).map(alert => (
+      {jeDonneMonAvis?.title && <h1>{jeDonneMonAvis.title}</h1>}
+      {jeDonneMonAvis?.content && <Markdown>{jeDonneMonAvis?.content}</Markdown>}
+      {(jeDonneMonAvis?.alerts || []).map(alert => (
         <Alert type={alert.type} key={alert.id}>
           <AlertTitle as="h2">{alert.title}</AlertTitle>
           <Markdown>{alert.content}</Markdown>
         </Alert>
       ))}
 
-      {data && <FeedbackForm {...data.feedbackForm} />}
+      {jeDonneMonAvis && <FeedbackForm {...jeDonneMonAvis.feedbackForm} />}
     </SimpleContentPage>
   );
 };
 
-export default Page;
+export default JeDonneMonAvisPage;

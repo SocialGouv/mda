@@ -3,29 +3,25 @@ import { Markdown } from "@components/utils/Markdown";
 import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
-const getData = () => {
-  return fetchStrapi("plan-du-site");
-};
-
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await getData();
+    const head = await fetchStrapi("plan-du-site");
     return {
-      title: strapiData.data?.attributes.title as string,
+      title: head.data?.attributes.title as string,
       slug: "plan-du-site",
     };
   },
 });
 
-const Page = async () => {
-  const strapiData = await getData();
-  const data = strapiData.data?.attributes;
+const PlanDuSitePage = async () => {
+  const pageData = await fetchStrapi("plan-du-site");
+  const planDuSite = pageData.data?.attributes;
   return (
     <SimpleContentPage>
-      {data?.title && <h1>{data.title}</h1>}
-      {data?.content && <Markdown>{data.content}</Markdown>}
+      {planDuSite?.title && <h1>{planDuSite.title}</h1>}
+      {planDuSite?.content && <Markdown>{planDuSite.content}</Markdown>}
     </SimpleContentPage>
   );
 };
 
-export default Page;
+export default PlanDuSitePage;

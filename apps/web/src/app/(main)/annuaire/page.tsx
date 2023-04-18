@@ -3,34 +3,30 @@ import { Markdown } from "@components/utils/Markdown";
 import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
-const getData = () => {
-  return fetchStrapi("annuaire", { populate: "links", sort: "id" });
-};
-
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await getData();
+    const head = await fetchStrapi("annuaire");
     return {
-      title: strapiData.data?.attributes.title as string,
+      title: head.data?.attributes.title as string,
       slug: "annuaire",
     };
   },
 });
 
-const Page = async () => {
-  const strapiData = await getData();
-  const data = strapiData.data?.attributes;
+const AnnuairePage = async () => {
+  const pageData = await fetchStrapi("annuaire", { populate: "links", sort: "id" });
+  const annuaire = pageData.data?.attributes;
   return (
     <SimpleContentPage>
-      {data?.title && <h1>{data.title}</h1>}
-      {data?.content && (
+      {annuaire?.title && <h1>{annuaire.title}</h1>}
+      {annuaire?.content && (
         <div className="fr-text--xl">
-          <Markdown>{data.content}</Markdown>
+          <Markdown>{annuaire.content}</Markdown>
         </div>
       )}
-      {data?.links && (
+      {annuaire?.links && (
         <ul>
-          {data.links.map((link, index) => (
+          {annuaire.links.map((link, index) => (
             <li key={index}>
               <a href={link.url} target="_blank" rel="noreferrer">
                 {link.text}
@@ -43,4 +39,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default AnnuairePage;

@@ -3,33 +3,29 @@ import { Markdown } from "@components/utils/Markdown";
 import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
-const getData = () => {
-  return fetchStrapi("mentions-legales");
-};
-
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await getData();
+    const head = await fetchStrapi("mentions-legales");
     return {
-      title: strapiData.data?.attributes.title as string,
+      title: head.data?.attributes.title as string,
       slug: "mentions-legales",
     };
   },
 });
 
-const Page = async () => {
-  const strapiData = await getData();
-  const data = strapiData.data?.attributes;
+const MentionsLegalesPage = async () => {
+  const pageData = await fetchStrapi("mentions-legales");
+  const mentionsLeages = pageData.data?.attributes;
   return (
     <SimpleContentPage>
-      {data?.title && <h1>{data.title}</h1>}
-      {data?.content && (
+      {mentionsLeages?.title && <h1>{mentionsLeages.title}</h1>}
+      {mentionsLeages?.content && (
         <div className="fr-text--xl">
-          <Markdown>{data.content}</Markdown>
+          <Markdown>{mentionsLeages.content}</Markdown>
         </div>
       )}
     </SimpleContentPage>
   );
 };
 
-export default Page;
+export default MentionsLegalesPage;
