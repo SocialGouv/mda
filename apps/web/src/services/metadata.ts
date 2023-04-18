@@ -1,6 +1,6 @@
 import { config } from "@common/config";
 import { type Metadata, type ResolvingMetadata } from "next";
-import { type TemplateString } from "next/dist/lib/metadata/types/metadata-types";
+import { type DefaultTemplateString } from "next/dist/lib/metadata/types/metadata-types";
 
 const DEFAULT_KEYWORDS = [
   "autisme",
@@ -21,7 +21,7 @@ interface ResolvedMetadatas {
   description?: string;
   keywords?: Metadata["keywords"];
   slug?: string;
-  title: TemplateString | string;
+  title: DefaultTemplateString | string;
 }
 
 interface MetadataFactoryParams {
@@ -42,18 +42,28 @@ function formatDescription(description?: string): string {
 export const generateMetadataFactory =
   ({ noCanonicalLink, resolveMetadata }: MetadataFactoryParams) =>
   async (params: unknown, parent: ResolvingMetadata): Promise<Metadata> => {
-    const { description, keywords, title, slug } = await resolveMetadata(params);
+    const { description: rawDescription, keywords, title: rawTitle, slug } = await resolveMetadata(params);
     const { alternates } = await parent;
     const baseUrl = alternates?.canonical?.url.toString() || config.siteUrl;
 
+    const description = formatDescription(rawDescription);
+    const url = slug ? new URL(`${baseUrl}/${slug}`) : new URL(baseUrl);
+    const title = typeof rawTitle === "string" ? rawTitle : rawTitle.default;
+
     return {
-      title,
-      description: formatDescription(description),
+      title: rawTitle,
+      description,
       keywords: keywords ?? DEFAULT_KEYWORDS,
+      openGraph: {
+        description,
+        title: `${title} | ${url.hostname}`,
+        url,
+        images: [new URL(`${config.siteUrl}/maison-de-lautisme.png`)],
+      },
       alternates: noCanonicalLink
         ? {}
         : {
-            canonical: slug ? `${baseUrl}/${slug}` : baseUrl,
+            canonical: url,
           },
     };
   };
