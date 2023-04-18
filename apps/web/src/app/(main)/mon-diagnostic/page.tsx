@@ -11,10 +11,12 @@ const getData = () => {
 };
 
 export const generateMetadata = generateMetadataFactory({
-  resolveSlug: () => "mon-diagnostic",
-  async resolveTitle() {
+  async resolveMetadata() {
     const strapiData = await getData();
-    return strapiData.data?.attributes.title as string;
+    return {
+      title: strapiData.data?.attributes.title as string,
+      slug: "mon-diagnostic",
+    };
   },
 });
 

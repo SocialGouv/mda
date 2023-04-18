@@ -24,8 +24,7 @@ import { notFound } from "next/navigation";
 export type ParcoursProps = Next13ServerPageProps<"slug">;
 
 export const generateMetadata = generateMetadataFactory({
-  resolveSlug: ({ params }: ParcoursProps) => `mon-parcours/${params.slug}`,
-  async resolveTitle({ params }: ParcoursProps) {
+  async resolveMetadata({ params }: ParcoursProps) {
     const strapiData = (
       await fetchStrapi("parcourss", {
         filters: {
@@ -35,9 +34,21 @@ export const generateMetadata = generateMetadataFactory({
         },
       })
     ).data?.[0];
-    return strapiData?.attributes.title as string;
+
+    return {
+      title: strapiData?.attributes.title as string,
+      slug: `mon-parcours/${params.slug}`,
+    };
   },
 });
+
+export async function generateStaticParams() {
+  const parcours = (await fetchStrapi("parcourss")).data ?? [];
+
+  return parcours.map(p => ({
+    slug: p.attributes.slug,
+  }));
+}
 
 const Page = async ({ params }: ParcoursProps) => {
   const currentParcours = await fetchStrapi("parcourss", {
@@ -138,13 +149,5 @@ const Page = async ({ params }: ParcoursProps) => {
     </section>
   );
 };
-
-export async function generateStaticParams() {
-  const parcours = (await fetchStrapi("parcourss")).data ?? [];
-
-  return parcours.map(p => ({
-    slug: p.attributes.slug,
-  }));
-}
 
 export default Page;

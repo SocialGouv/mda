@@ -17,8 +17,10 @@ const title = "Étapes de vie";
 const slug = "parcours";
 
 export const generateMetadata = generateMetadataFactory({
-  resolveSlug: () => slug,
-  resolveTitle: () => title,
+  resolveMetadata: () => ({
+    title,
+    slug,
+  }),
 });
 
 const Page = async () => {

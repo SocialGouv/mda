@@ -17,9 +17,12 @@ const title = "Mon parcours";
 const slug = "mon-parcours";
 
 export const generateMetadata = generateMetadataFactory({
-  resolveSlug: () => slug,
-  resolveTitle: () => title,
+  resolveMetadata: () => ({
+    title,
+    slug,
+  }),
 });
+
 const Page = async () => {
   const strapiData = await fetchStrapi("parcourss", { sort: "id" });
   const data = strapiData.data || [];

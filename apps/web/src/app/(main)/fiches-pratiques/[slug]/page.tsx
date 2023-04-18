@@ -11,8 +11,7 @@ import { Suspense } from "react";
 export type FichePratiqueProps = Next13ServerPageProps<"slug">;
 
 export const generateMetadata = generateMetadataFactory({
-  resolveSlug: ({ params }: FichePratiqueProps) => `fiches-pratiques/${params.slug}`,
-  async resolveTitle({ params }: FichePratiqueProps) {
+  async resolveMetadata({ params }: FichePratiqueProps) {
     const strapiData = (
       await fetchStrapi("fiche-pratiques", {
         filters: {
@@ -22,9 +21,21 @@ export const generateMetadata = generateMetadataFactory({
         },
       })
     ).data?.[0];
-    return strapiData?.attributes.title as string;
+
+    return {
+      title: strapiData?.attributes.title as string,
+      slug: `fiches-pratiques/${params.slug}`,
+    };
   },
 });
+
+export async function generateStaticParams() {
+  const fiches = (await fetchStrapi("fiche-pratiques")).data ?? [];
+
+  return fiches.map(fiche => ({
+    slug: fiche.attributes.slug,
+  }));
+}
 
 const Page = async ({ params }: FichePratiqueProps) => {
   const [fiches, currentFiche] = await Promise.all([
@@ -94,13 +105,5 @@ const Page = async ({ params }: FichePratiqueProps) => {
     </section>
   );
 };
-
-export async function generateStaticParams() {
-  const fiches = (await fetchStrapi("fiche-pratiques")).data ?? [];
-
-  return fiches.map(fiche => ({
-    slug: fiche.attributes.slug,
-  }));
-}
 
 export default Page;

@@ -49,7 +49,9 @@ declare module "@design-system/client" {
 }
 
 export const generateMetadata = generateMetadataFactory({
-  resolveTitle: () => ({ default: config.siteTitle, template: `%s | ${config.siteTitle}` }),
+  resolveMetadata: () => ({
+    title: { default: config.siteTitle, template: `%s | ${config.siteTitle}` },
+  }),
 });
 
 const Layout = async ({ children }: PropsWithChildren) => {

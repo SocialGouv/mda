@@ -8,10 +8,12 @@ const getData = () => {
 };
 
 export const generateMetadata = generateMetadataFactory({
-  resolveSlug: () => "mentions-legales",
-  async resolveTitle() {
+  async resolveMetadata() {
     const strapiData = await getData();
-    return strapiData.data?.attributes.title as string;
+    return {
+      title: strapiData.data?.attributes.title as string,
+      slug: "mentions-legales",
+    };
   },
 });
 

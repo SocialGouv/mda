@@ -11,8 +11,7 @@ import { Suspense } from "react";
 export type EtapeDeVieProps = Next13ServerPageProps<"slug">;
 
 export const generateMetadata = generateMetadataFactory({
-  resolveSlug: ({ params }: EtapeDeVieProps) => `etape-de-vies/${params.slug}`,
-  async resolveTitle({ params }: EtapeDeVieProps) {
+  async resolveMetadata({ params }: EtapeDeVieProps) {
     const strapiData = (
       await fetchStrapi("etape-de-vies", {
         filters: {
@@ -22,9 +21,21 @@ export const generateMetadata = generateMetadataFactory({
         },
       })
     ).data?.[0];
-    return strapiData?.attributes.title as string;
+
+    return {
+      title: strapiData?.attributes.title as string,
+      slug: `etape-de-vies/${params.slug}`,
+    };
   },
 });
+
+export async function generateStaticParams() {
+  const etapes = (await fetchStrapi("etape-de-vies")).data ?? [];
+
+  return etapes.map(etape => ({
+    slug: etape.attributes.slug,
+  }));
+}
 
 const Page = async ({ params }: EtapeDeVieProps) => {
   const [etapes, currentEtape] = await Promise.all([
@@ -96,13 +107,5 @@ const Page = async ({ params }: EtapeDeVieProps) => {
     </section>
   );
 };
-
-export async function generateStaticParams() {
-  const etapes = (await fetchStrapi("etape-de-vies")).data ?? [];
-
-  return etapes.map(etape => ({
-    slug: etape.attributes.slug,
-  }));
-}
 
 export default Page;

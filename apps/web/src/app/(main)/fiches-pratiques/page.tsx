@@ -17,8 +17,10 @@ const title = "Fiches pratiques";
 const slug = "fiches-pratiques";
 
 export const generateMetadata = generateMetadataFactory({
-  resolveSlug: () => slug,
-  resolveTitle: () => title,
+  resolveMetadata: () => ({
+    title,
+    slug,
+  }),
 });
 
 const Page = async () => {

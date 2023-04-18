@@ -7,7 +7,7 @@ import { fetchStrapi } from "@services/strapi";
 
 export const generateMetadata = generateMetadataFactory({
   // The layout template does not work here ?
-  resolveTitle: () => `Accueil | ${config.siteTitle}`,
+  resolveMetadata: () => ({ title: `Accueil | ${config.siteTitle}` }),
 });
 
 const Page = async () => {

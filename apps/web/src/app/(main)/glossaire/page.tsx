@@ -7,8 +7,10 @@ import clsx from "clsx";
 const title = "Glossaire";
 
 export const generateMetadata = generateMetadataFactory({
-  resolveSlug: () => "glossaire",
-  resolveTitle: () => title,
+  resolveMetadata: () => ({
+    title,
+    slug: "glossaire",
+  }),
 });
 
 // TODO: handle iterate over pagination in fetch

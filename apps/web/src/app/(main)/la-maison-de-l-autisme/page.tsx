@@ -10,10 +10,12 @@ const getData = () => {
 };
 
 export const generateMetadata = generateMetadataFactory({
-  resolveSlug: () => "la-maison-de-l-autisme",
-  async resolveTitle() {
+  async resolveMetadata() {
     const strapiData = await getData();
-    return strapiData.data?.attributes.title as string;
+    return {
+      title: strapiData.data?.attributes.title as string,
+      slug: "la-maison-de-l-autisme",
+    };
   },
 });
 

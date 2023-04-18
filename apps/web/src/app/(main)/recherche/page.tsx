@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 
 export const generateMetadata = generateMetadataFactory({
   noCanonicalLink: true,
-  resolveTitle: () => "Recherche",
+  resolveMetadata: () => ({ title: "Recherche" }),
 });
 
 export type SearchProps = Next13ServerPageProps<"", "keyword">;

@@ -11,10 +11,12 @@ const getData = () => {
 };
 
 export const generateMetadata = generateMetadataFactory({
-  resolveSlug: () => "je-donne-mon-avis",
-  async resolveTitle() {
+  async resolveMetadata() {
     const strapiData = await getData();
-    return strapiData.data?.attributes.title as string;
+    return {
+      title: strapiData.data?.attributes.title as string,
+      slug: "je-donne-mon-avis",
+    };
   },
 });
 
