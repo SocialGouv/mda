@@ -38,6 +38,7 @@ export const generateMetadata = generateMetadataFactory({
     return {
       title: head?.attributes.title as string,
       slug: `mon-parcours/${params.slug}`,
+      description: head?.attributes.description,
     };
   },
 });

@@ -25,6 +25,7 @@ export const generateMetadata = generateMetadataFactory({
     return {
       title: head?.attributes.title as string,
       slug: `fiches-pratiques/${params.slug}`,
+      description: head?.attributes.excerpt,
     };
   },
 });

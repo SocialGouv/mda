@@ -9,6 +9,7 @@ export const generateMetadata = generateMetadataFactory({
     return {
       title: head.data?.attributes.title as string,
       slug: "plan-du-site",
+      description: head.data?.attributes.content,
     };
   },
 });

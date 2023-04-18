@@ -9,6 +9,7 @@ export const generateMetadata = generateMetadataFactory({
     return {
       title: head.data?.attributes.title as string,
       slug: "mentions-legales",
+      description: head.data?.attributes.content,
     };
   },
 });

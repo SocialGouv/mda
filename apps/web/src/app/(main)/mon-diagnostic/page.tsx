@@ -12,6 +12,7 @@ export const generateMetadata = generateMetadataFactory({
     return {
       title: head.data?.attributes.title as string,
       slug: "mon-diagnostic",
+      description: head.data?.attributes.content,
     };
   },
 });
