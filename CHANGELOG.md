@@ -1,3 +1,15 @@
+# [1.17.0](https://github.com/SocialGouv/mda/compare/v1.16.0...v1.17.0) (2023-04-18)
+
+
+### Bug Fixes
+
+* **metadata:** remove unnecessary charset ([4888d50](https://github.com/SocialGouv/mda/commit/4888d50623d347ea559df6fc732127dc8c1891e7))
+
+
+### Features
+
+* **seo:** improve metadatas ([#297](https://github.com/SocialGouv/mda/issues/297)) ([ba427e5](https://github.com/SocialGouv/mda/commit/ba427e5086b9aa2f2f54cfa85b891fa437aaabd4))
+
 # [1.16.0](https://github.com/SocialGouv/mda/compare/v1.15.3...v1.16.0) (2023-04-18)
 
 
