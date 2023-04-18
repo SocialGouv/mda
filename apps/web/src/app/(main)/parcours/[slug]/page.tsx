@@ -37,7 +37,7 @@ export async function generateStaticParams() {
   }));
 }
 
-const Page = async ({ params }: EtapeDeVieProps) => {
+const ParcoursSlugPage = async ({ params }: EtapeDeVieProps) => {
   const [etapes, currentEtape] = await Promise.all([
     fetchStrapi("etape-de-vies").then(responses => responses.data ?? []),
     fetchStrapi("etape-de-vies", {
@@ -108,4 +108,4 @@ const Page = async ({ params }: EtapeDeVieProps) => {
   );
 };
 
-export default Page;
+export default ParcoursSlugPage;

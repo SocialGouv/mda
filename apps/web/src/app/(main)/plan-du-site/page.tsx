@@ -13,7 +13,7 @@ export const generateMetadata = generateMetadataFactory({
   },
 });
 
-const Page = async () => {
+const PlanDuSitePage = async () => {
   const strapiData = await fetchStrapi("plan-du-site");
   const data = strapiData.data?.attributes;
   return (
@@ -24,4 +24,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default PlanDuSitePage;

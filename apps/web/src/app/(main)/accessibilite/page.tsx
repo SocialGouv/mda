@@ -13,7 +13,7 @@ export const generateMetadata = generateMetadataFactory({
   },
 });
 
-const Page = async () => {
+const AccessibilitePage = async () => {
   const strapiData = await fetchStrapi("accessibilite");
   const data = strapiData.data?.attributes;
   return (
@@ -24,4 +24,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default AccessibilitePage;

@@ -1,6 +1,6 @@
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
 
-const Page = () => {
+const HealthZPage = () => {
   return (
     <SimpleContentPage>
       <h1>App is up and running</h1>
@@ -8,4 +8,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default HealthZPage;

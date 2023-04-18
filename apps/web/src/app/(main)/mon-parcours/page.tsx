@@ -23,7 +23,7 @@ export const generateMetadata = generateMetadataFactory({
   }),
 });
 
-const Page = async () => {
+const MonParcoursPage = async () => {
   const strapiData = await fetchStrapi("parcourss", { sort: "id" });
   const data = strapiData.data || [];
 
@@ -58,4 +58,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default MonParcoursPage;

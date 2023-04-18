@@ -15,7 +15,7 @@ export const generateMetadata = generateMetadataFactory({
   },
 });
 
-const Page = async () => {
+const ModelesDeCourrierPage = async () => {
   const strapiData = await fetchStrapi("modeles-de-courrier", { populate: "files" });
   const data = strapiData.data?.attributes;
   // The cast is mandatory as the generated type is `files: MediaAttribute`
@@ -47,4 +47,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default ModelesDeCourrierPage;

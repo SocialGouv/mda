@@ -23,7 +23,7 @@ export const generateMetadata = generateMetadataFactory({
   }),
 });
 
-const Page = async () => {
+const FichesPratiquesPage = async () => {
   const fiches = await fetchStrapi("fiche-pratiques", { populate: "recap", sort: "id" }).then(
     responses => responses.data ?? [],
   );
@@ -60,4 +60,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default FichesPratiquesPage;

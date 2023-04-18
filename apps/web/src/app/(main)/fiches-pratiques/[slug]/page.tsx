@@ -37,7 +37,7 @@ export async function generateStaticParams() {
   }));
 }
 
-const Page = async ({ params }: FichePratiqueProps) => {
+const FichesPratiquesSlugPage = async ({ params }: FichePratiqueProps) => {
   const [fiches, currentFiche] = await Promise.all([
     fetchStrapi("fiche-pratiques").then(responses => responses.data ?? []),
     fetchStrapi("fiche-pratiques", {
@@ -106,4 +106,4 @@ const Page = async ({ params }: FichePratiqueProps) => {
   );
 };
 
-export default Page;
+export default FichesPratiquesSlugPage;

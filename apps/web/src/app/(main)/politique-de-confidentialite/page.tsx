@@ -15,7 +15,7 @@ export const generateMetadata = generateMetadataFactory({
   },
 });
 
-const Page = async () => {
+const PolitiqueDeConfidentialitePage = async () => {
   const strapiData = await fetchStrapi("politique-de-confidentialite");
   const data = strapiData.data?.attributes;
   return (
@@ -29,4 +29,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default PolitiqueDeConfidentialitePage;

@@ -16,7 +16,7 @@ export const generateMetadata = generateMetadataFactory({
   },
 });
 
-const Page = async () => {
+const JeDonneMonAvisPage = async () => {
   const strapiData = await fetchStrapi("je-donne-mon-avis", { populate: "deep" });
   const data = strapiData.data?.attributes;
 
@@ -36,4 +36,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default JeDonneMonAvisPage;

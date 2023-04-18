@@ -13,7 +13,7 @@ export const generateMetadata = generateMetadataFactory({
   },
 });
 
-const Page = async () => {
+const AnnuairePage = async () => {
   const strapiData = await fetchStrapi("annuaire", { populate: "links", sort: "id" });
   const data = strapiData.data?.attributes;
   return (
@@ -39,4 +39,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default AnnuairePage;

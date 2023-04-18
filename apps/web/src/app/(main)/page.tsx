@@ -10,7 +10,7 @@ export const generateMetadata = generateMetadataFactory({
   resolveMetadata: () => ({ title: `Accueil | ${config.siteTitle}` }),
 });
 
-const Page = async () => {
+const AccueilPage = async () => {
   const strapiData = await fetchStrapi("accueil", {
     populate: "deep",
   });
@@ -46,4 +46,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default AccueilPage;

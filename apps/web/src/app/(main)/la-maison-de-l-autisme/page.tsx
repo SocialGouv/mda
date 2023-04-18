@@ -15,7 +15,7 @@ export const generateMetadata = generateMetadataFactory({
   },
 });
 
-const Page = async () => {
+const LaMasionDeLAutismePage = async () => {
   const strapiData = await fetchStrapi("maison-de-l-autisme", { populate: "sections" });
   const data = strapiData.data?.attributes;
 
@@ -43,4 +43,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default LaMasionDeLAutismePage;

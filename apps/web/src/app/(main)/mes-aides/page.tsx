@@ -15,7 +15,7 @@ export const generateMetadata = generateMetadataFactory({
   },
 });
 
-const Page = async () => {
+const MesAidesPage = async () => {
   const strapiData = await fetchStrapi("mes-aides", { populate: "sections" });
   const data = strapiData.data?.attributes;
 
@@ -43,4 +43,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default MesAidesPage;

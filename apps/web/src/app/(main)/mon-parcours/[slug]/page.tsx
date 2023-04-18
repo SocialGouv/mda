@@ -50,7 +50,7 @@ export async function generateStaticParams() {
   }));
 }
 
-const Page = async ({ params }: ParcoursProps) => {
+const MonParcoursSlugPage = async ({ params }: ParcoursProps) => {
   const currentParcours = await fetchStrapi("parcourss", {
     populate: "deep",
     filters: {
@@ -150,4 +150,4 @@ const Page = async ({ params }: ParcoursProps) => {
   );
 };
 
-export default Page;
+export default MonParcoursSlugPage;

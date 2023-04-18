@@ -16,7 +16,7 @@ export const generateMetadata = generateMetadataFactory({
   },
 });
 
-const Page = async () => {
+const MonDiagnosticPage = async () => {
   const firstQuestion = (await fetchStrapi("questions", { filters: { first: { $eq: true } }, populate: "deep,4" }))
     .data?.[0];
   if (!firstQuestion) {
@@ -54,4 +54,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default MonDiagnosticPage;

@@ -13,7 +13,7 @@ export const generateMetadata = generateMetadataFactory({
   },
 });
 
-const Page = async () => {
+const MentionsLegalesPage = async () => {
   const strapiData = await fetchStrapi("mentions-legales");
   const data = strapiData.data?.attributes;
   return (
@@ -28,4 +28,4 @@ const Page = async () => {
   );
 };
 
-export default Page;
+export default MentionsLegalesPage;
