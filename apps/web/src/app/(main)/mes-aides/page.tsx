@@ -11,6 +11,7 @@ export const generateMetadata = generateMetadataFactory({
     return {
       title: head.data?.attributes.title as string,
       slug: "mes-aides",
+      description: head.data?.attributes.content,
     };
   },
 });

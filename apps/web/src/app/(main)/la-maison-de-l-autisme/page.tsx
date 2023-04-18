@@ -11,6 +11,7 @@ export const generateMetadata = generateMetadataFactory({
     return {
       title: head.data?.attributes.title as string,
       slug: "la-maison-de-l-autisme",
+      description: head.data?.attributes.content,
     };
   },
 });

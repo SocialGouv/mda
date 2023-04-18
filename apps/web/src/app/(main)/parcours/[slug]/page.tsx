@@ -25,6 +25,7 @@ export const generateMetadata = generateMetadataFactory({
     return {
       title: head?.attributes.title as string,
       slug: `etape-de-vies/${params.slug}`,
+      description: head?.attributes.excerpt,
     };
   },
 });
