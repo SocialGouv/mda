@@ -7,21 +7,21 @@ import { GDPRButton } from "./GDPRButton";
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await fetchStrapi("politique-de-confidentialite");
+    const head = await fetchStrapi("politique-de-confidentialite");
     return {
-      title: strapiData.data?.attributes.title as string,
+      title: head.data?.attributes.title as string,
       slug: "politique-de-confidentialite",
     };
   },
 });
 
 const PolitiqueDeConfidentialitePage = async () => {
-  const strapiData = await fetchStrapi("politique-de-confidentialite");
-  const data = strapiData.data?.attributes;
+  const pageData = await fetchStrapi("politique-de-confidentialite");
+  const politiqueDeConfidentialite = pageData.data?.attributes;
   return (
     <SimpleContentPage>
-      {data?.title && <h1>{data.title}</h1>}
-      {data?.content && <Markdown>{data.content}</Markdown>}
+      {politiqueDeConfidentialite?.title && <h1>{politiqueDeConfidentialite.title}</h1>}
+      {politiqueDeConfidentialite?.content && <Markdown>{politiqueDeConfidentialite.content}</Markdown>}
       <div className="fr-my-2w">
         <GDPRButton>Modifier les réglages</GDPRButton>
       </div>

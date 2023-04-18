@@ -7,31 +7,31 @@ import { fetchStrapi } from "@services/strapi";
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await fetchStrapi("mes-aides");
+    const head = await fetchStrapi("mes-aides");
     return {
-      title: strapiData.data?.attributes.title as string,
+      title: head.data?.attributes.title as string,
       slug: "mes-aides",
     };
   },
 });
 
 const MesAidesPage = async () => {
-  const strapiData = await fetchStrapi("mes-aides", { populate: "sections" });
-  const data = strapiData.data?.attributes;
+  const pageData = await fetchStrapi("mes-aides", { populate: "sections" });
+  const mesAides = pageData.data?.attributes;
 
   return (
     <SimpleContentPage>
       <ActionsButtons />
-      {data?.title && <h1>{data.title}</h1>}
-      {data?.content && (
+      {mesAides?.title && <h1>{mesAides.title}</h1>}
+      {mesAides?.content && (
         <div className="fr-text--xl">
-          <Markdown>{data.content}</Markdown>
+          <Markdown>{mesAides.content}</Markdown>
         </div>
       )}
-      {data?.sections && (
+      {mesAides?.sections && (
         <CollapsedSectionDynamicGroup
           data={
-            data.sections.map((s, sectionIdx) => ({
+            mesAides.sections.map((s, sectionIdx) => ({
               id: `section-${sectionIdx}`,
               title: s.title,
               content: <Markdown>{s.content}</Markdown>,

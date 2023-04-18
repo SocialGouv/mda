@@ -7,31 +7,31 @@ import { fetchStrapi } from "@services/strapi";
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await fetchStrapi("maison-de-l-autisme");
+    const head = await fetchStrapi("maison-de-l-autisme");
     return {
-      title: strapiData.data?.attributes.title as string,
+      title: head.data?.attributes.title as string,
       slug: "la-maison-de-l-autisme",
     };
   },
 });
 
-const LaMasionDeLAutismePage = async () => {
-  const strapiData = await fetchStrapi("maison-de-l-autisme", { populate: "sections" });
-  const data = strapiData.data?.attributes;
+const LaMaisonDeLAutismePage = async () => {
+  const pageData = await fetchStrapi("maison-de-l-autisme", { populate: "sections" });
+  const laMaisonDeLAutisme = pageData.data?.attributes;
 
   return (
     <SimpleContentPage>
       <ActionsButtons />
-      {data?.title && <h1>{data.title}</h1>}
-      {data?.content && (
+      {laMaisonDeLAutisme?.title && <h1>{laMaisonDeLAutisme.title}</h1>}
+      {laMaisonDeLAutisme?.content && (
         <div className="fr-text--xl">
-          <Markdown>{data.content}</Markdown>
+          <Markdown>{laMaisonDeLAutisme.content}</Markdown>
         </div>
       )}
-      {data?.sections && (
+      {laMaisonDeLAutisme?.sections && (
         <CollapsedSectionDynamicGroup
           data={
-            data.sections.map((s, sectionIdx) => ({
+            laMaisonDeLAutisme.sections.map((s, sectionIdx) => ({
               id: `section-${sectionIdx}`,
               title: s.title,
               content: <Markdown>{s.content}</Markdown>,
@@ -43,4 +43,4 @@ const LaMasionDeLAutismePage = async () => {
   );
 };
 
-export default LaMasionDeLAutismePage;
+export default LaMaisonDeLAutismePage;

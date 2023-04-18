@@ -5,21 +5,21 @@ import { fetchStrapi } from "@services/strapi";
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await fetchStrapi("plan-du-site");
+    const head = await fetchStrapi("plan-du-site");
     return {
-      title: strapiData.data?.attributes.title as string,
+      title: head.data?.attributes.title as string,
       slug: "plan-du-site",
     };
   },
 });
 
 const PlanDuSitePage = async () => {
-  const strapiData = await fetchStrapi("plan-du-site");
-  const data = strapiData.data?.attributes;
+  const pageData = await fetchStrapi("plan-du-site");
+  const planDuSite = pageData.data?.attributes;
   return (
     <SimpleContentPage>
-      {data?.title && <h1>{data.title}</h1>}
-      {data?.content && <Markdown>{data.content}</Markdown>}
+      {planDuSite?.title && <h1>{planDuSite.title}</h1>}
+      {planDuSite?.content && <Markdown>{planDuSite.content}</Markdown>}
     </SimpleContentPage>
   );
 };

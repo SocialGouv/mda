@@ -24,13 +24,13 @@ export const generateMetadata = generateMetadataFactory({
 });
 
 const MonParcoursPage = async () => {
-  const strapiData = await fetchStrapi("parcourss", { sort: "id" });
-  const data = strapiData.data || [];
+  const pageData = await fetchStrapi("parcourss", { sort: "id" });
+  const data = pageData.data || [];
 
   return (
     <section className="fr-py-6w fr-py-md-12w">
       <Container>
-        <h1>Mon parcours</h1>
+        <h1>{title}</h1>
         <Grid as="ul" haveGutters>
           {data.map(parcours => (
             <GridCol as="li" key={parcours.id} lg={6}>

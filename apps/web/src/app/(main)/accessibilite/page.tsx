@@ -5,21 +5,21 @@ import { fetchStrapi } from "@services/strapi";
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const strapiData = await fetchStrapi("accessibilite");
+    const head = await fetchStrapi("accessibilite");
     return {
-      title: strapiData.data?.attributes.title as string,
+      title: head.data?.attributes.title as string,
       slug: "accessibilite",
     };
   },
 });
 
 const AccessibilitePage = async () => {
-  const strapiData = await fetchStrapi("accessibilite");
-  const data = strapiData.data?.attributes;
+  const pageData = await fetchStrapi("accessibilite");
+  const accessibilite = pageData.data?.attributes;
   return (
     <SimpleContentPage>
-      {data?.title && <h1>{data.title}</h1>}
-      {data?.content && <Markdown>{data.content}</Markdown>}
+      {accessibilite?.title && <h1>{accessibilite.title}</h1>}
+      {accessibilite?.content && <Markdown>{accessibilite.content}</Markdown>}
     </SimpleContentPage>
   );
 };

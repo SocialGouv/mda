@@ -11,12 +11,12 @@ export const generateMetadata = generateMetadataFactory({
 });
 
 const AccueilPage = async () => {
-  const strapiData = await fetchStrapi("accueil", {
+  const pageData = await fetchStrapi("accueil", {
     populate: "deep",
   });
 
   const widgets = await Promise.all(
-    (strapiData.data?.attributes.widgets || []).map(async widget => {
+    (pageData.data?.attributes.widgets || []).map(async widget => {
       if (widget.__component === "common.most-viewed-cards") {
         const strapiCardsData = await fetchStrapi<typeof widget.collection>(`${widget.collection}/most-viewed`);
         return {
