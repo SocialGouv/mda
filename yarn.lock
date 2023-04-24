@@ -15261,9 +15261,9 @@ strapi-plugin-config-sync@^1.1.1:
     redux-thunk "^2.3.0"
 
 strapi-plugin-import-export-entries@^1.18.1:
-  version "1.18.1"
-  resolved "https://registry.yarnpkg.com/strapi-plugin-import-export-entries/-/strapi-plugin-import-export-entries-1.18.1.tgz#f94b6a0282236cf0247342d14beb5c809874df06"
-  integrity sha512-snOkjVPq+wAFgUiM31+SsFIWNrNBiSknG1bPnee7mqYxu6gVb3lZ0UiHVbRy56x/y8q9OcRMg0nyorWCMw4fnA==
+  version "1.19.0"
+  resolved "https://registry.yarnpkg.com/strapi-plugin-import-export-entries/-/strapi-plugin-import-export-entries-1.19.0.tgz#7c1987acea4b542e91f1a0717c0421d62f1ced1b"
+  integrity sha512-3UInAUr6SZxJCqVZbWejqCJHvQtLXe+R+U4xA95grp6S5kF4EsMs8oDZwK3OU4GF802rlJAQV8vbl40scFp1nw==
   dependencies:
     "@monaco-editor/react" "4.4.5"
     csvtojson "2.0.10"
