@@ -4,7 +4,8 @@
   "info": {
     "singularName": "accueil",
     "pluralName": "accueils",
-    "displayName": "Accueil"
+    "displayName": "Accueil",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +16,8 @@
       "components": [
         "common.grid-tiles",
         "common.articles",
-        "common.most-viewed-cards"
+        "common.most-viewed-cards",
+        "common.carousels"
       ],
       "required": true
     }

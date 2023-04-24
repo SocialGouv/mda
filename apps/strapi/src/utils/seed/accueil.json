@@ -5,6 +5,49 @@
   "publishedAt": "2023-04-07T08:55:15.720Z",
   "widgets": [
     {
+      "__component": "common.carousels",
+      "articles": [
+        {
+          "image_position": "right",
+          "buttons_position": "left",
+          "theme": null,
+          "section": {
+            "title": "Qu'est-ce que l'autisme ?",
+            "content": "L’autisme est un trouble du neurodéveloppement (TND) précoce qui impacte les capacités de communication, les interactions sociales et les comportements des personnes. Ce trouble va souvent de pair avec d’autres manifestations : hyper ou hypo sensibilité aux sons, lumières, odeurs… , trouble du déficit de l’attention avec ou sans hyperactivité (TDA/H), troubles “dys” (dyslexie, dyspraxie, dysphasie,…).",
+            "subtitle": null
+          },
+          "image": null,
+          "buttons": [
+            {
+              "text": "Qu'est-ce que l'autisme ?",
+              "url": "/fiches-pratiques/qu-est-ce-que-l-autisme",
+              "theme": "primary",
+              "title": "En savoir plus"
+            }
+          ]
+        },
+        {
+          "image_position": "left",
+          "buttons_position": "left",
+          "theme": null,
+          "section": {
+            "title": "La Maison de l’autisme",
+            "content": "La Maison de l’autisme vous permet d’accéder facilement à des ressources fiables, des services et des conseils. La Maison de l'autisme est co-animée par trois équipes : le Groupement National des Centres Ressources Autisme (GNCRA), le Centre Ressources Autisme Île-de-France (CRAIF) et Autisme Info Service.  ",
+            "subtitle": "La Maison de l'autisme est située 10 rue Waldeck Rochet à Aubervilliers, en Seine-Saint-Denis. Plaine Commune a mis en place une signalétique au sol permettant de se repérer du métro Front Populaire (ligne 12) jusqu’à la Maison de l’autisme."
+          },
+          "image": null,
+          "buttons": [
+            {
+              "text": "En savoir plus",
+              "url": "/la-maison-de-l-autisme",
+              "theme": "primary",
+              "title": null
+            }
+          ]
+        }
+      ]
+    },
+    {
       "__component": "common.articles",
       "buttons_position": "left",
       "theme": "home",
