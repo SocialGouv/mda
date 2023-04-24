@@ -19,12 +19,14 @@ export const Carousel = ({ carousel }: CarouselProps) => {
     slidesToScroll: 1,
   };
   return (
-    <Container>
-      <Slider {...settings} className="carousel">
-        {carousel.articles?.map(article => (
-          <Article article={article} key={article.id}></Article>
-        ))}
-      </Slider>
-    </Container>
+    <div className="fr-py-6w fr-py-md-12w">
+      <Container>
+        <Slider {...settings} className="carousel">
+          {carousel.articles?.map(article => (
+            <Article article={article} key={article.id}></Article>
+          ))}
+        </Slider>
+      </Container>
+    </div>
   );
 };

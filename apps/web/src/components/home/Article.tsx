@@ -53,21 +53,28 @@ export const Article = ({ article }: ArticleProps) => {
     ) : null;
 
   return (
+    <Grid haveGutters className={theme ?? ""}>
+      {img && image_position === "left" ? (
+        <>
+          <ImageCol />
+          <SectionCol />
+        </>
+      ) : (
+        <>
+          <SectionCol />
+          <ImageCol />
+        </>
+      )}
+    </Grid>
+  );
+};
+
+export const ArticleFull = ({ article }: ArticleProps) => {
+  const { theme } = article;
+  return (
     <div className={`fr-py-6w fr-py-md-12w ${theme ?? ""}`}>
       <Container>
-        <Grid haveGutters>
-          {img && image_position === "left" ? (
-            <>
-              <ImageCol />
-              <SectionCol />
-            </>
-          ) : (
-            <>
-              <SectionCol />
-              <ImageCol />
-            </>
-          )}
-        </Grid>
+        <Article article={article}></Article>
       </Container>
     </div>
   );

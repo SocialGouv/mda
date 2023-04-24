@@ -2,7 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import { config } from "@common/config";
-import { Article } from "@components/home/Article";
+import { ArticleFull } from "@components/home/Article";
 import { Carousel } from "@components/home/Carousel";
 import { GridTiles } from "@components/home/GridTiles";
 import { MostViewedCards } from "@components/home/MostViewedCards";
@@ -37,7 +37,7 @@ const AccueilPage = async () => {
       {widgets.map(widget => {
         switch (widget.__component) {
           case "common.articles":
-            return <Article article={widget} key={widget.id} />;
+            return <ArticleFull article={widget} key={widget.id} />;
           case "common.grid-tiles":
             return <GridTiles grid={widget} key={widget.id} />;
           case "common.most-viewed-cards":
