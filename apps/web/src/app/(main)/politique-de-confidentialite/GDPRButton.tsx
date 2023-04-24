@@ -6,9 +6,5 @@ import { type PropsWithChildren } from "react";
 
 export const GDPRButton = ({ children }: PropsWithChildren) => {
   const consentModalButtonProps = useGdprStore(state => state.consentModalButtonProps);
-  return (
-    <FormButton onClick={consentModalButtonProps.onClick} {...consentModalButtonProps.nativeButtonProps}>
-      {children}
-    </FormButton>
-  );
+  return <FormButton {...consentModalButtonProps.nativeButtonProps}>{children}</FormButton>;
 };
