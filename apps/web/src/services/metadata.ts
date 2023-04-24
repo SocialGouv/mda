@@ -44,10 +44,10 @@ export const generateMetadataFactory =
   async (params: unknown, parent: ResolvingMetadata): Promise<Metadata> => {
     const { description: rawDescription, keywords, title: rawTitle, slug } = await resolveMetadata(params);
     const { alternates } = await parent;
-    const baseUrl = alternates?.canonical?.url.toString() || config.siteUrl;
+    const baseUrl = new URL(alternates?.canonical?.url.toString() || config.siteUrl);
 
     const description = formatDescription(rawDescription);
-    const url = slug ? new URL(`${baseUrl}/${slug}`) : new URL(baseUrl);
+    const url = slug ? new URL(`${baseUrl.origin}/${slug}`) : baseUrl;
     const title = typeof rawTitle === "string" ? rawTitle : rawTitle.default;
 
     return {
@@ -63,7 +63,7 @@ export const generateMetadataFactory =
       alternates: noCanonicalLink
         ? {}
         : {
-            canonical: url,
+            canonical: url.toString(),
           },
     };
   };
