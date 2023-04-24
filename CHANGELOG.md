@@ -1,3 +1,17 @@
+# [1.18.0](https://github.com/SocialGouv/mda/compare/v1.17.0...v1.18.0) (2023-04-24)
+
+
+### Bug Fixes
+
+* **carousel:** Do not use article full ([09cfa66](https://github.com/SocialGouv/mda/commit/09cfa66a4293ffdb550f06c5b76501df7b431239))
+* **seo:** canonical links ([69a0ea8](https://github.com/SocialGouv/mda/commit/69a0ea8cae2e2da9476f4f9ce83f121bac10385f))
+* **sitemap:** remove healthz ([50aaa69](https://github.com/SocialGouv/mda/commit/50aaa69586c5062d2ef61fda21759de9b87dd729))
+
+
+### Features
+
+* **home:** carousel ([#304](https://github.com/SocialGouv/mda/issues/304)) ([d98f031](https://github.com/SocialGouv/mda/commit/d98f031475eb7eb09d214a0f4bed06bd4ab3f1e3))
+
 # [1.17.0](https://github.com/SocialGouv/mda/compare/v1.16.0...v1.17.0) (2023-04-18)
 
 
