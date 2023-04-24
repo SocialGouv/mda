@@ -210,3 +210,25 @@ textarea {
     line-height: 1.75rem !important;
     margin: var(--text-spacing);
 }
+
+.carousel h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.2rem !important;
+}
+
+.carousel p, .carousel a {
+    font-size: 0.875rem !important;
+    line-height: 1rem !important;
+}
+
+.carousel .slick-arrow:before {
+    color: var(--blue-france-sun-113-625);
+}
+
+.carousel .slick-arrow:hover:before {
+    color: var(--blue-france-sun-113-625-active);
+}
+
+.carousel .slick-arrow:hover {
+    background-color: transparent !important;
+}

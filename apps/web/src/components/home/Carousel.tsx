@@ -20,7 +20,7 @@ export const Carousel = ({ carousel }: CarouselProps) => {
   };
   return (
     <Container>
-      <Slider {...settings}>
+      <Slider {...settings} className="carousel">
         {carousel.articles?.map(article => (
           <Article article={article} key={article.id}></Article>
         ))}
