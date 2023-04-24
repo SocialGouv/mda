@@ -1,4 +1,5 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import { config } from "@common/config";
 import { Article } from "@components/home/Article";
@@ -33,7 +34,6 @@ const AccueilPage = async () => {
 
   return (
     <section>
-      <Carousel></Carousel>
       {widgets.map(widget => {
         switch (widget.__component) {
           case "common.articles":
@@ -42,6 +42,8 @@ const AccueilPage = async () => {
             return <GridTiles grid={widget} key={widget.id} />;
           case "common.most-viewed-cards":
             return <MostViewedCards cards={widget.cards} section={widget} key={widget.id} />;
+          case "common.carousels":
+            return <Carousel carousel={widget} key={widget.id}></Carousel>;
           default:
             return null;
         }
