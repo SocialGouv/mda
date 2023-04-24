@@ -1,5 +1,9 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import { config } from "@common/config";
 import { Article } from "@components/home/Article";
+import { Carousel } from "@components/home/Carousel";
 import { GridTiles } from "@components/home/GridTiles";
 import { MostViewedCards } from "@components/home/MostViewedCards";
 import { generateMetadataFactory } from "@services/metadata";
@@ -38,6 +42,8 @@ const AccueilPage = async () => {
             return <GridTiles grid={widget} key={widget.id} />;
           case "common.most-viewed-cards":
             return <MostViewedCards cards={widget.cards} section={widget} key={widget.id} />;
+          case "common.carousels":
+            return <Carousel carousel={widget} key={widget.id}></Carousel>;
           default:
             return null;
         }

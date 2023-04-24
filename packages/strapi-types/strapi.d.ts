@@ -722,13 +722,19 @@ export interface ApiAccueilAccueil extends SingleTypeSchema {
     singularName: 'accueil';
     pluralName: 'accueils';
     displayName: 'Accueil';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     widgets: DynamicZoneAttribute<
-      ['common.grid-tiles', 'common.articles', 'common.most-viewed-cards']
+      [
+        'common.grid-tiles',
+        'common.articles',
+        'common.most-viewed-cards',
+        'common.carousels'
+      ]
     > &
       RequiredAttribute;
     createdAt: DateTimeAttribute;
@@ -1446,6 +1452,15 @@ export interface CommonArticles extends ComponentSchema {
   };
 }
 
+export interface CommonCarousels extends ComponentSchema {
+  info: {
+    displayName: 'Carousels';
+  };
+  attributes: {
+    articles: ComponentAttribute<'common.articles', true>;
+  };
+}
+
 export interface CommonGridTiles extends ComponentSchema {
   info: {
     displayName: 'GridTiles';
@@ -1650,7 +1665,66 @@ export interface CommonTiles extends ComponentSchema {
       }>;
     description: TextAttribute;
     picto: EnumerationAttribute<
-      ['documentDownload', 'health', 'humanCooperation', 'map']
+      [
+        'cityHall',
+        'factory',
+        'house',
+        'nuclearPlant',
+        'school',
+        'application',
+        'avatar',
+        'calendar',
+        'coding',
+        'dataVisualization',
+        'internet',
+        'mailSend',
+        'search',
+        'contract',
+        'documentDownload',
+        'documentSignature',
+        'document',
+        'drivingLicence',
+        'nationalIdentityCard',
+        'passport',
+        'taxStamp',
+        'vehicleRegistration',
+        'environment',
+        'food',
+        'grocery',
+        'humanCooperation',
+        'leaf',
+        'moon',
+        'mountain',
+        'sun',
+        'tree',
+        'health',
+        'hospital',
+        'vaccine',
+        'virus',
+        'firefighter',
+        'gendarmerie',
+        'justice',
+        'money',
+        'police',
+        'book',
+        'community',
+        'culture',
+        'digitalArt',
+        'paint',
+        'airport',
+        'locationFrance',
+        'luggage',
+        'map',
+        'connectionLost',
+        'error',
+        'information',
+        'notification',
+        'padlock',
+        'success',
+        'system',
+        'technicalError',
+        'warning'
+      ]
     > &
       RequiredAttribute &
       DefaultTo<'documentDownload'>;
@@ -1852,6 +1926,7 @@ declare global {
       'api::question.question': ApiQuestionQuestion;
       'common.alerts': CommonAlerts;
       'common.articles': CommonArticles;
+      'common.carousels': CommonCarousels;
       'common.grid-tiles': CommonGridTiles;
       'common.icons': CommonIcons;
       'common.inputs': CommonInputs;
