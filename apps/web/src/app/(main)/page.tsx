@@ -1,5 +1,8 @@
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import { config } from "@common/config";
 import { Article } from "@components/home/Article";
+import { Carousel } from "@components/home/Carousel";
 import { GridTiles } from "@components/home/GridTiles";
 import { MostViewedCards } from "@components/home/MostViewedCards";
 import { generateMetadataFactory } from "@services/metadata";
@@ -30,6 +33,7 @@ const AccueilPage = async () => {
 
   return (
     <section>
+      <Carousel></Carousel>
       {widgets.map(widget => {
         switch (widget.__component) {
           case "common.articles":

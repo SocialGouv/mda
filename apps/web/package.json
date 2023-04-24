@@ -30,6 +30,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
     "react-markdown": "^8.0.7",
+    "react-responsive-carousel": "^3.2.23",
     "rehype-raw": "^6.1.1",
     "simple-zustand-devtools": "^1.1.0",
     "zod": "^3.21.4",
