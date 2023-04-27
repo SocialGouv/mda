@@ -17,11 +17,14 @@ const getBody = async (rawrequest: Context["req"]) => {
 };
 
 /**
- * This will perform the search on melisearch
- * Params need to be passed in the url search
+ * This controller is responsible of searching on meilisearch
  */
 const searchController = () => {
   return {
+    /**
+     * This will perform the search on melisearch
+     * Params need to be passed in the url search
+     */
     async search(ctx: Context) {
       const params = ctxParams(ctx);
 
