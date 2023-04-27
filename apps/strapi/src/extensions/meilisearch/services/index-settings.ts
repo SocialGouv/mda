@@ -10,7 +10,7 @@ type MeilisearchIndexSettings = DbEntry<"plugin::meilisearch.meilisearch-index">
   };
 };
 
-const indexSettingsService = ({ strapi: { entityService } }: { strapi: Strapi }) => {
+const indexSettings = ({ strapi: { entityService } }: { strapi: Strapi }) => {
   const { apiKey, host } = strapi.config.get("plugin.meilisearch");
 
   const client = new MeiliSearch({
@@ -53,4 +53,4 @@ const indexSettingsService = ({ strapi: { entityService } }: { strapi: Strapi })
   };
 };
 
-export default indexSettingsService;
+export default indexSettings;

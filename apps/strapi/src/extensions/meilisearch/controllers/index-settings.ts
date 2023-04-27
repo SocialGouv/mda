@@ -6,7 +6,7 @@ import { ctxParams } from "../../../utils/ctxParamsHelper";
 /**
  * This controller is responsible of the settings CRUD
  */
-const indexSettingsController = ({ strapi }: { strapi: Strapi }) => {
+const indexSettings = ({ strapi }: { strapi: Strapi }) => {
   const plugin = strapi.plugin("meilisearch");
   return {
     /**
@@ -46,4 +46,4 @@ const indexSettingsController = ({ strapi }: { strapi: Strapi }) => {
   };
 };
 
-export default indexSettingsController;
+export default indexSettings;

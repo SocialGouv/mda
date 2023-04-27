@@ -19,7 +19,7 @@ const getBody = async (rawrequest: Context["req"]) => {
 /**
  * This controller is responsible of searching on meilisearch
  */
-const searchController = () => {
+const search = () => {
   return {
     /**
      * This will perform the search on melisearch
@@ -64,4 +64,4 @@ const searchController = () => {
   };
 };
 
-export default searchController;
+export default search;

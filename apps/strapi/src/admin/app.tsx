@@ -15,7 +15,6 @@ const App = {
       to: `/settings/${pluginId}`,
       Component: async () => import(/* webpackChunkName: "meilisearch-settings" */ "./extensions/meilisearch/Page"),
     });
-    return;
   },
 };
 
