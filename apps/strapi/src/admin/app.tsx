@@ -13,7 +13,7 @@ const App = {
       },
       id: `${pluginId}-page`,
       to: `/settings/${pluginId}`,
-      Component: async () => import(/* webpackChunkName: "meilisearch-settings" */ "./extensions/meilisearch/settings"),
+      Component: async () => import(/* webpackChunkName: "meilisearch-settings" */ "./extensions/meilisearch/Page"),
     });
     return;
   },

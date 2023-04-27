@@ -31,6 +31,7 @@
     "@socialgouv/releaserc": "^1.1.1",
     "@tsconfig/node18": "^2.0.0",
     "@types/node": "^18.16.0",
+    "@types/react-router-dom": "^5.3.3",
     "dotenv": "^16.0.3",
     "semantic-release": "^21.0.1",
     "ts-node": "^10.9.1",

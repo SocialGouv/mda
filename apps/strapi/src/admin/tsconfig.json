@@ -6,8 +6,8 @@
   },
   "include": [
     "../plugins/**/admin/src/**/*",
-    "./**/*"
-, "extensions"  ],
+    "./"
+  ],
   "exclude": [
     "node_modules/",
     "build/",
