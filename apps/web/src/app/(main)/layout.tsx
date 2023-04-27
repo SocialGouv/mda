@@ -13,6 +13,7 @@ import { BreadcrumbDynamic } from "@components/base/client/BreadcrumbDynamic";
 import { GdprStandaloneButton } from "@components/base/client/GdprStandaloneButton";
 import { Header } from "@components/base/client/Header";
 import { MdaConsentBanner } from "@components/base/client/MdaConsentBanner";
+import { ThemeSwitcher } from "@components/base/client/ThemeSwitcher";
 import { defaultColorScheme } from "@components/utils/client/defaultColorScheme";
 import { Matomo } from "@components/utils/client/Matomo";
 import { Markdown } from "@components/utils/Markdown";
@@ -171,6 +172,9 @@ const Layout = async ({ children }: PropsWithChildren) => {
               </FooterBottomItem>
               <FooterBottomItem>
                 <GdprStandaloneButton />
+              </FooterBottomItem>
+              <FooterBottomItem>
+                <ThemeSwitcher />
               </FooterBottomItem>
             </FooterBottom>
           </Footer>
