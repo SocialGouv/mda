@@ -18,8 +18,8 @@ import {
   IntegerAttribute,
   DecimalAttribute,
   SetMinMax,
-  TextAttribute,
   SingleTypeSchema,
+  TextAttribute,
   RichTextAttribute,
   DynamicZoneAttribute,
   ComponentAttribute,
@@ -490,6 +490,34 @@ export interface PluginUploadFolder extends CollectionTypeSchema {
       PrivateAttribute;
     updatedBy: RelationAttribute<
       'plugin::upload.folder',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
+export interface PluginMeilisearchMeilisearchIndex extends SingleTypeSchema {
+  info: {
+    singularName: 'meilisearch-index';
+    pluralName: 'meilisearch-indexes';
+    displayName: 'Meilisearch Indexes';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    settings: JSONAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'plugin::meilisearch.meilisearch-index',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'plugin::meilisearch.meilisearch-index',
       'oneToOne',
       'admin::user'
     > &
@@ -1437,6 +1465,12 @@ export interface CommonArticles extends ComponentSchema {
     description: '';
   };
   attributes: {
+    title: StringAttribute &
+      PrivateAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
     section: ComponentAttribute<'common.sections'>;
     image: MediaAttribute;
     image_position: EnumerationAttribute<['right', 'left']> &
@@ -1901,6 +1935,7 @@ declare global {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
+      'plugin::meilisearch.meilisearch-index': PluginMeilisearchMeilisearchIndex;
       'plugin::slugify.slug': PluginSlugifySlug;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;

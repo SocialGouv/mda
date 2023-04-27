@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "meilisearch_indexes",
+  "info": {
+    "singularName": "meilisearch-index",
+    "pluralName": "meilisearch-indexes",
+    "displayName": "Meilisearch Indexes"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "settings": {
+      "type": "json"
+    }
+  }
+}
