@@ -15,7 +15,7 @@
     "generateEnvDeclaration": "ts-node --project scripts/tsconfig.json scripts/generateEnvDeclaration.ts"
   },
   "dependencies": {
-    "@codegouvfr/react-dsfr": "^0.51.0",
+    "@codegouvfr/react-dsfr": "^0.52.0",
     "@headlessui/react": "^1.7.14",
     "@hookform/resolvers": "^3.1.0",
     "@socialgouv/matomo-next": "^1.6.1",
