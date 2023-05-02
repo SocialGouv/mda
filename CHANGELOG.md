@@ -1,3 +1,11 @@
+# [1.19.0](https://github.com/SocialGouv/mda/compare/v1.18.0...v1.19.0) (2023-05-02)
+
+
+### Features
+
+* add Theme switcher ([#247](https://github.com/SocialGouv/mda/issues/247)) ([a6b998d](https://github.com/SocialGouv/mda/commit/a6b998d8388c6a89635abc6c052c8be03cf2920d))
+* **meilisearch:** search config ([#308](https://github.com/SocialGouv/mda/issues/308)) ([6c9d9ee](https://github.com/SocialGouv/mda/commit/6c9d9ee5fa04f5b2b9575baffcb764d47de297c0))
+
 # [1.18.0](https://github.com/SocialGouv/mda/compare/v1.17.0...v1.18.0) (2023-04-24)
 
 
