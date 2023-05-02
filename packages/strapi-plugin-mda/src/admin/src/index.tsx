@@ -13,7 +13,6 @@ const name = pluginPkg.strapi.name;
 
 const plugin: StrapiPlugin = {
   register(app) {
-    console.log("MDA === register", app);
     app.addMenuLink({
       to: `/plugins/${pluginId}`,
       icon: PluginIcon,
@@ -22,7 +21,7 @@ const plugin: StrapiPlugin = {
         defaultMessage: name,
       },
       Component: async () => {
-        const component = await import(/* webpackChunkName: "mda-[request]" */ "./pages/App");
+        const component = await import(/* webpackChunkName: "mda-[request]" */ "./pages/Diagnostic/Page");
 
         return component as unknown as FC;
       },
@@ -43,7 +42,6 @@ const plugin: StrapiPlugin = {
 
     app.registerPlugin(plugin);
   },
-
   bootstrap(app) {
     console.log("MDA === bootstrap", app);
   },

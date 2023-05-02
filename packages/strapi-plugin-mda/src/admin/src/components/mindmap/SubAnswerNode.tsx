@@ -1,13 +1,10 @@
 import "./SubAnswerNode.css";
 
-import { type Diag } from "@mda/strapi-types";
-import React from "react";
-
 import { NodeContent } from "./NodeContent";
-import { type MindmapNode } from "./types";
+import { type MindmapNode, type NodeData } from "./types";
 
-export const SubAnswerNode: MindmapNode<Diag.SubAnswer> = ({ data, id, selected }) => {
-  return <NodeContent text={data.content} id={id} selected={selected} />;
+export const SubAnswerNode: MindmapNode<NodeData> = ({ data, id, selected }) => {
+  return <NodeContent data={data} id={id} selected={selected} />;
 };
 
 SubAnswerNode.nodeName = "mda-subanswer";

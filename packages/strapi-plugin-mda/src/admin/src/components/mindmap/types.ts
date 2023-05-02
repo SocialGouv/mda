@@ -1,7 +1,15 @@
-import { type Diag } from "@mda/strapi-types";
 import { type NodeProps } from "reactflow";
 
-export interface MindmapNode<T extends Diag.Answer | Diag.Question | Diag.SubAnswer> {
+export interface RootNodeData {
+  content: string;
+}
+
+export interface NodeData extends RootNodeData {
+  displayInfoUp: boolean;
+  info?: string;
+}
+
+export interface MindmapNode<T extends RootNodeData> {
   (props: NodeProps<T>): JSX.Element;
   nodeName: string;
 }

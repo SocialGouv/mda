@@ -20,3 +20,19 @@
 .react-flow__node-textNode.selectable:focus-visible {
     box-shadow: 0 0 0 0.5px #1a192b;
 }
+
+.mda-control {
+    color: #eee;
+}
+
+.mda-control.mda-control--answer {
+    background-color: #107896;
+}
+
+.mda-control.mda-control--question {
+    background-color: #ad2a1a;
+}
+
+.mda-control.mda-control--subanswer {
+    background-color: #093145;
+}

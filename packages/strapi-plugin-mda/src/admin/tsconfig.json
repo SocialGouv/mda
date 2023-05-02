@@ -2,6 +2,7 @@
   "extends": "@strapi/typescript-utils/tsconfigs/admin",
   "compilerOptions": {
     "strict": true,
+    "jsx": "react-jsx"
   },
   "include": [
     "./",

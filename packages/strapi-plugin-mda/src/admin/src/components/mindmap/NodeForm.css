@@ -1,0 +1,65 @@
+.node-form-mda__input div,
+.node-form-mda__input label {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.node-form-mda__input label {
+  font-size: 0.75rem;
+  line-height: 1.33;
+  font-weight: 600;
+  color: #32324d;
+  user-select: none;
+}
+
+
+
+/* Cannot edit strapi textarea ???? */
+.node-form-mda__input textarea {
+  width: 100%;
+  resize: none;
+  background-color: transparent;
+  border: none;
+  height: 150px;
+  border: 1px solid #dcdce4;
+  border-radius: 4px;
+  padding: 0.65625rem 16px;
+  font-size: 0.875rem;
+  margin-bottom: 15px
+}
+
+.node-form-mda__input .node-form-mda__input--error {
+  outline: 1px solid #d02b20;
+}
+
+.node-form-mda__input textarea:focus-visible {
+  outline: 3px solid #4945ff;
+  outline-offset: 0;
+}
+
+.node-form-mda__input .node-form-mda__input--error:focus-visible {
+  outline: 3px solid #d02b20;
+}
+
+@media (prefers-color-scheme: dark) {
+  .node-form-mda__input label {
+    color: #ffffff;
+  }
+
+  .node-form-mda__input textarea {
+    border: 1px solid #4a4a6a;
+    color : #ffffff
+  }
+
+  .node-form-mda__input textarea:focus-visible {
+    outline-color: #7b79ff;
+  }
+
+  .node-form-mda__input .node-form-mda__input--error {
+    outline: 1px solid #ee5e52;
+  }
+
+  .node-form-mda__input .node-form-mda__input--error:focus-visible {
+    outline: 3px solid #ee5e52;
+  }
+}
