@@ -20,7 +20,7 @@ export const ThemeSwitcherButton = () => {
       className="fr-icon-theme-fill fr-link--icon-left fr-footer__bottom-link"
       onClick={openThemeSwitcherModal}
     >
-      Paramètres d'affichage
+      Thème
     </button>
   );
 };
