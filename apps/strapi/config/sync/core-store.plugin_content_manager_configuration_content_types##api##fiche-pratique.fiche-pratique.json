@@ -23,8 +23,8 @@
       "title": {
         "edit": {
           "label": "title",
-          "description": "",
-          "placeholder": "",
+          "description": "Le titre de la fiche. Exemple : Ma fiche",
+          "placeholder": "Le titre de la fiche. Exemple : Ma fiche",
           "visible": true,
           "editable": true
         },
@@ -37,7 +37,7 @@
       "recap": {
         "edit": {
           "label": "recap",
-          "description": "",
+          "description": "Le récapitulatif de la fiche",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -51,7 +51,7 @@
       "section": {
         "edit": {
           "label": "section",
-          "description": "",
+          "description": "Les sections de la fiche",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -65,8 +65,8 @@
       "slug": {
         "edit": {
           "label": "slug",
-          "description": "",
-          "placeholder": "",
+          "description": "L'identifiant url de la fiche. Exemple ma-fiche",
+          "placeholder": "L'identifiant url de la fiche. Exemple ma-fiche",
           "visible": true,
           "editable": true
         },
@@ -79,8 +79,8 @@
       "excerpt": {
         "edit": {
           "label": "excerpt",
-          "description": "",
-          "placeholder": "",
+          "description": "Aperçu de la fiche - Nous vous conseillons de renseigner les 200 premiers caractères du chapô",
+          "placeholder": "Aperçu de la fiche - Nous vous conseillons de renseigner les 200 premiers caractères du chapô",
           "visible": true,
           "editable": true
         },
@@ -130,6 +130,16 @@
         [
           {
             "name": "title",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "slug",
+            "size": 6
+          },
+          {
+            "name": "excerpt",
             "size": 6
           }
         ],
@@ -143,16 +153,6 @@
           {
             "name": "section",
             "size": 12
-          }
-        ],
-        [
-          {
-            "name": "slug",
-            "size": 6
-          },
-          {
-            "name": "excerpt",
-            "size": 6
           }
         ]
       ]

@@ -1,65 +1,7 @@
-import { type Context } from "koa";
-import { parse } from "querystring";
-
-import { ctxParams } from "../../utils/ctxParamsHelper";
-
-/**
- * This is supposed to work with a POST request but for some reason
- * Promise is never resolved
- */
-const getBody = async (rawrequest: Context["req"]) => {
-  return new Promise((resolve, reject) => {
-    let bodycontent = "";
-    rawrequest.on("data", chunk => (bodycontent += chunk.toString()));
-    rawrequest.on("end", () => resolve(bodycontent));
-    rawrequest.on("error", err => reject(err));
-  });
-};
-
-/**
- * This will perform the search on melisearch
- * Params need to be passed in the url search
- */
-const searchController = () => {
-  return {
-    async search(ctx: Context) {
-      const params = ctxParams(ctx);
-
-      try {
-        /**
-         * This is because fetch is not in node typings yet
-         * And we don't want to import lib.dom.d.ts
-         */
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        const res = await fetch(`${process.env.MEILISEARCH_HOST}/indexes/pages/search`, {
-          method: "POST",
-          body: JSON.stringify(parse(params.toString())),
-          headers: {
-            Authorization: `Bearer ${process.env.MEILISEARCH_MASTER_KEY}`,
-            "Content-Type": "application/json",
-          },
-        });
-
-        if (!res.ok) {
-          ctx.status = res.status;
-          ctx.body = {
-            message: res.statusText,
-          };
-          return;
-        }
-
-        ctx.send(await res.json());
-      } catch (err) {
-        console.error(err);
-        ctx.status = 500;
-        ctx.body = {
-          message: "Internal Server Error",
-        };
-      }
-    },
-  };
-};
+import contentTypes from "./content-types";
+import indexSettingsController from "./controllers/index-settings";
+import searchController from "./controllers/search";
+import indexSettingsService from "./services/index-settings";
 
 /**
  * This extension creates the /meilisearch/search PUBLIC route
@@ -67,7 +9,13 @@ const searchController = () => {
  * not have credentials on front end
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const meiliSearchextension = (plugin: any) => {
+const strapiServer = (plugin: any) => {
+  plugin.contentTypes = {
+    ...plugin.contentTypes,
+    ...contentTypes,
+  };
+
+  // SEARCH
   plugin.controllers.searchController = searchController;
 
   plugin.routes.push({
@@ -79,7 +27,23 @@ const meiliSearchextension = (plugin: any) => {
     },
   });
 
+  // INDEXES
+  plugin.controllers.indexSettingsController = indexSettingsController;
+  plugin.services.indexSettingsService = indexSettingsService;
+
+  plugin.routes.push({
+    method: "GET",
+    path: "/index/settings",
+    handler: "indexSettingsController.fetch",
+  });
+
+  plugin.routes.push({
+    method: "PUT",
+    path: "/index/settings",
+    handler: "indexSettingsController.update",
+  });
+
   return plugin;
 };
 
-export default meiliSearchextension;
+export default strapiServer;

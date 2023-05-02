@@ -2,11 +2,13 @@
   "key": "plugin_meilisearch_meilisearch_listened_content_types",
   "value": [
     "api::annuaire.annuaire",
+    "api::etape-de-vie.etape-de-vie",
     "api::fiche-pratique.fiche-pratique",
     "api::glossaire-item.glossaire-item",
     "api::je-donne-mon-avis.je-donne-mon-avis",
     "api::maison-de-l-autisme.maison-de-l-autisme",
     "api::mes-aides.mes-aides",
+    "api::modeles-de-courrier.modeles-de-courrier",
     "api::parcours.parcours"
   ],
   "type": "object",

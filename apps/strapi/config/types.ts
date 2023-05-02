@@ -146,6 +146,12 @@ export interface DatabaseConfig {
   };
 }
 
+export interface MatomoConfig {
+  siteId: string;
+  token: string;
+  url: string;
+}
+
 export interface CronTask {
   options: {
     /**

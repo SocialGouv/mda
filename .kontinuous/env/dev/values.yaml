@@ -1,4 +1,5 @@
-# strapi:
+strapi:
+  host: "strapi-{{ .Values.global.host }}"
 #   ~needs: [build-strapi, strapi-import-content]
 
 web:
@@ -17,11 +18,12 @@ jobs:
     build-web:
       with:
         buildArgs:
-          PRODUCTION: "true"
+          NEXT_PUBLIC_STRAPI_API_URL: "https://strapi-{{ .Values.global.host }}"
     create-db:
       use: create-db
     build-strapi:
-      ~needs: [create-db]
+      ~needs:
+        - create-db
     # strapi-import-content:
     #   namespace: "{{ .Values.global.namespace }}"
     #   ~needs: [build-strapi]

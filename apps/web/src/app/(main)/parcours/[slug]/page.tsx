@@ -3,12 +3,42 @@ import { ActionsButtons } from "@components/base/client/ActionsButtons";
 import { Markdown } from "@components/utils/Markdown";
 import { Container, Grid, GridCol, SideMenuLink } from "@design-system";
 import { CollapsedSectionDynamicGroup, SideMenuDynamic } from "@design-system/client";
+import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
-export type FichePratiqueProps = Next13ServerPageProps<"slug">;
-const FichePratique = async ({ params }: FichePratiqueProps) => {
+export type EtapeDeVieProps = Next13ServerPageProps<"slug">;
+
+export const generateMetadata = generateMetadataFactory({
+  async resolveMetadata({ params }: EtapeDeVieProps) {
+    const head = (
+      await fetchStrapi("etape-de-vies", {
+        filters: {
+          slug: {
+            $eq: params.slug,
+          },
+        },
+      })
+    ).data?.[0];
+
+    return {
+      title: head?.attributes.title as string,
+      slug: `etape-de-vies/${params.slug}`,
+      description: head?.attributes.excerpt,
+    };
+  },
+});
+
+export async function generateStaticParams() {
+  const etapes = (await fetchStrapi("etape-de-vies")).data ?? [];
+
+  return etapes.map(etape => ({
+    slug: etape.attributes.slug,
+  }));
+}
+
+const ParcoursSlugPage = async ({ params }: EtapeDeVieProps) => {
   const [etapes, currentEtape] = await Promise.all([
     fetchStrapi("etape-de-vies").then(responses => responses.data ?? []),
     fetchStrapi("etape-de-vies", {
@@ -79,12 +109,4 @@ const FichePratique = async ({ params }: FichePratiqueProps) => {
   );
 };
 
-export async function generateStaticParams() {
-  const etapes = (await fetchStrapi("etape-de-vies")).data ?? [];
-
-  return etapes.map(fiche => ({
-    slug: fiche.attributes.slug,
-  }));
-}
-
-export default FichePratique;
+export default ParcoursSlugPage;

@@ -23,8 +23,8 @@
       "title": {
         "edit": {
           "label": "title",
-          "description": "",
-          "placeholder": "",
+          "description": "Le titre de la Section. Exemple : Bienvenue !",
+          "placeholder": "Le titre de la Section. Exemple : Bienvenue !",
           "visible": true,
           "editable": true
         },
@@ -34,10 +34,24 @@
           "sortable": true
         }
       },
+      "subtitle": {
+        "edit": {
+          "label": "subtitle",
+          "description": "Le sous titre de la section. Ne s'affiche que dans les articles",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "subtitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "content": {
         "edit": {
           "label": "content",
-          "description": "",
+          "description": "Le contenu de la section. Le markdown est supporté et vous pouvez intégrer des fichiers images, pdf et vidéos à l'aide du bouton image dans les outils ci-dessus",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -52,13 +66,20 @@
     "layouts": {
       "list": [
         "id",
-        "title"
+        "title",
+        "subtitle"
       ],
       "edit": [
         [
           {
             "name": "title",
-            "size": 6
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "subtitle",
+            "size": 12
           }
         ],
         [

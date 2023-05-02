@@ -1,3 +1,4 @@
+import { Markdown } from "@components/utils/Markdown";
 import {
   Card,
   CardBody,
@@ -9,71 +10,52 @@ import {
   GridCol,
 } from "@design-system";
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
+import { generateMetadataFactory } from "@services/metadata";
+import { fetchStrapi } from "@services/strapi";
 
-const MonParcours = () => {
+const title = "Mon parcours";
+const slug = "mon-parcours";
+
+export const generateMetadata = generateMetadataFactory({
+  resolveMetadata: () => ({
+    title,
+    slug,
+  }),
+});
+
+const MonParcoursPage = async () => {
+  const pageData = await fetchStrapi("parcourss", { sort: "id" });
+  const data = pageData.data || [];
+
   return (
     <section className="fr-py-6w fr-py-md-12w">
       <Container>
-        <h1>Mon parcours</h1>
+        <h1>{title}</h1>
         <Grid as="ul" haveGutters>
-          <GridCol as="li" lg={6}>
-            <Card isEnlargeLink>
-              <CardBody>
-                <CardBodyContent>
-                  <CardBodyContentTitle titleAs="h3">
-                    <NextLinkOrA href="/mon-parcours/personne-autiste">Je suis une personne autiste</NextLinkOrA>
-                  </CardBodyContentTitle>
-                  <CardBodyContentDescription>
-                    En tant que personne autiste, plusieurs étapes clés sont à réaliser pour mener votre vie de la
-                    manière la plus autonome possible. Quelque soit votre situation, retrouvez dans cette rubrique des
-                    contenus et outils de guidance pour vous aider à y voir plus clair sur le déroulé de ces grandes
-                    étapes.
-                  </CardBodyContentDescription>
-                </CardBodyContent>
-              </CardBody>
-            </Card>
-          </GridCol>
-          <GridCol as="li" lg={6}>
-            <Card isEnlargeLink>
-              <CardBody>
-                <CardBodyContent>
-                  <CardBodyContentTitle titleAs="h3">
-                    <NextLinkOrA href="/mon-parcours/parent-personne-aidante">
-                      Je suis un parent ou un aidant
-                    </NextLinkOrA>
-                  </CardBodyContentTitle>
-                  <CardBodyContentDescription>
-                    En tant que parent ou proche aidant, plusieurs étapes clés sont à réaliser pour accompagner votre
-                    proche à mener sa vie de la manière la plus autonome possible. Quelque soit votre situation,
-                    retrouvez dans cette rubrique des contenus et outils de guidance pour vous aider à y voir plus clair
-                    sur le déroulé de ces grandes étapes.
-                  </CardBodyContentDescription>
-                </CardBodyContent>
-              </CardBody>
-            </Card>
-          </GridCol>
-          <GridCol as="li" lg={6}>
-            <Card isEnlargeLink>
-              <CardBody>
-                <CardBodyContent>
-                  <CardBodyContentTitle titleAs="h3">
-                    <NextLinkOrA href="/mon-parcours/professionnel-de-sante">
-                      Je suis un professionnel de santé ou du médico-social
-                    </NextLinkOrA>
-                  </CardBodyContentTitle>
-                  <CardBodyContentDescription>
-                    Cette rubrique du site internet est en cours de construction pour le moment. Si vous êtes un
-                    professionnel de santé ou du médico-social, partagez-nous vos attentes en donnant votre avis via le
-                    formulaire "Je donne mon avis".
-                  </CardBodyContentDescription>
-                </CardBodyContent>
-              </CardBody>
-            </Card>
-          </GridCol>
+          {data.map(parcours => (
+            <GridCol as="li" key={parcours.id} lg={6}>
+              <Card isEnlargeLink>
+                <CardBody>
+                  <CardBodyContent>
+                    <CardBodyContentTitle titleAs="h3">
+                      <NextLinkOrA href={`/${slug}/${parcours.attributes.slug}`}>
+                        {parcours.attributes.title}
+                      </NextLinkOrA>
+                    </CardBodyContentTitle>
+                    <CardBodyContentDescription>
+                      <Markdown disallowedElements={["a"]} unwrapDisallowed={true}>
+                        {parcours.attributes.description}
+                      </Markdown>
+                    </CardBodyContentDescription>
+                  </CardBodyContent>
+                </CardBody>
+              </Card>
+            </GridCol>
+          ))}
         </Grid>
       </Container>
     </section>
   );
 };
 
-export default MonParcours;
+export default MonParcoursPage;

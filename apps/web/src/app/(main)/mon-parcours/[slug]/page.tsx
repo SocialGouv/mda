@@ -17,12 +17,41 @@ import {
   TimelineItemTitle,
 } from "@design-system";
 import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
+import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 import { notFound } from "next/navigation";
 
 export type ParcoursProps = Next13ServerPageProps<"slug">;
 
-const Parcours = async ({ params }: ParcoursProps) => {
+export const generateMetadata = generateMetadataFactory({
+  async resolveMetadata({ params }: ParcoursProps) {
+    const head = (
+      await fetchStrapi("parcourss", {
+        filters: {
+          slug: {
+            $eq: params.slug,
+          },
+        },
+      })
+    ).data?.[0];
+
+    return {
+      title: head?.attributes.title as string,
+      slug: `mon-parcours/${params.slug}`,
+      description: head?.attributes.description,
+    };
+  },
+});
+
+export async function generateStaticParams() {
+  const parcours = (await fetchStrapi("parcourss")).data ?? [];
+
+  return parcours.map(p => ({
+    slug: p.attributes.slug,
+  }));
+}
+
+const MonParcoursSlugPage = async ({ params }: ParcoursProps) => {
   const currentParcours = await fetchStrapi("parcourss", {
     populate: "deep",
     filters: {
@@ -64,10 +93,10 @@ const Parcours = async ({ params }: ParcoursProps) => {
                       footer={
                         links.length > 1 && (
                           <ul>
-                            {links.map(link => {
+                            {links.map(l => {
                               return (
-                                <li key={link.id}>
-                                  <TimelineItemFooterLink href={link.url}>{link.text}</TimelineItemFooterLink>
+                                <li key={l.id}>
+                                  <TimelineItemFooterLink href={l.url}>{l.text}</TimelineItemFooterLink>
                                 </li>
                               );
                             })}
@@ -122,12 +151,4 @@ const Parcours = async ({ params }: ParcoursProps) => {
   );
 };
 
-export async function generateStaticParams() {
-  const fiches = (await fetchStrapi("parcourss")).data ?? [];
-
-  return fiches.map(parcours => ({
-    slug: parcours.attributes.slug,
-  }));
-}
-
-export default Parcours;
+export default MonParcoursSlugPage;

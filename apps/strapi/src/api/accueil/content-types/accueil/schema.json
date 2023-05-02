@@ -11,51 +11,15 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
-      "type": "string",
-      "required": true
-    },
-    "content": {
-      "type": "richtext",
-      "required": true
-    },
-    "img": {
-      "allowedTypes": [
-        "images"
+    "widgets": {
+      "type": "dynamiczone",
+      "components": [
+        "common.grid-tiles",
+        "common.articles",
+        "common.most-viewed-cards",
+        "common.carousels"
       ],
-      "type": "media",
-      "multiple": false
-    },
-    "links": {
-      "displayName": "links",
-      "type": "component",
-      "repeatable": true,
-      "component": "common.links"
-    },
-    "DEMO_content": {
-      "type": "richtext"
-    },
-    "MDA_title": {
-      "type": "string",
       "required": true
-    },
-    "MDA_subtitle": {
-      "type": "text"
-    },
-    "MDA_content": {
-      "type": "richtext",
-      "required": true
-    },
-    "MDA_link_text": {
-      "type": "string",
-      "required": true
-    },
-    "MDA_img": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false
     }
   }
 }

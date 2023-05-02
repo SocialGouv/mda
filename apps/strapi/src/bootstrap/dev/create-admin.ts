@@ -22,7 +22,7 @@ const getSuperAdminRole = async (strapi: Strapi) => {
   return superAdminRole;
 };
 
-const devCreateAdmin: StrapiLifecycle = async ({ strapi }) => {
+const createAdmin: StrapiLifecycle = async ({ strapi }) => {
   if (process.env.MDA_ENV !== "dev") {
     return;
   }
@@ -53,4 +53,4 @@ const devCreateAdmin: StrapiLifecycle = async ({ strapi }) => {
   }
 };
 
-export default devCreateAdmin;
+export default createAdmin;

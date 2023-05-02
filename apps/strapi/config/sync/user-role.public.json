@@ -34,6 +34,12 @@
       "action": "api::fiche-pratique.fiche-pratique.findOne"
     },
     {
+      "action": "api::fiche-pratique.fiche-pratique.mostViewed"
+    },
+    {
+      "action": "api::footer.footer.find"
+    },
+    {
       "action": "api::glossaire-item.glossaire-item.find"
     },
     {
@@ -52,7 +58,13 @@
       "action": "api::mentions-legales.mentions-legales.find"
     },
     {
+      "action": "api::menu.menu.find"
+    },
+    {
       "action": "api::mes-aides.mes-aides.find"
+    },
+    {
+      "action": "api::modeles-de-courrier.modeles-de-courrier.find"
     },
     {
       "action": "api::parcours.parcours.find"

@@ -1,3 +1,188 @@
+# [1.18.0](https://github.com/SocialGouv/mda/compare/v1.17.0...v1.18.0) (2023-04-24)
+
+
+### Bug Fixes
+
+* **carousel:** Do not use article full ([09cfa66](https://github.com/SocialGouv/mda/commit/09cfa66a4293ffdb550f06c5b76501df7b431239))
+* **seo:** canonical links ([69a0ea8](https://github.com/SocialGouv/mda/commit/69a0ea8cae2e2da9476f4f9ce83f121bac10385f))
+* **sitemap:** remove healthz ([50aaa69](https://github.com/SocialGouv/mda/commit/50aaa69586c5062d2ef61fda21759de9b87dd729))
+
+
+### Features
+
+* **home:** carousel ([#304](https://github.com/SocialGouv/mda/issues/304)) ([d98f031](https://github.com/SocialGouv/mda/commit/d98f031475eb7eb09d214a0f4bed06bd4ab3f1e3))
+
+# [1.17.0](https://github.com/SocialGouv/mda/compare/v1.16.0...v1.17.0) (2023-04-18)
+
+
+### Bug Fixes
+
+* **metadata:** remove unnecessary charset ([4888d50](https://github.com/SocialGouv/mda/commit/4888d50623d347ea559df6fc732127dc8c1891e7))
+
+
+### Features
+
+* **seo:** improve metadatas ([#297](https://github.com/SocialGouv/mda/issues/297)) ([ba427e5](https://github.com/SocialGouv/mda/commit/ba427e5086b9aa2f2f54cfa85b891fa437aaabd4))
+
+# [1.16.0](https://github.com/SocialGouv/mda/compare/v1.15.3...v1.16.0) (2023-04-18)
+
+
+### Features
+
+* **seo:** add canonical links ([#294](https://github.com/SocialGouv/mda/issues/294)) ([28d48c5](https://github.com/SocialGouv/mda/commit/28d48c58c215e92c9487fa394a0b002b09537ed8))
+
+## [1.15.3](https://github.com/SocialGouv/mda/compare/v1.15.2...v1.15.3) (2023-04-17)
+
+
+### Bug Fixes
+
+* **matomo:** Track navigation ([#286](https://github.com/SocialGouv/mda/issues/286)) ([1280ee9](https://github.com/SocialGouv/mda/commit/1280ee9025edf21412c947b475c28a9ca41ab630))
+* **pages:** Politique de confidentialite ([#289](https://github.com/SocialGouv/mda/issues/289)) ([2bbd962](https://github.com/SocialGouv/mda/commit/2bbd962b762341d7d65873b13246438bac32325f))
+* **prod:** Add www redirect ([#242](https://github.com/SocialGouv/mda/issues/242)) ([f7fd685](https://github.com/SocialGouv/mda/commit/f7fd6850e68ebe848739662383f3c5916261d044))
+* **seo:** Do not send headers on each environments ([#287](https://github.com/SocialGouv/mda/issues/287)) ([f9d5ba6](https://github.com/SocialGouv/mda/commit/f9d5ba6f3204d86e9683ded5285f8ff6059aec20))
+* **sonar:** easy bugs & code smells ([#290](https://github.com/SocialGouv/mda/issues/290)) ([6a5ab73](https://github.com/SocialGouv/mda/commit/6a5ab739837f8c47e0dedf48335f39108a1292b6))
+
+## [1.15.2](https://github.com/SocialGouv/mda/compare/v1.15.1...v1.15.2) (2023-04-14)
+
+
+### Bug Fixes
+
+* **pictos:** Add classes on <use> for chrome ([3db1a40](https://github.com/SocialGouv/mda/commit/3db1a401c7c21e49fb5a4a2e521e4c8fe21c622a))
+
+## [1.15.1](https://github.com/SocialGouv/mda/compare/v1.15.0...v1.15.1) (2023-04-13)
+
+
+### Bug Fixes
+
+* **csp:** Do not block static svgs ([bec6b61](https://github.com/SocialGouv/mda/commit/bec6b61bf76f5b2b9d25131666daf8673a7d3e53))
+
+# [1.15.0](https://github.com/SocialGouv/mda/compare/v1.14.4...v1.15.0) (2023-04-13)
+
+
+### Bug Fixes
+
+* change meta title by generateMetadata ([#274](https://github.com/SocialGouv/mda/issues/274)) ([272ae12](https://github.com/SocialGouv/mda/commit/272ae128a438d96918f1111eaada6bce804351e4))
+* docker and csp ([#269](https://github.com/SocialGouv/mda/issues/269)) ([5e2f7fe](https://github.com/SocialGouv/mda/commit/5e2f7fea08ff8f29de1303f34b5401dc3bf66de8))
+* **strapi:** Admin doc ([#277](https://github.com/SocialGouv/mda/issues/277)) ([12ff1cb](https://github.com/SocialGouv/mda/commit/12ff1cb1ef8309c91e0e1e7bf29a0452137fca01))
+
+
+### Features
+
+* assigning the site name to a variable ([#265](https://github.com/SocialGouv/mda/issues/265)) ([5803cd6](https://github.com/SocialGouv/mda/commit/5803cd611b0a3deea28d18fa666e502d8a3e94e0))
+* dsfr consent banner ([#268](https://github.com/SocialGouv/mda/issues/268)) ([38f7726](https://github.com/SocialGouv/mda/commit/38f772626910460ea016da6f5f257d73906b4dad))
+* **footer:** Banner dynamisation ([#276](https://github.com/SocialGouv/mda/issues/276)) ([d68e756](https://github.com/SocialGouv/mda/commit/d68e756739ef6f6361cea9825dbf22974737abb8))
+* **pictos:** Add all DSFR pictos ([#279](https://github.com/SocialGouv/mda/issues/279)) ([c8848f2](https://github.com/SocialGouv/mda/commit/c8848f20e1699114b35cba496ac46c090452c852))
+
+## [1.14.4](https://github.com/SocialGouv/mda/compare/v1.14.3...v1.14.4) (2023-04-11)
+
+
+### Bug Fixes
+
+* **images:** Remove next url parameters ([6518f85](https://github.com/SocialGouv/mda/commit/6518f858f05c67a062646580cb3ae90a591df401))
+
+## [1.14.3](https://github.com/SocialGouv/mda/compare/v1.14.2...v1.14.3) (2023-04-11)
+
+
+### Bug Fixes
+
+* **empty:** Commit to trigger release ([c301d83](https://github.com/SocialGouv/mda/commit/c301d83efa3daa42e87e392dcfaee3b419fada44))
+
+## [1.14.2](https://github.com/SocialGouv/mda/compare/v1.14.1...v1.14.2) (2023-04-11)
+
+
+### Bug Fixes
+
+* **infra:** Deploy prod ([7d21d1f](https://github.com/SocialGouv/mda/commit/7d21d1f4ad766d733a48f99041f0eb29f62841e0))
+
+## [1.14.1](https://github.com/SocialGouv/mda/compare/v1.14.0...v1.14.1) (2023-04-11)
+
+
+### Bug Fixes
+
+* **infra:** Temporary force replace meilisearch pod ([b0dd801](https://github.com/SocialGouv/mda/commit/b0dd80176727a27888dc3b1e2c239f5155bc281e))
+
+# [1.14.0](https://github.com/SocialGouv/mda/compare/v1.13.0...v1.14.0) (2023-04-07)
+
+
+### Features
+
+* add dynamic footer ([#253](https://github.com/SocialGouv/mda/issues/253)) ([1420d64](https://github.com/SocialGouv/mda/commit/1420d642533dc8b7a135fa68dfb376d516a4f726))
+
+# [1.13.0](https://github.com/SocialGouv/mda/compare/v1.12.1...v1.13.0) (2023-04-07)
+
+
+### Features
+
+* footer strapi api ([#254](https://github.com/SocialGouv/mda/issues/254)) ([3a5afe3](https://github.com/SocialGouv/mda/commit/3a5afe30ccff9200d79d76ce303580a5bc484fb6))
+* **home:** v2 ([#251](https://github.com/SocialGouv/mda/issues/251)) ([75c7d45](https://github.com/SocialGouv/mda/commit/75c7d4525f0e6ba24c420cc49bcd9c4082d25056))
+
+## [1.12.1](https://github.com/SocialGouv/mda/compare/v1.12.0...v1.12.1) (2023-04-06)
+
+
+### Bug Fixes
+
+* **next:** Do not cache search requests ([#250](https://github.com/SocialGouv/mda/issues/250)) ([36623e1](https://github.com/SocialGouv/mda/commit/36623e1c2e7895a0ee1c04c5cff4316831caf4e7))
+
+# [1.12.0](https://github.com/SocialGouv/mda/compare/v1.11.0...v1.12.0) (2023-04-06)
+
+
+### Bug Fixes
+
+* clean meilisearch script ([e7b5d73](https://github.com/SocialGouv/mda/commit/e7b5d736faa444ab4b5d004cc120414394ec3527))
+* **search:** Use server component ([#249](https://github.com/SocialGouv/mda/issues/249)) ([0cbe387](https://github.com/SocialGouv/mda/commit/0cbe387ac534fe01cfbea5e2bd9f724f59c1e679))
+* typo ([45df88b](https://github.com/SocialGouv/mda/commit/45df88b462e1e0c3002b40205cf9f46920b08712))
+
+
+### Features
+
+* **modeles-de-courrier:** Add to search ([#244](https://github.com/SocialGouv/mda/issues/244)) ([c22e651](https://github.com/SocialGouv/mda/commit/c22e651b382f9a79edaa9cce3c8b8e4119c6bb60))
+* **modeles-de-courrier:** dynamisation ([#243](https://github.com/SocialGouv/mda/issues/243)) ([95e4778](https://github.com/SocialGouv/mda/commit/95e477812aea4fe7c9d68886b1aae35a46ece26f))
+* **parcours:** Last dynamisation ([#245](https://github.com/SocialGouv/mda/issues/245)) ([1e61f27](https://github.com/SocialGouv/mda/commit/1e61f273e46fe3ce7b242506b1759cbcc079ba7d))
+
+# [1.11.0](https://github.com/SocialGouv/mda/compare/v1.10.1...v1.11.0) (2023-04-03)
+
+
+### Features
+
+* dynamic menu frontend ([#223](https://github.com/SocialGouv/mda/issues/223)) ([733dea1](https://github.com/SocialGouv/mda/commit/733dea1cb3444675084768fdebeb3456ce1a211e))
+
+## [1.10.1](https://github.com/SocialGouv/mda/compare/v1.10.0...v1.10.1) (2023-03-31)
+
+
+### Bug Fixes
+
+* adapt strapi url with cert wildcard dns zone ([#224](https://github.com/SocialGouv/mda/issues/224)) ([cdbcc12](https://github.com/SocialGouv/mda/commit/cdbcc122168867d1a95fc23a049807b2b6606cc8))
+
+# [1.10.0](https://github.com/SocialGouv/mda/compare/v1.9.3...v1.10.0) (2023-03-31)
+
+
+### Features
+
+* dynamic menu ([#222](https://github.com/SocialGouv/mda/issues/222)) ([ae540ad](https://github.com/SocialGouv/mda/commit/ae540adfa6b8d7d8993b8c2f337565cafbf7301a))
+* prepare move to gouv.fr ([#212](https://github.com/SocialGouv/mda/issues/212)) ([8099426](https://github.com/SocialGouv/mda/commit/80994260f4b2ef2300aba4af34e633f7074db3f7))
+
+## [1.9.3](https://github.com/SocialGouv/mda/compare/v1.9.2...v1.9.3) (2023-03-31)
+
+
+### Reverts
+
+* Revert "fix: Revert "fix(prod): Increase memory limit killing pods during upload" (#221)" ([0636073](https://github.com/SocialGouv/mda/commit/0636073ab858573e3471deac0894d167e230adc8)), closes [#221](https://github.com/SocialGouv/mda/issues/221)
+
+## [1.9.2](https://github.com/SocialGouv/mda/compare/v1.9.1...v1.9.2) (2023-03-30)
+
+
+### Bug Fixes
+
+* Revert "fix(prod): Increase memory limit killing pods during upload" ([#221](https://github.com/SocialGouv/mda/issues/221)) ([dfee7af](https://github.com/SocialGouv/mda/commit/dfee7affc136108bbb2ed5149d71fba909ef2064))
+
+## [1.9.1](https://github.com/SocialGouv/mda/compare/v1.9.0...v1.9.1) (2023-03-30)
+
+
+### Bug Fixes
+
+* changing the style of the contact page feedback component ([#216](https://github.com/SocialGouv/mda/issues/216)) ([8e5f2fc](https://github.com/SocialGouv/mda/commit/8e5f2fcca3bd59417d4800d44f975a56c1610707))
+* **prod:** Increase memory limit killing pods during upload ([#219](https://github.com/SocialGouv/mda/issues/219)) ([4e2e5a4](https://github.com/SocialGouv/mda/commit/4e2e5a4796d9afd7f15637647888dfe6497adc6e))
+
 # [1.9.0](https://github.com/SocialGouv/mda/compare/v1.8.1...v1.9.0) (2023-03-27)
 
 

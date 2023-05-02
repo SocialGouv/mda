@@ -1,0 +1,86 @@
+{
+  "id": 1,
+  "content": "Ce site est fait pour les personnes autistes, par des personnes autistes, et avec des personnes concernées. Vos commentaires, réactions et propositions sont précieux pour nous aider à améliorer ce service au fur et à mesure. Un oubli ? Une suggestion ? Utilisez le module [Je donne mon avis](/je-donne-mon-avis) pour soumettre vos idées afin de contribuer à enrichir ce service public.\n\nAttention, les demandes personnelles transmises via ce formulaire ne pourront être traitées sur ce site. Pour les demandes personnelles, veuillez vous rapprocher de l'organisme en charge de votre dossier. Pour toute question, vous pouvez contacter [Autisme Info Service](https://www.autismeinfoservice.fr/).",
+  "createdAt": "2023-04-07T07:10:22.792Z",
+  "updatedAt": "2023-04-13T11:42:13.662Z",
+  "banner_title": "Suivez-nous  sur les réseaux sociaux",
+  "link": [
+    {
+      "text": "Handicap.gouv.fr",
+      "url": "https://handicap.gouv.fr/accueil",
+      "theme": "primary",
+      "title": "Site du ministère chargé des personnes handicapées - nouvelle fenêtre"
+    },
+    {
+      "text": "Mon Parcours Handicap",
+      "url": "https://www.monparcourshandicap.gouv.fr/",
+      "theme": "primary",
+      "title": "Site mon parcours handicap - nouvelle fenêtre"
+    },
+    {
+      "text": "Mes Droits Sociaux",
+      "url": "https://www.mesdroitssociaux.gouv.fr/accueil/",
+      "theme": "primary",
+      "title": "Site mes droits sociaux - nouvelle fenêtre"
+    },
+    {
+      "text": "Ministère des Solidarités, de l'Autonomie et des Personnes Handicapées",
+      "url": "https://solidarites.gouv.fr/accueil",
+      "theme": "primary",
+      "title": "Site Ministère des Solidarités, de l'Autonomie et des Personnes Handicapées - nouvelle fenêtre"
+    },
+    {
+      "text": "legifrance.gouv.fr",
+      "url": "https://www.legifrance.gouv.fr/",
+      "theme": "primary",
+      "title": "Site legifrance.gouv.fr - nouvelle fenêtre"
+    },
+    {
+      "text": "gouvernement.fr",
+      "url": "https://www.gouvernement.fr/",
+      "theme": "primary",
+      "title": "Site gouvernement.fr - nouvelle fenêtre"
+    },
+    {
+      "text": "service-public.fr",
+      "url": "https://www.service-public.fr/",
+      "theme": "primary",
+      "title": "Site service-public.fr - nouvelle fenêtre\""
+    },
+    {
+      "text": "data.gouv.fr",
+      "url": "https://www.data.gouv.fr/",
+      "theme": "primary",
+      "title": "Site data.gouv.fr - nouvelle fenêtre"
+    }
+  ],
+  "banner_icons": [
+    {
+      "svg": "fr-btn--instagram",
+      "link": {
+        "text": "instagram",
+        "url": "https://www.instagram.com/lamaisondelautisme/",
+        "theme": "primary",
+        "title": "Page Instagram - nouvelle fenêtre"
+      }
+    },
+    {
+      "svg": "fr-btn--facebook",
+      "link": {
+        "text": "facebook",
+        "url": "https://www.facebook.com/maisondelautisme",
+        "theme": "primary",
+        "title": "Page facebook - nouvelle fenêtre"
+      }
+    },
+    {
+      "svg": "fr-btn--linkedin",
+      "link": {
+        "text": "linkedin",
+        "url": "https://www.linkedin.com/company/maisondelautisme",
+        "theme": "primary",
+        "title": "Page LinkedIn - nouvelle fenêtre"
+      }
+    }
+  ]
+}

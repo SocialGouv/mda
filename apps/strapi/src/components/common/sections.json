@@ -1,13 +1,19 @@
 {
   "collectionName": "components_common_sections",
   "info": {
-    "displayName": "sections"
+    "displayName": "sections",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
+    },
+    "subtitle": {
+      "type": "text"
     },
     "content": {
       "type": "richtext",

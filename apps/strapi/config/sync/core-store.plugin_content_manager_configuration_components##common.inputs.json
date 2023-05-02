@@ -23,8 +23,8 @@
       "label": {
         "edit": {
           "label": "label",
-          "description": "",
-          "placeholder": "",
+          "description": "Le label pour le champ texte. Exemple : Votre Prénom",
+          "placeholder": "Le label pour le champ texte. Exemple : Votre Prénom",
           "visible": true,
           "editable": true
         },
@@ -37,7 +37,7 @@
       "hint": {
         "edit": {
           "label": "hint",
-          "description": "",
+          "description": "Le conseil à afficher pour ce champ. Exemple : Format attendu dd/mm/yyyy",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -51,7 +51,7 @@
       "type": {
         "edit": {
           "label": "type",
-          "description": "",
+          "description": "Le type du champ. Valeurs possibles tel, email",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -65,7 +65,7 @@
       "autocomplete": {
         "edit": {
           "label": "autocomplete",
-          "description": "",
+          "description": "L'aide à la saisie du navigateur. Valeurs possibles tel, email",
           "placeholder": "",
           "visible": true,
           "editable": true

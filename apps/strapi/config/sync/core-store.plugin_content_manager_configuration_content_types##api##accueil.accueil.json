@@ -7,8 +7,8 @@
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "title",
-      "defaultSortBy": "title",
+      "mainField": "id",
+      "defaultSortBy": "id",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -20,142 +20,16 @@
           "sortable": true
         }
       },
-      "title": {
+      "widgets": {
         "edit": {
-          "label": "title",
-          "description": "",
+          "label": "widgets",
+          "description": "Les sections de la page",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "title",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "content": {
-        "edit": {
-          "label": "content",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "content",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "img": {
-        "edit": {
-          "label": "img",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "img",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "links": {
-        "edit": {
-          "label": "links",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "links",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "DEMO_content": {
-        "edit": {
-          "label": "DEMO_content",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "DEMO_content",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "MDA_title": {
-        "edit": {
-          "label": "MDA_title",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "MDA_title",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "MDA_subtitle": {
-        "edit": {
-          "label": "MDA_subtitle",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "MDA_subtitle",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "MDA_content": {
-        "edit": {
-          "label": "MDA_content",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "MDA_content",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "MDA_link_text": {
-        "edit": {
-          "label": "MDA_link_text",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "MDA_link_text",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "MDA_img": {
-        "edit": {
-          "label": "MDA_img",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "MDA_img",
+          "label": "widgets",
           "searchable": false,
           "sortable": false
         }
@@ -192,63 +66,14 @@
     "layouts": {
       "list": [
         "id",
-        "title",
-        "links",
-        "MDA_title"
+        "createdAt",
+        "updatedAt"
       ],
       "edit": [
         [
           {
-            "name": "title",
-            "size": 6
-          },
-          {
-            "name": "img",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "content",
+            "name": "widgets",
             "size": 12
-          }
-        ],
-        [
-          {
-            "name": "DEMO_content",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "links",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "MDA_title",
-            "size": 6
-          },
-          {
-            "name": "MDA_subtitle",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "MDA_content",
-            "size": 12
-          }
-        ],
-        [
-          {
-            "name": "MDA_link_text",
-            "size": 6
-          },
-          {
-            "name": "MDA_img",
-            "size": 6
           }
         ]
       ]

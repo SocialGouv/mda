@@ -23,8 +23,8 @@
       "title": {
         "edit": {
           "label": "title",
-          "description": "",
-          "placeholder": "",
+          "description": "Le titre de la page. Exemple : Politique de confidentialité",
+          "placeholder": "Le titre de la page. Exemple : Politique de confidentialité",
           "visible": true,
           "editable": true
         },
@@ -37,7 +37,7 @@
       "content": {
         "edit": {
           "label": "content",
-          "description": "",
+          "description": "Le contenu de la page. Le markdown est supporté et vous pouvez intégrer des fichiers images, pdf et vidéos à l'aide du bouton image dans les outils ci-dessus",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -88,7 +88,7 @@
         [
           {
             "name": "title",
-            "size": 6
+            "size": 12
           }
         ],
         [

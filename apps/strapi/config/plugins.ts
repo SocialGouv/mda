@@ -145,6 +145,20 @@ const plugins: StrapiConfigSetter<PluginsConfig> = ({ env }) => ({
           limit: 1000,
         },
       },
+      "modeles-de-courrier": {
+        indexName: "pages",
+        transformEntry: ({ entry }) => {
+          return {
+            id: entry.id,
+            title: entry.title,
+            content: entry.content,
+            files: entry.files,
+          };
+        },
+        entriesQuery: {
+          limit: 1000,
+        },
+      },
       parcours: {
         indexName: "pages",
         transformEntry: ({ entry }) => {

@@ -23,8 +23,8 @@
       "text": {
         "edit": {
           "label": "text",
-          "description": "",
-          "placeholder": "",
+          "description": "Le label du lien. Exemple : Cliquez ici",
+          "placeholder": "Le label du lien. Exemple : Cliquez ici",
           "visible": true,
           "editable": true
         },
@@ -34,10 +34,24 @@
           "sortable": true
         }
       },
+      "title": {
+        "edit": {
+          "label": "title",
+          "description": "Le titre au hover. Exemple : Aller vers les fiches pratiques",
+          "placeholder": "Le titre au hover. Exemple : Aller vers les fiches pratiques",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "title",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "url": {
         "edit": {
           "label": "url",
-          "description": "",
+          "description": "L'url du lien. Exemple : https://www.google.com ou /fiches-pratiques/ma-fiche-pratique si lien interne",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -51,7 +65,7 @@
       "theme": {
         "edit": {
           "label": "theme",
-          "description": "",
+          "description": "Le thème à appliquer au lien. Valeurs possible primary, secondary",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -82,6 +96,10 @@
           }
         ],
         [
+          {
+            "name": "title",
+            "size": 6
+          },
           {
             "name": "theme",
             "size": 6

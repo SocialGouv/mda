@@ -1,7 +1,7 @@
 import { fetchWebhook } from "../../../../utils/fetchWebhookHelper";
 import { lifecycles } from "../../../../utils/lifecyclesHelpers";
 
-const fichesPratiqueLifecycle = lifecycles.createLifeCycle<"api::fiche-pratique.fiche-pratique">({
+const lifecycle = lifecycles.createLifeCycle<"api::fiche-pratique.fiche-pratique">({
   afterHook: {
     events: ["afterCreate", "afterUpdate"],
     handler: async event => {
@@ -15,4 +15,4 @@ const fichesPratiqueLifecycle = lifecycles.createLifeCycle<"api::fiche-pratique.
   },
 });
 
-export default fichesPratiqueLifecycle;
+export default lifecycle;

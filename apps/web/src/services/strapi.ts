@@ -40,9 +40,10 @@ export class FetchStrapiError extends Error {
 }
 
 export async function fetchStrapi<
-  TModel extends keyof Model,
+  C extends keyof ReverseModel,
+  TModel extends keyof Model = ReverseModel[C],
   TParams extends FetchMethodParams = FetchMethodParams,
-  T extends `${keyof ReverseSingularModel}/${string}` = `${keyof ReverseSingularModel}/${string}`,
+  T extends `${keyof ReverseModel}/${string}` = `${keyof ReverseModel}/${string}`,
 >(resource: T, params?: TParams): Promise<ResponseCollection<TModel>>;
 export async function fetchStrapi<
   T extends `${keyof ReversePluralModel}/${number}`,
@@ -63,10 +64,10 @@ export async function fetchStrapi<
   TParams extends FetchParam<ReverseModel[T]>,
   Ret extends Response<ReverseModel[T]> | ResponseCollection<ReverseModel[T]>,
 >(resource: TResPath, { revalidate, ...params } = {} as TParams): Promise<Ret> {
-  const query = params ? qsStringify(params) : null;
+  const query = params ? `?${qsStringify(params)}` : "";
   if (typeof revalidate === "undefined") revalidate = config.fetchRevalidate;
 
-  const url = new URL(`/api/${resource}${query ? `?${query}` : ""}`, config.strapi.apiUrl);
+  const url = new URL(`/api/${resource}${query}`, config.strapi.apiUrl);
   const response = await fetch(url, {
     headers: {
       "Content-Type": "application/json",
@@ -102,6 +103,7 @@ export async function searchStrapi(query: string): Promise<MeilisearchHit[]> {
     headers: {
       "Content-Type": "application/json",
     },
+    cache: "no-store",
   });
 
   const payload = (await response.json()) as ResponseSearch<MeilisearchHit>;
@@ -194,6 +196,14 @@ export function mapMeilisearchHit(hit: MeilisearchHit): SearchHit | undefined {
     };
   }
 
+  if (isMeilisearchHitOf(hit, "modeles-de-courrier")) {
+    return {
+      id: hit._meilisearch_id,
+      title: hit.title,
+      url: `/modeles-de-courrier`,
+      type: "page",
+    };
+  }
+
   console.warn("Unknown hit", hit);
-  return;
 }

@@ -23,8 +23,8 @@
       "label": {
         "edit": {
           "label": "label",
-          "description": "",
-          "placeholder": "",
+          "description": "Le label de la liste déroulante. Exemple : Veuillez choisir votre genre",
+          "placeholder": "Le label de la liste déroulante. Exemple : Veuillez choisir votre genre",
           "visible": true,
           "editable": true
         },
@@ -37,7 +37,7 @@
       "options": {
         "edit": {
           "label": "options",
-          "description": "",
+          "description": "Les choix possibles dans la liste déroulante",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -59,7 +59,7 @@
         [
           {
             "name": "label",
-            "size": 6
+            "size": 12
           }
         ],
         [

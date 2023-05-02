@@ -23,8 +23,8 @@
       "title": {
         "edit": {
           "label": "title",
-          "description": "",
-          "placeholder": "",
+          "description": "Le titre de l'évènement. Exemple Ouverture maison de l'autisme",
+          "placeholder": "Le titre de l'évènement. Exemple Ouverture maison de l'autisme",
           "visible": true,
           "editable": true
         },
@@ -37,7 +37,7 @@
       "description": {
         "edit": {
           "label": "description",
-          "description": "",
+          "description": "La description de l'évènement. Le markdown est supporté et vous pouvez intégrer des fichiers images, pdf et vidéos à l'aide du bouton image dans les outils ci-dessus",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -51,7 +51,7 @@
       "start_date": {
         "edit": {
           "label": "start_date",
-          "description": "",
+          "description": "La date et l´heure de début de l'évènement",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -65,7 +65,7 @@
       "end_date": {
         "edit": {
           "label": "end_date",
-          "description": "",
+          "description": "La date et l´heure de fin de l'évènement",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -79,8 +79,8 @@
       "connection_link": {
         "edit": {
           "label": "connection_link",
-          "description": "",
-          "placeholder": "",
+          "description": "Le lien pour se connecter à l'évènement",
+          "placeholder": "Le lien pour se connecter à l'évènement",
           "visible": true,
           "editable": true
         },
@@ -130,7 +130,7 @@
         [
           {
             "name": "title",
-            "size": 6
+            "size": 12
           }
         ],
         [
@@ -152,7 +152,7 @@
         [
           {
             "name": "connection_link",
-            "size": 6
+            "size": 12
           }
         ]
       ]

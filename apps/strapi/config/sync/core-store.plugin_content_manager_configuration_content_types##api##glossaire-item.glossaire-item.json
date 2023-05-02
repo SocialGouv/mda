@@ -23,8 +23,8 @@
       "title": {
         "edit": {
           "label": "title",
-          "description": "",
-          "placeholder": "",
+          "description": "Le titre de l'entrée glossaire",
+          "placeholder": "Le titre de l'entrée glossaire",
           "visible": true,
           "editable": true
         },
@@ -37,8 +37,8 @@
       "description": {
         "edit": {
           "label": "description",
-          "description": "",
-          "placeholder": "",
+          "description": "La description de l'entrée glossaire",
+          "placeholder": "La description de l'entrée glossaire",
           "visible": true,
           "editable": true
         },
@@ -51,8 +51,8 @@
       "url": {
         "edit": {
           "label": "url",
-          "description": "",
-          "placeholder": "",
+          "description": "Le lien en savoir plus",
+          "placeholder": "Le lien en savoir plus",
           "visible": true,
           "editable": true
         },

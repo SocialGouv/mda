@@ -1,8 +1,10 @@
 "use client";
 
 import { FormButton } from "@design-system";
+import { useGdprStore } from "@design-system/client";
 import { type PropsWithChildren } from "react";
 
 export const GDPRButton = ({ children }: PropsWithChildren) => {
-  return <FormButton onClick={() => tarteaucitron.userInterface.openPanel()}>{children}</FormButton>;
+  const consentModalButtonProps = useGdprStore(state => state.consentModalButtonProps);
+  return <FormButton {...consentModalButtonProps.nativeButtonProps}>{children}</FormButton>;
 };

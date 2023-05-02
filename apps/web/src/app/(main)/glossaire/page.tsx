@@ -1,16 +1,26 @@
 import { ActionsButtons } from "@components/base/client/ActionsButtons";
 import { SimpleContentPage } from "@components/base/SimpleContentPage";
+import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 import clsx from "clsx";
 
+const title = "Glossaire";
+
+export const generateMetadata = generateMetadataFactory({
+  resolveMetadata: () => ({
+    title,
+    slug: "glossaire",
+  }),
+});
+
 // TODO: handle iterate over pagination in fetch
-const Glossary = async () => {
+const GlossairePage = async () => {
   const items = await fetchStrapi("glossaire-items", { sort: "title", pagination: { limit: 100 } });
 
   return (
     <SimpleContentPage>
       <ActionsButtons />
-      <h1>Glossaire</h1>
+      <h1>{title}</h1>
       <dl className="fr-mt-6w">
         {(items.data ?? []).map((item, index) => (
           <div key={index} className={clsx(index > 0 && "fr-mt-2w")}>
@@ -44,4 +54,4 @@ const Glossary = async () => {
   );
 };
 
-export default Glossary;
+export default GlossairePage;

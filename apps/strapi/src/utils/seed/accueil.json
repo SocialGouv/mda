@@ -1,27 +1,226 @@
 {
   "id": 1,
-  "title": "Qu'est-ce que l'autisme ?",
-  "content": "L’autisme est un trouble du neurodéveloppement (TND) précoce qui impacte les capacités de communication, les interactions sociales et les comportements des personnes. Ce trouble va souvent de pair avec d’autres manifestations : hyper ou hypo sensibilité aux sons, lumières, odeurs… , trouble du déficit de l’attention avec ou sans hyperactivité (TDA/H), troubles “dys” (dyslexie, dyspraxie, dysphasie,…)",
-  "img": 1,
-  "createdAt": "2023-02-23T14:50:55.422Z",
-  "updatedAt": "2023-02-23T15:51:35.801Z",
-  "publishedAt": "2023-02-23T14:53:49.028Z",
-  "DEMO_content": "# Démonstration le 2 avril\n\nVenez nombreux ! On a hate",
-  "MDA_title": "La Maison de l’autisme",
-  "MDA_subtitle": "La Maison de l'autisme sera située 10 rue Waldeck Rochet à Aubervilliers, en Seine-Saint-Denis. Les services du département de la Seine-Saint-Denis et la RATP faciliteront l'accès à la Maison de l'autisme.",
-  "MDA_content": "La Maison de l’autisme permettra d’accéder facilement et de manière simple à des ressources humaines,  matérielles et immatérielles. La Maison de l'autisme sera dans un premier temps animée par trois acteurs : le Groupement National des Centres Ressources Autisme (GNCRA), Centre Ressources Autisme Île-de-France (CRAIF) et Autisme Info Service. Par la suite, les associations volontaires pourront rejoindre cette initiative.",
-  "MDA_link_text": "En savoir plus",
-  "MDA_img": 1,
-  "links": [
+  "createdAt": "2023-04-07T08:39:55.224Z",
+  "updatedAt": "2023-04-07T11:26:42.986Z",
+  "publishedAt": "2023-04-07T08:55:15.720Z",
+  "widgets": [
     {
-      "text": "Comprendre l'autisme",
-      "url": "/fiches-pratiques/qu-est-ce-que-l-autisme",
-      "theme": "primary"
+      "__component": "common.carousels",
+      "articles": [
+        {
+          "image_position": "right",
+          "buttons_position": "left",
+          "theme": null,
+          "section": {
+            "title": "Qu'est-ce que l'autisme ?",
+            "content": "L’autisme est un trouble du neurodéveloppement (TND) précoce qui impacte les capacités de communication, les interactions sociales et les comportements des personnes. Ce trouble va souvent de pair avec d’autres manifestations : hyper ou hypo sensibilité aux sons, lumières, odeurs… , trouble du déficit de l’attention avec ou sans hyperactivité (TDA/H), troubles “dys” (dyslexie, dyspraxie, dysphasie,…).",
+            "subtitle": null
+          },
+          "image": null,
+          "buttons": [
+            {
+              "text": "Qu'est-ce que l'autisme ?",
+              "url": "/fiches-pratiques/qu-est-ce-que-l-autisme",
+              "theme": "primary",
+              "title": "En savoir plus"
+            }
+          ]
+        },
+        {
+          "image_position": "left",
+          "buttons_position": "left",
+          "theme": null,
+          "section": {
+            "title": "La Maison de l’autisme",
+            "content": "La Maison de l’autisme vous permet d’accéder facilement à des ressources fiables, des services et des conseils. La Maison de l'autisme est co-animée par trois équipes : le Groupement National des Centres Ressources Autisme (GNCRA), le Centre Ressources Autisme Île-de-France (CRAIF) et Autisme Info Service.  ",
+            "subtitle": "La Maison de l'autisme est située 10 rue Waldeck Rochet à Aubervilliers, en Seine-Saint-Denis. Plaine Commune a mis en place une signalétique au sol permettant de se repérer du métro Front Populaire (ligne 12) jusqu’à la Maison de l’autisme."
+          },
+          "image": null,
+          "buttons": [
+            {
+              "text": "En savoir plus",
+              "url": "/la-maison-de-l-autisme",
+              "theme": "primary",
+              "title": null
+            }
+          ]
+        }
+      ]
     },
     {
-      "text": "J'ai un doute",
-      "url": "/mon-diagnostic",
-      "theme": "secondary"
+      "__component": "common.articles",
+      "buttons_position": "left",
+      "theme": "home",
+      "image_position": "right",
+      "image_width": 486,
+      "image_height": 270,
+      "section": {
+        "title": "Qu'est-ce que l'autisme ?",
+        "content": "L’autisme est un trouble du neurodéveloppement (TND) précoce qui impacte les capacités de communication, les interactions sociales et les comportements des personnes. Ce trouble va souvent de pair avec d’autres manifestations : hyper ou hypo sensibilité aux sons, lumières, odeurs… , trouble du déficit de l’attention avec ou sans hyperactivité (TDA/H), troubles “dys” (dyslexie, dyspraxie, dysphasie,…).",
+        "subtitle": null
+      },
+      "image": {
+        "name": "home-hero.jpeg",
+        "alternativeText": null,
+        "caption": null,
+        "width": 6720,
+        "height": 3727,
+        "formats": {
+          "large": {
+            "ext": ".jpeg",
+            "url": "/uploads/large_home_hero_cd5b472a21.jpeg",
+            "hash": "large_home_hero_cd5b472a21",
+            "mime": "image/jpeg",
+            "name": "large_home-hero.jpeg",
+            "path": null,
+            "size": 73.38,
+            "width": 1000,
+            "height": 554
+          },
+          "small": {
+            "ext": ".jpeg",
+            "url": "/uploads/small_home_hero_cd5b472a21.jpeg",
+            "hash": "small_home_hero_cd5b472a21",
+            "mime": "image/jpeg",
+            "name": "small_home-hero.jpeg",
+            "path": null,
+            "size": 24.26,
+            "width": 500,
+            "height": 277
+          },
+          "medium": {
+            "ext": ".jpeg",
+            "url": "/uploads/medium_home_hero_cd5b472a21.jpeg",
+            "hash": "medium_home_hero_cd5b472a21",
+            "mime": "image/jpeg",
+            "name": "medium_home-hero.jpeg",
+            "path": null,
+            "size": 45.65,
+            "width": 750,
+            "height": 416
+          },
+          "thumbnail": {
+            "ext": ".jpeg",
+            "url": "/uploads/thumbnail_home_hero_cd5b472a21.jpeg",
+            "hash": "thumbnail_home_hero_cd5b472a21",
+            "mime": "image/jpeg",
+            "name": "thumbnail_home-hero.jpeg",
+            "path": null,
+            "size": 8.29,
+            "width": 245,
+            "height": 136
+          }
+        },
+        "hash": "home_hero_cd5b472a21",
+        "ext": ".jpeg",
+        "mime": "image/jpeg",
+        "size": 1870.35,
+        "url": "/uploads/home_hero_cd5b472a21.jpeg",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "folderPath": "/",
+        "createdAt": "2023-04-07T08:42:29.665Z",
+        "updatedAt": "2023-04-07T10:26:12.464Z"
+      },
+      "buttons": [
+        {
+          "text": "Qu'est de que l'autisme ?",
+          "url": "/fiches-pratiques/qu-est-ce-que-l-autisme",
+          "theme": "primary"
+        }
+      ]
+    },
+    {
+      "__component": "common.grid-tiles",
+      "title": "Démarches et outils",
+      "tiles": [
+        {
+          "title": "Mon parcours",
+          "description": "En tant que personne autiste, parent ou aidant, plusieurs étapes clés sont à réaliser pour mener sa vie de la manière la plus autonome possible.",
+          "picto": "map",
+          "slug": "/mon-parcours"
+        },
+        {
+          "title": "Modèles de courrier",
+          "description": "Une demande d'aide ? Un recours ? La saisie d'un médiateur ? Nous vous proposons dans cette rubrique une banque de courrier type à utiliser pour vos démarches.",
+          "picto": "documentDownload",
+          "slug": "/modeles-de-courrier"
+        },
+        {
+          "title": "Mes aides",
+          "description": "Selon votre situation, celle de enfant ou de votre proche, des ressources sont disponibles pour vous aider au quotidien.",
+          "picto": "humanCooperation",
+          "slug": "/mes-aides"
+        },
+        {
+          "title": "Guide des parcours de diagnostic",
+          "description": "Le diagnostic est une suite de rendez-vous médicaux qui se réalise auprès de plusieurs professionnels de santé. Cliquez ici pour comprendre comment mener votre diagnostic étape par étape.",
+          "picto": "health",
+          "slug": "/mon-diagnostic"
+        }
+      ]
+    },
+    {
+      "__component": "common.most-viewed-cards",
+      "title": "Fiches pratiques les plus lues",
+      "collection": "fiche-pratiques",
+      "button": {
+        "text": "Voir toutes les fiches pratiques",
+        "url": "/fiches-pratiques",
+        "theme": "secondary"
+      }
+    },
+    {
+      "__component": "common.articles",
+      "buttons_position": "left",
+      "theme": null,
+      "image_position": "left",
+      "image_width": 441,
+      "image_height": 291,
+      "section": {
+        "title": "La Maison de l’autisme",
+        "content": "La Maison de l’autisme permettra d’accéder facilement et de manière simple à des ressources humaines, matérielles et immatérielles. La Maison de l'autisme sera dans un premier temps animée par trois acteurs : le Groupement National des Centres Ressources Autisme (GNCRA), Centre Ressources Autisme Île-de-France (CRAIF) et Autisme Info Service. Par la suite, les associations volontaires pourront rejoindre cette initiative.",
+        "subtitle": "La Maison de l'autisme sera située 10 rue Waldeck Rochet à Aubervilliers, en Seine-Saint-Denis. Les services du département de la Seine-Saint-Denis et la RATP faciliteront l'accès à la Maison de l'autisme."
+      },
+      "image": {
+        "name": "mda.jpg",
+        "alternativeText": null,
+        "caption": null,
+        "width": 441,
+        "height": 291,
+        "formats": {
+          "thumbnail": {
+            "ext": ".jpg",
+            "url": "/uploads/thumbnail_mda_460b29bc4b.jpg",
+            "hash": "thumbnail_mda_460b29bc4b",
+            "mime": "image/jpeg",
+            "name": "thumbnail_mda.jpg",
+            "path": null,
+            "size": 11.15,
+            "width": 236,
+            "height": 156
+          }
+        },
+        "hash": "mda_460b29bc4b",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 31.21,
+        "url": "/uploads/mda_460b29bc4b.jpg",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "folderPath": "/",
+        "createdAt": "2023-04-07T08:40:11.530Z",
+        "updatedAt": "2023-04-07T10:05:43.029Z"
+      },
+      "buttons": [
+        {
+          "text": "En savoir plus",
+          "url": "/la-maison-de-l-autisme",
+          "theme": "primary"
+        }
+      ]
     }
   ]
 }

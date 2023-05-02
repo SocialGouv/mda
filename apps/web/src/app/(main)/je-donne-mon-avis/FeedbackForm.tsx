@@ -4,14 +4,13 @@ import { type FeedbackData, feedbackSchema } from "@common/feedback/validation";
 import { FormGroupInput } from "@components/base/FormGroupInput";
 import { FormGroupSelect } from "@components/base/FormGroupSelect";
 import { FormGroupTextarea } from "@components/base/FormGroupTextarea";
+import { Markdown } from "@components/utils/Markdown";
 import { Alert, AlertTitle, Fieldset, FieldsetElement, FormButton } from "@design-system";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { type GetAttributesValues } from "@mda/strapi-types";
 import { push } from "@socialgouv/matomo-next";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-
-import { Markdown } from "../../../components/utils/Markdown";
 
 type FeedbackFormProps = GetAttributesValues<"api::je-donne-mon-avis.je-donne-mon-avis">["feedbackForm"];
 
@@ -59,7 +58,7 @@ export const FeedbackForm = ({
 
   if (formState === "submitted") {
     return (
-      <Alert type={error_message.type} className="fr-mt-6w">
+      <Alert type={success_message.type} className="fr-mt-6w">
         <AlertTitle>{success_message.title}</AlertTitle>
         <Markdown>{success_message.content}</Markdown>
       </Alert>
