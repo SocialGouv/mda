@@ -1,5 +1,7 @@
 import { type Strapi } from "@strapi/strapi";
 
-export default ({ strapi }: { strapi: Strapi }) => {
+const register = ({ strapi: _strapi }: { strapi: Strapi }) => {
   // registeration phase
 };
+
+export default register;

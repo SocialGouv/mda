@@ -30,8 +30,8 @@ export const NodeContent = (props: NodeContentProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const onSubmit = useCallback(
-    (data: NodeData | RootNodeData) => {
-      onNodeChange(id, data);
+    (newData: NodeData | RootNodeData) => {
+      onNodeChange(id, newData);
       setIsVisible(false);
     },
     [id, onNodeChange],

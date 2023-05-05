@@ -1,6 +1,6 @@
 import { type Strapi } from "@strapi/strapi";
 
-const bootstrap = ({ strapi }: { strapi: Strapi }) => {
+const bootstrap = ({ strapi: _strapi }: { strapi: Strapi }) => {
   // bootstrap phase
 };
 

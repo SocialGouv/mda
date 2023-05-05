@@ -33,14 +33,14 @@ const plugin: StrapiPlugin = {
         // },
       ],
     });
-    const plugin: PluginRegistConfig = {
+    const pluginToRegister: PluginRegistConfig = {
       id: pluginId,
       initializer: Initializer,
       isReady: false,
       name,
     };
 
-    app.registerPlugin(plugin);
+    app.registerPlugin(pluginToRegister);
   },
   bootstrap(app) {
     console.log("MDA === bootstrap", app);
