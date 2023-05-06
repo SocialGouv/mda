@@ -563,6 +563,34 @@ export interface PluginSlugifySlug extends CollectionTypeSchema {
   };
 }
 
+export interface PluginMdaDiagnosticTree extends SingleTypeSchema {
+  info: {
+    singularName: 'diagnostic-tree';
+    pluralName: 'diagnostic-trees';
+    displayName: 'Arbre de Diagnostic';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    tree: JSONAttribute;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      'plugin::mda.diagnostic-tree',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      'plugin::mda.diagnostic-tree',
+      'oneToOne',
+      'admin::user'
+    > &
+      PrivateAttribute;
+  };
+}
+
 export interface PluginUsersPermissionsPermission extends CollectionTypeSchema {
   info: {
     name: 'permission';
@@ -1937,6 +1965,7 @@ declare global {
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::meilisearch.meilisearch-index': PluginMeilisearchMeilisearchIndex;
       'plugin::slugify.slug': PluginSlugifySlug;
+      'plugin::mda.diagnostic-tree': PluginMdaDiagnosticTree;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
