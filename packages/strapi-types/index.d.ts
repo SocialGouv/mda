@@ -242,3 +242,32 @@ export interface ResponseSearch<T> {
   processingTimeMs: number;
   query: string;
 };
+
+export interface DiagnosticRootNodeData {
+  content: string;
+}
+
+export interface DiagnosticQuestionNodeData extends DiagnosticRootNodeData {
+  displayInfoUp: boolean;
+  info?: string;
+}
+
+export interface DiagnosticAnswerNodeData extends DiagnosticQuestionNodeData {
+  order?: number;
+}
+
+export type DiagnosticSubanswerNodeData = DiagnosticAnswerNodeData
+
+export type DiagnosticNodeData =
+  | DiagnosticRootNodeData
+  | DiagnosticQuestionNodeData
+  | DiagnosticAnswerNodeData
+  | DiagnosticSubanswerNodeData;
+
+export type DiagnosticRootNodeType = "mda-root-question"
+
+export type DiagnosticQuestionNodeType = "mda-question"
+
+export type DiagnosticAnswerNodeType = "mda-answer"
+
+export type DiagnosticSubAnswerNodeType = "mda-subanswer"

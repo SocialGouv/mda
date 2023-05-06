@@ -1,9 +1,11 @@
 import "./QuestionNode.css";
 
-import { NodeContent } from "./NodeContent";
-import { type MindmapNode, type NodeData } from "./types";
+import { type DiagnosticQuestionNodeData } from "@mda/strapi-types";
 
-export const QuestionNode: MindmapNode<NodeData> = ({ data, selected, id }) => {
+import { NodeContent } from "./NodeContent";
+import { type MindmapNode } from "./types";
+
+export const QuestionNode: MindmapNode<DiagnosticQuestionNodeData> = ({ data, selected, id }) => {
   return <NodeContent data={data} id={id} selected={selected} />;
 };
 

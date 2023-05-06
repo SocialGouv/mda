@@ -1,18 +1,24 @@
 import "./NodeForm.css";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  type DiagnosticAnswerNodeData,
+  type DiagnosticNodeData,
+  type DiagnosticQuestionNodeData,
+  type DiagnosticRootNodeData,
+  type DiagnosticSubanswerNodeData,
+} from "@mda/strapi-types";
 import { Button, Field, FieldError, FieldInput, FieldLabel, Flex } from "@strapi/design-system";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-import { type AnswerNodeData, type NodeData, type RootNodeData } from "./types";
-
 export type NodeFormProps = {
   form:
-    | { answer: true; data: AnswerNodeData; root?: false }
-    | { answer?: false; data: NodeData; root?: false }
-    | { answer?: false; data: RootNodeData; root: true };
-  onSubmit(plop: NodeData | RootNodeData): void;
+    | { answer: true; data: DiagnosticAnswerNodeData; root?: false }
+    | { answer: true; data: DiagnosticSubanswerNodeData; root?: false }
+    | { answer?: false; data: DiagnosticQuestionNodeData; root?: false }
+    | { answer?: false; data: DiagnosticRootNodeData; root: true };
+  onSubmit(data: DiagnosticNodeData): void;
 };
 
 const content = z
@@ -52,7 +58,7 @@ export const NodeForm = ({ onSubmit, form }: NodeFormProps) => {
     register,
     handleSubmit,
     formState: { errors, isValid },
-  } = useForm<AnswerNodeData>({
+  } = useForm<DiagnosticAnswerNodeData>({
     mode: "onChange",
     resolver: zodResolver(
       z.object(form.root ? rootNodeSchema : form.answer ? answerNodeSchema : nodeSchema).required(),

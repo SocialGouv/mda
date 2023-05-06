@@ -1,5 +1,12 @@
 import "./NodeContent.css";
 
+import {
+  type DiagnosticAnswerNodeData,
+  type DiagnosticNodeData,
+  type DiagnosticQuestionNodeData,
+  type DiagnosticRootNodeData,
+  type DiagnosticSubanswerNodeData,
+} from "@mda/strapi-types";
 import { IconButton, ModalBody, ModalHeader, ModalLayout, Tooltip, Typography } from "@strapi/design-system";
 import { Pencil } from "@strapi/icons";
 import clsx from "clsx";
@@ -8,26 +15,32 @@ import { Handle, Position } from "reactflow";
 
 import { useDiagnosticTree } from "../../hooks/useDiagnosticTree";
 import { NodeForm } from "./NodeForm";
-import { type AnswerNodeData, type NodeData, type RootNodeData } from "./types";
 
 export type NodeContentProps =
   | {
       answer: true;
-      data: AnswerNodeData;
+      data: DiagnosticAnswerNodeData;
+      id: string;
+      root?: false;
+      selected?: boolean;
+    }
+  | {
+      answer: true;
+      data: DiagnosticSubanswerNodeData;
       id: string;
       root?: false;
       selected?: boolean;
     }
   | {
       answer?: false;
-      data: NodeData;
+      data: DiagnosticQuestionNodeData;
       id: string;
       root?: false;
       selected?: boolean;
     }
   | {
       answer?: false;
-      data: RootNodeData;
+      data: DiagnosticRootNodeData;
       id: string;
       root: true;
       selected?: boolean;
@@ -39,7 +52,7 @@ export const NodeContent = (props: NodeContentProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const onSubmit = useCallback(
-    (newData: NodeData | RootNodeData) => {
+    (newData: DiagnosticNodeData) => {
       onNodeChange(id, newData);
       setIsVisible(false);
     },

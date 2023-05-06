@@ -16,6 +16,9 @@
       "action": "api::diagnostic.diagnostic.find"
     },
     {
+      "action": "api::diagnostic.diagnostic.question"
+    },
+    {
       "action": "api::etape-de-vie.etape-de-vie.find"
     },
     {

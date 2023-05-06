@@ -1,3 +1,4 @@
+import { type DiagnosticNodeData } from "@mda/strapi-types";
 import { request } from "@strapi/helper-plugin";
 import {
   addEdge,
@@ -17,7 +18,6 @@ import { AnswerNode } from "../components/mindmap/AnswerNode";
 import { QuestionNode } from "../components/mindmap/QuestionNode";
 import { RootQuestionNode } from "../components/mindmap/RootQuestionNode";
 import { SubAnswerNode } from "../components/mindmap/SubAnswerNode";
-import { type AnswerNodeData, type NodeData, type RootNodeData } from "../components/mindmap/types";
 import pluginId from "../pluginId";
 import { type useAlert } from "./useAlert";
 
@@ -85,7 +85,7 @@ type RFState = {
   onAddNode: (this: void, type: keyof typeof idPrefixes) => void;
   onConnectHandler: (this: void, handleNotification: HandleNotification) => OnConnect;
   onEdgesChange: OnEdgesChange;
-  onNodeChange: (this: void, id: string, data: AnswerNodeData | NodeData | RootNodeData) => void;
+  onNodeChange: (this: void, id: string, data: DiagnosticNodeData) => void;
   onNodesChange: OnNodesChange;
   updateDiagnosticTreeHandler: (this: void, handleNotification: HandleNotification) => () => Promise<void>;
   viewPort: Viewport;
