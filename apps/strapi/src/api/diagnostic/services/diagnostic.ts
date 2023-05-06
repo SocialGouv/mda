@@ -14,7 +14,6 @@ import {
   type DiagnosticSubAnswerNodeType,
 } from "@mda/strapi-types";
 import { factories } from "@strapi/strapi";
-import { type Strapi } from "@strapi/strapi";
 import { type Context } from "koa";
 import { type Edge, type Node, type ReactFlowJsonObject } from "reactflow";
 
@@ -95,25 +94,24 @@ const formatAnswers = ({
         }
       }
 
-      switch (type) {
-        case "mda-answer":
-          return {
-            id: answerId,
-            ...answerData,
-            subanswers: formatAnswers({ nodeEdges: answerEdges, tree, type: "mda-subanswer" }),
-          } as Answer;
-        default:
-          throw new DiagnosticTreeError(
-            `Invalid Diagnostic tree got a ${answerId} with more than one question. Please fix it in the back office !`,
-          );
+      if (type === "mda-answer") {
+        return {
+          id: answerId,
+          ...answerData,
+          subanswers: formatAnswers({ nodeEdges: answerEdges, tree, type: "mda-subanswer" }),
+        } as Answer;
       }
+
+      throw new DiagnosticTreeError(
+        `Invalid Diagnostic tree got a ${answerId} with more than one question. Please fix it in the back office !`,
+      );
     })
     .sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
 };
 
 const formatQuestion = ({ id, tree }: { id: string | null; tree: ReactFlowFullJsonObject<DiagnosticNode> }) => {
   const { edges, nodes } = tree;
-  const node = id ? nodes.find(node => node.id === id) : nodes.find(node => node.type === "mda-root-question");
+  const node = id ? nodes.find(n => n.id === id) : nodes.find(n => n.type === "mda-root-question");
 
   if (!node) {
     return;
@@ -134,7 +132,7 @@ const formatQuestion = ({ id, tree }: { id: string | null; tree: ReactFlowFullJs
   };
 };
 
-export default factories.createCoreService("api::diagnostic.diagnostic", ({ strapi }: { strapi: Strapi }) => {
+export default factories.createCoreService("api::diagnostic.diagnostic", ({ strapi }) => {
   const { entityService } = strapi;
 
   return {
