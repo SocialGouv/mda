@@ -1,10 +1,10 @@
 import "./SubAnswerNode.css";
 
 import { NodeContent } from "./NodeContent";
-import { type MindmapNode, type NodeData } from "./types";
+import { type AnswerNodeData, type MindmapNode } from "./types";
 
-export const SubAnswerNode: MindmapNode<NodeData> = ({ data, id, selected }) => {
-  return <NodeContent data={data} id={id} selected={selected} />;
+export const SubAnswerNode: MindmapNode<AnswerNodeData> = ({ data, id, selected }) => {
+  return <NodeContent answer data={data} id={id} selected={selected} />;
 };
 
 SubAnswerNode.nodeName = "mda-subanswer";

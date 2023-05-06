@@ -9,7 +9,7 @@ import register from "./register";
 import routes from "./routes";
 import services from "./services";
 
-export default {
+const server = {
   register,
   bootstrap,
   destroy,
@@ -21,3 +21,5 @@ export default {
   policies,
   middlewares,
 };
+
+export default server;

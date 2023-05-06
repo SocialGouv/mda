@@ -21,6 +21,7 @@ const seeds = {
   "api::question.question": import("../../utils/seed/question.json"),
   "api::diagnostic.diagnostic": import("../../utils/seed/diagnostic.json"),
   "api::menu.menu": import("../../utils/seed/menu.json"),
+  "plugin::mda.diagnostic-tree": import("../../utils/seed/diagnostic-tree.json"),
 };
 
 const seedDb: StrapiLifecycle = async ({ strapi }) => {

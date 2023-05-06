@@ -8,16 +8,25 @@ import { Handle, Position } from "reactflow";
 
 import { useDiagnosticTree } from "../../hooks/useDiagnosticTree";
 import { NodeForm } from "./NodeForm";
-import { type NodeData, type RootNodeData } from "./types";
+import { type AnswerNodeData, type NodeData, type RootNodeData } from "./types";
 
 export type NodeContentProps =
   | {
+      answer: true;
+      data: AnswerNodeData;
+      id: string;
+      root?: false;
+      selected?: boolean;
+    }
+  | {
+      answer?: false;
       data: NodeData;
       id: string;
       root?: false;
       selected?: boolean;
     }
   | {
+      answer?: false;
       data: RootNodeData;
       id: string;
       root: true;
@@ -25,7 +34,7 @@ export type NodeContentProps =
     };
 
 export const NodeContent = (props: NodeContentProps) => {
-  const { data, id, root } = props;
+  const { answer, data, id, root } = props;
   const { onNodeChange } = useDiagnosticTree();
   const [isVisible, setIsVisible] = useState(false);
 
@@ -65,6 +74,8 @@ export const NodeContent = (props: NodeContentProps) => {
           {data.content}
         </Typography>
       )}
+
+      {answer && <span className="mda__node-content__order">{data.order}</span>}
 
       <IconButton onClick={() => setIsVisible(prev => !prev)} icon={<Pencil />} />
       {isVisible && (

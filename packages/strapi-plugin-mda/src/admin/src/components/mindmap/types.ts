@@ -9,6 +9,10 @@ export interface NodeData extends RootNodeData {
   info?: string;
 }
 
+export interface AnswerNodeData extends NodeData {
+  order?: number;
+}
+
 export interface MindmapNode<T extends RootNodeData> {
   (props: NodeProps<T>): JSX.Element;
   nodeName: string;
