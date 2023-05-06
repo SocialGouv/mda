@@ -3,11 +3,8 @@ import {
   addEdge,
   applyEdgeChanges,
   applyNodeChanges,
-  type Connection,
   type Edge,
-  type EdgeChange,
   type Node,
-  type NodeChange,
   type OnConnect,
   type OnEdgesChange,
   type OnNodesChange,
@@ -198,21 +195,23 @@ export const useDiagnosticTree = create<RFState>((set, get) => ({
       }),
     });
   },
-  onNodesChange: (changes: NodeChange[]) => {
+  onNodesChange: changes => {
     set({
       nodes: applyNodeChanges(changes, get().nodes),
     });
   },
-  onEdgesChange: (changes: EdgeChange[]) => {
+  onEdgesChange: changes => {
     set({
       edges: applyEdgeChanges(changes, get().edges),
     });
   },
-  onConnectHandler: handleNotification => (connection: Connection) => {
-    const source = connection.source?.split("-").shift();
+  onConnectHandler: handleNotification => connection => {
+    const { source: connectionSource, target: connectionTarget } = connection;
+
+    const source = connectionSource?.split("-").shift();
     if (source && forbiddenConnections[source]) {
       const forbiddenConnection = forbiddenConnections[source].find(({ target }) =>
-        connection.target?.startsWith(target),
+        connectionTarget?.startsWith(target),
       );
 
       if (forbiddenConnection) {
@@ -224,8 +223,42 @@ export const useDiagnosticTree = create<RFState>((set, get) => ({
       }
     }
 
+    const edges = get().edges;
+    if (connectionSource && source === "answer") {
+      const previousEdges = edges.filter(({ id }) => id.includes(`-${connectionSource}-`));
+      if (previousEdges.length) {
+        if (connectionTarget?.startsWith("question")) {
+          if (previousEdges.some(({ target }) => target.startsWith("question"))) {
+            return handleNotification({
+              type: "warning",
+              message: "Vous ne pouvez pas relier une réponse à plusieurs questions",
+              blockTransition: false,
+            });
+          }
+
+          if (previousEdges.some(({ target }) => target.startsWith("subanswer"))) {
+            return handleNotification({
+              type: "warning",
+              message: "Vous ne pouvez pas relier une réponse à des sous réponses et une autre question",
+              blockTransition: false,
+            });
+          }
+        }
+
+        if (connectionTarget?.startsWith("subanswer")) {
+          if (!previousEdges.every(({ target }) => target.startsWith("subanswer"))) {
+            return handleNotification({
+              type: "warning",
+              message: "Vous ne pouvez pas relier une réponse à une question et des sous réponses",
+              blockTransition: false,
+            });
+          }
+        }
+      }
+    }
+
     set({
-      edges: addEdge(connection, get().edges),
+      edges: addEdge(connection, edges),
     });
   },
 }));
