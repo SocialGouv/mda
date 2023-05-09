@@ -11,18 +11,16 @@ import {
   type FormSelectProps,
   Notice,
 } from "@design-system";
-import { type Response } from "@mda/strapi-types";
 import { fetchStrapi } from "@services/strapi";
 import { push } from "@socialgouv/matomo-next";
 import { useCallback, useState } from "react";
 
-import { useDiagnosticStore } from "./diagnosticStore";
-
-type Question = NonNullable<Response<"api::question.question">["data"]>;
+import { type Question, useDiagnosticStore } from "./diagnosticStore";
 
 export interface DiagStepsProps {
   firstQuestion: Question;
 }
+
 export const DiagSteps = ({ firstQuestion }: DiagStepsProps) => {
   const { questionList, addQuestion } = useDiagnosticStore(useCallback(state => state, []));
 
@@ -59,10 +57,12 @@ const QuestionBox = ({ question, index }: QuestionBoxProps) => {
     console.log("Selected anwser", answer);
     if (answer.destination?.data) {
       // if destination question, fetch and append to list
-      void fetchStrapi(`questions/${answer.destination.data.id}`, { populate: "deep,4" }).then(destination => {
-        console.log("Go to destination", destination);
-        if (destination.data) addQuestion(destination.data, index + 1);
-      });
+      void fetchStrapi<"diagnostic/question">(`diagnostic/question`, { id: answer.destination.data.id }).then(
+        destination => {
+          console.log("Go to destination", destination);
+          if (destination.data) addQuestion(destination.data, index + 1);
+        },
+      );
 
       if (index === 2) {
         push(["trackEvent", "Diagnostic", "Three Steps Passed"]);
@@ -81,10 +81,12 @@ const QuestionBox = ({ question, index }: QuestionBoxProps) => {
 
     console.log("Selected subanwser", subAnswer);
     if (subAnswer.destination?.data) {
-      void fetchStrapi(`questions/${subAnswer.destination.data.id}`, { populate: "deep,3" }).then(destination => {
-        console.log("Go to destination from subanswer", destination);
-        if (destination.data) addQuestion(destination.data, index + 1);
-      });
+      void fetchStrapi<"diagnostic/question">(`diagnostic/question`, { id: subAnswer.destination.data.id }).then(
+        destination => {
+          console.log("Go to destination from subanswer", destination);
+          if (destination.data) addQuestion(destination.data, index + 1);
+        },
+      );
     }
   };
 

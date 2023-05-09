@@ -30,7 +30,8 @@ interface FetchParam<T extends keyof Model, Dto extends GetAttributesValues<T> =
 }
 
 interface FetchMethodParams {
-  page: number;
+  id?: number | string;
+  page?: number;
 }
 
 export class FetchStrapiError extends Error {
@@ -39,6 +40,12 @@ export class FetchStrapiError extends Error {
   }
 }
 
+export async function fetchStrapi<
+  C extends keyof ReverseSingularModel,
+  TModel extends keyof Model = ReverseSingularModel[C],
+  TParams extends FetchMethodParams = FetchMethodParams,
+  T extends `${keyof ReverseSingularModel}/${string}` = `${keyof ReverseSingularModel}/${string}`,
+>(resource: T, params?: TParams): Promise<Response<TModel>>;
 export async function fetchStrapi<
   C extends keyof ReverseModel,
   TModel extends keyof Model = ReverseModel[C],

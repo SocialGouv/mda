@@ -3,7 +3,7 @@ import { mountStoreDevtool } from "simple-zustand-devtools";
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 
-type Question = NonNullable<Response<"api::question.question">["data"]>;
+export type Question = NonNullable<Response<"api::diagnostic.question">["data"]>;
 
 interface DiagnosticStore {
   addQuestion: (question: Question, index?: number) => void;
