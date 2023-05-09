@@ -949,66 +949,6 @@
       "conditions": []
     },
     {
-      "action": "plugin::content-manager.explorer.create",
-      "subject": "api::question.question",
-      "properties": {
-        "fields": [
-          "content",
-          "answers.content",
-          "answers.destination",
-          "answers.info",
-          "answers.subanswers.content",
-          "answers.subanswers.destination",
-          "answers.subanswers.info",
-          "info",
-          "first"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.delete",
-      "subject": "api::question.question",
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.read",
-      "subject": "api::question.question",
-      "properties": {
-        "fields": [
-          "content",
-          "answers.content",
-          "answers.destination",
-          "answers.info",
-          "answers.subanswers.content",
-          "answers.subanswers.destination",
-          "answers.subanswers.info",
-          "info",
-          "first"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.update",
-      "subject": "api::question.question",
-      "properties": {
-        "fields": [
-          "content",
-          "answers.content",
-          "answers.destination",
-          "answers.info",
-          "answers.subanswers.content",
-          "answers.subanswers.destination",
-          "answers.subanswers.info",
-          "info",
-          "first"
-        ]
-      },
-      "conditions": []
-    },
-    {
       "action": "admin::api-tokens.access",
       "subject": null,
       "properties": {},

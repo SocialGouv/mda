@@ -82,12 +82,6 @@
       "action": "api::politique-de-confidentialite.politique-de-confidentialite.find"
     },
     {
-      "action": "api::question.question.find"
-    },
-    {
-      "action": "api::question.question.findOne"
-    },
-    {
       "action": "plugin::slugify.slugController.findSlug"
     },
     {
