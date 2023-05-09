@@ -29,9 +29,9 @@ import { SubAnswerNode } from "./mindmap/SubAnswerNode";
 const nodeColor = (node: Node) => {
   switch (node.type) {
     case RootQuestionNode.nodeName:
-      return "#ad2a1a";
-    case QuestionNode.nodeName:
       return "#829356";
+    case QuestionNode.nodeName:
+      return "#ad2a1a";
     case AnswerNode.nodeName:
       return "#107896";
     case SubAnswerNode.nodeName:
