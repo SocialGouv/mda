@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/SocialGouv/mda/compare/v1.19.0...v1.20.0) (2023-05-09)
+
+
+### Features
+
+* **diagnostic:** diagnostic-tree plugin ([#217](https://github.com/SocialGouv/mda/issues/217)) ([70e0a41](https://github.com/SocialGouv/mda/commit/70e0a41857f24cb7ecafc748db6d6c9508b0e071))
+
 # [1.19.0](https://github.com/SocialGouv/mda/compare/v1.18.0...v1.19.0) (2023-05-02)
 
 
