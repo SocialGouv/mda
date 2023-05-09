@@ -30,7 +30,7 @@
     "@semantic-release/git": "^10.0.1",
     "@socialgouv/releaserc": "^1.1.1",
     "@tsconfig/node18": "^2.0.0",
-    "@types/node": "^18.16.3",
+    "@types/node": "^20.1.1",
     "@types/react-router-dom": "^5.3.3",
     "dotenv": "^16.0.3",
     "rimraf": "^4.4.1",
