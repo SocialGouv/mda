@@ -1196,6 +1196,78 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "plugin::mda.diagnostic-tree",
+      "properties": {
+        "fields": [
+          "tree"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "plugin::mda.diagnostic-tree",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "plugin::mda.diagnostic-tree",
+      "properties": {
+        "fields": [
+          "tree"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "plugin::mda.diagnostic-tree",
+      "properties": {
+        "fields": [
+          "tree"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "plugin::meilisearch.meilisearch-index",
+      "properties": {
+        "fields": [
+          "settings"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "plugin::meilisearch.meilisearch-index",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "plugin::meilisearch.meilisearch-index",
+      "properties": {
+        "fields": [
+          "settings"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "plugin::meilisearch.meilisearch-index",
+      "properties": {
+        "fields": [
+          "settings"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "plugin::users-permissions.user",
       "properties": {
         "fields": [

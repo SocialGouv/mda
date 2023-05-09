@@ -1,0 +1,47 @@
+{
+  "name": "@mda/strapi-plugin-mda",
+  "version": "0.0.0",
+  "description": "This is the description of the plugin.",
+  "strapi": {
+    "name": "mda",
+    "description": "Description of strapi-plugin-mda plugin",
+    "kind": "plugin"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.1.0",
+    "clsx": "^1.2.1",
+    "reactflow": "^11.7.0",
+    "zod": "^3.21.4",
+    "zustand": "^4.3.7"
+  },
+  "devDependencies": {
+    "@mda/eslint-config": "*",
+    "@mda/strapi-types": "*",
+    "@strapi/design-system": "1.6.1",
+    "@strapi/helper-plugin": "4.8.2",
+    "@strapi/icons": "1.6.1",
+    "@strapi/typescript-utils": "4.8.2",
+    "@strapi/utils": "4.8.2",
+    "@types/react-router-dom": "^5.3.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.9"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "4.8.2"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "maintainers": [
+    {
+      "name": "A Strapi developer"
+    }
+  ],
+  "scripts": {
+    "dev": "yarn build -w",
+    "build": "rimraf dist/* && tsc",
+    "lint": "eslint"
+  },
+  "license": "MIT"
+}

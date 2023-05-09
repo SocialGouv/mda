@@ -1,0 +1,38 @@
+.react-flow__node-textNode {
+    padding: 10px;
+    border-radius: 3px;
+    width: 150px;
+    font-size: 12px;
+    color: #222;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1a192b;
+    background-color: white;
+}
+
+.react-flow__node-textNode.selectable:hover {
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.08);
+}
+
+.react-flow__node-textNode.selectable.selected,
+.react-flow__node-textNode.selectable:focus,
+.react-flow__node-textNode.selectable:focus-visible {
+    box-shadow: 0 0 0 0.5px #1a192b;
+}
+
+.mda-control {
+    color: #eee;
+}
+
+.mda-control.mda-control--answer {
+    background-color: #107896;
+}
+
+.mda-control.mda-control--question {
+    background-color: #ad2a1a;
+}
+
+.mda-control.mda-control--subanswer {
+    background-color: #093145;
+}

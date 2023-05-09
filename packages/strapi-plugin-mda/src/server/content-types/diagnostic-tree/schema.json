@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "diagnostic_tree",
+  "info": {
+    "singularName": "diagnostic-tree",
+    "pluralName": "diagnostic-trees",
+    "displayName": "Arbre de Diagnostic"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "tree": {
+      "type": "json"
+    }
+  }
+}

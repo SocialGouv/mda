@@ -9,6 +9,7 @@
     "start": "strapi start",
     "build": "strapi build",
     "lint": "eslint",
+    "strapi": "strapi",
     "content:dump": "strapi export --no-encrypt --only content --file content-dump",
     "content:import": "strapi import --only content --force --file content-dump.tar.gz",
     "generate-types": "ts-node src/commands/strapi-generate-types.ts -f ../../packages/strapi-types/strapi.d.ts && echo \"/* eslint-disable */\n$(cat ../../packages/strapi-types/strapi.d.ts)\" > ../../packages/strapi-types/strapi.d.ts",
@@ -24,6 +25,7 @@
     "@types/node-schedule": "^2.1.0"
   },
   "dependencies": {
+    "@mda/strapi-plugin-mda": "*",
     "@strapi/design-system": "^1.7.2",
     "@strapi/plugin-users-permissions": "4.10.1",
     "@strapi/strapi": "4.10.1",

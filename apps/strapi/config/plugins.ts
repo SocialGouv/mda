@@ -198,6 +198,10 @@ const plugins: StrapiConfigSetter<PluginsConfig> = ({ env }) => ({
     },
   },
   "import-export-entries": true,
+  mda: {
+    enabled: true,
+    config: {},
+  },
 });
 
 export default plugins;

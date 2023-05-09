@@ -12,8 +12,7 @@
     "./",
     "./**/*.ts",
     "./**/*.js",
-    "src/**/*.json",
-    "index.d.ts"
+    "src/**/*.json"
   ],
   "exclude": [
     "node_modules/",
