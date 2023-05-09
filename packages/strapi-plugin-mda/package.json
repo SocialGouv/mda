@@ -17,7 +17,7 @@
   "devDependencies": {
     "@mda/eslint-config": "*",
     "@mda/strapi-types": "*",
-    "@strapi/design-system": "1.6.1",
+    "@strapi/design-system": "1.7.3",
     "@strapi/helper-plugin": "4.8.2",
     "@strapi/icons": "1.6.1",
     "@strapi/typescript-utils": "4.8.2",
