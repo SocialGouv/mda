@@ -1,7 +1,14 @@
 import {
+  type CollectionTypeSchema,
+  type StringAttribute,
+  type RequiredAttribute,
+  type SetMinMaxLength,
+  type DefaultTo,
+  type DateTimeAttribute,
+  type IntegerAttribute,
+  type TextAttribute,
   type Attribute,
   type ComponentAttribute,
-  type CollectionTypeSchema,
   type DynamicZoneAttribute,
   type GetAttribute,
   type GetAttributes,
@@ -19,9 +26,10 @@ import {
   type RelationAttribute,
   type SingleTypeSchema,
   type utils,
+  ComponentSchema,
 } from "@strapi/strapi";
 
-export * from './strapi'
+export * from "./strapi"
 
 // Helper used to add an ID attribute to another type
 type WithID = { id: number };
@@ -271,3 +279,96 @@ export type DiagnosticQuestionNodeType = "mda-question"
 export type DiagnosticAnswerNodeType = "mda-answer"
 
 export type DiagnosticSubAnswerNodeType = "mda-subanswer"
+
+export interface ApiDiagnosticQuestion extends SingleTypeSchema {
+  info: {
+    singularName: "diagnostic/question";
+    pluralName: "diagnostics/question";
+    displayName: "Diagnostic";
+    description: "Une question est une \u00E9tape du parcours de diagnostic.";
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    content: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    answers: ComponentAttribute<"diagnostic.question.answer", true>;
+    info: TextAttribute;
+    order: IntegerAttribute & RequiredAttribute & DefaultTo<0>;
+    createdAt: DateTimeAttribute;
+    updatedAt: DateTimeAttribute;
+    createdBy: RelationAttribute<
+      "api::diagnostic.question",
+      "oneToOne",
+      "admin::user"
+    > &
+      PrivateAttribute;
+    updatedBy: RelationAttribute<
+      "api::diagnostic.question",
+      "oneToOne",
+      "admin::user"
+    > &
+      PrivateAttribute;
+  };
+}
+
+export interface DiagnosticQuestionAnswer extends ComponentSchema {
+  info: {
+    displayName: "answer";
+    description: "Une r\u00E9ponse potentielle \u00E0 une question menant soit \u00E0 une sous r\u00E9ponse, soit a une nouvelle question.";
+  };
+  attributes: {
+    content: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    destination: RelationAttribute<
+      "diagnostic.question.answer",
+      "oneToOne",
+      "api::diagnostic.question"
+    >;
+    info: TextAttribute;
+    order: IntegerAttribute & RequiredAttribute & DefaultTo<0>;
+    subanswers: ComponentAttribute<"diagnostic.question.sub-answer", true>;
+  };
+}
+
+export interface DiagnosticQuestionSubAnswer extends ComponentSchema {
+  info: {
+    displayName: "subanswer";
+    description: "Une sous r\u00E9ponse suit une r\u00E9ponse et m\u00E8ne obligatoirement vers une nouvelle question.";
+  };
+  attributes: {
+    content: StringAttribute &
+      RequiredAttribute &
+      SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 255;
+      }>;
+    destination: RelationAttribute<
+      "diagnostic.question.sub-answer",
+      "oneToOne",
+      "api::diagnostic.question"
+    > &
+    RequiredAttribute;
+    info: TextAttribute;
+    order: IntegerAttribute & RequiredAttribute & DefaultTo<0>;
+  };
+}
+
+declare global {
+  namespace Strapi {
+    interface Schemas {
+      "api::diagnostic.question": ApiDiagnosticQuestion;
+      "diagnostic.question.answer": DiagnosticQuestionAnswer;
+      "diagnostic.question.sub-answer": DiagnosticQuestionSubAnswer
+    }
+  }
+}
