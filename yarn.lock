@@ -4106,22 +4106,10 @@
     aria-hidden "^1.2.3"
     react-remove-scroll "^2.5.5"
 
-"@strapi/utils@4.10.2":
+"@strapi/utils@4.10.2", "@strapi/utils@^4.5.4":
   version "4.10.2"
   resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.10.2.tgz#cf804424f037de71a6467c4125181044396f8f5b"
   integrity sha512-vf3fXtOK26hDjQq8+fv/PpvEjeVBUaD9cI8k7j8aSz3A1DY8BYL0KDBX/Gm9T55b0Lzxwz39zURA1+pQquxsFg==
-  dependencies:
-    "@sindresorhus/slugify" "1.1.0"
-    date-fns "2.29.3"
-    http-errors "1.8.1"
-    lodash "4.17.21"
-    p-map "4.0.0"
-    yup "0.32.9"
-
-"@strapi/utils@^4.5.4":
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.9.0.tgz#35731524d4c237f046b4fb4df1c32730dc85ad7d"
-  integrity sha512-Tyr2Qk4pixl1uVVLdF0hehwaEKBiYqaB7/JMSzjsaN8/8XwLPEi5Y3cymYkzZy2Dcyl58FW+V+3fHmAUN39y9A==
   dependencies:
     "@sindresorhus/slugify" "1.1.0"
     date-fns "2.29.3"
@@ -16175,9 +16163,9 @@ strapi-plugin-import-export-entries@^1.19.1:
     react-singleton-hook "3.3.0"
 
 strapi-plugin-meilisearch@^0.9.1:
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/strapi-plugin-meilisearch/-/strapi-plugin-meilisearch-0.9.1.tgz#1f134866b6b77bd65d9869d6ab949514a5ff4ef7"
-  integrity sha512-kSZjqYJuuXulqPsIc1ZcpCG7xNbYfCYCNDNRN6CI/aisWFL65dQYVG7HkVOAaJfxdUaboFKNu9c5R1hzbtJwTQ==
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/strapi-plugin-meilisearch/-/strapi-plugin-meilisearch-0.9.2.tgz#c8db12820b86640b1bdc850dde94da9c50e9b6e8"
+  integrity sha512-18rAUkQ5LTVYGKqe0bslKpMPC3nd/VpQNFAFkydTqhONkdPI/m1SkRnudaFujMspTB7+fqcAhrdGOeHTH/g3cQ==
   dependencies:
     "@strapi/utils" "^4.5.4"
     meilisearch "^0.30.0"
