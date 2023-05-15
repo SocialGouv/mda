@@ -92,7 +92,7 @@ const QuestionBox = ({ question, index }: QuestionBoxProps) => {
 
   return (
     <FormGroupStep>
-      {question.attributes.info && (
+      {question.attributes.info && question.attributes.displayInfoUp && (
         <Notice className="fr-my-1w" isInsideContent>
           <Markdown>{question.attributes.info}</Markdown>
         </Notice>
@@ -102,6 +102,11 @@ const QuestionBox = ({ question, index }: QuestionBoxProps) => {
           <legend className="fr-sr-only">{question.attributes.content}</legend>
           <FormGroup>
             <FormGroupLabel htmlFor={`select-question-${index}`}>{question.attributes.content}</FormGroupLabel>
+            {question.attributes.info && !question.attributes.displayInfoUp && (
+              <Notice className="fr-my-1w" isInsideContent>
+                <Markdown>{question.attributes.info}</Markdown>
+              </Notice>
+            )}
             <FormSelect
               id={`select-question-${index}`}
               onChange={handleAnswerChange}
@@ -121,6 +126,12 @@ const QuestionBox = ({ question, index }: QuestionBoxProps) => {
               <FormGroupLabel htmlFor={`select-question-subanswer-${index}`} className="fr-sr-only">
                 {question.attributes.content} {question.attributes.answers?.[currentAnswerIndex].content.toLowerCase()}
               </FormGroupLabel>
+              {question.attributes.answers?.[currentAnswerIndex]?.info &&
+                question.attributes.answers?.[currentAnswerIndex]?.displayInfoUp && (
+                  <Notice className="fr-my-1w" isInsideContent>
+                    <Markdown>{question.attributes.answers?.[currentAnswerIndex]?.info ?? ""}</Markdown>
+                  </Notice>
+                )}
               <FormSelect
                 id={`select-question-subanswer-${index}`}
                 onChange={handleSubAnswerChange}
@@ -147,11 +158,12 @@ const QuestionBox = ({ question, index }: QuestionBoxProps) => {
       ) : (
         <p>{question.attributes.content}</p>
       )}
-      {question.attributes.answers?.[currentAnswerIndex]?.info && (
-        <Notice className="fr-my-1w" isInsideContent>
-          <Markdown>{question.attributes.answers?.[currentAnswerIndex]?.info ?? ""}</Markdown>
-        </Notice>
-      )}
+      {question.attributes.answers?.[currentAnswerIndex]?.info &&
+        !question.attributes.answers?.[currentAnswerIndex]?.displayInfoUp && (
+          <Notice className="fr-my-1w" isInsideContent>
+            <Markdown>{question.attributes.answers?.[currentAnswerIndex]?.info ?? ""}</Markdown>
+          </Notice>
+        )}
     </FormGroupStep>
   );
 };

@@ -1,6 +1,7 @@
 import {
   type CollectionTypeSchema,
   type StringAttribute,
+  type BooleanAttribute,
   type RequiredAttribute,
   type SetMinMaxLength,
   type DefaultTo,
@@ -298,6 +299,7 @@ export interface ApiDiagnosticQuestion extends SingleTypeSchema {
         maxLength: 255;
       }>;
     answers: ComponentAttribute<"diagnostic.question.answer", true>;
+    displayInfoUp: BooleanAttribute & DefaultTo<false>;
     info: TextAttribute;
     order: IntegerAttribute & RequiredAttribute & DefaultTo<0>;
     createdAt: DateTimeAttribute;
@@ -334,6 +336,7 @@ export interface DiagnosticQuestionAnswer extends ComponentSchema {
       "oneToOne",
       "api::diagnostic.question"
     >;
+    displayInfoUp: BooleanAttribute & DefaultTo<false>;
     info: TextAttribute;
     order: IntegerAttribute & RequiredAttribute & DefaultTo<0>;
     subanswers: ComponentAttribute<"diagnostic.question.sub-answer", true>;
@@ -358,6 +361,7 @@ export interface DiagnosticQuestionSubAnswer extends ComponentSchema {
       "api::diagnostic.question"
     > &
     RequiredAttribute;
+    displayInfoUp: BooleanAttribute & DefaultTo<false>;
     info: TextAttribute;
     order: IntegerAttribute & RequiredAttribute & DefaultTo<0>;
   };
