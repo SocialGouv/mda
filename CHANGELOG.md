@@ -1,3 +1,15 @@
+# [1.21.0](https://github.com/SocialGouv/mda/compare/v1.20.0...v1.21.0) (2023-05-15)
+
+
+### Bug Fixes
+
+* **production:** Avoid memory leak by bumping next version ([#327](https://github.com/SocialGouv/mda/issues/327)) ([7883e81](https://github.com/SocialGouv/mda/commit/7883e8176e7f8d969fbd4002c9ed5d281e693d2e))
+
+
+### Features
+
+* **diagnostic-v2:** front ([#319](https://github.com/SocialGouv/mda/issues/319)) ([4e8e405](https://github.com/SocialGouv/mda/commit/4e8e405f4ada0cdca0cf0ca1309958c6bdd4c0fd))
+
 # [1.20.0](https://github.com/SocialGouv/mda/compare/v1.19.0...v1.20.0) (2023-05-09)
 
 
