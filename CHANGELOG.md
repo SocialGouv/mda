@@ -1,3 +1,15 @@
+# [1.22.0](https://github.com/SocialGouv/mda/compare/v1.21.0...v1.22.0) (2023-05-15)
+
+
+### Bug Fixes
+
+* **diagnostic:** Cleanup ([#321](https://github.com/SocialGouv/mda/issues/321)) ([77f31e5](https://github.com/SocialGouv/mda/commit/77f31e599a49495f52c4035ed515e3bbf202fa3e))
+
+
+### Features
+
+* **diagnostic:** info position ([#328](https://github.com/SocialGouv/mda/issues/328)) ([25cfa44](https://github.com/SocialGouv/mda/commit/25cfa445ccb062576e7032c6f3ecad89abb8096d))
+
 # [1.21.0](https://github.com/SocialGouv/mda/compare/v1.20.0...v1.21.0) (2023-05-15)
 
 
