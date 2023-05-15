@@ -1433,43 +1433,6 @@ export interface ApiPolitiqueDeConfidentialitePolitiqueDeConfidentialite
   };
 }
 
-export interface ApiQuestionQuestion extends CollectionTypeSchema {
-  info: {
-    singularName: 'question';
-    pluralName: 'questions';
-    displayName: 'Diagnostic';
-    description: 'Une question est une \u00E9tape du parcours de diagnostic.';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    content: StringAttribute &
-      RequiredAttribute &
-      SetMinMaxLength<{
-        minLength: 1;
-        maxLength: 255;
-      }>;
-    answers: ComponentAttribute<'diagnostic.answer', true>;
-    info: TextAttribute;
-    first: BooleanAttribute & RequiredAttribute & DefaultTo<false>;
-    createdAt: DateTimeAttribute;
-    updatedAt: DateTimeAttribute;
-    createdBy: RelationAttribute<
-      'api::question.question',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-    updatedBy: RelationAttribute<
-      'api::question.question',
-      'oneToOne',
-      'admin::user'
-    > &
-      PrivateAttribute;
-  };
-}
-
 export interface CommonAlerts extends ComponentSchema {
   info: {
     displayName: 'Alerts';
@@ -1793,50 +1756,6 @@ export interface CommonTiles extends ComponentSchema {
   };
 }
 
-export interface DiagnosticAnswer extends ComponentSchema {
-  info: {
-    displayName: 'answer';
-    description: 'Une r\u00E9ponse potentielle \u00E0 une question menant soit \u00E0 une sous r\u00E9ponse, soit a une nouvelle question.';
-  };
-  attributes: {
-    content: StringAttribute &
-      RequiredAttribute &
-      SetMinMaxLength<{
-        minLength: 1;
-        maxLength: 255;
-      }>;
-    destination: RelationAttribute<
-      'diagnostic.answer',
-      'oneToOne',
-      'api::question.question'
-    >;
-    info: TextAttribute;
-    subanswers: ComponentAttribute<'diagnostic.sub-answer', true>;
-  };
-}
-
-export interface DiagnosticSubAnswer extends ComponentSchema {
-  info: {
-    displayName: 'SubAnswer';
-    description: 'Une sous r\u00E9ponse suit une r\u00E9ponse et m\u00E8ne obligatoirement vers une nouvelle question.';
-  };
-  attributes: {
-    content: StringAttribute &
-      RequiredAttribute &
-      SetMinMaxLength<{
-        minLength: 1;
-        maxLength: 255;
-      }>;
-    destination: RelationAttribute<
-      'diagnostic.sub-answer',
-      'oneToOne',
-      'api::question.question'
-    > &
-      RequiredAttribute;
-    info: TextAttribute;
-  };
-}
-
 export interface FichePratiqueContentEncart extends ComponentSchema {
   info: {
     displayName: 'encart';
@@ -1987,7 +1906,6 @@ declare global {
       'api::parcours.parcours': ApiParcoursParcours;
       'api::plan-du-site.plan-du-site': ApiPlanDuSitePlanDuSite;
       'api::politique-de-confidentialite.politique-de-confidentialite': ApiPolitiqueDeConfidentialitePolitiqueDeConfidentialite;
-      'api::question.question': ApiQuestionQuestion;
       'common.alerts': CommonAlerts;
       'common.articles': CommonArticles;
       'common.carousels': CommonCarousels;
@@ -2001,8 +1919,6 @@ declare global {
       'common.selects': CommonSelects;
       'common.textareas': CommonTextareas;
       'common.tiles': CommonTiles;
-      'diagnostic.answer': DiagnosticAnswer;
-      'diagnostic.sub-answer': DiagnosticSubAnswer;
       'fiche-pratique-content.encart': FichePratiqueContentEncart;
       'je-donne-mon-avis.feedback-form': JeDonneMonAvisFeedbackForm;
       'menu.dropdown-menu-item': MenuDropdownMenuItem;
