@@ -26,14 +26,14 @@
   },
   "dependencies": {
     "@mda/strapi-plugin-mda": "*",
-    "@strapi/design-system": "^1.7.3",
-    "@strapi/plugin-users-permissions": "4.10.2",
-    "@strapi/strapi": "4.10.2",
+    "@strapi/design-system": "^1.7.5",
+    "@strapi/plugin-users-permissions": "4.10.5",
+    "@strapi/strapi": "4.10.5",
     "pg": "8.10.0",
     "request": "^2.88.2",
     "strapi-plugin-config-sync": "^1.1.2",
     "strapi-plugin-import-export-entries": "^1.19.1",
-    "strapi-plugin-meilisearch": "^0.9.1",
+    "strapi-plugin-meilisearch": "^0.9.2",
     "strapi-plugin-populate-deep": "^2.0.0",
     "strapi-plugin-slugify": "^2.3.2"
   },
