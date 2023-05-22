@@ -103,11 +103,11 @@ web:
     maxReplicas: 10
   resources:
     limits:
-      cpu: "350m"
-      memory: "384Mi"
+      cpu: "500m"
+      memory: "2Gi"
     requests:
-      cpu: "250m"
-      memory: "256Mi"
+      cpu: "400m"
+      memory: "512Mi"
   envFrom:
     - secretRef:
         name: "mda-revalidate-webhook"
