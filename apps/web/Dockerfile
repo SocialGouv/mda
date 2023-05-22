@@ -52,7 +52,6 @@ RUN yarn turbo run build --filter=web
 # Runner
 FROM base AS runner
 ENV NODE_ENV production
-ENV NODE_OPTIONS="--max-old-space-size=8192"
 ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN addgroup --system --gid 1001 nodejs && \
