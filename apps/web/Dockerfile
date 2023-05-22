@@ -1,4 +1,4 @@
-ARG NODE_VERSION=18-alpine
+ARG NODE_VERSION=18
 
 FROM node:$NODE_VERSION AS base
 RUN apk add --no-cache libc6-compat && \
