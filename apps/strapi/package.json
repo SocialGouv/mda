@@ -17,22 +17,17 @@
   },
   "devDependencies": {
     "@mda/eslint-config": "*",
-    "@mda/strapi-types": "*",
-    "@types/jsonwebtoken": "^9.0.2",
-    "@types/koa": "^2.13.6",
-    "@types/koa2-ratelimit": "^0.9.3",
-    "@types/node-fetch": "^2.6.3",
-    "@types/node-schedule": "^2.1.0"
+    "@mda/strapi-types": "*"
   },
   "dependencies": {
     "@mda/strapi-plugin-mda": "*",
-    "@strapi/design-system": "^1.7.5",
+    "@strapi/design-system": "^1.7.7",
     "@strapi/plugin-users-permissions": "4.10.5",
     "@strapi/strapi": "4.10.5",
-    "pg": "8.10.0",
+    "pg": "8.11.0",
     "request": "^2.88.2",
     "strapi-plugin-config-sync": "^1.1.2",
-    "strapi-plugin-import-export-entries": "^1.19.1",
+    "strapi-plugin-import-export-entries": "^1.19.2",
     "strapi-plugin-meilisearch": "^0.9.2",
     "strapi-plugin-populate-deep": "^2.0.0",
     "strapi-plugin-slugify": "^2.3.2"
