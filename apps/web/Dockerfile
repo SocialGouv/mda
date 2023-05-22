@@ -1,8 +1,6 @@
 ARG NODE_VERSION=18
 
 FROM node:$NODE_VERSION AS base
-RUN apk add --no-cache libc6-compat && \
-    rm -rf /var/cache/apk/* > /dev/null 2>&1
 WORKDIR /app
 
 ########
