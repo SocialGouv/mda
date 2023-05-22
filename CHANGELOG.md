@@ -1,3 +1,10 @@
+## [1.22.1](https://github.com/SocialGouv/mda/compare/v1.22.0...v1.22.1) (2023-05-22)
+
+
+### Bug Fixes
+
+* **prod:** Increase memory limits ([#335](https://github.com/SocialGouv/mda/issues/335)) ([ebe37dc](https://github.com/SocialGouv/mda/commit/ebe37dc2604e5ae9a9841802ce3a1a5a3a412f76))
+
 # [1.22.0](https://github.com/SocialGouv/mda/compare/v1.21.0...v1.22.0) (2023-05-15)
 
 
