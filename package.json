@@ -52,8 +52,5 @@
   },
   "resolutions": {
     "typescript": "^4.9.4"
-  },
-  "dependencies": {
-    "yarn": "^1.22.19"
   }
 }
