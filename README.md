@@ -64,7 +64,7 @@ flowchart TD
                 strapiCMS[CMS Strapi]
                 frontend([Site web])
                 strapiAdmin([Site Admin Strapi])
-                mailer[maildev]
+                mailer["maildev<br>tipimail (prod)"]
             end
 
             meilisearch{{Moteur de recherche Meilisearch}}
