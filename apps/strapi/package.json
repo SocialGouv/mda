@@ -22,6 +22,7 @@
   "dependencies": {
     "@mda/strapi-plugin-mda": "*",
     "@strapi/design-system": "^1.7.7",
+    "@strapi/plugin-sentry": "^4.10.5",
     "@strapi/plugin-users-permissions": "4.10.5",
     "@strapi/strapi": "4.10.5",
     "pg": "8.11.0",

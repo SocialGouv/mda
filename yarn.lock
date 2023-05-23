@@ -4116,6 +4116,16 @@
     react-intl "6.4.1"
     yup "^0.32.9"
 
+"@strapi/plugin-sentry@^4.10.5":
+  version "4.10.5"
+  resolved "https://registry.yarnpkg.com/@strapi/plugin-sentry/-/plugin-sentry-4.10.5.tgz#f08c82ffcf9a60bebce9298c90e6dbc9ff93d641"
+  integrity sha512-ScEsep5kVZN1B1CwBABau5TVyyCZ8Z0123AxII4yUsiIA4zDd1JaxhzXZi2zMP3pY/J2TZuXCwtZ8H3hGSEc3w==
+  dependencies:
+    "@sentry/node" "6.19.7"
+    "@strapi/design-system" "1.7.5"
+    "@strapi/helper-plugin" "4.10.5"
+    "@strapi/icons" "1.7.5"
+
 "@strapi/plugin-upload@4.10.5":
   version "4.10.5"
   resolved "https://registry.npmjs.org/@strapi/plugin-upload/-/plugin-upload-4.10.5.tgz"
@@ -17280,7 +17290,12 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@5.0.4, typescript@^4.9.4:
+typescript@5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.0.4.tgz#b217fd20119bd61a94d4011274e0ab369058da3b"
+  integrity sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==
+
+typescript@^4.9.4:
   version "4.9.5"
   resolved "https://registry.npmjs.org/typescript/-/typescript-4.9.5.tgz"
   integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
