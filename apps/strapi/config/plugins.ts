@@ -202,6 +202,13 @@ const plugins: StrapiConfigSetter<PluginsConfig> = ({ env }) => ({
     enabled: true,
     config: {},
   },
+  sentry: {
+    enabled: true,
+    config: {
+      dsn: env("SENTRY_DSN") || "https://6ea113bfaf1941818bb0dc0d4527cc95@sentry.fabrique.social.gouv.fr/89",
+      sendMetadata: true,
+    },
+  },
 });
 
 export default plugins;
