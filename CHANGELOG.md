@@ -1,3 +1,15 @@
+## [1.22.3](https://github.com/SocialGouv/mda/compare/v1.22.2...v1.22.3) (2023-05-26)
+
+
+### Bug Fixes
+
+* add sentry ([#337](https://github.com/SocialGouv/mda/issues/337)) ([a71ef5f](https://github.com/SocialGouv/mda/commit/a71ef5f5e8cb37a8b09887b0a0be288896b3e013))
+
+
+### Reverts
+
+* Revert #340 "chore(pages): Remove events from la maison de l'autisme (#288)" ([0acb7af](https://github.com/SocialGouv/mda/commit/0acb7af9e9a4934577d9117aa79b7c871f8285e4)), closes [#340](https://github.com/SocialGouv/mda/issues/340) [#288](https://github.com/SocialGouv/mda/issues/288)
+
 ## [1.22.2](https://github.com/SocialGouv/mda/compare/v1.22.1...v1.22.2) (2023-05-23)
 
 
