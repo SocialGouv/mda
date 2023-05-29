@@ -4278,6 +4278,18 @@
     prettier "2.8.4"
     typescript "5.0.4"
 
+"@strapi/typescript-utils@4.10.6":
+  version "4.10.6"
+  resolved "https://registry.yarnpkg.com/@strapi/typescript-utils/-/typescript-utils-4.10.6.tgz#2181349bc4ac45470b4619ac14a086e8cdea7211"
+  integrity sha512-If7qeeU67T11cht45Ww3bHwZ9Lx2A/0BVJldCwcA8E56DTSZb+vWWXYaWup9yXceintbMTDBbhEQHkG14LWTDQ==
+  dependencies:
+    chalk "4.1.2"
+    cli-table3 "0.6.2"
+    fs-extra "10.0.1"
+    lodash "4.17.21"
+    prettier "2.8.4"
+    typescript "5.0.4"
+
 "@strapi/ui-primitives@^1.7.5":
   version "1.7.5"
   resolved "https://registry.npmjs.org/@strapi/ui-primitives/-/ui-primitives-1.7.5.tgz"
@@ -17290,12 +17302,7 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@5.0.4:
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.0.4.tgz#b217fd20119bd61a94d4011274e0ab369058da3b"
-  integrity sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==
-
-typescript@^4.9.4:
+typescript@5.0.4, typescript@^4.9.4:
   version "4.9.5"
   resolved "https://registry.npmjs.org/typescript/-/typescript-4.9.5.tgz"
   integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
@@ -18120,11 +18127,6 @@ yargs@^17.3.1, yargs@^17.5.1:
     string-width "^4.2.3"
     y18n "^5.0.5"
     yargs-parser "^21.1.1"
-
-yarn@^1.22.19:
-  version "1.22.19"
-  resolved "https://registry.npmjs.org/yarn/-/yarn-1.22.19.tgz"
-  integrity sha512-/0V5q0WbslqnwP91tirOvldvYISzaqhClxzyUKXYxs07yUILIs5jx/k6CFe8bvKSkds5w+eiOqta39Wk3WxdcQ==
 
 ylru@^1.2.0:
   version "1.3.2"
