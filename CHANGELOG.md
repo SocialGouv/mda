@@ -1,3 +1,15 @@
+# [1.23.0](https://github.com/SocialGouv/mda/compare/v1.22.3...v1.23.0) (2023-05-30)
+
+
+### Bug Fixes
+
+* **dashlord:** 404 ([#307](https://github.com/SocialGouv/mda/issues/307)) ([92c225a](https://github.com/SocialGouv/mda/commit/92c225ac6e8fbd9e1fc6032ea2f27c8a11a349b3))
+
+
+### Features
+
+* **seo:** Add dates ([#346](https://github.com/SocialGouv/mda/issues/346)) ([417a113](https://github.com/SocialGouv/mda/commit/417a113bde1a08bd254628d90ebeb3db6649da9f))
+
 ## [1.22.3](https://github.com/SocialGouv/mda/compare/v1.22.2...v1.22.3) (2023-05-26)
 
 
