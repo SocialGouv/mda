@@ -12,7 +12,7 @@ export type FichePratiqueProps = Next13ServerPageProps<"slug">;
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata({ params }: FichePratiqueProps) {
-    const head = (
+    const currentFiche = (
       await fetchStrapi("fiche-pratiques", {
         filters: {
           slug: {
@@ -20,12 +20,14 @@ export const generateMetadata = generateMetadataFactory({
           },
         },
       })
-    ).data?.[0];
+    ).data?.[0]?.attributes;
 
     return {
-      title: head?.attributes.title as string,
+      description: currentFiche?.excerpt,
+      modifiedTime: currentFiche?.updatedAt,
+      publishedTime: currentFiche?.createdAt,
       slug: `fiches-pratiques/${params.slug}`,
-      description: head?.attributes.excerpt,
+      title: currentFiche?.title as string,
     };
   },
 });

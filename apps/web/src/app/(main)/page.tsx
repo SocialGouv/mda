@@ -11,7 +11,16 @@ import { fetchStrapi } from "@services/strapi";
 
 export const generateMetadata = generateMetadataFactory({
   // The layout template does not work here ?
-  resolveMetadata: () => ({ title: `Accueil | ${config.siteTitle}` }),
+  resolveMetadata: async () => {
+    const pageData = await fetchStrapi("accueil");
+    const accueil = pageData.data?.attributes;
+
+    return {
+      title: `Accueil | ${config.siteTitle}`,
+      modifiedTime: accueil?.updatedAt,
+      publishedTime: accueil?.publishedAt,
+    };
+  },
 });
 
 const AccueilPage = async () => {

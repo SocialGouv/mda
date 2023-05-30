@@ -5,11 +5,14 @@ import { fetchStrapi } from "@services/strapi";
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const head = await fetchStrapi("annuaire");
+    const pageData = await fetchStrapi("annuaire");
+    const annuaire = pageData.data?.attributes;
     return {
-      title: head.data?.attributes.title as string,
+      description: annuaire?.content,
+      modifiedTime: annuaire?.updatedAt,
+      publishedTime: annuaire?.createdAt,
       slug: "annuaire",
-      description: head.data?.attributes.content,
+      title: annuaire?.title as string,
     };
   },
 });

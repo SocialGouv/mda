@@ -8,11 +8,15 @@ import { FeedbackForm } from "./FeedbackForm";
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const head = await fetchStrapi("je-donne-mon-avis");
+    const pageData = await fetchStrapi("je-donne-mon-avis");
+    const jeDonneMonAvis = pageData.data?.attributes;
+
     return {
-      title: head.data?.attributes.title as string,
+      description: jeDonneMonAvis?.content,
+      modifiedTime: jeDonneMonAvis?.updatedAt,
+      publishedTime: jeDonneMonAvis?.publishedAt,
       slug: "je-donne-mon-avis",
-      description: head.data?.attributes.content,
+      title: jeDonneMonAvis?.title as string,
     };
   },
 });

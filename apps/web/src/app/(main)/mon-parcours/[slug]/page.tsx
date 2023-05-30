@@ -25,7 +25,7 @@ export type ParcoursProps = Next13ServerPageProps<"slug">;
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata({ params }: ParcoursProps) {
-    const head = (
+    const currentParcours = (
       await fetchStrapi("parcourss", {
         filters: {
           slug: {
@@ -33,12 +33,14 @@ export const generateMetadata = generateMetadataFactory({
           },
         },
       })
-    ).data?.[0];
+    ).data?.[0]?.attributes;
 
     return {
-      title: head?.attributes.title as string,
+      description: currentParcours?.description,
+      modifiedTime: currentParcours?.updatedAt,
+      publishedTime: currentParcours?.publishedAt,
       slug: `mon-parcours/${params.slug}`,
-      description: head?.attributes.description,
+      title: currentParcours?.title as string,
     };
   },
 });

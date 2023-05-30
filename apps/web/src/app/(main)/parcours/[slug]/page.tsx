@@ -12,7 +12,7 @@ export type EtapeDeVieProps = Next13ServerPageProps<"slug">;
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata({ params }: EtapeDeVieProps) {
-    const head = (
+    const currentEtape = (
       await fetchStrapi("etape-de-vies", {
         filters: {
           slug: {
@@ -20,12 +20,14 @@ export const generateMetadata = generateMetadataFactory({
           },
         },
       })
-    ).data?.[0];
+    ).data?.[0]?.attributes;
 
     return {
-      title: head?.attributes.title as string,
+      description: currentEtape?.excerpt,
+      modifiedTime: currentEtape?.updatedAt,
+      publishedTime: currentEtape?.createdAt,
       slug: `parcours/${params.slug}`,
-      description: head?.attributes.excerpt,
+      title: currentEtape?.title as string,
     };
   },
 });

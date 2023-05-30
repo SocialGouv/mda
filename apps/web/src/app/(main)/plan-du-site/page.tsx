@@ -5,11 +5,14 @@ import { fetchStrapi } from "@services/strapi";
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const head = await fetchStrapi("plan-du-site");
+    const pageData = await fetchStrapi("plan-du-site");
+    const planDuSite = pageData.data?.attributes;
     return {
-      title: head.data?.attributes.title as string,
+      description: planDuSite?.content,
+      modifiedTime: planDuSite?.updatedAt,
+      publishedTime: planDuSite?.createdAt,
       slug: "plan-du-site",
-      description: head.data?.attributes.content,
+      title: planDuSite?.title as string,
     };
   },
 });

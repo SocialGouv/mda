@@ -5,11 +5,14 @@ import { fetchStrapi } from "@services/strapi";
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const head = await fetchStrapi("accessibilite");
+    const pageData = await fetchStrapi("accessibilite");
+    const accessibilite = pageData.data?.attributes;
     return {
-      title: head.data?.attributes.title as string,
+      description: accessibilite?.content,
+      modifiedTime: accessibilite?.updatedAt,
+      publishedTime: accessibilite?.createdAt,
       slug: "accessibilite",
-      description: head.data?.attributes.content,
+      title: accessibilite?.title as string,
     };
   },
 });

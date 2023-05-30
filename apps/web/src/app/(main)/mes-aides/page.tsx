@@ -7,11 +7,14 @@ import { fetchStrapi } from "@services/strapi";
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const head = await fetchStrapi("mes-aides");
+    const pageData = await fetchStrapi("mes-aides");
+    const mesAides = pageData.data?.attributes;
     return {
-      title: head.data?.attributes.title as string,
+      description: mesAides?.content,
+      modifiedTime: mesAides?.updatedAt,
+      publishedTime: mesAides?.createdAt,
       slug: "mes-aides",
-      description: head.data?.attributes.content,
+      title: mesAides?.title as string,
     };
   },
 });
