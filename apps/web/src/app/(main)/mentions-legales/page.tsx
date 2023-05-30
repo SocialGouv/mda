@@ -5,24 +5,27 @@ import { fetchStrapi } from "@services/strapi";
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const head = await fetchStrapi("mentions-legales");
+    const pageData = await fetchStrapi("mentions-legales");
+    const mentionsLegales = pageData.data?.attributes;
     return {
-      title: head.data?.attributes.title as string,
+      description: mentionsLegales?.content,
+      modifiedTime: mentionsLegales?.updatedAt,
+      publishedTime: mentionsLegales?.createdAt,
       slug: "mentions-legales",
-      description: head.data?.attributes.content,
+      title: mentionsLegales?.title as string,
     };
   },
 });
 
 const MentionsLegalesPage = async () => {
   const pageData = await fetchStrapi("mentions-legales");
-  const mentionsLeages = pageData.data?.attributes;
+  const mentionsLegales = pageData.data?.attributes;
   return (
     <SimpleContentPage>
-      {mentionsLeages?.title && <h1>{mentionsLeages.title}</h1>}
-      {mentionsLeages?.content && (
+      {mentionsLegales?.title && <h1>{mentionsLegales.title}</h1>}
+      {mentionsLegales?.content && (
         <div className="fr-text--xl">
-          <Markdown>{mentionsLeages.content}</Markdown>
+          <Markdown>{mentionsLegales.content}</Markdown>
         </div>
       )}
     </SimpleContentPage>

@@ -7,11 +7,14 @@ import { fetchStrapi } from "@services/strapi";
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const head = await fetchStrapi("modeles-de-courrier");
+    const pageData = await fetchStrapi("modeles-de-courrier");
+    const modelesDeCourrier = pageData.data?.attributes;
     return {
-      title: head.data?.attributes.title as string,
+      title: modelesDeCourrier?.title as string,
+      modifiedTime: modelesDeCourrier?.updatedAt,
+      publishedTime: modelesDeCourrier?.publishedAt,
       slug: "modeles-de-courrier",
-      description: head.data?.attributes.content,
+      description: modelesDeCourrier?.content,
     };
   },
 });

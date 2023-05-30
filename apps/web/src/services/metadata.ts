@@ -20,6 +20,8 @@ const DESCRIPTION_LENGTH = DEFAULT_DESCRIPTION.length;
 interface ResolvedMetadatas {
   description?: string;
   keywords?: Metadata["keywords"];
+  modifiedTime?: string;
+  publishedTime?: string;
   slug?: string;
   title: DefaultTemplateString | string;
 }
@@ -42,7 +44,14 @@ function formatDescription(description?: string): string {
 export const generateMetadataFactory =
   ({ noCanonicalLink, resolveMetadata }: MetadataFactoryParams) =>
   async (params: unknown, parent: ResolvingMetadata): Promise<Metadata> => {
-    const { description: rawDescription, keywords, title: rawTitle, slug } = await resolveMetadata(params);
+    const {
+      description: rawDescription,
+      keywords,
+      modifiedTime,
+      publishedTime,
+      slug,
+      title: rawTitle,
+    } = await resolveMetadata(params);
     const { alternates } = await parent;
     const baseUrl = new URL(alternates?.canonical?.url.toString() || config.siteUrl);
 
@@ -59,6 +68,8 @@ export const generateMetadataFactory =
         title: `${title} | ${url.hostname}`,
         url,
         images: [new URL(`${config.siteUrl}/maison-de-lautisme.png`)],
+        modifiedTime,
+        publishedTime,
       },
       alternates: noCanonicalLink
         ? {}

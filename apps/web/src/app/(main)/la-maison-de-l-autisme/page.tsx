@@ -20,11 +20,14 @@ import { fetchStrapi } from "@services/strapi";
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const head = await fetchStrapi("maison-de-l-autisme");
+    const pageData = await fetchStrapi("maison-de-l-autisme");
+    const laMaisonDeLAutisme = pageData.data?.attributes;
     return {
-      title: head.data?.attributes.title as string,
+      description: laMaisonDeLAutisme?.content,
+      modifiedTime: laMaisonDeLAutisme?.updatedAt,
+      publishedTime: laMaisonDeLAutisme?.createdAt,
       slug: "la-maison-de-l-autisme",
-      description: head.data?.attributes.content,
+      title: laMaisonDeLAutisme?.title as string,
     };
   },
 });

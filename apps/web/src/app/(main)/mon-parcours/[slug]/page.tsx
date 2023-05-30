@@ -1,5 +1,6 @@
 import { type Next13ServerPageProps } from "@common/utils/next13";
 import { ActionsButtons } from "@components/base/client/ActionsButtons";
+import { JsonLd, type JsonLdProps } from "@components/utils/JsonLd";
 import { Markdown } from "@components/utils/Markdown";
 import {
   Card,
@@ -20,12 +21,13 @@ import { NextLinkOrA } from "@design-system/utils/NextLinkOrA";
 import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 import { notFound } from "next/navigation";
+import { type Article } from "schema-dts";
 
 export type ParcoursProps = Next13ServerPageProps<"slug">;
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata({ params }: ParcoursProps) {
-    const head = (
+    const currentParcours = (
       await fetchStrapi("parcourss", {
         filters: {
           slug: {
@@ -33,12 +35,14 @@ export const generateMetadata = generateMetadataFactory({
           },
         },
       })
-    ).data?.[0];
+    ).data?.[0]?.attributes;
 
     return {
-      title: head?.attributes.title as string,
+      description: currentParcours?.description,
+      modifiedTime: currentParcours?.updatedAt,
+      publishedTime: currentParcours?.publishedAt,
       slug: `mon-parcours/${params.slug}`,
-      description: head?.attributes.description,
+      title: currentParcours?.title as string,
     };
   },
 });
@@ -52,7 +56,7 @@ export async function generateStaticParams() {
 }
 
 const MonParcoursSlugPage = async ({ params }: ParcoursProps) => {
-  const currentParcours = await fetchStrapi("parcourss", {
+  const pageData = await fetchStrapi("parcourss", {
     populate: "deep",
     filters: {
       slug: {
@@ -66,20 +70,32 @@ const MonParcoursSlugPage = async ({ params }: ParcoursProps) => {
     notFound();
   });
 
+  const currentParcours = pageData.attributes;
+
+  const jsonLd: JsonLdProps<Article> = {
+    type: "Article",
+    dateCreated: currentParcours.createdAt,
+    dateModified: currentParcours.updatedAt,
+    datePublished: currentParcours.publishedAt,
+    name: currentParcours.title,
+    slug: currentParcours.slug,
+  };
+
   return (
     <section className="fr-py-6w fr-py-md-12w">
+      <JsonLd {...jsonLd}></JsonLd>
       <Container>
         <Grid haveGutters justifyCenter>
           <GridCol md={10} lg={8}>
             <ActionsButtons />
-            <h1>{currentParcours.attributes.title}</h1>
+            <h1>{currentParcours.title}</h1>
             <div className="fr-text--xl">
-              <Markdown>{currentParcours.attributes.description}</Markdown>
+              <Markdown>{currentParcours.description}</Markdown>
             </div>
           </GridCol>
           <GridCol md={10} lg={6}>
             <Timeline>
-              {(currentParcours.attributes.items ?? [])
+              {(currentParcours.items ?? [])
                 .filter(({ timeline }) => timeline)
                 .sort((a, b) => a.order - b.order)
                 .map(item => {
@@ -119,7 +135,7 @@ const MonParcoursSlugPage = async ({ params }: ParcoursProps) => {
           </GridCol>
           <GridCol md={10} lg={8} className="fr-mt-4w">
             <Grid as="ul" haveGutters>
-              {(currentParcours.attributes.items ?? [])
+              {(currentParcours.items ?? [])
                 .filter(({ timeline }) => !timeline)
                 .sort((a, b) => a.order - b.order)
                 .map(item => {

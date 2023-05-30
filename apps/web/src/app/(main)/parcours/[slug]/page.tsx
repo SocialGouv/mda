@@ -1,5 +1,6 @@
 import { type Next13ServerPageProps } from "@common/utils/next13";
 import { ActionsButtons } from "@components/base/client/ActionsButtons";
+import { JsonLd, type JsonLdProps } from "@components/utils/JsonLd";
 import { Markdown } from "@components/utils/Markdown";
 import { Container, Grid, GridCol, SideMenuLink } from "@design-system";
 import { CollapsedSectionDynamicGroup, SideMenuDynamic } from "@design-system/client";
@@ -7,12 +8,13 @@ import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import { type Article } from "schema-dts";
 
 export type EtapeDeVieProps = Next13ServerPageProps<"slug">;
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata({ params }: EtapeDeVieProps) {
-    const head = (
+    const currentEtape = (
       await fetchStrapi("etape-de-vies", {
         filters: {
           slug: {
@@ -20,12 +22,14 @@ export const generateMetadata = generateMetadataFactory({
           },
         },
       })
-    ).data?.[0];
+    ).data?.[0]?.attributes;
 
     return {
-      title: head?.attributes.title as string,
+      description: currentEtape?.excerpt,
+      modifiedTime: currentEtape?.updatedAt,
+      publishedTime: currentEtape?.createdAt,
       slug: `parcours/${params.slug}`,
-      description: head?.attributes.excerpt,
+      title: currentEtape?.title as string,
     };
   },
 });
@@ -39,7 +43,7 @@ export async function generateStaticParams() {
 }
 
 const ParcoursSlugPage = async ({ params }: EtapeDeVieProps) => {
-  const [etapes, currentEtape] = await Promise.all([
+  const [etapes, pageData] = await Promise.all([
     fetchStrapi("etape-de-vies").then(responses => responses.data ?? []),
     fetchStrapi("etape-de-vies", {
       populate: "deep",
@@ -55,15 +59,25 @@ const ParcoursSlugPage = async ({ params }: EtapeDeVieProps) => {
       notFound();
     }),
   ]);
+  const currentEtape = pageData.attributes;
+
+  const jsonLd: JsonLdProps<Article> = {
+    type: "Article",
+    dateCreated: currentEtape.createdAt,
+    dateModified: currentEtape.updatedAt,
+    name: currentEtape.title,
+    slug: currentEtape.slug,
+  };
 
   return (
     <section className="fr-py-md-12w">
+      <JsonLd {...jsonLd}></JsonLd>
       <Container>
         <Grid haveGutters>
           <GridCol md={4} lg={3} className="fr-no-print">
             <SideMenuDynamic buttonLabel="Sommaire des étapes de vie">
               {etapes
-                ?.filter(({ attributes: { type } }) => type === currentEtape.attributes.type)
+                ?.filter(({ attributes: { type } }) => type === currentEtape.type)
                 .map((f, index) => {
                   if (!f.attributes.slug) return;
                   const href = `/parcours/${f.attributes.slug}`;
@@ -77,23 +91,22 @@ const ParcoursSlugPage = async ({ params }: EtapeDeVieProps) => {
           </GridCol>
           <GridCol className="fr-py-6w fr-pt-md-0" md={8} lg={9}>
             <ActionsButtons />
-            <h1>{currentEtape.attributes.recap?.title}</h1>
+            <h1>{currentEtape.recap?.title}</h1>
             <p className="fr-text--xs">
               <>
                 Mise à jour
-                {currentEtape.attributes.updatedAt &&
-                  ` le ${new Date(currentEtape.attributes.updatedAt).toLocaleString("fr-FR")} -`}{" "}
-                par la Maison de l'autisme
+                {currentEtape.updatedAt && ` le ${new Date(currentEtape.updatedAt).toLocaleString("fr-FR")} -`} par la
+                Maison de l'autisme
               </>
             </p>
             <div className="fr-text--xl">
-              <Markdown>{currentEtape.attributes.recap.content}</Markdown>
+              <Markdown>{currentEtape.recap.content}</Markdown>
             </div>
             <div className="fr-mt-8w">
               <Suspense fallback={<>Chargement des sections...</>}>
                 <CollapsedSectionDynamicGroup
                   data={
-                    currentEtape.attributes.section?.map((s, sectionIdx) => ({
+                    currentEtape.section?.map((s, sectionIdx) => ({
                       id: `section-${sectionIdx}`,
                       title: s.title,
                       content: <Markdown>{s.content}</Markdown>,

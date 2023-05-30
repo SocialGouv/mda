@@ -8,11 +8,14 @@ import { DiagSteps } from "./DiagSteps";
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const head = await fetchStrapi("diagnostic");
+    const pageData = await fetchStrapi("diagnostic");
+    const diagnostic = pageData.data?.attributes;
     return {
-      title: head.data?.attributes.title as string,
+      description: diagnostic?.content,
+      modifiedTime: diagnostic?.updatedAt,
+      publishedTime: diagnostic?.createdAt,
       slug: "mon-diagnostic",
-      description: head.data?.attributes.content,
+      title: diagnostic?.title as string,
     };
   },
 });

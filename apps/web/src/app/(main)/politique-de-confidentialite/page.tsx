@@ -7,11 +7,12 @@ import { GDPRButton } from "./GDPRButton";
 
 export const generateMetadata = generateMetadataFactory({
   async resolveMetadata() {
-    const head = await fetchStrapi("politique-de-confidentialite");
+    const pageData = await fetchStrapi("politique-de-confidentialite");
+    const politiqueDeConfidentialite = pageData.data?.attributes;
     return {
-      title: head.data?.attributes.title as string,
+      description: politiqueDeConfidentialite?.content,
       slug: "politique-de-confidentialite",
-      description: head.data?.attributes.content,
+      title: politiqueDeConfidentialite?.title as string,
     };
   },
 });
