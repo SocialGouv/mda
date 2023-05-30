@@ -1,4 +1,4 @@
-export const LogoMda = ({ size = 60 }: { size?: number }) => (
+export const LogoMda = ({ size = 80 }: { size?: number }) => (
   <svg
     width={size}
     height={size}
