@@ -1,3 +1,12 @@
+## [1.23.1](https://github.com/SocialGouv/mda/compare/v1.23.0...v1.23.1) (2023-05-30)
+
+
+### Bug Fixes
+
+* **admin:** Text fields do not work ([#350](https://github.com/SocialGouv/mda/issues/350)) ([8f51ad0](https://github.com/SocialGouv/mda/commit/8f51ad0e8582bd0014f03d4d0cdd44f4ecdcc6f7))
+* **events:** Full page display ([#348](https://github.com/SocialGouv/mda/issues/348)) ([8b85add](https://github.com/SocialGouv/mda/commit/8b85addbc3c2bec219fa577475f1e86bc00e9cee))
+* **logo:** Increase size ([dd65c89](https://github.com/SocialGouv/mda/commit/dd65c898488fe03c8291c9ae3797b0b50e0c4a97))
+
 # [1.23.0](https://github.com/SocialGouv/mda/compare/v1.22.3...v1.23.0) (2023-05-30)
 
 
