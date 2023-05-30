@@ -1,5 +1,6 @@
 import { type Next13ServerPageProps } from "@common/utils/next13";
 import { ActionsButtons } from "@components/base/client/ActionsButtons";
+import { JsonLd, type JsonLdProps } from "@components/utils/JsonLd";
 import { Markdown } from "@components/utils/Markdown";
 import { Container, Grid, GridCol, SideMenuLink } from "@design-system";
 import { CollapsedSectionDynamicGroup, SideMenuDynamic } from "@design-system/client";
@@ -7,6 +8,7 @@ import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import { type Article } from "schema-dts";
 
 export type FichePratiqueProps = Next13ServerPageProps<"slug">;
 
@@ -41,7 +43,7 @@ export async function generateStaticParams() {
 }
 
 const FichesPratiquesSlugPage = async ({ params }: FichePratiqueProps) => {
-  const [fiches, currentFiche] = await Promise.all([
+  const [fiches, pageData] = await Promise.all([
     fetchStrapi("fiche-pratiques").then(responses => responses.data ?? []),
     fetchStrapi("fiche-pratiques", {
       populate: "deep",
@@ -58,8 +60,19 @@ const FichesPratiquesSlugPage = async ({ params }: FichePratiqueProps) => {
     }),
   ]);
 
+  const currentFiche = pageData.attributes;
+
+  const jsonLd: JsonLdProps<Article> = {
+    type: "Article",
+    dateCreated: currentFiche.createdAt,
+    dateModified: currentFiche.updatedAt,
+    name: currentFiche.title,
+    slug: currentFiche.slug,
+  };
+
   return (
     <section className="fr-py-md-12w">
+      <JsonLd {...jsonLd}></JsonLd>
       <Container>
         <Grid haveGutters>
           <GridCol md={4} lg={3} className="fr-no-print">
@@ -77,23 +90,22 @@ const FichesPratiquesSlugPage = async ({ params }: FichePratiqueProps) => {
           </GridCol>
           <GridCol className="fr-py-6w fr-pt-md-0" md={8} lg={9}>
             <ActionsButtons />
-            <h1>{currentFiche.attributes.recap?.title}</h1>
+            <h1>{currentFiche.recap?.title}</h1>
             <p className="fr-text--xs">
               <>
                 Mise à jour
-                {currentFiche.attributes.updatedAt &&
-                  ` le ${new Date(currentFiche.attributes.updatedAt).toLocaleString("fr-FR")} -`}{" "}
-                par la Maison de l'autisme
+                {currentFiche.updatedAt && ` le ${new Date(currentFiche.updatedAt).toLocaleString("fr-FR")} -`} par la
+                Maison de l'autisme
               </>
             </p>
             <div className="fr-text--xl">
-              <Markdown>{currentFiche.attributes.recap.content}</Markdown>
+              <Markdown>{currentFiche.recap.content}</Markdown>
             </div>
             <div className="fr-mt-8w">
               <Suspense fallback={<>Chargement des sections...</>}>
                 <CollapsedSectionDynamicGroup
                   data={
-                    currentFiche.attributes.section?.map((s, sectionIdx) => ({
+                    currentFiche.section?.map((s, sectionIdx) => ({
                       id: `section-${sectionIdx}`,
                       title: s.title,
                       content: <Markdown>{s.content}</Markdown>,
