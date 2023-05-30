@@ -1,2342 +1,2344 @@
 {
-  "edges": [
-    {
-      "id": "reactflow__edge-question-1-answer-2",
-      "source": "question-1",
-      "target": "answer-2",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-2-subanswer-2",
-      "source": "answer-2",
-      "target": "subanswer-2",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-2-subanswer-3",
-      "source": "answer-2",
-      "target": "subanswer-3",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-3-subanswer-4",
-      "source": "answer-3",
-      "target": "subanswer-4",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-3-subanswer-5",
-      "source": "answer-3",
-      "target": "subanswer-5",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-3-subanswer-6",
-      "source": "answer-3",
-      "target": "subanswer-6",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-3-subanswer-7",
-      "source": "answer-3",
-      "target": "subanswer-7",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-1-answer-3",
-      "source": "question-1",
-      "target": "answer-3",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-1-answer-4",
-      "source": "question-1",
-      "target": "answer-4",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-subanswer-3-question-3",
-      "source": "subanswer-3",
-      "target": "question-3",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-subanswer-4-question-4",
-      "source": "subanswer-4",
-      "target": "question-4",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-subanswer-5-question-5",
-      "source": "subanswer-5",
-      "target": "question-5",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-subanswer-6-question-6",
-      "source": "subanswer-6",
-      "target": "question-6",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-subanswer-7-question-7",
-      "source": "subanswer-7",
-      "target": "question-7",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-4-question-8",
-      "source": "answer-4",
-      "target": "question-8",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-subanswer-2-question-6",
-      "source": "subanswer-2",
-      "target": "question-6",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-6-answer-5",
-      "source": "question-6",
-      "target": "answer-5",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-6-answer-6",
-      "source": "question-6",
-      "target": "answer-6",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-3-answer-7",
-      "source": "question-3",
-      "target": "answer-7",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-3-answer-8",
-      "source": "question-3",
-      "target": "answer-8",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-4-answer-9",
-      "source": "question-4",
-      "target": "answer-9",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-4-answer-10",
-      "source": "question-4",
-      "target": "answer-10",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-5-answer-11",
-      "source": "question-5",
-      "target": "answer-11",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-5-answer-12",
-      "source": "question-5",
-      "target": "answer-12",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-7-answer-13",
-      "source": "question-7",
-      "target": "answer-13",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-7-answer-14",
-      "source": "question-7",
-      "target": "answer-14",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-8-answer-16",
-      "source": "question-8",
-      "target": "answer-16",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-16-question-7",
-      "source": "answer-16",
-      "target": "question-7",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-8-answer-15",
-      "source": "question-8",
-      "target": "answer-15",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-15-subanswer-8",
-      "source": "answer-15",
-      "target": "subanswer-8",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-subanswer-8-question-4",
-      "source": "subanswer-8",
-      "target": "question-4",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-15-subanswer-9",
-      "source": "answer-15",
-      "target": "subanswer-9",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-15-subanswer-10",
-      "source": "answer-15",
-      "target": "subanswer-10",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-subanswer-9-question-5",
-      "source": "subanswer-9",
-      "target": "question-5",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-subanswer-10-question-6",
-      "source": "subanswer-10",
-      "target": "question-6",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-7-question-9",
-      "source": "answer-7",
-      "target": "question-9",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-9-answer-17",
-      "source": "question-9",
-      "target": "answer-17",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-9-answer-18",
-      "source": "question-9",
-      "target": "answer-18",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-17-question-10",
-      "source": "answer-17",
-      "target": "question-10",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-10-answer-19",
-      "source": "question-10",
-      "target": "answer-19",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-10-answer-20",
-      "source": "question-10",
-      "target": "answer-20",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-11-answer-18",
-      "source": "question-11",
-      "target": "answer-18",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-11-answer-20",
-      "source": "question-11",
-      "target": "answer-20",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-5-question-12",
-      "source": "answer-5",
-      "target": "question-12",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-12-answer-18",
-      "source": "question-12",
-      "target": "answer-18",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-12-answer-22",
-      "source": "question-12",
-      "target": "answer-22",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-11-question-13",
-      "source": "answer-11",
-      "target": "question-13",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-9-question-14",
-      "source": "answer-9",
-      "target": "question-14",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-14-answer-21",
-      "source": "question-14",
-      "target": "answer-21",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-13-answer-21",
-      "source": "question-13",
-      "target": "answer-21",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-14-answer-18",
-      "source": "question-14",
-      "target": "answer-18",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-13-answer-18",
-      "source": "question-13",
-      "target": "answer-18",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-21-question-15",
-      "source": "answer-21",
-      "target": "question-15",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-15-answer-23",
-      "source": "question-15",
-      "target": "answer-23",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-15-answer-24",
-      "source": "question-15",
-      "target": "answer-24",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-23-question-16",
-      "source": "answer-23",
-      "target": "question-16",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-16-answer-25",
-      "source": "question-16",
-      "target": "answer-25",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-16-answer-26",
-      "source": "question-16",
-      "target": "answer-26",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-20-answer-33",
-      "source": "question-20",
-      "target": "answer-33",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-20-answer-34",
-      "source": "question-20",
-      "target": "answer-34",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-20-answer-35",
-      "source": "question-20",
-      "target": "answer-35",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-31-question-20",
-      "source": "answer-31",
-      "target": "question-20",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-19-answer-32",
-      "source": "question-19",
-      "target": "answer-32",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-19-answer-31",
-      "source": "question-19",
-      "target": "answer-31",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-29-question-19",
-      "source": "answer-29",
-      "target": "question-19",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-18-answer-29",
-      "source": "question-18",
-      "target": "answer-29",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-18-answer-30",
-      "source": "question-18",
-      "target": "answer-30",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-17-answer-28",
-      "source": "question-17",
-      "target": "answer-28",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-27-question-18",
-      "source": "answer-27",
-      "target": "question-18",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-25-question-17",
-      "source": "answer-25",
-      "target": "question-17",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-36-question-17",
-      "source": "answer-36",
-      "target": "question-17",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-21-answer-36",
-      "source": "question-21",
-      "target": "answer-36",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-subanswer-11-question-21",
-      "source": "subanswer-11",
-      "target": "question-21",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-subanswer-12-question-21",
-      "source": "subanswer-12",
-      "target": "question-21",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-subanswer-13-question-21",
-      "source": "subanswer-13",
-      "target": "question-21",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-subanswer-14-question-21",
-      "source": "subanswer-14",
-      "target": "question-21",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-subanswer-15-question-21",
-      "source": "subanswer-15",
-      "target": "question-21",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-subanswer-16-question-21",
-      "source": "subanswer-16",
-      "target": "question-21",
-      "selected": false,
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-24-subanswer-11",
-      "source": "answer-24",
-      "target": "subanswer-11",
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-24-subanswer-12",
-      "source": "answer-24",
-      "target": "subanswer-12",
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-24-subanswer-13",
-      "source": "answer-24",
-      "target": "subanswer-13",
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-24-subanswer-14",
-      "source": "answer-24",
-      "target": "subanswer-14",
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-24-subanswer-15",
-      "source": "answer-24",
-      "target": "subanswer-15",
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-24-subanswer-16",
-      "source": "answer-24",
-      "target": "subanswer-16",
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-22-subanswer-12",
-      "source": "answer-22",
-      "target": "subanswer-12",
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-22-subanswer-13",
-      "source": "answer-22",
-      "target": "subanswer-13",
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-22-subanswer-14",
-      "source": "answer-22",
-      "target": "subanswer-14",
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-22-subanswer-15",
-      "source": "answer-22",
-      "target": "subanswer-15",
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-22-subanswer-16",
-      "source": "answer-22",
-      "target": "subanswer-16",
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-20-subanswer-13",
-      "source": "answer-20",
-      "target": "subanswer-13",
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-20-subanswer-14",
-      "source": "answer-20",
-      "target": "subanswer-14",
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-20-subanswer-15",
-      "source": "answer-20",
-      "target": "subanswer-15",
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-20-subanswer-16",
-      "source": "answer-20",
-      "target": "subanswer-16",
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-question-17-answer-27",
-      "source": "question-17",
-      "target": "answer-27",
-      "sourceHandle": null,
-      "targetHandle": null
-    },
-    {
-      "id": "reactflow__edge-answer-13-question-11",
-      "source": "answer-13",
-      "target": "question-11",
-      "sourceHandle": null,
-      "targetHandle": null
+  "tree": {
+    "edges": [
+      {
+        "id": "reactflow__edge-question-1-answer-2",
+        "source": "question-1",
+        "target": "answer-2",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-2-subanswer-2",
+        "source": "answer-2",
+        "target": "subanswer-2",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-2-subanswer-3",
+        "source": "answer-2",
+        "target": "subanswer-3",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-3-subanswer-4",
+        "source": "answer-3",
+        "target": "subanswer-4",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-3-subanswer-5",
+        "source": "answer-3",
+        "target": "subanswer-5",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-3-subanswer-6",
+        "source": "answer-3",
+        "target": "subanswer-6",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-3-subanswer-7",
+        "source": "answer-3",
+        "target": "subanswer-7",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-1-answer-3",
+        "source": "question-1",
+        "target": "answer-3",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-1-answer-4",
+        "source": "question-1",
+        "target": "answer-4",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-subanswer-3-question-3",
+        "source": "subanswer-3",
+        "target": "question-3",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-subanswer-4-question-4",
+        "source": "subanswer-4",
+        "target": "question-4",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-subanswer-5-question-5",
+        "source": "subanswer-5",
+        "target": "question-5",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-subanswer-6-question-6",
+        "source": "subanswer-6",
+        "target": "question-6",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-subanswer-7-question-7",
+        "source": "subanswer-7",
+        "target": "question-7",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-4-question-8",
+        "source": "answer-4",
+        "target": "question-8",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-subanswer-2-question-6",
+        "source": "subanswer-2",
+        "target": "question-6",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-6-answer-5",
+        "source": "question-6",
+        "target": "answer-5",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-6-answer-6",
+        "source": "question-6",
+        "target": "answer-6",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-3-answer-7",
+        "source": "question-3",
+        "target": "answer-7",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-3-answer-8",
+        "source": "question-3",
+        "target": "answer-8",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-4-answer-9",
+        "source": "question-4",
+        "target": "answer-9",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-4-answer-10",
+        "source": "question-4",
+        "target": "answer-10",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-5-answer-11",
+        "source": "question-5",
+        "target": "answer-11",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-5-answer-12",
+        "source": "question-5",
+        "target": "answer-12",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-7-answer-13",
+        "source": "question-7",
+        "target": "answer-13",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-7-answer-14",
+        "source": "question-7",
+        "target": "answer-14",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-8-answer-16",
+        "source": "question-8",
+        "target": "answer-16",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-16-question-7",
+        "source": "answer-16",
+        "target": "question-7",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-8-answer-15",
+        "source": "question-8",
+        "target": "answer-15",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-15-subanswer-8",
+        "source": "answer-15",
+        "target": "subanswer-8",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-subanswer-8-question-4",
+        "source": "subanswer-8",
+        "target": "question-4",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-15-subanswer-9",
+        "source": "answer-15",
+        "target": "subanswer-9",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-15-subanswer-10",
+        "source": "answer-15",
+        "target": "subanswer-10",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-subanswer-9-question-5",
+        "source": "subanswer-9",
+        "target": "question-5",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-subanswer-10-question-6",
+        "source": "subanswer-10",
+        "target": "question-6",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-7-question-9",
+        "source": "answer-7",
+        "target": "question-9",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-9-answer-17",
+        "source": "question-9",
+        "target": "answer-17",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-9-answer-18",
+        "source": "question-9",
+        "target": "answer-18",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-17-question-10",
+        "source": "answer-17",
+        "target": "question-10",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-10-answer-19",
+        "source": "question-10",
+        "target": "answer-19",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-10-answer-20",
+        "source": "question-10",
+        "target": "answer-20",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-11-answer-18",
+        "source": "question-11",
+        "target": "answer-18",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-11-answer-20",
+        "source": "question-11",
+        "target": "answer-20",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-5-question-12",
+        "source": "answer-5",
+        "target": "question-12",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-12-answer-18",
+        "source": "question-12",
+        "target": "answer-18",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-12-answer-22",
+        "source": "question-12",
+        "target": "answer-22",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-11-question-13",
+        "source": "answer-11",
+        "target": "question-13",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-9-question-14",
+        "source": "answer-9",
+        "target": "question-14",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-14-answer-21",
+        "source": "question-14",
+        "target": "answer-21",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-13-answer-21",
+        "source": "question-13",
+        "target": "answer-21",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-14-answer-18",
+        "source": "question-14",
+        "target": "answer-18",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-13-answer-18",
+        "source": "question-13",
+        "target": "answer-18",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-21-question-15",
+        "source": "answer-21",
+        "target": "question-15",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-15-answer-23",
+        "source": "question-15",
+        "target": "answer-23",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-15-answer-24",
+        "source": "question-15",
+        "target": "answer-24",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-23-question-16",
+        "source": "answer-23",
+        "target": "question-16",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-16-answer-25",
+        "source": "question-16",
+        "target": "answer-25",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-16-answer-26",
+        "source": "question-16",
+        "target": "answer-26",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-20-answer-33",
+        "source": "question-20",
+        "target": "answer-33",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-20-answer-34",
+        "source": "question-20",
+        "target": "answer-34",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-20-answer-35",
+        "source": "question-20",
+        "target": "answer-35",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-31-question-20",
+        "source": "answer-31",
+        "target": "question-20",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-19-answer-32",
+        "source": "question-19",
+        "target": "answer-32",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-19-answer-31",
+        "source": "question-19",
+        "target": "answer-31",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-29-question-19",
+        "source": "answer-29",
+        "target": "question-19",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-18-answer-29",
+        "source": "question-18",
+        "target": "answer-29",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-18-answer-30",
+        "source": "question-18",
+        "target": "answer-30",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-17-answer-28",
+        "source": "question-17",
+        "target": "answer-28",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-27-question-18",
+        "source": "answer-27",
+        "target": "question-18",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-25-question-17",
+        "source": "answer-25",
+        "target": "question-17",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-36-question-17",
+        "source": "answer-36",
+        "target": "question-17",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-21-answer-36",
+        "source": "question-21",
+        "target": "answer-36",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-subanswer-11-question-21",
+        "source": "subanswer-11",
+        "target": "question-21",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-subanswer-12-question-21",
+        "source": "subanswer-12",
+        "target": "question-21",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-subanswer-13-question-21",
+        "source": "subanswer-13",
+        "target": "question-21",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-subanswer-14-question-21",
+        "source": "subanswer-14",
+        "target": "question-21",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-subanswer-15-question-21",
+        "source": "subanswer-15",
+        "target": "question-21",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-subanswer-16-question-21",
+        "source": "subanswer-16",
+        "target": "question-21",
+        "selected": false,
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-24-subanswer-11",
+        "source": "answer-24",
+        "target": "subanswer-11",
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-24-subanswer-12",
+        "source": "answer-24",
+        "target": "subanswer-12",
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-24-subanswer-13",
+        "source": "answer-24",
+        "target": "subanswer-13",
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-24-subanswer-14",
+        "source": "answer-24",
+        "target": "subanswer-14",
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-24-subanswer-15",
+        "source": "answer-24",
+        "target": "subanswer-15",
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-24-subanswer-16",
+        "source": "answer-24",
+        "target": "subanswer-16",
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-22-subanswer-12",
+        "source": "answer-22",
+        "target": "subanswer-12",
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-22-subanswer-13",
+        "source": "answer-22",
+        "target": "subanswer-13",
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-22-subanswer-14",
+        "source": "answer-22",
+        "target": "subanswer-14",
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-22-subanswer-15",
+        "source": "answer-22",
+        "target": "subanswer-15",
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-22-subanswer-16",
+        "source": "answer-22",
+        "target": "subanswer-16",
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-20-subanswer-13",
+        "source": "answer-20",
+        "target": "subanswer-13",
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-20-subanswer-14",
+        "source": "answer-20",
+        "target": "subanswer-14",
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-20-subanswer-15",
+        "source": "answer-20",
+        "target": "subanswer-15",
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-20-subanswer-16",
+        "source": "answer-20",
+        "target": "subanswer-16",
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-question-17-answer-27",
+        "source": "question-17",
+        "target": "answer-27",
+        "sourceHandle": null,
+        "targetHandle": null
+      },
+      {
+        "id": "reactflow__edge-answer-13-question-11",
+        "source": "answer-13",
+        "target": "question-11",
+        "sourceHandle": null,
+        "targetHandle": null
+      }
+    ],
+    "nodes": [
+      {
+        "id": "question-1",
+        "data": {
+          "content": "Je suis"
+        },
+        "type": "mda-root-question",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": -235.0684203502451,
+          "y": 337.4718496617252
+        },
+        "selected": false,
+        "deletable": false,
+        "positionAbsolute": {
+          "x": -235.0684203502451,
+          "y": 337.4718496617252
+        }
+      },
+      {
+        "id": "answer-2",
+        "data": {
+          "info": "",
+          "order": 1,
+          "content": "Une personne qui s'interroge sur ses comportements et ressentis",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 79,
+        "dragging": false,
+        "position": {
+          "x": 35.988350087815775,
+          "y": 863.4579120427647
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 35.988350087815775,
+          "y": 863.4579120427647
+        }
+      },
+      {
+        "id": "answer-3",
+        "data": {
+          "info": "",
+          "order": 2,
+          "content": "Un parent",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 27.34370898385805,
+          "y": 341.71048802339044
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 27.34370898385805,
+          "y": 341.71048802339044
+        }
+      },
+      {
+        "id": "answer-4",
+        "data": {
+          "info": "",
+          "order": 3,
+          "content": "Un proche ou un aidant",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 62,
+        "dragging": false,
+        "position": {
+          "x": 28.419537226805687,
+          "y": 652.909077752208
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 28.419537226805687,
+          "y": 652.909077752208
+        }
+      },
+      {
+        "id": "subanswer-2",
+        "data": {
+          "info": "",
+          "order": 1,
+          "content": "J'ai entre 13 et 18 ans",
+          "displayInfoUp": false
+        },
+        "type": "mda-subanswer",
+        "width": 150,
+        "height": 62,
+        "dragging": false,
+        "position": {
+          "x": 807.2437207585982,
+          "y": 1048.547214096463
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 807.2437207585982,
+          "y": 1048.547214096463
+        }
+      },
+      {
+        "id": "subanswer-3",
+        "data": {
+          "info": "",
+          "order": 2,
+          "content": "Je suis un adulte",
+          "displayInfoUp": false
+        },
+        "type": "mda-subanswer",
+        "width": 150,
+        "height": 62,
+        "dragging": false,
+        "position": {
+          "x": 812.4330975101831,
+          "y": 1261.3029932368486
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 812.4330975101831,
+          "y": 1261.3029932368486
+        }
+      },
+      {
+        "id": "subanswer-4",
+        "data": {
+          "info": "",
+          "order": 1,
+          "content": "Mon enfant a moins de 6 ans",
+          "displayInfoUp": false
+        },
+        "type": "mda-subanswer",
+        "width": 150,
+        "height": 62,
+        "dragging": false,
+        "position": {
+          "x": 797.623948727304,
+          "y": 132.0387762790778
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 797.623948727304,
+          "y": 132.0387762790778
+        }
+      },
+      {
+        "id": "subanswer-5",
+        "data": {
+          "info": "",
+          "order": 2,
+          "content": "Mon enfant a entre 7 et 12 ans",
+          "displayInfoUp": false
+        },
+        "type": "mda-subanswer",
+        "width": 150,
+        "height": 62,
+        "dragging": false,
+        "position": {
+          "x": 791.9090124693655,
+          "y": 240.5241160696566
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 791.9090124693655,
+          "y": 240.5241160696566
+        }
+      },
+      {
+        "id": "subanswer-6",
+        "data": {
+          "info": "",
+          "order": 3,
+          "content": "Mon enfant a entre 13 et 18 ans",
+          "displayInfoUp": false
+        },
+        "type": "mda-subanswer",
+        "width": 150,
+        "height": 82,
+        "dragging": false,
+        "position": {
+          "x": 792.584710177763,
+          "y": 362.8938653018677
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 792.584710177763,
+          "y": 362.8938653018677
+        }
+      },
+      {
+        "id": "subanswer-7",
+        "data": {
+          "info": "",
+          "order": 4,
+          "content": "Mon enfant a plus de 18 ans",
+          "displayInfoUp": false
+        },
+        "type": "mda-subanswer",
+        "width": 150,
+        "height": 62,
+        "dragging": false,
+        "position": {
+          "x": 798.6276142257962,
+          "y": 505.5912622887485
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 798.6276142257962,
+          "y": 505.5912622887485
+        }
+      },
+      {
+        "id": "question-3",
+        "data": {
+          "info": "",
+          "content": "Avez-vous pris un rendez-vous avec votre médecin traitant ou un médecin généraliste, un psychiatre, le médecin du travail, ou un professionnel de santé (psychologue, orthophoniste...) ?",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 114,
+        "dragging": false,
+        "position": {
+          "x": 1111.6161926853702,
+          "y": 1236.751066490601
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1111.6161926853702,
+          "y": 1236.751066490601
+        }
+      },
+      {
+        "id": "question-4",
+        "data": {
+          "info": "",
+          "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un pédiatre, le médecin de la crèche ou de la Protection maternelle et infantile (PMI) ?",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 102,
+        "dragging": false,
+        "position": {
+          "x": 1100.9595247491825,
+          "y": 135.05104830171223
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1100.9595247491825,
+          "y": 135.05104830171223
+        }
+      },
+      {
+        "id": "question-5",
+        "data": {
+          "info": "",
+          "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin scolaire ? (ref 7-12)",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 91,
+        "dragging": false,
+        "position": {
+          "x": 1104.4143413841402,
+          "y": 399.4256482246443
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1104.4143413841402,
+          "y": 399.4256482246443
+        }
+      },
+      {
+        "id": "question-6",
+        "data": {
+          "info": "",
+          "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin scolaire ? (ref 13-18)",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 91,
+        "dragging": false,
+        "position": {
+          "x": 1114.0594697730078,
+          "y": 666.4129727304235
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1114.0594697730078,
+          "y": 666.4129727304235
+        }
+      },
+      {
+        "id": "question-7",
+        "data": {
+          "info": "",
+          "content": "Avez-vous pris un rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, le médecin du travail ou un professionnel de santé (psychologue, orthophoniste...) ? (ref adulte)",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 125,
+        "dragging": false,
+        "position": {
+          "x": 1106.247846676598,
+          "y": 910.3232612134674
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1106.247846676598,
+          "y": 910.3232612134674
+        }
+      },
+      {
+        "id": "question-8",
+        "data": {
+          "info": "",
+          "content": "Vous réalisez ce questionnaire pour le compte de",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 102,
+        "dragging": false,
+        "position": {
+          "x": 250.84066703325846,
+          "y": 723.1927065330971
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 250.84066703325846,
+          "y": 723.1927065330971
+        }
+      },
+      {
+        "id": "answer-5",
+        "data": {
+          "info": "",
+          "order": 1,
+          "content": "Oui",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 1309.194363826049,
+          "y": 608.0514374284335
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1309.194363826049,
+          "y": 608.0514374284335
+        }
+      },
+      {
+        "id": "answer-6",
+        "data": {
+          "info": "Prenez rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin scolaire.",
+          "order": 2,
+          "content": "Non",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 1310.1292700732997,
+          "y": 744.5718121340815
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1310.1292700732997,
+          "y": 744.5718121340815
+        }
+      },
+      {
+        "id": "answer-7",
+        "data": {
+          "info": "Pour en savoir plus sur les [Recommandations de Bonnes Pratiques Professionnelles, cliquez ici](/fiches-pratiques/recommandations-de-bonnes-pratiques-professionnelles).",
+          "order": 1,
+          "content": "Oui",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 1323.492657613992,
+          "y": 1192.9340777522075
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1323.492657613992,
+          "y": 1192.9340777522075
+        }
+      },
+      {
+        "id": "answer-8",
+        "data": {
+          "info": "Prenez rendez-vous avec votre médecin traitant, un médecin généraliste, un psychiatre, le médecin du travail ou un professionnel de santé (psychologue, orthophoniste).",
+          "order": 2,
+          "content": "Non",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 1323.492657613992,
+          "y": 1408.5090777522082
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1323.492657613992,
+          "y": 1408.5090777522082
+        }
+      },
+      {
+        "id": "answer-9",
+        "data": {
+          "info": "",
+          "order": 1,
+          "content": "Oui",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 1326.3814294969652,
+          "y": 144.07803297988204
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1326.3814294969652,
+          "y": 144.07803297988204
+        }
+      },
+      {
+        "id": "answer-10",
+        "data": {
+          "info": "Prenez rendez-vous avec le médecin traitant ou un médecin généraliste, un pédiatre, le médecin de la crèche ou de la Protection maternelle et infantile (PMI).",
+          "order": 2,
+          "content": "Non",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 1321.836246131923,
+          "y": 223.8385892629895
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1321.836246131923,
+          "y": 223.8385892629895
+        }
+      },
+      {
+        "id": "answer-11",
+        "data": {
+          "info": "",
+          "order": 1,
+          "content": "Oui",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 1317.8832201304886,
+          "y": 351.3447215797428
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1317.8832201304886,
+          "y": 351.3447215797428
+        }
+      },
+      {
+        "id": "answer-12",
+        "data": {
+          "info": "Prenez rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin scolaire.",
+          "order": 2,
+          "content": "Non",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 1318.6046083707722,
+          "y": 465.39085594402
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1318.6046083707722,
+          "y": 465.39085594402
+        }
+      },
+      {
+        "id": "answer-13",
+        "data": {
+          "info": "",
+          "order": 1,
+          "content": "Oui",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 1318.1710494679783,
+          "y": 921.1474333875209
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1318.1710494679783,
+          "y": 921.1474333875209
+        }
+      },
+      {
+        "id": "answer-14",
+        "data": {
+          "info": "Prenez rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin du travail.",
+          "order": 2,
+          "content": "Non",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 1318.5994392367684,
+          "y": 1021.5750305431899
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1318.5994392367684,
+          "y": 1021.5750305431899
+        }
+      },
+      {
+        "id": "answer-15",
+        "data": {
+          "info": "",
+          "order": 1,
+          "content": "Une personne mineure",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 62,
+        "dragging": false,
+        "position": {
+          "x": 471.1273517928581,
+          "y": 667.5299721512235
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 471.1273517928581,
+          "y": 667.5299721512235
+        }
+      },
+      {
+        "id": "answer-16",
+        "data": {
+          "info": "",
+          "order": 2,
+          "content": "Une personne majeure",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 62,
+        "dragging": false,
+        "position": {
+          "x": 497.1273517928579,
+          "y": 922.6791190451945
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 497.1273517928579,
+          "y": 922.6791190451945
+        }
+      },
+      {
+        "id": "subanswer-8",
+        "data": {
+          "info": "",
+          "order": 1,
+          "content": "Une personne mineure de moins de 6 ans",
+          "displayInfoUp": false
+        },
+        "type": "mda-subanswer",
+        "width": 150,
+        "height": 82,
+        "dragging": false,
+        "position": {
+          "x": 802.5686829939169,
+          "y": 631.3382721600213
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 802.5686829939169,
+          "y": 631.3382721600213
+        }
+      },
+      {
+        "id": "subanswer-9",
+        "data": {
+          "info": "",
+          "order": 2,
+          "content": "Une personne mineure entre 7 et 12 ans",
+          "displayInfoUp": false
+        },
+        "type": "mda-subanswer",
+        "width": 150,
+        "height": 82,
+        "dragging": false,
+        "position": {
+          "x": 807.6310049757583,
+          "y": 754.5110127627513
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 807.6310049757583,
+          "y": 754.5110127627513
+        }
+      },
+      {
+        "id": "subanswer-10",
+        "data": {
+          "info": "",
+          "order": 3,
+          "content": "Une personne mineure entre 13 et 18 ans",
+          "displayInfoUp": false
+        },
+        "type": "mda-subanswer",
+        "width": 150,
+        "height": 82,
+        "dragging": false,
+        "position": {
+          "x": 806.8570424768577,
+          "y": 865.5599110791296
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 806.8570424768577,
+          "y": 865.5599110791296
+        }
+      },
+      {
+        "id": "question-9",
+        "data": {
+          "info": "",
+          "content": "Un avis a-t-il été donné suite à cette consultation ? (ref adulte)",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 79,
+        "dragging": false,
+        "position": {
+          "x": 1538.857629137816,
+          "y": 1190.2043176803784
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1538.857629137816,
+          "y": 1190.2043176803784
+        }
+      },
+      {
+        "id": "answer-17",
+        "data": {
+          "info": "Si vous n'êtes pas satisfait  ou que vous avez un doute sur l'avis obtenu, vous pouvez prendre rendez-vous avec un autre professionnel de santé pour obtenir un deuxième avis.",
+          "order": 1,
+          "content": "Oui",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 1756.0117975934972,
+          "y": 1234.7904236134432
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1756.0117975934972,
+          "y": 1234.7904236134432
+        }
+      },
+      {
+        "id": "answer-18",
+        "data": {
+          "info": "Pour poursuivre le parcours de diagnostic, il est nécessaire d'obtenir un avis d'un professionnel de santé formé. Recontactez le professionnel de santé que vous avez rencontré pour obtenir cet avis, ou à défaut, prenez rendez-vous avec un autre professionnel de santé.",
+          "order": 2,
+          "content": "Non",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 1842.3811723510983,
+          "y": 728.4160245691138
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1842.3811723510983,
+          "y": 728.4160245691138
+        }
+      },
+      {
+        "id": "answer-19",
+        "data": {
+          "info": "Si vous souhaitez poursuivre vos démarches, vous pouvez prendre rendez-vous avec un autre professionnel pour obtenir un deuxième avis. \n\n\nVous pouvez également vous renseigner auprès de votre Centre de Ressources Autisme (CRA).\n\nSi vous ne souhaitez pas poursuivre votre parcours de diagnostic suite à la réponse obtenue, vous pouvez en rester là.",
+          "order": 2,
+          "content": "Non",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 2130.4706901007894,
+          "y": 1289.1076686285264
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 2130.4706901007894,
+          "y": 1289.1076686285264
+        }
+      },
+      {
+        "id": "answer-20",
+        "data": {
+          "info": "Si vous êtes satisfait de l'avis obtenu, sélectionnez le type d'organisme qui vous a été recommandé pour réaliser votre bilan diagnostic :\n\n\nSi vous avez des doutes sur l'avis obtenu, vous pouvez prendre rendez-vous avec un autre professionnel de santé pour obtenir un deuxième avis.",
+          "order": 1,
+          "content": "Oui",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 2145.2899960826894,
+          "y": 779.0809879035385
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 2145.2899960826894,
+          "y": 779.0809879035385
+        }
+      },
+      {
+        "id": "question-10",
+        "data": {
+          "info": "",
+          "content": "Un parcours de diagnostic vous a-t-il été proposé ? (ref adulte)",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 79,
+        "dragging": false,
+        "position": {
+          "x": 1933.8269816417633,
+          "y": 1208.852028930688
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1933.8269816417633,
+          "y": 1208.852028930688
+        }
+      },
+      {
+        "id": "question-11",
+        "data": {
+          "info": "",
+          "content": "Un avis a-t-il été donné suite à cette consultation ? (ref adulte)",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 79,
+        "dragging": false,
+        "position": {
+          "x": 1533.5304237237472,
+          "y": 918.7760932041344
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1533.5304237237472,
+          "y": 918.7760932041344
+        }
+      },
+      {
+        "id": "question-12",
+        "data": {
+          "info": "",
+          "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 13-18)",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 79,
+        "dragging": false,
+        "position": {
+          "x": 1521.855504282661,
+          "y": 567.9202274580583
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1521.855504282661,
+          "y": 567.9202274580583
+        }
+      },
+      {
+        "id": "answer-21",
+        "data": {
+          "info": "Si vous avez des doutes sur l'avis obtenu, vous pouvez prendre rendez-vous avec un autre professionnel de santé pour obtenir un deuxième avis.",
+          "order": 1,
+          "content": "Oui",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 1830.6821158796722,
+          "y": 243.97066176249862
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1830.6821158796722,
+          "y": 243.97066176249862
+        }
+      },
+      {
+        "id": "answer-22",
+        "data": {
+          "info": "Si vous êtes satisfait de l'avis obtenu, sélectionnez le type d'organisme qui vous a été recommandé pour réaliser votre bilan diagnostic :\n\nSi vous avez des doutes sur l'avis obtenu, vous pouvez prendre rendez-vous avec un autre professionnel de santé pour obtenir un deuxième avis.\n",
+          "order": 1,
+          "content": "Oui ",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 2142.161942901591,
+          "y": 688.1501297547887
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 2142.161942901591,
+          "y": 688.1501297547887
+        }
+      },
+      {
+        "id": "question-13",
+        "data": {
+          "info": "",
+          "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 7-12)",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 79,
+        "dragging": false,
+        "position": {
+          "x": 1525.7585445356729,
+          "y": 332.65969296851523
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1525.7585445356729,
+          "y": 332.65969296851523
+        }
+      },
+      {
+        "id": "question-14",
+        "data": {
+          "info": "",
+          "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 0-6)",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 79,
+        "dragging": false,
+        "position": {
+          "x": 1523.9964500469152,
+          "y": 133.95907775220815
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 1523.9964500469152,
+          "y": 133.95907775220815
+        }
+      },
+      {
+        "id": "question-15",
+        "data": {
+          "info": "Les plateformes de coordination et d’orientation (PCO) pour suspicion de troubles du neurodéveloppement (TND) s’adressent aux enfants de 0 à 12 ans pour qu’ils bénéficient, gratuitement et sans tarder, d’un parcours de soins comprenant :  \n- des bilans spécialisés permettant d’établir un diagnostic précisant le ou les troubles  ;  \n- des interventions rééducatives nécessaires.\n\n[Pour en savoir plus sur les PCO, cliquez ici.](/fiches-pratiques/plateforme-coordination-et-d-orientation)",
+          "content": "Avez-vous été dirigé vers une plateforme de coordination et d’orientation (PCO) ?",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 79,
+        "dragging": false,
+        "position": {
+          "x": 2015.6492843570577,
+          "y": 247.29646700304852
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 2015.6492843570577,
+          "y": 247.29646700304852
+        }
+      },
+      {
+        "id": "answer-23",
+        "data": {
+          "info": "",
+          "order": 1,
+          "content": "Oui",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 2209.7360091129394,
+          "y": 239.2338562538887
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 2209.7360091129394,
+          "y": 239.2338562538887
+        }
+      },
+      {
+        "id": "answer-24",
+        "data": {
+          "info": "Sélectionnez le type d'organisme ou de professionnel de santé qui vous a été recommandé pour réaliser votre bilan diagnostic :",
+          "order": 2,
+          "content": "Non",
+          "displayInfoUp": true
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 2211.74839836378,
+          "y": 321.7214670030485
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 2211.74839836378,
+          "y": 321.7214670030485
+        }
+      },
+      {
+        "id": "question-16",
+        "data": {
+          "info": "",
+          "content": "L'équipe de la PCO vous a-t-elle contacté ?",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 82,
+        "dragging": false,
+        "position": {
+          "x": 2523.2899960826894,
+          "y": 242.05907775220834
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 2523.2899960826894,
+          "y": 242.05907775220834
+        }
+      },
+      {
+        "id": "answer-25",
+        "data": {
+          "info": "La PCO se charge de prendre les rendez-vous, soit auprès de structures sanitaires ou médico-sociales compétentes, soit auprès de professionnels libéraux conventionnés avec la PCO, afin que les bilans et interventions se fassent le plus rapidement possible et au plus près du domicile de votre enfant.\n\nL'étape du bilan diagnostic peut alors démarrer.",
+          "order": 1,
+          "content": "Oui",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 2755.2899960826894,
+          "y": 239.67157775220835
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 2755.2899960826894,
+          "y": 239.67157775220835
+        }
+      },
+      {
+        "id": "answer-26",
+        "data": {
+          "info": "Attendez d'être contacté par l'équipe de la PCO. Un délai de 15 jours est à prévoir.\n\nAu delà des 15 jours d'attente, recontactez la Plateforme d'Orientation et de Coordination.",
+          "order": 2,
+          "content": "Non",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 2755.2899960826894,
+          "y": 327.62157775220794
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 2755.2899960826894,
+          "y": 327.62157775220794
+        }
+      },
+      {
+        "id": "question-17",
+        "data": {
+          "info": "",
+          "content": "Avez-vous démarré le bilan diagnostic ?",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 82,
+        "dragging": false,
+        "position": {
+          "x": 3025.2899960826894,
+          "y": 720.5090777522082
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 3025.2899960826894,
+          "y": 720.5090777522082
+        }
+      },
+      {
+        "id": "question-18",
+        "data": {
+          "info": "",
+          "content": "Avez-vous réalisé les entretiens et tests ?",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 102,
+        "dragging": false,
+        "position": {
+          "x": 3457.8491257926744,
+          "y": 698.8066886222531
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 3457.8491257926744,
+          "y": 698.8066886222531
+        }
+      },
+      {
+        "id": "question-19",
+        "data": {
+          "info": "",
+          "content": "Avez-vous eu votre bilan diagnostic ?",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 82,
+        "dragging": false,
+        "position": {
+          "x": 3881.071719403089,
+          "y": 707.6756379260617
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 3881.071719403089,
+          "y": 707.6756379260617
+        }
+      },
+      {
+        "id": "question-20",
+        "data": {
+          "info": "",
+          "content": "Est-ce que le bilan diagnostic conclut à des troubles du spectre de l'autisme ?",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 79,
+        "dragging": false,
+        "position": {
+          "x": 4319.916517701019,
+          "y": 711.992339950569
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 4319.916517701019,
+          "y": 711.992339950569
+        }
+      },
+      {
+        "id": "answer-27",
+        "data": {
+          "info": "",
+          "order": 1,
+          "content": "Oui",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 3250.4899960826874,
+          "y": 728.5090777522082
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 3250.4899960826874,
+          "y": 728.5090777522082
+        }
+      },
+      {
+        "id": "answer-28",
+        "data": {
+          "info": "Prenez rendez-vous pour réaliser le bilan diagnostic auprès de l'organisme ou du professionnel de santé qui vous a été préconisé.\n\nSi le délai d'attente n'est pas adapté à votre situation, vous pouvez prendre rendez-vous pour réaliser ce bilan auprès d'un autre organisme ou d'un autre professionnel.\n\nL'intervention des professionnels libéraux implique un coût financier à votre charge.\n\nSi vous rencontrez des difficultés dans cette prise de rendez-vous, vous pouvez en parler auprès de votre médecin traitant, un généraliste, un pédiatre ... ou de tout autre professionnel de santé en qui vous avez confiance.",
+          "order": 2,
+          "content": "Non",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 3248.4899960826874,
+          "y": 806.5090777522082
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 3248.4899960826874,
+          "y": 806.5090777522082
+        }
+      },
+      {
+        "id": "answer-29",
+        "data": {
+          "info": "",
+          "order": 1,
+          "content": "Oui",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 3668.4899960826874,
+          "y": 726.5090777522082
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 3668.4899960826874,
+          "y": 726.5090777522082
+        }
+      },
+      {
+        "id": "answer-30",
+        "data": {
+          "info": "Prenez rendez-vous pour suivre ces entretiens et tests auprès de l'organisme ou du professionnel de santé qui vous a été préconisé.",
+          "order": 2,
+          "content": "Non",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 3669.376651333712,
+          "y": 807.6224225011838
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 3669.376651333712,
+          "y": 807.6224225011838
+        }
+      },
+      {
+        "id": "answer-31",
+        "data": {
+          "info": "",
+          "order": 1,
+          "content": "Oui",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 4108.489996082688,
+          "y": 728.5090777522082
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 4108.489996082688,
+          "y": 728.5090777522082
+        }
+      },
+      {
+        "id": "answer-32",
+        "data": {
+          "info": "Prenez rendez-vous auprès de votre organisme ou du professionnel de santé pour obtenir la restitution du bilan diagnostic.",
+          "order": 2,
+          "content": "Non",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 4110.340212177039,
+          "y": 807.4341857993837
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 4110.340212177039,
+          "y": 807.4341857993837
+        }
+      },
+      {
+        "id": "answer-33",
+        "data": {
+          "info": "Votre parcours de diagnostic est terminé. Vous pouvez démarrer les démarches administratives auprès de la Maison Départementale des Personnes Handicapées (MDPH) pour obtenir les aides nécessaires à votre situation. Pour en savoir plus, vous pouvez consulter la [page dédiée à la MDPH](/parcours/je-sollicite-la-mdph-et-je-monte-un-dossier).",
+          "order": 1,
+          "content": "Oui",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 4550.489996082688,
+          "y": 629.3090777522082
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 4550.489996082688,
+          "y": 629.3090777522082
+        }
+      },
+      {
+        "id": "answer-34",
+        "data": {
+          "info": "Prenez rendez-vous auprès de votre Centre de Ressources Autisme (CRA) pour réaliser ces examens complémentaires.\n\n\nSi cela vous a été indiqué dans votre bilan, prenez rendez-vous auprès de votre Centre de Référence des Troubles du Langage et des Apprentissages (CRTLA).",
+          "order": 2,
+          "content": "Oui, et d'autres examens médicaux sont nécessaires",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 102,
+        "dragging": false,
+        "position": {
+          "x": 4548.489996082688,
+          "y": 708.484077752208
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 4548.489996082688,
+          "y": 708.484077752208
+        }
+      },
+      {
+        "id": "answer-35",
+        "data": {
+          "info": "Vous n'avez pas de diagnostic de troubles du spectre de l'autisme. Vous pouvez prendre rendez-vous avec votre médecin traitant s'il y a une autre pathologie ou d'autres troubles.",
+          "order": 3,
+          "content": "Non",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 4550.489996082688,
+          "y": 831.271577752208
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 4550.489996082688,
+          "y": 831.271577752208
+        }
+      },
+      {
+        "id": "subanswer-11",
+        "data": {
+          "info": "Si le délai d'attente n'est pas adapté à votre situation, vous pouvez prendre rendez-vous pour réaliser ce bilan auprès d'un autre organisme ou d'un autre professionnel.\n\nL'intervention des professionnels libéraux implique un coût financier à votre charge.",
+          "order": 1,
+          "content": " Centre d'Action Médico Sociale Précoce (CAMSP)",
+          "displayInfoUp": false
+        },
+        "type": "mda-subanswer",
+        "width": 150,
+        "height": 102,
+        "dragging": false,
+        "position": {
+          "x": 2396.399965463636,
+          "y": 505.1109873045705
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 2396.399965463636,
+          "y": 505.1109873045705
+        }
+      },
+      {
+        "id": "subanswer-12",
+        "data": {
+          "info": "Si le délai d'attente n'est pas adapté à votre situation, vous pouvez prendre rendez-vous pour réaliser ce bilan auprès d'un autre organisme ou d'un autre professionnel.\n\nL'intervention des professionnels libéraux implique un coût financier à votre charge.",
+          "order": 2,
+          "content": "Centre Médico Psycho Pédagogique (CMPP) (selon votre région)",
+          "displayInfoUp": false
+        },
+        "type": "mda-subanswer",
+        "width": 150,
+        "height": 79,
+        "dragging": false,
+        "position": {
+          "x": 2396.399965463637,
+          "y": 617.7535908887733
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 2396.399965463637,
+          "y": 617.7535908887733
+        }
+      },
+      {
+        "id": "subanswer-13",
+        "data": {
+          "info": "Si le délai d'attente n'est pas adapté à votre situation, vous pouvez prendre rendez-vous pour réaliser ce bilan auprès d'un autre organisme ou d'un autre professionnel.\n\nL'intervention des professionnels libéraux implique un coût financier à votre charge.",
+          "order": 3,
+          "content": "Centre Médico-Psychologique (CMP)",
+          "displayInfoUp": false
+        },
+        "type": "mda-subanswer",
+        "width": 150,
+        "height": 82,
+        "dragging": false,
+        "position": {
+          "x": 2399.4025813159706,
+          "y": 712.1489552760012
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 2399.4025813159706,
+          "y": 712.1489552760012
+        }
+      },
+      {
+        "id": "subanswer-14",
+        "data": {
+          "info": "Si le délai d'attente n'est pas adapté à votre situation, vous pouvez prendre rendez-vous pour réaliser ce bilan auprès d'un autre organisme ou d'un autre professionnel.\n\nL'intervention des professionnels libéraux implique un coût financier à votre charge.",
+          "order": 4,
+          "content": "Centre de Ressources Autisme (CRA)",
+          "displayInfoUp": false
+        },
+        "type": "mda-subanswer",
+        "width": 150,
+        "height": 82,
+        "dragging": false,
+        "position": {
+          "x": 2397.384960360461,
+          "y": 806.5690981649094
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 2397.384960360461,
+          "y": 806.5690981649094
+        }
+      },
+      {
+        "id": "subanswer-15",
+        "data": {
+          "info": "Si le délai d'attente n'est pas adapté à votre situation, vous pouvez prendre rendez-vous pour réaliser ce bilan auprès d'un autre organisme ou d'un autre professionnel.\n\nL'intervention des professionnels libéraux implique un coût financier à votre charge.",
+          "order": 5,
+          "content": "Hôpital",
+          "displayInfoUp": false
+        },
+        "type": "mda-subanswer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 2397.4149705668115,
+          "y": 899.7641645061883
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 2397.4149705668115,
+          "y": 899.7641645061883
+        }
+      },
+      {
+        "id": "subanswer-16",
+        "data": {
+          "info": "",
+          "order": 6,
+          "content": "Professionnel de santé en libéral (à votre charge)",
+          "displayInfoUp": false
+        },
+        "type": "mda-subanswer",
+        "width": 150,
+        "height": 82,
+        "dragging": false,
+        "position": {
+          "x": 2396.3699552572857,
+          "y": 954.5690981649095
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 2396.3699552572857,
+          "y": 954.5690981649095
+        }
+      },
+      {
+        "id": "question-21",
+        "data": {
+          "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
+          "content": "Démarrage du bilan diagnostic",
+          "displayInfoUp": false
+        },
+        "type": "mda-question",
+        "width": 150,
+        "height": 62,
+        "dragging": false,
+        "position": {
+          "x": 2638.489996082688,
+          "y": 732.5090777522082
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 2638.489996082688,
+          "y": 732.5090777522082
+        }
+      },
+      {
+        "id": "answer-36",
+        "data": {
+          "info": "",
+          "order": 0,
+          "content": "Continuer",
+          "displayInfoUp": false
+        },
+        "type": "mda-answer",
+        "width": 150,
+        "height": 42,
+        "dragging": false,
+        "position": {
+          "x": 2830.8899960826875,
+          "y": 742.5090777522082
+        },
+        "selected": false,
+        "deletable": true,
+        "positionAbsolute": {
+          "x": 2830.8899960826875,
+          "y": 742.5090777522082
+        }
+      }
+    ],
+    "viewPort": {
+      "x": 0,
+      "y": 0,
+      "zoom": 1
     }
-  ],
-  "nodes": [
-    {
-      "id": "question-1",
-      "data": {
-        "content": "Je suis"
-      },
-      "type": "mda-root-question",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": -235.0684203502451,
-        "y": 337.4718496617252
-      },
-      "selected": false,
-      "deletable": false,
-      "positionAbsolute": {
-        "x": -235.0684203502451,
-        "y": 337.4718496617252
-      }
-    },
-    {
-      "id": "answer-2",
-      "data": {
-        "info": "",
-        "order": 1,
-        "content": "Une personne qui s'interroge sur ses comportements et ressentis",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 79,
-      "dragging": false,
-      "position": {
-        "x": 35.988350087815775,
-        "y": 863.4579120427647
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 35.988350087815775,
-        "y": 863.4579120427647
-      }
-    },
-    {
-      "id": "answer-3",
-      "data": {
-        "info": "",
-        "order": 2,
-        "content": "Un parent",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 27.34370898385805,
-        "y": 341.71048802339044
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 27.34370898385805,
-        "y": 341.71048802339044
-      }
-    },
-    {
-      "id": "answer-4",
-      "data": {
-        "info": "",
-        "order": 3,
-        "content": "Un proche ou un aidant",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 62,
-      "dragging": false,
-      "position": {
-        "x": 28.419537226805687,
-        "y": 652.909077752208
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 28.419537226805687,
-        "y": 652.909077752208
-      }
-    },
-    {
-      "id": "subanswer-2",
-      "data": {
-        "info": "",
-        "order": 1,
-        "content": "J'ai entre 13 et 18 ans",
-        "displayInfoUp": false
-      },
-      "type": "mda-subanswer",
-      "width": 150,
-      "height": 62,
-      "dragging": false,
-      "position": {
-        "x": 807.2437207585982,
-        "y": 1048.547214096463
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 807.2437207585982,
-        "y": 1048.547214096463
-      }
-    },
-    {
-      "id": "subanswer-3",
-      "data": {
-        "info": "",
-        "order": 2,
-        "content": "Je suis un adulte",
-        "displayInfoUp": false
-      },
-      "type": "mda-subanswer",
-      "width": 150,
-      "height": 62,
-      "dragging": false,
-      "position": {
-        "x": 812.4330975101831,
-        "y": 1261.3029932368486
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 812.4330975101831,
-        "y": 1261.3029932368486
-      }
-    },
-    {
-      "id": "subanswer-4",
-      "data": {
-        "info": "",
-        "order": 1,
-        "content": "Mon enfant a moins de 6 ans",
-        "displayInfoUp": false
-      },
-      "type": "mda-subanswer",
-      "width": 150,
-      "height": 62,
-      "dragging": false,
-      "position": {
-        "x": 797.623948727304,
-        "y": 132.0387762790778
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 797.623948727304,
-        "y": 132.0387762790778
-      }
-    },
-    {
-      "id": "subanswer-5",
-      "data": {
-        "info": "",
-        "order": 2,
-        "content": "Mon enfant a entre 7 et 12 ans",
-        "displayInfoUp": false
-      },
-      "type": "mda-subanswer",
-      "width": 150,
-      "height": 62,
-      "dragging": false,
-      "position": {
-        "x": 791.9090124693655,
-        "y": 240.5241160696566
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 791.9090124693655,
-        "y": 240.5241160696566
-      }
-    },
-    {
-      "id": "subanswer-6",
-      "data": {
-        "info": "",
-        "order": 3,
-        "content": "Mon enfant a entre 13 et 18 ans",
-        "displayInfoUp": false
-      },
-      "type": "mda-subanswer",
-      "width": 150,
-      "height": 82,
-      "dragging": false,
-      "position": {
-        "x": 792.584710177763,
-        "y": 362.8938653018677
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 792.584710177763,
-        "y": 362.8938653018677
-      }
-    },
-    {
-      "id": "subanswer-7",
-      "data": {
-        "info": "",
-        "order": 4,
-        "content": "Mon enfant a plus de 18 ans",
-        "displayInfoUp": false
-      },
-      "type": "mda-subanswer",
-      "width": 150,
-      "height": 62,
-      "dragging": false,
-      "position": {
-        "x": 798.6276142257962,
-        "y": 505.5912622887485
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 798.6276142257962,
-        "y": 505.5912622887485
-      }
-    },
-    {
-      "id": "question-3",
-      "data": {
-        "info": "",
-        "content": "Avez-vous pris un rendez-vous avec votre médecin traitant ou un médecin généraliste, un psychiatre, le médecin du travail, ou un professionnel de santé (psychologue, orthophoniste...) ?",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 114,
-      "dragging": false,
-      "position": {
-        "x": 1111.6161926853702,
-        "y": 1236.751066490601
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1111.6161926853702,
-        "y": 1236.751066490601
-      }
-    },
-    {
-      "id": "question-4",
-      "data": {
-        "info": "",
-        "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un pédiatre, le médecin de la crèche ou de la Protection maternelle et infantile (PMI) ?",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 102,
-      "dragging": false,
-      "position": {
-        "x": 1100.9595247491825,
-        "y": 135.05104830171223
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1100.9595247491825,
-        "y": 135.05104830171223
-      }
-    },
-    {
-      "id": "question-5",
-      "data": {
-        "info": "",
-        "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin scolaire ? (ref 7-12)",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 91,
-      "dragging": false,
-      "position": {
-        "x": 1104.4143413841402,
-        "y": 399.4256482246443
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1104.4143413841402,
-        "y": 399.4256482246443
-      }
-    },
-    {
-      "id": "question-6",
-      "data": {
-        "info": "",
-        "content": "Avez-vous pris rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin scolaire ? (ref 13-18)",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 91,
-      "dragging": false,
-      "position": {
-        "x": 1114.0594697730078,
-        "y": 666.4129727304235
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1114.0594697730078,
-        "y": 666.4129727304235
-      }
-    },
-    {
-      "id": "question-7",
-      "data": {
-        "info": "",
-        "content": "Avez-vous pris un rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, le médecin du travail ou un professionnel de santé (psychologue, orthophoniste...) ? (ref adulte)",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 125,
-      "dragging": false,
-      "position": {
-        "x": 1106.247846676598,
-        "y": 910.3232612134674
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1106.247846676598,
-        "y": 910.3232612134674
-      }
-    },
-    {
-      "id": "question-8",
-      "data": {
-        "info": "",
-        "content": "Vous réalisez ce questionnaire pour le compte de",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 102,
-      "dragging": false,
-      "position": {
-        "x": 250.84066703325846,
-        "y": 723.1927065330971
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 250.84066703325846,
-        "y": 723.1927065330971
-      }
-    },
-    {
-      "id": "answer-5",
-      "data": {
-        "info": "",
-        "order": 1,
-        "content": "Oui",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 1309.194363826049,
-        "y": 608.0514374284335
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1309.194363826049,
-        "y": 608.0514374284335
-      }
-    },
-    {
-      "id": "answer-6",
-      "data": {
-        "info": "Prenez rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin scolaire.",
-        "order": 2,
-        "content": "Non",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 1310.1292700732997,
-        "y": 744.5718121340815
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1310.1292700732997,
-        "y": 744.5718121340815
-      }
-    },
-    {
-      "id": "answer-7",
-      "data": {
-        "info": "Pour en savoir plus sur les [Recommandations de Bonnes Pratiques Professionnelles, cliquez ici](/fiches-pratiques/recommandations-de-bonnes-pratiques-professionnelles).",
-        "order": 1,
-        "content": "Oui",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 1323.492657613992,
-        "y": 1192.9340777522075
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1323.492657613992,
-        "y": 1192.9340777522075
-      }
-    },
-    {
-      "id": "answer-8",
-      "data": {
-        "info": "Prenez rendez-vous avec votre médecin traitant, un médecin généraliste, un psychiatre, le médecin du travail ou un professionnel de santé (psychologue, orthophoniste).",
-        "order": 2,
-        "content": "Non",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 1323.492657613992,
-        "y": 1408.5090777522082
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1323.492657613992,
-        "y": 1408.5090777522082
-      }
-    },
-    {
-      "id": "answer-9",
-      "data": {
-        "info": "",
-        "order": 1,
-        "content": "Oui",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 1326.3814294969652,
-        "y": 144.07803297988204
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1326.3814294969652,
-        "y": 144.07803297988204
-      }
-    },
-    {
-      "id": "answer-10",
-      "data": {
-        "info": "Prenez rendez-vous avec le médecin traitant ou un médecin généraliste, un pédiatre, le médecin de la crèche ou de la Protection maternelle et infantile (PMI).",
-        "order": 2,
-        "content": "Non",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 1321.836246131923,
-        "y": 223.8385892629895
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1321.836246131923,
-        "y": 223.8385892629895
-      }
-    },
-    {
-      "id": "answer-11",
-      "data": {
-        "info": "",
-        "order": 1,
-        "content": "Oui",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 1317.8832201304886,
-        "y": 351.3447215797428
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1317.8832201304886,
-        "y": 351.3447215797428
-      }
-    },
-    {
-      "id": "answer-12",
-      "data": {
-        "info": "Prenez rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin scolaire.",
-        "order": 2,
-        "content": "Non",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 1318.6046083707722,
-        "y": 465.39085594402
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1318.6046083707722,
-        "y": 465.39085594402
-      }
-    },
-    {
-      "id": "answer-13",
-      "data": {
-        "info": "",
-        "order": 1,
-        "content": "Oui",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 1318.1710494679783,
-        "y": 921.1474333875209
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1318.1710494679783,
-        "y": 921.1474333875209
-      }
-    },
-    {
-      "id": "answer-14",
-      "data": {
-        "info": "Prenez rendez-vous avec le médecin traitant ou un médecin généraliste, un psychiatre, ou le médecin du travail.",
-        "order": 2,
-        "content": "Non",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 1318.5994392367684,
-        "y": 1021.5750305431899
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1318.5994392367684,
-        "y": 1021.5750305431899
-      }
-    },
-    {
-      "id": "answer-15",
-      "data": {
-        "info": "",
-        "order": 1,
-        "content": "Une personne mineure",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 62,
-      "dragging": false,
-      "position": {
-        "x": 471.1273517928581,
-        "y": 667.5299721512235
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 471.1273517928581,
-        "y": 667.5299721512235
-      }
-    },
-    {
-      "id": "answer-16",
-      "data": {
-        "info": "",
-        "order": 2,
-        "content": "Une personne majeure",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 62,
-      "dragging": false,
-      "position": {
-        "x": 497.1273517928579,
-        "y": 922.6791190451945
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 497.1273517928579,
-        "y": 922.6791190451945
-      }
-    },
-    {
-      "id": "subanswer-8",
-      "data": {
-        "info": "",
-        "order": 1,
-        "content": "Une personne mineure de moins de 6 ans",
-        "displayInfoUp": false
-      },
-      "type": "mda-subanswer",
-      "width": 150,
-      "height": 82,
-      "dragging": false,
-      "position": {
-        "x": 802.5686829939169,
-        "y": 631.3382721600213
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 802.5686829939169,
-        "y": 631.3382721600213
-      }
-    },
-    {
-      "id": "subanswer-9",
-      "data": {
-        "info": "",
-        "order": 2,
-        "content": "Une personne mineure entre 7 et 12 ans",
-        "displayInfoUp": false
-      },
-      "type": "mda-subanswer",
-      "width": 150,
-      "height": 82,
-      "dragging": false,
-      "position": {
-        "x": 807.6310049757583,
-        "y": 754.5110127627513
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 807.6310049757583,
-        "y": 754.5110127627513
-      }
-    },
-    {
-      "id": "subanswer-10",
-      "data": {
-        "info": "",
-        "order": 3,
-        "content": "Une personne mineure entre 13 et 18 ans",
-        "displayInfoUp": false
-      },
-      "type": "mda-subanswer",
-      "width": 150,
-      "height": 82,
-      "dragging": false,
-      "position": {
-        "x": 806.8570424768577,
-        "y": 865.5599110791296
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 806.8570424768577,
-        "y": 865.5599110791296
-      }
-    },
-    {
-      "id": "question-9",
-      "data": {
-        "info": "",
-        "content": "Un avis a-t-il été donné suite à cette consultation ? (ref adulte)",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 79,
-      "dragging": false,
-      "position": {
-        "x": 1538.857629137816,
-        "y": 1190.2043176803784
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1538.857629137816,
-        "y": 1190.2043176803784
-      }
-    },
-    {
-      "id": "answer-17",
-      "data": {
-        "info": "Si vous n'êtes pas satisfait  ou que vous avez un doute sur l'avis obtenu, vous pouvez prendre rendez-vous avec un autre professionnel de santé pour obtenir un deuxième avis.",
-        "order": 1,
-        "content": "Oui",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 1756.0117975934972,
-        "y": 1234.7904236134432
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1756.0117975934972,
-        "y": 1234.7904236134432
-      }
-    },
-    {
-      "id": "answer-18",
-      "data": {
-        "info": "Pour poursuivre le parcours de diagnostic, il est nécessaire d'obtenir un avis d'un professionnel de santé formé. Recontactez le professionnel de santé que vous avez rencontré pour obtenir cet avis, ou à défaut, prenez rendez-vous avec un autre professionnel de santé.",
-        "order": 2,
-        "content": "Non",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 1842.3811723510983,
-        "y": 728.4160245691138
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1842.3811723510983,
-        "y": 728.4160245691138
-      }
-    },
-    {
-      "id": "answer-19",
-      "data": {
-        "info": "Si vous souhaitez poursuivre vos démarches, vous pouvez prendre rendez-vous avec un autre professionnel pour obtenir un deuxième avis. \n\n\nVous pouvez également vous renseigner auprès de votre Centre de Ressources Autisme (CRA).\n\nSi vous ne souhaitez pas poursuivre votre parcours de diagnostic suite à la réponse obtenue, vous pouvez en rester là.",
-        "order": 2,
-        "content": "Non",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 2130.4706901007894,
-        "y": 1289.1076686285264
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 2130.4706901007894,
-        "y": 1289.1076686285264
-      }
-    },
-    {
-      "id": "answer-20",
-      "data": {
-        "info": "Si vous êtes satisfait de l'avis obtenu, sélectionnez le type d'organisme qui vous a été recommandé pour réaliser votre bilan diagnostic :\n\n\nSi vous avez des doutes sur l'avis obtenu, vous pouvez prendre rendez-vous avec un autre professionnel de santé pour obtenir un deuxième avis.",
-        "order": 1,
-        "content": "Oui",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 2145.2899960826894,
-        "y": 779.0809879035385
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 2145.2899960826894,
-        "y": 779.0809879035385
-      }
-    },
-    {
-      "id": "question-10",
-      "data": {
-        "info": "",
-        "content": "Un parcours de diagnostic vous a-t-il été proposé ? (ref adulte)",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 79,
-      "dragging": false,
-      "position": {
-        "x": 1933.8269816417633,
-        "y": 1208.852028930688
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1933.8269816417633,
-        "y": 1208.852028930688
-      }
-    },
-    {
-      "id": "question-11",
-      "data": {
-        "info": "",
-        "content": "Un avis a-t-il été donné suite à cette consultation ? (ref adulte)",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 79,
-      "dragging": false,
-      "position": {
-        "x": 1533.5304237237472,
-        "y": 918.7760932041344
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1533.5304237237472,
-        "y": 918.7760932041344
-      }
-    },
-    {
-      "id": "question-12",
-      "data": {
-        "info": "",
-        "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 13-18)",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 79,
-      "dragging": false,
-      "position": {
-        "x": 1521.855504282661,
-        "y": 567.9202274580583
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1521.855504282661,
-        "y": 567.9202274580583
-      }
-    },
-    {
-      "id": "answer-21",
-      "data": {
-        "info": "Si vous avez des doutes sur l'avis obtenu, vous pouvez prendre rendez-vous avec un autre professionnel de santé pour obtenir un deuxième avis.",
-        "order": 1,
-        "content": "Oui",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 1830.6821158796722,
-        "y": 243.97066176249862
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1830.6821158796722,
-        "y": 243.97066176249862
-      }
-    },
-    {
-      "id": "answer-22",
-      "data": {
-        "info": "Si vous êtes satisfait de l'avis obtenu, sélectionnez le type d'organisme qui vous a été recommandé pour réaliser votre bilan diagnostic :\n\nSi vous avez des doutes sur l'avis obtenu, vous pouvez prendre rendez-vous avec un autre professionnel de santé pour obtenir un deuxième avis.\n",
-        "order": 1,
-        "content": "Oui ",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 2142.161942901591,
-        "y": 688.1501297547887
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 2142.161942901591,
-        "y": 688.1501297547887
-      }
-    },
-    {
-      "id": "question-13",
-      "data": {
-        "info": "",
-        "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 7-12)",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 79,
-      "dragging": false,
-      "position": {
-        "x": 1525.7585445356729,
-        "y": 332.65969296851523
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1525.7585445356729,
-        "y": 332.65969296851523
-      }
-    },
-    {
-      "id": "question-14",
-      "data": {
-        "info": "",
-        "content": "Un avis a-t-il été donné suite à cette consultation ? (ref 0-6)",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 79,
-      "dragging": false,
-      "position": {
-        "x": 1523.9964500469152,
-        "y": 133.95907775220815
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 1523.9964500469152,
-        "y": 133.95907775220815
-      }
-    },
-    {
-      "id": "question-15",
-      "data": {
-        "info": "Les plateformes de coordination et d’orientation (PCO) pour suspicion de troubles du neurodéveloppement (TND) s’adressent aux enfants de 0 à 12 ans pour qu’ils bénéficient, gratuitement et sans tarder, d’un parcours de soins comprenant :  \n- des bilans spécialisés permettant d’établir un diagnostic précisant le ou les troubles  ;  \n- des interventions rééducatives nécessaires.\n\n[Pour en savoir plus sur les PCO, cliquez ici.](/fiches-pratiques/plateforme-coordination-et-d-orientation)",
-        "content": "Avez-vous été dirigé vers une plateforme de coordination et d’orientation (PCO) ?",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 79,
-      "dragging": false,
-      "position": {
-        "x": 2015.6492843570577,
-        "y": 247.29646700304852
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 2015.6492843570577,
-        "y": 247.29646700304852
-      }
-    },
-    {
-      "id": "answer-23",
-      "data": {
-        "info": "",
-        "order": 1,
-        "content": "Oui",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 2209.7360091129394,
-        "y": 239.2338562538887
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 2209.7360091129394,
-        "y": 239.2338562538887
-      }
-    },
-    {
-      "id": "answer-24",
-      "data": {
-        "info": "Sélectionnez le type d'organisme ou de professionnel de santé qui vous a été recommandé pour réaliser votre bilan diagnostic :",
-        "order": 2,
-        "content": "Non",
-        "displayInfoUp": true
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 2211.74839836378,
-        "y": 321.7214670030485
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 2211.74839836378,
-        "y": 321.7214670030485
-      }
-    },
-    {
-      "id": "question-16",
-      "data": {
-        "info": "",
-        "content": "L'équipe de la PCO vous a-t-elle contacté ?",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 82,
-      "dragging": false,
-      "position": {
-        "x": 2523.2899960826894,
-        "y": 242.05907775220834
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 2523.2899960826894,
-        "y": 242.05907775220834
-      }
-    },
-    {
-      "id": "answer-25",
-      "data": {
-        "info": "La PCO se charge de prendre les rendez-vous, soit auprès de structures sanitaires ou médico-sociales compétentes, soit auprès de professionnels libéraux conventionnés avec la PCO, afin que les bilans et interventions se fassent le plus rapidement possible et au plus près du domicile de votre enfant.\n\nL'étape du bilan diagnostic peut alors démarrer.",
-        "order": 1,
-        "content": "Oui",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 2755.2899960826894,
-        "y": 239.67157775220835
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 2755.2899960826894,
-        "y": 239.67157775220835
-      }
-    },
-    {
-      "id": "answer-26",
-      "data": {
-        "info": "Attendez d'être contacté par l'équipe de la PCO. Un délai de 15 jours est à prévoir.\n\nAu delà des 15 jours d'attente, recontactez la Plateforme d'Orientation et de Coordination.",
-        "order": 2,
-        "content": "Non",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 2755.2899960826894,
-        "y": 327.62157775220794
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 2755.2899960826894,
-        "y": 327.62157775220794
-      }
-    },
-    {
-      "id": "question-17",
-      "data": {
-        "info": "",
-        "content": "Avez-vous démarré le bilan diagnostic ?",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 82,
-      "dragging": false,
-      "position": {
-        "x": 3025.2899960826894,
-        "y": 720.5090777522082
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 3025.2899960826894,
-        "y": 720.5090777522082
-      }
-    },
-    {
-      "id": "question-18",
-      "data": {
-        "info": "",
-        "content": "Avez-vous réalisé les entretiens et tests ?",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 102,
-      "dragging": false,
-      "position": {
-        "x": 3457.8491257926744,
-        "y": 698.8066886222531
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 3457.8491257926744,
-        "y": 698.8066886222531
-      }
-    },
-    {
-      "id": "question-19",
-      "data": {
-        "info": "",
-        "content": "Avez-vous eu votre bilan diagnostic ?",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 82,
-      "dragging": false,
-      "position": {
-        "x": 3881.071719403089,
-        "y": 707.6756379260617
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 3881.071719403089,
-        "y": 707.6756379260617
-      }
-    },
-    {
-      "id": "question-20",
-      "data": {
-        "info": "",
-        "content": "Est-ce que le bilan diagnostic conclut à des troubles du spectre de l'autisme ?",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 79,
-      "dragging": false,
-      "position": {
-        "x": 4319.916517701019,
-        "y": 711.992339950569
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 4319.916517701019,
-        "y": 711.992339950569
-      }
-    },
-    {
-      "id": "answer-27",
-      "data": {
-        "info": "",
-        "order": 1,
-        "content": "Oui",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 3250.4899960826874,
-        "y": 728.5090777522082
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 3250.4899960826874,
-        "y": 728.5090777522082
-      }
-    },
-    {
-      "id": "answer-28",
-      "data": {
-        "info": "Prenez rendez-vous pour réaliser le bilan diagnostic auprès de l'organisme ou du professionnel de santé qui vous a été préconisé.\n\nSi le délai d'attente n'est pas adapté à votre situation, vous pouvez prendre rendez-vous pour réaliser ce bilan auprès d'un autre organisme ou d'un autre professionnel.\n\nL'intervention des professionnels libéraux implique un coût financier à votre charge.\n\nSi vous rencontrez des difficultés dans cette prise de rendez-vous, vous pouvez en parler auprès de votre médecin traitant, un généraliste, un pédiatre ... ou de tout autre professionnel de santé en qui vous avez confiance.",
-        "order": 2,
-        "content": "Non",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 3248.4899960826874,
-        "y": 806.5090777522082
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 3248.4899960826874,
-        "y": 806.5090777522082
-      }
-    },
-    {
-      "id": "answer-29",
-      "data": {
-        "info": "",
-        "order": 1,
-        "content": "Oui",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 3668.4899960826874,
-        "y": 726.5090777522082
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 3668.4899960826874,
-        "y": 726.5090777522082
-      }
-    },
-    {
-      "id": "answer-30",
-      "data": {
-        "info": "Prenez rendez-vous pour suivre ces entretiens et tests auprès de l'organisme ou du professionnel de santé qui vous a été préconisé.",
-        "order": 2,
-        "content": "Non",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 3669.376651333712,
-        "y": 807.6224225011838
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 3669.376651333712,
-        "y": 807.6224225011838
-      }
-    },
-    {
-      "id": "answer-31",
-      "data": {
-        "info": "",
-        "order": 1,
-        "content": "Oui",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 4108.489996082688,
-        "y": 728.5090777522082
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 4108.489996082688,
-        "y": 728.5090777522082
-      }
-    },
-    {
-      "id": "answer-32",
-      "data": {
-        "info": "Prenez rendez-vous auprès de votre organisme ou du professionnel de santé pour obtenir la restitution du bilan diagnostic.",
-        "order": 2,
-        "content": "Non",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 4110.340212177039,
-        "y": 807.4341857993837
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 4110.340212177039,
-        "y": 807.4341857993837
-      }
-    },
-    {
-      "id": "answer-33",
-      "data": {
-        "info": "Votre parcours de diagnostic est terminé. Vous pouvez démarrer les démarches administratives auprès de la Maison Départementale des Personnes Handicapées (MDPH) pour obtenir les aides nécessaires à votre situation. Pour en savoir plus, vous pouvez consulter la [page dédiée à la MDPH](/parcours/je-sollicite-la-mdph-et-je-monte-un-dossier).",
-        "order": 1,
-        "content": "Oui",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 4550.489996082688,
-        "y": 629.3090777522082
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 4550.489996082688,
-        "y": 629.3090777522082
-      }
-    },
-    {
-      "id": "answer-34",
-      "data": {
-        "info": "Prenez rendez-vous auprès de votre Centre de Ressources Autisme (CRA) pour réaliser ces examens complémentaires.\n\n\nSi cela vous a été indiqué dans votre bilan, prenez rendez-vous auprès de votre Centre de Référence des Troubles du Langage et des Apprentissages (CRTLA).",
-        "order": 2,
-        "content": "Oui, et d'autres examens médicaux sont nécessaires",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 102,
-      "dragging": false,
-      "position": {
-        "x": 4548.489996082688,
-        "y": 708.484077752208
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 4548.489996082688,
-        "y": 708.484077752208
-      }
-    },
-    {
-      "id": "answer-35",
-      "data": {
-        "info": "Vous n'avez pas de diagnostic de troubles du spectre de l'autisme. Vous pouvez prendre rendez-vous avec votre médecin traitant s'il y a une autre pathologie ou d'autres troubles.",
-        "order": 3,
-        "content": "Non",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 4550.489996082688,
-        "y": 831.271577752208
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 4550.489996082688,
-        "y": 831.271577752208
-      }
-    },
-    {
-      "id": "subanswer-11",
-      "data": {
-        "info": "Si le délai d'attente n'est pas adapté à votre situation, vous pouvez prendre rendez-vous pour réaliser ce bilan auprès d'un autre organisme ou d'un autre professionnel.\n\nL'intervention des professionnels libéraux implique un coût financier à votre charge.",
-        "order": 1,
-        "content": " Centre d'Action Médico Sociale Précoce (CAMSP)",
-        "displayInfoUp": false
-      },
-      "type": "mda-subanswer",
-      "width": 150,
-      "height": 102,
-      "dragging": false,
-      "position": {
-        "x": 2396.399965463636,
-        "y": 505.1109873045705
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 2396.399965463636,
-        "y": 505.1109873045705
-      }
-    },
-    {
-      "id": "subanswer-12",
-      "data": {
-        "info": "Si le délai d'attente n'est pas adapté à votre situation, vous pouvez prendre rendez-vous pour réaliser ce bilan auprès d'un autre organisme ou d'un autre professionnel.\n\nL'intervention des professionnels libéraux implique un coût financier à votre charge.",
-        "order": 2,
-        "content": "Centre Médico Psycho Pédagogique (CMPP) (selon votre région)",
-        "displayInfoUp": false
-      },
-      "type": "mda-subanswer",
-      "width": 150,
-      "height": 79,
-      "dragging": false,
-      "position": {
-        "x": 2396.399965463637,
-        "y": 617.7535908887733
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 2396.399965463637,
-        "y": 617.7535908887733
-      }
-    },
-    {
-      "id": "subanswer-13",
-      "data": {
-        "info": "Si le délai d'attente n'est pas adapté à votre situation, vous pouvez prendre rendez-vous pour réaliser ce bilan auprès d'un autre organisme ou d'un autre professionnel.\n\nL'intervention des professionnels libéraux implique un coût financier à votre charge.",
-        "order": 3,
-        "content": "Centre Médico-Psychologique (CMP)",
-        "displayInfoUp": false
-      },
-      "type": "mda-subanswer",
-      "width": 150,
-      "height": 82,
-      "dragging": false,
-      "position": {
-        "x": 2399.4025813159706,
-        "y": 712.1489552760012
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 2399.4025813159706,
-        "y": 712.1489552760012
-      }
-    },
-    {
-      "id": "subanswer-14",
-      "data": {
-        "info": "Si le délai d'attente n'est pas adapté à votre situation, vous pouvez prendre rendez-vous pour réaliser ce bilan auprès d'un autre organisme ou d'un autre professionnel.\n\nL'intervention des professionnels libéraux implique un coût financier à votre charge.",
-        "order": 4,
-        "content": "Centre de Ressources Autisme (CRA)",
-        "displayInfoUp": false
-      },
-      "type": "mda-subanswer",
-      "width": 150,
-      "height": 82,
-      "dragging": false,
-      "position": {
-        "x": 2397.384960360461,
-        "y": 806.5690981649094
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 2397.384960360461,
-        "y": 806.5690981649094
-      }
-    },
-    {
-      "id": "subanswer-15",
-      "data": {
-        "info": "Si le délai d'attente n'est pas adapté à votre situation, vous pouvez prendre rendez-vous pour réaliser ce bilan auprès d'un autre organisme ou d'un autre professionnel.\n\nL'intervention des professionnels libéraux implique un coût financier à votre charge.",
-        "order": 5,
-        "content": "Hôpital",
-        "displayInfoUp": false
-      },
-      "type": "mda-subanswer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 2397.4149705668115,
-        "y": 899.7641645061883
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 2397.4149705668115,
-        "y": 899.7641645061883
-      }
-    },
-    {
-      "id": "subanswer-16",
-      "data": {
-        "info": "",
-        "order": 6,
-        "content": "Professionnel de santé en libéral (à votre charge)",
-        "displayInfoUp": false
-      },
-      "type": "mda-subanswer",
-      "width": 150,
-      "height": 82,
-      "dragging": false,
-      "position": {
-        "x": 2396.3699552572857,
-        "y": 954.5690981649095
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 2396.3699552572857,
-        "y": 954.5690981649095
-      }
-    },
-    {
-      "id": "question-21",
-      "data": {
-        "info": "Vous allez pouvoir démarrer un bilan diagnostic auprès de professionnels de santé pluridisciplinaires afin de déterminer si oui ou non il s'agit de troubles du spectre de l'autisme.\n\n[Pour en savoir plus sur le bilan diagnostic, cliquez ici](/fiches-pratiques/parcours-de-diagnostic).",
-        "content": "Démarrage du bilan diagnostic",
-        "displayInfoUp": false
-      },
-      "type": "mda-question",
-      "width": 150,
-      "height": 62,
-      "dragging": false,
-      "position": {
-        "x": 2638.489996082688,
-        "y": 732.5090777522082
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 2638.489996082688,
-        "y": 732.5090777522082
-      }
-    },
-    {
-      "id": "answer-36",
-      "data": {
-        "info": "",
-        "order": 0,
-        "content": "Continuer",
-        "displayInfoUp": false
-      },
-      "type": "mda-answer",
-      "width": 150,
-      "height": 42,
-      "dragging": false,
-      "position": {
-        "x": 2830.8899960826875,
-        "y": 742.5090777522082
-      },
-      "selected": false,
-      "deletable": true,
-      "positionAbsolute": {
-        "x": 2830.8899960826875,
-        "y": 742.5090777522082
-      }
-    }
-  ],
-  "viewPort": {
-    "x": 0,
-    "y": 0,
-    "zoom": 1
   }
 }
