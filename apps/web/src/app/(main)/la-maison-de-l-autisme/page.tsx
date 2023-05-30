@@ -89,7 +89,7 @@ const LaMaisonDeLAutismePage = async () => {
           <Grid as="ul" haveGutters>
             {currentEvents.map(event => {
               return (
-                <GridCol as="li" md={6} key={event.id}>
+                <GridCol as="li" key={event.id}>
                   <Card isEnlargeLink>
                     <CardBody>
                       <CardBodyContent>
@@ -126,7 +126,7 @@ const LaMaisonDeLAutismePage = async () => {
           <Grid as="ul" haveGutters>
             {upcomingEvents.map(event => {
               return (
-                <GridCol as="li" md={6} key={event.id}>
+                <GridCol as="li" key={event.id}>
                   <Card>
                     <CardBody>
                       <CardBodyContent>
