@@ -9,6 +9,6 @@
   "scripts": {},
   "dependencies": {},
   "devDependencies": {
-    "@strapi/strapi": "4.10.6"
+    "@strapi/strapi": "4.10.7"
   }
 }
