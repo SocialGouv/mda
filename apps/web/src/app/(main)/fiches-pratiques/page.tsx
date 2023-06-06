@@ -27,15 +27,14 @@ const FichesPratiquesPage = async () => {
   const fiches = await fetchStrapi("fiche-pratiques", {
     populate: "recap",
     sort: "id",
-  }).then((responses) => responses.data ?? []);
+  }).then(responses => responses.data ?? []);
   console.log("fiches", fiches);
   fiches.unshift({
     id: 0,
     attributes: {
       title: "Glossaire",
       slug: "/glossaire",
-      excerpt:
-        "Retrouvez le glossaire des termes administratifs et médicaux liés aux troubles autistiques",
+      excerpt: "Retrouvez le glossaire des termes administratifs et médicaux liés aux troubles autistiques",
       createdAt: "2023-01-29T18:45:42.279Z",
       updatedAt: "2023-06-06T08:13:36.448Z",
       recap: { id: 0, title: "Glossaire", content: "xxx" },
@@ -46,7 +45,7 @@ const FichesPratiquesPage = async () => {
       <Container>
         <h1>{title}</h1>
         <Grid as="ul" haveGutters>
-          {fiches.map((fiche) => {
+          {fiches.map(fiche => {
             if (!fiche.attributes.slug) return;
             return (
               <GridCol as="li" md={6} lg={4} key={fiche.id}>
