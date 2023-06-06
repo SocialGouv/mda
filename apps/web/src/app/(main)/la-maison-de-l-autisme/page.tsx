@@ -33,7 +33,9 @@ export const generateMetadata = generateMetadataFactory({
 });
 
 const LaMaisonDeLAutismePage = async () => {
-  const pageData = await fetchStrapi("maison-de-l-autisme", { populate: "sections,events" });
+  const pageData = await fetchStrapi("maison-de-l-autisme", {
+    populate: "sections,events",
+  });
   const laMaisonDeLAutisme = pageData.data?.attributes;
 
   const now = new Date();
