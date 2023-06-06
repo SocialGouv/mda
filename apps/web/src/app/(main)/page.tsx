@@ -1,6 +1,8 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import { fr } from "@codegouvfr/react-dsfr";
+import Button from "@codegouvfr/react-dsfr/Button";
 import { config } from "@common/config";
 import { ArticleFull } from "@components/home/Article";
 import { Carousel } from "@components/home/Carousel";
@@ -64,7 +66,16 @@ const AccueilPage = async () => {
           case "common.most-viewed-cards":
             return <MostViewedCards cards={widget.cards} section={widget} key={widget.id} />;
           case "common.carousels":
-            return <Carousel carousel={widget} key={widget.id}></Carousel>;
+            return (
+              <>
+                <Carousel carousel={widget} key={widget.id}></Carousel>
+                <div className={fr.cx("fr-container")} style={{ textAlign: "center", marginBottom: "2em" }}>
+                  <Button className={fr.cx("fr-btn--secondary")} linkProps={{ href: "/evenements" }}>
+                    Voir tous les évènements
+                  </Button>
+                </div>
+              </>
+            );
           default:
             return null;
         }
