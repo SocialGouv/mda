@@ -14,7 +14,6 @@ import {
   LinkGroup,
   LinkGroupItem,
 } from "@design-system";
-import { CollapsedSectionDynamicGroup } from "@design-system/client";
 import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
@@ -33,13 +32,13 @@ export const generateMetadata = generateMetadataFactory({
 });
 
 const LaMaisonDeLAutismePage = async () => {
-  const pageData = await fetchStrapi("maison-de-l-autisme", {
-    populate: "sections,events",
+  const pageData = await fetchStrapi("events", {
+    //populate: "sections,events",
   });
-  const laMaisonDeLAutisme = pageData.data?.attributes;
-
+  //const laMaisonDeLAutisme = pageData.data?.attributes;
+  console.log("pageData", JSON.stringify(pageData, null, 2));
   const now = new Date();
-  const events = laMaisonDeLAutisme?.events?.data ?? [];
+  const events = pageData?.data ?? [];
   const currentEvents = events.filter(
     e => new Date(e.attributes.start_date) <= now && new Date(e.attributes.end_date) > now,
   );
@@ -65,23 +64,6 @@ const LaMaisonDeLAutismePage = async () => {
   return (
     <SimpleContentPage>
       <ActionsButtons />
-      {laMaisonDeLAutisme?.title && <h1>{laMaisonDeLAutisme.title}</h1>}
-      {laMaisonDeLAutisme?.content && (
-        <div className="fr-text--xl">
-          <Markdown>{laMaisonDeLAutisme.content}</Markdown>
-        </div>
-      )}
-      {laMaisonDeLAutisme?.sections && (
-        <CollapsedSectionDynamicGroup
-          data={
-            laMaisonDeLAutisme.sections.map((s, sectionIdx) => ({
-              id: `section-${sectionIdx}`,
-              title: s.title,
-              content: <Markdown>{s.content}</Markdown>,
-            })) ?? []
-          }
-        />
-      )}
       <h2 className="fr-mt-6w" id="events">
         Évènements
       </h2>
