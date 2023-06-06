@@ -41,32 +41,22 @@ const LaMaisonDeLAutismePage = async () => {
   const now = new Date();
   const events = laMaisonDeLAutisme?.events?.data ?? [];
   const currentEvents = events.filter(
-    (e) =>
-      new Date(e.attributes.start_date) <= now &&
-      new Date(e.attributes.end_date) > now
+    e => new Date(e.attributes.start_date) <= now && new Date(e.attributes.end_date) > now,
   );
   const upcomingEvents = events
-    .filter((e) => new Date(e.attributes.start_date) > now)
-    .map((event) => {
+    .filter(e => new Date(e.attributes.start_date) > now)
+    .map(event => {
       const {
-        attributes: {
-          title,
-          description,
-          start_date,
-          end_date,
-          connection_link,
-        },
+        attributes: { title, description, start_date, end_date, connection_link },
       } = event;
 
-      const body = encodeURIComponent(
-        description ? description + "\n\n" + connection_link : connection_link
-      );
+      const body = encodeURIComponent(description ? description + "\n\n" + connection_link : connection_link);
 
       return {
         ...event,
         googleLink: `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${start_date.replace(
           /[-:]/g,
-          ""
+          "",
         )}/${end_date.replace(/[-:]/g, "")}&details=${body}&output=xml`,
         outlookLink: `https://outlook.office.com/calendar/0/deeplink/compose?subject=${title}&body=${body}&startdt=${start_date}&enddt=${end_date}&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent`,
       };
@@ -99,7 +89,7 @@ const LaMaisonDeLAutismePage = async () => {
         <>
           <h3 className="fr-mt-4w">En cours</h3>
           <Grid as="ul" haveGutters>
-            {currentEvents.map((event) => {
+            {currentEvents.map(event => {
               return (
                 <GridCol as="li" key={event.id}>
                   <Card isEnlargeLink>
@@ -116,9 +106,7 @@ const LaMaisonDeLAutismePage = async () => {
                           </a>
                         </CardBodyContentTitle>
                         <CardBodyContentDescription>
-                          {event.attributes.description && (
-                            <Markdown>{event.attributes.description}</Markdown>
-                          )}
+                          {event.attributes.description && <Markdown>{event.attributes.description}</Markdown>}
                         </CardBodyContentDescription>
                       </CardBodyContent>
                     </CardBody>
@@ -134,19 +122,15 @@ const LaMaisonDeLAutismePage = async () => {
         <>
           <h3 className="fr-mt-4w">À venir</h3>
           <Grid as="ul" haveGutters>
-            {upcomingEvents.map((event) => {
+            {upcomingEvents.map(event => {
               return (
                 <GridCol as="li" key={event.id}>
                   <Card>
                     <CardBody>
                       <CardBodyContent>
-                        <CardBodyContentTitle titleAs="h2">
-                          {event.attributes.title}
-                        </CardBodyContentTitle>
+                        <CardBodyContentTitle titleAs="h2">{event.attributes.title}</CardBodyContentTitle>
                         <CardBodyContentDescription>
-                          {event.attributes.description && (
-                            <Markdown>{event.attributes.description}</Markdown>
-                          )}
+                          {event.attributes.description && <Markdown>{event.attributes.description}</Markdown>}
                         </CardBodyContentDescription>
                       </CardBodyContent>
                       <CardBodyFooter>
@@ -182,9 +166,7 @@ const LaMaisonDeLAutismePage = async () => {
         </>
       )}
 
-      {!currentEvents.length && !upcomingEvents.length && (
-        <p>Il n'y a aucun évènement en cours ou à venir</p>
-      )}
+      {!currentEvents.length && !upcomingEvents.length && <p>Il n'y a aucun évènement en cours ou à venir</p>}
     </SimpleContentPage>
   );
 };
