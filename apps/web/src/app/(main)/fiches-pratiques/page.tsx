@@ -24,10 +24,22 @@ export const generateMetadata = generateMetadataFactory({
 });
 
 const FichesPratiquesPage = async () => {
-  const fiches = await fetchStrapi("fiche-pratiques", { populate: "recap", sort: "id" }).then(
-    responses => responses.data ?? [],
-  );
-
+  const fiches = await fetchStrapi("fiche-pratiques", {
+    populate: "recap",
+    sort: "id",
+  }).then(responses => responses.data ?? []);
+  console.log("fiches", fiches);
+  fiches.unshift({
+    id: 0,
+    attributes: {
+      title: "Glossaire",
+      slug: "/glossaire",
+      excerpt: "Retrouvez le glossaire des termes administratifs et médicaux liés aux troubles autistiques",
+      createdAt: "2023-01-29T18:45:42.279Z",
+      updatedAt: "2023-06-06T08:13:36.448Z",
+      recap: { id: 0, title: "Glossaire", content: "xxx" },
+    },
+  });
   return (
     <section className="fr-py-6w fr-py-md-12w">
       <Container>
@@ -41,7 +53,15 @@ const FichesPratiquesPage = async () => {
                   <CardBody>
                     <CardBodyContent>
                       <CardBodyContentTitle titleAs="h3">
-                        <NextLinkOrA href={`/${slug}/${fiche.attributes.slug}`}>{fiche.attributes.title}</NextLinkOrA>
+                        <NextLinkOrA
+                          href={
+                            fiche.attributes.slug.startsWith("/")
+                              ? fiche.attributes.slug
+                              : `/${slug}/${fiche.attributes.slug}`
+                          }
+                        >
+                          {fiche.attributes.title}
+                        </NextLinkOrA>
                       </CardBodyContentTitle>
                       {fiche.attributes.excerpt && (
                         <CardBodyContentDescription>
