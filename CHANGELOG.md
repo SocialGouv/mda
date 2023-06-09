@@ -1,3 +1,16 @@
+# [1.24.0](https://github.com/SocialGouv/mda/compare/v1.23.1...v1.24.0) (2023-06-09)
+
+
+### Bug Fixes
+
+* ajout bloc glossaire dans fiches pratiques ([#355](https://github.com/SocialGouv/mda/issues/355)) ([024177f](https://github.com/SocialGouv/mda/commit/024177f266ef3cd7e6546269217bd95e6155052b))
+* **events:** allow links in description ([#354](https://github.com/SocialGouv/mda/issues/354)) ([0f9c8bc](https://github.com/SocialGouv/mda/commit/0f9c8bc01bd0e82c9c03b879545a0c0297cc0bd3))
+
+
+### Features
+
+* dedicated events page ([#356](https://github.com/SocialGouv/mda/issues/356)) ([d4abca1](https://github.com/SocialGouv/mda/commit/d4abca1db7511f9f1d579ae65fed86fe9f295f6f))
+
 ## [1.23.1](https://github.com/SocialGouv/mda/compare/v1.23.0...v1.23.1) (2023-05-30)
 
 
