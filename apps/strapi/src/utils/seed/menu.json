@@ -42,8 +42,8 @@
     },
     {
       "__component": "menu.menu-item",
-      "text": "Glossaire",
-      "url": "/glossaire"
+      "text": "Évènements",
+      "url": "/evenements"
     },
     {
       "__component": "menu.menu-item",
