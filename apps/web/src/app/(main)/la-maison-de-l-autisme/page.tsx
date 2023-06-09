@@ -33,7 +33,9 @@ export const generateMetadata = generateMetadataFactory({
 });
 
 const LaMaisonDeLAutismePage = async () => {
-  const pageData = await fetchStrapi("maison-de-l-autisme", { populate: "sections,events" });
+  const pageData = await fetchStrapi("maison-de-l-autisme", {
+    populate: "sections,events",
+  });
   const laMaisonDeLAutisme = pageData.data?.attributes;
 
   const now = new Date();
@@ -104,11 +106,7 @@ const LaMaisonDeLAutismePage = async () => {
                           </a>
                         </CardBodyContentTitle>
                         <CardBodyContentDescription>
-                          {event.attributes.description && (
-                            <Markdown disallowedElements={["a"]} unwrapDisallowed={true}>
-                              {event.attributes.description}
-                            </Markdown>
-                          )}
+                          {event.attributes.description && <Markdown>{event.attributes.description}</Markdown>}
                         </CardBodyContentDescription>
                       </CardBodyContent>
                     </CardBody>
@@ -132,11 +130,7 @@ const LaMaisonDeLAutismePage = async () => {
                       <CardBodyContent>
                         <CardBodyContentTitle titleAs="h2">{event.attributes.title}</CardBodyContentTitle>
                         <CardBodyContentDescription>
-                          {event.attributes.description && (
-                            <Markdown disallowedElements={["a"]} unwrapDisallowed={true}>
-                              {event.attributes.description}
-                            </Markdown>
-                          )}
+                          {event.attributes.description && <Markdown>{event.attributes.description}</Markdown>}
                         </CardBodyContentDescription>
                       </CardBodyContent>
                       <CardBodyFooter>
