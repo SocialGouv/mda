@@ -97,10 +97,9 @@ web:
     - maisondelautisme.fabrique.social.gouv.fr
     - maisondelautisme-recette.fabrique.social.gouv.fr
   certSecretName: 2023-mda-web-crt
+  replicas: 1
   autoscale:
-    enabled: true
-    minReplicas: 2
-    maxReplicas: 10
+    enabled: false
   resources:
     limits:
       cpu: "350m"
