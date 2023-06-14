@@ -1,3 +1,10 @@
+## [1.24.1](https://github.com/SocialGouv/mda/compare/v1.24.0...v1.24.1) (2023-06-14)
+
+
+### Bug Fixes
+
+* **k9s:** disable prod web replicas ([#364](https://github.com/SocialGouv/mda/issues/364)) ([f6ba1a9](https://github.com/SocialGouv/mda/commit/f6ba1a9786d12294dbcc422fef9c2e7f4f6bdfb9))
+
 # [1.24.0](https://github.com/SocialGouv/mda/compare/v1.23.1...v1.24.0) (2023-06-09)
 
 
