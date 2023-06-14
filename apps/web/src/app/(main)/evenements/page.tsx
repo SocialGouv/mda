@@ -18,25 +18,25 @@ import { generateMetadataFactory } from "@services/metadata";
 import { fetchStrapi } from "@services/strapi";
 
 export const generateMetadata = generateMetadataFactory({
-  async resolveMetadata() {
-    const pageData = await fetchStrapi("maison-de-l-autisme");
-    const laMaisonDeLAutisme = pageData.data?.attributes;
+  resolveMetadata() {
+    // todo create "events" page in strapi
+    // const pageData = await fetchStrapi("maison-de-l-autisme");
+    // const laMaisonDeLAutisme = pageData.data?.attributes;
     return {
-      description: laMaisonDeLAutisme?.content,
-      modifiedTime: laMaisonDeLAutisme?.updatedAt,
-      publishedTime: laMaisonDeLAutisme?.createdAt,
-      slug: "la-maison-de-l-autisme",
-      title: laMaisonDeLAutisme?.title as string,
+      description: "Tous les évènements de la Maison de l'autisme",
+      //modifiedTime: null,
+      //publishedTime: null,
+      slug: "evenements",
+      title: "Évènements",
     };
   },
 });
 
-const LaMaisonDeLAutismePage = async () => {
+const EventsPage = async () => {
   const pageData = await fetchStrapi("events", {
     //populate: "sections,events",
   });
   //const laMaisonDeLAutisme = pageData.data?.attributes;
-  console.log("pageData", JSON.stringify(pageData, null, 2));
   const now = new Date();
   const events = pageData?.data ?? [];
   const currentEvents = events.filter(
@@ -153,4 +153,4 @@ const LaMaisonDeLAutismePage = async () => {
   );
 };
 
-export default LaMaisonDeLAutismePage;
+export default EventsPage;
