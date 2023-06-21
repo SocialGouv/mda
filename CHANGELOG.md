@@ -1,3 +1,11 @@
+## [1.24.2](https://github.com/SocialGouv/mda/compare/v1.24.1...v1.24.2) (2023-06-21)
+
+
+### Bug Fixes
+
+* cosmetics fix [#361](https://github.com/SocialGouv/mda/issues/361) fix [#363](https://github.com/SocialGouv/mda/issues/363) ([#368](https://github.com/SocialGouv/mda/issues/368)) ([6d4f3c2](https://github.com/SocialGouv/mda/commit/6d4f3c2e60d9927c3966a456f0df9b311c4a336d))
+* **web:** fix buttonGroups list-style-type fix [#362](https://github.com/SocialGouv/mda/issues/362) ([#369](https://github.com/SocialGouv/mda/issues/369)) ([65bdbb0](https://github.com/SocialGouv/mda/commit/65bdbb061ef55f60aa2b7f2789a490c30af1e7d4))
+
 ## [1.24.1](https://github.com/SocialGouv/mda/compare/v1.24.0...v1.24.1) (2023-06-14)
 
 
