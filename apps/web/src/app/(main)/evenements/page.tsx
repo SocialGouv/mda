@@ -36,7 +36,7 @@ const LaMaisonDeLAutismePage = async () => {
     //populate: "sections,events",
   });
   //const laMaisonDeLAutisme = pageData.data?.attributes;
-  console.log("pageData", JSON.stringify(pageData, null, 2));
+  //console.log("pageData", JSON.stringify(pageData, null, 2));
   const now = new Date();
   const events = pageData?.data ?? [];
   const currentEvents = events.filter(
@@ -74,7 +74,7 @@ const LaMaisonDeLAutismePage = async () => {
             {currentEvents.map(event => {
               return (
                 <GridCol as="li" key={event.id}>
-                  <Card isEnlargeLink>
+                  <Card>
                     <CardBody>
                       <CardBodyContent>
                         <CardBodyContentTitle titleAs="h2">
