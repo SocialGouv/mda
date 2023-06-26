@@ -1,3 +1,10 @@
+## [1.24.3](https://github.com/SocialGouv/mda/compare/v1.24.2...v1.24.3) (2023-06-26)
+
+
+### Bug Fixes
+
+* **events:** disable isEnlargeLink ([#373](https://github.com/SocialGouv/mda/issues/373)) ([4619235](https://github.com/SocialGouv/mda/commit/461923530593bafece6c523a5679fb1852a11fe9))
+
 ## [1.24.2](https://github.com/SocialGouv/mda/compare/v1.24.1...v1.24.2) (2023-06-21)
 
 
