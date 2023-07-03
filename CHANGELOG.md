@@ -1,3 +1,10 @@
+## [1.24.4](https://github.com/SocialGouv/mda/compare/v1.24.3...v1.24.4) (2023-07-03)
+
+
+### Bug Fixes
+
+* events tabs fix [#359](https://github.com/SocialGouv/mda/issues/359) ([#374](https://github.com/SocialGouv/mda/issues/374)) ([4e10062](https://github.com/SocialGouv/mda/commit/4e10062ec39f526609306476e3303f34c03ab419))
+
 ## [1.24.3](https://github.com/SocialGouv/mda/compare/v1.24.2...v1.24.3) (2023-06-26)
 
 
