@@ -4,7 +4,7 @@ import { type ReactNode, useState } from "react";
 
 export const Tabs = ({ tabs }: { tabs: Array<{ content: ReactNode; label: string }> }) => {
   const [index, setIndex] = useState(0);
-
+  const content = tabs[index] && tabs[index].content;
   return (
     <>
       <h3>
@@ -20,7 +20,7 @@ export const Tabs = ({ tabs }: { tabs: Array<{ content: ReactNode; label: string
           );
         })}
       </h3>
-      {tabs[index].content}
+      {content}
     </>
   );
 };
