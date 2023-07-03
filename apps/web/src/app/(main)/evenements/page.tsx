@@ -99,7 +99,7 @@ const EventsList = ({ events }: { events: Array<DataWrapper<"api::event.event">>
 };
 
 const EventsPage = async () => {
-  const eventsData = await fetchStrapi("events", {});
+  const eventsData = await fetchStrapi("events", { sort: "end_date:desc" });
 
   const now = new Date();
   const events = eventsData?.data ?? [];

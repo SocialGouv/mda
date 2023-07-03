@@ -26,7 +26,7 @@ interface FetchParam<T extends keyof Model, Dto extends GetAttributesValues<T> =
   /** @default "live" */
   publicationState?: "live" | "preview";
   revalidate?: number;
-  sort?: Array<GetAttributesKey<T> | "id"> | GetAttributesKey<T> | "id";
+  sort?: Array<GetAttributesKey<T> | "id"> | GetAttributesKey<T> | "end_date:desc" | "id"; // todo
 }
 
 interface FetchMethodParams {
