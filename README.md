@@ -181,4 +181,3 @@ Il n'y pas encore de tests en place.
 Apache 2.0 - Direction du numérique des ministère sociaux.
 
 Voir [LICENSE](./LICENSE)
-
