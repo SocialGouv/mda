@@ -13,7 +13,7 @@ const ContentSecurityPolicy = _nonce =>
   prefetch-src 'self' https://*.gouv.fr;
   script-src 'self' https://*.gouv.fr 'unsafe-inline';
   style-src 'self' https://*.gouv.fr 'unsafe-inline';
-  frame-src 'self' https://*.gouv.fr https://www.youtube.com;
+  frame-src 'self' https://*.gouv.fr https://www.youtube.com https://*.google.com;
   frame-ancestors 'self' https://*.gouv.fr;
   font-src 'self' data: blob:;
   base-uri 'self' https://*.gouv.fr;
