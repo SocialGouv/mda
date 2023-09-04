@@ -1,3 +1,10 @@
+## [1.24.6](https://github.com/SocialGouv/mda/compare/v1.24.5...v1.24.6) (2023-09-04)
+
+
+### Bug Fixes
+
+* add google domain to frame-src CSP ([#377](https://github.com/SocialGouv/mda/issues/377)) ([8a86c00](https://github.com/SocialGouv/mda/commit/8a86c0069d029eee80971f52840af100eef74ae4))
+
 ## [1.24.5](https://github.com/SocialGouv/mda/compare/v1.24.4...v1.24.5) (2023-07-03)
 
 
