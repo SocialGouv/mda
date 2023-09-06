@@ -11,7 +11,7 @@ const ContentSecurityPolicy = _nonce =>
   media-src 'self' https://*.gouv.fr;
   img-src 'self' data: https://*.gouv.fr;
   prefetch-src 'self' https://*.gouv.fr;
-  script-src 'self' https://*.gouv.fr 'unsafe-inline';
+  script-src 'self' https://*.gouv.fr https://*.google.com 'unsafe-inline';
   style-src 'self' https://*.gouv.fr 'unsafe-inline';
   frame-src 'self' https://*.gouv.fr https://www.youtube.com https://*.google.com;
   frame-ancestors 'self' https://*.gouv.fr;
