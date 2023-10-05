@@ -10,7 +10,7 @@ Sentry.init({
   dsn: SENTRY_DSN || "https://6d1e3666677742c8ad4030497c7b9ab5@sentry.fabrique.social.gouv.fr/83",
 
   // Adjust this value in production, or use tracesSampler for greater control
-  tracesSampleRate: 1,
+  tracesSampleRate: 0.2,
 
   // Setting this option to true will print useful information to the console while you're setting up Sentry.
   debug: false,
