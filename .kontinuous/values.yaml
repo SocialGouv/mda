@@ -34,6 +34,9 @@ web:
     NEXT_PUBLIC_SITE_URL: "https://{{ .Values.global.host }}"
     MDA_ENV: "{{ .Values.global.env }}"
 
+pg:
+  ~chart: pg
+
 strapi:
   ~chart: app
   containerPort: 1337
@@ -89,6 +92,7 @@ jobs:
 
     build-strapi:
       use: build
+      ~needs: [pg]
       with:
         imagePackage: strapi
         dockerfile: apps/strapi/Dockerfile

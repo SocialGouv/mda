@@ -60,7 +60,7 @@ strapi:
       name: uploads
   envFrom:
     - secretRef:
-        name: "{{ .Values.global.pgSecretName }}"
+        name: "pg-app"
     - secretRef:
         name: "mda-strapi"
     - secretRef:
