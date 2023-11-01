@@ -1,4 +1,4 @@
-import { type DatabaseConfig, type StrapiConfigSetter } from "./types";
+import { type DatabaseConfig, type EnvHelper, type StrapiConfigSetter } from "./types";
 
 const database: StrapiConfigSetter<DatabaseConfig> = ({ env }) => ({
   connection: {
@@ -9,9 +9,16 @@ const database: StrapiConfigSetter<DatabaseConfig> = ({ env }) => ({
       database: env("DATABASE_NAME", "strapi"),
       user: env("DATABASE_USERNAME", "postgres"),
       password: env("DATABASE_PASSWORD", "postgres"),
-      ssl: !!env("DATABASE_SSL", false),
+      ssl: getSslConfig(env),
     },
   },
 });
+
+function getSslConfig(env: EnvHelper) {
+  if (env.bool("DATABASE_SSL", false)) {
+    return { rejectUnauthorized: false }; // For self-signed certificates
+  }
+  return false;
+}
 
 export default database;
