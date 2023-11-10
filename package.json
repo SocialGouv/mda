@@ -43,7 +43,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/react-slick": "^0.23.10",
     "dotenv": "^16.0.3",
-    "rimraf": "^4.4.1",
+    "rimraf": "^5.0.1",
     "semantic-release": "^21.0.2",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
