@@ -80,17 +80,6 @@ strapi:
   volumeMounts:
     - mountPath: /app/apps/strapi/public/uploads
       name: uploads
-  envFrom:
-    - secretRef:
-        name: "{{ .Values.global.pgSecretName }}"
-    - secretRef:
-        name: "mda-strapi"
-    - secretRef:
-        name: "mda-revalidate-webhook"
-    - secretRef:
-        name: "mda-matomo"
-    - secretRef:
-        name: "mda-meilisearch"
 
 web:
   redirectFrom:
