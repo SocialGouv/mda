@@ -1,16 +1,5 @@
 strapi:
   host: "strapi-{{ .Values.global.host }}"
-  envFrom:
-    - secretRef:
-        name: "pg-app"
-    - secretRef:
-        name: "mda-strapi"
-    - secretRef:
-        name: "mda-revalidate-webhook"
-    - secretRef:
-        name: "mda-matomo"
-    - secretRef:
-        name: "mda-meilisearch"
 
 web:
   vars:
