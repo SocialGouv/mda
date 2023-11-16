@@ -58,19 +58,6 @@ strapi:
   volumeMounts:
     - mountPath: /app/apps/strapi/public/uploads
       name: uploads
-  envFrom:
-    - secretRef:
-        name: "pg-app"
-    - secretRef:
-        name: "mda-strapi"
-    - secretRef:
-        name: "mda-revalidate-webhook"
-    - secretRef:
-        name: "mda-matomo"
-    - secretRef:
-        name: "mda-meilisearch"
-    - secretRef:
-        name: "azure-mda-volume"
 
 web:
   vars:

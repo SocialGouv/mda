@@ -48,7 +48,7 @@ strapi:
   host: "strapi.{{ .Values.global.host }}"
   envFrom:
     - secretRef:
-        name: "{{ .Values.global.pgSecretName }}"
+        name: "pg-app"
     - secretRef:
         name: "mda-strapi"
     - secretRef:
