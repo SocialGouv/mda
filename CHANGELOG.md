@@ -1,3 +1,12 @@
+## [1.24.7](https://github.com/SocialGouv/mda/compare/v1.24.6...v1.24.7) (2023-11-16)
+
+
+### Bug Fixes
+
+* add google to script-src CSP ([2ff85e1](https://github.com/SocialGouv/mda/commit/2ff85e10c9213afe626f0738b6898466f9e06993))
+* **sentry:** reduce tracesSampleRate ([#378](https://github.com/SocialGouv/mda/issues/378)) ([1631f90](https://github.com/SocialGouv/mda/commit/1631f906b12826d67bdf9e4893f6be145694c144))
+* use cnpg ([#379](https://github.com/SocialGouv/mda/issues/379)) ([01d01fb](https://github.com/SocialGouv/mda/commit/01d01fb6c029d19f73d67b7b932b3959e3653500))
+
 ## [1.24.6](https://github.com/SocialGouv/mda/compare/v1.24.5...v1.24.6) (2023-09-04)
 
 
