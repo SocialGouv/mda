@@ -3,4 +3,13 @@ repositoryName: mda
 
 dependencies:
   fabrique:
-    import: SocialGouv/kontinuous/plugins/fabrique
+    extends:
+      - name: buildkit-service
+    dependencies:
+      contrib:
+        preDeploy:
+          importSecrets:
+            options:
+              secrets:
+                maison-de-l-autisme-dev-backups-access-key:
+                maison-de-l-autisme-prod-backups-access-key:
