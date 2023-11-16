@@ -1,3 +1,10 @@
+## [1.24.8](https://github.com/SocialGouv/mda/compare/v1.24.7...v1.24.8) (2023-11-16)
+
+
+### Bug Fixes
+
+* prod cnpg ([#380](https://github.com/SocialGouv/mda/issues/380)) ([aeda25d](https://github.com/SocialGouv/mda/commit/aeda25dba1989888bd2ec9404613e82264fccdcc))
+
 ## [1.24.7](https://github.com/SocialGouv/mda/compare/v1.24.6...v1.24.7) (2023-11-16)
 
 
