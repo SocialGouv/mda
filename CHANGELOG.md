@@ -1,3 +1,10 @@
+## [1.24.9](https://github.com/SocialGouv/mda/compare/v1.24.8...v1.24.9) (2023-11-22)
+
+
+### Bug Fixes
+
+* CVE-2023-46729 ([#381](https://github.com/SocialGouv/mda/issues/381)) ([2d78899](https://github.com/SocialGouv/mda/commit/2d788996182b0d83adf39a07b5b9296cc7ecbbb1))
+
 ## [1.24.8](https://github.com/SocialGouv/mda/compare/v1.24.7...v1.24.8) (2023-11-16)
 
 
